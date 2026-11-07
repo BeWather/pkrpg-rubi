@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bidl55pc7s5ar"
+path="res://.godot/imported/PRSFX- Astonish2.wav-463ea416df75a405113933664e9fb76d.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Astonish2.wav"
+dest_files=["res://.godot/imported/PRSFX- Astonish2.wav-463ea416df75a405113933664e9fb76d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

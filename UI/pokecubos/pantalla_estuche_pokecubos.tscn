@@ -1,0 +1,581 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/pokecubos/pantalla_estuche_pokecubos.gd" id="1"]
+[ext_resource type="Texture2D" path="res://graficos/pokecubos/estuche_fondo.png" id="2"]
+[ext_resource type="Texture2D" path="res://graficos/pokecubos/estuche_fila.png" id="3"]
+[ext_resource type="LabelSettings" path="res://UI/texto_normal_negro.tres" id="4"]
+[ext_resource type="Texture2D" path="res://graficos/pokecubos/estuche_sabores.png" id="5"]
+[ext_resource type="Texture2D" path="res://graficos/pokecubos/estuche_dispositivo.png" id="6"]
+[ext_resource type="Texture2D" path="res://UI/mochila/flecha-arriba.png" id="7"]
+[ext_resource type="Texture2D" path="res://UI/mochila/flecha-abajo.png" id="8"]
+[ext_resource type="Texture2D" path="res://UI/menu_box_1.png" id="9"]
+[ext_resource type="Script" path="res://scripts/clases/MenuBoxComponent.gd" id="10"]
+[ext_resource type="Script" path="res://UI/selector_simple.gd" id="11"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arriba0"]
+atlas = ExtResource("7")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arriba1"]
+atlas = ExtResource("7")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arriba2"]
+atlas = ExtResource("7")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arriba3"]
+atlas = ExtResource("7")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arriba4"]
+atlas = ExtResource("7")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arriba5"]
+atlas = ExtResource("7")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arriba6"]
+atlas = ExtResource("7")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_arriba7"]
+atlas = ExtResource("7")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_arriba"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arriba0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arriba1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arriba2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arriba3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arriba4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arriba5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arriba6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_arriba7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 18.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abajo0"]
+atlas = ExtResource("8")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abajo1"]
+atlas = ExtResource("8")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abajo2"]
+atlas = ExtResource("8")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abajo3"]
+atlas = ExtResource("8")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abajo4"]
+atlas = ExtResource("8")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abajo5"]
+atlas = ExtResource("8")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abajo6"]
+atlas = ExtResource("8")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abajo7"]
+atlas = ExtResource("8")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_abajo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abajo0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abajo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abajo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abajo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abajo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abajo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abajo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abajo7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 18.0
+}]
+
+[node name="PantallaEstuchePokecubos" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(0, 0)
+texture = ExtResource("2")
+centered = false
+
+[node name="FilaOrigen" type="Sprite2D" parent="."]
+position = Vector2(120, 8)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 112, 16)
+
+[node name="FilaCursor" type="Sprite2D" parent="."]
+position = Vector2(120, 8)
+texture = ExtResource("3")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 112, 16)
+
+[node name="Titulo" type="Label" parent="."]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 88.0
+offset_bottom = 23.0
+text = "CAJA POKéCUBOS"
+label_settings = ExtResource("4")
+horizontal_alignment = 1
+
+[node name="Lista" type="Node2D" parent="."]
+position = Vector2(120, 8)
+
+[node name="Fila0" type="Node2D" parent="Lista"]
+position = Vector2(0, 0)
+
+[node name="Nombre" type="Label" parent="Lista/Fila0"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 94.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Nivel" type="Label" parent="Lista/Fila0"]
+offset_left = 94.0
+offset_top = 0.0
+offset_right = 112.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+horizontal_alignment = 2
+
+[node name="Fila1" type="Node2D" parent="Lista"]
+position = Vector2(0, 16)
+
+[node name="Nombre" type="Label" parent="Lista/Fila1"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 94.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Nivel" type="Label" parent="Lista/Fila1"]
+offset_left = 94.0
+offset_top = 0.0
+offset_right = 112.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+horizontal_alignment = 2
+
+[node name="Fila2" type="Node2D" parent="Lista"]
+position = Vector2(0, 32)
+
+[node name="Nombre" type="Label" parent="Lista/Fila2"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 94.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Nivel" type="Label" parent="Lista/Fila2"]
+offset_left = 94.0
+offset_top = 0.0
+offset_right = 112.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+horizontal_alignment = 2
+
+[node name="Fila3" type="Node2D" parent="Lista"]
+position = Vector2(0, 48)
+
+[node name="Nombre" type="Label" parent="Lista/Fila3"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 94.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Nivel" type="Label" parent="Lista/Fila3"]
+offset_left = 94.0
+offset_top = 0.0
+offset_right = 112.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+horizontal_alignment = 2
+
+[node name="Fila4" type="Node2D" parent="Lista"]
+position = Vector2(0, 64)
+
+[node name="Nombre" type="Label" parent="Lista/Fila4"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 94.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Nivel" type="Label" parent="Lista/Fila4"]
+offset_left = 94.0
+offset_top = 0.0
+offset_right = 112.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+horizontal_alignment = 2
+
+[node name="Fila5" type="Node2D" parent="Lista"]
+position = Vector2(0, 80)
+
+[node name="Nombre" type="Label" parent="Lista/Fila5"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 94.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Nivel" type="Label" parent="Lista/Fila5"]
+offset_left = 94.0
+offset_top = 0.0
+offset_right = 112.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+horizontal_alignment = 2
+
+[node name="Fila6" type="Node2D" parent="Lista"]
+position = Vector2(0, 96)
+
+[node name="Nombre" type="Label" parent="Lista/Fila6"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 94.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Nivel" type="Label" parent="Lista/Fila6"]
+offset_left = 94.0
+offset_top = 0.0
+offset_right = 112.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+horizontal_alignment = 2
+
+[node name="Fila7" type="Node2D" parent="Lista"]
+position = Vector2(0, 112)
+
+[node name="Nombre" type="Label" parent="Lista/Fila7"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 94.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Nivel" type="Label" parent="Lista/Fila7"]
+offset_left = 94.0
+offset_top = 0.0
+offset_right = 112.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+horizontal_alignment = 2
+
+[node name="Fila8" type="Node2D" parent="Lista"]
+position = Vector2(0, 128)
+
+[node name="Nombre" type="Label" parent="Lista/Fila8"]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 94.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Nivel" type="Label" parent="Lista/Fila8"]
+offset_left = 94.0
+offset_top = 0.0
+offset_right = 112.0
+offset_bottom = 15.0
+text = ""
+label_settings = ExtResource("4")
+horizontal_alignment = 2
+
+[node name="Sabores" type="Node2D" parent="."]
+
+[node name="Icono0" type="Sprite2D" parent="Sabores"]
+position = Vector2(8, 104)
+texture = ExtResource("5")
+centered = false
+hframes = 6
+frame = 5
+
+[node name="Texto0" type="Label" parent="Sabores"]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 56.0
+offset_bottom = 119.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Icono1" type="Sprite2D" parent="Sabores"]
+position = Vector2(8, 120)
+texture = ExtResource("5")
+centered = false
+hframes = 6
+frame = 5
+
+[node name="Texto1" type="Label" parent="Sabores"]
+offset_left = 16.0
+offset_top = 120.0
+offset_right = 56.0
+offset_bottom = 135.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Icono2" type="Sprite2D" parent="Sabores"]
+position = Vector2(8, 136)
+texture = ExtResource("5")
+centered = false
+hframes = 6
+frame = 5
+
+[node name="Texto2" type="Label" parent="Sabores"]
+offset_left = 16.0
+offset_top = 136.0
+offset_right = 56.0
+offset_bottom = 151.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Icono3" type="Sprite2D" parent="Sabores"]
+position = Vector2(56, 104)
+texture = ExtResource("5")
+centered = false
+hframes = 6
+frame = 5
+
+[node name="Texto3" type="Label" parent="Sabores"]
+offset_left = 64.0
+offset_top = 104.0
+offset_right = 104.0
+offset_bottom = 119.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Icono4" type="Sprite2D" parent="Sabores"]
+position = Vector2(56, 120)
+texture = ExtResource("5")
+centered = false
+hframes = 6
+frame = 5
+
+[node name="Texto4" type="Label" parent="Sabores"]
+offset_left = 64.0
+offset_top = 120.0
+offset_right = 104.0
+offset_bottom = 135.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Suavidad" type="Label" parent="."]
+offset_left = 88.0
+offset_top = 136.0
+offset_right = 104.0
+offset_bottom = 151.0
+text = ""
+label_settings = ExtResource("4")
+horizontal_alignment = 2
+
+[node name="Dispositivo" type="Sprite2D" parent="."]
+position = Vector2(56, 64)
+texture = ExtResource("6")
+
+[node name="FlechaArriba" type="AnimatedSprite2D" parent="."]
+position = Vector2(168, 0)
+sprite_frames = SubResource("SpriteFrames_arriba")
+autoplay = "default"
+centered = false
+
+[node name="FlechaAbajo" type="AnimatedSprite2D" parent="."]
+position = Vector2(168, 144)
+sprite_frames = SubResource("SpriteFrames_abajo")
+autoplay = "default"
+centered = false
+
+[node name="Menu" type="NinePatchRect" parent="."]
+visible = false
+z_index = 20
+offset_left = 56.0
+offset_top = 32.0
+offset_right = 112.0
+offset_bottom = 96.0
+texture = ExtResource("9")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MenuBoxComponent" type="Node" parent="Menu"]
+script = ExtResource("10")
+
+[node name="Opcion0" type="Label" parent="Menu"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 23.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Opcion1" type="Label" parent="Menu"]
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 48.0
+offset_bottom = 39.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Opcion2" type="Label" parent="Menu"]
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 48.0
+offset_bottom = 55.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Cursor" type="Control" parent="Menu"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 49.0
+offset_bottom = 24.0
+mouse_filter = 2
+script = ExtResource("11")
+color = Color(0.937255, 0.431373, 0.376471, 1)
+ancho_borde = 1
+
+[node name="Ventana" type="NinePatchRect" parent="."]
+visible = false
+z_index = 10
+offset_left = 0.0
+offset_top = 112.0
+offset_right = 240.0
+offset_bottom = 160.0
+texture = ExtResource("9")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MenuBoxComponent" type="Node" parent="Ventana"]
+script = ExtResource("10")
+
+[node name="Texto" type="Label" parent="Ventana"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 232.0
+offset_bottom = 40.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="SiNo" type="NinePatchRect" parent="."]
+visible = false
+z_index = 20
+offset_left = 56.0
+offset_top = 48.0
+offset_right = 112.0
+offset_bottom = 96.0
+texture = ExtResource("9")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MenuBoxComponent" type="Node" parent="SiNo"]
+script = ExtResource("10")
+
+[node name="Si" type="Label" parent="SiNo"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 23.0
+text = "SÍ"
+label_settings = ExtResource("4")
+
+[node name="No" type="Label" parent="SiNo"]
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 48.0
+offset_bottom = 39.0
+text = "NO"
+label_settings = ExtResource("4")
+
+[node name="Cursor" type="Control" parent="SiNo"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 49.0
+offset_bottom = 24.0
+mouse_filter = 2
+script = ExtResource("11")
+color = Color(0.937255, 0.431373, 0.376471, 1)
+ancho_borde = 1

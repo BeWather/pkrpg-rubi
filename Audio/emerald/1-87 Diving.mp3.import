@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bwg3bhfecngk2"
+path="res://.godot/imported/1-87 Diving.mp3-1c20c98b946e02ed0fc01fac361ec9cb.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-87 Diving.mp3"
+dest_files=["res://.godot/imported/1-87 Diving.mp3-1c20c98b946e02ed0fc01fac361ec9cb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

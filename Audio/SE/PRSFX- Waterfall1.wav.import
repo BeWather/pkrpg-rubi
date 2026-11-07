@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ctxyyepwyrp5"
+path="res://.godot/imported/PRSFX- Waterfall1.wav-16e7ba6beab7275d4ebe8206f8358ee2.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Waterfall1.wav"
+dest_files=["res://.godot/imported/PRSFX- Waterfall1.wav-16e7ba6beab7275d4ebe8206f8358ee2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

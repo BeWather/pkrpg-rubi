@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://be2xo1go2bloh"
+path="res://.godot/imported/PRSFX- Twister.wav-7eb64510e313955c0be04a0b57d199f2.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Twister.wav"
+dest_files=["res://.godot/imported/PRSFX- Twister.wav-7eb64510e313955c0be04a0b57d199f2.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

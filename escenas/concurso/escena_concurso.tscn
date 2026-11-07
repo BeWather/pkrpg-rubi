@@ -1,0 +1,263 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/concurso/escena_concurso.gd" id="1_escena"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/escenario.png" id="2_escenario"]
+[ext_resource type="PackedScene" path="res://escenas/batalla/battle_slot.tscn" id="20_slot"]
+[ext_resource type="Script" path="res://escenas/concurso/juez_concurso.gd" id="3_juez"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/juez.png" id="4_juez"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/simbolos_juez.png" id="5_simbolos"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/marco.png" id="6_marco"]
+[ext_resource type="PackedScene" path="res://escenas/concurso/caja_concursante.tscn" id="7_caja"]
+[ext_resource type="Script" path="res://escenas/concurso/medidor_aplausos.gd" id="8_medidor"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/aplausos.png" id="9_aplausos"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/medidor_aplausos.png" id="10_segmento"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/telon.png" id="11_telon"]
+[ext_resource type="Script" path="res://escenas/concurso/menu_movimientos_concurso.gd" id="12_menu"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/menu_movimientos.png" id="13_menu"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/categorias_menu.png" id="14_categorias"]
+[ext_resource type="FontFile" path="res://fuentes/pokemon-rs.ttf" id="15_fuente"]
+[ext_resource type="Script" path="res://escenas/batalla/caja_texto_batalla.gd" id="16_caja_texto"]
+[ext_resource type="Texture2D" path="res://UI/puntero_texto.png" id="17_puntero"]
+[ext_resource type="Script" path="res://UI/selector_simple.gd" id="18_selector"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_menu"]
+font = ExtResource("15_fuente")
+font_size = 15
+font_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.25098, 0.25098, 0.25098, 1)
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cursor0"]
+atlas = ExtResource("17_puntero")
+region = Rect2(0, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cursor1"]
+atlas = ExtResource("17_puntero")
+region = Rect2(8, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cursor2"]
+atlas = ExtResource("17_puntero")
+region = Rect2(16, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cursor3"]
+atlas = ExtResource("17_puntero")
+region = Rect2(24, 0, 8, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cursor"]
+animations = [{
+"frames": [{"duration": 1.0, "texture": SubResource("AtlasTexture_cursor0")}, {"duration": 1.0, "texture": SubResource("AtlasTexture_cursor1")}, {"duration": 1.0, "texture": SubResource("AtlasTexture_cursor2")}, {"duration": 1.0, "texture": SubResource("AtlasTexture_cursor3")}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="EscenaConcurso" type="Node2D"]
+script = ExtResource("1_escena")
+
+[node name="Escenario" type="Sprite2D" parent="."]
+texture = ExtResource("2_escenario")
+centered = false
+
+[node name="TintePublico" type="ColorRect" parent="."]
+offset_right = 240.0
+offset_bottom = 112.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Juez" type="Node2D" parent="."]
+z_index = 2
+script = ExtResource("3_juez")
+
+[node name="Sprite" type="Sprite2D" parent="Juez"]
+position = Vector2(80, 4)
+texture = ExtResource("4_juez")
+centered = false
+
+[node name="Bocadillo" type="Sprite2D" parent="Juez"]
+visible = false
+position = Vector2(88, 2)
+texture = ExtResource("5_simbolos")
+centered = false
+vframes = 7
+
+[node name="SlotAtacante" parent="." instance=ExtResource("20_slot")]
+z_index = 2
+posicion_batalla = 2
+es_jugador = false
+
+[node name="SlotObjetivo" parent="." instance=ExtResource("20_slot")]
+z_index = 2
+
+[node name="Marco" type="Sprite2D" parent="."]
+z_index = 3
+texture = ExtResource("6_marco")
+centered = false
+
+[node name="Cajas" type="Node2D" parent="."]
+z_index = 3
+
+[node name="Caja0" parent="Cajas" instance=ExtResource("7_caja")]
+position = Vector2(144, 0)
+
+[node name="Caja1" parent="Cajas" instance=ExtResource("7_caja")]
+position = Vector2(144, 40)
+
+[node name="Caja2" parent="Cajas" instance=ExtResource("7_caja")]
+position = Vector2(144, 80)
+
+[node name="Caja3" parent="Cajas" instance=ExtResource("7_caja")]
+position = Vector2(144, 120)
+
+[node name="Telon" type="Sprite2D" parent="."]
+z_index = 3
+texture = ExtResource("11_telon")
+centered = false
+
+[node name="MedidorAplausos" type="Node2D" parent="."]
+z_index = 3
+visible = false
+position = Vector2(-2, 28)
+script = ExtResource("8_medidor")
+
+[node name="Marco" type="Sprite2D" parent="MedidorAplausos"]
+texture = ExtResource("9_aplausos")
+centered = false
+
+[node name="Segmento1" type="Sprite2D" parent="MedidorAplausos"]
+position = Vector2(8, 16)
+texture = ExtResource("10_segmento")
+centered = false
+vframes = 2
+
+[node name="Segmento2" type="Sprite2D" parent="MedidorAplausos"]
+position = Vector2(16, 16)
+texture = ExtResource("10_segmento")
+centered = false
+vframes = 2
+
+[node name="Segmento3" type="Sprite2D" parent="MedidorAplausos"]
+position = Vector2(24, 16)
+texture = ExtResource("10_segmento")
+centered = false
+vframes = 2
+
+[node name="Segmento4" type="Sprite2D" parent="MedidorAplausos"]
+position = Vector2(32, 16)
+texture = ExtResource("10_segmento")
+centered = false
+vframes = 2
+
+[node name="Segmento5" type="Sprite2D" parent="MedidorAplausos"]
+position = Vector2(40, 16)
+texture = ExtResource("10_segmento")
+centered = false
+vframes = 2
+
+[node name="MenuMovimientos" type="Node2D" parent="."]
+z_index = 3
+visible = false
+script = ExtResource("12_menu")
+
+[node name="Fondo" type="Sprite2D" parent="MenuMovimientos"]
+position = Vector2(0, 80)
+texture = ExtResource("13_menu")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 80, 240, 80)
+
+[node name="Lista" type="Node2D" parent="MenuMovimientos"]
+
+[node name="Cursor" type="Control" parent="MenuMovimientos/Lista"]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 4.0
+offset_top = 88.0
+offset_right = 76.0
+offset_bottom = 104.0
+script = ExtResource("18_selector")
+color = Color(1, 0.3882353, 0.3529412, 1)
+ancho_borde = 1
+
+[node name="Mov1" type="Label" parent="MenuMovimientos/Lista"]
+offset_left = 6.0
+offset_top = 86.0
+offset_right = 78.0
+offset_bottom = 102.0
+text = "MOVIMIENTO"
+label_settings = SubResource("LabelSettings_menu")
+
+[node name="Mov2" type="Label" parent="MenuMovimientos/Lista"]
+offset_left = 6.0
+offset_top = 102.0
+offset_right = 78.0
+offset_bottom = 118.0
+text = "MOVIMIENTO"
+label_settings = SubResource("LabelSettings_menu")
+
+[node name="Mov3" type="Label" parent="MenuMovimientos/Lista"]
+offset_left = 6.0
+offset_top = 118.0
+offset_right = 78.0
+offset_bottom = 134.0
+text = "MOVIMIENTO"
+label_settings = SubResource("LabelSettings_menu")
+
+[node name="Mov4" type="Label" parent="MenuMovimientos/Lista"]
+offset_left = 6.0
+offset_top = 134.0
+offset_right = 78.0
+offset_bottom = 150.0
+text = "MOVIMIENTO"
+label_settings = SubResource("LabelSettings_menu")
+
+[node name="Categoria" type="Sprite2D" parent="MenuMovimientos"]
+position = Vector2(88, 88)
+texture = ExtResource("14_categorias")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 40, 16)
+
+[node name="Barra" type="Label" parent="MenuMovimientos"]
+offset_left = 128.0
+offset_top = 86.0
+offset_right = 136.0
+offset_bottom = 102.0
+text = "/"
+label_settings = SubResource("LabelSettings_menu")
+
+[node name="CorazonesAtractivo" type="Node2D" parent="MenuMovimientos"]
+position = Vector2(168, 88)
+
+[node name="CorazonesInterferencia" type="Node2D" parent="MenuMovimientos"]
+position = Vector2(168, 96)
+
+[node name="Descripcion" type="Label" parent="MenuMovimientos"]
+offset_left = 88.0
+offset_top = 118.0
+offset_right = 232.0
+offset_bottom = 152.0
+text = "Descripción"
+label_settings = SubResource("LabelSettings_menu")
+
+[node name="CajaTexto" type="RichTextLabel" parent="."]
+z_index = 3
+clip_contents = true
+offset_left = 8.0
+offset_top = 118.0
+offset_right = 144.0
+offset_bottom = 154.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(0.25098, 0.25098, 0.25098, 1)
+theme_override_colors/font_shadow_color = Color(0.835294, 0.835294, 0.835294, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/normal_font = ExtResource("15_fuente")
+theme_override_font_sizes/normal_font_size = 15
+scroll_active = false
+autowrap_mode = 0
+script = ExtResource("16_caja_texto")
+
+[node name="Cursor" type="AnimatedSprite2D" parent="CajaTexto"]
+visible = false
+position = Vector2(132, 26)
+sprite_frames = SubResource("SpriteFrames_cursor")

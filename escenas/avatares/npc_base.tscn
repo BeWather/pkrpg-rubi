@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://b0gplmolai4dg"]
+
+[ext_resource type="Script" uid="uid://dgt5abq4cgx7c" path="res://scripts/npc/npc_base.gd" id="1_j2e82"]
+[ext_resource type="SpriteFrames" uid="uid://k8r6n7d6tftr" path="res://escenas/avatares/npc_003.tres" id="2_wtdwq"]
+[ext_resource type="Shader" uid="uid://cs5hewteb3yey" path="res://escenas/character/hierba_muy_alta_clip.gdshader" id="3_k8soc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_od2lm"]
+shader = ExtResource("3_k8soc")
+shader_parameter/recortar_sprite = false
+shader_parameter/clip_local_y = 2.0
+shader_parameter/clip_local_x_izq = -16.0
+shader_parameter/clip_local_x_der = 16.0
+shader_parameter/debug_modo = false
+
+[node name="NPC" type="Node2D" unique_id=1720771924]
+position = Vector2(8, 14)
+script = ExtResource("1_j2e82")
+tipo_movimiento = 8
+selec_frames = ExtResource("2_wtdwq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1811986289]
+material = SubResource("ShaderMaterial_od2lm")
+sprite_frames = ExtResource("2_wtdwq")
+animation = &"camina_abajo_1"
+centered = false
+offset = Vector2(-8, -20)

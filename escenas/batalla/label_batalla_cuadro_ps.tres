@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://e3utr22k73we"]
+
+[ext_resource type="FontFile" uid="uid://buqx8cwqlfbej" path="res://fuentes/pkmnems.ttf" id="1_puvc8"]
+
+[resource]
+font = ExtResource("1_puvc8")
+font_size = 11
+font_color = Color(0.25098, 0.25098, 0.25098, 1)
+shadow_color = Color(0, 0, 0, 0.188235)
+shadow_offset = Vector2(1, 0)

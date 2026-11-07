@@ -1,0 +1,162 @@
+[gd_scene format=4 uid="uid://bw4yi7g4aiajk"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_h2x1e"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="2_3en8k"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_8vda8"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_mnima"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="9_er3n3"]
+[ext_resource type="Script" uid="uid://ifbitpiiy4cg" path="res://scripts/npc/npc_arenque_casa.gd" id="arq_arenque"]
+[ext_resource type="SpriteFrames" uid="uid://buukulhhkfyjc" path="res://escenas/avatares/npc_050.tres" id="arq_npc_050"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="arq_npc_base"]
+[ext_resource type="SpriteFrames" uid="uid://dbalbpmidq8ir" path="res://escenas/avatares/npc_wingull.tres" id="arq_npc_wingull"]
+[ext_resource type="Script" uid="uid://cgpmomq3542yj" path="res://scripts/npc/npc_pokemon.gd" id="arq_pokemon"]
+
+[node name="Casa" type="Node2D" unique_id=749470543]
+script = ExtResource("1_h2x1e")
+seccion = "RUTA_104"
+esInterior = true
+mapa_exterior_asociado = "RUTA_104"
+solo_caminar = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=991336295]
+tile_map_data = PackedByteArray("AAAAAAAAAAADABwAAAAAAAEAAAADAB0AAAAAAAIAAAADAB4AAAABAAAAAAABABYAAAABAAEAAAABABcAAAABAAIAAAABABgAAAACAAAAAAACABYAAAACAAEAAAACABcAAAACAAIAAAACABgAAAADAAAAAAAFAAIAAAADAAEAAAAFAAMAAAAEAAAAAAADABwAAAAEAAEAAAADAB0AAAAEAAIAAAADAB4AAAAHAAAAAAAEABwAAAAHAAEAAAAEAB0AAAAHAAIAAAAEAB4AAAALAAAAAAAEABwAAAALAAEAAAAEAB0AAAALAAIAAAAEAB4AAAAJAAAAAAAGABcAAAAJAAEAAAAGABgAAAAJAAIAAAAGABkAAAAKAAAAAAAHABcAAAAKAAEAAAAHABgAAAAKAAIAAAAHABkAAAAIAAEAAAAAABQAAAAIAAIAAAAAABUAAAAIAAAAAAAFAAIAAAAGAAAAAAAHAAIAAAAGAAEAAAAHAAMAAAAFAAAAAAAHAAIAAAAFAAEAAAAHAAMAAAAGAAIAAAABAAQAAAAFAAIAAAABAAQAAAADAAIAAAABAAQAAAAAAAUAAAABAAQAAAAAAAYAAAABAAQAAAAAAAMAAAADABYAAAAAAAQAAAADABYAAAABAAMAAAAEABYAAAAHAAQAAAAGAAkAAAAHAAUAAAAGAAoAAAAIAAQAAAAHAAkAAAAIAAUAAAAHAAoAAAAJAAUAAAAEAAgAAAACAAMAAAABAAUAAAADAAMAAAABAAUAAAAEAAMAAAABAAUAAAAFAAMAAAABAAUAAAAGAAMAAAABAAUAAAAHAAMAAAABAAUAAAAIAAMAAAABAAUAAAAJAAMAAAABAAUAAAAKAAMAAAABAAUAAAALAAMAAAABAAUAAAALAAQAAAABAAUAAAAKAAQAAAABAAUAAAAJAAQAAAABAAUAAAALAAYAAAABAAUAAAAKAAYAAAABAAUAAAAJAAYAAAABAAUAAAAIAAYAAAABAAUAAAAHAAYAAAABAAUAAAAGAAYAAAABAAUAAAAFAAYAAAABAAUAAAAEAAYAAAABAAUAAAADAAYAAAABAAUAAAACAAYAAAABAAUAAAABAAYAAAABAAUAAAABAAUAAAABAAUAAAABAAQAAAABAAUAAAACAAQAAAABAAUAAAADAAQAAAABAAUAAAAEAAQAAAABAAUAAAAFAAQAAAABAAUAAAAFAAUAAAABAAUAAAAGAAUAAAABAAUAAAAGAAQAAAABAAUAAAAEAAUAAAABAAUAAAADAAUAAAABAAUAAAACAAUAAAABAAUAAAAKAAUAAAABAAUAAAALAAUAAAABAAUAAAAFAAgAAAAAAAIAAAAGAAgAAAABAAIAAAALAAgAAAADACMAAAAKAAgAAAADACMAAAAJAAgAAAADACMAAAAIAAgAAAADACMAAAAHAAgAAAADACMAAAAEAAgAAAADACMAAAADAAgAAAADACMAAAACAAgAAAADACMAAAABAAgAAAADACMAAAAAAAgAAAADACQAAAALAAcAAAAAACMAAAAKAAcAAAAAACMAAAAJAAcAAAAAACMAAAAIAAcAAAAAACMAAAAHAAcAAAAAACMAAAAGAAcAAAAAACMAAAAFAAcAAAAAACMAAAAEAAcAAAAAACMAAAADAAcAAAAAACMAAAACAAcAAAAAACMAAAABAAcAAAAAACMAAAAAAAcAAAAAACQAAAA=")
+tile_set = ExtResource("2_8vda8")
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=2068592005]
+script = ExtResource("2_3en8k")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,3": {
+"flags": 1073741825
+},
+"0,4": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,3": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,4": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,4": {
+"flags": 1
+},
+"8,5": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=211795028]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Arenque" parent="NPCs" unique_id=1302005001 instance=ExtResource("arq_npc_base")]
+editor_description = "pokeruby Route104_MrBrineysHouse objeto 1 (5,3) OLD_MAN_1 WALK_SEQUENCE_DOWN_LEFT_UP_RIGHT (3,3), FLAG_HIDE_MR_BRINEY_ROUTE104_HOUSE; con VAR_BRINEY_HOUSE_STATE 1 en (9,3)"
+position = Vector2(88, 62)
+script = ExtResource("arq_arenque")
+bandera_persecucion = "arenque_casa_persecucion"
+peeko = NodePath("../Peeko")
+celda_persecucion = Vector2i(9, 3)
+celda_persecucion_peeko = Vector2i(9, 6)
+textos_condicionales = Dictionary[String, String]({})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "ARENQUE_RECADOS"
+bandera_mostrar = "arenque_en_casa"
+tipo_movimiento = 38
+rango = Vector2i(3, 3)
+selec_frames = ExtResource("arq_npc_050")
+coord = Vector2i(5, 3)
+
+[node name="Peeko" parent="NPCs" unique_id=1302005002 instance=ExtResource("arq_npc_base")]
+editor_description = "pokeruby Route104_MrBrineysHouse objeto 2 (6,3) WINGULL FACE_DOWN, FLAG_HIDE_PEEKO_BRINEY_HOUSE (misma bandera que ARENQUE); con VAR_BRINEY_HOUSE_STATE 1 en (9,6), WALK_SEQUENCE_LEFT_UP_RIGHT_DOWN"
+position = Vector2(104, 62)
+script = ExtResource("arq_pokemon")
+numero_nacional = 278
+id_texto = "ARENQUE_PEEKO"
+bandera_mostrar = "arenque_en_casa"
+rango = Vector2i(3, 3)
+selec_frames = ExtResource("arq_npc_wingull")
+tamano_sprite = 3
+coord = Vector2i(6, 3)
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1016168764]
+
+[node name="Cartel" type="Sprite2D" parent="Carteles" unique_id=1768897574 groups=["Cartel"]]
+position = Vector2(8, 56)
+script = ExtResource("9_er3n3")
+id_texto = "JARRON_CARO"
+coord_tile = Vector2i(0, 3)
+
+[node name="Cartel2" type="Sprite2D" parent="Carteles" unique_id=582445197 groups=["Cartel"]]
+position = Vector2(24, 56)
+script = ExtResource("9_er3n3")
+id_texto = "JARRON_CARO"
+coord_tile = Vector2i(1, 3)
+
+[node name="Cartel3" type="Sprite2D" parent="Carteles" unique_id=901148682 groups=["Cartel"]]
+position = Vector2(8, 72)
+script = ExtResource("9_er3n3")
+id_texto = "JARRON_CARO"
+coord_tile = Vector2i(0, 4)
+
+[node name="Warps" type="Node2D" parent="." unique_id=710138135]
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1562970692]
+position = Vector2(88, 134)
+script = ExtResource("4_mnima")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_104"
+posicion_destino = Vector2(19, 50)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=340939745]
+position = Vector2(104, 134)
+script = ExtResource("4_mnima")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_104"
+posicion_destino = Vector2(19, 50)
+direccion = Vector2(0, 1)
+dar_paso = true

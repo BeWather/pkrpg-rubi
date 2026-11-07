@@ -1,0 +1,91 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/concurso/caja_concursante.gd" id="1_caja"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/caja_rival.png" id="2_fondo"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/estrella.png" id="3_estrella"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/iconos_estado.png" id="4_iconos"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/corazon_deslizador.png" id="5_deslizador"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/siguiente_turno.png" id="6_siguiente"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/numeros_turno.png" id="7_numeros"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/turno_aleatorio.png" id="8_aleatorio"]
+[ext_resource type="LabelSettings" path="res://escenas/concurso/texto_caja_concurso.tres" id="9_texto"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_brillo"]
+blend_mode = 1
+
+[node name="CajaConcursante" type="Node2D"]
+script = ExtResource("1_caja")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+texture = ExtResource("2_fondo")
+centered = false
+
+[node name="Brillo" type="Sprite2D" parent="Fondo"]
+modulate = Color(1, 1, 0.6, 0)
+material = SubResource("CanvasItemMaterial_brillo")
+texture = ExtResource("2_fondo")
+centered = false
+
+[node name="Mote" type="Label" parent="."]
+offset_left = 5.0
+offset_top = 0.0
+offset_right = 56.0
+offset_bottom = 12.0
+text = "MOTE"
+label_settings = ExtResource("9_texto")
+
+[node name="Entrenador" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 0.0
+offset_right = 96.0
+offset_bottom = 12.0
+text = "/ENTRENADOR"
+label_settings = ExtResource("9_texto")
+
+[node name="Estrella1" type="Sprite2D" parent="."]
+position = Vector2(8, 16)
+texture = ExtResource("3_estrella")
+centered = false
+
+[node name="Estrella2" type="Sprite2D" parent="."]
+position = Vector2(8, 24)
+texture = ExtResource("3_estrella")
+centered = false
+
+[node name="Estrella3" type="Sprite2D" parent="."]
+position = Vector2(8, 32)
+texture = ExtResource("3_estrella")
+centered = false
+
+[node name="Icono" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("4_iconos")
+centered = false
+hframes = 4
+
+[node name="Corazones" type="Node2D" parent="."]
+position = Vector2(32, 16)
+
+[node name="Deslizador" type="Sprite2D" parent="."]
+position = Vector2(36, 36)
+texture = ExtResource("5_deslizador")
+
+[node name="SiguienteTurno" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(34, 32)
+texture = ExtResource("6_siguiente")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 8)
+
+[node name="Numero" type="Sprite2D" parent="SiguienteTurno"]
+position = Vector2(40, 0)
+texture = ExtResource("7_numeros")
+centered = false
+hframes = 4
+
+[node name="Aleatorio" type="Sprite2D" parent="SiguienteTurno"]
+visible = false
+position = Vector2(40, 0)
+texture = ExtResource("8_aleatorio")
+centered = false

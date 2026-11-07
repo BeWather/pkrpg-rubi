@@ -1,0 +1,18 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dgjw4idrvvuff"]
+
+[ext_resource type="Texture2D" uid="uid://doief7x8nc1uq" path="res://escenas/pantalla_inicio/graficos/part_brillo.png" id="1_adxug"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bt733"]
+atlas = ExtResource("1_adxug")
+region = Rect2(0, 0, 8, 8)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bt733")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]

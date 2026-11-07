@@ -1,0 +1,351 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/hidrocanon.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/water_orb_pal_148_16x16_0_4_8_12.png" id="2_orbe"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/water_impact_32x32_0.png" id="3_salpicadura"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Surf.wav" id="4_carga"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Hydro Pump.wav" id="5_chorro"]
+[ext_resource type="Shader" path="res://escenas/batalla/animaciones_nativas/inversion_campo.gdshader" id="6_inversion"]
+[ext_resource type="Shader" path="res://escenas/batalla/animaciones_nativas/mezcla_gba.gdshader" id="9_mezcla"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orbe0"]
+atlas = ExtResource("2_orbe")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orbe1"]
+atlas = ExtResource("2_orbe")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orbe2"]
+atlas = ExtResource("2_orbe")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orbe3"]
+atlas = ExtResource("2_orbe")
+region = Rect2(0, 48, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_orbe"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orbe0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orbe1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orbe2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orbe3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 60.0
+}]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_inversion"]
+shader = ExtResource("6_inversion")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mezcla"]
+shader = ExtResource("9_mezcla")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_orbe"]
+shader = ExtResource("9_mezcla")
+
+[sub_resource type="Animation" id="Animation_movimiento"]
+resource_name = "movimiento"
+length = 3.166667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.7333, 0.7833, 0.8333, 0.8833, 0.9333, 0.9833, 1.0333, 1.0833, 1.1333, 1.1833, 1.2333, 1.2833, 1.3333, 1.3833, 1.4333, 1.4833, 1.5333, 1.5833, 1.6333, 1.6833, 1.7333, 1.7833, 1.8333, 1.8833, 1.9333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [2],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [2],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [2],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [2],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [2],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}, {
+"args": [1],
+"method": &"emitir_gotas"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.9166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(10, 0), 40, 1, true],
+"method": &"sacudir"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.9333, 2.2499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AtacanteBase/Orbe:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.3499),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AtacanteBase/Orbe:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.8333, 0.9999, 1.3333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.5859, 1.5859), Vector2(1.5859, 1.5859), Vector2(0.0234, 0.0234)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("AtacanteBase/Orbe:rotation")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.8333, 0.9999, 1.3333),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 12.2718, 12.2718, 7.3631]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Inversion:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.1999, 2.2333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AtacanteBase/Orbe:material:shader_parameter/bajo_inversion")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 0.1999, 2.2333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Defensor/Salpicadura:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0, 0.9333, 1.0833, 1.1333, 1.2833, 1.3333, 1.4833, 1.5333, 1.6833, 1.7333, 1.8833, 1.9333, 2.0833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".:paneo")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 0.7333, 1.7999),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-1.0, -1.0, 1.0]
+}
+tracks/10/type = "audio"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("SonidoCarga")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_carga")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/10/use_blend = true
+tracks/11/type = "audio"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Sonido")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_chorro")
+}],
+"times": PackedFloat32Array(0.7333)
+}
+tracks/11/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hidrocanon"]
+_data = {
+&"movimiento": SubResource("Animation_movimiento")
+}
+
+[node name="Hidrocanon" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+
+[node name="CopiaPrevia" type="BackBufferCopy" parent="."]
+copy_mode = 2
+
+[node name="Inversion" type="ColorRect" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_inversion")
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+
+[node name="CopiaFondo" type="BackBufferCopy" parent="."]
+copy_mode = 2
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="Orbe" type="AnimatedSprite2D" parent="AtacanteBase"]
+visible = false
+material = SubResource("ShaderMaterial_orbe")
+position = Vector2(10, -10)
+sprite_frames = SubResource("SpriteFrames_orbe")
+autoplay = "default"
+
+[node name="Salpicadura" type="Sprite2D" parent="Defensor"]
+visible = false
+material = SubResource("ShaderMaterial_mezcla")
+texture = ExtResource("3_salpicadura")
+
+[node name="PlantillaGota" type="AnimatedSprite2D" parent="."]
+visible = false
+material = SubResource("ShaderMaterial_mezcla")
+scale = Vector2(1.3125, 1.3125)
+sprite_frames = SubResource("SpriteFrames_orbe")
+
+[node name="SonidoCarga" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="Sonido" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_hidrocanon")

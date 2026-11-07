@@ -1,0 +1,45 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/pokedex/tamano_pokedex.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://x7htks6fn5p0" path="res://UI/pokedex/graficos/pagina/tamano-dex.png" id="2_fondo"]
+[ext_resource type="LabelSettings" uid="uid://dloc0dcjbkv2v" path="res://UI/texto_normal_negro.tres" id="3_texto"]
+
+[node name="TamanoPokedex" type="Control"]
+texture_filter = 1
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+texture = ExtResource("2_fondo")
+centered = false
+
+[node name="SiluetaPokemon" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(88, 56)
+
+[node name="SiluetaEntrenador" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(152, 56)
+
+[node name="Texto" type="Label" parent="."]
+layout_mode = 0
+offset_left = 23.0
+offset_top = 120.0
+offset_right = 215.0
+offset_bottom = 136.0
+text = "TAMAÑO COMPARADO CON BRUNO"
+label_settings = ExtResource("3_texto")
+horizontal_alignment = 1
+
+[node name="Fundido" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

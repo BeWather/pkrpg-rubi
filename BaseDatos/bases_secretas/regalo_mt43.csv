@@ -1,0 +1,34 @@
+id,es,en
+MT43_REGALO_PROPUESTA,"¿Qué es esto?
+¿Qué he hecho?\p¡Anda, qué guay! Me he construido mi
+propio cuartel general aquí gracias a\w\nun movimiento POKéMON.\p¡Tengo una idea! Te daré esta MT para
+que tú también te construyas el tuyo.","What's that?
+What am I doing?\pI'm thinking about making my own room
+here using a POKéMON move.\pI know! I'll give you this TM.
+Will you use it to make your own room?"
+MT43_REGALO_EXPLICACION,"Busca un árbol grande que sea un poco
+más ancho que todos los demás.\pUsa DAÑO SECRETO delante.
+Caerá una liana y podrás\w\ntrepar hasta la copa.\pTendrás un montón de espacio
+para poner tus cosas.\pSerá tu cuartel general...
+¡TU BASE SECRETA!\pHazte una corriendo...\pOtra cosa: no hace falta hacerse la
+BASE SECRETA en un árbol.\pUsa DAÑO SECRETO en paredes
+rocosas que tengan muescas.\pYo también voy a buscar lugares
+donde crear mi base. ¡Me piro!","Find a big tree that looks like it might
+drop some vines.\pUse SECRET POWER in front of the tree.
+Some vines should get free and drop\ldown, so you can climb the tree.\pYou'll find a lot of space for putting
+your favorite things.\pIt'll be your own secret room...
+A SECRET BASE!\pYou should make one, too.\pAnother thing, you don't always have
+to make your SECRET BASE in a tree.\pTry using SECRET POWER on rock walls
+that have small indents in them.\pI'm going to look for other places, too.
+Okay, bye!"
+MT43_REGALO_RECHAZO,"Oh, ¿no lo quieres?
+Bueno, aquí estaré por si cambias\w\nde idea.","Oh, you don't want this?
+If you change your mind, tell me, okay?"
+MT43_REGALO_SIN_ESPACIO,"Vaya, no tienes sitio para esto.\pTe lo voy a guardar, así que vuelve
+cuando quieras a por él, ¿eh?","Oh, you don't have any room for this.\pI'll hold on to it, so come back for it
+another time, okay?"
+MT43_REGALO_OBTENIDO,¡Obtuvo {objeto}!,Obtained the {objeto}!
+MT43_REGALO_GUARDADO,"{jugador} puso {objeto}
+en el BOLSILLO de {bolsillo}.","{jugador} put away the {objeto}
+in the {bolsillo} POCKET."
+MT43_REGALO_BOLSILLO,MT / MO,TMs & HMs

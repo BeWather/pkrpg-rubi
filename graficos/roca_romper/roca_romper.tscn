@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dr0ca4r0mp3r1"]
+
+[ext_resource type="Script" uid="uid://b5rr0mp3rc4a0" path="res://graficos/roca_romper/controlador_roca_romper.gd" id="1_romper"]
+[ext_resource type="Texture2D" uid="uid://c3xfa34td3b6c" path="res://graficos/roca-romper.png" id="2_romper"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvl6x"]
+atlas = ExtResource("2_romper")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w25ik"]
+atlas = ExtResource("2_romper")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_khs26"]
+atlas = ExtResource("2_romper")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ts0qi"]
+atlas = ExtResource("2_romper")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wk412"]
+atlas = ExtResource("2_romper")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t8mdl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvl6x")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w25ik")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_khs26")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ts0qi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wk412")
+}],
+"loop": 1,
+"name": &"romper",
+"speed": 5.0
+}]
+
+[node name="RocaRomper" type="Node2D" unique_id=1950312847]
+script = ExtResource("1_romper")
+
+[node name="SpriteRocaRomper" type="AnimatedSprite2D" parent="." unique_id=1337210465]
+position = Vector2(-8, -14)
+sprite_frames = SubResource("SpriteFrames_t8mdl")
+animation = &"romper"
+centered = false

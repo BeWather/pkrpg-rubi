@@ -1,0 +1,63 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/debug/selector_pokemon.gd" id="1_sel"]
+
+[node name="SelectorPokemon" type="Window"]
+title = "SELECCIONAR POKEMON"
+size = Vector2i(440, 560)
+min_size = Vector2i(380, 460)
+script = ExtResource("1_sel")
+
+[node name="Margen" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Caja" type="VBoxContainer" parent="Margen"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Buscar" type="LineEdit" parent="Margen/Caja"]
+layout_mode = 2
+placeholder_text = "Buscar especie..."
+
+[node name="Lista" type="ItemList" parent="Margen/Caja"]
+layout_mode = 2
+size_flags_vertical = 3
+allow_reselect = true
+
+[node name="FilaNivel" type="HBoxContainer" parent="Margen/Caja"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Etiqueta" type="Label" parent="Margen/Caja/FilaNivel"]
+layout_mode = 2
+text = "NIVEL"
+vertical_alignment = 1
+
+[node name="Nivel" type="SpinBox" parent="Margen/Caja/FilaNivel"]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 100.0
+value = 5.0
+
+[node name="Acciones" type="HBoxContainer" parent="Margen/Caja"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Usar" type="Button" parent="Margen/Caja/Acciones"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Usar (autogenera datos completos)"
+
+[node name="Cancelar" type="Button" parent="Margen/Caja/Acciones"]
+custom_minimum_size = Vector2(96, 0)
+layout_mode = 2
+text = "Cancelar"

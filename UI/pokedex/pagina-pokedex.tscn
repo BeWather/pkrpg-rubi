@@ -1,0 +1,319 @@
+[gd_scene format=3 uid="uid://ch25b0104mm6q"]
+
+[ext_resource type="Texture2D" uid="uid://hdtd5435sfiu" path="res://UI/pokedex/graficos/pagina/botones-superiores.png" id="2_un3u0"]
+[ext_resource type="Texture2D" uid="uid://koad4ls340cg" path="res://UI/pokedex/graficos/pagina/boton-salir.png" id="2_yhsma"]
+[ext_resource type="Texture2D" uid="uid://ua524w6p0ath" path="res://UI/ficha-entrenador/fe-fondo.png" id="3_2n0r3"]
+[ext_resource type="Texture2D" uid="uid://yamfu2cpd8na" path="res://UI/ficha-entrenador/ma-fondo.png" id="4_yhsma"]
+[ext_resource type="Texture2D" uid="uid://bbe80br5mddfn" path="res://UI/pokedex/graficos/pagina/page-data.png" id="5_ytv76"]
+[ext_resource type="LabelSettings" uid="uid://dloc0dcjbkv2v" path="res://UI/texto_normal_negro.tres" id="6_3cug1"]
+[ext_resource type="Texture2D" uid="uid://yyokbldibe13" path="res://UI/pokedex/graficos/pagina/page2-data.png" id="7_w3lfi"]
+[ext_resource type="Script" path="res://UI/pokedex/pagina_pokedex.gd" id="8_script"]
+[ext_resource type="Texture2D" uid="uid://dbe7eepgc8sgp" path="res://UI/pokedex/graficos/pagina/huellas.png" id="9_huellas"]
+[ext_resource type="Shader" path="res://UI/pokedex/bordes_ficha.gdshader" id="10_bordes"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_bordes"]
+resource_local_to_scene = true
+shader = ExtResource("10_bordes")
+shader_parameter/borde_gris = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytv76"]
+atlas = ExtResource("2_un3u0")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3cug1"]
+atlas = ExtResource("2_un3u0")
+region = Rect2(32, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w3lfi"]
+atlas = ExtResource("2_un3u0")
+region = Rect2(64, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_immn0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytv76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3cug1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w3lfi")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_52ygl"]
+atlas = ExtResource("2_un3u0")
+region = Rect2(0, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrcqs"]
+atlas = ExtResource("2_un3u0")
+region = Rect2(32, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vkbq"]
+atlas = ExtResource("2_un3u0")
+region = Rect2(64, 16, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_k0kc5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_52ygl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrcqs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vkbq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w36at"]
+atlas = ExtResource("2_un3u0")
+region = Rect2(0, 32, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lhmaa"]
+atlas = ExtResource("2_un3u0")
+region = Rect2(32, 32, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fqhne"]
+atlas = ExtResource("2_un3u0")
+region = Rect2(64, 32, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3pi08"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w36at")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lhmaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fqhne")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5yrm"]
+atlas = ExtResource("2_un3u0")
+region = Rect2(0, 48, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7qnx"]
+atlas = ExtResource("2_un3u0")
+region = Rect2(32, 48, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3blxq"]
+atlas = ExtResource("2_un3u0")
+region = Rect2(64, 48, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_t8mdl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5yrm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7qnx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3blxq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PaginaPokedex" type="Control" unique_id=2132723500]
+texture_filter = 1
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+script = ExtResource("8_script")
+
+[node name="MenuSuperior" type="ColorRect" parent="." unique_id=23460314]
+z_index = 2
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 18.0
+color = Color(0.16078432, 0.22352941, 0.41960785, 1)
+
+[node name="botonPagina" type="AnimatedSprite2D" parent="MenuSuperior" unique_id=1412110615]
+position = Vector2(12, 1)
+sprite_frames = SubResource("SpriteFrames_immn0")
+frame = 1
+centered = false
+
+[node name="botonArea" type="AnimatedSprite2D" parent="MenuSuperior" unique_id=1597788085]
+position = Vector2(52, 1)
+sprite_frames = SubResource("SpriteFrames_k0kc5")
+frame = 1
+centered = false
+
+[node name="botonGrito" type="AnimatedSprite2D" parent="MenuSuperior" unique_id=1640652652]
+position = Vector2(92, 1)
+sprite_frames = SubResource("SpriteFrames_3pi08")
+frame = 1
+centered = false
+
+[node name="botonTamano" type="AnimatedSprite2D" parent="MenuSuperior" unique_id=212770768]
+position = Vector2(132, 1)
+sprite_frames = SubResource("SpriteFrames_t8mdl")
+frame = 1
+centered = false
+
+[node name="BotonSalir" type="Sprite2D" parent="MenuSuperior" unique_id=186892656]
+position = Vector2(183, 1)
+texture = ExtResource("2_yhsma")
+centered = false
+
+[node name="Fe-fondo" type="Sprite2D" parent="." unique_id=407631647]
+texture_repeat = 2
+scale = Vector2(240, 1)
+texture = ExtResource("3_2n0r3")
+centered = false
+
+[node name="Ma-fondo" type="Sprite2D" parent="." unique_id=675911086]
+texture_repeat = 2
+scale = Vector2(240, 1)
+texture = ExtResource("4_yhsma")
+centered = false
+
+[node name="FondoInferior" type="ColorRect" parent="." unique_id=320074223]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 240.0
+offset_bottom = 160.0
+color = Color(0, 0, 0.16078432, 1)
+
+[node name="PageData" type="Sprite2D" parent="." unique_id=23863785]
+material = SubResource("ShaderMaterial_bordes")
+texture = ExtResource("5_ytv76")
+centered = false
+
+[node name="Page1Text" type="Label" parent="PageData" unique_id=71812647]
+offset_left = 16.0
+offset_top = 104.0
+offset_right = 224.0
+offset_bottom = 152.0
+text = "TREECKO tiene unos ganchos pequeños
+en las plantas de los pies con los que
+puede escalar superficies verticales."
+label_settings = ExtResource("6_3cug1")
+max_lines_visible = 3
+
+[node name="Page2Data" type="Sprite2D" parent="." unique_id=1791305581]
+material = SubResource("ShaderMaterial_bordes")
+position = Vector2(0, 92)
+texture = ExtResource("7_w3lfi")
+centered = false
+
+[node name="Page2Text" type="Label" parent="Page2Data" unique_id=896463772]
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 224.0
+offset_bottom = 60.0
+text = "Este POKéMON ataca dando un golpetazo
+con la cola."
+label_settings = ExtResource("6_3cug1")
+max_lines_visible = 3
+
+[node name="Datos" type="Node2D" parent="."]
+
+[node name="Numero" type="Label" parent="Datos"]
+offset_left = 103.0
+offset_top = 24.0
+offset_right = 123.0
+offset_bottom = 40.0
+mouse_filter = 2
+text = "252"
+label_settings = ExtResource("6_3cug1")
+
+[node name="Nombre" type="Label" parent="Datos"]
+offset_left = 127.0
+offset_top = 24.0
+offset_right = 197.0
+offset_bottom = 40.0
+mouse_filter = 2
+text = "TREECKO"
+label_settings = ExtResource("6_3cug1")
+
+[node name="Categoria" type="Label" parent="Datos"]
+offset_left = 87.0
+offset_top = 40.0
+offset_right = 197.0
+offset_bottom = 56.0
+mouse_filter = 2
+text = "POKéMON GECO BOSQUE"
+label_settings = ExtResource("6_3cug1")
+
+[node name="Altura" type="Label" parent="Datos"]
+offset_left = 139.0
+offset_top = 56.0
+offset_right = 156.0
+offset_bottom = 72.0
+mouse_filter = 2
+text = "0,5"
+label_settings = ExtResource("6_3cug1")
+
+[node name="UnidadAltura" type="Label" parent="Datos"]
+offset_left = 160.0
+offset_top = 56.0
+offset_right = 168.0
+offset_bottom = 72.0
+mouse_filter = 2
+text = "m"
+label_settings = ExtResource("6_3cug1")
+
+[node name="Peso" type="Label" parent="Datos"]
+offset_left = 139.0
+offset_top = 72.0
+offset_right = 156.0
+offset_bottom = 88.0
+mouse_filter = 2
+text = "5,0"
+label_settings = ExtResource("6_3cug1")
+
+[node name="UnidadPeso" type="Label" parent="Datos"]
+offset_left = 160.0
+offset_top = 72.0
+offset_right = 174.0
+offset_bottom = 88.0
+mouse_filter = 2
+text = "kg"
+label_settings = ExtResource("6_3cug1")
+
+[node name="Huella" type="Sprite2D" parent="Datos"]
+modulate = Color(0.165656, 0.165656, 0.165656, 1)
+position = Vector2(200, 64)
+texture = ExtResource("9_huellas")
+centered = false
+region_enabled = true
+region_rect = Rect2(176, 240, 16, 16)
+
+[node name="Fundido" type="ColorRect" parent="."]
+z_index = 3
+modulate = Color(1, 1, 1, 0)
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Frente" type="Sprite2D" parent="."]
+z_index = 4
+position = Vector2(16, 24)
+centered = false
+
+[node name="ParpadeoRegistro" type="Timer" parent="."]
+wait_time = 0.26666666666667

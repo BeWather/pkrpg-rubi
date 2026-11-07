@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://y8wan2hcoepd"
+path="res://.godot/imported/PRSFX- Vital Throw1.wav-596e28ac98b232aedb81bc1c4425007e.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Vital Throw1.wav"
+dest_files=["res://.godot/imported/PRSFX- Vital Throw1.wav-596e28ac98b232aedb81bc1c4425007e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

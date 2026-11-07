@@ -1,0 +1,42 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/crianza/eclosion_huevo.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/crianza/eclosion_fondo.png" id="2_fondo"]
+[ext_resource type="Texture2D" path="res://graficos/crianza/eclosion_huevo.png" id="3_huevo"]
+
+[node name="EclosionHuevo" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+texture = ExtResource("2_fondo")
+
+[node name="Pokemon" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(120, 70)
+
+[node name="Huevo" type="Sprite2D" parent="."]
+position = Vector2(120, 75)
+texture = ExtResource("3_huevo")
+vframes = 4
+
+[node name="Fragmentos" type="Node2D" parent="."]
+
+[node name="Destello" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+
+[node name="ReproductorSE" type="AudioStreamPlayer" parent="."]
+
+[node name="ReproductorMusica" type="AudioStreamPlayer" parent="."]

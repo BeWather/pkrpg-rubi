@@ -1,0 +1,141 @@
+[gd_scene format=4 uid="uid://dkdti1hmresc7"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_331q1"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_5prlo"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_1hvwr"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_t4s13"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="5_emdix"]
+[ext_resource type="SpriteFrames" uid="uid://ds1lihygyt1d0" path="res://escenas/avatares/npc_027.tres" id="6_emdix"]
+[ext_resource type="SpriteFrames" uid="uid://dsh3jot1vcx8" path="res://escenas/avatares/npc_005.tres" id="7_44fmn"]
+[ext_resource type="Script" uid="uid://4x4txlla27v3" path="res://scripts/eventos/pueblo_azuliza/evento_regalo_azuliza.gd" id="evento_regalo"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="npc_base"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="npc_evento"]
+
+[node name="Casa" type="Node2D" unique_id=337747448]
+script = ExtResource("1_331q1")
+nombre_interno = "PUEBLO_AZULIZA_casa2"
+seccion = "PUEBLO_AZULIZA"
+esInterior = true
+mapa_exterior_asociado = "PUEBLO_AZULIZA"
+solo_caminar = true
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1660786405]
+tile_map_data = PackedByteArray("AAAAAAAAAAADABwAAAAAAAEAAAADAB0AAAAAAAIAAAADAB4AAAABAAAAAAAGABcAAAABAAEAAAAGABgAAAABAAIAAAAGABkAAAACAAAAAAAHABcAAAACAAEAAAAHABgAAAACAAIAAAAHABkAAAADAAAAAAAFAAIAAAADAAEAAAAFAAMAAAAEAAAAAAAHAAIAAAAEAAEAAAAHAAMAAAAFAAAAAAAHAAIAAAAFAAEAAAAHAAMAAAAGAAAAAAAFAAIAAAAGAAEAAAAFAAMAAAAGAAIAAAABAAQAAAAHAAAAAAAFAAIAAAAHAAEAAAAFAAMAAAAHAAIAAAABAAQAAAAIAAEAAAAAABQAAAAIAAIAAAAAABUAAAAJAAAAAAAEABwAAAAJAAEAAAAEAB0AAAAJAAIAAAAEAB4AAAAIAAAAAAAFAAIAAAAFAAIAAAABAAQAAAAEAAIAAAADABYAAAADAAIAAAADABYAAAAAAAMAAAABAAQAAAAAAAQAAAABAAQAAAAAAAUAAAABAAQAAAACAAMAAAABAAUAAAABAAMAAAABAAUAAAABAAQAAAABAAUAAAACAAQAAAABAAUAAAABAAUAAAABAAUAAAACAAUAAAABAAUAAAADAAUAAAABAAUAAAAEAAUAAAABAAUAAAAFAAUAAAABAAUAAAAGAAUAAAAEAAgAAAAHAAUAAAAGAAoAAAAIAAUAAAAHAAoAAAAJAAUAAAAEAAgAAAAJAAQAAAAEAAgAAAAJAAMAAAABAAUAAAAIAAMAAAABAAUAAAAHAAMAAAABAAUAAAAHAAQAAAAGAAkAAAAIAAQAAAAHAAkAAAAAAAYAAAABAAQAAAABAAYAAAABAAUAAAACAAYAAAABAAUAAAADAAYAAAABAAUAAAAEAAYAAAABAAUAAAAFAAYAAAABAAUAAAAGAAYAAAABAAUAAAAHAAYAAAABAAUAAAAIAAYAAAABAAUAAAAJAAYAAAABAAUAAAAAAAcAAAAAACQAAAABAAcAAAAAACMAAAACAAcAAAAAACMAAAADAAcAAAAAACMAAAAEAAcAAAAAACMAAAAFAAcAAAAAACMAAAAGAAcAAAAAACMAAAAHAAcAAAAAACMAAAAIAAcAAAAAACMAAAAJAAcAAAAAACMAAAAAAAgAAAADACQAAAABAAgAAAADACMAAAACAAgAAAADACMAAAADAAgAAAAAAAIAAAAEAAgAAAABAAIAAAAFAAgAAAADACMAAAAGAAgAAAADACMAAAAHAAgAAAADACMAAAAIAAgAAAADACMAAAAJAAgAAAADACMAAAAGAAQAAAABAAUAAAAFAAQAAAABAAUAAAAEAAQAAAABAAUAAAADAAQAAAABAAUAAAADAAMAAAABAAUAAAAEAAMAAAABAAUAAAAFAAMAAAABAAUAAAAGAAMAAAABAAUAAAA=")
+tile_set = ExtResource("2_5prlo")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=615828127]
+position = Vector2(56, 134)
+script = ExtResource("3_1hvwr")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_azuliza"
+posicion_destino = Vector2(14, 8)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=1450428448]
+position = Vector2(72, 134)
+script = ExtResource("3_1hvwr")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_azuliza"
+posicion_destino = Vector2(14, 8)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=534991545]
+script = ExtResource("4_t4s13")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,4": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,4": {
+"flags": 1
+},
+"8,5": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=902757812]
+z_index = 1
+y_sort_enabled = true
+
+[node name="HombrePanuelo" parent="NPCs" unique_id=1254126854 instance=ExtResource("npc_base")]
+position = Vector2(104, 94)
+script = ExtResource("npc_evento")
+tipo_movimiento = 10
+selec_frames = ExtResource("6_emdix")
+coord = Vector2i(6, 5)
+
+[node name="Nino" parent="NPCs" unique_id=1219973289 instance=ExtResource("npc_base")]
+position = Vector2(40, 62)
+id_texto = "AZULIZA_CASA2_NINO"
+tipo_movimiento = 1
+selec_frames = ExtResource("7_44fmn")
+coord = Vector2i(2, 3)
+
+[node name="EventoPanueloSeda" type="Node2D" parent="." unique_id=1875250572]
+script = ExtResource("evento_regalo")
+npc = NodePath("../NPCs/HombrePanuelo")
+bandera_recibido = "azuliza_panuelo_seda_recibido"
+objeto = "PANUELODESEDA"
+texto_regalo = "AZULIZA_CASA2_PANUELO_REGALO"
+texto_sin_espacio = "AZULIZA_CASA2_PANUELO_SIN_ESPACIO"
+texto_recibido = "AZULIZA_CASA2_PANUELO_INFO"
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1916597714]
+
+[node name="Cartel" type="Sprite2D" parent="Carteles" unique_id=86587472 groups=["Cartel"]]
+position = Vector2(56, 40)
+script = ExtResource("5_emdix")
+id_texto = "JARRON_CARO"
+coord_tile = Vector2i(3, 2)
+
+[node name="Cartel2" type="Sprite2D" parent="Carteles" unique_id=1000628592 groups=["Cartel"]]
+position = Vector2(72, 40)
+script = ExtResource("5_emdix")
+id_texto = "JARRON_CARO"
+coord_tile = Vector2i(4, 2)

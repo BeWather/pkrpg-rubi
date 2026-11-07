@@ -1,0 +1,466 @@
+[gd_scene format=3 uid="uid://owgdlwdaic67"]
+
+[ext_resource type="Script" uid="uid://lyvle47j8knr" path="res://UI/pokedex/buscador_pokedex.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://djocm7h7v2gbd" path="res://UI/pokedex/graficos/buscador/fondo-buscador.png" id="2_fondo"]
+[ext_resource type="Texture2D" uid="uid://c7oyqw2bhowm3" path="res://UI/pokedex/graficos/buscador/botones-barra.png" id="3_barra"]
+[ext_resource type="Texture2D" uid="uid://dlhc1ye0auecx" path="res://UI/pokedex/graficos/buscador/etiquetas-filas.png" id="4_etiquetas"]
+[ext_resource type="Texture2D" uid="uid://pulunhbimrcu" path="res://UI/pokedex/graficos/buscador/caja-valor.png" id="5_caja"]
+[ext_resource type="Texture2D" uid="uid://dr4b7ktvhxwqh" path="res://UI/pokedex/graficos/buscador/caja-tipo.png" id="6_caja_tipo"]
+[ext_resource type="Texture2D" uid="uid://bc6xl7v47cwwd" path="res://UI/pokedex/graficos/buscador/boton-vale.png" id="7_vale"]
+[ext_resource type="Texture2D" uid="uid://d0omvoycuv4he" path="res://UI/pokedex/graficos/buscador/franja-rayas.png" id="8_franja"]
+[ext_resource type="Texture2D" uid="uid://cryina0xm8jnk" path="res://UI/pokedex/graficos/buscador/marco-opciones.png" id="9_marco"]
+[ext_resource type="LabelSettings" uid="uid://dloc0dcjbkv2v" path="res://UI/texto_normal_negro.tres" id="10_texto"]
+[ext_resource type="Script" uid="uid://d36hq52xgo0y0" path="res://UI/selector_simple.gd" id="11_selector"]
+[ext_resource type="Texture2D" uid="uid://duj63nu2di5my" path="res://UI/mochila/flecha-arriba.png" id="12_arriba"]
+[ext_resource type="Texture2D" uid="uid://d1e8si86tbxfo" path="res://UI/mochila/flecha-abajo.png" id="13_abajo"]
+
+[sub_resource type="AtlasTexture" id="Atlas_arriba0"]
+atlas = ExtResource("12_arriba")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_arriba1"]
+atlas = ExtResource("12_arriba")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_arriba2"]
+atlas = ExtResource("12_arriba")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_arriba3"]
+atlas = ExtResource("12_arriba")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_arriba4"]
+atlas = ExtResource("12_arriba")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_arriba5"]
+atlas = ExtResource("12_arriba")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_arriba6"]
+atlas = ExtResource("12_arriba")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_arriba7"]
+atlas = ExtResource("12_arriba")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_arriba"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Atlas_arriba0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_arriba1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_arriba2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_arriba3")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_arriba4")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_arriba5")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_arriba6")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_arriba7")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_arriba6")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_arriba5")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_arriba4")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_arriba3")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_arriba2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_arriba1")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 18.0
+}]
+
+[sub_resource type="AtlasTexture" id="Atlas_abajo0"]
+atlas = ExtResource("13_abajo")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_abajo1"]
+atlas = ExtResource("13_abajo")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_abajo2"]
+atlas = ExtResource("13_abajo")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_abajo3"]
+atlas = ExtResource("13_abajo")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_abajo4"]
+atlas = ExtResource("13_abajo")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_abajo5"]
+atlas = ExtResource("13_abajo")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_abajo6"]
+atlas = ExtResource("13_abajo")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="Atlas_abajo7"]
+atlas = ExtResource("13_abajo")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_abajo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("Atlas_abajo0")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_abajo1")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_abajo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_abajo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_abajo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_abajo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_abajo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_abajo7")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_abajo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_abajo5")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_abajo4")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_abajo3")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_abajo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("Atlas_abajo1")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 18.0
+}]
+
+[node name="BuscadorPokedex" type="Control" unique_id=518494250]
+texture_filter = 1
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+script = ExtResource("1_script")
+dex_nacional_disponible = true
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1937882295]
+texture = ExtResource("2_fondo")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="BarraSuperior" type="Node2D" parent="." unique_id=681503646]
+
+[node name="Buscar" type="Sprite2D" parent="BarraSuperior" unique_id=801732919]
+position = Vector2(4, 1)
+texture = ExtResource("3_barra")
+centered = false
+hframes = 2
+vframes = 3
+frame = 1
+
+[node name="Cambio" type="Sprite2D" parent="BarraSuperior" unique_id=449523043]
+position = Vector2(52, 1)
+texture = ExtResource("3_barra")
+centered = false
+hframes = 2
+vframes = 3
+frame = 2
+
+[node name="Salir" type="Sprite2D" parent="BarraSuperior" unique_id=2099950669]
+position = Vector2(100, 1)
+texture = ExtResource("3_barra")
+centered = false
+hframes = 2
+vframes = 3
+frame = 4
+
+[node name="TapaModo" type="Sprite2D" parent="." unique_id=1415353238]
+visible = false
+position = Vector2(0, 80)
+texture = ExtResource("8_franja")
+centered = false
+
+[node name="Filas" type="Node2D" parent="." unique_id=1602244261]
+
+[node name="Nombre" type="Node2D" parent="Filas" unique_id=420536842]
+position = Vector2(0, 16)
+
+[node name="Etiqueta" type="Sprite2D" parent="Filas/Nombre" unique_id=6198399]
+position = Vector2(2, 0)
+texture = ExtResource("4_etiquetas")
+centered = false
+hframes = 3
+vframes = 5
+
+[node name="Caja" type="Sprite2D" parent="Filas/Nombre" unique_id=817496519]
+position = Vector2(43, 0)
+texture = ExtResource("5_caja")
+centered = false
+hframes = 3
+
+[node name="Valor" type="Label" parent="Filas/Nombre" unique_id=277224636]
+offset_left = 45.0
+offset_right = 133.0
+offset_bottom = 16.0
+text = "CUALQUIERA"
+label_settings = ExtResource("10_texto")
+
+[node name="Color" type="Node2D" parent="Filas" unique_id=1002479068]
+position = Vector2(0, 32)
+
+[node name="Etiqueta" type="Sprite2D" parent="Filas/Color" unique_id=676267737]
+position = Vector2(2, 0)
+texture = ExtResource("4_etiquetas")
+centered = false
+hframes = 3
+vframes = 5
+frame = 3
+
+[node name="Caja" type="Sprite2D" parent="Filas/Color" unique_id=561979272]
+position = Vector2(43, 0)
+texture = ExtResource("5_caja")
+centered = false
+hframes = 3
+
+[node name="Valor" type="Label" parent="Filas/Color" unique_id=719387818]
+offset_left = 45.0
+offset_right = 133.0
+offset_bottom = 16.0
+text = "CUALQUIERA"
+label_settings = ExtResource("10_texto")
+
+[node name="Tipo" type="Node2D" parent="Filas" unique_id=760161380]
+position = Vector2(0, 48)
+
+[node name="Etiqueta" type="Sprite2D" parent="Filas/Tipo" unique_id=1178138104]
+position = Vector2(2, 0)
+texture = ExtResource("4_etiquetas")
+centered = false
+hframes = 3
+vframes = 5
+frame = 6
+
+[node name="Caja1" type="Sprite2D" parent="Filas/Tipo" unique_id=1707735883]
+position = Vector2(43, 0)
+texture = ExtResource("6_caja_tipo")
+centered = false
+hframes = 3
+
+[node name="Caja2" type="Sprite2D" parent="Filas/Tipo" unique_id=768627383]
+position = Vector2(91, 0)
+texture = ExtResource("6_caja_tipo")
+centered = false
+hframes = 3
+
+[node name="Valor1" type="Label" parent="Filas/Tipo" unique_id=672301933]
+offset_left = 45.0
+offset_right = 85.0
+offset_bottom = 16.0
+text = "TODOS"
+label_settings = ExtResource("10_texto")
+
+[node name="Valor2" type="Label" parent="Filas/Tipo" unique_id=185324375]
+offset_left = 93.0
+offset_right = 133.0
+offset_bottom = 16.0
+text = "TODOS"
+label_settings = ExtResource("10_texto")
+
+[node name="Orden" type="Node2D" parent="Filas" unique_id=79854307]
+position = Vector2(0, 64)
+
+[node name="Etiqueta" type="Sprite2D" parent="Filas/Orden" unique_id=1230413711]
+position = Vector2(2, 0)
+texture = ExtResource("4_etiquetas")
+centered = false
+hframes = 3
+vframes = 5
+frame = 9
+
+[node name="Caja" type="Sprite2D" parent="Filas/Orden" unique_id=1353212415]
+position = Vector2(43, 0)
+texture = ExtResource("5_caja")
+centered = false
+hframes = 3
+
+[node name="Valor" type="Label" parent="Filas/Orden" unique_id=1122390746]
+offset_left = 45.0
+offset_right = 133.0
+offset_bottom = 16.0
+text = "NUMÉRICO"
+label_settings = ExtResource("10_texto")
+
+[node name="Modo" type="Node2D" parent="Filas" unique_id=990690291]
+position = Vector2(0, 80)
+
+[node name="Etiqueta" type="Sprite2D" parent="Filas/Modo" unique_id=47822669]
+position = Vector2(2, 0)
+texture = ExtResource("4_etiquetas")
+centered = false
+hframes = 3
+vframes = 5
+frame = 12
+
+[node name="Caja" type="Sprite2D" parent="Filas/Modo" unique_id=1865800058]
+position = Vector2(43, 0)
+texture = ExtResource("5_caja")
+centered = false
+hframes = 3
+
+[node name="Valor" type="Label" parent="Filas/Modo" unique_id=1644073961]
+offset_left = 45.0
+offset_right = 133.0
+offset_bottom = 16.0
+text = "DEX HOENN"
+label_settings = ExtResource("10_texto")
+
+[node name="Vale" type="Sprite2D" parent="." unique_id=640619741]
+position = Vector2(2, 96)
+texture = ExtResource("7_vale")
+centered = false
+hframes = 3
+
+[node name="Descripcion" type="Node2D" parent="." unique_id=1300714845]
+
+[node name="Linea1" type="Label" parent="Descripcion" unique_id=1379743224]
+offset_left = 9.0
+offset_top = 120.0
+offset_right = 217.0
+offset_bottom = 136.0
+text = "Buscar POKéMON según los"
+label_settings = ExtResource("10_texto")
+
+[node name="Linea2" type="Label" parent="Descripcion" unique_id=1018290065]
+offset_left = 9.0
+offset_top = 136.0
+offset_right = 217.0
+offset_bottom = 152.0
+text = "parámetros seleccionados."
+label_settings = ExtResource("10_texto")
+
+[node name="ListaOpciones" type="Node2D" parent="." unique_id=1142724868]
+position = Vector2(136, 0)
+
+[node name="Marco" type="Sprite2D" parent="ListaOpciones" unique_id=37210920]
+texture = ExtResource("9_marco")
+centered = false
+
+[node name="Opciones" type="Node2D" parent="ListaOpciones" unique_id=359029824]
+
+[node name="Opcion0" type="Label" parent="ListaOpciones/Opciones" unique_id=1844191048]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 96.0
+offset_bottom = 24.0
+label_settings = ExtResource("10_texto")
+
+[node name="Opcion1" type="Label" parent="ListaOpciones/Opciones" unique_id=1597866859]
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 96.0
+offset_bottom = 40.0
+label_settings = ExtResource("10_texto")
+
+[node name="Opcion2" type="Label" parent="ListaOpciones/Opciones" unique_id=248776573]
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 96.0
+offset_bottom = 56.0
+label_settings = ExtResource("10_texto")
+
+[node name="Opcion3" type="Label" parent="ListaOpciones/Opciones" unique_id=418566]
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 96.0
+offset_bottom = 72.0
+label_settings = ExtResource("10_texto")
+
+[node name="Opcion4" type="Label" parent="ListaOpciones/Opciones" unique_id=2114156790]
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 96.0
+offset_bottom = 88.0
+label_settings = ExtResource("10_texto")
+
+[node name="Opcion5" type="Label" parent="ListaOpciones/Opciones" unique_id=1752506308]
+offset_left = 8.0
+offset_top = 88.0
+offset_right = 96.0
+offset_bottom = 104.0
+label_settings = ExtResource("10_texto")
+
+[node name="Cursor" type="Control" parent="ListaOpciones" unique_id=593342003]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 97.0
+offset_bottom = 24.0
+mouse_filter = 2
+script = ExtResource("11_selector")
+color = Color(0.972549, 0.376471, 0.345098, 1)
+ancho_borde = 1
+
+[node name="FlechaArriba" type="AnimatedSprite2D" parent="ListaOpciones" unique_id=435566783]
+position = Vector2(38, -1)
+sprite_frames = SubResource("SpriteFrames_arriba")
+centered = false
+
+[node name="FlechaAbajo" type="AnimatedSprite2D" parent="ListaOpciones" unique_id=126653191]
+position = Vector2(38, 97)
+sprite_frames = SubResource("SpriteFrames_abajo")
+centered = false
+
+[node name="Fundido" type="ColorRect" parent="." unique_id=2083608352]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

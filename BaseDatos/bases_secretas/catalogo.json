@@ -1,0 +1,3412 @@
+{
+	"version": 1,
+	"fuentes_decomp": {
+		"data/layouts/SecretBase_BlueCave1/map.bin": "0ff172e6ed63beacf53f9bf6465a6df441dc8b73231150e7c15c7bf01cd4e6b7",
+		"data/layouts/SecretBase_BlueCave2/map.bin": "577495c2336e098d3abd083891fa0f10ba8495463d72eab89bf11900854e9e9f",
+		"data/layouts/SecretBase_BlueCave3/map.bin": "cb187e924d4ec0b2b6f68daef16c60f5a963cc8060395a6a0472a2fd3f902e9b",
+		"data/layouts/SecretBase_BlueCave4/map.bin": "911d2a4d8984f97a7fd5e9d817dda22e78dbd57ec47030dd9d9ad2ef3823f02e",
+		"data/layouts/SecretBase_BrownCave1/map.bin": "274a69f964b5d8bc61e55d63a8fb8abb5448bad2afd069abea4711730124d78c",
+		"data/layouts/SecretBase_BrownCave2/map.bin": "ff741c253db94314cfe9c06d0d96ff3fc7526c4bd07f6387d714281e5bf6e2f0",
+		"data/layouts/SecretBase_BrownCave3/map.bin": "1dc5b8c4855cec2594caab5484281b220c5a5353cba18dda451fb513439a85a0",
+		"data/layouts/SecretBase_BrownCave4/map.bin": "b00fcb25d10ce343d882c252dfc5ff995389d0db757e6f2287eab5fd18bd572e",
+		"data/layouts/SecretBase_RedCave1/map.bin": "736c354405f5c02d015cbc20fa7a4ce70ea1df59e37fa1e238b2aaae06227ec6",
+		"data/layouts/SecretBase_RedCave2/map.bin": "ee0c30ebdf3747ead15e0ea3534130a2c198d8ac88ae1031a05bbb514676ce8d",
+		"data/layouts/SecretBase_RedCave3/map.bin": "2fcfcdec1b364d405ff32d836582341428704b1cb06670238cdcdefddee538e1",
+		"data/layouts/SecretBase_RedCave4/map.bin": "6c27811f846b06b3f2892f9cd32b18ae10ea6c22cc7be1ca8b5d2207fcf7cd90",
+		"data/layouts/SecretBase_Shrub1/map.bin": "6cc9c41b82d2859fc861eb3a78f4e92401a666f75b60eb01f173fafc4f4aff78",
+		"data/layouts/SecretBase_Shrub2/map.bin": "6f5b80895e383f77b937a10e8fb1046f22fbaa9c72bd157b3b944e0b5c442032",
+		"data/layouts/SecretBase_Shrub3/map.bin": "14aa546fbd8af337465c7bd00961b8899f26235445e74f6ea7f532027d19b544",
+		"data/layouts/SecretBase_Shrub4/map.bin": "388c8c85ab030d845b1bee096b74ff1e92ede5d1d67641befc72596511e6ae08",
+		"data/layouts/SecretBase_Tree1/map.bin": "18882a5ad3577dd6e37d9856bfc6f60ecb2f257cae3964e0f2dca73658e72324",
+		"data/layouts/SecretBase_Tree2/map.bin": "9e21fc292f83a92d736fc2b15f5adaf608566eb97c34c2966f8d0fa75157c54b",
+		"data/layouts/SecretBase_Tree3/map.bin": "3db453a98153eab43a5fda9abdde321f9034f2307d529824f4a800b4f1a72a02",
+		"data/layouts/SecretBase_Tree4/map.bin": "22710c6c30cf084361232425cb195ae5a81536ee05dcc35327e4f51239136a10",
+		"data/layouts/SecretBase_YellowCave1/map.bin": "5966413b94bb216547c812028aafdb4aefc6a7c066b85d25a4f27389bff0ac35",
+		"data/layouts/SecretBase_YellowCave2/map.bin": "2df33d8de23f9290cdafcd8a42a0bd0176a989fc13ec5599c8ee74db3b8ba817",
+		"data/layouts/SecretBase_YellowCave3/map.bin": "895cfda8ddac1eedc90a86acf7b84a98cb1dd5f058da7b113f34a2f925a403c6",
+		"data/layouts/SecretBase_YellowCave4/map.bin": "84d712b8ac5eba4e84740ca08c0740691fe45cbcbc3c18727962e5338cf3c98b",
+		"data/layouts/layouts.json": "8dc80f71ba8b99be430040ee2454607951364a0ab45f410361a538b1219e8cd8",
+		"data/maps/Route110/map.json": "958e0f06f3646c989c95e9dad7f77a4c2997dcad8249d6b55914a87f6cfd763e",
+		"data/maps/Route111/map.json": "434b74e1946f88e37fd40ca49eb93f10322e08f299b73159f04bca3d712a0506",
+		"data/maps/Route113/map.json": "3f05d92a8742d15c6aa9a23bbe7fb9e0a5bc5fbb3f2bf2cf502902aad92bd98b",
+		"data/maps/Route114/map.json": "bcbddfa17e79584e07848ed00382ea02ca1fa73fa510ec46a83f26a5c70cafb9",
+		"data/maps/Route115/map.json": "67f0dd7cc19ff01023302ae764d53008dcc3d1df39310c2d7a8a893dd70efa7c",
+		"data/maps/Route116/map.json": "bedf6d107bf92df35142544d5bc843c906baa82da05ad98b4f12ea50cd8d24f7",
+		"data/maps/Route118/map.json": "b7d9def5c44aa0757678fec0f25eb4a0ab7ad6c74d4580e02dbfcec4a5e1afba",
+		"data/maps/Route119/map.json": "5d2ed44d4839c2843e1cfb2ba28f28cff6e9b6a93f508e0fb2a54ab5d46a73f5",
+		"data/maps/Route120/map.json": "a0235467887edc862188df57d65297cfd50e538a6402e060bf1ee668a55f753b",
+		"data/maps/Route121/map.json": "1ad76b1636a58bf18ad53279ec01e193f83bc8099f9969b970ea02ae3f2ae996",
+		"data/maps/Route123/map.json": "e3d86c1398e46a875911bf349b004d33bdade0c4b58dc37cee1af5961a1ecb4c",
+		"data/maps/Route125/map.json": "0b0312063d458d2e7a66bda94dde6822880949211c9060e1e762f57f18adea10",
+		"data/maps/Route127/map.json": "d83fd4b1cbfd0e8fe840056aa9a9b8c03f8ef89bc55ae243b753ab54866a0c61",
+		"data/maps/SecretBase_BlueCave1/map.json": "f48b6144dba3c2b1ac547032114638a434f2590e8c2be3d84fccf6fd3cde39fe",
+		"data/maps/SecretBase_BlueCave2/map.json": "bbae15f1283f67f681450609c36bf5bfcf31e09c16badd23ccc20e7c29f8fcce",
+		"data/maps/SecretBase_BlueCave3/map.json": "6c028f52d11c1863a1d10629ca3946c99091becc8d95fc2ea4d8745391075b38",
+		"data/maps/SecretBase_BlueCave4/map.json": "28c5358920db86c7811b7dc87c9bd9f5eba67bccdd33a4ad90ebbc9909aa66a3",
+		"data/maps/SecretBase_BrownCave1/map.json": "f54cd344c1131a9ab922db2511e55f3fbcaae4797bebdad753d0d5c94ca3bce4",
+		"data/maps/SecretBase_BrownCave2/map.json": "77cbf3b9a7557a83d425f863dd1c54c08149687e2fb828c6776d9a32cf11b2d8",
+		"data/maps/SecretBase_BrownCave3/map.json": "e42385f0cd01c5a81c2c83e9360cdc4f522d67801e6480dcbe6a8b4cc4c772f0",
+		"data/maps/SecretBase_BrownCave4/map.json": "40d0dd0417ff220616175faeff0a5dee7229b264201b77e57ec9ef6c760fda2c",
+		"data/maps/SecretBase_RedCave1/map.json": "dc35f26e3e5b199a2a7992fdd125c2f6561694cef82fd09e44a2bfdb4a1b0424",
+		"data/maps/SecretBase_RedCave2/map.json": "5ff8f9d60fe00a0016064656484ae331eb05300c2813cfa1defe65ffc1818c24",
+		"data/maps/SecretBase_RedCave3/map.json": "639fa9dea8dfbd53affd64bb82ed43eee42559665ee4c256923fed1cfc3f7890",
+		"data/maps/SecretBase_RedCave4/map.json": "d7f0fc7a651dfe2ea9379e216a8c76723447033bf17f2161b140a07f2055cb9c",
+		"data/maps/SecretBase_Shrub1/map.json": "26af4470c338d94d6e84d9971c9381a5e4268d157490e959a6b39bb7f378d0ea",
+		"data/maps/SecretBase_Shrub2/map.json": "7d840e3afe22bfda2645ee9b685d687dfed08b669d4555f39f968a3986a3c816",
+		"data/maps/SecretBase_Shrub3/map.json": "25dbb4e1ece8d7ff11e6c2a54e3dc95721b05002bfe2215ee5d4303a26039681",
+		"data/maps/SecretBase_Shrub4/map.json": "d0a85c2894c3c424edc9dddc740f011198908cd0e538871495230a2207bbee01",
+		"data/maps/SecretBase_Tree1/map.json": "af158669e8aa7e522ac6f0e5ec990b15af8b330e4fd9d379aca2cd351d720395",
+		"data/maps/SecretBase_Tree2/map.json": "efd92128e9051952f1e13f6edd6e517a9c97537b644b41b8514d6f33bedbc57a",
+		"data/maps/SecretBase_Tree3/map.json": "8c02a861a25f06f8ab0a7cfe3bd8da6d86f6df8de2fabed7818a3b819285ef58",
+		"data/maps/SecretBase_Tree4/map.json": "6503e5e4abd7fddd05883b7859ff278a02d201213224c349da81959605b85dec",
+		"data/maps/SecretBase_YellowCave1/map.json": "fd49cefc686b78ba33bd8f974db949240b1cbbe5f30a4df65274d1783916fe2a",
+		"data/maps/SecretBase_YellowCave2/map.json": "ace64e04c9e36960d33a2eaa3f853eec72b97d0101009827eb22512a2808abbc",
+		"data/maps/SecretBase_YellowCave3/map.json": "d3380628d38a9e2d25f09facabe4811e37f9f984e4cf8e2ed73d83846a0d0249",
+		"data/maps/SecretBase_YellowCave4/map.json": "601bebf60c858acadf011c218129290ccc1584d76a8a91c0bc9c10a3de671b20",
+		"include/constants/decorations.h": "aed99380a026f599a01a2bf907bc71d3abc33450c30866bfbb26f4cfbcb35ec0",
+		"include/constants/event_objects.h": "9d430cb184052c9fb77aa76485d5b17627315bdf223bb8ba7fb44e9ea0829f30",
+		"include/constants/secret_bases.h": "dc9102e949034345be30ef6cd1770690649669a64939cec4f1d1f4086d3ebc25",
+		"include/global.h": "33baab049f4fa7c26b40c05501ea0231480b5c8be60a961efb99e446a8974f32",
+		"src/decoration.c": "8c5e0c816fd041844dfb73805d1a844657a6f755db26b6e467dbf6e14ab7cbfa",
+		"src/secret_base.c": "0b546bd9f70f91ea09ad12456e22c4f447ac0948b0bb7e93367d634300b3cd46"
+	},
+	"fuentes_rom": {
+		"non_script_events.csv": "36ba4a09d0c263baecf69db681c27e9e7f8a875a75c70bf75accaf2e07b370b5"
+	},
+	"categorias": [
+		{
+			"id": "MESAS",
+			"simbolo": "DECORCAT_DESK",
+			"capacidad": 10
+		},
+		{
+			"id": "SILLAS",
+			"simbolo": "DECORCAT_CHAIR",
+			"capacidad": 10
+		},
+		{
+			"id": "PLANTAS",
+			"simbolo": "DECORCAT_PLANT",
+			"capacidad": 10
+		},
+		{
+			"id": "ADORNOS",
+			"simbolo": "DECORCAT_ORNAMENT",
+			"capacidad": 30
+		},
+		{
+			"id": "ALFOMBRAS",
+			"simbolo": "DECORCAT_MAT",
+			"capacidad": 30
+		},
+		{
+			"id": "POSTERES",
+			"simbolo": "DECORCAT_POSTER",
+			"capacidad": 10
+		},
+		{
+			"id": "MUNECOS",
+			"simbolo": "DECORCAT_DOLL",
+			"capacidad": 40
+		},
+		{
+			"id": "COJINES",
+			"simbolo": "DECORCAT_CUSHION",
+			"capacidad": 10
+		}
+	],
+	"entradas": [
+		{
+			"id": 1,
+			"simbolo": "SECRET_BASE_RED_CAVE1_1",
+			"interior_id": 0,
+			"mapa_original": "Route118",
+			"mapa": "ruta_118",
+			"x_original": 47,
+			"y_original": 14,
+			"elevacion_original": 0
+		},
+		{
+			"id": 2,
+			"simbolo": "SECRET_BASE_RED_CAVE1_2",
+			"interior_id": 0,
+			"mapa_original": "Route125",
+			"mapa": "ruta_125",
+			"x_original": 53,
+			"y_original": 10,
+			"elevacion_original": 0
+		},
+		{
+			"id": 3,
+			"simbolo": "SECRET_BASE_RED_CAVE1_3",
+			"interior_id": 0,
+			"mapa_original": "Route113",
+			"mapa": "ruta_113",
+			"x_original": 49,
+			"y_original": 8,
+			"elevacion_original": 0
+		},
+		{
+			"id": 11,
+			"simbolo": "SECRET_BASE_RED_CAVE2_1",
+			"interior_id": 1,
+			"mapa_original": "Route118",
+			"mapa": "ruta_118",
+			"x_original": 67,
+			"y_original": 6,
+			"elevacion_original": 0
+		},
+		{
+			"id": 12,
+			"simbolo": "SECRET_BASE_RED_CAVE2_2",
+			"interior_id": 1,
+			"mapa_original": "Route121",
+			"mapa": "ruta_121",
+			"x_original": 40,
+			"y_original": 11,
+			"elevacion_original": 0
+		},
+		{
+			"id": 13,
+			"simbolo": "SECRET_BASE_RED_CAVE2_3",
+			"interior_id": 1,
+			"mapa_original": "Route111",
+			"mapa": "ruta_111",
+			"x_original": 35,
+			"y_original": 1,
+			"elevacion_original": 0
+		},
+		{
+			"id": 21,
+			"simbolo": "SECRET_BASE_RED_CAVE3_1",
+			"interior_id": 2,
+			"mapa_original": "Route115",
+			"mapa": "ruta_115",
+			"x_original": 20,
+			"y_original": 53,
+			"elevacion_original": 0
+		},
+		{
+			"id": 22,
+			"simbolo": "SECRET_BASE_RED_CAVE3_2",
+			"interior_id": 2,
+			"mapa_original": "Route121",
+			"mapa": "ruta_121",
+			"x_original": 18,
+			"y_original": 13,
+			"elevacion_original": 0
+		},
+		{
+			"id": 23,
+			"simbolo": "SECRET_BASE_RED_CAVE3_3",
+			"interior_id": 2,
+			"mapa_original": "Route119",
+			"mapa": "ruta_119",
+			"x_original": 26,
+			"y_original": 81,
+			"elevacion_original": 0
+		},
+		{
+			"id": 31,
+			"simbolo": "SECRET_BASE_RED_CAVE4_1",
+			"interior_id": 3,
+			"mapa_original": "Route127",
+			"mapa": "ruta_127",
+			"x_original": 59,
+			"y_original": 67,
+			"elevacion_original": 0
+		},
+		{
+			"id": 32,
+			"simbolo": "SECRET_BASE_RED_CAVE4_2",
+			"interior_id": 3,
+			"mapa_original": "Route125",
+			"mapa": "ruta_125",
+			"x_original": 55,
+			"y_original": 11,
+			"elevacion_original": 0
+		},
+		{
+			"id": 33,
+			"simbolo": "SECRET_BASE_RED_CAVE4_3",
+			"interior_id": 3,
+			"mapa_original": "Route111",
+			"mapa": "ruta_111",
+			"x_original": 27,
+			"y_original": 27,
+			"elevacion_original": 3
+		},
+		{
+			"id": 41,
+			"simbolo": "SECRET_BASE_BROWN_CAVE1_1",
+			"interior_id": 4,
+			"mapa_original": "Route114",
+			"mapa": "ruta_114",
+			"x_original": 9,
+			"y_original": 47,
+			"elevacion_original": 0
+		},
+		{
+			"id": 42,
+			"simbolo": "SECRET_BASE_BROWN_CAVE1_2",
+			"interior_id": 4,
+			"mapa_original": "Route115",
+			"mapa": "ruta_115",
+			"x_original": 32,
+			"y_original": 39,
+			"elevacion_original": 0
+		},
+		{
+			"id": 43,
+			"simbolo": "SECRET_BASE_BROWN_CAVE1_3",
+			"interior_id": 4,
+			"mapa_original": "Route115",
+			"mapa": "ruta_115",
+			"x_original": 23,
+			"y_original": 8,
+			"elevacion_original": 0
+		},
+		{
+			"id": 51,
+			"simbolo": "SECRET_BASE_BROWN_CAVE2_1",
+			"interior_id": 5,
+			"mapa_original": "Route114",
+			"mapa": "ruta_114",
+			"x_original": 30,
+			"y_original": 51,
+			"elevacion_original": 0
+		},
+		{
+			"id": 52,
+			"simbolo": "SECRET_BASE_BROWN_CAVE2_2",
+			"interior_id": 5,
+			"mapa_original": "Route115",
+			"mapa": "ruta_115",
+			"x_original": 26,
+			"y_original": 15,
+			"elevacion_original": 0
+		},
+		{
+			"id": 53,
+			"simbolo": "SECRET_BASE_BROWN_CAVE2_3",
+			"interior_id": 5,
+			"mapa_original": "Route115",
+			"mapa": "ruta_115",
+			"x_original": 32,
+			"y_original": 46,
+			"elevacion_original": 0
+		},
+		{
+			"id": 61,
+			"simbolo": "SECRET_BASE_BROWN_CAVE3_1",
+			"interior_id": 6,
+			"mapa_original": "Route114",
+			"mapa": "ruta_114",
+			"x_original": 11,
+			"y_original": 62,
+			"elevacion_original": 0
+		},
+		{
+			"id": 62,
+			"simbolo": "SECRET_BASE_BROWN_CAVE3_2",
+			"interior_id": 6,
+			"mapa_original": "Route115",
+			"mapa": "ruta_115",
+			"x_original": 21,
+			"y_original": 18,
+			"elevacion_original": 0
+		},
+		{
+			"id": 63,
+			"simbolo": "SECRET_BASE_BROWN_CAVE3_3",
+			"interior_id": 6,
+			"mapa_original": "Route115",
+			"mapa": "ruta_115",
+			"x_original": 25,
+			"y_original": 24,
+			"elevacion_original": 0
+		},
+		{
+			"id": 71,
+			"simbolo": "SECRET_BASE_BROWN_CAVE4_1",
+			"interior_id": 7,
+			"mapa_original": "Route114",
+			"mapa": "ruta_114",
+			"x_original": 19,
+			"y_original": 70,
+			"elevacion_original": 0
+		},
+		{
+			"id": 72,
+			"simbolo": "SECRET_BASE_BROWN_CAVE4_2",
+			"interior_id": 7,
+			"mapa_original": "Route115",
+			"mapa": "ruta_115",
+			"x_original": 32,
+			"y_original": 6,
+			"elevacion_original": 0
+		},
+		{
+			"id": 73,
+			"simbolo": "SECRET_BASE_BROWN_CAVE4_3",
+			"interior_id": 7,
+			"mapa_original": "Route114",
+			"mapa": "ruta_114",
+			"x_original": 32,
+			"y_original": 57,
+			"elevacion_original": 0
+		},
+		{
+			"id": 81,
+			"simbolo": "SECRET_BASE_BLUE_CAVE1_1",
+			"interior_id": 8,
+			"mapa_original": "Route116",
+			"mapa": "ruta_116",
+			"x_original": 71,
+			"y_original": 4,
+			"elevacion_original": 0
+		},
+		{
+			"id": 82,
+			"simbolo": "SECRET_BASE_BLUE_CAVE1_2",
+			"interior_id": 8,
+			"mapa_original": "Route123",
+			"mapa": "ruta_123",
+			"x_original": 47,
+			"y_original": 3,
+			"elevacion_original": 0
+		},
+		{
+			"id": 83,
+			"simbolo": "SECRET_BASE_BLUE_CAVE1_3",
+			"interior_id": 8,
+			"mapa_original": "Route123",
+			"mapa": "ruta_123",
+			"x_original": 57,
+			"y_original": 5,
+			"elevacion_original": 0
+		},
+		{
+			"id": 91,
+			"simbolo": "SECRET_BASE_BLUE_CAVE2_1",
+			"interior_id": 9,
+			"mapa_original": "Route116",
+			"mapa": "ruta_116",
+			"x_original": 79,
+			"y_original": 11,
+			"elevacion_original": 0
+		},
+		{
+			"id": 92,
+			"simbolo": "SECRET_BASE_BLUE_CAVE2_2",
+			"interior_id": 9,
+			"mapa_original": "Route123",
+			"mapa": "ruta_123",
+			"x_original": 49,
+			"y_original": 3,
+			"elevacion_original": 0
+		},
+		{
+			"id": 93,
+			"simbolo": "SECRET_BASE_BLUE_CAVE2_3",
+			"interior_id": 9,
+			"mapa_original": "Route120",
+			"mapa": "ruta_120",
+			"x_original": 18,
+			"y_original": 12,
+			"elevacion_original": 0
+		},
+		{
+			"id": 101,
+			"simbolo": "SECRET_BASE_BLUE_CAVE3_1",
+			"interior_id": 10,
+			"mapa_original": "Route120",
+			"mapa": "ruta_120",
+			"x_original": 28,
+			"y_original": 62,
+			"elevacion_original": 0
+		},
+		{
+			"id": 102,
+			"simbolo": "SECRET_BASE_BLUE_CAVE3_2",
+			"interior_id": 10,
+			"mapa_original": "Route116",
+			"mapa": "ruta_116",
+			"x_original": 56,
+			"y_original": 6,
+			"elevacion_original": 0
+		},
+		{
+			"id": 103,
+			"simbolo": "SECRET_BASE_BLUE_CAVE3_3",
+			"interior_id": 10,
+			"mapa_original": "Route119",
+			"mapa": "ruta_119",
+			"x_original": 16,
+			"y_original": 81,
+			"elevacion_original": 0
+		},
+		{
+			"id": 111,
+			"simbolo": "SECRET_BASE_BLUE_CAVE4_1",
+			"interior_id": 11,
+			"mapa_original": "Route120",
+			"mapa": "ruta_120",
+			"x_original": 30,
+			"y_original": 62,
+			"elevacion_original": 0
+		},
+		{
+			"id": 112,
+			"simbolo": "SECRET_BASE_BLUE_CAVE4_2",
+			"interior_id": 11,
+			"mapa_original": "Route116",
+			"mapa": "ruta_116",
+			"x_original": 55,
+			"y_original": 15,
+			"elevacion_original": 0
+		},
+		{
+			"id": 113,
+			"simbolo": "SECRET_BASE_BLUE_CAVE4_3",
+			"interior_id": 11,
+			"mapa_original": "Route119",
+			"mapa": "ruta_119",
+			"x_original": 16,
+			"y_original": 28,
+			"elevacion_original": 0
+		},
+		{
+			"id": 121,
+			"simbolo": "SECRET_BASE_YELLOW_CAVE1_1",
+			"interior_id": 12,
+			"mapa_original": "Route111",
+			"mapa": "ruta_111",
+			"x_original": 33,
+			"y_original": 34,
+			"elevacion_original": 0
+		},
+		{
+			"id": 122,
+			"simbolo": "SECRET_BASE_YELLOW_CAVE1_2",
+			"interior_id": 12,
+			"mapa_original": "Route118",
+			"mapa": "ruta_118",
+			"x_original": 29,
+			"y_original": 5,
+			"elevacion_original": 0
+		},
+		{
+			"id": 123,
+			"simbolo": "SECRET_BASE_YELLOW_CAVE1_3",
+			"interior_id": 12,
+			"mapa_original": "Route127",
+			"mapa": "ruta_127",
+			"x_original": 45,
+			"y_original": 24,
+			"elevacion_original": 0
+		},
+		{
+			"id": 131,
+			"simbolo": "SECRET_BASE_YELLOW_CAVE2_1",
+			"interior_id": 13,
+			"mapa_original": "Route111",
+			"mapa": "ruta_111",
+			"x_original": 24,
+			"y_original": 36,
+			"elevacion_original": 0
+		},
+		{
+			"id": 132,
+			"simbolo": "SECRET_BASE_YELLOW_CAVE2_2",
+			"interior_id": 13,
+			"mapa_original": "Route125",
+			"mapa": "ruta_125",
+			"x_original": 7,
+			"y_original": 25,
+			"elevacion_original": 0
+		},
+		{
+			"id": 133,
+			"simbolo": "SECRET_BASE_YELLOW_CAVE2_3",
+			"interior_id": 13,
+			"mapa_original": "Route115",
+			"mapa": "ruta_115",
+			"x_original": 8,
+			"y_original": 30,
+			"elevacion_original": 0
+		},
+		{
+			"id": 141,
+			"simbolo": "SECRET_BASE_YELLOW_CAVE3_1",
+			"interior_id": 14,
+			"mapa_original": "Route111",
+			"mapa": "ruta_111",
+			"x_original": 34,
+			"y_original": 50,
+			"elevacion_original": 0
+		},
+		{
+			"id": 142,
+			"simbolo": "SECRET_BASE_YELLOW_CAVE3_2",
+			"interior_id": 14,
+			"mapa_original": "Route127",
+			"mapa": "ruta_127",
+			"x_original": 59,
+			"y_original": 72,
+			"elevacion_original": 0
+		},
+		{
+			"id": 143,
+			"simbolo": "SECRET_BASE_YELLOW_CAVE3_3",
+			"interior_id": 14,
+			"mapa_original": "Route127",
+			"mapa": "ruta_127",
+			"x_original": 61,
+			"y_original": 21,
+			"elevacion_original": 0
+		},
+		{
+			"id": 151,
+			"simbolo": "SECRET_BASE_YELLOW_CAVE4_1",
+			"interior_id": 15,
+			"mapa_original": "Route127",
+			"mapa": "ruta_127",
+			"x_original": 67,
+			"y_original": 63,
+			"elevacion_original": 0
+		},
+		{
+			"id": 152,
+			"simbolo": "SECRET_BASE_YELLOW_CAVE4_2",
+			"interior_id": 15,
+			"mapa_original": "Route125",
+			"mapa": "ruta_125",
+			"x_original": 24,
+			"y_original": 32,
+			"elevacion_original": 0
+		},
+		{
+			"id": 153,
+			"simbolo": "SECRET_BASE_YELLOW_CAVE4_3",
+			"interior_id": 15,
+			"mapa_original": "Route111",
+			"mapa": "ruta_111",
+			"x_original": 35,
+			"y_original": 31,
+			"elevacion_original": 0
+		},
+		{
+			"id": 161,
+			"simbolo": "SECRET_BASE_TREE1_1",
+			"interior_id": 16,
+			"mapa_original": "Route111",
+			"mapa": "ruta_111",
+			"x_original": 13,
+			"y_original": 19,
+			"elevacion_original": 0
+		},
+		{
+			"id": 162,
+			"simbolo": "SECRET_BASE_TREE1_2",
+			"interior_id": 16,
+			"mapa_original": "Route121",
+			"mapa": "ruta_121",
+			"x_original": 43,
+			"y_original": 7,
+			"elevacion_original": 0
+		},
+		{
+			"id": 163,
+			"simbolo": "SECRET_BASE_TREE1_3",
+			"interior_id": 16,
+			"mapa_original": "Route118",
+			"mapa": "ruta_118",
+			"x_original": 47,
+			"y_original": 5,
+			"elevacion_original": 0
+		},
+		{
+			"id": 164,
+			"simbolo": "SECRET_BASE_TREE1_4",
+			"interior_id": 16,
+			"mapa_original": "Route111",
+			"mapa": "ruta_111",
+			"x_original": 14,
+			"y_original": 19,
+			"elevacion_original": 0
+		},
+		{
+			"id": 171,
+			"simbolo": "SECRET_BASE_TREE2_1",
+			"interior_id": 17,
+			"mapa_original": "Route118",
+			"mapa": "ruta_118",
+			"x_original": 46,
+			"y_original": 5,
+			"elevacion_original": 0
+		},
+		{
+			"id": 172,
+			"simbolo": "SECRET_BASE_TREE2_2",
+			"interior_id": 17,
+			"mapa_original": "Route121",
+			"mapa": "ruta_121",
+			"x_original": 42,
+			"y_original": 7,
+			"elevacion_original": 0
+		},
+		{
+			"id": 173,
+			"simbolo": "SECRET_BASE_TREE2_3",
+			"interior_id": 17,
+			"mapa_original": "Route119",
+			"mapa": "ruta_119",
+			"x_original": 19,
+			"y_original": 76,
+			"elevacion_original": 0
+		},
+		{
+			"id": 174,
+			"simbolo": "SECRET_BASE_TREE2_4",
+			"interior_id": 17,
+			"mapa_original": "Route115",
+			"mapa": "ruta_115",
+			"x_original": 7,
+			"y_original": 20,
+			"elevacion_original": 0
+		},
+		{
+			"id": 181,
+			"simbolo": "SECRET_BASE_TREE3_1",
+			"interior_id": 18,
+			"mapa_original": "Route110",
+			"mapa": "ruta_110",
+			"x_original": 16,
+			"y_original": 25,
+			"elevacion_original": 0
+		},
+		{
+			"id": 182,
+			"simbolo": "SECRET_BASE_TREE3_2",
+			"interior_id": 18,
+			"mapa_original": "Route114",
+			"mapa": "ruta_114",
+			"x_original": 11,
+			"y_original": 27,
+			"elevacion_original": 0
+		},
+		{
+			"id": 183,
+			"simbolo": "SECRET_BASE_TREE3_3",
+			"interior_id": 18,
+			"mapa_original": "Route115",
+			"mapa": "ruta_115",
+			"x_original": 8,
+			"y_original": 20,
+			"elevacion_original": 0
+		},
+		{
+			"id": 191,
+			"simbolo": "SECRET_BASE_TREE4_1",
+			"interior_id": 19,
+			"mapa_original": "Route110",
+			"mapa": "ruta_110",
+			"x_original": 17,
+			"y_original": 25,
+			"elevacion_original": 0
+		},
+		{
+			"id": 192,
+			"simbolo": "SECRET_BASE_TREE4_2",
+			"interior_id": 19,
+			"mapa_original": "Route114",
+			"mapa": "ruta_114",
+			"x_original": 12,
+			"y_original": 27,
+			"elevacion_original": 0
+		},
+		{
+			"id": 193,
+			"simbolo": "SECRET_BASE_TREE4_3",
+			"interior_id": 19,
+			"mapa_original": "Route119",
+			"mapa": "ruta_119",
+			"x_original": 18,
+			"y_original": 76,
+			"elevacion_original": 0
+		},
+		{
+			"id": 201,
+			"simbolo": "SECRET_BASE_SHRUB1_1",
+			"interior_id": 20,
+			"mapa_original": "Route119",
+			"mapa": "ruta_119",
+			"x_original": 5,
+			"y_original": 2,
+			"elevacion_original": 0
+		},
+		{
+			"id": 202,
+			"simbolo": "SECRET_BASE_SHRUB1_2",
+			"interior_id": 20,
+			"mapa_original": "Route119",
+			"mapa": "ruta_119",
+			"x_original": 4,
+			"y_original": 89,
+			"elevacion_original": 0
+		},
+		{
+			"id": 203,
+			"simbolo": "SECRET_BASE_SHRUB1_3",
+			"interior_id": 20,
+			"mapa_original": "Route120",
+			"mapa": "ruta_120",
+			"x_original": 38,
+			"y_original": 54,
+			"elevacion_original": 0
+		},
+		{
+			"id": 204,
+			"simbolo": "SECRET_BASE_SHRUB1_4",
+			"interior_id": 20,
+			"mapa_original": "Route120",
+			"mapa": "ruta_120",
+			"x_original": 5,
+			"y_original": 76,
+			"elevacion_original": 0
+		},
+		{
+			"id": 211,
+			"simbolo": "SECRET_BASE_SHRUB2_1",
+			"interior_id": 21,
+			"mapa_original": "Route119",
+			"mapa": "ruta_119",
+			"x_original": 5,
+			"y_original": 15,
+			"elevacion_original": 0
+		},
+		{
+			"id": 212,
+			"simbolo": "SECRET_BASE_SHRUB2_2",
+			"interior_id": 21,
+			"mapa_original": "Route119",
+			"mapa": "ruta_119",
+			"x_original": 7,
+			"y_original": 101,
+			"elevacion_original": 3
+		},
+		{
+			"id": 213,
+			"simbolo": "SECRET_BASE_SHRUB2_3",
+			"interior_id": 21,
+			"mapa_original": "Route120",
+			"mapa": "ruta_120",
+			"x_original": 31,
+			"y_original": 23,
+			"elevacion_original": 0
+		},
+		{
+			"id": 221,
+			"simbolo": "SECRET_BASE_SHRUB3_1",
+			"interior_id": 22,
+			"mapa_original": "Route119",
+			"mapa": "ruta_119",
+			"x_original": 34,
+			"y_original": 24,
+			"elevacion_original": 3
+		},
+		{
+			"id": 222,
+			"simbolo": "SECRET_BASE_SHRUB3_2",
+			"interior_id": 22,
+			"mapa_original": "Route120",
+			"mapa": "ruta_120",
+			"x_original": 26,
+			"y_original": 10,
+			"elevacion_original": 0
+		},
+		{
+			"id": 223,
+			"simbolo": "SECRET_BASE_SHRUB3_3",
+			"interior_id": 22,
+			"mapa_original": "Route119",
+			"mapa": "ruta_119",
+			"x_original": 4,
+			"y_original": 15,
+			"elevacion_original": 0
+		},
+		{
+			"id": 231,
+			"simbolo": "SECRET_BASE_SHRUB4_1",
+			"interior_id": 23,
+			"mapa_original": "Route119",
+			"mapa": "ruta_119",
+			"x_original": 31,
+			"y_original": 73,
+			"elevacion_original": 3
+		},
+		{
+			"id": 232,
+			"simbolo": "SECRET_BASE_SHRUB4_2",
+			"interior_id": 23,
+			"mapa_original": "Route120",
+			"mapa": "ruta_120",
+			"x_original": 29,
+			"y_original": 85,
+			"elevacion_original": 5
+		},
+		{
+			"id": 233,
+			"simbolo": "SECRET_BASE_SHRUB4_3",
+			"interior_id": 23,
+			"mapa_original": "Route119",
+			"mapa": "ruta_119",
+			"x_original": 6,
+			"y_original": 2,
+			"elevacion_original": 0
+		}
+	],
+	"interiores": [
+		{
+			"id": 0,
+			"mapa_original": "SecretBase_RedCave1",
+			"nombre_interno": "secret_base_red_cave1",
+			"familia": "RED_CAVE",
+			"ancho": 11,
+			"alto": 9,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_RedCave1/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseRedCave",
+			"entrada_original": [
+				5,
+				7
+			],
+			"inicio_confirmado_original": [
+				1,
+				3
+			],
+			"pc_original": [
+				1,
+				2
+			]
+		},
+		{
+			"id": 1,
+			"mapa_original": "SecretBase_RedCave2",
+			"nombre_interno": "secret_base_red_cave2",
+			"familia": "RED_CAVE",
+			"ancho": 7,
+			"alto": 16,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_RedCave2/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseRedCave",
+			"entrada_original": [
+				3,
+				14
+			],
+			"inicio_confirmado_original": [
+				5,
+				9
+			],
+			"pc_original": [
+				5,
+				8
+			]
+		},
+		{
+			"id": 2,
+			"mapa_original": "SecretBase_RedCave3",
+			"nombre_interno": "secret_base_red_cave3",
+			"familia": "RED_CAVE",
+			"ancho": 15,
+			"alto": 8,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_RedCave3/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseRedCave",
+			"entrada_original": [
+				3,
+				6
+			],
+			"inicio_confirmado_original": [
+				1,
+				3
+			],
+			"pc_original": [
+				1,
+				2
+			]
+		},
+		{
+			"id": 3,
+			"mapa_original": "SecretBase_RedCave4",
+			"nombre_interno": "secret_base_red_cave4",
+			"familia": "RED_CAVE",
+			"ancho": 9,
+			"alto": 15,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_RedCave4/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseRedCave",
+			"entrada_original": [
+				2,
+				12
+			],
+			"inicio_confirmado_original": [
+				7,
+				13
+			],
+			"pc_original": [
+				7,
+				12
+			]
+		},
+		{
+			"id": 4,
+			"mapa_original": "SecretBase_BrownCave1",
+			"nombre_interno": "secret_base_brown_cave1",
+			"familia": "BROWN_CAVE",
+			"ancho": 11,
+			"alto": 9,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_BrownCave1/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseBrownCave",
+			"entrada_original": [
+				5,
+				7
+			],
+			"inicio_confirmado_original": [
+				2,
+				3
+			],
+			"pc_original": [
+				2,
+				2
+			]
+		},
+		{
+			"id": 5,
+			"mapa_original": "SecretBase_BrownCave2",
+			"nombre_interno": "secret_base_brown_cave2",
+			"familia": "BROWN_CAVE",
+			"ancho": 14,
+			"alto": 9,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_BrownCave2/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseBrownCave",
+			"entrada_original": [
+				1,
+				7
+			],
+			"inicio_confirmado_original": [
+				9,
+				2
+			],
+			"pc_original": [
+				9,
+				1
+			]
+		},
+		{
+			"id": 6,
+			"mapa_original": "SecretBase_BrownCave3",
+			"nombre_interno": "secret_base_brown_cave3",
+			"familia": "BROWN_CAVE",
+			"ancho": 15,
+			"alto": 11,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_BrownCave3/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseBrownCave",
+			"entrada_original": [
+				11,
+				9
+			],
+			"inicio_confirmado_original": [
+				13,
+				4
+			],
+			"pc_original": [
+				13,
+				3
+			]
+		},
+		{
+			"id": 7,
+			"mapa_original": "SecretBase_BrownCave4",
+			"nombre_interno": "secret_base_brown_cave4",
+			"familia": "BROWN_CAVE",
+			"ancho": 14,
+			"alto": 12,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_BrownCave4/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseBrownCave",
+			"entrada_original": [
+				2,
+				8
+			],
+			"inicio_confirmado_original": [
+				1,
+				2
+			],
+			"pc_original": [
+				1,
+				1
+			]
+		},
+		{
+			"id": 8,
+			"mapa_original": "SecretBase_BlueCave1",
+			"nombre_interno": "secret_base_blue_cave1",
+			"familia": "BLUE_CAVE",
+			"ancho": 11,
+			"alto": 9,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_BlueCave1/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseBlueCave",
+			"entrada_original": [
+				5,
+				7
+			],
+			"inicio_confirmado_original": [
+				1,
+				3
+			],
+			"pc_original": [
+				1,
+				2
+			]
+		},
+		{
+			"id": 9,
+			"mapa_original": "SecretBase_BlueCave2",
+			"nombre_interno": "secret_base_blue_cave2",
+			"familia": "BLUE_CAVE",
+			"ancho": 15,
+			"alto": 7,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_BlueCave2/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseBlueCave",
+			"entrada_original": [
+				7,
+				5
+			],
+			"inicio_confirmado_original": [
+				1,
+				2
+			],
+			"pc_original": [
+				1,
+				1
+			]
+		},
+		{
+			"id": 10,
+			"mapa_original": "SecretBase_BlueCave3",
+			"nombre_interno": "secret_base_blue_cave3",
+			"familia": "BLUE_CAVE",
+			"ancho": 10,
+			"alto": 17,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_BlueCave3/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseBlueCave",
+			"entrada_original": [
+				4,
+				15
+			],
+			"inicio_confirmado_original": [
+				3,
+				15
+			],
+			"pc_original": [
+				3,
+				14
+			]
+		},
+		{
+			"id": 11,
+			"mapa_original": "SecretBase_BlueCave4",
+			"nombre_interno": "secret_base_blue_cave4",
+			"familia": "BLUE_CAVE",
+			"ancho": 9,
+			"alto": 17,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_BlueCave4/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseBlueCave",
+			"entrada_original": [
+				4,
+				15
+			],
+			"inicio_confirmado_original": [
+				3,
+				14
+			],
+			"pc_original": [
+				3,
+				13
+			]
+		},
+		{
+			"id": 12,
+			"mapa_original": "SecretBase_YellowCave1",
+			"nombre_interno": "secret_base_yellow_cave1",
+			"familia": "YELLOW_CAVE",
+			"ancho": 11,
+			"alto": 9,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_YellowCave1/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseYellowCave",
+			"entrada_original": [
+				5,
+				7
+			],
+			"inicio_confirmado_original": [
+				9,
+				3
+			],
+			"pc_original": [
+				9,
+				2
+			]
+		},
+		{
+			"id": 13,
+			"mapa_original": "SecretBase_YellowCave2",
+			"nombre_interno": "secret_base_yellow_cave2",
+			"familia": "YELLOW_CAVE",
+			"ancho": 14,
+			"alto": 9,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_YellowCave2/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseYellowCave",
+			"entrada_original": [
+				12,
+				7
+			],
+			"inicio_confirmado_original": [
+				8,
+				7
+			],
+			"pc_original": [
+				8,
+				6
+			]
+		},
+		{
+			"id": 14,
+			"mapa_original": "SecretBase_YellowCave3",
+			"nombre_interno": "secret_base_yellow_cave3",
+			"familia": "YELLOW_CAVE",
+			"ancho": 12,
+			"alto": 11,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_YellowCave3/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseYellowCave",
+			"entrada_original": [
+				5,
+				9
+			],
+			"inicio_confirmado_original": [
+				3,
+				6
+			],
+			"pc_original": [
+				3,
+				5
+			]
+		},
+		{
+			"id": 15,
+			"mapa_original": "SecretBase_YellowCave4",
+			"nombre_interno": "secret_base_yellow_cave4",
+			"familia": "YELLOW_CAVE",
+			"ancho": 13,
+			"alto": 14,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_YellowCave4/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseYellowCave",
+			"entrada_original": [
+				6,
+				12
+			],
+			"inicio_confirmado_original": [
+				5,
+				9
+			],
+			"pc_original": [
+				5,
+				8
+			]
+		},
+		{
+			"id": 16,
+			"mapa_original": "SecretBase_Tree1",
+			"nombre_interno": "secret_base_tree1",
+			"familia": "TREE",
+			"ancho": 11,
+			"alto": 9,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_Tree1/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseTree",
+			"entrada_original": [
+				5,
+				7
+			],
+			"inicio_confirmado_original": [
+				2,
+				3
+			],
+			"pc_original": [
+				2,
+				2
+			]
+		},
+		{
+			"id": 17,
+			"mapa_original": "SecretBase_Tree2",
+			"nombre_interno": "secret_base_tree2",
+			"familia": "TREE",
+			"ancho": 7,
+			"alto": 16,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_Tree2/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseTree",
+			"entrada_original": [
+				3,
+				14
+			],
+			"inicio_confirmado_original": [
+				5,
+				6
+			],
+			"pc_original": [
+				5,
+				5
+			]
+		},
+		{
+			"id": 18,
+			"mapa_original": "SecretBase_Tree3",
+			"nombre_interno": "secret_base_tree3",
+			"familia": "TREE",
+			"ancho": 17,
+			"alto": 8,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_Tree3/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseTree",
+			"entrada_original": [
+				8,
+				6
+			],
+			"inicio_confirmado_original": [
+				15,
+				3
+			],
+			"pc_original": [
+				15,
+				2
+			]
+		},
+		{
+			"id": 19,
+			"mapa_original": "SecretBase_Tree4",
+			"nombre_interno": "secret_base_tree4",
+			"familia": "TREE",
+			"ancho": 14,
+			"alto": 14,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_Tree4/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseTree",
+			"entrada_original": [
+				7,
+				12
+			],
+			"inicio_confirmado_original": [
+				4,
+				10
+			],
+			"pc_original": [
+				4,
+				9
+			]
+		},
+		{
+			"id": 20,
+			"mapa_original": "SecretBase_Shrub1",
+			"nombre_interno": "secret_base_shrub1",
+			"familia": "SHRUB",
+			"ancho": 11,
+			"alto": 9,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_Shrub1/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseShrub",
+			"entrada_original": [
+				5,
+				7
+			],
+			"inicio_confirmado_original": [
+				3,
+				3
+			],
+			"pc_original": [
+				3,
+				2
+			]
+		},
+		{
+			"id": 21,
+			"mapa_original": "SecretBase_Shrub2",
+			"nombre_interno": "secret_base_shrub2",
+			"familia": "SHRUB",
+			"ancho": 15,
+			"alto": 7,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_Shrub2/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseShrub",
+			"entrada_original": [
+				7,
+				5
+			],
+			"inicio_confirmado_original": [
+				1,
+				2
+			],
+			"pc_original": [
+				1,
+				1
+			]
+		},
+		{
+			"id": 22,
+			"mapa_original": "SecretBase_Shrub3",
+			"nombre_interno": "secret_base_shrub3",
+			"familia": "SHRUB",
+			"ancho": 13,
+			"alto": 11,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_Shrub3/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseShrub",
+			"entrada_original": [
+				6,
+				9
+			],
+			"inicio_confirmado_original": [
+				7,
+				8
+			],
+			"pc_original": [
+				7,
+				7
+			]
+		},
+		{
+			"id": 23,
+			"mapa_original": "SecretBase_Shrub4",
+			"nombre_interno": "secret_base_shrub4",
+			"familia": "SHRUB",
+			"ancho": 14,
+			"alto": 11,
+			"musica_original": "MUS_FORTREE",
+			"layout_original": "data/layouts/SecretBase_Shrub4/map.bin",
+			"tileset_primario": "gTileset_SecretBase",
+			"tileset_secundario": "gTileset_SecretBaseShrub",
+			"entrada_original": [
+				11,
+				8
+			],
+			"inicio_confirmado_original": [
+				9,
+				6
+			],
+			"pc_original": [
+				9,
+				5
+			]
+		}
+	],
+	"decoraciones": [
+		{
+			"id": 1,
+			"simbolo": "DECOR_SMALL_DESK",
+			"nombre_referencia": "SMALL DESK",
+			"descripcion_simbolo": "DecorDesc_SMALL_DESK",
+			"categoria": "MESAS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				135
+			]
+		},
+		{
+			"id": 2,
+			"simbolo": "DECOR_POKEMON_DESK",
+			"nombre_referencia": "POKéMON DESK",
+			"descripcion_simbolo": "DecorDesc_POKEMON_DESK",
+			"categoria": "MESAS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				143
+			]
+		},
+		{
+			"id": 3,
+			"simbolo": "DECOR_HEAVY_DESK",
+			"nombre_referencia": "HEAVY DESK",
+			"descripcion_simbolo": "DecorDesc_HEAVY_DESK",
+			"categoria": "MESAS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 3,
+			"alto": 2,
+			"precio": 6000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				144,
+				145,
+				146,
+				152,
+				153,
+				154
+			]
+		},
+		{
+			"id": 4,
+			"simbolo": "DECOR_RAGGED_DESK",
+			"nombre_referencia": "RAGGED DESK",
+			"descripcion_simbolo": "DecorDesc_RAGGED_DESK",
+			"categoria": "MESAS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 3,
+			"alto": 2,
+			"precio": 6000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				147,
+				148,
+				149,
+				155,
+				156,
+				157
+			]
+		},
+		{
+			"id": 5,
+			"simbolo": "DECOR_COMFORT_DESK",
+			"nombre_referencia": "COMFORT DESK",
+			"descripcion_simbolo": "DecorDesc_COMFORT_DESK",
+			"categoria": "MESAS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 3,
+			"alto": 2,
+			"precio": 6000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				150,
+				151,
+				163,
+				158,
+				159,
+				171
+			]
+		},
+		{
+			"id": 6,
+			"simbolo": "DECOR_PRETTY_DESK",
+			"nombre_referencia": "PRETTY DESK",
+			"descripcion_simbolo": "DecorDesc_PRETTY_DESK",
+			"categoria": "MESAS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 3,
+			"alto": 3,
+			"precio": 9000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				189,
+				190,
+				191,
+				197,
+				198,
+				199,
+				205,
+				206,
+				207
+			]
+		},
+		{
+			"id": 7,
+			"simbolo": "DECOR_BRICK_DESK",
+			"nombre_referencia": "BRICK DESK",
+			"descripcion_simbolo": "DecorDesc_BRICK_DESK",
+			"categoria": "MESAS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 3,
+			"alto": 3,
+			"precio": 9000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				160,
+				161,
+				162,
+				168,
+				169,
+				170,
+				176,
+				177,
+				178
+			]
+		},
+		{
+			"id": 8,
+			"simbolo": "DECOR_CAMP_DESK",
+			"nombre_referencia": "CAMP DESK",
+			"descripcion_simbolo": "DecorDesc_CAMP_DESK",
+			"categoria": "MESAS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 3,
+			"alto": 3,
+			"precio": 9000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				164,
+				165,
+				166,
+				172,
+				173,
+				174,
+				180,
+				181,
+				182
+			]
+		},
+		{
+			"id": 9,
+			"simbolo": "DECOR_HARD_DESK",
+			"nombre_referencia": "HARD DESK",
+			"descripcion_simbolo": "DecorDesc_HARD_DESK",
+			"categoria": "MESAS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 3,
+			"alto": 3,
+			"precio": 9000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				167,
+				187,
+				188,
+				175,
+				195,
+				196,
+				183,
+				203,
+				204
+			]
+		},
+		{
+			"id": 10,
+			"simbolo": "DECOR_SMALL_CHAIR",
+			"nombre_referencia": "SMALL CHAIR",
+			"descripcion_simbolo": "DecorDesc_SMALL_CHAIR",
+			"categoria": "SILLAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				184
+			]
+		},
+		{
+			"id": 11,
+			"simbolo": "DECOR_POKEMON_CHAIR",
+			"nombre_referencia": "POKéMON CHAIR",
+			"descripcion_simbolo": "DecorDesc_POKEMON_CHAIR",
+			"categoria": "SILLAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				185
+			]
+		},
+		{
+			"id": 12,
+			"simbolo": "DECOR_HEAVY_CHAIR",
+			"nombre_referencia": "HEAVY CHAIR",
+			"descripcion_simbolo": "DecorDesc_HEAVY_CHAIR",
+			"categoria": "SILLAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				186
+			]
+		},
+		{
+			"id": 13,
+			"simbolo": "DECOR_PRETTY_CHAIR",
+			"nombre_referencia": "PRETTY CHAIR",
+			"descripcion_simbolo": "DecorDesc_PRETTY_CHAIR",
+			"categoria": "SILLAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				192
+			]
+		},
+		{
+			"id": 14,
+			"simbolo": "DECOR_COMFORT_CHAIR",
+			"nombre_referencia": "COMFORT CHAIR",
+			"descripcion_simbolo": "DecorDesc_COMFORT_CHAIR",
+			"categoria": "SILLAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				193
+			]
+		},
+		{
+			"id": 15,
+			"simbolo": "DECOR_RAGGED_CHAIR",
+			"nombre_referencia": "RAGGED CHAIR",
+			"descripcion_simbolo": "DecorDesc_RAGGED_CHAIR",
+			"categoria": "SILLAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				194
+			]
+		},
+		{
+			"id": 16,
+			"simbolo": "DECOR_BRICK_CHAIR",
+			"nombre_referencia": "BRICK CHAIR",
+			"descripcion_simbolo": "DecorDesc_BRICK_CHAIR",
+			"categoria": "SILLAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				200
+			]
+		},
+		{
+			"id": 17,
+			"simbolo": "DECOR_CAMP_CHAIR",
+			"nombre_referencia": "CAMP CHAIR",
+			"descripcion_simbolo": "DecorDesc_CAMP_CHAIR",
+			"categoria": "SILLAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				201
+			]
+		},
+		{
+			"id": 18,
+			"simbolo": "DECOR_HARD_CHAIR",
+			"nombre_referencia": "HARD CHAIR",
+			"descripcion_simbolo": "DecorDesc_HARD_CHAIR",
+			"categoria": "SILLAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				202
+			]
+		},
+		{
+			"id": 19,
+			"simbolo": "DECOR_RED_PLANT",
+			"nombre_referencia": "RED PLANT",
+			"descripcion_simbolo": "DecorDesc_RED_PLANT",
+			"categoria": "PLANTAS",
+			"permiso": "BEHIND_FLOOR",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 3000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				208,
+				216
+			]
+		},
+		{
+			"id": 20,
+			"simbolo": "DECOR_TROPICAL_PLANT",
+			"nombre_referencia": "TROPICAL PLANT",
+			"descripcion_simbolo": "DecorDesc_TROPICAL_PLANT",
+			"categoria": "PLANTAS",
+			"permiso": "BEHIND_FLOOR",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 3000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				210,
+				218
+			]
+		},
+		{
+			"id": 21,
+			"simbolo": "DECOR_PRETTY_FLOWERS",
+			"nombre_referencia": "PRETTY FLOWERS",
+			"descripcion_simbolo": "DecorDesc_PRETTY_FLOWERS",
+			"categoria": "PLANTAS",
+			"permiso": "BEHIND_FLOOR",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 3000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				212,
+				220
+			]
+		},
+		{
+			"id": 22,
+			"simbolo": "DECOR_COLORFUL_PLANT",
+			"nombre_referencia": "COLORFUL PLANT",
+			"descripcion_simbolo": "DecorDesc_COLORFUL_PLANT",
+			"categoria": "PLANTAS",
+			"permiso": "BEHIND_FLOOR",
+			"ancho": 2,
+			"alto": 2,
+			"precio": 5000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				224,
+				226,
+				232,
+				233
+			]
+		},
+		{
+			"id": 23,
+			"simbolo": "DECOR_BIG_PLANT",
+			"nombre_referencia": "BIG PLANT",
+			"descripcion_simbolo": "DecorDesc_BIG_PLANT",
+			"categoria": "PLANTAS",
+			"permiso": "BEHIND_FLOOR",
+			"ancho": 2,
+			"alto": 2,
+			"precio": 5000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				228,
+				230,
+				236,
+				237
+			]
+		},
+		{
+			"id": 24,
+			"simbolo": "DECOR_GORGEOUS_PLANT",
+			"nombre_referencia": "GORGEOUS PLANT",
+			"descripcion_simbolo": "DecorDesc_GORGEOUS_PLANT",
+			"categoria": "PLANTAS",
+			"permiso": "BEHIND_FLOOR",
+			"ancho": 2,
+			"alto": 2,
+			"precio": 5000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				240,
+				242,
+				248,
+				249
+			]
+		},
+		{
+			"id": 25,
+			"simbolo": "DECOR_RED_BRICK",
+			"nombre_referencia": "RED BRICK",
+			"descripcion_simbolo": "DecorDesc_RED_BRICK",
+			"categoria": "ADORNOS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				37,
+				45
+			]
+		},
+		{
+			"id": 26,
+			"simbolo": "DECOR_YELLOW_BRICK",
+			"nombre_referencia": "YELLOW BRICK",
+			"descripcion_simbolo": "DecorDesc_YELLOW_BRICK",
+			"categoria": "ADORNOS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				38,
+				46
+			]
+		},
+		{
+			"id": 27,
+			"simbolo": "DECOR_BLUE_BRICK",
+			"nombre_referencia": "BLUE BRICK",
+			"descripcion_simbolo": "DecorDesc_BLUE_BRICK",
+			"categoria": "ADORNOS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				39,
+				47
+			]
+		},
+		{
+			"id": 28,
+			"simbolo": "DECOR_RED_BALLOON",
+			"nombre_referencia": "RED BALLOON",
+			"descripcion_simbolo": "DecorDesc_RED_BALLOON",
+			"categoria": "ADORNOS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				312
+			]
+		},
+		{
+			"id": 29,
+			"simbolo": "DECOR_BLUE_BALLOON",
+			"nombre_referencia": "BLUE BALLOON",
+			"descripcion_simbolo": "DecorDesc_BLUE_BALLOON",
+			"categoria": "ADORNOS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				316
+			]
+		},
+		{
+			"id": 30,
+			"simbolo": "DECOR_YELLOW_BALLOON",
+			"nombre_referencia": "YELLOW BALLOON",
+			"descripcion_simbolo": "DecorDesc_YELLOW_BALLOON",
+			"categoria": "ADORNOS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				320
+			]
+		},
+		{
+			"id": 31,
+			"simbolo": "DECOR_RED_TENT",
+			"nombre_referencia": "RED TENT",
+			"descripcion_simbolo": "DecorDesc_RED_TENT",
+			"categoria": "ADORNOS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 3,
+			"alto": 3,
+			"precio": 10000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				48,
+				49,
+				50,
+				56,
+				57,
+				58,
+				64,
+				65,
+				59
+			]
+		},
+		{
+			"id": 32,
+			"simbolo": "DECOR_BLUE_TENT",
+			"nombre_referencia": "BLUE TENT",
+			"descripcion_simbolo": "DecorDesc_BLUE_TENT",
+			"categoria": "ADORNOS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 3,
+			"alto": 3,
+			"precio": 10000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				72,
+				73,
+				104,
+				80,
+				81,
+				112,
+				88,
+				89,
+				105
+			]
+		},
+		{
+			"id": 33,
+			"simbolo": "DECOR_SOLID_BOARD",
+			"nombre_referencia": "SOLID BOARD",
+			"descripcion_simbolo": "DecorDesc_SOLID_BOARD",
+			"categoria": "ADORNOS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 3000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				52,
+				60
+			]
+		},
+		{
+			"id": 34,
+			"simbolo": "DECOR_SLIDE",
+			"nombre_referencia": "SLIDE",
+			"descripcion_simbolo": "DecorDesc_SLIDE",
+			"categoria": "ADORNOS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 2,
+			"alto": 4,
+			"precio": 8000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				53,
+				54,
+				61,
+				62,
+				99,
+				100,
+				111,
+				119
+			]
+		},
+		{
+			"id": 35,
+			"simbolo": "DECOR_FENCE_LENGTH",
+			"nombre_referencia": "FENCE LENGTH",
+			"descripcion_simbolo": "DecorDesc_FENCE_LENGTH",
+			"categoria": "ADORNOS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				51
+			]
+		},
+		{
+			"id": 36,
+			"simbolo": "DECOR_FENCE_WIDTH",
+			"nombre_referencia": "FENCE WIDTH",
+			"descripcion_simbolo": "DecorDesc_FENCE_WIDTH",
+			"categoria": "ADORNOS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				44
+			]
+		},
+		{
+			"id": 37,
+			"simbolo": "DECOR_TIRE",
+			"nombre_referencia": "TIRE",
+			"descripcion_simbolo": "DecorDesc_TIRE",
+			"categoria": "ADORNOS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 2,
+			"alto": 2,
+			"precio": 800,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				128,
+				129,
+				136,
+				137
+			]
+		},
+		{
+			"id": 38,
+			"simbolo": "DECOR_STAND",
+			"nombre_referencia": "STAND",
+			"descripcion_simbolo": "DecorDesc_STAND",
+			"categoria": "ADORNOS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 4,
+			"alto": 2,
+			"precio": 7000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				106,
+				107,
+				108,
+				109,
+				114,
+				115,
+				116,
+				117
+			]
+		},
+		{
+			"id": 39,
+			"simbolo": "DECOR_MUD_BALL",
+			"nombre_referencia": "MUD BALL",
+			"descripcion_simbolo": "DecorDesc_MUD_BALL",
+			"categoria": "ADORNOS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 200,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				40
+			]
+		},
+		{
+			"id": 40,
+			"simbolo": "DECOR_BREAKABLE_DOOR",
+			"nombre_referencia": "BREAKABLE DOOR",
+			"descripcion_simbolo": "DecorDesc_BREAKABLE_DOOR",
+			"categoria": "ADORNOS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 3000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				55,
+				63
+			]
+		},
+		{
+			"id": 41,
+			"simbolo": "DECOR_SAND_ORNAMENT",
+			"nombre_referencia": "SAND ORNAMENT",
+			"descripcion_simbolo": "DecorDesc_SAND_ORNAMENT",
+			"categoria": "ADORNOS",
+			"permiso": "BEHIND_FLOOR",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 3000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				133,
+				141
+			]
+		},
+		{
+			"id": 42,
+			"simbolo": "DECOR_SILVER_SHIELD",
+			"nombre_referencia": "SILVER SHIELD",
+			"descripcion_simbolo": "DecorDesc_SILVER_SHIELD",
+			"categoria": "ADORNOS",
+			"permiso": "BEHIND_FLOOR",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 0,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				214,
+				222
+			]
+		},
+		{
+			"id": 43,
+			"simbolo": "DECOR_GOLD_SHIELD",
+			"nombre_referencia": "GOLD SHIELD",
+			"descripcion_simbolo": "DecorDesc_GOLD_SHIELD",
+			"categoria": "ADORNOS",
+			"permiso": "BEHIND_FLOOR",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 0,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				302,
+				310
+			]
+		},
+		{
+			"id": 44,
+			"simbolo": "DECOR_GLASS_ORNAMENT",
+			"nombre_referencia": "GLASS ORNAMENT",
+			"descripcion_simbolo": "DecorDesc_GLASS_ORNAMENT",
+			"categoria": "ADORNOS",
+			"permiso": "BEHIND_FLOOR",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 0,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				130,
+				138
+			]
+		},
+		{
+			"id": 45,
+			"simbolo": "DECOR_TV",
+			"nombre_referencia": "TV",
+			"descripcion_simbolo": "DecorDesc_TV",
+			"categoria": "ADORNOS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				244
+			]
+		},
+		{
+			"id": 46,
+			"simbolo": "DECOR_ROUND_TV",
+			"nombre_referencia": "ROUND TV",
+			"descripcion_simbolo": "DecorDesc_ROUND_TV",
+			"categoria": "ADORNOS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 4000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				245
+			]
+		},
+		{
+			"id": 47,
+			"simbolo": "DECOR_CUTE_TV",
+			"nombre_referencia": "CUTE TV",
+			"descripcion_simbolo": "DecorDesc_CUTE_TV",
+			"categoria": "ADORNOS",
+			"permiso": "SOLID_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 4000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				246
+			]
+		},
+		{
+			"id": 48,
+			"simbolo": "DECOR_GLITTER_MAT",
+			"nombre_referencia": "GLITTER MAT",
+			"descripcion_simbolo": "DecorDesc_GLITTER_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				96
+			]
+		},
+		{
+			"id": 49,
+			"simbolo": "DECOR_JUMP_MAT",
+			"nombre_referencia": "JUMP MAT",
+			"descripcion_simbolo": "DecorDesc_JUMP_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				97
+			]
+		},
+		{
+			"id": 50,
+			"simbolo": "DECOR_SPIN_MAT",
+			"nombre_referencia": "SPIN MAT",
+			"descripcion_simbolo": "DecorDesc_SPIN_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				98
+			]
+		},
+		{
+			"id": 51,
+			"simbolo": "DECOR_C_LOW_NOTE_MAT",
+			"nombre_referencia": "C Low NOTE MAT",
+			"descripcion_simbolo": "DecorDesc_C_LOW_NOTE_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				120
+			]
+		},
+		{
+			"id": 52,
+			"simbolo": "DECOR_D_NOTE_MAT",
+			"nombre_referencia": "D NOTE MAT",
+			"descripcion_simbolo": "DecorDesc_D_NOTE_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				121
+			]
+		},
+		{
+			"id": 53,
+			"simbolo": "DECOR_E_NOTE_MAT",
+			"nombre_referencia": "E NOTE MAT",
+			"descripcion_simbolo": "DecorDesc_E_NOTE_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				122
+			]
+		},
+		{
+			"id": 54,
+			"simbolo": "DECOR_F_NOTE_MAT",
+			"nombre_referencia": "F NOTE MAT",
+			"descripcion_simbolo": "DecorDesc_F_NOTE_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				123
+			]
+		},
+		{
+			"id": 55,
+			"simbolo": "DECOR_G_NOTE_MAT",
+			"nombre_referencia": "G NOTE MAT",
+			"descripcion_simbolo": "DecorDesc_G_NOTE_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				124
+			]
+		},
+		{
+			"id": 56,
+			"simbolo": "DECOR_A_NOTE_MAT",
+			"nombre_referencia": "A NOTE MAT",
+			"descripcion_simbolo": "DecorDesc_A_NOTE_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				125
+			]
+		},
+		{
+			"id": 57,
+			"simbolo": "DECOR_B_NOTE_MAT",
+			"nombre_referencia": "B NOTE MAT",
+			"descripcion_simbolo": "DecorDesc_B_NOTE_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				126
+			]
+		},
+		{
+			"id": 58,
+			"simbolo": "DECOR_C_HIGH_NOTE_MAT",
+			"nombre_referencia": "C High NOTE MAT",
+			"descripcion_simbolo": "DecorDesc_C_HIGH_NOTE_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				179
+			]
+		},
+		{
+			"id": 59,
+			"simbolo": "DECOR_SURF_MAT",
+			"nombre_referencia": "SURF MAT",
+			"descripcion_simbolo": "DecorDesc_SURF_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 3,
+			"alto": 3,
+			"precio": 4000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				66,
+				67,
+				68,
+				74,
+				75,
+				76,
+				82,
+				83,
+				84
+			]
+		},
+		{
+			"id": 60,
+			"simbolo": "DECOR_THUNDER_MAT",
+			"nombre_referencia": "THUNDER MAT",
+			"descripcion_simbolo": "DecorDesc_THUNDER_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 3,
+			"alto": 3,
+			"precio": 4000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				69,
+				70,
+				71,
+				77,
+				78,
+				79,
+				85,
+				86,
+				87
+			]
+		},
+		{
+			"id": 61,
+			"simbolo": "DECOR_FIRE_BLAST_MAT",
+			"nombre_referencia": "FIRE BLAST MAT",
+			"descripcion_simbolo": "DecorDesc_FIRE_BLAST_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 3,
+			"alto": 3,
+			"precio": 4000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				90,
+				91,
+				92,
+				93,
+				94,
+				95,
+				101,
+				102,
+				103
+			]
+		},
+		{
+			"id": 62,
+			"simbolo": "DECOR_POWDER_SNOW_MAT",
+			"nombre_referencia": "POWDER SNOW MAT",
+			"descripcion_simbolo": "DecorDesc_POWDER_SNOW_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 3,
+			"alto": 3,
+			"precio": 4000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				256,
+				257,
+				258,
+				264,
+				265,
+				266,
+				272,
+				273,
+				274
+			]
+		},
+		{
+			"id": 63,
+			"simbolo": "DECOR_ATTRACT_MAT",
+			"nombre_referencia": "ATTRACT MAT",
+			"descripcion_simbolo": "DecorDesc_ATTRACT_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 3,
+			"alto": 3,
+			"precio": 4000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				259,
+				260,
+				261,
+				267,
+				268,
+				269,
+				275,
+				276,
+				277
+			]
+		},
+		{
+			"id": 64,
+			"simbolo": "DECOR_FISSURE_MAT",
+			"nombre_referencia": "FISSURE MAT",
+			"descripcion_simbolo": "DecorDesc_FISSURE_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 3,
+			"alto": 3,
+			"precio": 4000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				262,
+				263,
+				280,
+				270,
+				271,
+				288,
+				278,
+				279,
+				296
+			]
+		},
+		{
+			"id": 65,
+			"simbolo": "DECOR_SPIKES_MAT",
+			"nombre_referencia": "SPIKES MAT",
+			"descripcion_simbolo": "DecorDesc_SPIKES_MAT",
+			"categoria": "ALFOMBRAS",
+			"permiso": "PASS_FLOOR",
+			"ancho": 3,
+			"alto": 3,
+			"precio": 4000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				281,
+				282,
+				283,
+				289,
+				290,
+				291,
+				297,
+				298,
+				299
+			]
+		},
+		{
+			"id": 66,
+			"simbolo": "DECOR_BALL_POSTER",
+			"nombre_referencia": "BALL POSTER",
+			"descripcion_simbolo": "DecorDesc_BALL_POSTER",
+			"categoria": "POSTERES",
+			"permiso": "NA_WALL",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 1000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				304
+			]
+		},
+		{
+			"id": 67,
+			"simbolo": "DECOR_GREEN_POSTER",
+			"nombre_referencia": "GREEN POSTER",
+			"descripcion_simbolo": "DecorDesc_GREEN_POSTER",
+			"categoria": "POSTERES",
+			"permiso": "NA_WALL",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 1000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				305
+			]
+		},
+		{
+			"id": 68,
+			"simbolo": "DECOR_RED_POSTER",
+			"nombre_referencia": "RED POSTER",
+			"descripcion_simbolo": "DecorDesc_RED_POSTER",
+			"categoria": "POSTERES",
+			"permiso": "NA_WALL",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 1000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				306
+			]
+		},
+		{
+			"id": 69,
+			"simbolo": "DECOR_BLUE_POSTER",
+			"nombre_referencia": "BLUE POSTER",
+			"descripcion_simbolo": "DecorDesc_BLUE_POSTER",
+			"categoria": "POSTERES",
+			"permiso": "NA_WALL",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 1000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				307
+			]
+		},
+		{
+			"id": 70,
+			"simbolo": "DECOR_CUTE_POSTER",
+			"nombre_referencia": "CUTE POSTER",
+			"descripcion_simbolo": "DecorDesc_CUTE_POSTER",
+			"categoria": "POSTERES",
+			"permiso": "NA_WALL",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 1000,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				308
+			]
+		},
+		{
+			"id": 71,
+			"simbolo": "DECOR_PIKA_POSTER",
+			"nombre_referencia": "PIKA POSTER",
+			"descripcion_simbolo": "DecorDesc_PIKA_POSTER",
+			"categoria": "POSTERES",
+			"permiso": "NA_WALL",
+			"ancho": 2,
+			"alto": 1,
+			"precio": 1500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				284,
+				285
+			]
+		},
+		{
+			"id": 72,
+			"simbolo": "DECOR_LONG_POSTER",
+			"nombre_referencia": "LONG POSTER",
+			"descripcion_simbolo": "DecorDesc_LONG_POSTER",
+			"categoria": "POSTERES",
+			"permiso": "NA_WALL",
+			"ancho": 2,
+			"alto": 1,
+			"precio": 1500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				286,
+				287
+			]
+		},
+		{
+			"id": 73,
+			"simbolo": "DECOR_SEA_POSTER",
+			"nombre_referencia": "SEA POSTER",
+			"descripcion_simbolo": "DecorDesc_SEA_POSTER",
+			"categoria": "POSTERES",
+			"permiso": "NA_WALL",
+			"ancho": 2,
+			"alto": 1,
+			"precio": 1500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				292,
+				293
+			]
+		},
+		{
+			"id": 74,
+			"simbolo": "DECOR_SKY_POSTER",
+			"nombre_referencia": "SKY POSTER",
+			"descripcion_simbolo": "DecorDesc_SKY_POSTER",
+			"categoria": "POSTERES",
+			"permiso": "NA_WALL",
+			"ancho": 2,
+			"alto": 1,
+			"precio": 1500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				294,
+				295
+			]
+		},
+		{
+			"id": 75,
+			"simbolo": "DECOR_KISS_POSTER",
+			"nombre_referencia": "KISS POSTER",
+			"descripcion_simbolo": "DecorDesc_KISS_POSTER",
+			"categoria": "POSTERES",
+			"permiso": "NA_WALL",
+			"ancho": 2,
+			"alto": 1,
+			"precio": 1500,
+			"tipo_grafico": "metatiles",
+			"graficos_originales": [
+				300,
+				301
+			]
+		},
+		{
+			"id": 76,
+			"simbolo": "DECOR_PICHU_DOLL",
+			"nombre_referencia": "PICHU DOLL",
+			"descripcion_simbolo": "DecorDesc_PICHU_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				142
+			]
+		},
+		{
+			"id": 77,
+			"simbolo": "DECOR_PIKACHU_DOLL",
+			"nombre_referencia": "PIKACHU DOLL",
+			"descripcion_simbolo": "DecorDesc_PIKACHU_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				143
+			]
+		},
+		{
+			"id": 78,
+			"simbolo": "DECOR_MARILL_DOLL",
+			"nombre_referencia": "MARILL DOLL",
+			"descripcion_simbolo": "DecorDesc_MARILL_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				144
+			]
+		},
+		{
+			"id": 79,
+			"simbolo": "DECOR_TOGEPI_DOLL",
+			"nombre_referencia": "TOGEPI DOLL",
+			"descripcion_simbolo": "DecorDesc_TOGEPI_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				145
+			]
+		},
+		{
+			"id": 80,
+			"simbolo": "DECOR_CYNDAQUIL_DOLL",
+			"nombre_referencia": "CYNDAQUIL DOLL",
+			"descripcion_simbolo": "DecorDesc_CYNDAQUIL_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				146
+			]
+		},
+		{
+			"id": 81,
+			"simbolo": "DECOR_CHIKORITA_DOLL",
+			"nombre_referencia": "CHIKORITA DOLL",
+			"descripcion_simbolo": "DecorDesc_CHIKORITA_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				147
+			]
+		},
+		{
+			"id": 82,
+			"simbolo": "DECOR_TOTODILE_DOLL",
+			"nombre_referencia": "TOTODILE DOLL",
+			"descripcion_simbolo": "DecorDesc_TOTODILE_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				148
+			]
+		},
+		{
+			"id": 83,
+			"simbolo": "DECOR_JIGGLYPUFF_DOLL",
+			"nombre_referencia": "JIGGLYPUFF DOLL",
+			"descripcion_simbolo": "DecorDesc_JIGGLYPUFF_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				149
+			]
+		},
+		{
+			"id": 84,
+			"simbolo": "DECOR_MEOWTH_DOLL",
+			"nombre_referencia": "MEOWTH DOLL",
+			"descripcion_simbolo": "DecorDesc_MEOWTH_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				150
+			]
+		},
+		{
+			"id": 85,
+			"simbolo": "DECOR_CLEFAIRY_DOLL",
+			"nombre_referencia": "CLEFAIRY DOLL",
+			"descripcion_simbolo": "DecorDesc_CLEFAIRY_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				151
+			]
+		},
+		{
+			"id": 86,
+			"simbolo": "DECOR_DITTO_DOLL",
+			"nombre_referencia": "DITTO DOLL",
+			"descripcion_simbolo": "DecorDesc_DITTO_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				152
+			]
+		},
+		{
+			"id": 87,
+			"simbolo": "DECOR_SMOOCHUM_DOLL",
+			"nombre_referencia": "SMOOCHUM DOLL",
+			"descripcion_simbolo": "DecorDesc_SMOOCHUM_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				153
+			]
+		},
+		{
+			"id": 88,
+			"simbolo": "DECOR_TREECKO_DOLL",
+			"nombre_referencia": "TREECKO DOLL",
+			"descripcion_simbolo": "DecorDesc_TREECKO_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				154
+			]
+		},
+		{
+			"id": 89,
+			"simbolo": "DECOR_TORCHIC_DOLL",
+			"nombre_referencia": "TORCHIC DOLL",
+			"descripcion_simbolo": "DecorDesc_TORCHIC_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				155
+			]
+		},
+		{
+			"id": 90,
+			"simbolo": "DECOR_MUDKIP_DOLL",
+			"nombre_referencia": "MUDKIP DOLL",
+			"descripcion_simbolo": "DecorDesc_MUDKIP_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				156
+			]
+		},
+		{
+			"id": 91,
+			"simbolo": "DECOR_DUSKULL_DOLL",
+			"nombre_referencia": "DUSKULL DOLL",
+			"descripcion_simbolo": "DecorDesc_DUSKULL_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				157
+			]
+		},
+		{
+			"id": 92,
+			"simbolo": "DECOR_WYNAUT_DOLL",
+			"nombre_referencia": "WYNAUT DOLL",
+			"descripcion_simbolo": "DecorDesc_WYNAUT_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				158
+			]
+		},
+		{
+			"id": 93,
+			"simbolo": "DECOR_BALTOY_DOLL",
+			"nombre_referencia": "BALTOY DOLL",
+			"descripcion_simbolo": "DecorDesc_BALTOY_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				159
+			]
+		},
+		{
+			"id": 94,
+			"simbolo": "DECOR_KECLEON_DOLL",
+			"nombre_referencia": "KECLEON DOLL",
+			"descripcion_simbolo": "DecorDesc_KECLEON_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				160
+			]
+		},
+		{
+			"id": 95,
+			"simbolo": "DECOR_AZURILL_DOLL",
+			"nombre_referencia": "AZURILL DOLL",
+			"descripcion_simbolo": "DecorDesc_AZURILL_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				161
+			]
+		},
+		{
+			"id": 96,
+			"simbolo": "DECOR_SKITTY_DOLL",
+			"nombre_referencia": "SKITTY DOLL",
+			"descripcion_simbolo": "DecorDesc_SKITTY_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				162
+			]
+		},
+		{
+			"id": 97,
+			"simbolo": "DECOR_SWABLU_DOLL",
+			"nombre_referencia": "SWABLU DOLL",
+			"descripcion_simbolo": "DecorDesc_SWABLU_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				163
+			]
+		},
+		{
+			"id": 98,
+			"simbolo": "DECOR_GULPIN_DOLL",
+			"nombre_referencia": "GULPIN DOLL",
+			"descripcion_simbolo": "DecorDesc_GULPIN_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				164
+			]
+		},
+		{
+			"id": 99,
+			"simbolo": "DECOR_LOTAD_DOLL",
+			"nombre_referencia": "LOTAD DOLL",
+			"descripcion_simbolo": "DecorDesc_LOTAD_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				165
+			]
+		},
+		{
+			"id": 100,
+			"simbolo": "DECOR_SEEDOT_DOLL",
+			"nombre_referencia": "SEEDOT DOLL",
+			"descripcion_simbolo": "DecorDesc_SEEDOT_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 3000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				166
+			]
+		},
+		{
+			"id": 101,
+			"simbolo": "DECOR_PIKA_CUSHION",
+			"nombre_referencia": "PIKA CUSHION",
+			"descripcion_simbolo": "DecorDesc_PIKA_CUSHION",
+			"categoria": "COJINES",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				167
+			]
+		},
+		{
+			"id": 102,
+			"simbolo": "DECOR_ROUND_CUSHION",
+			"nombre_referencia": "ROUND CUSHION",
+			"descripcion_simbolo": "DecorDesc_ROUND_CUSHION",
+			"categoria": "COJINES",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				168
+			]
+		},
+		{
+			"id": 103,
+			"simbolo": "DECOR_KISS_CUSHION",
+			"nombre_referencia": "KISS CUSHION",
+			"descripcion_simbolo": "DecorDesc_KISS_CUSHION",
+			"categoria": "COJINES",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				169
+			]
+		},
+		{
+			"id": 104,
+			"simbolo": "DECOR_ZIGZAG_CUSHION",
+			"nombre_referencia": "ZIGZAG CUSHION",
+			"descripcion_simbolo": "DecorDesc_ZIGZAG_CUSHION",
+			"categoria": "COJINES",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				170
+			]
+		},
+		{
+			"id": 105,
+			"simbolo": "DECOR_SPIN_CUSHION",
+			"nombre_referencia": "SPIN CUSHION",
+			"descripcion_simbolo": "DecorDesc_SPIN_CUSHION",
+			"categoria": "COJINES",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				171
+			]
+		},
+		{
+			"id": 106,
+			"simbolo": "DECOR_DIAMOND_CUSHION",
+			"nombre_referencia": "DIAMOND CUSHION",
+			"descripcion_simbolo": "DecorDesc_DIAMOND_CUSHION",
+			"categoria": "COJINES",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				172
+			]
+		},
+		{
+			"id": 107,
+			"simbolo": "DECOR_BALL_CUSHION",
+			"nombre_referencia": "BALL CUSHION",
+			"descripcion_simbolo": "DecorDesc_BALL_CUSHION",
+			"categoria": "COJINES",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				173
+			]
+		},
+		{
+			"id": 108,
+			"simbolo": "DECOR_GRASS_CUSHION",
+			"nombre_referencia": "GRASS CUSHION",
+			"descripcion_simbolo": "DecorDesc_GRASS_CUSHION",
+			"categoria": "COJINES",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				174
+			]
+		},
+		{
+			"id": 109,
+			"simbolo": "DECOR_FIRE_CUSHION",
+			"nombre_referencia": "FIRE CUSHION",
+			"descripcion_simbolo": "DecorDesc_FIRE_CUSHION",
+			"categoria": "COJINES",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				175
+			]
+		},
+		{
+			"id": 110,
+			"simbolo": "DECOR_WATER_CUSHION",
+			"nombre_referencia": "WATER CUSHION",
+			"descripcion_simbolo": "DecorDesc_WATER_CUSHION",
+			"categoria": "COJINES",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 1,
+			"precio": 2000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				176
+			]
+		},
+		{
+			"id": 111,
+			"simbolo": "DECOR_SNORLAX_DOLL",
+			"nombre_referencia": "SNORLAX DOLL",
+			"descripcion_simbolo": "DecorDesc_SNORLAX_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 10000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				177
+			]
+		},
+		{
+			"id": 112,
+			"simbolo": "DECOR_RHYDON_DOLL",
+			"nombre_referencia": "RHYDON DOLL",
+			"descripcion_simbolo": "DecorDesc_RHYDON_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 10000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				178
+			]
+		},
+		{
+			"id": 113,
+			"simbolo": "DECOR_LAPRAS_DOLL",
+			"nombre_referencia": "LAPRAS DOLL",
+			"descripcion_simbolo": "DecorDesc_LAPRAS_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 10000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				179
+			]
+		},
+		{
+			"id": 114,
+			"simbolo": "DECOR_VENUSAUR_DOLL",
+			"nombre_referencia": "VENUSAUR DOLL",
+			"descripcion_simbolo": "DecorDesc_VENUSAUR_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 10000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				180
+			]
+		},
+		{
+			"id": 115,
+			"simbolo": "DECOR_CHARIZARD_DOLL",
+			"nombre_referencia": "CHARIZARD DOLL",
+			"descripcion_simbolo": "DecorDesc_CHARIZARD_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 10000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				181
+			]
+		},
+		{
+			"id": 116,
+			"simbolo": "DECOR_BLASTOISE_DOLL",
+			"nombre_referencia": "BLASTOISE DOLL",
+			"descripcion_simbolo": "DecorDesc_BLASTOISE_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 10000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				182
+			]
+		},
+		{
+			"id": 117,
+			"simbolo": "DECOR_WAILMER_DOLL",
+			"nombre_referencia": "WAILMER DOLL",
+			"descripcion_simbolo": "DecorDesc_WAILMER_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 10000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				183
+			]
+		},
+		{
+			"id": 118,
+			"simbolo": "DECOR_REGIROCK_DOLL",
+			"nombre_referencia": "REGIROCK DOLL",
+			"descripcion_simbolo": "DecorDesc_REGIROCK_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 10000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				184
+			]
+		},
+		{
+			"id": 119,
+			"simbolo": "DECOR_REGICE_DOLL",
+			"nombre_referencia": "REGICE DOLL",
+			"descripcion_simbolo": "DecorDesc_REGICE_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 10000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				185
+			]
+		},
+		{
+			"id": 120,
+			"simbolo": "DECOR_REGISTEEL_DOLL",
+			"nombre_referencia": "REGISTEEL DOLL",
+			"descripcion_simbolo": "DecorDesc_REGISTEEL_DOLL",
+			"categoria": "MUNECOS",
+			"permiso": "SOLID_MAT",
+			"ancho": 1,
+			"alto": 2,
+			"precio": 10000,
+			"tipo_grafico": "sprite",
+			"graficos_originales": [
+				186
+			]
+		}
+	]
+}

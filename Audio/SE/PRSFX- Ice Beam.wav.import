@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ftokwl5uqsm2"
+path="res://.godot/imported/PRSFX- Ice Beam.wav-5e8bfb315f4599aae7e217e24a3db157.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Ice Beam.wav"
+dest_files=["res://.godot/imported/PRSFX- Ice Beam.wav-5e8bfb315f4599aae7e217e24a3db157.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

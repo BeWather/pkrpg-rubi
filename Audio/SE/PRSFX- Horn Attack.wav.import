@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bofjd3rpft5s1"
+path="res://.godot/imported/PRSFX- Horn Attack.wav-cbd866a17f9f7fa3ad3d70ce99d4b931.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Horn Attack.wav"
+dest_files=["res://.godot/imported/PRSFX- Horn Attack.wav-cbd866a17f9f7fa3ad3d70ce99d4b931.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

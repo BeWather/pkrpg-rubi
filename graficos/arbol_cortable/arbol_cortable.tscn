@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://dtrbl3cut4bl3"]
+
+[ext_resource type="Script" uid="uid://b4rb0lc0rt4bl3" path="res://graficos/arbol_cortable/controlador_arbol_cortable.gd" id="1_cortable"]
+[ext_resource type="Texture2D" uid="uid://bxlwtl5eluqy8" path="res://graficos/object_events/misc/cuttable_tree.png" id="2_cortable"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_reposo"]
+atlas = ExtResource("2_cortable")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_corte0"]
+atlas = ExtResource("2_cortable")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_corte1"]
+atlas = ExtResource("2_cortable")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_corte2"]
+atlas = ExtResource("2_cortable")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_corte3"]
+atlas = ExtResource("2_cortable")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cortable"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_reposo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_corte0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_corte1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_corte2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_corte3")
+}],
+"loop": false,
+"name": &"cortar",
+"speed": 10.0
+}]
+
+[node name="ArbolCortable" type="Node2D" unique_id=1840625713]
+script = ExtResource("1_cortable")
+
+[node name="SpriteArbolCortable" type="AnimatedSprite2D" parent="." unique_id=1840625714]
+position = Vector2(-8, -14)
+sprite_frames = SubResource("SpriteFrames_cortable")
+animation = &"cortar"
+centered = false

@@ -1,0 +1,219 @@
+[gd_scene format=3 uid="uid://diocxridalgwk"]
+
+[ext_resource type="Texture2D" uid="uid://dfun4laipc203" path="res://UI/equipo/pantalla-equipo-caja-larga.png" id="1_4y50y"]
+[ext_resource type="Script" uid="uid://buxbywlh1a2q0" path="res://UI/equipo/pantalla_equipo_caja.gd" id="2_38m6a"]
+[ext_resource type="Texture2D" uid="uid://cj24v7dtwrsko" path="res://graficos/batalla/batalla_estados.png" id="3_7o1yx"]
+[ext_resource type="Texture2D" uid="uid://bmlxw11jkhqyk" path="res://UI/equipo/pantalla-equipo-cursor2-c-l.png" id="3_rj4t0"]
+[ext_resource type="LabelSettings" uid="uid://4geiuwa4qd2p" path="res://escenas/batalla/label_pantalla_equipo.tres" id="4_6bb7m"]
+[ext_resource type="Texture2D" uid="uid://c6kwb7t206vnc" path="res://UI/equipo/pantalla-equipo-cursor-c-l.png" id="4_toavn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i8r30"]
+atlas = ExtResource("1_4y50y")
+region = Rect2(0, 0, 150, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6fno"]
+atlas = ExtResource("1_4y50y")
+region = Rect2(0, 22, 150, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wtsjp"]
+atlas = ExtResource("1_4y50y")
+region = Rect2(0, 44, 150, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jfmr"]
+atlas = ExtResource("1_4y50y")
+region = Rect2(0, 66, 150, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_omioi"]
+atlas = ExtResource("1_4y50y")
+region = Rect2(0, 88, 150, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i71ye"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i8r30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6fno")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wtsjp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jfmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_omioi")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ytare"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_rj4t0")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0jld8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_toavn")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj4t0"]
+atlas = ExtResource("3_7o1yx")
+region = Rect2(0, 0, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_toavn"]
+atlas = ExtResource("3_7o1yx")
+region = Rect2(0, 8, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ytare"]
+atlas = ExtResource("3_7o1yx")
+region = Rect2(0, 16, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0jld8"]
+atlas = ExtResource("3_7o1yx")
+region = Rect2(0, 24, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f8glh"]
+atlas = ExtResource("3_7o1yx")
+region = Rect2(0, 32, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xltey"]
+atlas = ExtResource("3_7o1yx")
+region = Rect2(0, 40, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2quq"]
+atlas = ExtResource("3_7o1yx")
+region = Rect2(0, 48, 24, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5kix2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj4t0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_toavn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ytare")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0jld8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f8glh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xltey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2quq")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rj4t0"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=234684329]
+sprite_frames = SubResource("SpriteFrames_i71ye")
+frame = 1
+centered = false
+script = ExtResource("2_38m6a")
+icono_actual = 3
+
+[node name="cursor-fijo" type="AnimatedSprite2D" parent="." unique_id=481306678]
+visible = false
+sprite_frames = SubResource("SpriteFrames_ytare")
+centered = false
+
+[node name="cursor-movil" type="AnimatedSprite2D" parent="." unique_id=1446800380]
+visible = false
+sprite_frames = SubResource("SpriteFrames_0jld8")
+centered = false
+
+[node name="estado" type="AnimatedSprite2D" parent="." unique_id=201817008]
+position = Vector2(81, 13)
+sprite_frames = SubResource("SpriteFrames_5kix2")
+centered = false
+
+[node name="nombre" type="Label" parent="." unique_id=44215183]
+offset_left = 32.0
+offset_top = 5.0
+offset_right = 85.0
+offset_bottom = 14.0
+text = "ZIGZAGOON"
+label_settings = ExtResource("4_6bb7m")
+
+[node name="nv" type="Label" parent="." unique_id=1877691038]
+offset_left = 49.0
+offset_top = 13.0
+offset_right = 64.0
+offset_bottom = 22.0
+text = "999"
+label_settings = ExtResource("4_6bb7m")
+
+[node name="sexo" type="Label" parent="." unique_id=1342968741]
+offset_left = 74.0
+offset_top = 13.0
+offset_right = 80.0
+offset_bottom = 22.0
+theme_override_colors/font_color = Color(0.25098, 0.784314, 0.972549, 1)
+text = "♂"
+label_settings = ExtResource("4_6bb7m")
+
+[node name="ps" type="Label" parent="." unique_id=312884168]
+offset_left = 107.0
+offset_top = 13.0
+offset_right = 122.0
+offset_bottom = 22.0
+text = "999"
+label_settings = ExtResource("4_6bb7m")
+horizontal_alignment = 2
+
+[node name="ps_max" type="Label" parent="." unique_id=1863471868]
+offset_left = 127.0
+offset_top = 13.0
+offset_right = 142.0
+offset_bottom = 22.0
+text = "999"
+label_settings = ExtResource("4_6bb7m")
+horizontal_alignment = 2
+
+[node name="BarraSalud1" type="ColorRect" parent="." unique_id=234759839]
+visible = false
+offset_left = 96.0
+offset_top = 8.0
+offset_right = 144.0
+offset_bottom = 9.0
+color = Color(0.345098, 0.815686, 0.501961, 1)
+
+[node name="BarraSalud2" type="ColorRect" parent="." unique_id=282008591]
+visible = false
+offset_left = 96.0
+offset_top = 9.0
+offset_right = 144.0
+offset_bottom = 10.0
+color = Color(0.439216, 0.972549, 0.658824, 1)
+
+[node name="icono_as2d" type="AnimatedSprite2D" parent="." unique_id=1079382099]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_rj4t0")
+centered = false
+offset = Vector2(0, -9)

@@ -1,0 +1,150 @@
+[gd_scene format=4 uid="uid://cfhut00tk2arq"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_30xh2"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_48ede"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_52x2i"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_2ibo1"]
+[ext_resource type="Script" path="res://scripts/npc/npc_evento.gd" id="s_evento"]
+[ext_resource type="Script" path="res://scripts/eventos/ciudad_malvalona/evento_casas_malvalona.gd" id="s_casas"]
+[ext_resource type="SpriteFrames" path="res://escenas/avatares/npc_065.tres" id="f_npc_065"]
+[ext_resource type="PackedScene" path="res://escenas/avatares/npc_base.tscn" id="npc_base"]
+[ext_resource type="Script" path="res://scripts/mapas/television.gd" id="tv_television"]
+[ext_resource type="Script" uid="uid://cix41nrfux4xa" path="res://scripts/mapas/tile_alterno.gd" id="tv_tile_alterno"]
+
+[node name="Casa1" type="Node2D" unique_id=354341773]
+script = ExtResource("1_30xh2")
+nombre_interno = "ciudad_malvalona_casa1"
+seccion = "CIUDAD_MALVALONA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_MALVALONA"
+solo_caminar = true
+musica_mapa = "CIUDAD_FERRICA_MALVALONA_ALGARIA"
+metadata/esInterior = true
+
+[node name="Salon" type="TileMapLayer" parent="." unique_id=57828633]
+tile_map_data = PackedByteArray("AAAAAAAAAAAGABAAAAAAAAEAAAAGABEAAAAAAAIAAAAGABIAAAABAAAAAAAHABAAAAABAAEAAAAHABEAAAABAAIAAAAHABIAAAACAAAAAAAAAAYAAAACAAIAAAAAAAcAAAACAAEAAAAGAAMAAAADAAAAAAAFAAAAAAADAAEAAAAFAAEAAAAEAAAAAAAFAAAAAAAEAAEAAAAFAAEAAAAFAAAAAAAGAAAAAAAFAAEAAAAGAAEAAAAGAAAAAAAFAAAAAAAGAAEAAAAFAAEAAAAHAAAAAAAFAAAAAAAIAAAAAAAFAAAAAAAJAAAAAAAFAAAAAAAHAAEAAAAAAA0AAAAHAAIAAAAAAA4AAAAIAAEAAAAEAA0AAAAIAAIAAAAEAA4AAAAJAAEAAAAFAA0AAAAJAAIAAAAFAA4AAAAKAAAAAAAAAA8AAAAKAAEAAAAAABAAAAAKAAIAAAAAABEAAAAFAAQAAAACAAkAAAAFAAUAAAACAAoAAAAGAAQAAAADAAkAAAAGAAUAAAADAAoAAAAHAAQAAAAEAAUAAAAHAAUAAAAEAAUAAAAEAAQAAAADAAUAAAAEAAUAAAADAAUAAAAGAAIAAAAEAAQAAAAFAAIAAAAEAAQAAAAEAAIAAAAEAAQAAAADAAIAAAAEAAQAAAAKAAgAAAACAAUAAAAAAAgAAAABABMAAAADAAgAAAAAAAEAAAAEAAgAAAABAAEAAAAJAAgAAAADAAQAAAAIAAgAAAADAAQAAAAHAAgAAAADAAQAAAAGAAgAAAADAAQAAAAFAAgAAAADAAQAAAAFAAcAAAADAAQAAAAEAAcAAAADAAQAAAADAAcAAAADAAQAAAACAAcAAAADAAQAAAABAAgAAAADAAQAAAABAAcAAAADAAQAAAABAAYAAAADAAQAAAABAAUAAAADAAQAAAABAAQAAAADAAQAAAABAAMAAAADAAQAAAACAAMAAAADAAQAAAADAAMAAAADAAQAAAAEAAMAAAADAAQAAAAFAAMAAAADAAQAAAAGAAMAAAADAAQAAAAHAAMAAAADAAQAAAAIAAMAAAADAAQAAAAJAAMAAAADAAQAAAAKAAMAAAADAAQAAAAKAAQAAAADAAQAAAAKAAUAAAADAAQAAAAKAAYAAAADAAQAAAAKAAcAAAADAAQAAAAJAAcAAAADAAQAAAAIAAcAAAADAAQAAAAHAAcAAAADAAQAAAAGAAcAAAADAAQAAAACAAgAAAADAAQAAAACAAYAAAADAAQAAAACAAUAAAADAAQAAAACAAQAAAADAAQAAAADAAQAAAADAAQAAAADAAUAAAADAAQAAAADAAYAAAADAAQAAAAEAAYAAAADAAQAAAAFAAYAAAADAAQAAAAGAAYAAAADAAQAAAAHAAYAAAADAAQAAAAIAAYAAAADAAQAAAAJAAYAAAADAAQAAAAJAAUAAAADAAQAAAAJAAQAAAADAAQAAAAIAAQAAAADAAQAAAAIAAUAAAADAAQAAAAAAAMAAAABAAcAAAAAAAQAAAABAAcAAAAAAAUAAAABAAcAAAAAAAYAAAABAAcAAAAAAAcAAAABAAcAAAA=")
+tile_set = ExtResource("2_48ede")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Salon2" type="TileMapLayer" parent="." unique_id=1294792859]
+tile_map_data = PackedByteArray("AAAAAAcAAAACAAcAAAAKAAcAAAACAAcAAAA=")
+tile_set = ExtResource("2_48ede")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=2141994963]
+position = Vector2(56, 134)
+script = ExtResource("3_52x2i")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_malvalona"
+posicion_destino = Vector2(32, 14)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=131441377]
+position = Vector2(72, 134)
+script = ExtResource("3_52x2i")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_malvalona"
+posicion_destino = Vector2(32, 14)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=500566910]
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1279193827]
+z_index = 1
+y_sort_enabled = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=860194251]
+script = ExtResource("4_2ibo1")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,8": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,8": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,4": {
+"flags": 1
+},
+"6,5": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Cientifico" parent="NPCs" instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_House1 objeto 1 (4,4) SCIENTIST_1 FACE_RIGHT, RockSmashHMMan: da la MO06 una vez. Lo dirige Eventos/EventoCasasMalvalona"
+position = Vector2(72, 78)
+script = ExtResource("s_evento")
+id_texto = "CIUDAD_MALVALONA_CASA1_MO06_ENTREGA"
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_065")
+coord = Vector2i(4, 4)
+
+[node name="Eventos" type="Node2D" parent="."]
+
+[node name="EventoCasasMalvalona" type="Node2D" parent="Eventos"]
+editor_description = "pokeruby MauvilleCity_House1/scripts.inc: RockSmashHMMan"
+script = ExtResource("s_casas")
+cientifico = NodePath("../../NPCs/Cientifico")
+
+[node name="TilesAlternos" type="Node2D" parent="." unique_id=1854713487]
+
+[node name="PantallaTele" type="Node2D" parent="TilesAlternos" unique_id=912646702]
+position = Vector2(40, 24)
+script = ExtResource("tv_tile_alterno")
+capa = NodePath("../../Salon")
+coord_tile = Vector2i(2, 1)
+atlas_alterno = Vector2i(0, 5)
+
+[node name="Television" type="Sprite2D" parent="Carteles" unique_id=320378063]
+editor_description = "MB_TELEVISION de pokeruby: Event_TV (ProgramacionTV)."
+position = Vector2(40, 24)
+script = ExtResource("tv_television")
+coord_tile = Vector2i(2, 1)
+direccion = 1
+pantalla = NodePath("../../TilesAlternos/PantallaTele")

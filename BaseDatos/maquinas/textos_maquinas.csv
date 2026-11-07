@@ -1,0 +1,14 @@
+id,es,en
+MAQUINA_MT_ACTIVADA,MT activada.,Booted up a TM.
+MAQUINA_MO_ACTIVADA,MO activada.,Booted up an HM.
+MAQUINA_CONTIENE,Ésta contiene\n{mov}.\p¿Enseñas {mov}\na un POKéMON?,It contained\n{mov}.\pTeach {mov}\nto a POKéMON?
+MAQUINA_ELEGIR_POKEMON,¿Enseñar a qué POKéMON?,Teach which POKéMON?
+MAQUINA_APRENDIDO,¡{mon} aprendió\n{mov}!,{mon} learned\n{mov}!
+MAQUINA_INCOMPATIBLE,{mon} y {mov}\nson incompatibles.\pNo puede aprender\n{mov}.,{mon} and {mov}\nare not compatible.\p{mov} can't be learned.
+MAQUINA_QUIERE,{mon} quiere aprender el\nmovimiento {mov}.\pPero {mon} ya conoce\ncuatro movimientos.\p¿Quieres sustituir uno de esos\nmovimientos por {mov}?,"{mon} wants to learn the\nmove {mov}.\pHowever, {mon} already\nknows four moves.\pShould a move be deleted and\nreplaced with {mov}?"
+MAQUINA_DEJAR,¿Deja de aprender\n{mov}?,Stop trying to teach\n{mov}?
+MAQUINA_NO_APRENDIO,{mon} no aprendió \n{mov}.,{mon} did not learn the\nmove {mov}.
+MAQUINA_ELEGIR_MOVIMIENTO,¿Qué movimiento debe olvidar?,Which move should be forgotten?
+MAQUINA_OLVIDO,"1, 2 y... ... ... ¡puf!\p{mon} olvidó cómo \nutilizar {mov}.\pY...","1, 2, and... ... ... Poof!\p{mon} forgot how to\nuse {mov}.\pAnd..."
+MAQUINA_YA_CONOCE,{mon} ya conoce\n{mov}.,{mon} already knows\n{mov}.
+MAQUINA_NO_OLVIDAR_MO,Los movimientos MO no \nse pueden olvidar así.,HM moves can't be\nforgotten now.

@@ -1,0 +1,1114 @@
+[gd_scene format=3 uid="uid://ssp6alw93rtj"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mapa"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_tp"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_warp"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="5_npc_base"]
+[ext_resource type="TileSet" uid="uid://lunm7oizk83n" path="res://graficos/tilesets/tileset_sala_concurso.tres" id="2_tiles"]
+[ext_resource type="Script" path="res://scripts/eventos/sala_concurso/evento_sala_concurso.gd" id="s_sala"]
+[ext_resource type="Texture2D" path="res://graficos/item.png" id="t_ball"]
+[ext_resource type="SpriteFrames" uid="uid://bkw3hndn42rqc" path="res://escenas/avatares/npc_001.tres" id="f_npc_001"]
+[ext_resource type="SpriteFrames" uid="uid://cxkxw6hvqv62v" path="res://escenas/avatares/npc_007.tres" id="f_npc_007"]
+[ext_resource type="SpriteFrames" uid="uid://c4v7i5xgf87q7" path="res://escenas/avatares/npc_008.tres" id="f_npc_008"]
+[ext_resource type="SpriteFrames" uid="uid://now553w3ynsm" path="res://escenas/avatares/npc_009.tres" id="f_npc_009"]
+[ext_resource type="SpriteFrames" uid="uid://bvhd4qu3is3pt" path="res://escenas/avatares/npc_010.tres" id="f_npc_010"]
+[ext_resource type="SpriteFrames" uid="uid://cy2tf0sbgdeui" path="res://escenas/avatares/npc_015.tres" id="f_npc_015"]
+[ext_resource type="SpriteFrames" uid="uid://blksta48icop1" path="res://escenas/avatares/npc_018.tres" id="f_npc_018"]
+[ext_resource type="SpriteFrames" uid="uid://ctfpoynxvo8xb" path="res://escenas/avatares/npc_019.tres" id="f_npc_019"]
+[ext_resource type="SpriteFrames" uid="uid://c6rr70f3rkwdf" path="res://escenas/avatares/npc_023.tres" id="f_npc_023"]
+[ext_resource type="SpriteFrames" uid="uid://ds1lihygyt1d0" path="res://escenas/avatares/npc_027.tres" id="f_npc_027"]
+[ext_resource type="SpriteFrames" uid="uid://damgta0thpof0" path="res://escenas/avatares/npc_028.tres" id="f_npc_028"]
+[ext_resource type="SpriteFrames" uid="uid://dlgsjg2806wak" path="res://escenas/avatares/npc_029.tres" id="f_npc_029"]
+[ext_resource type="SpriteFrames" uid="uid://c5umb4imbb1p" path="res://escenas/avatares/npc_032.tres" id="f_npc_032"]
+[ext_resource type="SpriteFrames" uid="uid://br8ndfy138tgu" path="res://escenas/avatares/npc_049.tres" id="f_npc_049"]
+[ext_resource type="SpriteFrames" uid="uid://hejh224ycfno" path="res://escenas/avatares/npc_051.tres" id="f_npc_051"]
+[ext_resource type="SpriteFrames" uid="uid://bmiijupbogopu" path="res://escenas/avatares/npc_052.tres" id="f_npc_052"]
+[ext_resource type="SpriteFrames" uid="uid://yclduvphmj43" path="res://escenas/avatares/npc_053.tres" id="f_npc_053"]
+[ext_resource type="SpriteFrames" uid="uid://ct3gr3wlu1nb" path="res://escenas/avatares/npc_054.tres" id="f_npc_054"]
+[ext_resource type="SpriteFrames" uid="uid://borgo2f2dfmil" path="res://escenas/avatares/npc_055.tres" id="f_npc_055"]
+[ext_resource type="SpriteFrames" uid="uid://c3em8cga3bach" path="res://escenas/avatares/npc_057.tres" id="f_npc_057"]
+[ext_resource type="SpriteFrames" uid="uid://dlmqb6ogg84xh" path="res://escenas/avatares/npc_064.tres" id="f_npc_064"]
+[ext_resource type="SpriteFrames" uid="uid://rvhay5tgmegy" path="res://escenas/avatares/npc_065.tres" id="f_npc_065"]
+[ext_resource type="SpriteFrames" uid="uid://cyl36dlhko7bi" path="res://escenas/avatares/npc_066.tres" id="f_npc_066"]
+[ext_resource type="SpriteFrames" uid="uid://03vwdt8hqw32" path="res://escenas/avatares/npc_067.tres" id="f_npc_067"]
+[ext_resource type="SpriteFrames" uid="uid://w5fb8o7aplvp" path="res://escenas/avatares/npc_068.tres" id="f_npc_068"]
+[ext_resource type="SpriteFrames" uid="uid://7rjhsrbts6wi" path="res://escenas/avatares/npc_069.tres" id="f_npc_069"]
+[ext_resource type="SpriteFrames" uid="uid://djrq5vpont8bh" path="res://escenas/avatares/npc_070.tres" id="f_npc_070"]
+[ext_resource type="SpriteFrames" uid="uid://cmspnib5vfpfm" path="res://escenas/avatares/npc_074.tres" id="f_npc_074"]
+[ext_resource type="SpriteFrames" uid="uid://b748xi0ugcjdh" path="res://escenas/avatares/npc_084.tres" id="f_npc_084"]
+[ext_resource type="SpriteFrames" uid="uid://btrprsifbkbxj" path="res://escenas/avatares/npc_085.tres" id="f_npc_085"]
+
+[node name="SalaConcurso" type="Node2D"]
+editor_description = "pokeruby LinkContestRoom1 (LAYOUT_LINK_CONTEST_ROOM1, 15x11). Generada por herramientas/importar_sala_concurso.py."
+script = ExtResource("1_mapa")
+nombre_interno = "sala_concurso"
+esInterior = true
+solo_caminar = true
+musica_mapa = "CONCURSO_POKEMON"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAwAAAAAAAEAAAAEAAEAAAAAAAIAAAAEAAQAAAAAAAMAAAAEAAQAAAAAAAQAAAAEAAQAAAAAAAUAAAAEAAQAAAAAAAYAAAAEAAQAAAAAAAcAAAAEAAQAAAAAAAgAAAAEAAQAAAAAAAkAAAAEAAIAAAAAAAoAAAAEAAMAAAABAAAAAAAAAAwAAAABAAEAAAAFAAEAAAABAAIAAAAFAAQAAAABAAMAAAAFAAQAAAABAAQAAAAFAAQAAAABAAUAAAAFAAQAAAABAAYAAAAFAAQAAAABAAcAAAAFAAQAAAABAAgAAAAFAAQAAAABAAkAAAAFAAIAAAABAAoAAAAFAAMAAAACAAAAAAAAAAwAAAACAAEAAAAFAAEAAAACAAIAAAAFAAQAAAACAAMAAAAFAAQAAAACAAQAAAAFAAQAAAACAAUAAAAFAAQAAAACAAYAAAAFAAQAAAACAAcAAAAFAAQAAAACAAgAAAAFAAQAAAACAAkAAAAFAAIAAAACAAoAAAAFAAMAAAADAAAAAAAAAAwAAAADAAEAAAAFAAEAAAADAAIAAAAFAAQAAAADAAMAAAAAAA0AAAADAAQAAAAAAA4AAAADAAUAAAAAAA4AAAADAAYAAAAAAA4AAAADAAcAAAAAAA4AAAADAAgAAAAAAA8AAAADAAkAAAAFAAIAAAADAAoAAAAFAAMAAAAEAAAAAAAAAAwAAAAEAAEAAAAFAAEAAAAEAAIAAAAFAAQAAAAEAAMAAAABAA0AAAAEAAQAAAABAA4AAAAEAAUAAAABAA4AAAAEAAYAAAABAA4AAAAEAAcAAAABAA4AAAAEAAgAAAABAA8AAAAEAAkAAAAFAAIAAAAEAAoAAAAFAAMAAAAFAAAAAAAAAAwAAAAFAAEAAAAFAAEAAAAFAAIAAAAFAAQAAAAFAAMAAAABAA0AAAAFAAQAAAABAA4AAAAFAAUAAAABAA4AAAAFAAYAAAABAA4AAAAFAAcAAAABAA4AAAAFAAgAAAABAA8AAAAFAAkAAAAFAAIAAAAFAAoAAAABAAMAAAAGAAAAAAAAAAwAAAAGAAEAAAAFAAEAAAAGAAIAAAAFAAQAAAAGAAMAAAABAA0AAAAGAAQAAAABAA4AAAAGAAUAAAABAA4AAAAGAAYAAAABAA4AAAAGAAcAAAABAA4AAAAGAAgAAAADAA0AAAAGAAkAAAADAA4AAAAGAAoAAAADAA4AAAAHAAAAAAAAAAwAAAAHAAEAAAAFAAEAAAAHAAIAAAAFAAQAAAAHAAMAAAABAA0AAAAHAAQAAAABAA4AAAAHAAUAAAABABAAAAAHAAYAAAABABEAAAAHAAcAAAABAA4AAAAHAAgAAAAEAA0AAAAHAAkAAAAEAA4AAAAHAAoAAAAEAA4AAAAIAAAAAAAAAAwAAAAIAAEAAAAFAAEAAAAIAAIAAAAFAAQAAAAIAAMAAAABAA0AAAAIAAQAAAABAA4AAAAIAAUAAAABAA4AAAAIAAYAAAABAA4AAAAIAAcAAAABAA4AAAAIAAgAAAAFAA0AAAAIAAkAAAAFAA4AAAAIAAoAAAAFAA4AAAAJAAAAAAAAAAwAAAAJAAEAAAAFAAEAAAAJAAIAAAAFAAQAAAAJAAMAAAABAA0AAAAJAAQAAAAHAA0AAAAJAAUAAAAHAA4AAAAJAAYAAAABAA4AAAAJAAcAAAABAA4AAAAJAAgAAAABAA8AAAAJAAkAAAAFAAIAAAAJAAoAAAABAAMAAAAKAAAAAAAAAAwAAAAKAAEAAAAFAAEAAAAKAAIAAAAFAAQAAAAKAAMAAAABAA0AAAAKAAQAAAABAA4AAAAKAAUAAAABAA4AAAAKAAYAAAABAA4AAAAKAAcAAAABAA4AAAAKAAgAAAABAA8AAAAKAAkAAAAFAAIAAAAKAAoAAAAFAAMAAAALAAAAAAAAAAwAAAALAAEAAAAFAAEAAAALAAIAAAAFAAQAAAALAAMAAAACAA0AAAALAAQAAAACAA4AAAALAAUAAAACAA4AAAALAAYAAAACAA4AAAALAAcAAAACAA4AAAALAAgAAAACAA8AAAALAAkAAAAFAAIAAAALAAoAAAAFAAMAAAAMAAAAAAAAAAwAAAAMAAEAAAAFAAEAAAAMAAIAAAAFAAQAAAAMAAMAAAAFAAQAAAAMAAQAAAAFAAQAAAAMAAUAAAAFAAQAAAAMAAYAAAAFAAQAAAAMAAcAAAAFAAQAAAAMAAgAAAAFAAQAAAAMAAkAAAAFAAIAAAAMAAoAAAAFAAMAAAANAAAAAAAAAAwAAAANAAEAAAAFAAEAAAANAAIAAAAFAAQAAAANAAMAAAAFAAQAAAANAAQAAAAFAAQAAAANAAUAAAAFAAQAAAANAAYAAAAFAAQAAAANAAcAAAAFAAQAAAANAAgAAAAFAAQAAAANAAkAAAAFAAIAAAANAAoAAAAFAAMAAAAOAAAAAAAAAAwAAAAOAAEAAAAGAAEAAAAOAAIAAAAGAAQAAAAOAAMAAAAGAAQAAAAOAAQAAAAGAAQAAAAOAAUAAAAGAAQAAAAOAAYAAAAGAAQAAAAOAAcAAAAGAAQAAAAOAAgAAAAGAAQAAAAOAAkAAAAGAAIAAAAOAAoAAAAGAAMAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Superior" type="TileMapLayer" parent="."]
+z_index = 2
+tile_map_data = PackedByteArray("AAAJAAQAAAAPAA0AAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="."]
+script = ExtResource("3_tp")
+tile_data = {
+"0,0": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"0,10": {
+"flags": 1
+},
+"0,2": {
+"flags": 1
+},
+"0,3": {
+"flags": 1
+},
+"0,4": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"0,6": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"0,8": {
+"flags": 1
+},
+"0,9": {
+"flags": 1
+},
+"1,0": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,10": {
+"flags": 1
+},
+"1,2": {
+"flags": 1
+},
+"1,3": {
+"flags": 1
+},
+"1,4": {
+"flags": 1
+},
+"1,5": {
+"flags": 1
+},
+"1,6": {
+"flags": 1
+},
+"1,7": {
+"flags": 1
+},
+"1,8": {
+"flags": 1
+},
+"1,9": {
+"flags": 1
+},
+"10,0": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,10": {
+"flags": 1
+},
+"10,2": {
+"flags": 1
+},
+"10,3": {
+"flags": 1
+},
+"10,4": {
+"flags": 1
+},
+"10,5": {
+"flags": 1
+},
+"10,6": {
+"flags": 1
+},
+"10,7": {
+"flags": 1
+},
+"10,8": {
+"flags": 1
+},
+"10,9": {
+"flags": 1
+},
+"11,0": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,10": {
+"flags": 1
+},
+"11,2": {
+"flags": 1
+},
+"11,3": {
+"flags": 1
+},
+"11,4": {
+"flags": 1
+},
+"11,5": {
+"flags": 1
+},
+"11,6": {
+"flags": 1
+},
+"11,7": {
+"flags": 1
+},
+"11,8": {
+"flags": 1
+},
+"11,9": {
+"flags": 1
+},
+"12,0": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,10": {
+"flags": 1
+},
+"12,2": {
+"flags": 1
+},
+"12,3": {
+"flags": 1
+},
+"12,4": {
+"flags": 1
+},
+"12,5": {
+"flags": 1
+},
+"12,6": {
+"flags": 1
+},
+"12,7": {
+"flags": 1
+},
+"12,8": {
+"flags": 1
+},
+"12,9": {
+"flags": 1
+},
+"13,0": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,10": {
+"flags": 1
+},
+"13,2": {
+"flags": 1
+},
+"13,3": {
+"flags": 1
+},
+"13,4": {
+"flags": 1
+},
+"13,5": {
+"flags": 1
+},
+"13,6": {
+"flags": 1
+},
+"13,7": {
+"flags": 1
+},
+"13,8": {
+"flags": 1
+},
+"13,9": {
+"flags": 1
+},
+"14,0": {
+"flags": 1
+},
+"14,1": {
+"flags": 1
+},
+"14,10": {
+"flags": 1
+},
+"14,2": {
+"flags": 1
+},
+"14,3": {
+"flags": 1
+},
+"14,4": {
+"flags": 1
+},
+"14,5": {
+"flags": 1
+},
+"14,6": {
+"flags": 1
+},
+"14,7": {
+"flags": 1
+},
+"14,8": {
+"flags": 1
+},
+"14,9": {
+"flags": 1
+},
+"2,0": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,10": {
+"flags": 1
+},
+"2,2": {
+"flags": 1
+},
+"2,3": {
+"flags": 1
+},
+"2,4": {
+"flags": 1
+},
+"2,5": {
+"flags": 1
+},
+"2,6": {
+"flags": 1
+},
+"2,7": {
+"flags": 1
+},
+"2,8": {
+"flags": 1
+},
+"2,9": {
+"flags": 1
+},
+"3,0": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,10": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"3,3": {
+"flags": 1
+},
+"3,4": {
+"flags": 1
+},
+"3,5": {
+"flags": 1
+},
+"3,6": {
+"flags": 1
+},
+"3,7": {
+"flags": 1
+},
+"3,8": {
+"flags": 1
+},
+"3,9": {
+"flags": 1
+},
+"4,0": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,10": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"4,3": {
+"flags": 1
+},
+"4,4": {
+"flags": 1
+},
+"4,5": {
+"flags": 1
+},
+"4,6": {
+"flags": 1
+},
+"4,7": {
+"flags": 1
+},
+"4,8": {
+"flags": 1
+},
+"4,9": {
+"flags": 1
+},
+"5,0": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,10": {
+"flags": 1
+},
+"5,2": {
+"flags": 1
+},
+"5,3": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"5,6": {
+"flags": 1
+},
+"5,7": {
+"flags": 1
+},
+"5,8": {
+"flags": 1
+},
+"5,9": {
+"flags": 1
+},
+"6,0": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,10": {
+"flags": 1
+},
+"6,2": {
+"flags": 1
+},
+"6,3": {
+"flags": 1
+},
+"6,4": {
+"flags": 1
+},
+"6,5": {
+"flags": 1
+},
+"6,6": {
+"flags": 1
+},
+"6,7": {
+"flags": 1
+},
+"6,8": {
+"flags": 1
+},
+"6,9": {
+"flags": 1
+},
+"7,0": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,10": {
+"flags": 1
+},
+"7,2": {
+"flags": 1
+},
+"7,3": {
+"flags": 1
+},
+"7,4": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"7,6": {
+"flags": 1
+},
+"7,7": {
+"flags": 1
+},
+"7,8": {
+"flags": 1
+},
+"7,9": {
+"flags": 1
+},
+"8,0": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,10": {
+"flags": 1
+},
+"8,2": {
+"flags": 1
+},
+"8,3": {
+"flags": 1
+},
+"8,4": {
+"flags": 1
+},
+"8,5": {
+"flags": 1
+},
+"8,6": {
+"flags": 1
+},
+"8,7": {
+"flags": 1
+},
+"8,8": {
+"flags": 1
+},
+"8,9": {
+"flags": 1
+},
+"9,0": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,10": {
+"flags": 1
+},
+"9,2": {
+"flags": 1
+},
+"9,3": {
+"flags": 1
+},
+"9,4": {
+"flags": 1
+},
+"9,5": {
+"flags": 1
+},
+"9,6": {
+"flags": 1
+},
+"9,7": {
+"flags": 1
+},
+"9,8": {
+"flags": 1
+},
+"9,9": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Presentadora" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby LinkContestRoom1 objeto 1 (6,4) WOMAN_4 FACE_DOWN"
+position = Vector2(104, 78)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_053")
+coord = Vector2i(6, 4)
+
+[node name="Juez" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby LinkContestRoom1 objeto 2 (7,4) CONTEST_JUDGE FACE_DOWN"
+position = Vector2(120, 78)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_085")
+coord = Vector2i(7, 4)
+
+[node name="Concursante1" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby LinkContestRoom1 objeto 3 (4,7) VAR_0 FACE_UP"
+position = Vector2(72, 126)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_027")
+coord = Vector2i(4, 7)
+
+[node name="Concursante2" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby LinkContestRoom1 objeto 4 (6,7) VAR_1 FACE_UP"
+position = Vector2(104, 126)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_027")
+coord = Vector2i(6, 7)
+
+[node name="Concursante3" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby LinkContestRoom1 objeto 5 (8,7) VAR_2 FACE_UP"
+position = Vector2(136, 126)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_027")
+coord = Vector2i(8, 7)
+
+[node name="Publico4" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby LinkContestRoom1 objeto 6 (2,6) VAR_4 FACE_RIGHT"
+position = Vector2(40, 110)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_027")
+coord = Vector2i(2, 6)
+
+[node name="Publico6" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby LinkContestRoom1 objeto 7 (4,2) VAR_6 FACE_DOWN"
+position = Vector2(72, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_027")
+coord = Vector2i(4, 2)
+
+[node name="Publico7" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby LinkContestRoom1 objeto 8 (5,2) VAR_7 FACE_DOWN"
+position = Vector2(88, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_027")
+coord = Vector2i(5, 2)
+
+[node name="Publico8" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby LinkContestRoom1 objeto 9 (9,2) VAR_8 FACE_DOWN"
+position = Vector2(152, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_027")
+coord = Vector2i(9, 2)
+
+[node name="Publico9" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby LinkContestRoom1 objeto 10 (10,2) VAR_9 FACE_DOWN"
+position = Vector2(168, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_027")
+coord = Vector2i(10, 2)
+
+[node name="PublicoA" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby LinkContestRoom1 objeto 11 (12,5) VAR_A FACE_LEFT"
+position = Vector2(200, 94)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_027")
+coord = Vector2i(12, 5)
+
+[node name="Publico5" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby LinkContestRoom1 objeto 12 (2,5) VAR_5 FACE_RIGHT"
+position = Vector2(40, 94)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_027")
+coord = Vector2i(2, 5)
+
+[node name="PokeBall" type="Sprite2D" parent="NPCs"]
+editor_description = "pokeruby LinkContestRoom1 objeto 13 (7,5) ITEM_BALL LOOK_AROUND"
+visible = false
+position = Vector2(120, 88)
+texture = ExtResource("t_ball")
+
+[node name="Concursante4" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby LinkContestRoom1 objeto 14 (10,7) VAR_3 FACE_UP"
+position = Vector2(168, 126)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_027")
+coord = Vector2i(10, 7)
+
+[node name="Artista" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby LinkContestRoom1 objeto 15 (12,6) ARTIST FACE_LEFT"
+position = Vector2(200, 110)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_057")
+coord = Vector2i(12, 6)
+
+[node name="Publico" type="Node2D" parent="NPCs"]
+y_sort_enabled = true
+
+[node name="Nivel0" type="Node2D" parent="NPCs/Publico"]
+editor_description = "LinkContestRoom1 createvobject de VAR_CONTEST_LOCATION 1"
+visible = false
+y_sort_enabled = true
+
+[node name="Espectador0" parent="NPCs/Publico/Nivel0" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 5 (LITTLE_BOY_1), (3,2), dirección 1"
+position = Vector2(56, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_001")
+coord = Vector2i(3, 2)
+
+[node name="Espectador1" parent="NPCs/Publico/Nivel0" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 46 (SCIENTIST_1), (11,2), dirección 1"
+position = Vector2(184, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_065")
+coord = Vector2i(11, 2)
+
+[node name="Nivel1" type="Node2D" parent="NPCs/Publico"]
+editor_description = "LinkContestRoom1 createvobject de VAR_CONTEST_LOCATION 2"
+visible = false
+y_sort_enabled = true
+
+[node name="Espectador0" parent="NPCs/Publico/Nivel1" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 45 (BEAUTY), (2,3), dirección 4"
+position = Vector2(40, 62)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_064")
+coord = Vector2i(2, 3)
+
+[node name="Espectador1" parent="NPCs/Publico/Nivel1" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 66 (MAN_6), (2,4), dirección 4"
+position = Vector2(40, 78)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_019")
+coord = Vector2i(2, 4)
+
+[node name="Espectador2" parent="NPCs/Publico/Nivel1" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 55 (HIKER), (2,7), dirección 4"
+position = Vector2(40, 126)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_074")
+coord = Vector2i(2, 7)
+
+[node name="Espectador3" parent="NPCs/Publico/Nivel1" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 46 (SCIENTIST_1), (2,8), dirección 4"
+position = Vector2(40, 142)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_065")
+coord = Vector2i(2, 8)
+
+[node name="Espectador4" parent="NPCs/Publico/Nivel1" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 5 (LITTLE_BOY_1), (12,3), dirección 3"
+position = Vector2(200, 62)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_001")
+coord = Vector2i(12, 3)
+
+[node name="Espectador5" parent="NPCs/Publico/Nivel1" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 20 (WOMAN_3), (12,4), dirección 3"
+position = Vector2(200, 78)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_049")
+coord = Vector2i(12, 4)
+
+[node name="Espectador6" parent="NPCs/Publico/Nivel1" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 24 (WOMAN_4), (12,7), dirección 3"
+position = Vector2(200, 126)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_053")
+coord = Vector2i(12, 7)
+
+[node name="Espectador7" parent="NPCs/Publico/Nivel1" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 12 (LITTLE_GIRL_2), (12,8), dirección 3"
+position = Vector2(200, 142)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_010")
+coord = Vector2i(12, 8)
+
+[node name="Espectador8" parent="NPCs/Publico/Nivel1" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 47 (LASS), (3,2), dirección 1"
+position = Vector2(56, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_066")
+coord = Vector2i(3, 2)
+
+[node name="Espectador9" parent="NPCs/Publico/Nivel1" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 46 (SCIENTIST_1), (11,2), dirección 1"
+position = Vector2(184, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_065")
+coord = Vector2i(11, 2)
+
+[node name="Nivel2" type="Node2D" parent="NPCs/Publico"]
+editor_description = "LinkContestRoom1 createvobject de VAR_CONTEST_LOCATION 3"
+visible = false
+y_sort_enabled = true
+
+[node name="Espectador0" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 45 (BEAUTY), (2,3), dirección 4"
+position = Vector2(40, 62)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_064")
+coord = Vector2i(2, 3)
+
+[node name="Espectador1" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 66 (MAN_6), (2,4), dirección 4"
+position = Vector2(40, 78)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_019")
+coord = Vector2i(2, 4)
+
+[node name="Espectador2" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 55 (HIKER), (2,7), dirección 4"
+position = Vector2(40, 126)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_074")
+coord = Vector2i(2, 7)
+
+[node name="Espectador3" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 48 (GENTLEMAN), (2,8), dirección 4"
+position = Vector2(40, 142)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_067")
+coord = Vector2i(2, 8)
+
+[node name="Espectador4" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 5 (LITTLE_BOY_1), (12,3), dirección 3"
+position = Vector2(200, 62)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_001")
+coord = Vector2i(12, 3)
+
+[node name="Espectador5" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 20 (WOMAN_3), (12,4), dirección 3"
+position = Vector2(200, 78)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_049")
+coord = Vector2i(12, 4)
+
+[node name="Espectador6" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 24 (WOMAN_4), (12,7), dirección 3"
+position = Vector2(200, 126)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_053")
+coord = Vector2i(12, 7)
+
+[node name="Espectador7" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 45 (BEAUTY), (12,8), dirección 3"
+position = Vector2(200, 142)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_064")
+coord = Vector2i(12, 8)
+
+[node name="Espectador8" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 22 (OLD_WOMAN_1), (3,2), dirección 1"
+position = Vector2(56, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_051")
+coord = Vector2i(3, 2)
+
+[node name="Espectador9" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 23 (MAN_2), (6,2), dirección 1"
+position = Vector2(104, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_052")
+coord = Vector2i(6, 2)
+
+[node name="Espectador10" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 34 (WOMAN_7), (7,2), dirección 1"
+position = Vector2(120, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_028")
+coord = Vector2i(7, 2)
+
+[node name="Espectador11" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 46 (SCIENTIST_1), (8,2), dirección 1"
+position = Vector2(136, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_065")
+coord = Vector2i(8, 2)
+
+[node name="Espectador12" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 48 (GENTLEMAN), (11,2), dirección 1"
+position = Vector2(184, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_067")
+coord = Vector2i(11, 2)
+
+[node name="Espectador13" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 11 (LITTLE_BOY_2), (3,9), dirección 2"
+position = Vector2(56, 158)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_009")
+coord = Vector2i(3, 9)
+
+[node name="Espectador14" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 35 (YOUNGSTER), (4,9), dirección 2"
+position = Vector2(72, 158)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_029")
+coord = Vector2i(4, 9)
+
+[node name="Espectador15" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 17 (FAT_MAN), (5,9), dirección 2"
+position = Vector2(88, 158)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_015")
+coord = Vector2i(5, 9)
+
+[node name="Espectador16" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 41 (WOMAN_8), (9,9), dirección 2"
+position = Vector2(152, 158)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_049")
+coord = Vector2i(9, 9)
+
+[node name="Espectador17" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 38 (SCHOOL_KID_M), (10,9), dirección 2"
+position = Vector2(168, 158)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_032")
+coord = Vector2i(10, 9)
+
+[node name="Espectador18" parent="NPCs/Publico/Nivel2" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 83 (MART_EMPLOYEE), (11,9), dirección 2"
+position = Vector2(184, 158)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_023")
+coord = Vector2i(11, 9)
+
+[node name="Nivel3" type="Node2D" parent="NPCs/Publico"]
+editor_description = "LinkContestRoom1 createvobject de VAR_CONTEST_LOCATION 4"
+visible = false
+y_sort_enabled = true
+
+[node name="Espectador0" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 45 (BEAUTY), (2,3), dirección 4"
+position = Vector2(40, 62)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_064")
+coord = Vector2i(2, 3)
+
+[node name="Espectador1" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 66 (MAN_6), (2,4), dirección 4"
+position = Vector2(40, 78)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_019")
+coord = Vector2i(2, 4)
+
+[node name="Espectador2" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 55 (HIKER), (2,7), dirección 4"
+position = Vector2(40, 126)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_074")
+coord = Vector2i(2, 7)
+
+[node name="Espectador3" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 12 (LITTLE_GIRL_2), (2,8), dirección 4"
+position = Vector2(40, 142)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_010")
+coord = Vector2i(2, 8)
+
+[node name="Espectador4" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 39 (MANIAC), (1,3), dirección 4"
+position = Vector2(24, 62)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_008")
+coord = Vector2i(1, 3)
+
+[node name="Espectador5" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 34 (WOMAN_7), (1,5), dirección 4"
+position = Vector2(24, 94)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_028")
+coord = Vector2i(1, 5)
+
+[node name="Espectador6" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 26 (WOMAN_5), (1,6), dirección 4"
+position = Vector2(24, 110)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_055")
+coord = Vector2i(1, 6)
+
+[node name="Espectador7" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 48 (GENTLEMAN), (1,8), dirección 4"
+position = Vector2(24, 142)
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_067")
+coord = Vector2i(1, 8)
+
+[node name="Espectador8" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 5 (LITTLE_BOY_1), (12,3), dirección 3"
+position = Vector2(200, 62)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_001")
+coord = Vector2i(12, 3)
+
+[node name="Espectador9" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 20 (WOMAN_3), (12,4), dirección 3"
+position = Vector2(200, 78)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_049")
+coord = Vector2i(12, 4)
+
+[node name="Espectador10" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 24 (WOMAN_4), (12,7), dirección 3"
+position = Vector2(200, 126)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_053")
+coord = Vector2i(12, 7)
+
+[node name="Espectador11" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 45 (BEAUTY), (12,8), dirección 3"
+position = Vector2(200, 142)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_064")
+coord = Vector2i(12, 8)
+
+[node name="Espectador12" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 50 (FISHERMAN), (13,3), dirección 3"
+position = Vector2(216, 62)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_069")
+coord = Vector2i(13, 3)
+
+[node name="Espectador13" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 52 (RUNNING_TRIATHLETE_F), (13,4), dirección 3"
+position = Vector2(216, 78)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_070")
+coord = Vector2i(13, 4)
+
+[node name="Espectador14" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 65 (MAN_5), (13,6), dirección 3"
+position = Vector2(216, 110)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_018")
+coord = Vector2i(13, 6)
+
+[node name="Espectador15" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 83 (MART_EMPLOYEE), (13,7), dirección 3"
+position = Vector2(216, 126)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_023")
+coord = Vector2i(13, 7)
+
+[node name="Espectador16" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 116 (MAN_7), (13,8), dirección 3"
+position = Vector2(216, 142)
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_084")
+coord = Vector2i(13, 8)
+
+[node name="Espectador17" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 25 (MAN_3), (3,2), dirección 1"
+position = Vector2(56, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_054")
+coord = Vector2i(3, 2)
+
+[node name="Espectador18" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 31 (CAMPER), (6,2), dirección 1"
+position = Vector2(104, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_007")
+coord = Vector2i(6, 2)
+
+[node name="Espectador19" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 33 (MAN_4), (7,2), dirección 1"
+position = Vector2(120, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_027")
+coord = Vector2i(7, 2)
+
+[node name="Espectador20" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 46 (SCIENTIST_1), (11,2), dirección 1"
+position = Vector2(184, 46)
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_065")
+coord = Vector2i(11, 2)
+
+[node name="Espectador21" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 49 (SAILOR), (3,9), dirección 2"
+position = Vector2(56, 158)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_068")
+coord = Vector2i(3, 9)
+
+[node name="Espectador22" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 35 (YOUNGSTER), (4,9), dirección 2"
+position = Vector2(72, 158)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_029")
+coord = Vector2i(4, 9)
+
+[node name="Espectador23" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 48 (GENTLEMAN), (5,9), dirección 2"
+position = Vector2(88, 158)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_067")
+coord = Vector2i(5, 9)
+
+[node name="Espectador24" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 41 (WOMAN_8), (9,9), dirección 2"
+position = Vector2(152, 158)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_049")
+coord = Vector2i(9, 9)
+
+[node name="Espectador25" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 38 (SCHOOL_KID_M), (10,9), dirección 2"
+position = Vector2(168, 158)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_032")
+coord = Vector2i(10, 9)
+
+[node name="Espectador26" parent="NPCs/Publico/Nivel3" instance=ExtResource("5_npc_base")]
+editor_description = "createvobject 83 (MART_EMPLOYEE), (11,9), dirección 2"
+position = Vector2(184, 158)
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_023")
+coord = Vector2i(11, 9)
+
+[node name="Eventos" type="Node2D" parent="."]
+
+[node name="EventoSalaConcurso" type="Node2D" parent="Eventos"]
+editor_description = "pokeruby LinkContestRoom1/scripts.inc + data/scripts/contest_hall.inc:183-1150"
+script = ExtResource("s_sala")
+presentadora = NodePath("../../NPCs/Presentadora")
+juez = NodePath("../../NPCs/Juez")
+concursantes = [NodePath("../../NPCs/Concursante1"), NodePath("../../NPCs/Concursante2"), NodePath("../../NPCs/Concursante3"), NodePath("../../NPCs/Concursante4")]
+publico_aleatorio = [NodePath("../../NPCs/Publico4"), NodePath("../../NPCs/Publico5"), NodePath("../../NPCs/Publico6"), NodePath("../../NPCs/Publico7"), NodePath("../../NPCs/Publico8"), NodePath("../../NPCs/Publico9"), NodePath("../../NPCs/PublicoA")]
+pokeball = NodePath("../../NPCs/PokeBall")
+artista = NodePath("../../NPCs/Artista")
+publico_fijo = NodePath("../../NPCs/Publico")

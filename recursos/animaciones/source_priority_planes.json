@@ -1,0 +1,1857 @@
+{
+  "gBattleAnimSpriteTemplate_83DA450": {
+    "priority": 2,
+    "oam": "gOamData_837DFFC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying.c",
+    "template_line": 141
+  },
+  "gBattleAnimSpriteTemplate_83DA468": {
+    "priority": 2,
+    "oam": "gOamData_837DF9C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying.c",
+    "template_line": 152
+  },
+  "gBasicHitSplatSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837E0B4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/normal.c",
+    "template_line": 215
+  },
+  "gBattleAnimSpriteTemplate_83DB4D8": {
+    "priority": 2,
+    "oam": "gOamData_837E0B4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/normal.c",
+    "template_line": 237
+  },
+  "gBattleAnimSpriteTemplate_83D9360": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/water.c",
+    "template_line": 109
+  },
+  "gBattleAnimSpriteTemplate_83DA5D8": {
+    "priority": 2,
+    "oam": "gOamData_837DFFC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying.c",
+    "template_line": 304
+  },
+  "gBattleAnimSpriteTemplate_83DA614": {
+    "priority": 2,
+    "oam": "gOamData_837DFFC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying.c",
+    "template_line": 328
+  },
+  "gBattleAnimSpriteTemplate_83DA62C": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying.c",
+    "template_line": 339
+  },
+  "gBattleAnimSpriteTemplate_83DA568": {
+    "priority": 2,
+    "oam": "gOamData_837DFFC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying.c",
+    "template_line": 257
+  },
+  "gBattleAnimSpriteTemplate_83DA594": {
+    "priority": 2,
+    "oam": "gOamData_837DFFC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying.c",
+    "template_line": 279
+  },
+  "gBattleAnimSpriteTemplate_83DA498": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying.c",
+    "template_line": 181
+  },
+  "gBattleAnimSpriteTemplate_83D64B4": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/leaf.c",
+    "template_line": 62
+  },
+  "gBattleAnimSpriteTemplate_83DAE18": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/rock.c",
+    "template_line": 299
+  },
+  "gBattleAnimSpriteTemplate_83DB4F0": {
+    "priority": 2,
+    "oam": "gOamData_837E0B4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/normal.c",
+    "template_line": 248
+  },
+  "gBattleAnimSpriteTemplate_83D693C": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying_petals.c",
+    "template_line": 81
+  },
+  "gBattleAnimSpriteTemplate_83D6954": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying_petals.c",
+    "template_line": 92
+  },
+  "gBattleAnimSpriteTemplate_83D696C": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying_petals.c",
+    "template_line": 103
+  },
+  "gBattleAnimSpriteTemplate_83D765C": {
+    "priority": 2,
+    "oam": "gOamData_837DFDC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/cyclone.c",
+    "template_line": 28
+  },
+  "gBattleAnimSpriteTemplate_83DA3E4": {
+    "priority": 2,
+    "oam": "gOamData_837DF54",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying.c",
+    "template_line": 98
+  },
+  "gBattleAnimSpriteTemplate_83D6B40": {
+    "priority": 2,
+    "oam": "gOamData_837E054",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/slice.c",
+    "template_line": 40
+  },
+  "gBattleAnimSpriteTemplate_83DA380": {
+    "priority": 2,
+    "oam": "gOamData_837DF7C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying.c",
+    "template_line": 50
+  },
+  "gSonicBoomSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837E134",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/sonic.c",
+    "template_line": 20
+  },
+  "gBattleAnimSpriteTemplate_83C2010": {
+    "priority": 3,
+    "oam": "gDummyOamData",
+    "oam_source": "src/sprite.c",
+    "template_source": "src/battle_anim_mon_movement.c",
+    "template_line": 84
+  },
+  "gBattleAnimSpriteTemplate_83DB3DC": {
+    "priority": 3,
+    "oam": "gDummyOamData",
+    "oam_source": "src/sprite.c",
+    "template_source": "src/battle/anim/normal.c",
+    "template_line": 132
+  },
+  "gBattleAnimSpriteTemplate_83DB538": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/normal.c",
+    "template_line": 281
+  },
+  "gHorizontalLungeSpriteTemplate": {
+    "priority": 3,
+    "oam": "gDummyOamData",
+    "oam_source": "src/sprite.c",
+    "template_source": "src/battle_anim_mon_movement.c",
+    "template_line": 40
+  },
+  "gFistFootSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 140
+  },
+  "gSimplePaletteBlendSpriteTemplate": {
+    "priority": 3,
+    "oam": "gDummyOamData",
+    "oam_source": "src/sprite.c",
+    "template_source": "src/battle/anim/normal.c",
+    "template_line": 121
+  },
+  "gBattleAnimSpriteTemplate_83DA0A0": {
+    "priority": 2,
+    "oam": "gOamData_837E05C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 252
+  },
+  "gBattleAnimSpriteTemplate_83DA0B8": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 263
+  },
+  "gBattleAnimSpriteTemplate_83DA144": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 321
+  },
+  "gCuttingSliceSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837E054",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/slice.c",
+    "template_line": 29
+  },
+  "gVerticalDipSpriteTemplate": {
+    "priority": 3,
+    "oam": "gDummyOamData",
+    "oam_source": "src/sprite.c",
+    "template_source": "src/battle_anim_mon_movement.c",
+    "template_line": 51
+  },
+  "gBattleAnimSpriteTemplate_83D7798": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/anger.c",
+    "template_line": 28
+  },
+  "gBattleAnimSpriteTemplate_8402630": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 683
+  },
+  "gIceBallSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DFF4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ice.c",
+    "template_line": 518
+  },
+  "gIceBallParticleSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ice.c",
+    "template_line": 529
+  },
+  "gBattleAnimSpriteTemplate_8402738": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 792
+  },
+  "gBattleAnimSpriteTemplate_84023E8": {
+    "priority": 2,
+    "oam": "gOamData_837DF54",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 447
+  },
+  "gSlideMonToOffsetSpriteTemplate": {
+    "priority": 3,
+    "oam": "gDummyOamData",
+    "oam_source": "src/sprite.c",
+    "template_source": "src/battle_anim_mon_movement.c",
+    "template_line": 73
+  },
+  "gSlideMonToOriginalPosSpriteTemplate": {
+    "priority": 3,
+    "oam": "gDummyOamData",
+    "oam_source": "src/sprite.c",
+    "template_source": "src/battle_anim_mon_movement.c",
+    "template_line": 62
+  },
+  "gBattleAnimSpriteTemplate_83D9FC0": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 151
+  },
+  "gBattleAnimSpriteTemplate_83D6DE4": {
+    "priority": 3,
+    "oam": "gDummyOamData",
+    "oam_source": "src/sprite.c",
+    "template_source": "src/battle/anim/lunge.c",
+    "template_line": 28
+  },
+  "gBattleAnimSpriteTemplate_83DB520": {
+    "priority": 2,
+    "oam": "gOamData_837E054",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/normal.c",
+    "template_line": 270
+  },
+  "gBattleAnimSpriteTemplate_83DA088": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 241
+  },
+  "gBattleAnimSpriteTemplate_83D7C48": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/swipe.c",
+    "template_line": 33
+  },
+  "gBattleAnimSpriteTemplate_83D7C90": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/struggle.c",
+    "template_line": 37
+  },
+  "gBattleAnimSpriteTemplate_83D9FD8": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 162
+  },
+  "gBattleAnimSpriteTemplate_83DA198": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 363
+  },
+  "gBattleAnimSpriteTemplate_83DA1E0": {
+    "priority": 2,
+    "oam": "gOamData_837DF3C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 402
+  },
+  "gBattleAnimSpriteTemplate_83DB550": {
+    "priority": 2,
+    "oam": "gOamData_837E0B4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/normal.c",
+    "template_line": 292
+  },
+  "gBattleAnimSpriteTemplate_8402AE4": {
+    "priority": 2,
+    "oam": "gOamData_837DF9C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 1141
+  },
+  "gBattleAnimSpriteTemplate_83D65E8": {
+    "priority": 2,
+    "oam": "gOamData_837DFEC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/copy_orb.c",
+    "template_line": 33
+  },
+  "gHiddenPowerOrbSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/hidden_power_orbit.c",
+    "template_line": 28
+  },
+  "gHiddenPowerOrbScatterSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DFEC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/hidden_power_orbit.c",
+    "template_line": 39
+  },
+  "gBattleAnimSpriteTemplate_83D6350": {
+    "priority": 2,
+    "oam": "gOamData_837DFE4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/orbs.c",
+    "template_line": 147
+  },
+  "gBattleAnimSpriteTemplate_83D7B60": {
+    "priority": 2,
+    "oam": "gOamData_837DFE4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/spit.c",
+    "template_line": 28
+  },
+  "gBattleAnimSpriteTemplate_8402578": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 592
+  },
+  "gBattleAnimSpriteTemplate_83D7038": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/strike.c",
+    "template_line": 35
+  },
+  "gBattleAnimSpriteTemplate_83D748C": {
+    "priority": 2,
+    "oam": "gOamData_837E0FC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/sword.c",
+    "template_line": 30
+  },
+  "gBattleAnimSpriteTemplate_83D6EF0": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/cube.c",
+    "template_line": 42
+  },
+  "gBattleAnimSpriteTemplate_83D6F80": {
+    "priority": 2,
+    "oam": "gOamData_837E104",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/tile.c",
+    "template_line": 83
+  },
+  "gBattleAnimSpriteTemplate_83D6FB0": {
+    "priority": 2,
+    "oam": "gOamData_837E104",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/tile.c",
+    "template_line": 108
+  },
+  "gBattleAnimSpriteTemplate_8402B10": {
+    "priority": 2,
+    "oam": "gOamData_837E0BC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 1163
+  },
+  "gLeechSeedSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/seed.c",
+    "template_line": 33
+  },
+  "gBattleAnimSpriteTemplate_83D6428": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/orbit.c",
+    "template_line": 68
+  },
+  "gBattleAnimSpriteTemplate_83D6440": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/orbit.c",
+    "template_line": 79
+  },
+  "gBattleAnimSpriteTemplate_8402498": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 520
+  },
+  "gBattleAnimSpriteTemplate_83D63F8": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/orbit.c",
+    "template_line": 35
+  },
+  "gBattleAnimSpriteTemplate_83930F4": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "data/sparkle.s",
+    "template_line": 20
+  },
+  "gBattleAnimSpriteTemplate_83D7764": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/breath.c",
+    "template_line": 40
+  },
+  "gBattleAnimSpriteTemplate_83D6658": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/roots.c",
+    "template_line": 64
+  },
+  "gBattleAnimSpriteTemplate_83D6698": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/osmose.c",
+    "template_line": 27
+  },
+  "gBattleAnimSpriteTemplate_83D7628": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/bullet.c",
+    "template_line": 30
+  },
+  "gBattleAnimSpriteTemplate_83D6670": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/roots.c",
+    "template_line": 75
+  },
+  "gBattleAnimSpriteTemplate_83D795C": {
+    "priority": 2,
+    "oam": "gOamData_837E11C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ring.c",
+    "template_line": 166
+  },
+  "gBattleAnimSpriteTemplate_8402934": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 951
+  },
+  "gBattleAnimSpriteTemplate_83D7114": {
+    "priority": 2,
+    "oam": "gOamData_837DFEC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/musical.c",
+    "template_line": 93
+  },
+  "gBattleAnimSpriteTemplate_83DB428": {
+    "priority": 3,
+    "oam": "gDummyOamData",
+    "oam_source": "src/sprite.c",
+    "template_source": "src/battle/anim/normal.c",
+    "template_line": 169
+  },
+  "gBattleAnimSpriteTemplate_83D77F8": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ring.c",
+    "template_line": 31
+  },
+  "gBattleAnimSpriteTemplate_83D7D1C": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/note_spin.c",
+    "template_line": 45
+  },
+  "gBattleAnimSpriteTemplate_83D7D34": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/note_spin.c",
+    "template_line": 56
+  },
+  "gBattleAnimSpriteTemplate_83D7A44": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/heal_bell.c",
+    "template_line": 43
+  },
+  "gBattleAnimSpriteTemplate_83D7A68": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/heal_bell.c",
+    "template_line": 64
+  },
+  "gBattleAnimSpriteTemplate_83D6CA0": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/glitter.c",
+    "template_line": 46
+  },
+  "gBattleAnimSpriteTemplate_83D7974": {
+    "priority": 2,
+    "oam": "gOamData_837E11C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ring.c",
+    "template_line": 177
+  },
+  "gBattleAnimSpriteTemplate_83D7928": {
+    "priority": 2,
+    "oam": "gOamData_837DFFC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ring.c",
+    "template_line": 143
+  },
+  "gBattleAnimSpriteTemplate_83D798C": {
+    "priority": 2,
+    "oam": "gOamData_837E11C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ring.c",
+    "template_line": 188
+  },
+  "gBattleAnimSpriteTemplate_83DAE64": {
+    "priority": 2,
+    "oam": "gOamData_837DFEC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ghost.c",
+    "template_line": 64
+  },
+  "gBattleAnimSpriteTemplate_83DAE7C": {
+    "priority": 2,
+    "oam": "gOamData_837E04C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ghost.c",
+    "template_line": 75
+  },
+  "gBattleAnimSpriteTemplate_83DAEDC": {
+    "priority": 2,
+    "oam": "gOamData_837DF74",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ghost.c",
+    "template_line": 123
+  },
+  "gShadowBallSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ghost.c",
+    "template_line": 97
+  },
+  "gBattleAnimSpriteTemplate_83D974C": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/wisp_orb.c",
+    "template_line": 55
+  },
+  "gBattleAnimSpriteTemplate_83D977C": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/wisp_fire.c",
+    "template_line": 31
+  },
+  "gBattleAnimSpriteTemplate_83D97D0": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/thunder.c",
+    "template_line": 31
+  },
+  "gBattleAnimSpriteTemplate_83D7B94": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/perceive.c",
+    "template_line": 31
+  },
+  "gBattleAnimSpriteTemplate_8402458": {
+    "priority": 2,
+    "oam": "gOamData_837DFFC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 491
+  },
+  "gBattleAnimSpriteTemplate_83D9520": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fire.c",
+    "template_line": 117
+  },
+  "gLargeIceEffectParticleSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837E0E4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ice.c",
+    "template_line": 237
+  },
+  "gSmallIceEffectParticleSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837E0A4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ice.c",
+    "template_line": 248
+  },
+  "gBattleAnimSpriteTemplate_83D9874": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/shock.c",
+    "template_line": 56
+  },
+  "gBattleAnimSpriteTemplate_83D98A0": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/current.c",
+    "template_line": 52
+  },
+  "gElectricitySpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/current.c",
+    "template_line": 111
+  },
+  "gBattleAnimSpriteTemplate_83D9538": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fire.c",
+    "template_line": 128
+  },
+  "gBattleAnimSpriteTemplate_83D9508": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fire.c",
+    "template_line": 106
+  },
+  "gBattleAnimSpriteTemplate_83D9A6C": {
+    "priority": 2,
+    "oam": "gOamData_837E0BC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/current.c",
+    "template_line": 236
+  },
+  "gBattleAnimSpriteTemplate_83D9A9C": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/current.c",
+    "template_line": 261
+  },
+  "gBattleAnimSpriteTemplate_83D92D0": {
+    "priority": 2,
+    "oam": "gOamData_837E10C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/energy_wave.c",
+    "template_line": 141
+  },
+  "gBattleAnimSpriteTemplate_83D92E8": {
+    "priority": 2,
+    "oam": "gOamData_837E10C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/energy_wave.c",
+    "template_line": 152
+  },
+  "gBattleAnimSpriteTemplate_83D9AB4": {
+    "priority": 2,
+    "oam": "gOamData_837E0BC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/current.c",
+    "template_line": 272
+  },
+  "gBattleAnimSpriteTemplate_83D9B28": {
+    "priority": 2,
+    "oam": "gOamData_837E0BC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/current.c",
+    "template_line": 337
+  },
+  "gMegaPunchKickSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DFF4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 219
+  },
+  "gBattleAnimSpriteTemplate_83D62EC": {
+    "priority": 2,
+    "oam": "gOamData_837E0AC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/orbs.c",
+    "template_line": 104
+  },
+  "gBattleAnimSpriteTemplate_83D6304": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/orbs.c",
+    "template_line": 115
+  },
+  "gBattleAnimSpriteTemplate_840233C": {
+    "priority": 2,
+    "oam": "gOamData_837DFF4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 370
+  },
+  "gBattleAnimSpriteTemplate_83DA214": {
+    "priority": 2,
+    "oam": "gOamData_837DFF4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 425
+  },
+  "gBattleAnimSpriteTemplate_83D9490": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fire.c",
+    "template_line": 50
+  },
+  "gBattleAnimSpriteTemplate_83DA024": {
+    "priority": 2,
+    "oam": "gOamData_837DFF4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 196
+  },
+  "gPoisonBubbleSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/poison.c",
+    "template_line": 173
+  },
+  "gBattleAnimSpriteTemplate_8402A3C": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 1065
+  },
+  "gBattleAnimSpriteTemplate_83DA3B4": {
+    "priority": 2,
+    "oam": "gOamData_837DFDC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying.c",
+    "template_line": 73
+  },
+  "gBattleAnimSpriteTemplate_83D9FF0": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 173
+  },
+  "gBattleAnimSpriteTemplate_83D7050": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/strike.c",
+    "template_line": 46
+  },
+  "gLinearStingerSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/bug.c",
+    "template_line": 142
+  },
+  "gBattleAnimSpriteTemplate_83DB4C0": {
+    "priority": 2,
+    "oam": "gOamData_837E0B4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/normal.c",
+    "template_line": 226
+  },
+  "gMistCloudSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837E074",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ice.c",
+    "template_line": 332
+  },
+  "gSmallSnowballSpriteTemplate1": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ice.c",
+    "template_line": 259
+  },
+  "gLargeSnowballSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ice.c",
+    "template_line": 270
+  },
+  "gBattleAnimSpriteTemplate_83D649C": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/leaf.c",
+    "template_line": 51
+  },
+  "gBattleAnimSpriteTemplate_83D64E4": {
+    "priority": 2,
+    "oam": "gOamData_837DF54",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/leaf.c",
+    "template_line": 87
+  },
+  "gBattleAnimSpriteTemplate_83DB0D0": {
+    "priority": 2,
+    "oam": "gOamData_837DFF4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/dragon.c",
+    "template_line": 165
+  },
+  "gBattleAnimSpriteTemplate_83DB078": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/dragon.c",
+    "template_line": 122
+  },
+  "gBattleAnimSpriteTemplate_83DA6A8": {
+    "priority": 2,
+    "oam": "gOamData_837E05C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/psychic.c",
+    "template_line": 62
+  },
+  "gBattleAnimSpriteTemplate_83DA76C": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/psychic.c",
+    "template_line": 157
+  },
+  "gBattleAnimSpriteTemplate_83DA6C0": {
+    "priority": 2,
+    "oam": "gOamData_837E05C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/psychic.c",
+    "template_line": 73
+  },
+  "gBattleAnimSpriteTemplate_83DA73C": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/psychic.c",
+    "template_line": 132
+  },
+  "gSmogCloudSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837E074",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ice.c",
+    "template_line": 343
+  },
+  "gBattleAnimSpriteTemplate_83D9348": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/water.c",
+    "template_line": 98
+  },
+  "gBattleAnimSpriteTemplate_83DA88C": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/psychic.c",
+    "template_line": 267
+  },
+  "gBattleAnimSpriteTemplate_83D7080": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fang.c",
+    "template_line": 31
+  },
+  "gBattleAnimSpriteTemplate_83DB044": {
+    "priority": 2,
+    "oam": "gOamData_837DFF4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/dragon.c",
+    "template_line": 96
+  },
+  "gBattleAnimSpriteTemplate_83DA6D8": {
+    "priority": 2,
+    "oam": "gOamData_837E05C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/psychic.c",
+    "template_line": 84
+  },
+  "gAncientPowerRockSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/rock.c",
+    "template_line": 215
+  },
+  "gBattleAnimSpriteTemplate_83DAC64": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/rock.c",
+    "template_line": 82
+  },
+  "gBattleAnimSpriteTemplate_83D6C88": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/glitter.c",
+    "template_line": 35
+  },
+  "gBattleAnimSpriteTemplate_83D69DC": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/whip.c",
+    "template_line": 41
+  },
+  "gBattleAnimSpriteTemplate_83DAC4C": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/rock.c",
+    "template_line": 71
+  },
+  "gBattleAnimSpriteTemplate_83D9178": {
+    "priority": 2,
+    "oam": "gOamData_837E0AC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/bubble.c",
+    "template_line": 44
+  },
+  "gBattleAnimSpriteTemplate_83D6994": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/homing.c",
+    "template_line": 17
+  },
+  "gBattleAnimSpriteTemplate_83DB1D0": {
+    "priority": 2,
+    "oam": "gOamData_837E0BC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/dark.c",
+    "template_line": 118
+  },
+  "gBattleAnimSpriteTemplate_83D920C": {
+    "priority": 2,
+    "oam": "gOamData_837E04C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/energy_wave.c",
+    "template_line": 49
+  },
+  "gWaterBubbleSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837E0AC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/poison.c",
+    "template_line": 184
+  },
+  "gBattleAnimSpriteTemplate_83DADE8": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/rock.c",
+    "template_line": 277
+  },
+  "gBattleAnimSpriteTemplate_83DA65C": {
+    "priority": 2,
+    "oam": "gOamData_837DFFC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying.c",
+    "template_line": 361
+  },
+  "gBattleAnimSpriteTemplate_83DAABC": {
+    "priority": 2,
+    "oam": "gOamData_837E014",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/bug.c",
+    "template_line": 50
+  },
+  "gBattleAnimSpriteTemplate_83D9478": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fire.c",
+    "template_line": 39
+  },
+  "gSmallIcePunchCrystalSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837E044",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ice.c",
+    "template_line": 180
+  },
+  "gLargeIcePunchCrystalSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837E144",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ice.c",
+    "template_line": 169
+  },
+  "gBattleAnimSpriteTemplate_83D6D94": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/sleep.c",
+    "template_line": 62
+  },
+  "gBattleAnimSpriteTemplate_83D65A0": {
+    "priority": 2,
+    "oam": "gOamData_837DFBC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/tendrils.c",
+    "template_line": 60
+  },
+  "gBattleAnimSpriteTemplate_83DAB40": {
+    "priority": 2,
+    "oam": "gOamData_837DF5C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/bug.c",
+    "template_line": 108
+  },
+  "gBattleAnimSpriteTemplate_83DAB28": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/bug.c",
+    "template_line": 97
+  },
+  "gBattleAnimSpriteTemplate_83DAB74": {
+    "priority": 2,
+    "oam": "gOamData_837E11C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/bug.c",
+    "template_line": 131
+  },
+  "gBattleAnimSpriteTemplate_8402A6C": {
+    "priority": 2,
+    "oam": "gOamData_837DF3C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 1087
+  },
+  "gBattleAnimSpriteTemplate_8402264": {
+    "priority": 2,
+    "oam": "gOamData_837E11C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 262
+  },
+  "gBattleAnimSpriteTemplate_84026A4": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 733
+  },
+  "gPoisonGasCloudSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837E074",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ice.c",
+    "template_line": 375
+  },
+  "gBattleAnimSpriteTemplate_83D7D74": {
+    "priority": 2,
+    "oam": "gOamData_837E13C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/guard.c",
+    "template_line": 34
+  },
+  "gBattleAnimSpriteTemplate_83D6BE8": {
+    "priority": 2,
+    "oam": "gOamData_837E05C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/shield.c",
+    "template_line": 18
+  },
+  "gMudSportDirtSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ground.c",
+    "template_line": 120
+  },
+  "RainbowRingSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837E024",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/aurora.c",
+    "template_line": 47
+  },
+  "gBattleAnimSpriteTemplate_83DA2D0": {
+    "priority": 2,
+    "oam": "gOamData_837DFEC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/poison.c",
+    "template_line": 116
+  },
+  "gBattleAnimSpriteTemplate_83DA31C": {
+    "priority": 2,
+    "oam": "gOamData_837DFEC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/poison.c",
+    "template_line": 150
+  },
+  "gBattleAnimSpriteTemplate_83DA2B8": {
+    "priority": 2,
+    "oam": "gOamData_837DFEC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/poison.c",
+    "template_line": 105
+  },
+  "gBattleAnimSpriteTemplate_83DA2E8": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/poison.c",
+    "template_line": 127
+  },
+  "gFireRingSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fire_2.c",
+    "template_line": 79
+  },
+  "gFireCrossSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fire_2.c",
+    "template_line": 120
+  },
+  "gBattleAnimSpriteTemplate_84021DC": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 208
+  },
+  "gBattleAnimSpriteTemplate_84021F4": {
+    "priority": 2,
+    "oam": "gOamData_837E05C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 219
+  },
+  "gBattleAnimSpriteTemplate_840220C": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 230
+  },
+  "gBattleAnimSpriteTemplate_83D6DAC": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/scan.c",
+    "template_line": 24
+  },
+  "gBattleAnimSpriteTemplate_83D6DC4": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/scan.c",
+    "template_line": 35
+  },
+  "gBattleAnimSpriteTemplate_8402A24": {
+    "priority": 2,
+    "oam": "gOamData_837E054",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 1054
+  },
+  "gBattleAnimSpriteTemplate_83D7A80": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/heart_1.c",
+    "template_line": 16
+  },
+  "gBattleAnimSpriteTemplate_83DB238": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/dark.c",
+    "template_line": 160
+  },
+  "gBattleAnimSpriteTemplate_83D7BB8": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/angel.c",
+    "template_line": 27
+  },
+  "gBattleAnimSpriteTemplate_83D7AC8": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/kiss_fountain.c",
+    "template_line": 16
+  },
+  "gBattleAnimSpriteTemplate_83D7AB0": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/blow_kiss.c",
+    "template_line": 17
+  },
+  "gBattleAnimSpriteTemplate_83D7AE0": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying_hearts.c",
+    "template_line": 17
+  },
+  "gBattleAnimSpriteTemplate_83D7C00": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/devil.c",
+    "template_line": 30
+  },
+  "gBattleAnimSpriteTemplate_83D7BD0": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/angel_kiss.c",
+    "template_line": 17
+  },
+  "gBattleAnimSpriteTemplate_83D67F4": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/switch.c",
+    "template_line": 46
+  },
+  "gBattleAnimSpriteTemplate_83DA8F4": {
+    "priority": 2,
+    "oam": "gOamData_837DF3C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/psychic.c",
+    "template_line": 304
+  },
+  "gBattleAnimSpriteTemplate_83DAF20": {
+    "priority": 2,
+    "oam": "gOamData_837E074",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ghost.c",
+    "template_line": 156
+  },
+  "gBattleAnimSpriteTemplate_83DAF38": {
+    "priority": 2,
+    "oam": "gOamData_837E054",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ghost.c",
+    "template_line": 167
+  },
+  "gBattleAnimSpriteTemplate_83D7220": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/thought.c",
+    "template_line": 61
+  },
+  "gBattleAnimSpriteTemplate_83D72C8": {
+    "priority": 2,
+    "oam": "gOamData_837DFF4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/finger.c",
+    "template_line": 60
+  },
+  "gBattleAnimSpriteTemplate_83D7358": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/finger.c",
+    "template_line": 126
+  },
+  "gBattleAnimSpriteTemplate_83D72E0": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/finger.c",
+    "template_line": 71
+  },
+  "gFlyingDirtSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF54",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/rock.c",
+    "template_line": 139
+  },
+  "gBattleAnimSpriteTemplate_84024E8": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 550
+  },
+  "gBattleAnimSpriteTemplate_83D95B0": {
+    "priority": 2,
+    "oam": "gOamData_837E0B4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/sunlight.c",
+    "template_line": 22
+  },
+  "gBattleAnimSpriteTemplate_83DB0E8": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/dragon.c",
+    "template_line": 176
+  },
+  "gBattleAnimSpriteTemplate_83D71A8": {
+    "priority": 2,
+    "oam": "gOamData_837DFEC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/musical.c",
+    "template_line": 146
+  },
+  "gBattleAnimSpriteTemplate_83D7174": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/musical.c",
+    "template_line": 123
+  },
+  "gBattleAnimSpriteTemplate_83D715C": {
+    "priority": 2,
+    "oam": "gOamData_837DFEC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/musical.c",
+    "template_line": 112
+  },
+  "gMistBallSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ice.c",
+    "template_line": 359
+  },
+  "gBattleAnimSpriteTemplate_83DA9E0": {
+    "priority": 2,
+    "oam": "gOamData_837E11C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/psychic.c",
+    "template_line": 380
+  },
+  "gBattleAnimSpriteTemplate_83DAC10": {
+    "priority": 2,
+    "oam": "gOamData_837E0BC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/bug.c",
+    "template_line": 191
+  },
+  "gBattleAnimSpriteTemplate_83DAA68": {
+    "priority": 2,
+    "oam": "gOamData_837E11C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/psychic.c",
+    "template_line": 418
+  },
+  "gBattleAnimSpriteTemplate_83DAFCC": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/dragon.c",
+    "template_line": 43
+  },
+  "gBattleAnimSpriteTemplate_83DB100": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/dragon.c",
+    "template_line": 187
+  },
+  "gBattleAnimSpriteTemplate_84024D0": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 539
+  },
+  "gBattleAnimSpriteTemplate_83D9694": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fire_2.c",
+    "template_line": 131
+  },
+  "gBattleAnimSpriteTemplate_83DADA8": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/rock.c",
+    "template_line": 248
+  },
+  "gBattleAnimSpriteTemplate_840227C": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 273
+  },
+  "gBattleAnimSpriteTemplate_84021B0": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 184
+  },
+  "gBattleAnimSpriteTemplate_8402198": {
+    "priority": 2,
+    "oam": "gOamData_837DF54",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 173
+  },
+  "gBattleAnimSpriteTemplate_83DA824": {
+    "priority": 2,
+    "oam": "gOamData_837DF74",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/psychic.c",
+    "template_line": 225
+  },
+  "gBattleAnimSpriteTemplate_83D7450": {
+    "priority": 2,
+    "oam": "gOamData_837DF54",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/alert.c",
+    "template_line": 34
+  },
+  "gBattleAnimSpriteTemplate_83D6C48": {
+    "priority": 2,
+    "oam": "gOamData_837E0B4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/bottle.c",
+    "template_line": 40
+  },
+  "gBattleAnimSpriteTemplate_83D78BC": {
+    "priority": 2,
+    "oam": "gOamData_837E114",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ring.c",
+    "template_line": 100
+  },
+  "gBattleAnimSpriteTemplate_84025EC": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 647
+  },
+  "gBattleAnimSpriteTemplate_83D6FC8": {
+    "priority": 2,
+    "oam": "gOamData_837E05C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/moon.c",
+    "template_line": 17
+  },
+  "gBattleAnimSpriteTemplate_83D6FF8": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/twinkle.c",
+    "template_line": 31
+  },
+  "gBattleAnimSpriteTemplate_840238C": {
+    "priority": 2,
+    "oam": "gOamData_837DFFC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 401
+  },
+  "gBattleAnimSpriteTemplate_84023A4": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 412
+  },
+  "gBattleAnimSpriteTemplate_84023BC": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 423
+  },
+  "gBattleAnimSpriteTemplate_8402720": {
+    "priority": 2,
+    "oam": "gOamData_837DFFC",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 781
+  },
+  "gBattleAnimSpriteTemplate_8402708": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 770
+  },
+  "gBattleAnimSpriteTemplate_84026F0": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 759
+  },
+  "gBattleAnimSpriteTemplate_84029C4": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 1014
+  },
+  "gBattleAnimSpriteTemplate_84029F4": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 1032
+  },
+  "gBattleAnimSpriteTemplate_84027EC": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 844
+  },
+  "gBonemerangSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ground.c",
+    "template_line": 65
+  },
+  "gDirtPlumeSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ground.c",
+    "template_line": 131
+  },
+  "gDigDirtMoundSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF54",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ground.c",
+    "template_line": 142
+  },
+  "gBattleAnimSpriteTemplate_83D96F8": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fire_2.c",
+    "template_line": 176
+  },
+  "gBattleAnimSpriteTemplate_83D79A4": {
+    "priority": 2,
+    "oam": "gOamData_837E11C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ring.c",
+    "template_line": 199
+  },
+  "gBattleAnimSpriteTemplate_83D7CC8": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/noise.c",
+    "template_line": 15
+  },
+  "gBattleAnimSpriteTemplate_83930A8": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "data/gray_sun.s",
+    "template_line": 16
+  },
+  "gBattleAnimSpriteTemplate_83930C0": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "data/gray_sun.s",
+    "template_line": 20
+  },
+  "gBattleAnimSpriteTemplate_83D96AC": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fire_2.c",
+    "template_line": 142
+  },
+  "gBattleAnimSpriteTemplate_83D9438": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/water.c",
+    "template_line": 214
+  },
+  "gBattleAnimSpriteTemplate_83DAE30": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/rock.c",
+    "template_line": 310
+  },
+  "gBattleAnimSpriteTemplate_83DAE00": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/rock.c",
+    "template_line": 288
+  },
+  "gWeatherBallHailSpriteTemplate": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ice.c",
+    "template_line": 447
+  },
+  "gBattleAnimSpriteTemplate_83DB508": {
+    "priority": 2,
+    "oam": "gOamData_837E0B4",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/normal.c",
+    "template_line": 259
+  },
+  "gBattleAnimSpriteTemplate_83DA0FC": {
+    "priority": 2,
+    "oam": "gOamData_837E11C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 288
+  },
+  "gBattleAnimSpriteTemplate_83DA114": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 299
+  },
+  "gBattleAnimSpriteTemplate_83DA12C": {
+    "priority": 2,
+    "oam": "gOamData_837DF3C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/fight.c",
+    "template_line": 310
+  },
+  "gBattleAnimSpriteTemplate_83D68B8": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying_petals.c",
+    "template_line": 29
+  },
+  "gBattleAnimSpriteTemplate_83D68D0": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying_petals.c",
+    "template_line": 40
+  },
+  "gBattleAnimSpriteTemplate_83D76DC": {
+    "priority": 2,
+    "oam": "gOamData_837E054",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/guillotine.c",
+    "template_line": 41
+  },
+  "gBattleAnimSpriteTemplate_83D6394": {
+    "priority": 2,
+    "oam": "gOamData_837DF24",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/orbs.c",
+    "template_line": 178
+  },
+  "gBattleAnimSpriteTemplate_83D671C": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/hop.c",
+    "template_line": 49
+  },
+  "gBattleAnimSpriteTemplate_83D7828": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/ring.c",
+    "template_line": 56
+  },
+  "gBattleAnimSpriteTemplate_83D6764": {
+    "priority": 2,
+    "oam": "gOamData_837DF2C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/heal.c",
+    "template_line": 29
+  },
+  "gBattleAnimSpriteTemplate_83DA51C": {
+    "priority": 2,
+    "oam": "gOamData_837DF54",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/flying.c",
+    "template_line": 231
+  },
+  "gBattleAnimSpriteTemplate_83D75E4": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/money.c",
+    "template_line": 40
+  },
+  "gBattleAnimSpriteTemplate_83D75FC": {
+    "priority": 2,
+    "oam": "gOamData_837DF8C",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/money.c",
+    "template_line": 51
+  },
+  "gBattleAnimSpriteTemplate_84022F0": {
+    "priority": 2,
+    "oam": "gOamData_837DF94",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 333
+  },
+  "gBattleAnimSpriteTemplate_8402964": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 973
+  },
+  "gBattleAnimSpriteTemplate_83D77E0": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle/anim/draw.c",
+    "template_line": 22
+  },
+  "gBattleAnimSpriteTemplate_8402A0C": {
+    "priority": 2,
+    "oam": "gOamData_837DF34",
+    "oam_source": "src/battle_anim.c",
+    "template_source": "src/battle_anim_effects_3.c",
+    "template_line": 1043
+  }
+}

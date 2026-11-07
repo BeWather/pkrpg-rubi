@@ -1,0 +1,202 @@
+[gd_scene format=4 uid="uid://6myppsl228aw"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mapa"]
+[ext_resource type="TileSet" uid="uid://b5160rattgye8" path="res://graficos/tilesets/tileset_torre_batalla_interior.tres" id="2_tiles"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_tp"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_warp"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="5_npc_base"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="6_npc_evento"]
+[ext_resource type="Script" uid="uid://dp01rycebl5py" path="res://scripts/eventos/torre_batalla/evento_pasillo_torre.gd" id="7_evento"]
+[ext_resource type="SpriteFrames" uid="uid://d11jsjkars31b" path="res://graficos/transiciones_centro/teala.tres" id="f_teala"]
+
+[node name="TorreBatallaPasillo" type="Node2D" unique_id=1156256274]
+editor_description = "pokeruby BattleTower_Corridor (LAYOUT_BATTLE_TOWER_CORRIDOR, 17x5). Generada por herramientas/importar_interiores_torre_batalla.py."
+script = ExtResource("1_mapa")
+nombre_interno = "torre_batalla_pasillo"
+seccion = "TORRE_BATALLA"
+poi_mapa_region = "frente_batalla"
+esInterior = true
+mapa_exterior_asociado = "torre_batalla_exterior"
+musica_mapa = "TORRE_BATALLA"
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=2068204690]
+tile_map_data = PackedByteArray("AAAAAAAAAAAFAAUAAAAAAAEAAAAFAAYAAAAAAAIAAAAEAAAAAAAAAAMAAAAGAA0AAAAAAAQAAAAGAA4AAAABAAAAAAAEAAMAAAABAAEAAAAEAAQAAAABAAIAAAADAAAAAAABAAMAAAABAAUAAAABAAQAAAAAAAAAAAACAAAAAAAGAAUAAAACAAEAAAAGAAYAAAACAAIAAAADAAAAAAACAAMAAAABAAUAAAACAAQAAAAAAAAAAAADAAAAAAAFAAUAAAADAAEAAAAFAAYAAAADAAIAAAADAAAAAAADAAMAAAABAAUAAAADAAQAAAAAAAAAAAAEAAAAAAAEAAMAAAAEAAEAAAAEAAQAAAAEAAIAAAADAAAAAAAEAAMAAAABAAUAAAAEAAQAAAAAAAAAAAAFAAAAAAAGAAUAAAAFAAEAAAAGAAYAAAAFAAIAAAADAAAAAAAFAAMAAAABAAUAAAAFAAQAAAAAAAAAAAAGAAAAAAACAAUAAAAGAAEAAAACAAYAAAAGAAIAAAADAAAAAAAGAAMAAAABAAUAAAAGAAQAAAAAAAAAAAAHAAAAAAADAAUAAAAHAAEAAAADAAYAAAAHAAIAAAAHAA4AAAAHAAMAAAABAAUAAAAHAAQAAAAHAA0AAAAIAAAAAAAGAAAAAAAIAAEAAAAGAAEAAAAIAAIAAAADAAAAAAAIAAMAAAABAAUAAAAIAAQAAAAAAAAAAAAJAAAAAAAEAAUAAAAJAAEAAAAEAAYAAAAJAAIAAAAHAA4AAAAJAAMAAAABAAUAAAAJAAQAAAAHAA0AAAAKAAAAAAACAAUAAAAKAAEAAAACAAYAAAAKAAIAAAADAAAAAAAKAAMAAAABAAUAAAAKAAQAAAAAAAAAAAALAAAAAAAFAAUAAAALAAEAAAAFAAYAAAALAAIAAAADAAAAAAALAAMAAAABAAUAAAALAAQAAAAAAAAAAAAMAAAAAAAEAAMAAAAMAAEAAAAEAAQAAAAMAAIAAAADAAAAAAAMAAMAAAABAAUAAAAMAAQAAAAAAAAAAAANAAAAAAAGAAUAAAANAAEAAAAGAAYAAAANAAIAAAADAAAAAAANAAMAAAABAAUAAAANAAQAAAAAAAAAAAAOAAAAAAAFAAUAAAAOAAEAAAAFAAYAAAAOAAIAAAADAAAAAAAOAAMAAAABAAUAAAAOAAQAAAAAAAAAAAAPAAAAAAAEAAMAAAAPAAEAAAAEAAQAAAAPAAIAAAADAAAAAAAPAAMAAAABAAUAAAAPAAQAAAAAAAAAAAAQAAAAAAAGAAUAAAAQAAEAAAAGAAYAAAAQAAIAAAADAAAAAAAQAAMAAAAHAAsAAAAQAAQAAAAHAAwAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Superior" type="TileMapLayer" parent="." unique_id=378980809]
+z_index = 10
+tile_map_data = PackedByteArray("AAAAAAMAAAAOAA0AAAAQAAMAAAAPAAsAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=2039103897]
+script = ExtResource("3_tp")
+tile_data = {
+"-1,2": {
+"flags": 1
+},
+"-1,3": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"0,4": {
+"flags": 1
+},
+"1,0": {
+"flags": 1
+},
+"1,5": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,5": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,5": {
+"flags": 1
+},
+"12,0": {
+"flags": 1
+},
+"12,5": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,5": {
+"flags": 1
+},
+"14,1": {
+"flags": 1
+},
+"14,5": {
+"flags": 1
+},
+"15,0": {
+"flags": 1
+},
+"15,5": {
+"flags": 1
+},
+"16,1": {
+"flags": 1
+},
+"16,4": {
+"flags": 1
+},
+"17,2": {
+"flags": 1
+},
+"17,3": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,5": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,5": {
+"flags": 1
+},
+"4,0": {
+"flags": 1
+},
+"4,5": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,5": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"8,0": {
+"flags": 1
+},
+"8,5": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,5": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="PuertaNivel50" type="Node2D" parent="." unique_id=847210848]
+visible = false
+
+[node name="Abajo" type="TileMapLayer" parent="PuertaNivel50" unique_id=845669079]
+tile_map_data = PackedByteArray("AAAMAAAAAAAHAAAAAAAMAAEAAAAHAAEAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="PuertaNivel100" type="Node2D" parent="." unique_id=333426332]
+visible = false
+
+[node name="Abajo" type="TileMapLayer" parent="PuertaNivel100" unique_id=1791918087]
+tile_map_data = PackedByteArray("AAAPAAAAAAAHAAAAAAAPAAEAAAAHAAEAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1647922123]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Recepcionista" parent="NPCs" unique_id=1364281249 instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby BattleTower_Corridor objeto 1 (9,2) TEALA FACE_LEFT, 0x0"
+position = Vector2(152, 46)
+script = ExtResource("6_npc_evento")
+tipo_movimiento = 9
+selec_frames = ExtResource("f_teala")
+coord = Vector2i(9, 2)
+
+[node name="Eventos" type="Node2D" parent="." unique_id=839224911]
+
+[node name="Evento" type="Node2D" parent="Eventos" unique_id=2011289202]
+script = ExtResource("7_evento")
+azafata = NodePath("../../NPCs/Recepcionista")
+puerta_nivel_50 = NodePath("../../PuertaNivel50")
+puerta_nivel_100 = NodePath("../../PuertaNivel100")
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=892109832]
+position = Vector2(136, 22)
+script = ExtResource("4_warp")
+tipo_warp = 2
+estilo_warp = 33
+direccion = Vector2(0, 1)

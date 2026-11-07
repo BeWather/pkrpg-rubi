@@ -1,0 +1,841 @@
+[gd_scene format=4 uid="uid://dmoonky6rl8q2"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_lxto5"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_7oi3k"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_fm4bk"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_tvply"]
+[ext_resource type="Script" uid="uid://8uymdhpcd3qe" path="res://scripts/eventos/cartel_evento.gd" id="pt_cartel"]
+[ext_resource type="PackedScene" uid="uid://gbm5pvhiq1ej" path="res://escenas/avatares/npc_entrenador.tscn" id="pt_entrenador"]
+[ext_resource type="PackedScene" uid="uid://d0782whl40dem" path="res://escenas/ow_item.tscn" id="pt_item"]
+[ext_resource type="PackedScene" path="res://escenas/eventos/disparador_evento_por_tiles.tscn" id="pt_disparador"]
+[ext_resource type="Script" path="res://scripts/eventos/ruta_110/evento_casa_treta_prueba7.gd" id="pt_evento"]
+[ext_resource type="SpriteFrames" uid="uid://dfpgad0skjl3c" path="res://escenas/avatares/npc_031.tres" id="pt_npc_031"]
+[ext_resource type="SpriteFrames" uid="uid://cyl36dlhko7bi" path="res://escenas/avatares/npc_066.tres" id="pt_npc_066"]
+[ext_resource type="SpriteFrames" uid="uid://bffusi6aoaqoc" path="res://escenas/avatares/npc_033.tres" id="pt_npc_033"]
+
+[node name="CasaTretaPrueba7" type="Node2D" unique_id=759417394]
+script = ExtResource("1_lxto5")
+nombre_interno = "ruta_110_casa_treta_prueba7"
+seccion = "RUTA_110"
+esInterior = true
+mapa_exterior_asociado = "RUTA_110"
+solo_caminar = true
+musica_mapa = "CASA_TRUCO"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1253588805]
+tile_map_data = PackedByteArray("AAAAAAAAAAAZAAAAAAAAAAEAAAAZAAEAAAAAAAIAAAAYAAIAAAAAAAMAAAAYAAEAAAAAAAQAAAAYAAEAAAAAAAUAAAAZABAAAAAAAAYAAAAfAAoAAAAAAAcAAAAdAA0AAAAAAAgAAAAeAAkAAAAAAAkAAAAeAAkAAAAAAAoAAAAeAAwAAAAAAAsAAAAeAAwAAAAAAAwAAAAeAAwAAAAAAA0AAAAeAAwAAAAAAA4AAAAeAAwAAAAAAA8AAAAeAAwAAAAAABAAAAAeAAwAAAAAABEAAAAYAAEAAAAAABIAAAAYAAEAAAAAABMAAAAYAAEAAAAAABQAAAAYAAEAAAAAABUAAAAIAAsAAAABAAAAAAAZAAAAAAABAAEAAAAZAAEAAAABAAIAAAAYAAIAAAABAAMAAAAYAAEAAAABAAQAAAAYAAEAAAABAAUAAAAbABAAAAABAAYAAAAfAAoAAAABAAcAAAAdAA0AAAABAAgAAAAYAA4AAAABAAkAAAAYAA8AAAABAAoAAAAcAAwAAAABAAsAAAAeAAwAAAABAAwAAAAeAAwAAAABAA0AAAAeAAwAAAABAA4AAAAeAAwAAAABAA8AAAAeAAwAAAABABAAAAAeAAwAAAABABEAAAAYAAEAAAABABIAAAAYAAEAAAABABMAAAAYAAEAAAABABQAAAAYAAEAAAABABUAAAAJAAsAAAACAAAAAAAZAAAAAAACAAEAAAAZAAEAAAACAAIAAAAYAAIAAAACAAMAAAAYAAEAAAACAAQAAAAYAAEAAAACAAUAAAAeAAwAAAACAAYAAAAeAAoAAAACAAcAAAAcAAsAAAACAAgAAAAeAAsAAAACAAkAAAAeAA4AAAACAAoAAAAeAAwAAAACAAsAAAAfAAwAAAACAAwAAAAfAAwAAAACAA0AAAAfAAwAAAACAA4AAAAfAAwAAAACAA8AAAAfAAwAAAACABAAAAAfAAwAAAACABEAAAAfAAwAAAACABIAAAAfAAwAAAACABMAAAAYAAEAAAACABQAAAAYAAEAAAACABUAAAAYAAEAAAADAAAAAAAZAAAAAAADAAEAAAAZAAEAAAADAAIAAAAYAAIAAAADAAMAAAAfAAwAAAADAAQAAAAfAAwAAAADAAUAAAAfAAwAAAADAAYAAAAbAAsAAAADAAcAAAAdAA0AAAADAAgAAAAdAA8AAAADAAkAAAAdABAAAAADAAoAAAAfAAwAAAADAAsAAAAYAAEAAAADAAwAAAAYAAEAAAADAA0AAAAdAAwAAAADAA4AAAAYAAEAAAADAA8AAAAYAAEAAAADABAAAAAYAAEAAAADABEAAAAYAAEAAAADABIAAAAZABAAAAADABMAAAAfAAgAAAADABQAAAAYAAEAAAADABUAAAAYAAEAAAAEAAAAAAAZAAAAAAAEAAEAAAAZAAEAAAAEAAIAAAAYAAIAAAAEAAMAAAAdAAwAAAAEAAQAAAAeAAcAAAAEAAUAAAAYAAEAAAAEAAYAAAAfAAoAAAAEAAcAAAAdAA4AAAAEAAgAAAAfAAkAAAAEAAkAAAAfAAkAAAAEAAoAAAAYAAEAAAAEAAsAAAAYABAAAAAEAAwAAAAYABIAAAAEAA0AAAAdAAwAAAAEAA4AAAAYAAEAAAAEAA8AAAAfAAwAAAAEABAAAAAfAAwAAAAEABEAAAAYAAEAAAAEABIAAAAbABAAAAAEABMAAAAYAAEAAAAEABQAAAAYAAEAAAAEABUAAAAdAAwAAAAFAAAAAAAZAAAAAAAFAAEAAAAZAAEAAAAFAAIAAAAYAAIAAAAFAAMAAAAYAAEAAAAFAAQAAAAYAAEAAAAFAAUAAAAfAAwAAAAFAAYAAAAfAAoAAAAFAAcAAAAZAA8AAAAFAAgAAAAYAA4AAAAFAAkAAAAYAA8AAAAFAAoAAAAeAAcAAAAFAAsAAAAYAAEAAAAFAAwAAAAYAAEAAAAFAA0AAAAdAAwAAAAFAA4AAAAYAAEAAAAFAA8AAAAdAAwAAAAFABAAAAAfAAwAAAAFABEAAAAfAAwAAAAFABIAAAAYAAEAAAAFABMAAAAYAAEAAAAFABQAAAAdAAwAAAAFABUAAAAdAAwAAAAGAAAAAAAZAAAAAAAGAAEAAAAZAAEAAAAGAAIAAAAfAAwAAAAGAAMAAAAfAAwAAAAGAAQAAAAfAAwAAAAGAAUAAAAYAAEAAAAGAAYAAAAbAA8AAAAGAAcAAAAdAA4AAAAGAAgAAAAfAAkAAAAGAAkAAAAfAAkAAAAGAAoAAAAfAAwAAAAGAAsAAAAfAAwAAAAGAAwAAAAfAAwAAAAGAA0AAAAdAAwAAAAGAA4AAAAYAAEAAAAGAA8AAAAdAAwAAAAGABAAAAAdAAwAAAAGABEAAAAYAAEAAAAGABIAAAAYAAEAAAAGABMAAAAdAAwAAAAGABQAAAAdAAwAAAAGABUAAAAYAAEAAAAHAAAAAAAZAAAAAAAHAAEAAAAZAAEAAAAHAAIAAAAfAA8AAAAHAAMAAAAYAAEAAAAHAAQAAAAYAAEAAAAHAAUAAAAeAAcAAAAHAAYAAAAbAAsAAAAHAAcAAAAeAA0AAAAHAAgAAAAdAA8AAAAHAAkAAAAdABAAAAAHAAoAAAAYAAEAAAAHAAsAAAAcAAwAAAAHAAwAAAAbAAwAAAAHAA0AAAAdAAwAAAAHAA4AAAAcAAwAAAAHAA8AAAAdAAwAAAAHABAAAAAdAAwAAAAHABEAAAAYAAEAAAAHABIAAAAdAAwAAAAHABMAAAAYAAEAAAAHABQAAAAYAAEAAAAHABUAAAAYAAEAAAAIAAAAAAAZAAAAAAAIAAEAAAAZAAEAAAAIAAIAAAAYABAAAAAIAAMAAAAYABIAAAAIAAQAAAAYAAwAAAAIAAUAAAAeAAwAAAAIAAYAAAAeAAoAAAAIAAcAAAAeAA0AAAAIAAgAAAAdAA8AAAAIAAkAAAAdABAAAAAIAAoAAAAYAAEAAAAIAAsAAAAYAAEAAAAIAAwAAAAdAAwAAAAIAA0AAAAdAAwAAAAIAA4AAAAcAAwAAAAIAA8AAAAdAAwAAAAIABAAAAAdAAwAAAAIABEAAAAYAAEAAAAIABIAAAAdAAwAAAAIABMAAAAdAAwAAAAIABQAAAAYAAEAAAAIABUAAAAYAAEAAAAJAAAAAAAZAAAAAAAJAAEAAAAZAAEAAAAJAAIAAAAeAAgAAAAJAAMAAAAYAAEAAAAJAAQAAAAYAAEAAAAJAAUAAAAYAAEAAAAJAAYAAAAcAA4AAAAJAAcAAAAeAA0AAAAJAAgAAAAdAA8AAAAJAAkAAAAdABAAAAAJAAoAAAAYAAEAAAAJAAsAAAAYAAEAAAAJAAwAAAAdAAwAAAAJAA0AAAAdAAwAAAAJAA4AAAAcAAwAAAAJAA8AAAAdAAwAAAAJABAAAAAYAAEAAAAJABEAAAAYAAEAAAAJABIAAAAdAAwAAAAJABMAAAAdAAwAAAAJABQAAAAYAAEAAAAJABUAAAAYAAEAAAAKAAAAAAAZAAAAAAAKAAEAAAAZAAEAAAAKAAIAAAAcABAAAAAKAAMAAAAdAAwAAAAKAAQAAAAYABAAAAAKAAUAAAAaAA8AAAAKAAYAAAAdAA4AAAAKAAcAAAAeAA0AAAAKAAgAAAAYAA4AAAAKAAkAAAAYAA8AAAAKAAoAAAAYAAEAAAAKAAsAAAAYAAEAAAAKAAwAAAAdAAwAAAAKAA0AAAAdAAwAAAAKAA4AAAAcAAwAAAAKAA8AAAAfAAwAAAAKABAAAAAfAAwAAAAKABEAAAAfAAwAAAAKABIAAAAdAAwAAAAKABMAAAAdAAwAAAAKABQAAAAfAAwAAAAKABUAAAAcAAwAAAALAAAAAAAZAAAAAAALAAEAAAAZAAEAAAALAAIAAAAYAAIAAAALAAMAAAAYAAEAAAALAAQAAAAYAAEAAAALAAUAAAAfAAoAAAALAAYAAAAeAA0AAAALAAcAAAAYAA4AAAALAAgAAAAYAA8AAAALAAkAAAAcAAwAAAALAAoAAAAYAAEAAAALAAsAAAAYAAEAAAALAAwAAAAdAAwAAAALAA0AAAAdAAwAAAALAA4AAAAfAAwAAAALAA8AAAAYAAEAAAALABAAAAAYAAEAAAALABEAAAAYAAEAAAALABIAAAAdAAwAAAALABMAAAAdAAwAAAALABQAAAAYAAEAAAALABUAAAAcAAwAAAAMAAAAAAAaAAAAAAAMAAEAAAAaAAEAAAAMAAIAAAAYAAIAAAAMAAMAAAAcAAwAAAAMAAQAAAAeAAwAAAAMAAUAAAAeAAoAAAAMAAYAAAAdAAsAAAAMAAcAAAAeAAsAAAAMAAgAAAAeAA4AAAAMAAkAAAAeAAwAAAAMAAoAAAAeAAwAAAAMAAsAAAAeAAcAAAAMAAwAAAAdAAwAAAAMAA0AAAAZAAwAAAAMAA4AAAAeAAwAAAAMAA8AAAAdAAwAAAAMABAAAAAeAAcAAAAMABEAAAAYAAEAAAAMABIAAAAYAAEAAAAMABMAAAAdAAwAAAAMABQAAAAYAAEAAAAMABUAAAAcAAwAAAANAAAAAAAfAA0AAAANAAEAAAAfAA4AAAANAAIAAAAYAAIAAAANAAMAAAAeAAwAAAANAAQAAAAYAAEAAAANAAUAAAAfAAoAAAANAAYAAAAeAA0AAAANAAcAAAAYAA4AAAANAAgAAAAYAA8AAAANAAkAAAAYAAEAAAANAAoAAAAcAAwAAAANAAsAAAAYAAEAAAANAAwAAAAYABAAAAANAA0AAAAYABIAAAANAA4AAAAdAAwAAAANAA8AAAAeAAwAAAANABAAAAAeAAwAAAANABEAAAAbAAwAAAANABIAAAAfAAwAAAANABMAAAAdAAwAAAANABQAAAAYAAEAAAANABUAAAAcAAwAAAAOAAAAAAAcAAAAAAAOAAEAAAAcAAEAAAAOAAIAAAAYAAIAAAAOAAMAAAAYAAEAAAAOAAQAAAAYAAEAAAAOAAUAAAAfAAoAAAAOAAYAAAAeAA0AAAAOAAcAAAAeAAkAAAAOAAgAAAAeAAkAAAAOAAkAAAAeAAwAAAAOAAoAAAAeAAwAAAAOAAsAAAAdAAwAAAAOAAwAAAAeAAwAAAAOAA0AAAAeAAwAAAAOAA4AAAAeAAwAAAAOAA8AAAAeAAwAAAAOABAAAAAeAAwAAAAOABEAAAAeAAwAAAAOABIAAAAeAAwAAAAOABMAAAAeAAwAAAAOABQAAAAeAAwAAAAOABUAAAAeAAwAAAA=")
+tile_set = ExtResource("2_7oi3k")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=334918610]
+tile_set = ExtResource("2_7oi3k")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1077642025]
+
+[node name="NPCs" type="Node2D" parent="." unique_id=491424303]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1320006000]
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1773046390]
+script = ExtResource("3_fm4bk")
+tile_data = {
+"0,0": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"0,10": {
+"flags": 584115552256
+},
+"0,11": {
+"flags": 584115552256
+},
+"0,12": {
+"flags": 584115552256
+},
+"0,13": {
+"flags": 584115552256
+},
+"0,14": {
+"flags": 584115552256
+},
+"0,15": {
+"flags": 584115552256
+},
+"0,16": {
+"flags": 584115552256
+},
+"0,5": {
+"flags": 1
+},
+"0,7": {
+"flags": 824633720832
+},
+"0,8": {
+"flags": 584115552256
+},
+"0,9": {
+"flags": 584115552256
+},
+"1,0": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,10": {
+"flags": 824633720832
+},
+"1,11": {
+"flags": 584115552256
+},
+"1,12": {
+"flags": 584115552256
+},
+"1,13": {
+"flags": 584115552256
+},
+"1,14": {
+"flags": 584115552256
+},
+"1,15": {
+"flags": 584115552256
+},
+"1,16": {
+"flags": 584115552256
+},
+"1,5": {
+"flags": 1
+},
+"1,7": {
+"flags": 824633720832
+},
+"1,8": {
+"flags": 1
+},
+"10,0": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,12": {
+"flags": 687194767360
+},
+"10,13": {
+"flags": 687194767360
+},
+"10,14": {
+"flags": 824633720832
+},
+"10,15": {
+"flags": 618475290624
+},
+"10,16": {
+"flags": 618475290624
+},
+"10,17": {
+"flags": 618475290624
+},
+"10,18": {
+"flags": 687194767360
+},
+"10,19": {
+"flags": 687194767360
+},
+"10,2": {
+"flags": 1
+},
+"10,20": {
+"flags": 618475290624
+},
+"10,21": {
+"flags": 824633720832
+},
+"10,3": {
+"flags": 687194767360
+},
+"10,4": {
+"flags": 1
+},
+"10,5": {
+"flags": 1
+},
+"10,6": {
+"flags": 618475290624
+},
+"10,7": {
+"flags": 687194767360
+},
+"10,8": {
+"flags": 1
+},
+"11,0": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,12": {
+"flags": 687194767360
+},
+"11,13": {
+"flags": 687194767360
+},
+"11,14": {
+"flags": 618475290624
+},
+"11,18": {
+"flags": 687194767360
+},
+"11,19": {
+"flags": 687194767360
+},
+"11,21": {
+"flags": 824633720832
+},
+"11,6": {
+"flags": 687194767360
+},
+"11,7": {
+"flags": 1
+},
+"11,9": {
+"flags": 824633720832
+},
+"12,0": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,10": {
+"flags": 584115552256
+},
+"12,11": {
+"flags": 1
+},
+"12,12": {
+"flags": 687194767360
+},
+"12,13": {
+"flags": 137438953472
+},
+"12,14": {
+"flags": 584115552256
+},
+"12,15": {
+"flags": 687194767360
+},
+"12,16": {
+"flags": 1
+},
+"12,19": {
+"flags": 687194767360
+},
+"12,21": {
+"flags": 824633720832
+},
+"12,3": {
+"flags": 824633720832
+},
+"12,4": {
+"flags": 584115552256
+},
+"12,5": {
+"flags": 584115552256
+},
+"12,6": {
+"flags": 17179869184
+},
+"12,7": {
+"flags": 584115552256
+},
+"12,8": {
+"flags": 584115552256
+},
+"12,9": {
+"flags": 584115552256
+},
+"13,0": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,10": {
+"flags": 824633720832
+},
+"13,12": {
+"flags": 1
+},
+"13,13": {
+"flags": 1
+},
+"13,14": {
+"flags": 687194767360
+},
+"13,15": {
+"flags": 584115552256
+},
+"13,16": {
+"flags": 584115552256
+},
+"13,17": {
+"flags": 68719476736
+},
+"13,18": {
+"flags": 618475290624
+},
+"13,19": {
+"flags": 687194767360
+},
+"13,21": {
+"flags": 824633720832
+},
+"13,3": {
+"flags": 584115552256
+},
+"13,6": {
+"flags": 687194767360
+},
+"13,7": {
+"flags": 1
+},
+"14,0": {
+"flags": 1
+},
+"14,1": {
+"flags": 1
+},
+"14,10": {
+"flags": 584115552256
+},
+"14,11": {
+"flags": 687194767360
+},
+"14,12": {
+"flags": 584115552256
+},
+"14,13": {
+"flags": 584115552256
+},
+"14,14": {
+"flags": 584115552256
+},
+"14,15": {
+"flags": 584115552256
+},
+"14,16": {
+"flags": 584115552256
+},
+"14,17": {
+"flags": 584115552256
+},
+"14,18": {
+"flags": 584115552256
+},
+"14,19": {
+"flags": 584115552256
+},
+"14,20": {
+"flags": 584115552256
+},
+"14,21": {
+"flags": 584115552256
+},
+"14,6": {
+"flags": 687194767360
+},
+"14,7": {
+"flags": 584115552256
+},
+"14,8": {
+"flags": 584115552256
+},
+"14,9": {
+"flags": 584115552256
+},
+"2,0": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,10": {
+"flags": 584115552256
+},
+"2,11": {
+"flags": 618475290624
+},
+"2,12": {
+"flags": 618475290624
+},
+"2,13": {
+"flags": 618475290624
+},
+"2,14": {
+"flags": 618475290624
+},
+"2,15": {
+"flags": 618475290624
+},
+"2,16": {
+"flags": 618475290624
+},
+"2,17": {
+"flags": 618475290624
+},
+"2,18": {
+"flags": 618475290624
+},
+"2,5": {
+"flags": 584115552256
+},
+"2,6": {
+"flags": 584115552256
+},
+"2,7": {
+"flags": 17179869184
+},
+"2,8": {
+"flags": 584115552256
+},
+"2,9": {
+"flags": 584115552256
+},
+"3,0": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,10": {
+"flags": 618475290624
+},
+"3,13": {
+"flags": 687194767360
+},
+"3,18": {
+"flags": 1
+},
+"3,3": {
+"flags": 618475290624
+},
+"3,4": {
+"flags": 618475290624
+},
+"3,5": {
+"flags": 618475290624
+},
+"3,6": {
+"flags": 824633720832
+},
+"3,7": {
+"flags": 824633720832
+},
+"3,8": {
+"flags": 1
+},
+"4,0": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,11": {
+"flags": 1
+},
+"4,12": {
+"flags": 1
+},
+"4,13": {
+"flags": 687194767360
+},
+"4,15": {
+"flags": 618475290624
+},
+"4,16": {
+"flags": 618475290624
+},
+"4,18": {
+"flags": 1
+},
+"4,21": {
+"flags": 687194767360
+},
+"4,3": {
+"flags": 687194767360
+},
+"4,4": {
+"flags": 1
+},
+"4,7": {
+"flags": 618475290624
+},
+"4,8": {
+"flags": 618475290624
+},
+"4,9": {
+"flags": 618475290624
+},
+"5,0": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,10": {
+"flags": 1
+},
+"5,13": {
+"flags": 687194767360
+},
+"5,15": {
+"flags": 687194767360
+},
+"5,16": {
+"flags": 618475290624
+},
+"5,17": {
+"flags": 618475290624
+},
+"5,20": {
+"flags": 687194767360
+},
+"5,21": {
+"flags": 687194767360
+},
+"5,5": {
+"flags": 618475290624
+},
+"5,8": {
+"flags": 1
+},
+"6,0": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,10": {
+"flags": 618475290624
+},
+"6,11": {
+"flags": 618475290624
+},
+"6,12": {
+"flags": 618475290624
+},
+"6,13": {
+"flags": 687194767360
+},
+"6,15": {
+"flags": 687194767360
+},
+"6,16": {
+"flags": 687194767360
+},
+"6,19": {
+"flags": 687194767360
+},
+"6,2": {
+"flags": 618475290624
+},
+"6,20": {
+"flags": 687194767360
+},
+"6,3": {
+"flags": 618475290624
+},
+"6,4": {
+"flags": 618475290624
+},
+"6,6": {
+"flags": 137438953472
+},
+"6,7": {
+"flags": 618475290624
+},
+"6,8": {
+"flags": 618475290624
+},
+"6,9": {
+"flags": 618475290624
+},
+"7,0": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,11": {
+"flags": 824633720832
+},
+"7,12": {
+"flags": 68719476736
+},
+"7,13": {
+"flags": 687194767360
+},
+"7,14": {
+"flags": 824633720832
+},
+"7,15": {
+"flags": 687194767360
+},
+"7,16": {
+"flags": 687194767360
+},
+"7,18": {
+"flags": 687194767360
+},
+"7,2": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"7,6": {
+"flags": 824633720832
+},
+"7,7": {
+"flags": 687194767360
+},
+"7,8": {
+"flags": 1
+},
+"8,0": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,12": {
+"flags": 687194767360
+},
+"8,13": {
+"flags": 687194767360
+},
+"8,14": {
+"flags": 824633720832
+},
+"8,15": {
+"flags": 687194767360
+},
+"8,16": {
+"flags": 687194767360
+},
+"8,18": {
+"flags": 687194767360
+},
+"8,19": {
+"flags": 687194767360
+},
+"8,2": {
+"flags": 1
+},
+"8,3": {
+"flags": 1
+},
+"8,4": {
+"flags": 274877906944
+},
+"8,5": {
+"flags": 584115552256
+},
+"8,6": {
+"flags": 584115552256
+},
+"8,7": {
+"flags": 687194767360
+},
+"8,8": {
+"flags": 1
+},
+"9,0": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,12": {
+"flags": 687194767360
+},
+"9,13": {
+"flags": 687194767360
+},
+"9,14": {
+"flags": 824633720832
+},
+"9,15": {
+"flags": 687194767360
+},
+"9,18": {
+"flags": 687194767360
+},
+"9,19": {
+"flags": 687194767360
+},
+"9,7": {
+"flags": 687194767360
+},
+"9,8": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="WarpCompletado" type="Sprite2D" parent="." unique_id=21363971]
+position = Vector2(216, 22)
+script = ExtResource("4_tvply")
+ruta_mapa_destino = "ruta_110_casa_treta"
+posicion_destino = Vector2(29, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="WarpRetirarse1" type="Sprite2D" parent="." unique_id=1825224057]
+position = Vector2(8, 342)
+script = ExtResource("4_tvply")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_110_casa_treta"
+posicion_destino = Vector2(5, 2)
+direccion = Vector2(0, 1)
+
+[node name="WarpRetirarse2" type="Sprite2D" parent="." unique_id=2121485367]
+position = Vector2(24, 342)
+script = ExtResource("4_tvply")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_110_casa_treta"
+posicion_destino = Vector2(5, 2)
+direccion = Vector2(0, 1)
+
+[node name="Pergamino" type="Sprite2D" parent="Carteles" unique_id=1330007001 groups=["Cartel"]]
+editor_description = "pokeruby Route110_TrickHousePuzzle7 bg_event (7,2) sign BG_EVENT_PLAYER_FACING_ANY, EventScript_16328B (Scroll). Lo resuelve Eventos/EventoPrueba."
+position = Vector2(120, 40)
+script = ExtResource("pt_cartel")
+capa_datos = 0
+id_texto = "CASA_TRETA_PERGAMINO_LEIDO"
+coord_tile = Vector2i(7, 2)
+
+[node name="Puerta" type="Sprite2D" parent="Carteles" unique_id=1330007002 groups=["Cartel"]]
+editor_description = "pokeruby Route110_TrickHousePuzzle_EventScript_Door (metatile 0x277, MB_TRICK_HOUSE_PUZZLE_DOOR): solo se lee mirando al norte desde (13,2)."
+position = Vector2(216, 24)
+script = ExtResource("pt_cartel")
+capa_datos = 0
+id_texto = "CASA_TRETA_PUERTA_CERRADA"
+coord_tile = Vector2i(13, 1)
+direccion = 1
+
+[node name="Palanca1" type="Sprite2D" parent="Carteles" unique_id=1330007010 groups=["Cartel"]]
+editor_description = "pokeruby Route110_TrickHousePuzzle7 bg_event (12,16) sign BG_EVENT_PLAYER_FACING_ANY, EventScript_Switch1. Lo resuelve Eventos/EventoPrueba."
+position = Vector2(200, 264)
+script = ExtResource("pt_cartel")
+capa_datos = 0
+id_texto = "CASA_TRETA_PERGAMINO_LEIDO"
+coord_tile = Vector2i(12, 16)
+
+[node name="Palanca2" type="Sprite2D" parent="Carteles" unique_id=1330007011 groups=["Cartel"]]
+editor_description = "pokeruby Route110_TrickHousePuzzle7 bg_event (12,11) sign BG_EVENT_PLAYER_FACING_ANY, EventScript_Switch2. Lo resuelve Eventos/EventoPrueba."
+position = Vector2(200, 184)
+script = ExtResource("pt_cartel")
+capa_datos = 0
+id_texto = "CASA_TRETA_PERGAMINO_LEIDO"
+coord_tile = Vector2i(12, 11)
+
+[node name="Palanca3" type="Sprite2D" parent="Carteles" unique_id=1330007012 groups=["Cartel"]]
+editor_description = "pokeruby Route110_TrickHousePuzzle7 bg_event (5,10) sign BG_EVENT_PLAYER_FACING_ANY, EventScript_Switch3. Lo resuelve Eventos/EventoPrueba."
+position = Vector2(88, 168)
+script = ExtResource("pt_cartel")
+capa_datos = 0
+id_texto = "CASA_TRETA_PERGAMINO_LEIDO"
+coord_tile = Vector2i(5, 10)
+
+[node name="Palanca4" type="Sprite2D" parent="Carteles" unique_id=1330007013 groups=["Cartel"]]
+editor_description = "pokeruby Route110_TrickHousePuzzle7 bg_event (4,4) sign BG_EVENT_PLAYER_FACING_ANY, EventScript_Switch4. Lo resuelve Eventos/EventoPrueba."
+position = Vector2(72, 72)
+script = ExtResource("pt_cartel")
+capa_datos = 0
+id_texto = "CASA_TRETA_PERGAMINO_LEIDO"
+coord_tile = Vector2i(4, 4)
+
+[node name="Palanca5" type="Sprite2D" parent="Carteles" unique_id=1330007014 groups=["Cartel"]]
+editor_description = "pokeruby Route110_TrickHousePuzzle7 bg_event (7,5) sign BG_EVENT_PLAYER_FACING_ANY, EventScript_Switch5. Lo resuelve Eventos/EventoPrueba."
+position = Vector2(120, 88)
+script = ExtResource("pt_cartel")
+capa_datos = 0
+id_texto = "CASA_TRETA_PERGAMINO_LEIDO"
+coord_tile = Vector2i(7, 5)
+
+[node name="Josue" parent="NPCs" unique_id=1330007003 instance=ExtResource("pt_entrenador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle7 (0,3) objeto 1 FACE_RIGHT, TRAINER_JOSHUA (vision 2)"
+position = Vector2(8, 62)
+npc_id = "casa_treta_p7_joshua"
+entrenador_id = 237
+rango_vision = 2
+texto_post_combate = "CASA_TRETA_P7_JOSHUA_POST"
+id_texto = "CASA_TRETA_P7_JOSHUA_INI"
+tipo_movimiento = 10
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("pt_npc_031")
+coord = Vector2i(0, 3)
+loggear = false
+
+[node name="Alexa" parent="NPCs" unique_id=1330007004 instance=ExtResource("pt_entrenador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle7 (14,3) objeto 2 FACE_UP, TRAINER_ALEXIS (vision 1)"
+position = Vector2(232, 62)
+npc_id = "casa_treta_p7_alexis"
+entrenador_id = 248
+rango_vision = 1
+texto_post_combate = "CASA_TRETA_P7_ALEXIS_POST"
+id_texto = "CASA_TRETA_P7_ALEXIS_INI"
+tipo_movimiento = 7
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("pt_npc_066")
+coord = Vector2i(14, 3)
+loggear = false
+
+[node name="Patricia" parent="NPCs" unique_id=1330007005 instance=ExtResource("pt_entrenador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle7 (9,10) objeto 3 ROTATE_COUNTERCLOCKWISE, TRAINER_PATRICIA (vision 1)"
+position = Vector2(152, 174)
+npc_id = "casa_treta_p7_patricia"
+entrenador_id = 105
+rango_vision = 1
+texto_post_combate = "CASA_TRETA_P7_PATRICIA_POST"
+id_texto = "CASA_TRETA_P7_PATRICIA_INI"
+tipo_movimiento = 18
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("pt_npc_033")
+coord = Vector2i(9, 10)
+loggear = false
+
+[node name="CartaTropico" parent="NPCs" unique_id=1330007006 instance=ExtResource("pt_item")]
+editor_description = "pokeruby Route110_TrickHousePuzzle7 ITEM_BALL (11,10), FLAG_ITEM_TRICK_HOUSE_PUZZLE_7_TROPIC_MAIL (ITEM_TROPIC_MAIL)"
+position = Vector2(184, 174)
+id_item = "casa_treta_p7_carta_tropic_01"
+objeto_a_entregar = "CARTROPIC"
+coord = Vector2i(11, 10)
+
+[node name="EventoPrueba" type="Node2D" parent="Eventos" unique_id=1330007007]
+editor_description = "pokeruby Route110_TrickHousePuzzle7. Contrato en documentacion/20261014-casa-treta-fase1.md."
+script = ExtResource("pt_evento")
+numero_prueba = 7
+pergamino = NodePath("../../Carteles/Pergamino")
+puerta = NodePath("../../Carteles/Puerta")
+capa_suelo = NodePath("../../Suelo")
+datos_tiles = NodePath("../../TPTileDataMap")
+palancas = Array[NodePath]([NodePath("../../Carteles/Palanca1"), NodePath("../../Carteles/Palanca2"), NodePath("../../Carteles/Palanca3"), NodePath("../../Carteles/Palanca4"), NodePath("../../Carteles/Palanca5")])
+
+[node name="Pad" parent="Eventos/EventoPrueba" unique_id=1330007008 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle7 coord_event (9,2) 1632A8, VAR_TEMP_1 == 0: warpteleport al mismo mapa (3,19)"
+id_evento = &"pad_teletransporte"
+zonas_tiles = Array[Rect2i]([Rect2i(9, 2, 1, 1)])

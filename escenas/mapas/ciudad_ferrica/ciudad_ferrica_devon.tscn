@@ -1,0 +1,777 @@
+[gd_scene format=4 uid="uid://2dki8fl6vbsa"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_ngmxs"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_c0yt7"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_xpfuo"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_ey4kr"]
+[ext_resource type="Script" uid="uid://do88co8nefn68" path="res://scripts/eventos/ciudad_ferrica/evento_devon_ferrica.gd" id="fi_evento_devon_ferrica"]
+[ext_resource type="SpriteFrames" uid="uid://bmiijupbogopu" path="res://escenas/avatares/npc_052.tres" id="fi_npc_052"]
+[ext_resource type="SpriteFrames" uid="uid://yclduvphmj43" path="res://escenas/avatares/npc_053.tres" id="fi_npc_053"]
+[ext_resource type="SpriteFrames" uid="uid://rvhay5tgmegy" path="res://escenas/avatares/npc_065.tres" id="fi_npc_065"]
+[ext_resource type="SpriteFrames" uid="uid://03vwdt8hqw32" path="res://escenas/avatares/npc_067.tres" id="fi_npc_067"]
+[ext_resource type="SpriteFrames" uid="uid://b748xi0ugcjdh" path="res://escenas/avatares/npc_084.tres" id="fi_npc_084"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="fi_npc_base"]
+[ext_resource type="Script" uid="uid://dmy4ir5m1ul04" path="res://scripts/npc/npc_dialogo_condicional.gd" id="fi_npc_dialogo_condicional"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="fi_npc_evento"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="fi_signpost"]
+
+[node name="Edificio" type="Node2D" unique_id=337747448]
+script = ExtResource("1_ngmxs")
+nombre_interno = "ciudad_ferrica_devon"
+seccion = "CIUDAD_FERRICA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_FERRICA"
+solo_caminar = true
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1660786405]
+tile_map_data = PackedByteArray("AAACAAEAAAAIACcAAAADAAAAAAAIACUAAAADAAEAAAAIACYAAAAEAAAAAAAJACUAAAAEAAEAAAAJACYAAAAGAAAAAAAIACUAAAAGAAEAAAAIACYAAAAHAAAAAAAJACUAAAAHAAEAAAAJACYAAAAIAAAAAAAIACUAAAAIAAEAAAAIACYAAAAFAAAAAAAIACUAAAAFAAEAAAAIACYAAAACAAAAAAAKACcAAAAJAAAAAAALACcAAAAJAAEAAAAJACcAAAAMAAEAAAAIACcAAAAMAAAAAAAKACcAAAANAAAAAAAKACUAAAANAAEAAAAKACYAAAAOAAAAAAALACUAAAAOAAEAAAALACYAAAAPAAAAAAAMACUAAAAPAAEAAAAMACYAAAAQAAAAAAALACcAAAAQAAEAAAAJACcAAAAAAAMAAAAIACUAAAAAAAQAAAAIACYAAAAAAAUAAAAJACQAAAAAAAYAAAAJACQAAAAAAAcAAAAJACQAAAABAAMAAAAJACUAAAABAAQAAAAJACYAAAABAAUAAAAJACQAAAABAAYAAAAIACQAAAABAAcAAAAIACQAAAACAAMAAAAIACgAAAACAAQAAAAOACcAAAACAAUAAAAJACQAAAACAAYAAAAIACQAAAACAAcAAAAIACQAAAADAAMAAAAJACQAAAADAAQAAAAOACUAAAADAAUAAAAJACQAAAADAAYAAAAIACQAAAADAAcAAAAIACQAAAAEAAMAAAAIACQAAAAEAAQAAAAMACcAAAAEAAUAAAALACQAAAAEAAYAAAAIACQAAAAEAAcAAAAIACQAAAAFAAMAAAAIACQAAAAFAAQAAAAMACcAAAAFAAUAAAALACQAAAAFAAYAAAAIACQAAAAFAAcAAAAIACQAAAAGAAMAAAAIACQAAAAGAAQAAAAMACcAAAAGAAUAAAALACQAAAAGAAYAAAAIACQAAAAGAAcAAAAIACQAAAAHAAMAAAAIACQAAAAHAAQAAAAPACUAAAAHAAUAAAALACQAAAAHAAYAAAAIACQAAAAHAAcAAAAIACQAAAAIAAMAAAAIACQAAAAIAAQAAAAMACQAAAAIAAUAAAANACQAAAAIAAYAAAAIACQAAAAIAAcAAAAIACQAAAAJAAMAAAAJACgAAAAJAAQAAAAIACYAAAAJAAUAAAAJACQAAAAJAAYAAAAIACQAAAAJAAcAAAAIACQAAAAKAAMAAAAIACUAAAAKAAQAAAAIACYAAAAKAAUAAAAJACQAAAAKAAYAAAAIACQAAAAKAAcAAAAIACQAAAALAAMAAAAIACUAAAALAAQAAAAIACYAAAALAAUAAAAJACQAAAALAAYAAAAIACQAAAALAAcAAAAIACQAAAAMAAMAAAAIACgAAAAMAAQAAAAIACYAAAAMAAUAAAAJACQAAAAMAAYAAAAIACQAAAAMAAcAAAAIACQAAAANAAMAAAAJACQAAAANAAQAAAAJACQAAAANAAUAAAAJACQAAAANAAYAAAAIACQAAAANAAcAAAAIACQAAAAOAAMAAAAIACQAAAAOAAQAAAAIACQAAAAOAAUAAAAIACQAAAAOAAYAAAAIACQAAAAOAAcAAAAIACQAAAAPAAMAAAAIACQAAAAPAAQAAAAIACQAAAAPAAUAAAAIACQAAAAPAAYAAAAIACQAAAAPAAcAAAAIACQAAAAQAAMAAAAJACgAAAAQAAQAAAAIACYAAAAQAAUAAAAJACQAAAAQAAYAAAAIACQAAAAQAAcAAAAIACQAAAARAAMAAAAJACUAAAARAAQAAAAJACYAAAARAAUAAAAJACQAAAARAAYAAAAIACQAAAARAAcAAAAIACQAAAASAAMAAAAIACUAAAASAAQAAAAIACYAAAASAAUAAAAJACQAAAASAAYAAAAIACQAAAASAAcAAAAIACQAAAAAAAgAAAAJACQAAAABAAgAAAAIACQAAAACAAgAAAAIACQAAAADAAgAAAAIACQAAAAEAAgAAAAIACQAAAAFAAgAAAAKACMAAAAGAAgAAAALACMAAAAHAAgAAAAIACQAAAAIAAgAAAAIACQAAAAJAAgAAAAIACQAAAAKAAgAAAAIACQAAAALAAgAAAAIACQAAAAMAAgAAAAIACQAAAANAAgAAAAIACQAAAAOAAgAAAAIACQAAAAPAAgAAAAIACQAAAAQAAgAAAAIACQAAAARAAgAAAAIACQAAAASAAgAAAAIACQAAAACAAIAAAAIACcAAAAMAAIAAAAIACcAAAAJAAIAAAAJACcAAAAQAAIAAAAJACcAAAAPAAIAAAAJACQAAAAOAAIAAAAJACQAAAANAAIAAAAJACQAAAAIAAIAAAAJACQAAAAHAAIAAAAJACQAAAAGAAIAAAAJACQAAAAFAAIAAAAJACQAAAAEAAIAAAAJACQAAAADAAIAAAAJACQAAAAAAPr/AAAJACQAAAABAPr/AAAIACQAAAACAPr/AAAIACQAAAADAPr/AAAIACQAAAAEAPr/AAAIACQAAAAFAPr/AAAIACQAAAAGAPr/AAAPACgAAAAHAPr/AAAIACQAAAAIAPr/AAAIACQAAAAJAPr/AAAIACQAAAAKAPr/AAAPACgAAAALAPr/AAAIACQAAAAMAPr/AAAIACQAAAANAPr/AAAIACQAAAAOAPr/AAAPACgAAAAPAPr/AAAIACQAAAAQAPr/AAAIACQAAAARAPr/AAAIACQAAAASAPr/AAAIACQAAAAAAPn/AAAJACQAAAAAAPj/AAAJACQAAAAAAPf/AAAJACQAAAAAAPb/AAAJACQAAAAAAPX/AAAJACQAAAABAPX/AAAJACQAAAABAPT/AAAJACQAAAACAPT/AAAJACQAAAADAPT/AAAJACQAAAAEAPT/AAAJACQAAAAFAPT/AAAJACQAAAAGAPT/AAAJACQAAAAHAPT/AAAJACQAAAAIAPT/AAAJACQAAAAJAPT/AAAJACQAAAAKAPT/AAAJACQAAAALAPT/AAAJACQAAAAMAPT/AAAJACQAAAANAPT/AAAJACQAAAAOAPT/AAAJACQAAAAPAPT/AAAJACQAAAAQAPT/AAAJACQAAAARAPT/AAAJACQAAAASAPX/AAAJACQAAAABAPb/AAANACcAAAABAPf/AAAPACgAAAACAPj/AAAPACgAAAADAPj/AAAPACgAAAACAPb/AAANACgAAAACAPf/AAANACkAAAADAPb/AAAOACgAAAADAPf/AAAOACkAAAAGAPb/AAALACkAAAAHAPb/AAAMACkAAAAKAPb/AAALACkAAAALAPb/AAAMACkAAAAOAPb/AAALACkAAAAPAPb/AAAMACkAAAAGAPn/AAALACkAAAAHAPn/AAAMACkAAAAKAPn/AAALACkAAAALAPn/AAAMACkAAAAOAPn/AAALACkAAAAPAPn/AAAMACkAAAAOAPf/AAAPACgAAAAKAPf/AAAPACgAAAAGAPf/AAAPACgAAAABAPj/AAAIACQAAAABAPn/AAAIACQAAAACAPn/AAAIACQAAAADAPn/AAAIACQAAAAEAPn/AAAIACQAAAAFAPn/AAAIACQAAAAEAPj/AAAIACQAAAAFAPj/AAAIACQAAAAGAPj/AAAIACQAAAAHAPj/AAAIACQAAAAIAPj/AAAIACQAAAAJAPj/AAAIACQAAAAKAPj/AAAIACQAAAALAPj/AAAIACQAAAAMAPj/AAAIACQAAAANAPj/AAAIACQAAAAOAPj/AAAIACQAAAAPAPj/AAAIACQAAAAQAPj/AAAIACQAAAARAPj/AAAIACQAAAASAPj/AAAIACQAAAASAPf/AAAIACQAAAASAPb/AAAIACQAAAARAPb/AAAIACQAAAARAPX/AAAIACQAAAAQAPX/AAAIACQAAAAPAPX/AAAIACQAAAAOAPX/AAAIACQAAAANAPX/AAAIACQAAAAMAPX/AAAIACQAAAALAPX/AAAIACQAAAAKAPX/AAAIACQAAAAJAPX/AAAIACQAAAAIAPX/AAAIACQAAAAHAPX/AAAIACQAAAAGAPX/AAAIACQAAAAFAPX/AAAIACQAAAAEAPX/AAAIACQAAAADAPX/AAAIACQAAAACAPX/AAAIACQAAAAEAPb/AAAIACQAAAAFAPb/AAAIACQAAAAEAPf/AAAIACQAAAAFAPf/AAAIACQAAAAHAPf/AAANACcAAAAIAPf/AAAIACQAAAAJAPf/AAAIACQAAAAJAPb/AAAIACQAAAAIAPb/AAAIACQAAAAMAPb/AAAIACQAAAANAPb/AAAIACQAAAANAPf/AAAIACQAAAAMAPf/AAAIACQAAAALAPf/AAAIACQAAAAQAPb/AAAIACQAAAAQAPf/AAAIACQAAAARAPf/AAAIACQAAAAPAPf/AAAIACQAAAASAPn/AAAIACQAAAARAPn/AAAIACQAAAAQAPn/AAAIACQAAAANAPn/AAAIACQAAAAMAPn/AAAIACQAAAAJAPn/AAAIACQAAAAIAPn/AAAIACQAAAAAAPL/AAAKACcAAAAAAPP/AAAIACgAAAAAAPT/AAAIACYAAAABAPL/AAAKACUAAAABAPP/AAAKACYAAAACAPL/AAALACUAAAACAPP/AAALACYAAAADAPL/AAAMACUAAAADAPP/AAAMACYAAAAEAPL/AAAIACUAAAAEAPP/AAAIACYAAAAFAPL/AAAJACUAAAAFAPP/AAAJACYAAAAGAPL/AAAIACUAAAAGAPP/AAAIACYAAAAHAPL/AAAJACUAAAAHAPP/AAAJACYAAAAIAPL/AAAIACUAAAAIAPP/AAAIACYAAAAJAPL/AAAJACUAAAAJAPP/AAAJACYAAAAKAPL/AAAIACUAAAAKAPP/AAAIACYAAAALAPL/AAAJACUAAAALAPP/AAAJACYAAAAMAPL/AAAIACUAAAAMAPP/AAAIACYAAAANAPL/AAAKACUAAAANAPP/AAANACYAAAAOAPL/AAALACUAAAAOAPP/AAAOACYAAAAPAPL/AAAMACUAAAAPAPP/AAAPACYAAAAQAPL/AAAJACUAAAAQAPP/AAAJACYAAAARAPL/AAAIACUAAAARAPP/AAAIACYAAAASAPL/AAALACcAAAASAPP/AAAJACgAAAASAPT/AAAIACYAAAAAAOT/AAAIACUAAAAAAOX/AAAIACYAAAAAAOb/AAAJACQAAAAAAOf/AAAJACQAAAAAAOj/AAAJACQAAAAAAOn/AAAJACQAAAAAAOr/AAAJACQAAAAAAOv/AAAJACQAAAAAAOz/AAAJACQAAAABAOT/AAAKACUAAAABAOX/AAANACYAAAABAOb/AAAJACQAAAABAOf/AAAIACQAAAABAOj/AAAIACQAAAABAOn/AAAKADEAAAABAOr/AAAIACQAAAABAOv/AAAKADEAAAABAOz/AAAIACQAAAACAOT/AAALACUAAAACAOX/AAAOACYAAAACAOb/AAAJACQAAAACAOf/AAAIACQAAAACAOj/AAAIACQAAAACAOn/AAAIACQAAAACAOr/AAAIACQAAAACAOv/AAAIACQAAAACAOz/AAAIACQAAAADAOT/AAAMACUAAAADAOX/AAAPACYAAAADAOb/AAAJACQAAAADAOf/AAAIACQAAAADAOj/AAAIACQAAAADAOn/AAAIACQAAAADAOr/AAAIACQAAAADAOv/AAAIACQAAAADAOz/AAAIACQAAAAEAOT/AAAIACUAAAAEAOX/AAAIACYAAAAEAOb/AAAJACQAAAAEAOf/AAAIACQAAAAEAOj/AAAIACQAAAAEAOn/AAAIACQAAAAEAOr/AAAIACQAAAAEAOv/AAAIACQAAAAEAOz/AAAIACQAAAAFAOT/AAAJACUAAAAFAOX/AAAJACYAAAAFAOb/AAAJACQAAAAFAOf/AAAIACQAAAAFAOj/AAAMADQAAAAFAOn/AAAMADUAAAAFAOr/AAAIACkAAAAFAOv/AAAIACQAAAAFAOz/AAAIACQAAAAGAOT/AAAIACUAAAAGAOX/AAAIACYAAAAGAOb/AAAJACQAAAAGAOf/AAAIACQAAAAGAOj/AAAIACQAAAAGAOn/AAAIACQAAAAGAOr/AAAIACQAAAAGAOv/AAAIACQAAAAGAOz/AAAIACQAAAAHAOT/AAAJACUAAAAHAOX/AAAJACYAAAAHAOb/AAAJACQAAAAHAOf/AAAIACQAAAAHAOj/AAAIACwAAAAHAOn/AAALACsAAAAHAOr/AAALACwAAAAHAOv/AAAOACsAAAAHAOz/AAAIACQAAAAIAOT/AAAIACUAAAAIAOX/AAANADQAAAAIAOb/AAANADUAAAAIAOf/AAAIACQAAAAIAOj/AAAJACwAAAAIAOn/AAAMACsAAAAIAOr/AAAMACwAAAAIAOv/AAAOACwAAAAIAOz/AAAIACQAAAAJAOT/AAAJACUAAAAJAOX/AAAOADQAAAAJAOb/AAAOADUAAAAJAOf/AAAIACQAAAAJAOj/AAAJACwAAAAJAOn/AAAMACsAAAAJAOr/AAAMACwAAAAJAOv/AAAOACwAAAAJAOz/AAAIACQAAAAKAOT/AAAIACUAAAAKAOX/AAAPADQAAAAKAOb/AAAPADUAAAAKAOf/AAAIACQAAAAKAOj/AAAJACwAAAAKAOn/AAAMACsAAAAKAOr/AAAMACwAAAAKAOv/AAAOACwAAAAKAOz/AAAIACQAAAALAOT/AAAJACUAAAALAOX/AAAJACYAAAALAOb/AAAJACQAAAALAOf/AAAIACQAAAALAOj/AAAKACwAAAALAOn/AAANACsAAAALAOr/AAANACwAAAALAOv/AAAPACsAAAALAOz/AAAIACQAAAAMAOT/AAAIACUAAAAMAOX/AAAIACYAAAAMAOb/AAAJACQAAAAMAOf/AAAIACQAAAAMAOj/AAAIACQAAAAMAOn/AAAIACQAAAAMAOr/AAAIACQAAAAMAOv/AAAIACQAAAAMAOz/AAAIACQAAAANAOT/AAAJACUAAAANAOX/AAAJACYAAAANAOb/AAAJACQAAAANAOf/AAAIACQAAAANAOj/AAAIACQAAAANAOn/AAAIACQAAAANAOr/AAAIACQAAAANAOv/AAAIACQAAAANAOz/AAAIACQAAAAOAOT/AAAIACUAAAAOAOX/AAAIACYAAAAOAOb/AAAJACQAAAAOAOf/AAAIACQAAAAOAOj/AAAIACQAAAAOAOn/AAAIACQAAAAOAOr/AAAIACQAAAAOAOv/AAAIACQAAAAOAOz/AAAIACQAAAAPAOT/AAAJACUAAAAPAOX/AAAJACYAAAAPAOb/AAAJACQAAAAPAOf/AAAIACQAAAAPAOj/AAAIACwAAAAPAOn/AAALACsAAAAPAOr/AAALACwAAAAPAOv/AAAOACsAAAAPAOz/AAAIACQAAAAQAOT/AAAIACUAAAAQAOX/AAAIACYAAAAQAOb/AAAJACQAAAAQAOf/AAAIACQAAAAQAOj/AAAKACwAAAAQAOn/AAANACsAAAAQAOr/AAANACwAAAAQAOv/AAAPACsAAAAQAOz/AAAIACQAAAARAOT/AAAJACUAAAARAOX/AAAJACYAAAARAOb/AAAJACQAAAARAOf/AAAIACQAAAARAOj/AAALADQAAAARAOn/AAALADUAAAARAOr/AAAJACkAAAARAOv/AAAIACQAAAARAOz/AAAIACQAAAASAOT/AAAIACUAAAASAOX/AAAIACYAAAASAOb/AAAJACQAAAASAOf/AAAIACQAAAASAOj/AAAIACQAAAASAOn/AAAIACQAAAASAOr/AAAIACQAAAASAOv/AAAIACQAAAASAOz/AAAIACQAAAA=")
+tile_set = ExtResource("2_c0yt7")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Suelo2" type="TileMapLayer" parent="." unique_id=463708013]
+tile_map_data = PackedByteArray("AAAOAPj/AAAOACIAAAAPAPj/AAAPACIAAAAKAPj/AAAOACIAAAALAPj/AAAPACIAAAAGAPj/AAAOACIAAAAHAPj/AAAPACIAAAAGAPX/AAAOACIAAAAHAPX/AAAPACIAAAAKAPX/AAAOACIAAAALAPX/AAAPACIAAAAOAPX/AAAOACIAAAAPAPX/AAAPACIAAAAOAAAAAAAMACMAAAAOAPL/AAAMACMAAAACAPL/AAAMACMAAAACAOT/AAAMACMAAAABAOr/AAAMADAAAAABAOj/AAAMADAAAAALAOf/AAAPACEAAAAQAOf/AAAPACEAAAAPAOf/AAANACEAAAAHAOf/AAANACEAAAAIAOf/AAAOACEAAAAJAOf/AAAOACEAAAAKAOf/AAAOACEAAAAHAAMAAAAPACMAAAADAAMAAAANACMAAAAGAAMAAAAOACMAAAAFAAMAAAAOACMAAAAEAAMAAAAOACMAAAA=")
+tile_set = ExtResource("2_c0yt7")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=615828127]
+position = Vector2(88, 134)
+script = ExtResource("3_xpfuo")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_ferrica"
+posicion_destino = Vector2(11, 15)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=1450428448]
+position = Vector2(104, 134)
+script = ExtResource("3_xpfuo")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_ferrica"
+posicion_destino = Vector2(12, 15)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=534991545]
+script = ExtResource("4_ey4kr")
+tile_data = {
+"0,-12": {
+"flags": 1
+},
+"0,-13": {
+"flags": 1
+},
+"0,-19": {
+"flags": 1
+},
+"0,-27": {
+"flags": 1
+},
+"0,-5": {
+"flags": 1
+},
+"0,4": {
+"flags": 1
+},
+"1,-10": {
+"flags": 1
+},
+"1,-13": {
+"flags": 1
+},
+"1,-14": {
+"flags": 1
+},
+"1,-19": {
+"flags": 1
+},
+"1,-21": {
+"flags": 1
+},
+"1,-23": {
+"flags": 1
+},
+"1,-27": {
+"flags": 1
+},
+"1,-28": {
+"flags": 1
+},
+"1,-5": {
+"flags": 1
+},
+"1,4": {
+"flags": 1
+},
+"10,-10": {
+"flags": 1
+},
+"10,-13": {
+"flags": 1
+},
+"10,-19": {
+"flags": 1
+},
+"10,-22": {
+"flags": 1
+},
+"10,-23": {
+"flags": 1
+},
+"10,-24": {
+"flags": 1
+},
+"10,-27": {
+"flags": 1
+},
+"10,-5": {
+"flags": 1
+},
+"10,-7": {
+"flags": 1
+},
+"10,4": {
+"flags": 1
+},
+"11,-10": {
+"flags": 1
+},
+"11,-13": {
+"flags": 1
+},
+"11,-19": {
+"flags": 1
+},
+"11,-22": {
+"flags": 1
+},
+"11,-23": {
+"flags": 1
+},
+"11,-24": {
+"flags": 1
+},
+"11,-27": {
+"flags": 1
+},
+"11,-5": {
+"flags": 1
+},
+"11,-7": {
+"flags": 1
+},
+"11,4": {
+"flags": 1
+},
+"12,-13": {
+"flags": 1
+},
+"12,-19": {
+"flags": 1
+},
+"12,-27": {
+"flags": 1
+},
+"12,-5": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,2": {
+"flags": 1
+},
+"12,3": {
+"flags": 1
+},
+"12,4": {
+"flags": 1
+},
+"13,-13": {
+"flags": 1
+},
+"13,-14": {
+"flags": 1
+},
+"13,-19": {
+"flags": 1
+},
+"13,-27": {
+"flags": 1
+},
+"13,-5": {
+"flags": 1
+},
+"13,0": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"14,-10": {
+"flags": 1
+},
+"14,-14": {
+"flags": 1
+},
+"14,-19": {
+"flags": 1
+},
+"14,-27": {
+"flags": 1
+},
+"14,-5": {
+"flags": 1
+},
+"14,-7": {
+"flags": 1
+},
+"14,0": {
+"flags": 1
+},
+"15,-10": {
+"flags": 1
+},
+"15,-13": {
+"flags": 1
+},
+"15,-14": {
+"flags": 1
+},
+"15,-19": {
+"flags": 1
+},
+"15,-22": {
+"flags": 1
+},
+"15,-23": {
+"flags": 1
+},
+"15,-24": {
+"flags": 1
+},
+"15,-27": {
+"flags": 1
+},
+"15,-5": {
+"flags": 1
+},
+"15,-7": {
+"flags": 1
+},
+"15,0": {
+"flags": 1
+},
+"15,1": {
+"flags": 1
+},
+"16,-13": {
+"flags": 1
+},
+"16,-19": {
+"flags": 1
+},
+"16,-22": {
+"flags": 1
+},
+"16,-23": {
+"flags": 1
+},
+"16,-24": {
+"flags": 1
+},
+"16,-27": {
+"flags": 1
+},
+"16,-5": {
+"flags": 1
+},
+"16,1": {
+"flags": 1
+},
+"16,2": {
+"flags": 1
+},
+"16,3": {
+"flags": 1
+},
+"16,4": {
+"flags": 1
+},
+"17,-13": {
+"flags": 1
+},
+"17,-19": {
+"flags": 1
+},
+"17,-23": {
+"flags": 4096
+},
+"17,-24": {
+"flags": 4096
+},
+"17,-27": {
+"flags": 1
+},
+"17,-5": {
+"flags": 1
+},
+"17,4": {
+"flags": 1
+},
+"18,-12": {
+"flags": 1
+},
+"18,-13": {
+"flags": 1
+},
+"18,-19": {
+"flags": 1
+},
+"18,-27": {
+"flags": 1
+},
+"18,-5": {
+"flags": 1
+},
+"18,4": {
+"flags": 1
+},
+"2,-10": {
+"flags": 1
+},
+"2,-14": {
+"flags": 1
+},
+"2,-19": {
+"flags": 1
+},
+"2,-28": {
+"flags": 1
+},
+"2,-5": {
+"flags": 1
+},
+"2,-9": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,2": {
+"flags": 1
+},
+"2,3": {
+"flags": 1
+},
+"2,4": {
+"flags": 1
+},
+"3,-10": {
+"flags": 1
+},
+"3,-13": {
+"flags": 1
+},
+"3,-14": {
+"flags": 1
+},
+"3,-19": {
+"flags": 1
+},
+"3,-27": {
+"flags": 1
+},
+"3,-28": {
+"flags": 1
+},
+"3,-5": {
+"flags": 1
+},
+"3,-9": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,4": {
+"flags": 1
+},
+"4,-13": {
+"flags": 1
+},
+"4,-19": {
+"flags": 1
+},
+"4,-27": {
+"flags": 1
+},
+"4,-5": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,4": {
+"flags": 1
+},
+"5,-13": {
+"flags": 1
+},
+"5,-19": {
+"flags": 1
+},
+"5,-23": {
+"flags": 2048
+},
+"5,-24": {
+"flags": 2048
+},
+"5,-27": {
+"flags": 1
+},
+"5,-5": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,4": {
+"flags": 1073741825
+},
+"6,-10": {
+"flags": 1
+},
+"6,-13": {
+"flags": 1
+},
+"6,-19": {
+"flags": 1
+},
+"6,-27": {
+"flags": 1
+},
+"6,-5": {
+"flags": 1
+},
+"6,-7": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,4": {
+"flags": 1
+},
+"7,-10": {
+"flags": 1
+},
+"7,-13": {
+"flags": 1
+},
+"7,-19": {
+"flags": 1
+},
+"7,-22": {
+"flags": 1
+},
+"7,-23": {
+"flags": 1
+},
+"7,-24": {
+"flags": 1
+},
+"7,-27": {
+"flags": 1
+},
+"7,-5": {
+"flags": 1
+},
+"7,-7": {
+"flags": 1
+},
+"7,-9": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,4": {
+"flags": 1
+},
+"8,-13": {
+"flags": 1
+},
+"8,-19": {
+"flags": 1
+},
+"8,-22": {
+"flags": 1
+},
+"8,-23": {
+"flags": 1
+},
+"8,-24": {
+"flags": 1
+},
+"8,-27": {
+"flags": 1
+},
+"8,-5": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,-13": {
+"flags": 1
+},
+"9,-19": {
+"flags": 1
+},
+"9,-22": {
+"flags": 1
+},
+"9,-23": {
+"flags": 1
+},
+"9,-24": {
+"flags": 1
+},
+"9,-27": {
+"flags": 1
+},
+"9,-5": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,2": {
+"flags": 1
+},
+"9,3": {
+"flags": 1
+},
+"9,4": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=902757812]
+z_index = 1
+y_sort_enabled = true
+
+[node name="EmpleadoRopa" parent="NPCs" unique_id=1302018001 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_DevonCorp_1F objeto 1 (2,6) MAN_7 WANDER_AROUND (1,1): FLAG_RETURNED_DEVON_GOODS / FLAG_DEVON_GOODS_STOLEN"
+position = Vector2(40, 110)
+script = ExtResource("fi_npc_dialogo_condicional")
+textos_condicionales = Dictionary[String, String]({
+"1:ferrica_mercancias_devueltas": "FERRICA_DEVON_1F_EMPLEADO_RECUPERADAS",
+"2:ferrica_mercancias_robadas": "FERRICA_DEVON_1F_EMPLEADO_LADRON"
+})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "FERRICA_DEVON_1F_EMPLEADO_DEPORTIVAS"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("fi_npc_084")
+coord = Vector2i(2, 6)
+
+[node name="GuardiaEscalera" parent="NPCs" unique_id=1302018002 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_DevonCorp_1F objeto 2 (15,5) MAN_7 WANDER_AROUND (2,1): con las PIEZAS sin devolver se queda en (14,2) mirando abajo (OnTransition BlockStairs). Lo coloca Eventos/EventoDevonFerrica"
+position = Vector2(248, 94)
+script = ExtResource("fi_npc_dialogo_condicional")
+textos_condicionales = Dictionary[String, String]({
+"1:ferrica_mercancias_devueltas": "FERRICA_DEVON_1F_GUARDIA_BIENVENIDO",
+"2:piezas_devon_recuperadas": "FERRICA_DEVON_1F_GUARDIA_ROBADO",
+"3:ferrica_mercancias_robadas": "FERRICA_DEVON_1F_GUARDIA_ROBADO"
+})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "FERRICA_DEVON_1F_GUARDIA_AUTORIZADOS"
+tipo_movimiento = 2
+rango = Vector2i(2, 1)
+selec_frames = ExtResource("fi_npc_084")
+coord = Vector2i(15, 5)
+
+[node name="Recepcionista" parent="NPCs" unique_id=1302018003 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_DevonCorp_1F objeto 3 (5,3) WOMAN_4 FACE_DOWN"
+position = Vector2(88, 62)
+script = ExtResource("fi_npc_dialogo_condicional")
+textos_condicionales = Dictionary[String, String]({
+"1:ferrica_mercancias_devueltas": "FERRICA_DEVON_1F_BIENVENIDA",
+"2:piezas_devon_recuperadas": "FERRICA_DEVON_1F_PERSONAL_ROBADO",
+"3:ferrica_mercancias_robadas": "FERRICA_DEVON_1F_PERSONAL_ROBADO"
+})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "FERRICA_DEVON_1F_BIENVENIDA"
+selec_frames = ExtResource("fi_npc_053")
+coord = Vector2i(5, 3)
+
+[node name="CientificoHablar" parent="NPCs" unique_id=1302018004 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_DevonCorp_2F objeto 1 (6,5) → (6,-9) SCIENTIST_1 FACE_UP: dispositivo para hablar con POKéMON"
+position = Vector2(104, -130)
+script = ExtResource("fi_npc_evento")
+id_texto = "FERRICA_DEVON_2F_HABLAR"
+tipo_movimiento = 7
+selec_frames = ExtResource("fi_npc_065")
+coord = Vector2i(6, -9)
+
+[node name="CientificoBolas" parent="NPCs" unique_id=1302018005 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_DevonCorp_2F objeto 2 (1,5) → (1,-9) SCIENTIST_1 FACE_RIGHT: con FLAG_MET_DEVON_EMPLOYEE (ACOPIO BALL y TURNO BALL)"
+position = Vector2(24, -130)
+script = ExtResource("fi_npc_evento")
+id_texto = "FERRICA_DEVON_2F_BOLAS_ANTES"
+tipo_movimiento = 10
+selec_frames = ExtResource("fi_npc_065")
+coord = Vector2i(1, -9)
+
+[node name="CientificoPokenav" parent="NPCs" unique_id=1302018006 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_DevonCorp_2F objeto 3 (2,6) → (2,-8) SCIENTIST_1 FACE_UP_AND_LEFT: con FLAG_RECEIVED_POKENAV"
+position = Vector2(40, -114)
+script = ExtResource("fi_npc_evento")
+id_texto = "FERRICA_DEVON_2F_POKENAV_ANTES"
+tipo_movimiento = 13
+selec_frames = ExtResource("fi_npc_065")
+coord = Vector2i(2, -8)
+
+[node name="CientificoSuenos" parent="NPCs" unique_id=1302018007 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_DevonCorp_2F objeto 4 (10,5) → (10,-9) SCIENTIST_1 FACE_UP: sueños de los POKéMON"
+position = Vector2(168, -130)
+script = ExtResource("fi_npc_evento")
+id_texto = "FERRICA_DEVON_2F_SUENOS"
+tipo_movimiento = 7
+selec_frames = ExtResource("fi_npc_065")
+coord = Vector2i(10, -9)
+
+[node name="CientificoFosil" parent="NPCs" unique_id=1302018008 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_DevonCorp_2F objeto 5 (14,8) → (14,-6) SCIENTIST_1 FACE_UP: REGENERADOR de FÓSILES. Lo dirige Eventos/EventoDevonFerrica"
+position = Vector2(232, -82)
+script = ExtResource("fi_npc_evento")
+id_texto = "FERRICA_DEVON_2F_FOSIL_INTRO"
+tipo_movimiento = 7
+selec_frames = ExtResource("fi_npc_065")
+coord = Vector2i(14, -6)
+
+[node name="Presidente" parent="NPCs" unique_id=1302018009 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_DevonCorp_3F objeto 1 (17,5) → (17,-23) GENTLEMAN FACE_LEFT: SR. PEÑAS (MR. STONE). Lo dirige Eventos/EventoDevonFerrica"
+position = Vector2(280, -354)
+script = ExtResource("fi_npc_evento")
+id_texto = "FERRICA_DEVON_3F_PRESIDENTE_CUENTO"
+tipo_movimiento = 9
+selec_frames = ExtResource("fi_npc_067")
+coord = Vector2i(17, -23)
+
+[node name="PresidenteMesa" parent="NPCs" unique_id=1302018010 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_DevonCorp_3F objeto 3 (15,5) → (15,-23) GENTLEMAN INVISIBLE (1,1): mismo guion que el SR. PEÑAS, para hablarle a través de la mesa"
+position = Vector2(248, -354)
+script = ExtResource("fi_npc_evento")
+id_texto = "FERRICA_DEVON_3F_PRESIDENTE_CUENTO"
+tipo_movimiento = 35
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("fi_npc_067")
+coord = Vector2i(15, -23)
+
+[node name="Empleado3F" parent="NPCs" unique_id=1302018011 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_DevonCorp_3F objeto 2 (3,5) → (3,-23) MAN_2 FACE_RIGHT: FLAG_HIDE_EMPLOYEE_DEVON_CORP_3F (visible salvo con las PIEZAS entregadas y sin la ACOPIO BALL); en la reunión espera en (3,-26) mirando a la izquierda. Lo coloca Eventos/EventoDevonFerrica"
+position = Vector2(56, -354)
+script = ExtResource("fi_npc_dialogo_condicional")
+textos_condicionales = Dictionary[String, String]({
+"ruta_116_repeat_ball_recibida": "FERRICA_DEVON_3F_EMPLEADO_BOLAS"
+})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "FERRICA_DEVON_3F_EMPLEADO_ASTILLEROS"
+tipo_movimiento = 10
+selec_frames = ExtResource("fi_npc_052")
+coord = Vector2i(3, -23)
+
+[node name="Warp3" type="Sprite2D" parent="." unique_id=431602313]
+position = Vector2(232, 22)
+script = ExtResource("3_xpfuo")
+ruta_mapa_destino = "ciudad_ferrica_devon"
+posicion_destino = Vector2(14, -13)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp4" type="Sprite2D" parent="." unique_id=1066713403]
+position = Vector2(232, -202)
+script = ExtResource("3_xpfuo")
+ruta_mapa_destino = "ciudad_ferrica_devon"
+posicion_destino = Vector2(14, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp5" type="Sprite2D" parent="." unique_id=246229580]
+position = Vector2(40, -202)
+script = ExtResource("3_xpfuo")
+ruta_mapa_destino = "ciudad_ferrica_devon"
+posicion_destino = Vector2(2, -27)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp6" type="Sprite2D" parent="." unique_id=682318134]
+position = Vector2(40, -426)
+script = ExtResource("3_xpfuo")
+ruta_mapa_destino = "ciudad_ferrica_devon"
+posicion_destino = Vector2(2, -13)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1302018015]
+
+[node name="VitrinaRocas1" type="Sprite2D" parent="Carteles" unique_id=1302018012 groups=["Cartel"]]
+editor_description = "pokeruby RustboroCity_DevonCorp_3F bg_event (1,5) → (1,-23) sign RareRocksDisplay"
+position = Vector2(24, -360)
+script = ExtResource("fi_signpost")
+id_texto = "FERRICA_DEVON_3F_VITRINA"
+coord_tile = Vector2i(1, -23)
+
+[node name="VitrinaRocas2" type="Sprite2D" parent="Carteles" unique_id=1302018013 groups=["Cartel"]]
+editor_description = "pokeruby RustboroCity_DevonCorp_3F bg_event (1,7) → (1,-21) sign RareRocksDisplay"
+position = Vector2(24, -328)
+script = ExtResource("fi_signpost")
+id_texto = "FERRICA_DEVON_3F_VITRINA"
+coord_tile = Vector2i(1, -21)
+
+[node name="Cartel" type="Sprite2D" parent="Carteles" unique_id=921292599 groups=["Cartel"]]
+position = Vector2(24, -152)
+script = ExtResource("fi_signpost")
+id_texto = "BASURERO_VACIO"
+coord_tile = Vector2i(1, -10)
+
+[node name="Cartel2" type="Sprite2D" parent="Carteles" unique_id=854643697 groups=["Cartel"]]
+position = Vector2(120, -136)
+script = ExtResource("fi_signpost")
+id_texto = "BASURERO_VACIO"
+coord_tile = Vector2i(7, -9)
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1302018016]
+
+[node name="EventoDevonFerrica" type="Node2D" parent="Eventos" unique_id=1302018014]
+editor_description = "pokeruby RustboroCity_DevonCorp_1F (OnTransition BlockStairs), _2F (FossilScientist y compañía) y _3F (MeetPresident, MrStone)."
+script = ExtResource("fi_evento_devon_ferrica")
+guardia_escalera = NodePath("../../NPCs/GuardiaEscalera")
+empleado_3f = NodePath("../../NPCs/Empleado3F")
+presidente = NodePath("../../NPCs/Presidente")
+presidente_mesa = NodePath("../../NPCs/PresidenteMesa")
+cientifico_hablar = NodePath("../../NPCs/CientificoHablar")
+cientifico_bolas = NodePath("../../NPCs/CientificoBolas")
+cientifico_pokenav = NodePath("../../NPCs/CientificoPokenav")
+cientifico_suenos = NodePath("../../NPCs/CientificoSuenos")
+cientifico_fosil = NodePath("../../NPCs/CientificoFosil")

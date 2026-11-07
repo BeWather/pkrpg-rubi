@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cammxpu8xr58x"
+path="res://.godot/imported/1-75 Move Deleted.mp3-d0b0b3283f43ab5e885183bb3fc32e74.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-75 Move Deleted.mp3"
+dest_files=["res://.godot/imported/1-75 Move Deleted.mp3-d0b0b3283f43ab5e885183bb3fc32e74.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

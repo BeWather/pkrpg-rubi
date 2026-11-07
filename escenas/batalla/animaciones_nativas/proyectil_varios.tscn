@@ -1,0 +1,1092 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/efecto_proyectil_nativo.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/i5_candidate_hit_tile0.png" id="2_golpe"]
+[ext_resource type="Shader" path="res://escenas/batalla/animaciones_nativas/mezcla_gba.gdshader" id="3_mezcla"]
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/fondo_movimiento.gd" id="4_fondo"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/anger_pal_87_16x16_0.png" id="20_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/eye_sparkle_pal_218_16x16_0_4_8.png" id="21_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/magenta_heart_pal_210_16x16_0.png" id="22_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/poison_bubble_pal_150_16x16_0.png" id="23_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/snore_z_pal_197_32x32_0.png" id="24_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/sweat_drop_pal_243_8x8_0.png" id="25_tex"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Harden.wav" id="10_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Vital Throw2.wav" id="11_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Toxic1.wav" id="12_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Snore.wav" id="13_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Swagger2.wav" id="14_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Tail Whip.wav" id="15_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Double Slap.wav" id="16_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Comet Punch.wav" id="17_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Detect.wav" id="18_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Charm.wav" id="19_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Dizzy Punch1.wav" id="20_se"]
+
+[sub_resource type="ShaderMaterial" id="Mezcla"]
+shader = ExtResource("3_mezcla")
+
+[sub_resource type="Animation" id="Animation_cola_veneno"]
+resource_name = "cola_veneno"
+length = 3.7
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1166, 1.1666, 1.2833, 1.2999, 1.4833, 1.6166, 1.7499, 1.8833, 2.0166, 2.1499, 2.5333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(0.7742, 0.1935, 0.7419, 1), 0.6875, 63, 4.0, false],
+"method": &"brillo_tintado"
+}, {
+"args": [&"atacante", Vector2(16, 0), 4, 2],
+"method": &"embestida"
+}, {
+"args": [&"defensor", Vector2(3, 0), 6, 1, true],
+"method": &"sacudir"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.6875, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"atacante"],
+"method": &"restaurar_paleta"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(20, -20)], [], 22, {"velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(-20, 15)], [], 22, {"velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(0, 0)], [], 22, {"velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(-20, -20)], [], 22, {"velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(16, -8)], [], 22, {"velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.2999, 1.4833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(10, 10)], [], 22, {"velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0999, 0.5833)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}],
+"times": PackedFloat32Array(1.2999, 1.4833, 1.6166, 1.7499, 1.8833, 2.0166, 2.1499)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_ronquido"]
+resource_name = "ronquido"
+length = 2.166667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.5833, 0.9999),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"atacante", [[-7, -7, 7], [7, 7, 7]]],
+"method": &"escalar"
+}, {
+"args": [&"atacante", [[-7, -7, 7], [7, 7, 7]]],
+"method": &"escalar"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499, 0.5833, 0.9999),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"defensor", Vector2(4, 0), 7, 1, false],
+"method": &"sacudir_alterna"
+}, {
+"args": [&"defensor", Vector2(4, 0), 7, 1, false],
+"method": &"sacudir_alterna"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0499, 0.5833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [Vector2(6, 0), 1, 14],
+"method": &"temblor_fondo"
+}, {
+"args": [Vector2(6, 0), 1, 14],
+"method": &"temblor_fondo"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0499, 0.5833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Zeta"), [&"atacante", Vector2(0, 0)], [&"atacante", Vector2(-42, -38)], 24, {}],
+"method": &"disparo"
+}, {
+"args": [NodePath("Zeta"), [&"atacante", Vector2(0, 0)], [&"atacante", Vector2(-42, -38)], 24, {}],
+"method": &"disparo"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.0499, 0.5833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Zeta"), [&"atacante", Vector2(0, 0)], [&"atacante", Vector2(0, -42)], 24, {}],
+"method": &"disparo"
+}, {
+"args": [NodePath("Zeta"), [&"atacante", Vector2(0, 0)], [&"atacante", Vector2(0, -42)], 24, {}],
+"method": &"disparo"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.0499, 0.5833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Zeta"), [&"atacante", Vector2(0, 0)], [&"atacante", Vector2(42, -38)], 24, {}],
+"method": &"disparo"
+}, {
+"args": [NodePath("Zeta"), [&"atacante", Vector2(0, 0)], [&"atacante", Vector2(42, -38)], 24, {}],
+"method": &"disparo"
+}]
+}
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SonidoAtacante")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.5833)
+}
+tracks/6/use_blend = true
+
+[sub_resource type="Animation" id="Animation_furia"]
+resource_name = "furia"
+length = 2.383333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.4666, 0.7833, 0.8833, 1.2166),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 0, 0, 1), 10, 1, 2],
+"method": &"pulso_tinte"
+}, {
+"args": [NodePath("Ira"), [&"atacante", Vector2(20, -28)], [], 18, {"zoom": [[256, 256, 0], [11, 11, 8], [-11, -11, 8]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Vector2(24, 0), 4, 2],
+"method": &"embestida"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.6875, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0999, 0.8833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Ira"), [&"atacante", Vector2(-20, -28)], [], 18, {"zoom": [[256, 256, 0], [11, 11, 8], [-11, -11, 8]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", 2, 1, 2, 10, false, true],
+"method": &"vaiven"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.0999, 0.4666)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}],
+"times": PackedFloat32Array(0.8833)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_esfuerzo"]
+resource_name = "esfuerzo"
+length = 2.116667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1833, 0.2333, 0.3833, 0.5999, 0.6666, 0.7999, 0.9499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", [[-16, 16, 6], [16, -16, 12], [-16, 16, 6], [-16, 16, 6], [16, -16, 12], [-16, 16, 6]]],
+"method": &"escalar"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-30, 20)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", 3, 2, 2, 8, false, true],
+"method": &"vaiven"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-18, -20)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-30, 20)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", 3, 2, 2, 8, false, true],
+"method": &"vaiven"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-18, -20)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0999, 0.1833, 0.2333, 0.3833, 0.5999, 0.6666, 0.7999),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 0.6774, 0, 1), 12, 1, 2],
+"method": &"pulso_tinte"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-34, 26)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Vector2(12, -12), 0.6875, 10, false, false],
+"method": &"golpe"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-22, -14)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-34, 26)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Vector2(-12, 12), 0.6875, 10, false, false],
+"method": &"golpe"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-22, -14)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1833, 0.2333, 0.3833, 0.5999, 0.7999),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(30, 20)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(18, -20)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(30, 20)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(18, -20)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1833, 0.3833, 0.5999, 0.7999),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(34, 26)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(22, -14)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(34, 26)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(22, -14)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoAtacante")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}],
+"times": PackedFloat32Array(0.0999, 0.5166)
+}
+tracks/4/use_blend = true
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SonidoDefensor")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_se")
+}],
+"times": PackedFloat32Array(0.2333, 0.6666)
+}
+tracks/5/use_blend = true
+
+[sub_resource type="Animation" id="Animation_cosquillas"]
+resource_name = "cosquillas"
+length = 4.566667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.4333, 0.7999, 1.5499, 1.7999, 3.3999),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(0, 0, 0, 1), 0, 1, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [NodePath("BrilloOjos"), [&"atacante", Vector2(-16, -8)], [], 21, {"cuadros": [0, 1, 2, 1, 0], "duraciones": [4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Color(0, 0, 0, 1), 1, 0, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [&"atacante", 6, 1280, 3, false],
+"method": &"oscilar"
+}, {
+"args": [&"defensor", 0.19635, 16, 4, 6],
+"method": &"contoneo"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4333, 3.3999),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("BrilloOjos"), [&"atacante", Vector2(16, -8)], [], 21, {"cuadros": [0, 1, 2, 1, 0], "duraciones": [4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}],
+"times": PackedFloat32Array(0.4333)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}],
+"times": PackedFloat32Array(1.7833, 1.9333, 2.0833, 2.2333, 2.3833, 2.5333, 2.6833, 2.8333)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_antojo"]
+resource_name = "antojo"
+length = 3.1
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1166, 0.3833, 0.6666, 1.6833, 1.9333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [NodePath("Corazon"), [&"atacante_base", Vector2(0, 20)], [], 60, {"velocidad": Vector2(0, -0.5), "onda_x": [8, 7]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", 0.19635, 16, 8, 2],
+"method": &"contoneo"
+}, {
+"args": [NodePath("Corazon"), [&"atacante_base", Vector2(-20, 20)], [], 60, {"velocidad": Vector2(0, -0.5), "onda_x": [8, 7]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Corazon"), [&"atacante_base", Vector2(20, 20)], [], 60, {"velocidad": Vector2(0, -0.5), "onda_x": [8, 7]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Vector2(2, 0), 8, 1, false],
+"method": &"sacudir_alterna"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.9333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}],
+"times": PackedFloat32Array(0.0999, 0.3833, 0.6666)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}],
+"times": PackedFloat32Array(1.6833, 1.7666, 1.8499)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_antojo_rival"]
+resource_name = "antojo_rival"
+length = 3.1
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1166, 0.3833, 0.6666, 1.6833, 1.9333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [NodePath("Corazon"), [&"atacante_base", Vector2(0, 20)], [], 60, {"velocidad": Vector2(0, -0.5), "onda_x": [8, 7], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", 0.19635, 16, 8, 2],
+"method": &"contoneo"
+}, {
+"args": [NodePath("Corazon"), [&"atacante_base", Vector2(20, 20)], [], 60, {"velocidad": Vector2(0, -0.5), "onda_x": [8, 7], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Corazon"), [&"atacante_base", Vector2(-20, 20)], [], 60, {"velocidad": Vector2(0, -0.5), "onda_x": [8, 7], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Vector2(2, 0), 8, 1, false],
+"method": &"sacudir_alterna"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.9333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}],
+"times": PackedFloat32Array(0.0999, 0.3833, 0.6666)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}],
+"times": PackedFloat32Array(1.6833, 1.7666, 1.8499)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_esfuerzo_d20"]
+resource_name = "esfuerzo_d20"
+length = 2.116667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1833, 0.2333, 0.3833, 0.5999, 0.6666, 0.7999, 0.9499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", [[-16, 16, 6], [16, -16, 12], [-16, 16, 6], [-16, 16, 6], [16, -16, 12], [-16, 16, 6]]],
+"method": &"escalar"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-30, 20)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", 3, 2, 2, 8, false, true],
+"method": &"vaiven"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-18, -20)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-30, 20)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", 3, 2, 2, 8, false, true],
+"method": &"vaiven"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-18, -20)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0999, 0.1833, 0.2333, 0.3833, 0.5999, 0.6666, 0.7999),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 0.6774, 0, 1), 12, 1, 2],
+"method": &"pulso_tinte"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-34, 26)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Vector2(-12, -12), 0.6875, 10, false, false],
+"method": &"golpe"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-22, -14)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-34, 26)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Vector2(12, 12), 0.6875, 10, false, false],
+"method": &"golpe"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(-22, -14)], [], 7, {"velocidad": Vector2(-2, -1)}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1833, 0.2333, 0.3833, 0.5999, 0.7999),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(30, 20)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(18, -20)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(30, 20)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(18, -20)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.1833, 0.3833, 0.5999, 0.7999),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(34, 26)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(22, -14)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(34, 26)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Sudor"), [&"atacante_base", Vector2(22, -14)], [], 7, {"velocidad": Vector2(2, -1)}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoAtacante")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}],
+"times": PackedFloat32Array(0.0999, 0.5166)
+}
+tracks/4/use_blend = true
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SonidoDefensor")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_se")
+}],
+"times": PackedFloat32Array(0.2333, 0.6666)
+}
+tracks/5/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_golpes"]
+_data = {
+&"cola_veneno": SubResource("Animation_cola_veneno"),
+&"ronquido": SubResource("Animation_ronquido"),
+&"furia": SubResource("Animation_furia"),
+&"esfuerzo": SubResource("Animation_esfuerzo"),
+&"cosquillas": SubResource("Animation_cosquillas"),
+&"antojo": SubResource("Animation_antojo"),
+&"antojo_rival": SubResource("Animation_antojo_rival"),
+&"esfuerzo_d20": SubResource("Animation_esfuerzo_d20"),
+&"esfuerzo_d31": SubResource("Animation_esfuerzo_d20")
+}
+
+[node name="ProyectilVarios" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+material_mezcla = SubResource("Mezcla")
+voltear_imagen_con_lado = false
+
+[node name="Fondo" type="Node2D" parent="."]
+script = ExtResource("4_fondo")
+
+[node name="Imagen" type="Sprite2D" parent="Fondo"]
+visible = false
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="Velo" type="ColorRect" parent="Fondo"]
+visible = false
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="Golpe" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+texture = ExtResource("2_golpe")
+
+[node name="GolpeOpaco" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_golpe")
+
+[node name="Estela" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+
+[node name="Corazon" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("22_tex")
+
+[node name="BurbujaVeneno" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("23_tex")
+
+[node name="Zeta" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("24_tex")
+
+[node name="Ira" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("20_tex")
+
+[node name="BrilloOjos" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("21_tex")
+vframes = 3
+
+[node name="Sudor" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("25_tex")
+
+[node name="SonidoAtacante" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoDefensor" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoCentro" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_golpes")

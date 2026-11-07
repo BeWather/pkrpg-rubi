@@ -1,0 +1,852 @@
+[gd_scene format=4 uid="uid://cod8mi3hbrdam"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_k0tm6"]
+[ext_resource type="TileSet" uid="uid://2ivupwfkq3he" path="res://escenas/interior-pueblo-escaso.tres" id="1_ni1s2"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="2_nc50d"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="3_3s2h5"]
+[ext_resource type="SpriteFrames" uid="uid://dr1hww5bqlubq" path="res://escenas/avatares/npc_012.tres" id="4_0k6m4"]
+[ext_resource type="SpriteFrames" uid="uid://03vwdt8hqw32" path="res://escenas/avatares/npc_067.tres" id="5_8vphn"]
+[ext_resource type="Script" uid="uid://bt1gy2g6m3mtr" path="res://scripts/npc/enfermera_cp.gd" id="6_8vphn"]
+[ext_resource type="SpriteFrames" uid="uid://d0y222l1gmlf" path="res://escenas/avatares/npc_016.tres" id="7_iwvuc"]
+[ext_resource type="SpriteFrames" uid="uid://dkp2gt0shv7l4" path="res://escenas/avatares/npc_076.tres" id="8_iwvuc"]
+[ext_resource type="Script" uid="uid://dscmkf7jnne48" path="res://scripts/controlador_animacion_curacion.gd" id="9_gmmyp"]
+[ext_resource type="Texture2D" uid="uid://cq3301bw818mg" path="res://graficos/cp_cura_pantalla.png" id="10_gmmyp"]
+[ext_resource type="Shader" uid="uid://cs5hewteb3yey" path="res://escenas/character/hierba_muy_alta_clip.gdshader" id="11_3p3ou"]
+[ext_resource type="Texture2D" uid="uid://dr0ocw0c0bt8y" path="res://graficos/cp_cura_balls.png" id="11_gmmyp"]
+[ext_resource type="Script" uid="uid://c4why7gaxcwgf" path="res://escenas/mapas/cartel_mapa_region.gd" id="12_cartel_mapa"]
+[ext_resource type="Script" uid="uid://5qk0h1jawgb5" path="res://scripts/evento_pc_centro.gd" id="13_evento_pc"]
+[ext_resource type="Script" uid="uid://cix41nrfux4xa" path="res://scripts/mapas/tile_alterno.gd" id="s_tile_alterno"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="15_w6jtt"]
+
+[ext_resource type="TileSet" path="res://graficos/transiciones_centro/escalera.tres" id="cp_escalera"]
+
+[ext_resource type="Script" path="res://scripts/transitions/escalera_centro.gd" id="cp_escalera_centro"]
+
+[ext_resource type="SpriteFrames" path="res://graficos/transiciones_centro/teala.tres" id="cp_teala"]
+
+[ext_resource type="Script" path="res://scripts/npc/npc_dialogo_condicional.gd" id="cp_npc_dialogo_condicional"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_3p3ou"]
+shader = ExtResource("11_3p3ou")
+shader_parameter/recortar_sprite = false
+shader_parameter/clip_local_y = 2.0
+shader_parameter/clip_local_x_izq = -16.0
+shader_parameter/clip_local_x_der = 16.0
+shader_parameter/debug_modo = false
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjqpo"]
+atlas = ExtResource("10_gmmyp")
+region = Rect2(0, 0, 16, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2veba"]
+atlas = ExtResource("10_gmmyp")
+region = Rect2(16, 0, 16, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0tm6"]
+atlas = ExtResource("10_gmmyp")
+region = Rect2(16, 0, 16, 9)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w6jtt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjqpo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2veba")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0tm6")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aoyp3"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(6, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2vmxh"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(12, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lbbf"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(18, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_awh26"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(24, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pwt1w"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(30, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y3csf"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(36, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkwlv"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(42, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4et0"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(0, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrjjb"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(6, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hs8yk"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(12, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_78ffo"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(18, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nydab"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(24, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lwnua"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(6, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ywwvc"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(12, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikia1"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(18, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3u1e4"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(24, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqtxp"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(30, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r4hsh"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(36, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5oq8u"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(42, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_scq6y"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(0, 0, 6, 6)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i7b4m"]
+atlas = ExtResource("11_gmmyp")
+region = Rect2(0, 0, 6, 6)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qjqpo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aoyp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2vmxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lbbf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_awh26")
+}],
+"loop": 1,
+"name": &"ciclo1",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pwt1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y3csf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkwlv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4et0")
+}],
+"loop": 1,
+"name": &"ciclo3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrjjb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hs8yk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_78ffo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nydab")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lwnua")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ywwvc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ikia1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3u1e4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqtxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r4hsh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5oq8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_scq6y")
+}],
+"loop": 0,
+"name": &"completo",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i7b4m")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CentroPokemon" type="Node2D" unique_id=354341773]
+script = ExtResource("1_k0tm6")
+seccion = "PUEBLO_ESCASO"
+esInterior = true
+mapa_exterior_asociado = "PUEBLO_ESCASO"
+solo_caminar = true
+musica_mapa = "CENTRO_POKEMON"
+metadata/esInterior = true
+metadata/_edit_lock_ = true
+nombre_interno = "pueblo_escaso_centro"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=57828633]
+tile_map_data = PackedByteArray("AAAAAAAAAAALAAgAAAAAAAEAAAALAAkAAAAAAAIAAAALAAoAAAAAAAMAAAALAAsAAAAAAAQAAAALAAwAAAAAAAUAAAALAA0AAAAAAAYAAAALAA4AAAAAAAcAAAALAA8AAAAAAAgAAAALABAAAAABAAAAAAAMAAgAAAABAAEAAAAMAAkAAAABAAIAAAAMAAoAAAABAAMAAAAMAAsAAAABAAQAAAAMAAwAAAABAAUAAAAMAA0AAAABAAYAAAAMAA4AAAABAAcAAAAMAA8AAAABAAgAAAAMABAAAAACAAAAAAANAAgAAAACAAEAAAANAAkAAAACAAIAAAANAAoAAAACAAMAAAANAAsAAAACAAQAAAANAAwAAAACAAUAAAANAA0AAAACAAYAAAANAA4AAAACAAcAAAANAA8AAAACAAgAAAANABAAAAADAAAAAAAOAAgAAAADAAEAAAAOAAkAAAADAAIAAAAOAAoAAAADAAMAAAAOAAsAAAADAAQAAAAOAAwAAAADAAUAAAAOAA0AAAADAAYAAAAOAA4AAAADAAcAAAAOAA8AAAADAAgAAAAOABAAAAAEAAAAAAAPAAgAAAAEAAEAAAAPAAkAAAAEAAIAAAAPAAoAAAAEAAMAAAAPAAsAAAAEAAQAAAAPAAwAAAAEAAUAAAAPAA0AAAAEAAYAAAAPAA4AAAAEAAcAAAAPAA8AAAAEAAgAAAAPABAAAAAFAAAAAAAQAAgAAAAFAAEAAAAQAAkAAAAFAAIAAAAQAAoAAAAFAAMAAAAQAAsAAAAFAAQAAAAQAAwAAAAFAAUAAAAQAA0AAAAFAAYAAAAQAA4AAAAFAAcAAAAQAA8AAAAFAAgAAAAQABAAAAAGAAAAAAARAAgAAAAGAAEAAAARAAkAAAAGAAIAAAARAAoAAAAGAAMAAAARAAsAAAAGAAQAAAARAAwAAAAGAAUAAAARAA0AAAAGAAYAAAARAA4AAAAGAAcAAAARAA8AAAAGAAgAAAARABAAAAAHAAAAAAASAAgAAAAHAAEAAAASAAkAAAAHAAIAAAASAAoAAAAHAAMAAAASAAsAAAAHAAQAAAASAAwAAAAHAAUAAAASAA0AAAAHAAYAAAASAA4AAAAHAAcAAAASAA8AAAAIAAAAAAATAAgAAAAIAAEAAAATAAkAAAAIAAIAAAATAAoAAAAIAAMAAAATAAsAAAAIAAQAAAATAAwAAAAIAAUAAAATAA0AAAAIAAYAAAATAA4AAAAIAAcAAAATAA8AAAAJAAAAAAAUAAgAAAAJAAEAAAAUAAkAAAAJAAIAAAAUAAoAAAAJAAMAAAAUAAsAAAAJAAQAAAAUAAwAAAAJAAUAAAAUAA0AAAAJAAYAAAAUAA4AAAAJAAcAAAAUAA8AAAAJAAgAAAAUABAAAAAKAAAAAAAVAAgAAAAKAAEAAAAVAAkAAAAKAAIAAAAVAAoAAAAKAAMAAAAVAAsAAAAKAAQAAAAVAAwAAAAKAAUAAAAVAA0AAAAKAAYAAAAVAA4AAAAKAAcAAAAVAA8AAAAKAAgAAAAVABAAAAALAAAAAAAWAAgAAAALAAEAAAAWAAkAAAALAAIAAAAWAAoAAAALAAMAAAAWAAsAAAALAAQAAAAWAAwAAAALAAUAAAAWAA0AAAALAAYAAAAWAA4AAAALAAcAAAAWAA8AAAALAAgAAAAWABAAAAAMAAAAAAAXAAgAAAAMAAEAAAAXAAkAAAAMAAIAAAAXAAoAAAAMAAMAAAAXAAsAAAAMAAQAAAAXAAwAAAAMAAUAAAAXAA0AAAAMAAYAAAAXAA4AAAAMAAcAAAAXAA8AAAAMAAgAAAAXABAAAAANAAAAAAAYAAgAAAANAAEAAAAYAAkAAAANAAIAAAAYAAoAAAANAAMAAAAYAAsAAAANAAQAAAAYAAwAAAANAAUAAAAYAA0AAAANAAYAAAAYAA4AAAANAAcAAAAYAA8AAAANAAgAAAAYABAAAAAAAA8AAAALABEAAAAAABAAAAALABIAAAAAABEAAAALABMAAAAAABIAAAALABQAAAAAABMAAAALABUAAAAAABQAAAALABYAAAAAABUAAAALABcAAAAAABYAAAALABgAAAAAABcAAAALABkAAAABAA8AAAAMABEAAAABABAAAAAMABIAAAABABEAAAAMABMAAAABABIAAAAMABQAAAABABMAAAAMABUAAAABABQAAAAMABYAAAABABUAAAAMABcAAAABABYAAAAMABgAAAABABcAAAAMABkAAAACAA8AAAANABEAAAACABAAAAANABIAAAACABEAAAANABMAAAACABIAAAANABQAAAACABMAAAANABUAAAACABQAAAANABYAAAACABUAAAANABcAAAACABYAAAANABgAAAACABcAAAANABkAAAADAA8AAAAOABEAAAADABAAAAAOABIAAAADABEAAAAOABMAAAADABIAAAAOABQAAAADABMAAAAOABUAAAADABQAAAAOABYAAAADABUAAAAOABcAAAADABYAAAAOABgAAAADABcAAAAOABkAAAAEAA8AAAAPABEAAAAEABAAAAAPABIAAAAEABEAAAAPABMAAAAEABIAAAAPABQAAAAEABMAAAAPABUAAAAEABQAAAAPABYAAAAEABUAAAAPABcAAAAEABYAAAAPABgAAAAEABcAAAAPABkAAAAFAA8AAAAQABEAAAAFABAAAAAQABIAAAAFABEAAAAQABMAAAAFABIAAAAQABQAAAAFABMAAAAQABUAAAAFABQAAAAQABYAAAAFABUAAAAQABcAAAAFABYAAAAQABgAAAAFABcAAAAQABkAAAAGAA8AAAARABEAAAAGABAAAAARABIAAAAGABEAAAARABMAAAAGABIAAAARABQAAAAGABMAAAARABUAAAAGABQAAAARABYAAAAGABUAAAARABcAAAAGABYAAAARABgAAAAGABcAAAARABkAAAAHAA8AAAASABEAAAAHABAAAAASABIAAAAHABEAAAASABMAAAAHABIAAAASABQAAAAHABMAAAASABUAAAAHABQAAAASABYAAAAHABUAAAASABcAAAAHABYAAAASABgAAAAHABcAAAASABkAAAAIAA8AAAATABEAAAAIABAAAAATABIAAAAIABEAAAATABMAAAAIABIAAAATABQAAAAIABMAAAATABUAAAAIABQAAAATABYAAAAIABUAAAATABcAAAAIABYAAAATABgAAAAIABcAAAATABkAAAAJAA8AAAAUABEAAAAJABAAAAAUABIAAAAJABEAAAAUABMAAAAJABIAAAAUABQAAAAJABMAAAAUABUAAAAJABQAAAAUABYAAAAJABUAAAAUABcAAAAJABYAAAAUABgAAAAJABcAAAAUABkAAAAKAA8AAAAVABEAAAAKABAAAAAVABIAAAAKABEAAAAVABMAAAAKABIAAAAVABQAAAAKABMAAAAVABUAAAAKABQAAAAVABYAAAAKABUAAAAVABcAAAAKABYAAAAVABgAAAAKABcAAAAVABkAAAALAA8AAAAWABEAAAALABAAAAAWABIAAAALABEAAAAWABMAAAALABIAAAAWABQAAAALABMAAAAWABUAAAALABQAAAAWABYAAAALABUAAAAWABcAAAALABYAAAAWABgAAAALABcAAAAWABkAAAAMAA8AAAAXABEAAAAMABAAAAAXABIAAAAMABEAAAAXABMAAAAMABIAAAAXABQAAAAMABMAAAAXABUAAAAMABQAAAAXABYAAAAMABUAAAAXABcAAAAMABYAAAAXABgAAAAMABcAAAAXABkAAAANAA8AAAAYABEAAAANABAAAAAYABIAAAANABEAAAAYABMAAAANABIAAAAYABQAAAANABMAAAAYABUAAAANABQAAAAYABYAAAANABUAAAAYABcAAAANABYAAAAYABgAAAANABcAAAAYABkAAAAIAAgAAAATABAAAAAHAAgAAAASABAAAAA=")
+tile_set = ExtResource("1_ni1s2")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=146733298]
+z_index = 2
+tile_map_data = PackedByteArray("AAAHAAIAAAAKABIAAAAEABEAAAAKABMAAAAHABEAAAAKABMAAAAKABEAAAAKABMAAAADABUAAAAJABMAAAAIABUAAAAJABMAAAAAABMAAAAJABUAAAABABMAAAAKABUAAAAAAAUAAAAJABQAAAABAAUAAAAKABQAAAA=")
+tile_set = ExtResource("1_ni1s2")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=2141994963]
+position = Vector2(104, 134)
+script = ExtResource("2_nc50d")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_escaso"
+posicion_destino = Vector2(6, 16)
+direccion = Vector2(0, 1)
+dar_paso = true
+metadata/_edit_lock_ = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=131441377]
+position = Vector2(120, 134)
+script = ExtResource("2_nc50d")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_escaso"
+posicion_destino = Vector2(6, 16)
+direccion = Vector2(0, 1)
+dar_paso = true
+metadata/_edit_lock_ = true
+
+[node name="Carteles" type="Node" parent="." unique_id=883969205]
+
+[node name="CartelMapaRegion1" type="Sprite2D" parent="Carteles" unique_id=1745387459 groups=["Cartel"]]
+position = Vector2(184, 24)
+script = ExtResource("12_cartel_mapa")
+id_texto = "MIRAR_MAPA_REGION"
+coord_tile = Vector2i(11, 1)
+
+[node name="CartelMapaRegion2" type="Sprite2D" parent="Carteles" unique_id=979470584 groups=["Cartel"]]
+position = Vector2(200, 24)
+script = ExtResource("12_cartel_mapa")
+id_texto = "MIRAR_MAPA_REGION"
+coord_tile = Vector2i(12, 1)
+
+[node name="EventoPC" type="Node2D" parent="Carteles" unique_id=1601157822 groups=["Cartel"]]
+position = Vector2(168, 24)
+script = ExtResource("13_evento_pc")
+id_texto = "ACCESO_PC"
+pantalla = NodePath("../../TilesAlternos/PantallaPC")
+
+[node name="TilesAlternos" type="Node2D" parent="." unique_id=1191901000]
+
+[node name="PantallaPC" type="Node2D" parent="TilesAlternos" unique_id=1191901001]
+editor_description = "METATILE_Building_PC_On de pokeruby: pantalla encendida del PC"
+position = Vector2(168, 24)
+script = ExtResource("s_tile_alterno")
+capa = NodePath("../../TileMapLayer")
+coord_tile = Vector2i(10, 1)
+fuente_atlas = 1
+atlas_alterno = Vector2i(23, 8)
+
+[node name="PantallaPC2" type="Node2D" parent="TilesAlternos" unique_id=1191901002]
+editor_description = "METATILE_Building_PC_On de pokeruby: pantalla encendida del PC"
+position = Vector2(40, 264)
+script = ExtResource("s_tile_alterno")
+capa = NodePath("../../TileMapLayer")
+coord_tile = Vector2i(2, 16)
+fuente_atlas = 1
+atlas_alterno = Vector2i(23, 8)
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1279193827]
+z_index = 1
+y_sort_enabled = true
+
+[node name="npc1" parent="NPCs" unique_id=616749793 instance=ExtResource("3_3s2h5")]
+position = Vector2(168, 110)
+id_texto = "ESCASO_CENTRO_CHICO"
+tipo_movimiento = 10
+coord = Vector2i(10, 6)
+metadata/_edit_lock_ = true
+capa_datos = 0
+
+[node name="npc2" parent="NPCs" unique_id=1290438104 instance=ExtResource("3_3s2h5")]
+position = Vector2(56, 126)
+id_texto = "ESCASO_CENTRO_CHICA_OBRAS"
+tipo_movimiento = 10
+selec_frames = ExtResource("4_0k6m4")
+coord = Vector2i(3, 7)
+metadata/_edit_lock_ = true
+capa_datos = 0
+rango = Vector2i(1, 1)
+script = ExtResource("cp_npc_dialogo_condicional")
+textos_condicionales = Dictionary[String, String]({
+"pokedex_obtenida": "ESCASO_CENTRO_CHICA_TRAS"
+})
+
+[node name="npc3" parent="NPCs" unique_id=1943649132 instance=ExtResource("3_3s2h5")]
+position = Vector2(72, 78)
+id_texto = "ESCASO_CENTRO_CABALLERO"
+selec_frames = ExtResource("5_8vphn")
+coord = Vector2i(4, 4)
+metadata/_edit_lock_ = true
+capa_datos = 0
+
+[node name="enfermera" type="Node2D" parent="NPCs" unique_id=921584630 node_paths=PackedStringArray("nodo_animacion_curacion")]
+position = Vector2(120, 46)
+script = ExtResource("6_8vphn")
+nodo_animacion_curacion = NodePath("../../Anims")
+selec_frames = ExtResource("7_iwvuc")
+coord = Vector2i(7, 2)
+metadata/_edit_lock_ = true
+tipo_movimiento = 8
+capa_datos = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="NPCs/enfermera" unique_id=1195074239]
+material = SubResource("ShaderMaterial_3p3ou")
+sprite_frames = ExtResource("7_iwvuc")
+animation = &"camina_abajo_1"
+centered = false
+offset = Vector2(-8, -20)
+metadata/_edit_lock_ = true
+
+[node name="Anims" type="Node" parent="." unique_id=1493884469]
+script = ExtResource("9_gmmyp")
+
+[node name="cp_pantalla" type="AnimatedSprite2D" parent="Anims" unique_id=53904563]
+visible = false
+position = Vector2(116, 11)
+sprite_frames = SubResource("SpriteFrames_w6jtt")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="pokeball" type="AnimatedSprite2D" parent="Anims" unique_id=1590168775]
+visible = false
+position = Vector2(90, 25)
+sprite_frames = SubResource("SpriteFrames_qjqpo")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="pokeball2" type="AnimatedSprite2D" parent="Anims" unique_id=103889938]
+visible = false
+position = Vector2(96, 25)
+sprite_frames = SubResource("SpriteFrames_qjqpo")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="pokeball3" type="AnimatedSprite2D" parent="Anims" unique_id=1070752524]
+visible = false
+position = Vector2(90, 29)
+sprite_frames = SubResource("SpriteFrames_qjqpo")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="pokeball4" type="AnimatedSprite2D" parent="Anims" unique_id=525329436]
+visible = false
+position = Vector2(96, 29)
+sprite_frames = SubResource("SpriteFrames_qjqpo")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="pokeball5" type="AnimatedSprite2D" parent="Anims" unique_id=526914690]
+visible = false
+position = Vector2(90, 33)
+sprite_frames = SubResource("SpriteFrames_qjqpo")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="pokeball6" type="AnimatedSprite2D" parent="Anims" unique_id=1010920257]
+visible = false
+position = Vector2(96, 33)
+sprite_frames = SubResource("SpriteFrames_qjqpo")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=860194251]
+script = ExtResource("15_w6jtt")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,16": {
+"flags": 1
+},
+"0,17": {
+"flags": 1
+},
+"0,19": {
+"flags": 1024
+},
+"0,20": {
+"flags": 1
+},
+"0,21": {
+"flags": 8589935104
+},
+"0,22": {
+"flags": 8589934592
+},
+"0,23": {
+"flags": 1
+},
+"0,6": {
+"flags": 1
+},
+"0,7": {
+"flags": 8589934592
+},
+"0,8": {
+"flags": 1
+},
+"0,9": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,16": {
+"flags": 1
+},
+"1,19": {
+"flags": 1024
+},
+"1,20": {
+"flags": 1
+},
+"1,21": {
+"flags": 8589935104
+},
+"1,22": {
+"flags": 8589934592
+},
+"1,23": {
+"flags": 8589934592
+},
+"1,6": {
+"flags": 1
+},
+"1,7": {
+"flags": 8589934592
+},
+"1,8": {
+"flags": 8589934592
+},
+"1,9": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,15": {
+"flags": 1
+},
+"10,16": {
+"flags": 1
+},
+"10,18": {
+"flags": 1073741825
+},
+"10,9": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,15": {
+"flags": 1
+},
+"11,18": {
+"flags": 1
+},
+"11,6": {
+"flags": 1
+},
+"11,7": {
+"flags": 1
+},
+"11,9": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,15": {
+"flags": 1
+},
+"12,16": {
+"flags": 1
+},
+"12,17": {
+"flags": 1
+},
+"12,18": {
+"flags": 1
+},
+"12,19": {
+"flags": 1
+},
+"12,6": {
+"flags": 1
+},
+"12,7": {
+"flags": 1
+},
+"12,9": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,16": {
+"flags": 1
+},
+"13,17": {
+"flags": 1
+},
+"13,23": {
+"flags": 1
+},
+"13,8": {
+"flags": 1
+},
+"13,9": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,16": {
+"flags": 1
+},
+"2,20": {
+"flags": 128
+},
+"2,6": {
+"flags": 128
+},
+"2,9": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,16": {
+"flags": 1
+},
+"3,17": {
+"flags": 1
+},
+"3,18": {
+"flags": 1
+},
+"3,19": {
+"flags": 1
+},
+"3,22": {
+"flags": 1
+},
+"3,9": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,15": {
+"flags": 1
+},
+"4,16": {
+"flags": 1
+},
+"4,18": {
+"flags": 1073741825
+},
+"4,2": {
+"flags": 1
+},
+"4,3": {
+"flags": 1
+},
+"4,9": {
+"flags": 1
+},
+"5,15": {
+"flags": 1
+},
+"5,18": {
+"flags": 1
+},
+"5,3": {
+"flags": 1
+},
+"5,9": {
+"flags": 1
+},
+"6,15": {
+"flags": 1
+},
+"6,16": {
+"flags": 1
+},
+"6,17": {
+"flags": 1
+},
+"6,18": {
+"flags": 1
+},
+"6,19": {
+"flags": 1
+},
+"6,3": {
+"flags": 1
+},
+"6,9": {
+"flags": 1
+},
+"7,15": {
+"flags": 1
+},
+"7,16": {
+"flags": 1
+},
+"7,18": {
+"flags": 1073741825
+},
+"7,3": {
+"flags": 1073741825
+},
+"7,9": {
+"flags": 1
+},
+"8,15": {
+"flags": 1
+},
+"8,18": {
+"flags": 1
+},
+"8,22": {
+"flags": 1
+},
+"8,3": {
+"flags": 1
+},
+"8,9": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,15": {
+"flags": 1
+},
+"9,16": {
+"flags": 1
+},
+"9,17": {
+"flags": 1
+},
+"9,18": {
+"flags": 1
+},
+"9,19": {
+"flags": 1
+},
+"9,2": {
+"flags": 1
+},
+"9,3": {
+"flags": 1
+},
+"9,9": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Escalera1F" type="TileMapLayer" parent="."]
+z_index = 10
+position = Vector2(0, 80)
+tile_set = ExtResource("cp_escalera")
+collision_enabled = false
+navigation_enabled = false
+script = ExtResource("cp_escalera_centro")
+
+[node name="Escalera2F" type="TileMapLayer" parent="."]
+z_index = 10
+position = Vector2(0, 320)
+tile_set = ExtResource("cp_escalera")
+collision_enabled = false
+navigation_enabled = false
+script = ExtResource("cp_escalera_centro")
+planta_alta = true
+
+[node name="PuertaCombate" type="Sprite2D" parent="."]
+position = Vector2(88, 262)
+script = ExtResource("2_nc50d")
+tipo_warp = 2
+estilo_warp = 8
+metadata/destino_ruby = "MAP_SINGLE_BATTLE_COLOSSEUM"
+metadata/celda_ruby = Vector2i(5, 1)
+
+[node name="PuertaIntercambio" type="Sprite2D" parent="."]
+position = Vector2(136, 262)
+script = ExtResource("2_nc50d")
+tipo_warp = 2
+estilo_warp = 9
+metadata/destino_ruby = "MAP_TRADE_CENTER"
+metadata/celda_ruby = Vector2i(8, 1)
+
+[node name="PuertaRecords" type="Sprite2D" parent="."]
+position = Vector2(184, 262)
+script = ExtResource("2_nc50d")
+tipo_warp = 2
+estilo_warp = 10
+metadata/destino_ruby = "MAP_RECORD_CORNER"
+metadata/celda_ruby = Vector2i(11, 1)
+
+[node name="RecepcionistaCombate" parent="NPCs" instance=ExtResource("3_3s2h5")]
+position = Vector2(72, 286)
+id_texto = "CABLE_CLUB_NO_DISPONIBLE"
+selec_frames = ExtResource("cp_teala")
+coord = Vector2i(4, 17)
+tipo_movimiento = 8
+capa_datos = 1
+
+[node name="RecepcionistaIntercambio" parent="NPCs" instance=ExtResource("3_3s2h5")]
+position = Vector2(120, 286)
+id_texto = "CABLE_CLUB_NO_DISPONIBLE"
+selec_frames = ExtResource("cp_teala")
+coord = Vector2i(7, 17)
+tipo_movimiento = 8
+capa_datos = 1
+
+[node name="RecepcionistaRecords" parent="NPCs" instance=ExtResource("3_3s2h5")]
+position = Vector2(168, 286)
+id_texto = "CABLE_CLUB_NO_DISPONIBLE"
+selec_frames = ExtResource("cp_teala")
+coord = Vector2i(10, 17)
+tipo_movimiento = 8
+capa_datos = 1
+
+[node name="EventoPC2" type="Node2D" parent="Carteles" groups=["Cartel"]]
+position = Vector2(40, 264)
+script = ExtResource("13_evento_pc")
+coord_tile = Vector2i(2, 16)
+id_texto = "ACCESO_PC"
+pantalla = NodePath("../../TilesAlternos/PantallaPC2")
+
+[node name="Warp" type="Sprite2D" parent="."]
+position = Vector2(24, 102)
+script = ExtResource("2_nc50d")
+estilo_warp = 6
+ruta_mapa_destino = "pueblo_escaso_centro"
+posicion_destino = Vector2(1, 20)
+direccion = Vector2(1, 0)
+dar_paso = true
+metadata/celda_ruby = Vector2i(1, 6)
+
+[node name="Warp2" type="Sprite2D" parent="."]
+position = Vector2(24, 326)
+script = ExtResource("2_nc50d")
+estilo_warp = 7
+ruta_mapa_destino = "pueblo_escaso_centro"
+posicion_destino = Vector2(1, 6)
+direccion = Vector2(1, 0)
+dar_paso = true
+metadata/celda_ruby = Vector2i(1, 5)
+
+[node name="TPTileDataMap2" type="Node2D" parent="."]
+script = ExtResource("15_w6jtt")
+layer_id = 1
+tile_data = {
+"10,18": {
+"flags": 1073741825
+},
+"2,19": {
+"flags": 256
+},
+"2,21": {
+"flags": 256
+},
+"2,5": {
+"flags": 256
+},
+"2,7": {
+"flags": 256
+},
+"3,20": {
+"flags": 256
+},
+"3,6": {
+"flags": 256
+},
+"4,18": {
+"flags": 1073741825
+},
+"7,18": {
+"flags": 1073741825
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"

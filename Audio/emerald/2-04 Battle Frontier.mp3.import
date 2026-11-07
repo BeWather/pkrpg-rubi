@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cksx7qjp3cfsm"
+path="res://.godot/imported/2-04 Battle Frontier.mp3-d37e0bb6e76e495acf8b2f09052e9244.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/2-04 Battle Frontier.mp3"
+dest_files=["res://.godot/imported/2-04 Battle Frontier.mp3-d37e0bb6e76e495acf8b2f09052e9244.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

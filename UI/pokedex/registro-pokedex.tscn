@@ -1,0 +1,18 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://UI/pokedex/pagina-pokedex.tscn" id="1_ficha"]
+[ext_resource type="LabelSettings" path="res://UI/texto_normal_negro.tres" id="2_texto"]
+
+[node name="RegistroPokedex" instance=ExtResource("1_ficha")]
+modo_registro = true
+
+[node name="MenuSuperior" parent="." index="0"]
+visible = false
+
+[node name="RegistroCompletado" type="Label" parent="."]
+offset_left = 8.0
+offset_right = 232.0
+offset_bottom = 16.0
+text = "Registro de POKéDEX completado"
+label_settings = ExtResource("2_texto")
+horizontal_alignment = 1

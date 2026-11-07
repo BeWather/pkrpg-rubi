@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bd6yxnq5eviks"
+path="res://.godot/imported/2-27 Pokémon Contest (Unused Alt 2).mp3-93b9aa3224325f3ebf36ccd0268386a6.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/2-27 Pokémon Contest (Unused Alt 2).mp3"
+dest_files=["res://.godot/imported/2-27 Pokémon Contest (Unused Alt 2).mp3-93b9aa3224325f3ebf36ccd0268386a6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,131 @@
+[gd_scene format=4 uid="uid://b40mwg061mu1w"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_jjlno"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_lbknq"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_emouu"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_emouu"]
+[ext_resource type="SpriteFrames" uid="uid://byyvoc0dmfygr" path="res://escenas/avatares/npc_014.tres" id="ar_f_014"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="ar_npc_base"]
+[ext_resource type="Script" uid="uid://cgpmomq3542yj" path="res://scripts/npc/npc_pokemon.gd" id="ar_s_pokemon"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="ar_s_evento"]
+[ext_resource type="Script" path="res://scripts/npc/intercambio_npc.gd" id="ar_s_intercambio"]
+[ext_resource type="SpriteFrames" uid="uid://8w2k47jvgnym" path="res://escenas/avatares/npc_zigzagoon.tres" id="ar_f_zigzagoon"]
+[ext_resource type="SpriteFrames" uid="uid://hejh224ycfno" path="res://escenas/avatares/npc_051.tres" id="ar_f_051"]
+
+[node name="Casa" type="Node2D" unique_id=1201946613]
+script = ExtResource("1_jjlno")
+nombre_interno = "ciudad_arborada_casa1"
+seccion = "CIUDAD_ARBORADA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_ARBORADA"
+solo_caminar = true
+musica_mapa = "CIUDAD_ARBORADA"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=997252449]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADkAAAABAAAAAAABADkAAAACAAAAAAABADkAAAADAAAAAAAGADcAAAAEAAAAAAAHADcAAAAGAAAAAAABADkAAAAHAAAAAAACADkAAAAFAAAAAAABADkAAAADAAEAAAAGADcAAAAEAAEAAAAHADcAAAADAAIAAAAGADcAAAAEAAIAAAAHADcAAAADAAMAAAAGADgAAAAEAAMAAAAHADgAAAAHAAEAAAACADoAAAAHAAIAAAACADsAAAAAAAEAAAAAADoAAAAAAAIAAAAAADsAAAAGAAEAAAABADoAAAAGAAIAAAABADsAAAAFAAEAAAABADoAAAAFAAIAAAADADsAAAACAAIAAAAEADsAAAACAAMAAAAEADsAAAACAAEAAAABADoAAAABAAEAAAAAADUAAAABAAIAAAAAAD0AAAACAAUAAAABADsAAAACAAQAAAABADsAAAADAAQAAAABADsAAAAEAAQAAAABADsAAAAFAAQAAAABADsAAAAFAAUAAAABADsAAAAFAAMAAAADADsAAAAHAAMAAAABADsAAAAGAAMAAAABADsAAAAGAAQAAAABADsAAAAHAAQAAAABADsAAAAGAAUAAAABADsAAAABAAUAAAABADsAAAABAAQAAAABADsAAAAAAAQAAAABADsAAAAAAAMAAAABADsAAAABAAMAAAABADsAAAAAAAUAAAABADsAAAAHAAUAAAABADsAAAADAAUAAAAEADoAAAAEAAUAAAAFADoAAAA=")
+tile_set = ExtResource("2_lbknq")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=863292143]
+tile_map_data = PackedByteArray("AAAAAAUAAAAIADcAAAAHAAUAAAAJADcAAAA=")
+tile_set = ExtResource("2_lbknq")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=575270243]
+z_index = 1
+y_sort_enabled = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=248948740]
+script = ExtResource("3_emouu")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"3,3": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"4,3": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1543604165]
+position = Vector2(56, 86)
+script = ExtResource("4_emouu")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_arborada"
+posicion_destino = Vector2(10, 3)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1119012595]
+position = Vector2(72, 86)
+script = ExtResource("4_emouu")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_arborada"
+posicion_destino = Vector2(10, 3)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Comerciante" parent="NPCs" unique_id=1593737234 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_House1 objeto 1 (1,3) WOMAN_1 FACE_RIGHT: Trader (pide un PIKACHU y da SKITTY SKITIT). Lo dirige Eventos/Intercambio (IntercambioNpc, tabla ARBORADA de intercambios_npc.json); id_texto es el de despues del intercambio"
+position = Vector2(24, 62)
+script = ExtResource("ar_s_evento")
+id_texto = "ARBORADA_CASA1_COMERCIANTE"
+tipo_movimiento = 10
+selec_frames = ExtResource("ar_f_014")
+coord = Vector2i(1, 3)
+
+[node name="Zigzagoon" parent="NPCs" unique_id=1881372000 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_House1 objeto 2 (2,3) ZIGZAGOON FACE_LEFT, playmoncry"
+position = Vector2(40, 62)
+script = ExtResource("ar_s_pokemon")
+tamano_sprite = 3
+numero_nacional = 263
+id_texto = "ARBORADA_CASA1_ZIGZAGOON"
+tipo_movimiento = 9
+selec_frames = ExtResource("ar_f_zigzagoon")
+coord = Vector2i(2, 3)
+
+[node name="Anciana" parent="NPCs" unique_id=1531594225 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_House1 objeto 3 (7,4) OLD_WOMAN_1 LOOK_AROUND (1,1)"
+position = Vector2(120, 78)
+id_texto = "ARBORADA_CASA1_ANCIANA"
+tipo_movimiento = 1
+selec_frames = ExtResource("ar_f_051")
+coord = Vector2i(7, 4)
+
+[node name="Eventos" type="Node2D" parent="."]
+
+[node name="Intercambio" type="Node2D" parent="Eventos"]
+editor_description = "pokeruby FortreeCity_House1/scripts.inc: EventScript_Trader (intercambio con NPC, entrada 1 de gIngameTrades)"
+script = ExtResource("ar_s_intercambio")
+npc = NodePath("../../NPCs/Comerciante")
+id_intercambio = "ARBORADA"

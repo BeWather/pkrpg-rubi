@@ -1,0 +1,221 @@
+[gd_scene format=3 uid="uid://c4brcutburugy"]
+
+[ext_resource type="Texture2D" uid="uid://bu2xi03a1ig58" path="res://UI/equipo/pantalla-equipo-caja-primera.png" id="1_7ot44"]
+[ext_resource type="Script" uid="uid://buxbywlh1a2q0" path="res://UI/equipo/pantalla_equipo_caja.gd" id="2_7mpyp"]
+[ext_resource type="Texture2D" uid="uid://cj24v7dtwrsko" path="res://graficos/batalla/batalla_estados.png" id="3_k0ark"]
+[ext_resource type="LabelSettings" uid="uid://4geiuwa4qd2p" path="res://escenas/batalla/label_pantalla_equipo.tres" id="4_ge1bj"]
+[ext_resource type="Texture2D" uid="uid://bos73o4bm366c" path="res://UI/equipo/pantalla-equipo-cursor2-c-p.png" id="5_5v4ou"]
+[ext_resource type="Texture2D" uid="uid://rcsobu4wa3pw" path="res://UI/equipo/pantalla-equipo-cursor-c-p.png" id="6_b50q6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0vki3"]
+atlas = ExtResource("1_7ot44")
+region = Rect2(0, 0, 86, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kxi5s"]
+atlas = ExtResource("1_7ot44")
+region = Rect2(0, 50, 86, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cxn64"]
+atlas = ExtResource("1_7ot44")
+region = Rect2(0, 100, 86, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgmbp"]
+atlas = ExtResource("1_7ot44")
+region = Rect2(0, 150, 86, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vs6li"]
+atlas = ExtResource("1_7ot44")
+region = Rect2(0, 200, 86, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_i71ye"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0vki3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kxi5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cxn64")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qgmbp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vs6li")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_74gbq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_5v4ou")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_c5y4j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_b50q6")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5v4ou"]
+atlas = ExtResource("3_k0ark")
+region = Rect2(0, 0, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b50q6"]
+atlas = ExtResource("3_k0ark")
+region = Rect2(0, 8, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74gbq"]
+atlas = ExtResource("3_k0ark")
+region = Rect2(0, 16, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5o6hl"]
+atlas = ExtResource("3_k0ark")
+region = Rect2(0, 24, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5nfnv"]
+atlas = ExtResource("3_k0ark")
+region = Rect2(0, 32, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6hk1r"]
+atlas = ExtResource("3_k0ark")
+region = Rect2(0, 40, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amopb"]
+atlas = ExtResource("3_k0ark")
+region = Rect2(0, 48, 24, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5kix2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5v4ou")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b50q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74gbq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5o6hl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5nfnv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6hk1r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amopb")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5v4ou"]
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" unique_id=141548024]
+sprite_frames = SubResource("SpriteFrames_i71ye")
+frame = 3
+centered = false
+script = ExtResource("2_7mpyp")
+icono_actual = 1
+zona_sin_ps = Rect2i(0, 29, 86, 21)
+posicion_descriptor = Vector2(24, 26)
+
+[node name="cursor-fijo" type="AnimatedSprite2D" parent="." unique_id=1772083258]
+visible = false
+sprite_frames = SubResource("SpriteFrames_74gbq")
+centered = false
+
+[node name="cursor-movil" type="AnimatedSprite2D" parent="." unique_id=1391071937]
+visible = false
+sprite_frames = SubResource("SpriteFrames_c5y4j")
+centered = false
+
+[node name="estado" type="AnimatedSprite2D" parent="." unique_id=714709331]
+position = Vector2(15, 37)
+sprite_frames = SubResource("SpriteFrames_5kix2")
+centered = false
+
+[node name="nombre" type="Label" parent="." unique_id=254888705]
+offset_left = 32.0
+offset_top = 12.0
+offset_right = 85.0
+offset_bottom = 21.0
+text = "ZIGZAGOON"
+label_settings = ExtResource("4_ge1bj")
+
+[node name="nv" type="Label" parent="." unique_id=633158579]
+offset_left = 49.0
+offset_top = 21.0
+offset_right = 64.0
+offset_bottom = 30.0
+text = "999"
+label_settings = ExtResource("4_ge1bj")
+
+[node name="sexo" type="Label" parent="." unique_id=1809983137]
+offset_left = 71.0
+offset_top = 21.0
+offset_right = 77.0
+offset_bottom = 30.0
+theme_override_colors/font_color = Color(0.25098, 0.784314, 0.972549, 1)
+text = "♂"
+label_settings = ExtResource("4_ge1bj")
+
+[node name="ps" type="Label" parent="." unique_id=870813508]
+offset_left = 43.0
+offset_top = 37.0
+offset_right = 58.0
+offset_bottom = 46.0
+text = "999"
+label_settings = ExtResource("4_ge1bj")
+horizontal_alignment = 2
+
+[node name="ps_max" type="Label" parent="." unique_id=98189801]
+offset_left = 63.0
+offset_top = 37.0
+offset_right = 78.0
+offset_bottom = 46.0
+text = "999"
+label_settings = ExtResource("4_ge1bj")
+horizontal_alignment = 2
+
+[node name="BarraSalud1" type="ColorRect" parent="." unique_id=1895278849]
+visible = false
+offset_left = 32.0
+offset_top = 32.0
+offset_right = 80.0
+offset_bottom = 33.0
+color = Color(0.345098, 0.815686, 0.501961, 1)
+
+[node name="BarraSalud2" type="ColorRect" parent="." unique_id=1768869620]
+visible = false
+offset_left = 32.0
+offset_top = 33.0
+offset_right = 80.0
+offset_bottom = 34.0
+color = Color(0.439216, 0.972549, 0.658824, 1)
+
+[node name="icono_as2d" type="AnimatedSprite2D" parent="." unique_id=328606239]
+z_index = 1
+sprite_frames = SubResource("SpriteFrames_5v4ou")
+centered = false
+offset = Vector2(0, -4)

@@ -1,0 +1,26 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/pantalla_registro_captura.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/fondo_registro_captura.png" id="2_fondo"]
+
+[node name="PantallaRegistroCaptura" type="Node2D"]
+z_index = 1
+script = ExtResource("1_script")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+texture = ExtResource("2_fondo")
+centered = false
+
+[node name="Fundido" type="ColorRect" parent="."]
+z_as_relative = false
+z_index = 2
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Pokemon" type="Sprite2D" parent="."]
+z_as_relative = false
+z_index = 3
+position = Vector2(16, 24)
+centered = false

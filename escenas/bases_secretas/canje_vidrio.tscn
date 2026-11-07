@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://scripts/bases_secretas/canje_vidrio.gd" id="1"]
+[ext_resource type="PackedScene" path="res://UI/maquinas/dialogo_activacion.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://UI/taller_vidrio/menu_canje.tscn" id="3"]
+
+[node name="CanjeVidrio" type="Control" node_paths=PackedStringArray("dialogo", "menu", "telon")]
+mouse_filter = 2
+script = ExtResource("1")
+dialogo = NodePath("Dialogo")
+menu = NodePath("Menu")
+telon = NodePath("Telon")
+
+[node name="Dialogo" parent="." instance=ExtResource("2")]
+
+[node name="Menu" parent="." instance=ExtResource("3")]
+z_index = 5
+
+[node name="Telon" type="ColorRect" parent="."]
+visible = false
+z_index = 10
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)

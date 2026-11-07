@@ -1,0 +1,9704 @@
+{
+	"arrecipolis": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SEEL"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "QWILFISH"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SEAKING"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "RELICANTH"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "WALREIN"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "POLIWAG"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "WAILMER"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "CORSOLA"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SLOWKING"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GOLDUCK"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "CLAMPERL"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "MANTINE"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "WAILORD"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "POLIWRATH"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "TENTACRUEL"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"bajo_agua_1": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "LOMBRE"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "QUAGSIRE"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "LANTURN"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "LAPRAS"
+				}
+			],
+			"ratio": 1.0
+		}
+	},
+	"bajo_agua_2": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "CLAMPERL"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "CHINCHOU"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "RELICANTH"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GYARADOS"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "LAPRAS"
+				}
+			],
+			"ratio": 1.0
+		}
+	},
+	"calle_victoria_1f": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "LOUDRED"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "FARFETCHD"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "WOBBUFFET"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "GLIGAR"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "MISDREAVUS"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "HITMONLEE"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "MRMIME"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "FORRETRESS"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "KANGASKHAN"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "EXPLOUD"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "GARDEVOIR"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "AGGRON"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"calle_victoria_s1": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "PORYGON"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "FURRET"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "METANG"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "PILOSWINE"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "CHANSEY"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "HITMONTOP"
+				},
+				{
+					"nivel_max": 42.0,
+					"nivel_min": 42.0,
+					"nombre_interno": "STANTLER"
+				},
+				{
+					"nivel_max": 42.0,
+					"nivel_min": 42.0,
+					"nombre_interno": "MAGNETON"
+				},
+				{
+					"nivel_max": 42.0,
+					"nivel_min": 42.0,
+					"nombre_interno": "WHISCASH"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "HARIYAMA"
+				},
+				{
+					"nivel_max": 42.0,
+					"nivel_min": 42.0,
+					"nombre_interno": "ARMALDO"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "MACHAMP"
+				}
+			],
+			"ratio": 3.0
+		},
+		"roca": {
+			"encuentros": [
+				{
+					"nivel_max": 42.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "MAGCARGO"
+				},
+				{
+					"nivel_max": 42.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "LUNATONE"
+				},
+				{
+					"nivel_max": 42.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "OMASTAR"
+				},
+				{
+					"nivel_max": 42.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "GOLEM"
+				},
+				{
+					"nivel_max": 42.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "SCIZOR"
+				}
+			],
+			"ratio": 11.11
+		}
+	},
+	"calle_victoria_s2": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "AZUMARILL"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "SHARPEDO"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "LUDICOLO"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "SLOWBRO"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "POLITOED"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "LINOONE"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "NOCTOWL"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "PRIMEAPE"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "SOLROCK"
+				},
+				{
+					"nivel_max": 42.0,
+					"nivel_min": 42.0,
+					"nombre_interno": "SKARMORY"
+				},
+				{
+					"nivel_max": 42.0,
+					"nivel_min": 42.0,
+					"nombre_interno": "XATU"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 44.0,
+					"nombre_interno": "GRUMPIG"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 44.0,
+					"nombre_interno": "ALTARIA"
+				},
+				{
+					"nivel_max": 42.0,
+					"nivel_min": 42.0,
+					"nombre_interno": "ALAKAZAM"
+				},
+				{
+					"nivel_max": 42.0,
+					"nivel_min": 42.0,
+					"nombre_interno": "HERACROSS"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 44.0,
+					"nombre_interno": "STARMIE"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 44.0,
+					"nombre_interno": "SNORLAX"
+				}
+			],
+			"ratio": 3.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 41.0,
+					"nivel_min": 37.0,
+					"nombre_interno": "DEWGONG"
+				},
+				{
+					"nivel_max": 41.0,
+					"nivel_min": 37.0,
+					"nombre_interno": "HUNTAIL"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "SEALEO"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "CLOYSTER"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "KINGDRA"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 43.0,
+					"nombre_interno": "SEADRA"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 43.0,
+					"nombre_interno": "KINGLER"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 43.0,
+					"nombre_interno": "GOREBYSS"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 43.0,
+					"nombre_interno": "SLOWKING"
+				},
+				{
+					"nivel_max": 44.0,
+					"nivel_min": 43.0,
+					"nombre_interno": "POLITOED"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"cascada-meteoro-r1": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "REMORAID"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "CORPHISH"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "CHINCHOU"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "TENTACOOL"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "OMANYTE"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "ZUBAT"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "HOOTHOOT"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "LEDYBA"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "LARVITAR"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "SOLROCK"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "BELLSPROUT"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "BELDUM"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "EXEGGCUTE"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "MAGNEMITE"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "SPOINK"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "ARON"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "DELIBIRD"
+				}
+			],
+			"ratio": 3.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 11.0,
+					"nombre_interno": "WOOPER"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 11.0,
+					"nombre_interno": "HORSEA"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "SURSKIT"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "CARVANHA"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "STARYU"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "MARILL"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "WINGULL"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "LUVDISC"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "POLIWHIRL"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"cascada-meteoro-r2": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 37.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "SEALEO"
+				},
+				{
+					"nivel_max": 37.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "CORSOLA"
+				},
+				{
+					"nivel_max": 37.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "LANTURN"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "KABUTOPS"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "LAPRAS"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "KOFFING"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "DUSTOX"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "GOLBAT"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "LEDIAN"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "ARIADOS"
+				},
+				{
+					"nivel_max": 37.0,
+					"nivel_min": 37.0,
+					"nombre_interno": "SUDOWOODO"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "CHIMECHO"
+				},
+				{
+					"nivel_max": 39.0,
+					"nivel_min": 39.0,
+					"nombre_interno": "GIRAFARIG"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "SWELLOW"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "SOLROCK"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "VILEPLUME"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "EXEGGUTOR"
+				}
+			],
+			"ratio": 3.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "KABUTO"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "RELICANTH"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "QUAGSIRE"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "SEADRA"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "KINGDRA"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "AZUMARILL"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "WHISCASH"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "KABUTOPS"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "WAILORD"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "GYARADOS"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"cascada-meteoro-r3": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 37.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "PELIPPER"
+				},
+				{
+					"nivel_max": 37.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "OCTILLERY"
+				},
+				{
+					"nivel_max": 37.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "TENTACRUEL"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "STARMIE"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "WALREIN"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "LILEEP"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "YANMA"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "GLOOM"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "BEEDRILL"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "ROSELIA"
+				},
+				{
+					"nivel_max": 37.0,
+					"nivel_min": 37.0,
+					"nombre_interno": "TOGETIC"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "MASQUERAIN"
+				},
+				{
+					"nivel_max": 39.0,
+					"nivel_min": 39.0,
+					"nombre_interno": "SWALOT"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "DODRIO"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "NIDOQUEEN"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "SOLROCK"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "GOLBAT"
+				}
+			],
+			"ratio": 3.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "LOMBRE"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "DEWGONG"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "CRAWDAUNT"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "MANTINE"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "CLOYSTER"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "QWILFISH"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "SEAKING"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "SHARPEDO"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "GOREBYSS"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "GOLDUCK"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"cascada-meteoro-r4": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SLOWPOKE"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "LUVDISC"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "POLIWHIRL"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "LANTURN"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "HUNTAIL"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "GOLBAT"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "NIDORINO"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "BAGON"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "SOLROCK"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "DRAGONAIR"
+				},
+				{
+					"nivel_max": 37.0,
+					"nivel_min": 37.0,
+					"nombre_interno": "LAIRON"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SEVIPER"
+				},
+				{
+					"nivel_max": 39.0,
+					"nivel_min": 39.0,
+					"nombre_interno": "JUMPLUFF"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "HYPNO"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "CRADILY"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 38.0,
+					"nombre_interno": "SHUCKLE"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "CROBAT"
+				}
+			],
+			"ratio": 3.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "SPHEAL"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "KABUTO"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "KRABBY"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "CHINCHOU"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "STARYU"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "WAILMER"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "CORSOLA"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "LUDICOLO"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "SLOWKING"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "POLIWRATH"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"caverna_abisal_entrada": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "SEEL"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "LOMBRE"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "POLIWHIRL"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "POLIWRATH"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "KINGDRA"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "CARVANHA"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "KABUTOPS"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "MANTINE"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "OMASTAR"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "LAPRAS"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "AZUMARILL"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "SEADRA"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "KINGLER"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "LUDICOLO"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "GOREBYSS"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"caverna_abisal_sala1": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "DUSCLOPS"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "LUNATONE"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "ABSOL"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "VILEPLUME"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "WEEZING"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "GOLEM"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "DONPHAN"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "NIDOQUEEN"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "STEELIX"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "AERODACTYL"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "AGGRON"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "CROBAT"
+				}
+			],
+			"ratio": 1.0
+		}
+	},
+	"caverna_abisal_sala2": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "GRAVELER"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "DUGTRIO"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "BANETTE"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "CAMERUPT"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "CACTURNE"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "SHIFTRY"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "GOLEM"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "HOUNDOOM"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "NIDOQUEEN"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "STEELIX"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "FLYGON"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "CROBAT"
+				}
+			],
+			"ratio": 1.0
+		}
+	},
+	"caverna_abisal_sala3": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "NOSEPASS"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "SABLEYE"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "BEEDRILL"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "ROSELIA"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "PUPITAR"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "GLIGAR"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "VILEPLUME"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "CRADILY"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "MUK"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "HOUNDOOM"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "GENGAR"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "CLAYDOL"
+				}
+			],
+			"ratio": 1.0
+		}
+	},
+	"caverna_abisal_sala4": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "ONIX"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "HAUNTER"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "MURKROW"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "MIGHTYENA"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "LAIRON"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "ARBOK"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "SANDSLASH"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "ABSOL"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "VICTREEBEL"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "STEELIX"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "AGGRON"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "CROBAT"
+				}
+			],
+			"ratio": 1.0
+		}
+	},
+	"caverna_abisal_sala5": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "DUSTOX"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "ARIADOS"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "MIGHTYENA"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "SNEASEL"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "MISDREAVUS"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "VENOMOTH"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "SWALOT"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "SHIFTRY"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "RHYDON"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "WEEZING"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "DONPHAN"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "AERODACTYL"
+				}
+			],
+			"ratio": 1.0
+		}
+	},
+	"caverna_abisal_sala6": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "LUVDISC"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "OMANYTE"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "CORSOLA"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "SEALEO"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "CLOYSTER"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "GULPIN"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "NIDORINO"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "SUDOWOODO"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "MAROWAK"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "SANDSLASH"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "VICTREEBEL"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "CRADILY"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "ARMALDO"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "SHUCKLE"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "NIDOKING"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "FLYGON"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "CROBAT"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "KRABBY"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "STARYU"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "LOMBRE"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "CLAMPERL"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "POLITOED"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "KABUTO"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "WAILMER"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "QWILFISH"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "SHARPEDO"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "SLOWBRO"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"caverna_abisal_sala7": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "POLIWHIRL"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "PELIPPER"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "WAILORD"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "STARMIE"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "KINGDRA"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "LILEEP"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "NIDORINA"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "SABLEYE"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "ONIX"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "WEEPINBELL"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "ARIADOS"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "MAROWAK"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "MAGCARGO"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "MISDREAVUS"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "CACTURNE"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "CLAYDOL"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "NIDOQUEEN"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SHELLDER"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SLOWPOKE"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "RELICANTH"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "POLITOED"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "WALREIN"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "QWILFISH"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "LANTURN"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "WHISCASH"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "POLIWRATH"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "LAPRAS"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"caverna_abisal_sala8": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "ARON"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "KOFFING"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "NOSEPASS"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "ROSELIA"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "SNEASEL"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "GLIGAR"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "LUNATONE"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "ABSOL"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "VILEPLUME"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "MUK"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "NIDOKING"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "STEELIX"
+				}
+			],
+			"ratio": 1.0
+		}
+	},
+	"ciudad_algaria": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "CARVANHA"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "CORPHISH"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "TENTACOOL"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "QWILFISH"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "BARBOACH"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "CLAMPERL"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "QUAGSIRE"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "OMASTAR"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "SEEL"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "KRABBY"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "CHINCHOU"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "AZUMARILL"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "WAILORD"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"ciudad_calagua": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "WINGULL"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "POLIWAG"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "REMORAID"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "OMANYTE"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "SLOWBRO"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 21.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "BARBOACH"
+				},
+				{
+					"nivel_max": 21.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "SHELLDER"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "SPHEAL"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "REMORAID"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "SLOWPOKE"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "LOMBRE"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "CRAWDAUNT"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "KINGLER"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "OCTILLERY"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "MANTINE"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"ciudad_colosalia": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "KABUTO"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SEALEO"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "POLITOED"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "GOLDUCK"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "WALREIN"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "HORSEA"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "WHISCASH"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "QWILFISH"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "LUDICOLO"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SLOWBRO"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "WAILMER"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "PELIPPER"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "TENTACRUEL"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "KINGDRA"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "GYARADOS"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"ciudad_petalia": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "MAGIKARP"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "FEEBAS"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "LOTAD"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "MARILL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "HORSEA"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 11.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "WOOPER"
+				},
+				{
+					"nivel_max": 11.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "LOTAD"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "SURSKIT"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "KRABBY"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "SEEL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "MARILL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "BARBOACH"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "POLIWAG"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "CLAMPERL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "POLIWHIRL"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"ciudad_portual": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SPHEAL"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "LUVDISC"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "TENTACOOL"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "STARYU"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "AZUMARILL"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "CORPHISH"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "SLOWPOKE"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "MARILL"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "WINGULL"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "OMANYTE"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "SURSKIT"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "CARVANHA"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "QUAGSIRE"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"cueva_ancestral_1f": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "DROWZEE"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "PHANPY"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "ANORITH"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "MAWILE"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "KADABRA"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "PUPITAR"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "DUSCLOPS"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "CAMERUPT"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "CLAYDOL"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "DONPHAN"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "GENGAR"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "NIDOKING"
+				}
+			],
+			"ratio": 1.0
+		}
+	},
+	"cueva_ancestral_entrada": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "BALTOY"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "NOSEPASS"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "SABLEYE"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "HAUNTER"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "WOBBUFFET"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "PUPITAR"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "DUGTRIO"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "SANDSLASH"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "BANETTE"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "RHYDON"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "STEELIX"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "FLYGON"
+				}
+			],
+			"ratio": 1.0
+		}
+	},
+	"cueva_ancestral_s1": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "VIBRAVA"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "RHYHORN"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "MAROWAK"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "MISDREAVUS"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "GIRAFARIG"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "JYNX"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "SOLROCK"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "XATU"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "SHUCKLE"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "AERODACTYL"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "GARDEVOIR"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "FLYGON"
+				}
+			],
+			"ratio": 1.0
+		}
+	},
+	"cueva_ancestral_s2": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "ABRA"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "CUBONE"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "NOSEPASS"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "PILOSWINE"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "CAMERUPT"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "FORRETRESS"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "CRADILY"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "ARMALDO"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "DONPHAN"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "SCIZOR"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "GENGAR"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "EXEGGUTOR"
+				}
+			],
+			"ratio": 1.0
+		}
+	},
+	"cueva_ancestral_s3": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "GASTLY"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "ANORITH"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "SUDOWOODO"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "METANG"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "MAGCARGO"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "GLIGAR"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "JYNX"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "MRMIME"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "LUNATONE"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "MAGNETON"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "SKARMORY"
+				},
+				{
+					"nivel_max": 36.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "CLAYDOL"
+				}
+			],
+			"ratio": 1.0
+		}
+	},
+	"cueva_cardumen_1": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "SEADRA"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "SHARPEDO"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "OCTILLERY"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "RELICANTH"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "KABUTOPS"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "GEODUDE"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "GULPIN"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "ODDISH"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "DELIBIRD"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "NIDORINA"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "WEEPINBELL"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "ARIADOS"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "ROSELIA"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "SNEASEL"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "ARBOK"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "SWALOT"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "GLALIE"
+				}
+			],
+			"ratio": 3.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "SEAKING"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "KINGLER"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "DEWGONG"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "HUNTAIL"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "POLITOED"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "CORSOLA"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "LANTURN"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "CRAWDAUNT"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "GOREBYSS"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "POLIWRATH"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"cueva_cardumen_2": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "LUVDISC"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "CHINCHOU"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "STARYU"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "WAILMER"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "OMASTAR"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "SNORUNT"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "GRIMER"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "ARON"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "SUDOWOODO"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SNEASEL"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "LAIRON"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "VENOMOTH"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "PILOSWINE"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "GOLBAT"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "SEVIPER"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "WEEZING"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "MUK"
+				}
+			],
+			"ratio": 3.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "PELIPPER"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "WHISCASH"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "SLOWKING"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "SLOWBRO"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "LUDICOLO"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "MANTINE"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "HUNTAIL"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "STARMIE"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "CLOYSTER"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"cueva_cardumen_3": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "EKANS"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "SNORUNT"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "GRIMER"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "DELIBIRD"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "LILEEP"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "NIDORINA"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "DUSTOX"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "WEEPINBELL"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "PUPITAR"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "GLALIE"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "VICTREEBEL"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "SHUCKLE"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"cueva_cardumen_4": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "LARVITAR"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "GULPIN"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "VENONAT"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "RHYHORN"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "GLOOM"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SNEASEL"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "MAGCARGO"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "SEVIPER"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "SWALOT"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "ARMALDO"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "MUK"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "NIDOKING"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"cueva_cardumen_5": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "GEODUDE"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "LARVITAR"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "ARON"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "NIDORINO"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "DUSTOX"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "ARIADOS"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "ARBOK"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "PILOSWINE"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "VENOMOTH"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "SOLROCK"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 32.0,
+					"nombre_interno": "GLALIE"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "RHYDON"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"cueva_granito_1": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "SENTRET"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "WHISMUR"
+				},
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "SMEARGLE"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "SWINUB"
+				},
+				{
+					"nivel_max": 9.0,
+					"nivel_min": 9.0,
+					"nombre_interno": "PIDGEY"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "RATTATA"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "SPEAROW"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "NINCADA"
+				},
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "TAILLOW"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "MEDITITE"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "SANDSHREW"
+				},
+				{
+					"nivel_max": 9.0,
+					"nivel_min": 9.0,
+					"nombre_interno": "MACHOP"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"cueva_granito_2": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 9.0,
+					"nivel_min": 9.0,
+					"nombre_interno": "KAKUNA"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "MAKUHITA"
+				},
+				{
+					"nivel_max": 9.0,
+					"nivel_min": 9.0,
+					"nombre_interno": "ZIGZAGOON"
+				},
+				{
+					"nivel_max": 11.0,
+					"nivel_min": 11.0,
+					"nombre_interno": "SPINARAK"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "SWINUB"
+				},
+				{
+					"nivel_max": 9.0,
+					"nivel_min": 9.0,
+					"nombre_interno": "SKITTY"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "DIGLETT"
+				},
+				{
+					"nivel_max": 11.0,
+					"nivel_min": 11.0,
+					"nombre_interno": "NIDORAN_M"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "NIDORAN_F"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "SLAKOTH"
+				},
+				{
+					"nivel_max": 9.0,
+					"nivel_min": 9.0,
+					"nombre_interno": "SWABLU"
+				},
+				{
+					"nivel_max": 11.0,
+					"nivel_min": 11.0,
+					"nombre_interno": "TEDDIURSA"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"cueva_granito_3": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "SENTRET"
+				},
+				{
+					"nivel_max": 11.0,
+					"nivel_min": 11.0,
+					"nombre_interno": "POOCHYENA"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "SMEARGLE"
+				},
+				{
+					"nivel_max": 11.0,
+					"nivel_min": 11.0,
+					"nombre_interno": "JIGGLYPUFF"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "TRAPINCH"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "MANKEY"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "NUMEL"
+				},
+				{
+					"nivel_max": 11.0,
+					"nivel_min": 11.0,
+					"nombre_interno": "DODUO"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "EEVEE"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "HOUNDOUR"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "PHANPY"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "NUZLEAF"
+				}
+			],
+			"ratio": 3.0
+		},
+		"roca": {
+			"encuentros": [
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "SWINUB"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "BELDUM"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "SANDSHREW"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "NUMEL"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "MAGNEMITE"
+				}
+			],
+			"ratio": 11.11
+		}
+	},
+	"cueva_granito_4": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "WEEDLE"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "SENTRET"
+				},
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "POOCHYENA"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "MAKUHITA"
+				},
+				{
+					"nivel_max": 9.0,
+					"nivel_min": 9.0,
+					"nombre_interno": "ZIGZAGOON"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "SPINARAK"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "HOOTHOOT"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "SLAKOTH"
+				},
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "MEDITITE"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "MEOWTH"
+				},
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "MANKEY"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "CUBONE"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"desfiladero": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "SLUGMA"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "NINCADA"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "PIDGEOTTO"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "GROWLITHE"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "SPINDA"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "AIPOM"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "LICKITUNG"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "DELCATTY"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "PONYTA"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "RATICATE"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "DUNSPARCE"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "CASTFORM"
+				}
+			],
+			"ratio": 7.0
+		}
+	},
+	"malvalanova_entrada": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "VOLTORB"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "VOLTORB"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "VOLTORB"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "MAGNEMITE"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "MAGNEMITE"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "VOLTORB"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "MAGNEMITE"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "ELECTRODE"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "MAGNETON"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "GASTLY"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "CUBONE"
+				}
+			],
+			"ratio": 2.0
+		}
+	},
+	"malvalanova_interior": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "VOLTORB"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "VOLTORB"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "VOLTORB"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "MAGNEMITE"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "MAGNEMITE"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "VOLTORB"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "MAGNEMITE"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "ELECTRODE"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "MAGNETON"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "GASTLY"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "CUBONE"
+				}
+			],
+			"ratio": 5.0
+		}
+	},
+	"monte_pirico_e1": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "SHUPPET"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "VULPIX"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "MURKROW"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "MIGHTYENA"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "WIGGLYTUFF"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "PERSIAN"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "KECLEON"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "VIGOROTH"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "TORKOAL"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "MILTANK"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "TAUROS"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "HOUNDOOM"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"monte_pirico_e2": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "TAILLOW"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "DUSKULL"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "TEDDIURSA"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "PERSIAN"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "FEAROW"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "ZANGOOSE"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "STANTLER"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "ABSOL"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "CACTURNE"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "PIDGEOT"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "HOUNDOOM"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "RAPIDASH"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"monte_pirico_h1": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "KIRLIA"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "DODUO"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "SWABLU"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "EEVEE"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "HOUNDOUR"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "KADABRA"
+				},
+				{
+					"nivel_max": 23.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "FURRET"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "MIGHTYENA"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "NOCTOWL"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "SHIFTRY"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "MAGMAR"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "URSARING"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"monte_pirico_h2": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "KIRLIA"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "NATU"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "SPOINK"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "PIDGEOTTO"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "GROWLITHE"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "SPINDA"
+				},
+				{
+					"nivel_max": 23.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "AIPOM"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "MURKROW"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "HAUNTER"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "DUNSPARCE"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "SWELLOW"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "RAPIDASH"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"monte_pirico_h3": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "HOOTHOOT"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "VULPIX"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "ABRA"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "PORYGON"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "VIGOROTH"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "FEAROW"
+				},
+				{
+					"nivel_max": 23.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "CHANSEY"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "CHIMECHO"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "DUSCLOPS"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "SHIFTRY"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "MILTANK"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "URSARING"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"monte_pirico_h4": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "MEOWTH"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "BALTOY"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "EXEGGCUTE"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "DROWZEE"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "AIPOM"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "MURKROW"
+				},
+				{
+					"nivel_max": 23.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "MEDICHAM"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "DUNSPARCE"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "WIGGLYTUFF"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "KECLEON"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "ZANGOOSE"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "DODRIO"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"monte_pirico_h5": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "JIGGLYPUFF"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "TEDDIURSA"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "NUZLEAF"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "LOUDRED"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "FARFETCHD"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "SABLEYE"
+				},
+				{
+					"nivel_max": 23.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "DELCATTY"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "WOBBUFFET"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "PONYTA"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "LINOONE"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "STANTLER"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "HYPNO"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"monte_pirico_h6": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "SPEAROW"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "SHUPPET"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "GASTLY"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "NATU"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "LICKITUNG"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "RATICATE"
+				},
+				{
+					"nivel_max": 23.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "FURRET"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "CASTFORM"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "MISDREAVUS"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "BANETTE"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GRUMPIG"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "TAUROS"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"nao_abandonada_camarotes_s1": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SHELLDER"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "OMANYTE"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "WAILORD"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "WALREIN"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "KINGDRA"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "POLIWAG"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "CARVANHA"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GOREBYSS"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "MANTINE"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GOLDUCK"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "CLAMPERL"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "SEALEO"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "KINGLER"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "LAPRAS"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "KINGDRA"
+				}
+			],
+			"ratio": 7.0
+		}
+	},
+	"nao_abandonada_pasillos_ocultos": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SEEL"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "TENTACOOL"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "CORSOLA"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "SHARPEDO"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "RELICANTH"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "CORPHISH"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "SEAKING"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "LOMBRE"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "POLIWHIRL"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "POLITOED"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "SHARPEDO"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "LANTURN"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "OCTILLERY"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "KABUTOPS"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "GYARADOS"
+				}
+			],
+			"ratio": 7.0
+		}
+	},
+	"pilar_celeste_1f": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 48.0,
+					"nivel_min": 48.0,
+					"nombre_interno": "FEAROW"
+				},
+				{
+					"nivel_max": 48.0,
+					"nivel_min": 48.0,
+					"nombre_interno": "NINJASK"
+				},
+				{
+					"nivel_max": 50.0,
+					"nivel_min": 50.0,
+					"nombre_interno": "TROPIUS"
+				},
+				{
+					"nivel_max": 50.0,
+					"nivel_min": 50.0,
+					"nombre_interno": "JUMPLUFF"
+				},
+				{
+					"nivel_max": 48.0,
+					"nivel_min": 48.0,
+					"nombre_interno": "FORRETRESS"
+				},
+				{
+					"nivel_max": 48.0,
+					"nivel_min": 48.0,
+					"nombre_interno": "SCYTHER"
+				},
+				{
+					"nivel_max": 50.0,
+					"nivel_min": 50.0,
+					"nombre_interno": "ALAKAZAM"
+				},
+				{
+					"nivel_max": 49.0,
+					"nivel_min": 49.0,
+					"nombre_interno": "SCIZOR"
+				},
+				{
+					"nivel_max": 47.0,
+					"nivel_min": 47.0,
+					"nombre_interno": "EXEGGUTOR"
+				},
+				{
+					"nivel_max": 50.0,
+					"nivel_min": 50.0,
+					"nombre_interno": "METAGROSS"
+				},
+				{
+					"nivel_max": 47.0,
+					"nivel_min": 47.0,
+					"nombre_interno": "DRAGONITE"
+				},
+				{
+					"nivel_max": 50.0,
+					"nivel_min": 50.0,
+					"nombre_interno": "SALAMENCE"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"pilar_celeste_3f": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 51.0,
+					"nivel_min": 51.0,
+					"nombre_interno": "NOCTOWL"
+				},
+				{
+					"nivel_max": 51.0,
+					"nivel_min": 51.0,
+					"nombre_interno": "GRUMPIG"
+				},
+				{
+					"nivel_max": 53.0,
+					"nivel_min": 53.0,
+					"nombre_interno": "PIDGEOT"
+				},
+				{
+					"nivel_max": 53.0,
+					"nivel_min": 53.0,
+					"nombre_interno": "HYPNO"
+				},
+				{
+					"nivel_max": 51.0,
+					"nivel_min": 51.0,
+					"nombre_interno": "ALTARIA"
+				},
+				{
+					"nivel_max": 51.0,
+					"nivel_min": 51.0,
+					"nombre_interno": "SCYTHER"
+				},
+				{
+					"nivel_max": 53.0,
+					"nivel_min": 53.0,
+					"nombre_interno": "SCIZOR"
+				},
+				{
+					"nivel_max": 52.0,
+					"nivel_min": 52.0,
+					"nombre_interno": "ALAKAZAM"
+				},
+				{
+					"nivel_max": 50.0,
+					"nivel_min": 50.0,
+					"nombre_interno": "GARDEVOIR"
+				},
+				{
+					"nivel_max": 53.0,
+					"nivel_min": 53.0,
+					"nombre_interno": "METAGROSS"
+				},
+				{
+					"nivel_max": 50.0,
+					"nivel_min": 50.0,
+					"nombre_interno": "SALAMENCE"
+				},
+				{
+					"nivel_max": 53.0,
+					"nivel_min": 53.0,
+					"nombre_interno": "DRAGONITE"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"pilar_celeste_5f": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 54.0,
+					"nivel_min": 54.0,
+					"nombre_interno": "SCYTHER"
+				},
+				{
+					"nivel_max": 54.0,
+					"nivel_min": 54.0,
+					"nombre_interno": "SCIZOR"
+				},
+				{
+					"nivel_max": 56.0,
+					"nivel_min": 56.0,
+					"nombre_interno": "ALAKAZAM"
+				},
+				{
+					"nivel_max": 56.0,
+					"nivel_min": 56.0,
+					"nombre_interno": "STEELIX"
+				},
+				{
+					"nivel_max": 54.0,
+					"nivel_min": 54.0,
+					"nombre_interno": "AERODACTYL"
+				},
+				{
+					"nivel_max": 54.0,
+					"nivel_min": 54.0,
+					"nombre_interno": "GARDEVOIR"
+				},
+				{
+					"nivel_max": 56.0,
+					"nivel_min": 56.0,
+					"nombre_interno": "AGGRON"
+				},
+				{
+					"nivel_max": 55.0,
+					"nivel_min": 55.0,
+					"nombre_interno": "EXEGGUTOR"
+				},
+				{
+					"nivel_max": 56.0,
+					"nivel_min": 56.0,
+					"nombre_interno": "CROBAT"
+				},
+				{
+					"nivel_max": 57.0,
+					"nivel_min": 57.0,
+					"nombre_interno": "METAGROSS"
+				},
+				{
+					"nivel_max": 54.0,
+					"nivel_min": 54.0,
+					"nombre_interno": "DRAGONITE"
+				},
+				{
+					"nivel_max": 60.0,
+					"nivel_min": 60.0,
+					"nombre_interno": "SALAMENCE"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"pueblo_azuliza": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "MAGIKARP"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "FEEBAS"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "BARBOACH"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "HORSEA"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "REMORAID"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 11.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "WOOPER"
+				},
+				{
+					"nivel_max": 11.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "LOTAD"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "SURSKIT"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "SLOWPOKE"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "KABUTO"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "MARILL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "WINGULL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "SPHEAL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "SHELLDER"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "GOLDEEN"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"pueblo_oromar": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SURSKIT"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "WINGULL"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SHELLDER"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "KRABBY"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "CHINCHOU"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "LOTAD"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "SEEL"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "REMORAID"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SEALEO"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "AZUMARILL"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "BARBOACH"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "KRABBY"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "KABUTO"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "OMANYTE"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "QUAGSIRE"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"ruta_101": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 2.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "SUNKERN"
+				},
+				{
+					"nivel_max": 2.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "CATERPIE"
+				},
+				{
+					"nivel_max": 2.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "WURMPLE"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "RALTS"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "SILCOON"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "CASCOON"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "METAPOD"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "SEEDOT"
+				},
+				{
+					"nivel_max": 2.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "ZUBAT"
+				},
+				{
+					"nivel_max": 2.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "HOPPIP"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "SLUGMA"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "RATTATA"
+				}
+			],
+			"ratio": 7.0
+		}
+	},
+	"ruta_102": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "MAGIKARP"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "FEEBAS"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "WOOPER"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "LOTAD"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "MARILL"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "SUNKERN"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "WEEDLE"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "CATERPIE"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "WURMPLE"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "RALTS"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "SEEDOT"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "WHISMUR"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "HOPPIP"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "PIDGEY"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "SKITTY"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "DIGLETT"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "LEDYBA"
+				}
+			],
+			"ratio": 7.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "FEEBAS"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "MAGIKARP"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "WOOPER"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "MARILL"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "WINGULL"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "LOTAD"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "SPINARAK"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "SURSKIT"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "NIDORAN_M"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "NIDORAN_F"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_103": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "FEEBAS"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "MAGIKARP"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "WOOPER"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "LOTAD"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "WINGULL"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 2.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "SUNKERN"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "CASCOON"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "METAPOD"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "SILCOON"
+				},
+				{
+					"nivel_max": 2.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "KAKUNA"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "ZIGZAGOON"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "ZUBAT"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "SLUGMA"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "SMEARGLE"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "SPEAROW"
+				},
+				{
+					"nivel_max": 2.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "LEDYBA"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "TAILLOW"
+				}
+			],
+			"ratio": 7.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "POLIWAG"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "CARVANHA"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "FEEBAS"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "MAGIKARP"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "WOOPER"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "CATERPIE"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "LOTAD"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "MARILL"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "SURSKIT"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "WINGULL"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_104": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "MAGIKARP"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "FEEBAS"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "WOOPER"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "MARILL"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "SURSKIT"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "WURMPLE"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "WEEDLE"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "SILCOON"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "SEEDOT"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "MAKUHITA"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "WHISMUR"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "HOPPIP"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "SMEARGLE"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "PIDGEY"
+				},
+				{
+					"nivel_max": 4.0,
+					"nivel_min": 4.0,
+					"nombre_interno": "JIGGLYPUFF"
+				},
+				{
+					"nivel_max": 3.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "MAREEP"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "PARAS"
+				}
+			],
+			"ratio": 7.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "HORSEA"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "CORPHISH"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "MAGIKARP"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "WOOPER"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "SURSKIT"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "FEEBAS"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "LOTAD"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "MARILL"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "WINGULL"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "NIDORAN_F"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_104_bosque_petalia": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "SUNKERN"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "RALTS"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "CASCOON"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "KAKUNA"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "RATTATA"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "SKITTY"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "HOOTHOOT"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "NINCADA"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "NIDORAN_M"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "PARAS"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "EKANS"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "PINECO"
+				}
+			],
+			"ratio": 7.0
+		}
+	},
+	"ruta_105": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "LUVDISC"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "STARYU"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "WAILMER"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 21.0,
+					"nombre_interno": "SEADRA"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 21.0,
+					"nombre_interno": "QWILFISH"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "TENTACOOL"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "LOMBRE"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SPHEAL"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SLOWPOKE"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "CORSOLA"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "CLAMPERL"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "QWILFISH"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "PELIPPER"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_106": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "REMORAID"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "SHELLDER"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "STARYU"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "CLAMPERL"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "WAILMER"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 11.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "HORSEA"
+				},
+				{
+					"nivel_max": 11.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "CARVANHA"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "SPHEAL"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "POLIWAG"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "CHINCHOU"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "BARBOACH"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "CORPHISH"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "KRABBY"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "POLIWHIRL"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "AZUMARILL"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_107": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "TENTACOOL"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SEALEO"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 21.0,
+					"nombre_interno": "SEAKING"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 21.0,
+					"nombre_interno": "LANTURN"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "SLOWPOKE"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "LOMBRE"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "CHINCHOU"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "LUVDISC"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "POLIWHIRL"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "OMANYTE"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "QUAGSIRE"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "SEADRA"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "PELIPPER"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "SHARPEDO"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_108": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SPHEAL"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "REMORAID"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SEEL"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 21.0,
+					"nombre_interno": "KABUTO"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 21.0,
+					"nombre_interno": "SEAKING"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "CORPHISH"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "LOMBRE"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "STARYU"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "AZUMARILL"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "HORSEA"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "QUAGSIRE"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "QWILFISH"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "SEADRA"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "PELIPPER"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_109": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SEEL"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "TENTACOOL"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "WAILMER"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 21.0,
+					"nombre_interno": "CORSOLA"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 21.0,
+					"nombre_interno": "SEALEO"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "SLOWPOKE"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "LUVDISC"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "CARVANHA"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "OMANYTE"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "AZUMARILL"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "POLIWAG"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "SEADRA"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "QWILFISH"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "LANTURN"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "SHARPEDO"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_109b": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SHELLDER"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "KRABBY"
+				},
+				{
+					"nivel_max": 19.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "CLAMPERL"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 21.0,
+					"nombre_interno": "POLIWHIRL"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 21.0,
+					"nombre_interno": "CORSOLA"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "BARBOACH"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "CHINCHOU"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SEALEO"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "KABUTO"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "QUAGSIRE"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "PELIPPER"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "SEAKING"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "LANTURN"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_110": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "BARBOACH"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "SPHEAL"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "REMORAID"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "SHELLDER"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "PSYDUCK"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "MAREEP"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "PINECO"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "ELECTRIKE"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "SHROOMISH"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "BELLSPROUT"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "MACHOP"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "PIKACHU"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "ODDISH"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "VOLTORB"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "CACNEA"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "SKIPLOOM"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "VIBRAVA"
+				}
+			],
+			"ratio": 7.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 9.0,
+					"nombre_interno": "LOMBRE"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 9.0,
+					"nombre_interno": "KABUTO"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "REMORAID"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "CARVANHA"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "KRABBY"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "HORSEA"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "CORPHISH"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "CHINCHOU"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "STARYU"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "CLAMPERL"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_111": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "POLIWAG"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "SEEL"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "LUVDISC"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "AZUMARILL"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 21.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "TRAPINCH"
+				},
+				{
+					"nivel_max": 21.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "SANDSHREW"
+				},
+				{
+					"nivel_max": 21.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "BALTOY"
+				},
+				{
+					"nivel_max": 21.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "PHANPY"
+				},
+				{
+					"nivel_max": 21.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "HOUNDOUR"
+				},
+				{
+					"nivel_max": 21.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "CACNEA"
+				},
+				{
+					"nivel_max": 21.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "ONIX"
+				},
+				{
+					"nivel_max": 21.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "GRAVELER"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "PORYGON"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "DELCATTY"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "DUGTRIO"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "GLIGAR"
+				}
+			],
+			"ratio": 3.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "SLOWPOKE"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "TENTACOOL"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "LOMBRE"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "WAILMER"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "QUAGSIRE"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "HORSEA"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "CORPHISH"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "LUVDISC"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "OMANYTE"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "CORSOLA"
+				}
+			],
+			"ratio": 10.0
+		},
+		"roca": {
+			"encuentros": [
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "MAGNEMITE"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "MAWILE"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "MAROWAK"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "LAIRON"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 19.0,
+					"nombre_interno": "MAGCARGO"
+				}
+			],
+			"ratio": 11.11
+		}
+	},
+	"ruta_112": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "MAREEP"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "TRAPINCH"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SHROOMISH"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "ELECTRIKE"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "VENONAT"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "PIKACHU"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "VOLTORB"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "CACNEA"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "SKIPLOOM"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "KOFFING"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "FLAAFFY"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "NIDORINO"
+				}
+			],
+			"ratio": 7.0
+		}
+	},
+	"ruta_112_senda_ignea": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "VULPIX"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "HOUNDOUR"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "MANKEY"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "SLUGMA"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "GRIMER"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "TORKOAL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "MACHOP"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "CUBONE"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "SANDSHREW"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "RHYHORN"
+				},
+				{
+					"nivel_max": 22.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "DITTO"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "ONIX"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"ruta_113": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "SENTRET"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "SLUGMA"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "SWINUB"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "DIGLETT"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "MEOWTH"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "BELDUM"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "SKARMORY"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "EEVEE"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "PIDGEOTTO"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "ANORITH"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "LOUDRED"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "MAWILE"
+				}
+			],
+			"ratio": 7.0
+		}
+	},
+	"ruta_114": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "POLIWAG"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "STARYU"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "CLAMPERL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "POLIWHIRL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "WAILMER"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "SWABLU"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "PARAS"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "MACHOP"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "ABRA"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "EXEGGCUTE"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "VIBRAVA"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "SKIPLOOM"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "NUZLEAF"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "ZANGOOSE"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SURSKIT"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "LEDIAN"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "YANMA"
+				}
+			],
+			"ratio": 7.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "SHELLDER"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "CARVANHA"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SPHEAL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "KRABBY"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "OMANYTE"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "BARBOACH"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "REMORAID"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "CHINCHOU"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "TENTACOOL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "POLIWHIRL"
+				}
+			],
+			"ratio": 10.0
+		},
+		"roca": {
+			"encuentros": [
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "GEODUDE"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "BALTOY"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "PHANPY"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "LILEEP"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "GRAVELER"
+				}
+			],
+			"ratio": 11.11
+		}
+	},
+	"ruta_115": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "QWILFISH"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "SEADRA"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "SEAKING"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "CRAWDAUNT"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "WHISCASH"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 23.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "BUTTERFREE"
+				},
+				{
+					"nivel_max": 23.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "BEAUTIFLY"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "MINUN"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "MACHOKE"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "TOGETIC"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "SUNFLORA"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "ILLUMISE"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "VOLBEAT"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "TANGELA"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "SEVIPER"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "HITMONTOP"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "HITMONCHAN"
+				}
+			],
+			"ratio": 7.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "PELIPPER"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "LANTURN"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "CRAWDAUNT"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 23.0,
+					"nombre_interno": "WHISCASH"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "SEEL"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "SEADRA"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "QWILFISH"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "SHARPEDO"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_116": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "METAPOD"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "HOPPIP"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "MEDITITE"
+				},
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "SLAKOTH"
+				},
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "EKANS"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "PINECO"
+				},
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "ELECTRIKE"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "SHROOMISH"
+				},
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "VULPIX"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "LARVITAR"
+				},
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "TAILLOW"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "DODUO"
+				}
+			],
+			"ratio": 7.0
+		}
+	},
+	"ruta_116_tunel_fervergal": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "SENTRET"
+				},
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "WHISMUR"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "ZUBAT"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 6.0,
+					"nombre_interno": "SPINARAK"
+				},
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "SMEARGLE"
+				},
+				{
+					"nivel_max": 7.0,
+					"nivel_min": 7.0,
+					"nombre_interno": "RATTATA"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "SKITTY"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "NINCADA"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "TAILLOW"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "BELLSPROUT"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "VENONAT"
+				},
+				{
+					"nivel_max": 8.0,
+					"nivel_min": 8.0,
+					"nombre_interno": "GASTLY"
+				}
+			],
+			"ratio": 3.0
+		}
+	},
+	"ruta_117": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "MAGIKARP"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "FEEBAS"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "WOOPER"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "SLOWPOKE"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "KABUTO"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "MAREEP"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "MEDITITE"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "BALTOY"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "PIKACHU"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "CUBONE"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "DROWZEE"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "VOLTORB"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "SPOINK"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "DELIBIRD"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "CACNEA"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "GROWLITHE"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "FLAAFFY"
+				}
+			],
+			"ratio": 7.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "POLIWAG"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "CARVANHA"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "FEEBAS"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "SLOWPOKE"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "CHINCHOU"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "LOTAD"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "MARILL"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "BARBOACH"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "KRABBY"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_118": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "WHISCASH"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "DEWGONG"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "KINGLER"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "LUDICOLO"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "OCTILLERY"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "YANMA"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "BUTTERFREE"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "PARASECT"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "PLUSLE"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "SUNFLORA"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "VOLBEAT"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "MASQUERAIN"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "HITMONLEE"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "HITMONCHAN"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "NINJASK"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "JUMPLUFF"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "BRELOOM"
+				}
+			],
+			"ratio": 7.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 21.0,
+					"nombre_interno": "SEAKING"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 21.0,
+					"nombre_interno": "SHARPEDO"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "DEWGONG"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "LUDICOLO"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "OCTILLERY"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "CORSOLA"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "QUAGSIRE"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "WHISCASH"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "CRAWDAUNT"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "KINGLER"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_119": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "CRAWDAUNT"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "DEWGONG"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "KINGLER"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "LUDICOLO"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "OCTILLERY"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "LEDIAN"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "BEEDRILL"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "PLUSLE"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "ILLUMISE"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "NOCTOWL"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "PRIMEAPE"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "GOLBAT"
+				},
+				{
+					"nivel_max": 24.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "NINJASK"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "TROPIUS"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "FORRETRESS"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "MANECTRIC"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "PIDGEOT"
+				}
+			],
+			"ratio": 5.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 21.0,
+					"nombre_interno": "SEALEO"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 21.0,
+					"nombre_interno": "AZUMARILL"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "DEWGONG"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "KINGLER"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 24.0,
+					"nombre_interno": "LUDICOLO"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "HORSEA"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "LANTURN"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "CRAWDAUNT"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "WHISCASH"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "OCTILLERY"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_120": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "LUVDISC"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "DEWGONG"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "KINGLER"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "LUDICOLO"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "OCTILLERY"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "ZIGZAGOON"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "ODDISH"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "MACHOKE"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "PARASECT"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "MARILL"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "SURSKIT"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "ABSOL"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "KECLEON"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "JUMPLUFF"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "SKARMORY"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "POLITOED"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "XATU"
+				}
+			],
+			"ratio": 7.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "SHELLDER"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "PELIPPER"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "QWILFISH"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "DEWGONG"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "LUDICOLO"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "CORPHISH"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "STARYU"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "SEALEO"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "KINGLER"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "OCTILLERY"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_121": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "RELICANTH"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "HUNTAIL"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GOREBYSS"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SLOWBRO"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SLOWKING"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "MACHOKE"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "SUNFLORA"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "ILLUMISE"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "HITMONTOP"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "ZANGOOSE"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "DODRIO"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "HARIYAMA"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "MANECTRIC"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "CACTURNE"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "RAICHU"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "BELLOSSOM"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "ELECTABUZZ"
+				}
+			],
+			"ratio": 7.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "SEEL"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "WHISCASH"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GOREBYSS"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "MANTINE"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SLOWKING"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "KABUTO"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "SEAKING"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "RELICANTH"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "HUNTAIL"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "SLOWBRO"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_122": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "OMASTAR"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "WAILORD"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GOLDUCK"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "POLIWRATH"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "TENTACRUEL"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "POLIWHIRL"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "CRAWDAUNT"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "KABUTOPS"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "OMASTAR"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "POLITOED"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "HUNTAIL"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "GOREBYSS"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "SLOWKING"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "STARMIE"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "CLOYSTER"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_123": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "MANTINE"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "RELICANTH"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GOREBYSS"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SLOWBRO"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SLOWKING"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "RHYHORN"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "MINUN"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "TOGETIC"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "MEDICHAM"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "VOLBEAT"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "GIRAFARIG"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "BRELOOM"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "ELECTRODE"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 26.0,
+					"nombre_interno": "VICTREEBEL"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "BELLOSSOM"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "ALTARIA"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "KANGASKHAN"
+				}
+			],
+			"ratio": 7.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "SHARPEDO"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "MANTINE"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "HUNTAIL"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SLOWBRO"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "OMANYTE"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "AZUMARILL"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "RELICANTH"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "GOREBYSS"
+				},
+				{
+					"nivel_max": 28.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "SLOWKING"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_124": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "OMASTAR"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "WAILORD"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GOLDUCK"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "LAPRAS"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "KINGDRA"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "TENTACOOL"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "LOMBRE"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "POLITOED"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "WAILORD"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "POLIWRATH"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "TENTACRUEL"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "STARMIE"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "WALREIN"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "GYARADOS"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "KINGDRA"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_125": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "KABUTOPS"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GOLDUCK"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "WAILORD"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "CLOYSTER"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "LAPRAS"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "SPHEAL"
+				},
+				{
+					"nivel_max": 26.0,
+					"nivel_min": 22.0,
+					"nombre_interno": "CLAMPERL"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "OMASTAR"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "POLITOED"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "POLIWRATH"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "STARMIE"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "CLOYSTER"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "WALREIN"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "GYARADOS"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "KINGDRA"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_126": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "TENTACRUEL"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "STARMIE"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "CLOYSTER"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "WALREIN"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "LAPRAS"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "KABUTOPS"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "OMASTAR"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "POLITOED"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "WALREIN"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "LAPRAS"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "MANTINE"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "HUNTAIL"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "WAILORD"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "POLIWRATH"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "GYARADOS"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_127": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "RELICANTH"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "KABUTOPS"
+				},
+				{
+					"nivel_max": 32.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "GOLDUCK"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "TENTACRUEL"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 34.0,
+					"nombre_interno": "KINGDRA"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "MANTINE"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "KABUTOPS"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "TENTACRUEL"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "CLOYSTER"
+				},
+				{
+					"nivel_max": 33.0,
+					"nivel_min": 28.0,
+					"nombre_interno": "WALREIN"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "RELICANTH"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "HUNTAIL"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "POLITOED"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "POLIWRATH"
+				},
+				{
+					"nivel_max": 38.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "LAPRAS"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_128": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SLOWKING"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "TENTACRUEL"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "STARMIE"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "WALREIN"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "GYARADOS"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "OMASTAR"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "GOLDUCK"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "GOREBYSS"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "GYARADOS"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "KINGDRA"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "WAILMER"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "POLITOED"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "WAILORD"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "STARMIE"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "CLOYSTER"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_129": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "QUAGSIRE"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "PELIPPER"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SLOWBRO"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "POLIWRATH"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "LAPRAS"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "CRAWDAUNT"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "SLOWBRO"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "LANTURN"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "GOLDUCK"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "STARMIE"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "WAILMER"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "RELICANTH"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "MANTINE"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "SLOWKING"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "GYARADOS"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_130": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SHARPEDO"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "DEWGONG"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "KABUTOPS"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "CLOYSTER"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "KINGDRA"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "WYNAUT"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "WYNAUT"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "WYNAUT"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 40.0,
+					"nombre_interno": "WYNAUT"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "WYNAUT"
+				},
+				{
+					"nivel_max": 45.0,
+					"nivel_min": 45.0,
+					"nombre_interno": "WYNAUT"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "WYNAUT"
+				},
+				{
+					"nivel_max": 50.0,
+					"nivel_min": 50.0,
+					"nombre_interno": "WYNAUT"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "WYNAUT"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "WYNAUT"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "WYNAUT"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "WYNAUT"
+				}
+			],
+			"ratio": 7.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "WHISCASH"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "OMASTAR"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "CORSOLA"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SEADRA"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "POLIWRATH"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "GOREBYSS"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "POLITOED"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "TENTACRUEL"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "WALREIN"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "LAPRAS"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_131": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "LOMBRE"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "AZUMARILL"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "KABUTOPS"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "WAILORD"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "STARMIE"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "CLAMPERL"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "KINGLER"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "OMANYTE"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SEALEO"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SLOWKING"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "CORSOLA"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "LANTURN"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "HUNTAIL"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "GOLDUCK"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "CLOYSTER"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_132": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "QUAGSIRE"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SEAKING"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "LUDICOLO"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "LAPRAS"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "GYARADOS"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "KRABBY"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "LUVDISC"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "POLIWRATH"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "TENTACRUEL"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "KINGDRA"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "POLIWHIRL"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "DEWGONG"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "OCTILLERY"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "GOREBYSS"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "WAILORD"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_133": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "STARYU"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SEADRA"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "HUNTAIL"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "MANTINE"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "SLOWBRO"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "KABUTO"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SEALEO"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "QWILFISH"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "WALREIN"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "QUAGSIRE"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "PELIPPER"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "WHISCASH"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "OMASTAR"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "STARMIE"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_134": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SHARPEDO"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "CRAWDAUNT"
+				},
+				{
+					"nivel_max": 34.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "OCTILLERY"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "SLOWBRO"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 36.0,
+					"nombre_interno": "GYARADOS"
+				}
+			],
+			"ratio": 1.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "SEEL"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "TENTACOOL"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "CLAMPERL"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "LUDICOLO"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SLOWKING"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "WAILMER"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "LANTURN"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "DEWGONG"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "RELICANTH"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 33.0,
+					"nombre_interno": "TENTACRUEL"
+				}
+			],
+			"ratio": 10.0
+		}
+	},
+	"ruta_201": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "WOOPER"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "LOTAD"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "SURSKIT"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "WINGULL"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "PSYDUCK"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "CASCOON"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "SILCOON"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "LEDYBA"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "NUMEL"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "NATU"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "ODDISH"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "GRIMER"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 13.0,
+					"nombre_interno": "TEDDIURSA"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "KOFFING"
+				},
+				{
+					"nivel_max": 14.0,
+					"nivel_min": 14.0,
+					"nombre_interno": "ANORITH"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "NIDORINA"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "FLAAFFY"
+				}
+			],
+			"ratio": 7.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 9.0,
+					"nombre_interno": "MAGIKARP"
+				},
+				{
+					"nivel_max": 13.0,
+					"nivel_min": 9.0,
+					"nombre_interno": "WINGULL"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "SPHEAL"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "REMORAID"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "SLOWPOKE"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "WOOPER"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "BARBOACH"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "HORSEA"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SHELLDER"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "CORPHISH"
+				}
+			],
+			"ratio": 11.0
+		}
+	},
+	"ruta_202": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "SURSKIT"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "POLIWAG"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "REMORAID"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "CARVANHA"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "CHINCHOU"
+				}
+			],
+			"ratio": 1.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "KIRLIA"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "PINECO"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "ELECTRIKE"
+				},
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "MANKEY"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "GRIMER"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "VIBRAVA"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 16.0,
+					"nombre_interno": "SKIPLOOM"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "AIPOM"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "FARFETCHD"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "LICKITUNG"
+				},
+				{
+					"nivel_max": 17.0,
+					"nivel_min": 17.0,
+					"nombre_interno": "WEEPINBELL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "BEAUTIFLY"
+				}
+			],
+			"ratio": 7.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "WINGULL"
+				},
+				{
+					"nivel_max": 16.0,
+					"nivel_min": 12.0,
+					"nombre_interno": "HORSEA"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "MARILL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "CORPHISH"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "TENTACOOL"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "SURSKIT"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "BARBOACH"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "CHINCHOU"
+				},
+				{
+					"nivel_max": 18.0,
+					"nivel_min": 18.0,
+					"nombre_interno": "KABUTO"
+				}
+			],
+			"ratio": 11.0
+		}
+	},
+	"villa_raiz": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "MAGIKARP"
+				}
+			],
+			"ratio": 11.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "WURMPLE"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "WEEDLE"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "KAKUNA"
+				},
+				{
+					"nivel_max": 5.0,
+					"nivel_min": 2.0,
+					"nombre_interno": "SEEDOT"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "SPINARAK"
+				},
+				{
+					"nivel_max": 6.0,
+					"nivel_min": 3.0,
+					"nombre_interno": "HOOTHOOT"
+				},
+				{
+					"nivel_max": 9.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "JIGGLYPUFF"
+				},
+				{
+					"nivel_max": 9.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "PARAS"
+				},
+				{
+					"nivel_max": 9.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "PINECO"
+				},
+				{
+					"nivel_max": 9.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "SWABLU"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "EXEGGCUTE"
+				},
+				{
+					"nivel_max": 12.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "NUZLEAF"
+				}
+			],
+			"ratio": 7.0
+		}
+	},
+	"zona_safari_1": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "GOLDUCK"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GOLDUCK"
+				}
+			],
+			"ratio": 3.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "RHYHORN"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "ODDISH"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "RHYHORN"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "ODDISH"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "DODUO"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "GLOOM"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "GLOOM"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "DODUO"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "DODRIO"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "PINSIR"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "DODRIO"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "PINSIR"
+				}
+			],
+			"ratio": 8.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "MAGIKARP"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "MAGIKARP"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SEAKING"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "SEAKING"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SEAKING"
+				}
+			],
+			"ratio": 12.0
+		}
+	},
+	"zona_safari_2": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "PHANPY"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "ODDISH"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "PHANPY"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "ODDISH"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "NATU"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "GLOOM"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "GLOOM"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "NATU"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "XATU"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "HERACROSS"
+				},
+				{
+					"nivel_max": 31.0,
+					"nivel_min": 31.0,
+					"nombre_interno": "XATU"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "HERACROSS"
+				}
+			],
+			"ratio": 8.0
+		},
+		"roca": {
+			"encuentros": [
+				{
+					"nivel_max": 15.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "GEODUDE"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "GEODUDE"
+				},
+				{
+					"nivel_max": 20.0,
+					"nivel_min": 15.0,
+					"nombre_interno": "GEODUDE"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "GEODUDE"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GEODUDE"
+				}
+			],
+			"ratio": 13.89
+		}
+	},
+	"zona_safari_3": {
+		"agua": {
+			"encuentros": [
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 20.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "PSYDUCK"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "PSYDUCK"
+				}
+			],
+			"ratio": 3.0
+		},
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "ODDISH"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "ODDISH"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GIRAFARIG"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "GIRAFARIG"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "NATU"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "DODUO"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GLOOM"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "WOBBUFFET"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "PIKACHU"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "WOBBUFFET"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "PIKACHU"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "WOBBUFFET"
+				}
+			],
+			"ratio": 8.0
+		},
+		"pesca": {
+			"encuentros": [
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "MAGIKARP"
+				},
+				{
+					"nivel_max": 10.0,
+					"nivel_min": 5.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "MAGIKARP"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 10.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "GOLDEEN"
+				},
+				{
+					"nivel_max": 35.0,
+					"nivel_min": 30.0,
+					"nombre_interno": "SEAKING"
+				},
+				{
+					"nivel_max": 40.0,
+					"nivel_min": 35.0,
+					"nombre_interno": "SEAKING"
+				},
+				{
+					"nivel_max": 30.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "SEAKING"
+				}
+			],
+			"ratio": 12.0
+		}
+	},
+	"zona_safari_4": {
+		"hierba": {
+			"encuentros": [
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "ODDISH"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "ODDISH"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GIRAFARIG"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "GIRAFARIG"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "NATU"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "DODUO"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "GLOOM"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "WOBBUFFET"
+				},
+				{
+					"nivel_max": 25.0,
+					"nivel_min": 25.0,
+					"nombre_interno": "PIKACHU"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "WOBBUFFET"
+				},
+				{
+					"nivel_max": 27.0,
+					"nivel_min": 27.0,
+					"nombre_interno": "PIKACHU"
+				},
+				{
+					"nivel_max": 29.0,
+					"nivel_min": 29.0,
+					"nombre_interno": "WOBBUFFET"
+				}
+			],
+			"ratio": 8.0
+		}
+	}
+}

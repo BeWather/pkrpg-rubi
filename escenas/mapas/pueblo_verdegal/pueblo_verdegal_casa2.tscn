@@ -1,0 +1,254 @@
+[gd_scene format=4 uid="uid://c1u75bivc4rhn"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_734et"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_mvwxo"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_47i5i"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_5dduh"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="4_mvwxo"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="20_npcbase"]
+[ext_resource type="Script" uid="uid://dmy4ir5m1ul04" path="res://scripts/npc/npc_dialogo_condicional.gd" id="21_condicional"]
+[ext_resource type="SpriteFrames" uid="uid://b4mj7km5ppxw6" path="res://escenas/avatares/npc_039.tres" id="22_npc039"]
+[ext_resource type="SpriteFrames" uid="uid://bekclhrhmq4q7" path="res://escenas/avatares/npc_063.tres" id="23_npc063"]
+[ext_resource type="SpriteFrames" uid="uid://ct3gr3wlu1nb" path="res://escenas/avatares/npc_054.tres" id="24_npc054"]
+[ext_resource type="SpriteFrames" uid="uid://c6lw4imugjphu" path="res://escenas/avatares/npc_047.tres" id="25_npc047"]
+[ext_resource type="SpriteFrames" uid="uid://br8ndfy138tgu" path="res://escenas/avatares/npc_049.tres" id="26_npc049"]
+
+[node name="Casa1" type="Node2D" unique_id=354341773]
+script = ExtResource("1_734et")
+seccion = "PUEBLO_VERDEGAL"
+esInterior = true
+mapa_exterior_asociado = "PUEBLO_VERDEGAL"
+solo_caminar = true
+musica_mapa = "PUEBLO_VERDEGAL"
+metadata/esInterior = true
+
+[node name="Salon" type="TileMapLayer" parent="." unique_id=57828633]
+tile_map_data = PackedByteArray("AAAAAAAAAAAFAAAAAAAAAAEAAAAEAA0AAAAAAAIAAAAEAA4AAAABAAAAAAAFAAAAAAABAAEAAAAFAA0AAAABAAIAAAAFAA4AAAACAAAAAAAAAA8AAAACAAIAAAAAABEAAAACAAEAAAAAABAAAAADAAAAAAABAA8AAAADAAEAAAABABAAAAAEAAAAAAACAA8AAAAEAAEAAAACABAAAAAFAAAAAAAFAAAAAAAFAAEAAAAFAAEAAAAGAAAAAAAFAAAAAAAGAAEAAAAFAAEAAAAHAAAAAAAGAAAAAAAIAAAAAAAFAAAAAAAJAAAAAAAFAAAAAAAHAAEAAAAGAAEAAAAHAAIAAAAEAAQAAAAIAAEAAAAFAAEAAAAIAAIAAAAEAAQAAAAJAAEAAAAFAAEAAAAJAAIAAAAEAAQAAAAKAAAAAAAGAA0AAAAKAAEAAAAGAA4AAAAKAAIAAAAGAA8AAAAFAAQAAAACABwAAAAFAAUAAAACABwAAAAGAAQAAAAHAAcAAAAGAAUAAAAHAAcAAAAHAAQAAAADAAQAAAAHAAUAAAADAAQAAAAEAAQAAAABAAkAAAAEAAUAAAABAAoAAAAGAAIAAAAEAAQAAAAFAAIAAAAEAAQAAAAEAAIAAAACABEAAAADAAIAAAABABEAAAAFAAcAAAADAAQAAAACAAcAAAADAAQAAAABAAcAAAADAAQAAAABAAYAAAAFAAgAAAABAAUAAAAFAAcAAAABAAQAAAAFAAcAAAABAAMAAAAFAAYAAAACAAMAAAAGAAYAAAADAAMAAAAGAAYAAAAEAAMAAAAGAAYAAAAFAAMAAAAGAAYAAAAGAAMAAAAHAAYAAAAHAAMAAAADAAQAAAAIAAMAAAADAAQAAAAJAAMAAAADAAQAAAAKAAMAAAADAAQAAAAKAAQAAAADAAQAAAAKAAUAAAADAAQAAAAKAAYAAAADAAQAAAAJAAcAAAADAAQAAAAIAAcAAAABAAEAAAAHAAcAAAAAAAEAAAAGAAcAAAADAAQAAAACAAYAAAAGAAgAAAACAAUAAAABABwAAAACAAQAAAABABwAAAADAAQAAAAAAAkAAAADAAUAAAAAAAoAAAADAAYAAAAGAAgAAAAEAAYAAAAGAAgAAAAFAAYAAAAGAAgAAAAGAAYAAAAHAAgAAAAHAAYAAAADAAQAAAAIAAYAAAADAAQAAAAJAAYAAAADAAQAAAAJAAUAAAADAAQAAAAJAAQAAAADAAQAAAAIAAQAAAADAAQAAAAIAAUAAAADAAQAAAAAAAMAAAABAAcAAAAAAAQAAAABAAcAAAAAAAUAAAABAAcAAAAAAAYAAAABAAcAAAAAAAcAAAABABMAAAALAAAAAAAHAA0AAAALAAEAAAAHAA4AAAALAAIAAAAHAA8AAAANAAEAAAABAA0AAAANAAIAAAABAA4AAAAQAAAAAAAGAAAAAAAQAAEAAAAGAAEAAAAPAAAAAAAFAAAAAAAPAAEAAAADABkAAAAOAAAAAAAFAAAAAAAOAAEAAAACABkAAAANAAAAAAAFAAAAAAAMAAAAAAAAAB8AAAAMAAEAAAAAACAAAAAMAAIAAAAAACAAAAAMAAMAAAAAACAAAAAMAAQAAAAAACEAAAAMAAUAAAAAACIAAAAMAAYAAAAFAAUAAAAMAAcAAAADAAQAAAANAAYAAAAHAAUAAAANAAcAAAADAAQAAAANAAMAAAABAAcAAAANAAQAAAABAAcAAAANAAUAAAABAAcAAAAOAAIAAAACABoAAAAOAAMAAAACABsAAAAPAAIAAAADABoAAAAPAAMAAAADABsAAAAQAAIAAAAEABoAAAAQAAMAAAAEABsAAAALAAMAAAAEAAUAAAALAAQAAAADAAQAAAALAAUAAAADAAQAAAALAAYAAAADAAQAAAALAAcAAAADAAQAAAAOAAcAAAADAAQAAAAOAAYAAAADAAQAAAAOAAUAAAADAAQAAAAOAAQAAAADAAQAAAAPAAQAAAADAAQAAAAQAAQAAAADAAQAAAAQAAUAAAAEAAUAAAAPAAUAAAADAAQAAAAPAAYAAAADAAQAAAAPAAcAAAADAAQAAAAQAAcAAAACAAUAAAAQAAYAAAADAAQAAAAKAAcAAAADAAQAAAAEAAcAAAADAAQAAAADAAcAAAADAAQAAAA=")
+tile_set = ExtResource("2_mvwxo")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Salon2" type="TileMapLayer" parent="." unique_id=1294792859]
+tile_map_data = PackedByteArray("AAAAAAYAAAACAAcAAAAQAAYAAAACAAcAAAA=")
+tile_set = ExtResource("2_mvwxo")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=2141994963]
+position = Vector2(120, 118)
+script = ExtResource("3_47i5i")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_verdegal"
+posicion_destino = Vector2(10, 14)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=131441377]
+position = Vector2(136, 118)
+script = ExtResource("3_47i5i")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_verdegal"
+posicion_destino = Vector2(10, 14)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=500566910]
+
+[node name="Cartel" type="Sprite2D" parent="Carteles" unique_id=287577289 groups=["Cartel"]]
+position = Vector2(168, 24)
+script = ExtResource("4_mvwxo")
+id_texto = "MUCHOS_LIBROS"
+coord_tile = Vector2i(10, 1)
+
+[node name="Cartel2" type="Sprite2D" parent="Carteles" unique_id=1685516610 groups=["Cartel"]]
+position = Vector2(184, 24)
+script = ExtResource("4_mvwxo")
+id_texto = "MUCHOS_LIBROS"
+coord_tile = Vector2i(11, 1)
+
+[node name="Cartel3" type="Sprite2D" parent="Carteles" unique_id=1618547588 groups=["Cartel"]]
+position = Vector2(216, 24)
+script = ExtResource("4_mvwxo")
+id_texto = "LIBROS_ILUSTRADOS"
+coord_tile = Vector2i(13, 1)
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1279193827]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Blasco" parent="NPCs" unique_id=823989678 instance=ExtResource("20_npcbase")]
+editor_description = "pokeruby VerdanturfTown_WandasHouse objeto 1 (14,5) WALLY WANDER_AROUND (1,1). FLAG_HIDE_WALLY_WANDAS_HOUSE: aparece al vencerlo en MALVALONA y se va tras la 4.ª medalla; FLAG_WALLY_SPEECH = primer discurso"
+position = Vector2(232, 94)
+script = ExtResource("21_condicional")
+textos_condicionales = Dictionary[String, String]({})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "VERDEGAL_CLARA_BLASCO_2"
+id_texto_primera_vez = "VERDEGAL_CLARA_BLASCO_1"
+bandera_primera_vez = "verdegal_blasco_discurso"
+bandera_ocultar = "MEDALLA_4"
+bandera_mostrar = "malvalona_blasco_vencido"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("22_npc039")
+coord = Vector2i(14, 5)
+
+[node name="Novio" parent="NPCs" unique_id=1113556054 instance=ExtResource("20_npcbase")]
+editor_description = "pokeruby VerdanturfTown_WandasHouse objeto 2 (5,4) BLACK_BELT FACE_DOWN. FLAG_HIDE_BOYFRIEND_WANDAS_HOUSE (inversa: SetRusturfTunnelOpen)"
+position = Vector2(88, 78)
+id_texto = "VERDEGAL_CLARA_NOVIO"
+bandera_mostrar = "verdegal_casa_clara_novio_presente"
+selec_frames = ExtResource("23_npc063")
+coord = Vector2i(5, 4)
+
+[node name="Tio" parent="NPCs" unique_id=1207207111 instance=ExtResource("20_npcbase")]
+editor_description = "pokeruby VerdanturfTown_WandasHouse objeto 3 (7,2) MAN_3 FACE_DOWN. FLAG_HIDE_WALLY_FATHER_WANDAS_HOUSE (aparece al vencer a BLASCO en MALVALONA)"
+position = Vector2(120, 46)
+script = ExtResource("21_condicional")
+textos_condicionales = Dictionary[String, String]({
+"1:calle_victoria_blasco_vencido": "VERDEGAL_CLARA_TIO_3",
+"2:MEDALLA_4": "VERDEGAL_CLARA_TIO_2"
+})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "VERDEGAL_CLARA_TIO_1"
+bandera_mostrar = "malvalona_blasco_vencido"
+selec_frames = ExtResource("24_npc054")
+coord = Vector2i(7, 2)
+
+[node name="Tia" parent="NPCs" unique_id=1659127837 instance=ExtResource("20_npcbase")]
+editor_description = "pokeruby VerdanturfTown_WandasHouse objeto 4 (2,4) WOMAN_2 FACE_RIGHT"
+position = Vector2(40, 78)
+script = ExtResource("21_condicional")
+textos_condicionales = Dictionary[String, String]({
+"1:calle_victoria_blasco_vencido": "VERDEGAL_CLARA_TIA_4",
+"2:MEDALLA_4": "VERDEGAL_CLARA_TIA_3",
+"3:tunel_fervergal_abierto": "VERDEGAL_CLARA_TIA_2"
+})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "VERDEGAL_CLARA_TIA_1"
+tipo_movimiento = 10
+selec_frames = ExtResource("25_npc047")
+coord = Vector2i(2, 4)
+
+[node name="Clara" parent="NPCs" unique_id=1901410637 instance=ExtResource("20_npcbase")]
+editor_description = "pokeruby VerdanturfTown_WandasHouse objeto 5 (5,5) WOMAN_3 FACE_LEFT. FLAG_HIDE_GIRLFRIEND_WANDAS_HOUSE (inversa: SetRusturfTunnelOpen)"
+position = Vector2(88, 94)
+script = ExtResource("21_condicional")
+textos_condicionales = Dictionary[String, String]({
+"1:MEDALLA_4": "VERDEGAL_CLARA_CLARA_2",
+"2:malvalona_blasco_vencido": "VERDEGAL_CLARA_CLARA_1"
+})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "VERDEGAL_CLARA_CLARA_2"
+bandera_mostrar = "verdegal_casa_clara_novia_presente"
+tipo_movimiento = 9
+selec_frames = ExtResource("26_npc049")
+coord = Vector2i(5, 5)
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=860194251]
+script = ExtResource("4_5dduh")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,2": {
+"flags": 1
+},
+"12,3": {
+"flags": 1
+},
+"12,4": {
+"flags": 1
+},
+"12,5": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"14,1": {
+"flags": 1
+},
+"15,1": {
+"flags": 1
+},
+"15,2": {
+"flags": 1
+},
+"15,3": {
+"flags": 1
+},
+"16,1": {
+"flags": 1
+},
+"16,7": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,4": {
+"flags": 1
+},
+"3,5": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,4": {
+"flags": 1
+},
+"4,5": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Eventos" type="Node2D" parent="." unique_id=812675908]

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/clima/efecto_sol_fuerte.gd" id="1"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_aditivo"]
+blend_mode = 1
+
+[node name="SolFuerte" type="Control"]
+material = SubResource("CanvasItemMaterial_aditivo")
+mouse_filter = 2
+script = ExtResource("1")

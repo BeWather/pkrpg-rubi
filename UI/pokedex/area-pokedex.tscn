@@ -1,0 +1,64 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://bywqr3okjvsy3" path="res://UI/pokedex/area_pokedex.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://cv8spt3dh1mk7" path="res://UI/mapa_region/region_hoenn.tscn" id="2_mapa"]
+[ext_resource type="Shader" uid="uid://cwutsy0r0i7lw" path="res://UI/pokedex/brillo_area.gdshader" id="3_shader"]
+[ext_resource type="Texture2D" uid="uid://v6kexaw8rq10" path="res://UI/menu_box_1.png" id="4_marco"]
+[ext_resource type="LabelSettings" uid="uid://dloc0dcjbkv2v" path="res://UI/texto_normal_negro.tres" id="5_texto"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_brillo"]
+resource_local_to_scene = true
+shader = ExtResource("3_shader")
+shader_parameter/eva = 0.0
+shader_parameter/evb = 1.0
+
+[node name="AreaPokedex" type="Control"]
+texture_filter = 1
+clip_contents = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="Mapa" parent="." instance=ExtResource("2_mapa")]
+offset_top = 9.0
+offset_bottom = 9.0
+
+[node name="Brillo" type="Node2D" parent="."]
+material = SubResource("ShaderMaterial_brillo")
+
+[node name="Marcadores" type="Node2D" parent="."]
+
+[node name="Desconocida" type="NinePatchRect" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 145.0
+offset_top = 125.0
+offset_right = 231.0
+offset_bottom = 155.0
+texture = ExtResource("4_marco")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Texto" type="Label" parent="Desconocida"]
+layout_mode = 0
+offset_top = 7.0
+offset_right = 86.0
+offset_bottom = 23.0
+text = "DESCONOCIDA"
+label_settings = ExtResource("5_texto")
+horizontal_alignment = 1
+
+[node name="Fundido" type="ColorRect" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)

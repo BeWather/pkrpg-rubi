@@ -1,0 +1,176 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/licuadora/elemento_licuadora.gd" id="1_script"]
+
+[sub_resource type="Animation" id="Animation_lanzar_0"]
+resource_name = "lanzar_0"
+length = 0.9167
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Baya:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0167, 0.0333, 0.05, 0.0667, 0.0833, 0.1, 0.1167, 0.1333, 0.15, 0.1667, 0.1833, 0.2, 0.2167, 0.2333, 0.25, 0.2667, 0.2833, 0.3, 0.3167, 0.3333, 0.35, 0.3667, 0.3833, 0.4, 0.4167, 0.4333, 0.45, 0.4667, 0.4833, 0.5, 0.5167, 0.5333, 0.55, 0.5667, 0.5833, 0.6, 0.6167, 0.6333, 0.65, 0.6667, 0.6833, 0.7, 0.7167, 0.7333, 0.75, 0.7667, 0.7833, 0.8, 0.8167, 0.8333, 0.85, 0.8667, 0.8833, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-10, 20), Vector2(-8, 11), Vector2(-6, 3), Vector2(-4, -4), Vector2(-2, -10), Vector2(0, -15), Vector2(2, -19), Vector2(4, -22), Vector2(6, -24), Vector2(8, -25), Vector2(10, -25), Vector2(12, -24), Vector2(14, -22), Vector2(16, -19), Vector2(18, -15), Vector2(20, -10), Vector2(22, -4), Vector2(24, 3), Vector2(26, 11), Vector2(28, 20), Vector2(30, 30), Vector2(32, 41), Vector2(34, 53), Vector2(36, 45), Vector2(38, 38), Vector2(40, 32), Vector2(42, 27), Vector2(44, 23), Vector2(46, 20), Vector2(48, 18), Vector2(50, 17), Vector2(52, 17), Vector2(54, 18), Vector2(56, 20), Vector2(58, 23), Vector2(60, 27), Vector2(62, 32), Vector2(64, 38), Vector2(66, 45), Vector2(68, 53), Vector2(70, 62), Vector2(72, 56), Vector2(74, 51), Vector2(76, 47), Vector2(78, 44), Vector2(80, 42), Vector2(82, 41), Vector2(84, 41), Vector2(86, 42), Vector2(88, 44), Vector2(90, 47), Vector2(92, 51), Vector2(94, 56), Vector2(96, 62), Vector2(98, 69)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3667, 0.3833, 0.6667, 0.9167),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": ["SE_BALL_TRAY_EXIT"],
+"method": &"emitir_sonido"
+}, {
+"args": ["SE_BALL_TRAY_EXIT"],
+"method": &"emitir_sonido"
+}, {
+"args": ["SE_BALL_TRAY_EXIT"],
+"method": &"emitir_sonido"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_lanzar_1"]
+resource_name = "lanzar_1"
+length = 0.9167
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Baya:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0167, 0.0333, 0.05, 0.0667, 0.0833, 0.1, 0.1167, 0.1333, 0.15, 0.1667, 0.1833, 0.2, 0.2167, 0.2333, 0.25, 0.2667, 0.2833, 0.3, 0.3167, 0.3333, 0.35, 0.3667, 0.3833, 0.4, 0.4167, 0.4333, 0.45, 0.4667, 0.4833, 0.5, 0.5167, 0.5333, 0.55, 0.5667, 0.5833, 0.6, 0.6167, 0.6333, 0.65, 0.6667, 0.6833, 0.7, 0.7167, 0.7333, 0.75, 0.7667, 0.7833, 0.8, 0.8167, 0.8333, 0.85, 0.8667, 0.8833, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(250, 20), Vector2(248, 11), Vector2(246, 3), Vector2(244, -4), Vector2(242, -10), Vector2(240, -15), Vector2(238, -19), Vector2(236, -22), Vector2(234, -24), Vector2(232, -25), Vector2(230, -25), Vector2(228, -24), Vector2(226, -22), Vector2(224, -19), Vector2(222, -15), Vector2(220, -10), Vector2(218, -4), Vector2(216, 3), Vector2(214, 11), Vector2(212, 20), Vector2(210, 30), Vector2(208, 41), Vector2(206, 53), Vector2(204, 45), Vector2(202, 38), Vector2(200, 32), Vector2(198, 27), Vector2(196, 23), Vector2(194, 20), Vector2(192, 18), Vector2(190, 17), Vector2(188, 17), Vector2(186, 18), Vector2(184, 20), Vector2(182, 23), Vector2(180, 27), Vector2(178, 32), Vector2(176, 38), Vector2(174, 45), Vector2(172, 53), Vector2(170, 62), Vector2(168, 56), Vector2(166, 51), Vector2(164, 47), Vector2(162, 44), Vector2(160, 42), Vector2(158, 41), Vector2(156, 41), Vector2(154, 42), Vector2(152, 44), Vector2(150, 47), Vector2(148, 51), Vector2(146, 56), Vector2(144, 62), Vector2(142, 69)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3667, 0.3833, 0.6667, 0.9167),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": ["SE_BALL_TRAY_EXIT"],
+"method": &"emitir_sonido"
+}, {
+"args": ["SE_BALL_TRAY_EXIT"],
+"method": &"emitir_sonido"
+}, {
+"args": ["SE_BALL_TRAY_EXIT"],
+"method": &"emitir_sonido"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_lanzar_2"]
+resource_name = "lanzar_2"
+length = 0.9167
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Baya:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0167, 0.0333, 0.05, 0.0667, 0.0833, 0.1, 0.1167, 0.1333, 0.15, 0.1667, 0.1833, 0.2, 0.2167, 0.2333, 0.25, 0.2667, 0.2833, 0.3, 0.3167, 0.3333, 0.35, 0.3667, 0.3833, 0.4, 0.4167, 0.4333, 0.45, 0.4667, 0.4833, 0.5, 0.5167, 0.5333, 0.55, 0.5667, 0.5833, 0.6, 0.6167, 0.6333, 0.65, 0.6667, 0.6833, 0.7, 0.7167, 0.7333, 0.75, 0.7667, 0.7833, 0.8, 0.8167, 0.8333, 0.85, 0.8667, 0.8833, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-10, 140), Vector2(-8, 129), Vector2(-6, 119), Vector2(-4, 110), Vector2(-2, 102), Vector2(0, 95), Vector2(2, 89), Vector2(4, 84), Vector2(6, 80), Vector2(8, 77), Vector2(10, 75), Vector2(12, 74), Vector2(14, 74), Vector2(16, 75), Vector2(18, 77), Vector2(20, 80), Vector2(22, 84), Vector2(24, 89), Vector2(26, 95), Vector2(28, 102), Vector2(30, 110), Vector2(32, 119), Vector2(34, 129), Vector2(36, 119), Vector2(38, 110), Vector2(40, 102), Vector2(42, 95), Vector2(44, 89), Vector2(46, 84), Vector2(48, 80), Vector2(50, 77), Vector2(52, 75), Vector2(54, 74), Vector2(56, 74), Vector2(58, 75), Vector2(60, 77), Vector2(62, 80), Vector2(64, 84), Vector2(66, 89), Vector2(68, 95), Vector2(70, 102), Vector2(72, 94), Vector2(74, 87), Vector2(76, 81), Vector2(78, 76), Vector2(80, 72), Vector2(82, 69), Vector2(84, 67), Vector2(86, 66), Vector2(88, 66), Vector2(90, 67), Vector2(92, 69), Vector2(94, 72), Vector2(96, 76), Vector2(98, 81)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3667, 0.3833, 0.6667, 0.9167),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": ["SE_BALL_TRAY_EXIT"],
+"method": &"emitir_sonido"
+}, {
+"args": ["SE_BALL_TRAY_EXIT"],
+"method": &"emitir_sonido"
+}, {
+"args": ["SE_BALL_TRAY_EXIT"],
+"method": &"emitir_sonido"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_lanzar_3"]
+resource_name = "lanzar_3"
+length = 0.9167
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Baya:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0167, 0.0333, 0.05, 0.0667, 0.0833, 0.1, 0.1167, 0.1333, 0.15, 0.1667, 0.1833, 0.2, 0.2167, 0.2333, 0.25, 0.2667, 0.2833, 0.3, 0.3167, 0.3333, 0.35, 0.3667, 0.3833, 0.4, 0.4167, 0.4333, 0.45, 0.4667, 0.4833, 0.5, 0.5167, 0.5333, 0.55, 0.5667, 0.5833, 0.6, 0.6167, 0.6333, 0.65, 0.6667, 0.6833, 0.7, 0.7167, 0.7333, 0.75, 0.7667, 0.7833, 0.8, 0.8167, 0.8333, 0.85, 0.8667, 0.8833, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(250, 140), Vector2(248, 129), Vector2(246, 119), Vector2(244, 110), Vector2(242, 102), Vector2(240, 95), Vector2(238, 89), Vector2(236, 84), Vector2(234, 80), Vector2(232, 77), Vector2(230, 75), Vector2(228, 74), Vector2(226, 74), Vector2(224, 75), Vector2(222, 77), Vector2(220, 80), Vector2(218, 84), Vector2(216, 89), Vector2(214, 95), Vector2(212, 102), Vector2(210, 110), Vector2(208, 119), Vector2(206, 129), Vector2(204, 119), Vector2(202, 110), Vector2(200, 102), Vector2(198, 95), Vector2(196, 89), Vector2(194, 84), Vector2(192, 80), Vector2(190, 77), Vector2(188, 75), Vector2(186, 74), Vector2(184, 74), Vector2(182, 75), Vector2(180, 77), Vector2(178, 80), Vector2(176, 84), Vector2(174, 89), Vector2(172, 95), Vector2(170, 102), Vector2(168, 94), Vector2(166, 87), Vector2(164, 81), Vector2(162, 76), Vector2(160, 72), Vector2(158, 69), Vector2(156, 67), Vector2(154, 66), Vector2(152, 66), Vector2(150, 67), Vector2(148, 69), Vector2(146, 72), Vector2(144, 76), Vector2(142, 81)]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.3667, 0.3833, 0.6667, 0.9167),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": ["SE_BALL_TRAY_EXIT"],
+"method": &"emitir_sonido"
+}, {
+"args": ["SE_BALL_TRAY_EXIT"],
+"method": &"emitir_sonido"
+}, {
+"args": ["SE_BALL_TRAY_EXIT"],
+"method": &"emitir_sonido"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1"]
+_data = {&"lanzar_0": SubResource("Animation_lanzar_0"), &"lanzar_1": SubResource("Animation_lanzar_1"), &"lanzar_2": SubResource("Animation_lanzar_2"), &"lanzar_3": SubResource("Animation_lanzar_3")}
+
+[node name="BayaLanzada" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="Baya" type="Sprite2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1")
+}

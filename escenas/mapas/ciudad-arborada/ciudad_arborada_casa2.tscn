@@ -1,0 +1,120 @@
+[gd_scene format=4 uid="uid://b5l6yh4aisfog"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_udewl"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_jreby"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_ol20h"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_vsftg"]
+[ext_resource type="SpriteFrames" uid="uid://c6lw4imugjphu" path="res://escenas/avatares/npc_047.tres" id="ar_f_047"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="ar_npc_base"]
+[ext_resource type="Script" uid="uid://cgpmomq3542yj" path="res://scripts/npc/npc_pokemon.gd" id="ar_s_pokemon"]
+[ext_resource type="SpriteFrames" uid="uid://8w2k47jvgnym" path="res://escenas/avatares/npc_zigzagoon.tres" id="ar_f_zigzagoon"]
+[ext_resource type="SpriteFrames" uid="uid://q6liftwxrkde" path="res://escenas/avatares/npc_048.tres" id="ar_f_048"]
+
+[node name="Casa" type="Node2D" unique_id=1201946613]
+script = ExtResource("1_udewl")
+nombre_interno = "ciudad_arborada_casa2"
+seccion = "CIUDAD_ARBORADA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_ARBORADA"
+solo_caminar = true
+musica_mapa = "CIUDAD_ARBORADA"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=997252449]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADkAAAABAAAAAAABADkAAAACAAAAAAABADkAAAADAAAAAAAGADcAAAAEAAAAAAAHADcAAAAGAAAAAAABADkAAAAHAAAAAAACADkAAAAFAAAAAAABADkAAAADAAEAAAAGADcAAAAEAAEAAAAHADcAAAADAAIAAAAGADcAAAAEAAIAAAAHADcAAAADAAMAAAAGADgAAAAEAAMAAAAHADgAAAAHAAEAAAACADoAAAAHAAIAAAACADsAAAAAAAEAAAAAADoAAAAAAAIAAAAAADsAAAAGAAEAAAABADoAAAAGAAIAAAABADsAAAAFAAEAAAABADoAAAAFAAIAAAADADsAAAACAAIAAAAEADsAAAACAAMAAAAEADsAAAACAAEAAAABADoAAAABAAEAAAAAADUAAAABAAIAAAAAAD0AAAACAAUAAAABADsAAAACAAQAAAABADsAAAADAAQAAAABADsAAAAEAAQAAAABADsAAAAFAAQAAAABADsAAAAFAAUAAAABADsAAAAFAAMAAAADADsAAAAHAAMAAAABADsAAAAGAAMAAAABADsAAAAGAAQAAAABADsAAAAHAAQAAAABADsAAAAGAAUAAAABADsAAAABAAUAAAABADsAAAABAAQAAAABADsAAAAAAAQAAAABADsAAAAAAAMAAAABADsAAAABAAMAAAABADsAAAAAAAUAAAABADsAAAAHAAUAAAABADsAAAADAAUAAAAEADoAAAAEAAUAAAAFADoAAAA=")
+tile_set = ExtResource("2_jreby")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=863292143]
+tile_map_data = PackedByteArray("AAAAAAUAAAAIADcAAAAHAAUAAAAJADcAAAA=")
+tile_set = ExtResource("2_jreby")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=575270243]
+z_index = 1
+y_sort_enabled = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=248948740]
+script = ExtResource("3_ol20h")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"3,3": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"4,3": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1543604165]
+position = Vector2(56, 86)
+script = ExtResource("4_vsftg")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_arborada"
+posicion_destino = Vector2(12, 13)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1119012595]
+position = Vector2(72, 86)
+script = ExtResource("4_vsftg")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_arborada"
+posicion_destino = Vector2(12, 13)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Mujer" parent="NPCs" unique_id=313949796 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_House5 objeto 1 (6,4) WOMAN_2 FACE_DOWN_UP_AND_RIGHT"
+position = Vector2(104, 78)
+id_texto = "ARBORADA_CASA2_MUJER"
+tipo_movimiento = 40
+selec_frames = ExtResource("ar_f_047")
+coord = Vector2i(6, 4)
+
+[node name="Zigzagoon" parent="NPCs" unique_id=514729576 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_House5 objeto 2 (6,3) ZIGZAGOON FACE_DOWN, playmoncry"
+position = Vector2(104, 62)
+script = ExtResource("ar_s_pokemon")
+tamano_sprite = 3
+numero_nacional = 263
+id_texto = "ARBORADA_CASA2_ZIGZAGOON"
+tipo_movimiento = 8
+selec_frames = ExtResource("ar_f_zigzagoon")
+coord = Vector2i(6, 3)
+
+[node name="Hombre" parent="NPCs" unique_id=871904801 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_House5 objeto 3 (2,4) MAN_1 FACE_RIGHT"
+position = Vector2(40, 78)
+id_texto = "ARBORADA_CASA2_HOMBRE"
+tipo_movimiento = 10
+selec_frames = ExtResource("ar_f_048")
+coord = Vector2i(2, 4)

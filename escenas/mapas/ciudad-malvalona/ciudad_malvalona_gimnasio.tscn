@@ -1,0 +1,359 @@
+[gd_scene format=4 uid="uid://b33rvsl0sosis"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_8scua"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_a4c3c"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_mrm3l"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_3525e"]
+[ext_resource type="SpriteFrames" uid="uid://dr1hww5bqlubq" path="res://escenas/avatares/npc_012.tres" id="f_npc_012"]
+[ext_resource type="SpriteFrames" uid="uid://ctfpoynxvo8xb" path="res://escenas/avatares/npc_019.tres" id="f_npc_019"]
+[ext_resource type="SpriteFrames" uid="uid://dlgsjg2806wak" path="res://escenas/avatares/npc_029.tres" id="f_npc_029"]
+[ext_resource type="SpriteFrames" uid="uid://bmiijupbogopu" path="res://escenas/avatares/npc_052.tres" id="f_npc_052"]
+[ext_resource type="SpriteFrames" uid="uid://nndm2dhyfxo" path="res://escenas/avatares/npc_100.tres" id="f_npc_100"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="npc_base"]
+[ext_resource type="PackedScene" uid="uid://gbm5pvhiq1ej" path="res://escenas/avatares/npc_entrenador.tscn" id="npc_entrenador"]
+[ext_resource type="PackedScene" path="res://escenas/eventos/disparador_evento_por_tiles.tscn" id="p_disparador"]
+[ext_resource type="Script" uid="uid://cdyv0uwwmtud2" path="res://escenas/mapas/cartel_condicional.gd" id="s_cartel_cond"]
+[ext_resource type="Script" uid="uid://dmy4ir5m1ul04" path="res://scripts/npc/npc_dialogo_condicional.gd" id="s_cond"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="s_evento"]
+[ext_resource type="Script" uid="uid://j22100hp6fh0" path="res://scripts/eventos/ciudad_malvalona/evento_gimnasio_malvalona.gd" id="s_gimnasio"]
+[ext_resource type="Script" uid="uid://h5aujcik500x" path="res://scripts/npc/npc_entrenador_gimnasio.gd" id="s_gym"]
+
+[node name="Gimnasio" type="Node2D" unique_id=354341773]
+script = ExtResource("1_8scua")
+nombre_interno = "ciudad_malvalona_gimnasio"
+seccion = "CIUDAD_MALVALONA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_MALVALONA"
+solo_caminar = true
+musica_mapa = "GIMNASIO_POKEMON"
+escena_batalla = 1
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=57828633]
+tile_map_data = PackedByteArray("AAACAAAAAAAQADwAAAADAAAAAAAUAD0AAAAEAAAAAAAUAD0AAAAFAAAAAAAUAD0AAAAGAAAAAAAUAD0AAAAHAAAAAAARADwAAAADAAEAAAARAD0AAAADAAIAAAARAD4AAAAEAAEAAAARAD0AAAAEAAIAAAARAD4AAAAFAAEAAAARAD0AAAAFAAIAAAARAD4AAAAGAAEAAAARAD0AAAAGAAIAAAARAD4AAAADAAMAAAAQADsAAAADAAQAAAAQADsAAAADAAUAAAAQADsAAAADAAYAAAAQADsAAAADAAcAAAAQADsAAAAEAAMAAAAQADsAAAAEAAQAAAAQADsAAAAEAAUAAAAQADsAAAAEAAYAAAAQADsAAAAEAAcAAAAQADsAAAAFAAMAAAAQADsAAAAFAAQAAAAQADsAAAAFAAUAAAAQADsAAAAFAAYAAAAQADsAAAAFAAcAAAAQADsAAAAGAAMAAAAQADsAAAAGAAQAAAAQADsAAAAGAAUAAAAQADsAAAAGAAYAAAAQADsAAAAGAAcAAAAQADsAAAADAAgAAAAQAD4AAAAGAAgAAAAQAD4AAAAFAAgAAAAQADsAAAAEAAgAAAAQADsAAAAHAAYAAAATAD0AAAAHAAcAAAATAD4AAAACAAYAAAAVAD0AAAACAAcAAAAVAD4AAAAHAAEAAAAWAD4AAAAHAAIAAAAWAD4AAAAHAAMAAAAWAD4AAAAHAAQAAAAWAD4AAAAHAAUAAAAWAD4AAAACAAEAAAAXAD4AAAACAAIAAAAXAD4AAAACAAMAAAAXAD4AAAACAAQAAAAXAD4AAAACAAUAAAAXAD4AAAAIAAYAAAAUAD0AAAAIAAcAAAAUAD4AAAAJAAYAAAAUAD0AAAAJAAcAAAAUAD4AAAABAAYAAAAUAD0AAAABAAcAAAAUAD4AAAAAAAYAAAAUAD0AAAAAAAcAAAAUAD4AAAAJAAoAAAATAD0AAAAJAAsAAAATAD4AAAAGAAsAAAAQAD4AAAADAAsAAAAQAD4AAAAAAAsAAAAQAD4AAAAGAA4AAAAQAD4AAAADAA4AAAAQAD4AAAAHAA0AAAATAD0AAAAHAA4AAAATAD4AAAAIAA0AAAAUAD0AAAAIAA4AAAAUAD4AAAAJAA0AAAAUAD0AAAAJAA4AAAAUAD4AAAAAAA0AAAAVAD0AAAAAAA4AAAAVAD4AAAAEAA8AAAAVADsAAAADABIAAAASAD4AAAAGABIAAAASAD4AAAAIABIAAAAWAD4AAAABABIAAAAXAD4AAAAIABMAAAAWAD4AAAAIABQAAAAWAD4AAAABABMAAAAXAD4AAAABABQAAAAXAD4AAAAEABQAAAATADsAAAAFABQAAAAUADsAAAAAABEAAAAQADsAAAABABEAAAAQADsAAAACABEAAAAQADsAAAADABEAAAAQADsAAAAEABEAAAAQADsAAAAFABEAAAAQADsAAAAGABEAAAAQADsAAAAHABEAAAAQADsAAAAIABEAAAAQADsAAAAJABEAAAAQADsAAAAHABIAAAAQADsAAAAHABMAAAAQADsAAAAHABQAAAAQADsAAAAGABQAAAAQADsAAAAGABMAAAAQADsAAAAFABMAAAAQADsAAAAEABMAAAAQADsAAAADABMAAAAQADsAAAACABMAAAAQADsAAAACABQAAAAQADsAAAADABQAAAAQADsAAAAEABIAAAAQADsAAAAFABIAAAAQADsAAAACABIAAAAQADsAAAAJABAAAAAQADsAAAAJAA8AAAAQADsAAAAIAA8AAAAQADsAAAAHAA8AAAAQADsAAAAGAA8AAAAQADsAAAAFAA8AAAAQADsAAAAFABAAAAAQADsAAAAGABAAAAAQADsAAAAHABAAAAAQADsAAAAIABAAAAAQADsAAAAEABAAAAAQADsAAAADABAAAAAQADsAAAACABAAAAAQADsAAAABABAAAAAQADsAAAAAABAAAAAQADsAAAAAAA8AAAAQADsAAAABAA8AAAAQADsAAAACAA8AAAAQADsAAAADAA8AAAAQADsAAAABAAwAAAAQADsAAAABAAsAAAAQADsAAAABAAoAAAAQADsAAAABAAkAAAAQADsAAAABAAgAAAAQADsAAAAAAAgAAAAQADsAAAAAAAkAAAAVADsAAAAAAAoAAAAQADsAAAACAAgAAAAQADsAAAACAAkAAAAQADsAAAACAAoAAAAQADsAAAACAAsAAAAQADsAAAACAAwAAAAQADsAAAACAA0AAAAQADsAAAABAA0AAAAQADsAAAABAA4AAAAQADsAAAACAA4AAAAQADsAAAADAA0AAAAQADsAAAADAAwAAAAQADsAAAAEAAwAAAAQADsAAAAEAAsAAAAQADsAAAAEAAoAAAAQADsAAAAEAAkAAAAQADsAAAADAAkAAAAQADsAAAADAAoAAAAQADsAAAAFAAkAAAAQADsAAAAFAAoAAAAQADsAAAAFAAsAAAAQADsAAAAFAAwAAAAQADsAAAAFAA0AAAAQADsAAAAEAA0AAAAQADsAAAAEAA4AAAAQADsAAAAFAA4AAAAQADsAAAAGAA0AAAAQADsAAAAGAAwAAAAQADsAAAAHAAwAAAAQADsAAAAHAAsAAAAQADsAAAAHAAoAAAAQADsAAAAHAAkAAAAQADsAAAAHAAgAAAAQADsAAAAIAAgAAAAQADsAAAAIAAkAAAAQADsAAAAIAAoAAAAQADsAAAAIAAsAAAAVADsAAAAIAAwAAAAQADsAAAAJAAwAAAAQADsAAAAJAAkAAAAQADsAAAAJAAgAAAAQADsAAAAGAAkAAAAQADsAAAAGAAoAAAAQADsAAAAAAAwAAAAQADsAAAA=")
+tile_set = ExtResource("2_a4c3c")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=1294792859]
+tile_map_data = PackedByteArray("AAADAAcAAAAQAD0AAAAEAAcAAAAYADwAAAAFAAcAAAAZADwAAAAGAAcAAAAQAD0AAAADAAgAAAAYADoAAAAEAAgAAAAYAD0AAAAFAAgAAAAZAD0AAAADAAkAAAAYADsAAAAAAAoAAAAQAD0AAAADAAoAAAAQAD0AAAAGAAoAAAAQAD0AAAAGAAsAAAAYADoAAAAGAAwAAAAYADsAAAADAA0AAAAQAD0AAAAEAA0AAAAYADwAAAAFAA0AAAAZADwAAAAGAA0AAAAQAD0AAAAEAA4AAAAYAD0AAAAFAA4AAAAZAD0AAAAAABEAAAASADwAAAABABEAAAAXAD0AAAADABEAAAASAD0AAAAGABEAAAASAD0AAAAIABEAAAAWAD0AAAAJABEAAAASADwAAAA=")
+tile_set = ExtResource("2_a4c3c")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=2141994963]
+position = Vector2(72, 326)
+script = ExtResource("3_mrm3l")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_malvalona"
+posicion_destino = Vector2(8, 5)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=131441377]
+position = Vector2(88, 326)
+script = ExtResource("3_mrm3l")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_malvalona"
+posicion_destino = Vector2(8, 5)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=500566910]
+
+[node name="EstatuaIzquierda" type="Sprite2D" parent="Carteles" unique_id=2038680769 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_Gym bg_event LeftGymStatue (3,18), solo mirando al norte; FLAG_BADGE03_GET -> certificado"
+position = Vector2(56, 296)
+script = ExtResource("s_cartel_cond")
+textos_condicionales = Dictionary[String, String]({
+"MEDALLA_3": "CIUDAD_MALVALONA_GIMNASIO_ESTATUA_CERTIFICADO"
+})
+id_texto = "CIUDAD_MALVALONA_GIMNASIO_ESTATUA"
+coord_tile = Vector2i(3, 18)
+direccion = 1
+
+[node name="EstatuaDerecha" type="Sprite2D" parent="Carteles" unique_id=169301397 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_Gym bg_event RightGymStatue (6,18), solo mirando al norte; FLAG_BADGE03_GET -> certificado"
+position = Vector2(104, 296)
+script = ExtResource("s_cartel_cond")
+textos_condicionales = Dictionary[String, String]({
+"MEDALLA_3": "CIUDAD_MALVALONA_GIMNASIO_ESTATUA_CERTIFICADO"
+})
+id_texto = "CIUDAD_MALVALONA_GIMNASIO_ESTATUA"
+coord_tile = Vector2i(6, 18)
+direccion = 1
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1279193827]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Erico" parent="NPCs" unique_id=891398348 instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_Gym objeto 1 (4,3) WATTSON FACE_DOWN, Wattson: combate de LIDER. Oculto mientras esta en la ciudad (FLAG_HIDE_WATTSON_MAUVILLE_GYM). Lo dirige Eventos/EventoGimnasioMalvalona"
+position = Vector2(72, 62)
+script = ExtResource("s_evento")
+id_texto = "CIUDAD_MALVALONA_GIMNASIO_ERICO_INI"
+selec_frames = ExtResource("f_npc_100")
+coord = Vector2i(4, 3)
+
+[node name="Isma" parent="NPCs" unique_id=453694314 instance=ExtResource("npc_entrenador")]
+editor_description = "pokeruby MauvilleCity_Gym objeto 2 TRAINER_SHAWN MAN_6 FACE_LEFT (6,9), vision 2 en linea recta"
+position = Vector2(104, 158)
+script = ExtResource("s_gym")
+condicion_post_medalla = ""
+texto_post_medalla = ""
+npc_id = "ciudad_malvalona_gimnasio_isma"
+entrenador_id = 194
+rango_vision = 2
+texto_post_combate = "CIUDAD_MALVALONA_GIMNASIO_ISMA_POST"
+id_texto = "CIUDAD_MALVALONA_GIMNASIO_ISMA_INI"
+selec_frames = ExtResource("f_npc_019")
+coord = Vector2i(6, 9)
+
+[node name="Viviana" parent="NPCs" unique_id=165079872 instance=ExtResource("npc_entrenador")]
+editor_description = "pokeruby MauvilleCity_Gym objeto 3 TRAINER_VIVIAN GIRL_3 FACE_DOWN (7,11), vision 1 en linea recta"
+position = Vector2(120, 190)
+script = ExtResource("s_gym")
+condicion_post_medalla = ""
+texto_post_medalla = ""
+npc_id = "ciudad_malvalona_gimnasio_viviana"
+entrenador_id = 649
+rango_vision = 1
+texto_post_combate = "CIUDAD_MALVALONA_GIMNASIO_VIVIANA_POST"
+id_texto = "CIUDAD_MALVALONA_GIMNASIO_VIVIANA_INI"
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_012")
+coord = Vector2i(7, 11)
+
+[node name="Ben" parent="NPCs" unique_id=518749549 instance=ExtResource("npc_entrenador")]
+editor_description = "pokeruby MauvilleCity_Gym objeto 4 TRAINER_BEN YOUNGSTER FACE_RIGHT (1,13), vision 1 en linea recta"
+position = Vector2(24, 222)
+script = ExtResource("s_gym")
+condicion_post_medalla = ""
+texto_post_medalla = ""
+npc_id = "ciudad_malvalona_gimnasio_ben"
+entrenador_id = 323
+rango_vision = 1
+texto_post_combate = "CIUDAD_MALVALONA_GIMNASIO_BEN_POST"
+id_texto = "CIUDAD_MALVALONA_GIMNASIO_BEN_INI"
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_029")
+coord = Vector2i(1, 13)
+
+[node name="Angel" parent="NPCs" unique_id=1061596580 instance=ExtResource("npc_entrenador")]
+editor_description = "pokeruby MauvilleCity_Gym objeto 5 TRAINER_KIRK MAN_6 FACE_DOWN (2,15), vision 2 en linea recta"
+position = Vector2(40, 254)
+script = ExtResource("s_gym")
+condicion_post_medalla = ""
+texto_post_medalla = ""
+npc_id = "ciudad_malvalona_gimnasio_angel"
+entrenador_id = 191
+rango_vision = 2
+texto_post_combate = "CIUDAD_MALVALONA_GIMNASIO_ANGEL_POST"
+id_texto = "CIUDAD_MALVALONA_GIMNASIO_ANGEL_INI"
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_019")
+coord = Vector2i(2, 15)
+
+[node name="Guia" parent="NPCs" unique_id=2038231718 instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_Gym objeto 6 (7,20) MAN_2 FACE_LEFT, GymGuide: cambia con FLAG_DEFEATED_MAUVILLE_GYM"
+position = Vector2(120, 334)
+script = ExtResource("s_cond")
+textos_condicionales = Dictionary[String, String]({
+"MEDALLA_3": "CIUDAD_MALVALONA_GIMNASIO_GUIA_VICTORIA"
+})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "CIUDAD_MALVALONA_GIMNASIO_GUIA_CONSEJO"
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_052")
+coord = Vector2i(7, 20)
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=860194251]
+script = ExtResource("4_3525e")
+tile_data = {
+"0,11": {
+"flags": 1
+},
+"0,13": {
+"flags": 1
+},
+"0,14": {
+"flags": 1
+},
+"0,18": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"1,18": {
+"flags": 1
+},
+"1,19": {
+"flags": 1
+},
+"1,20": {
+"flags": 1
+},
+"1,7": {
+"flags": 1
+},
+"2,3": {
+"flags": 1
+},
+"2,4": {
+"flags": 1
+},
+"2,5": {
+"flags": 1
+},
+"2,6": {
+"flags": 1
+},
+"2,7": {
+"flags": 1
+},
+"3,10": {
+"flags": 1
+},
+"3,11": {
+"flags": 1
+},
+"3,14": {
+"flags": 1
+},
+"3,18": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"3,8": {
+"flags": 1
+},
+"3,9": {
+"flags": 1
+},
+"4,14": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"4,8": {
+"flags": 1
+},
+"5,14": {
+"flags": 1
+},
+"5,2": {
+"flags": 1
+},
+"5,8": {
+"flags": 1
+},
+"6,11": {
+"flags": 1
+},
+"6,12": {
+"flags": 1
+},
+"6,13": {
+"flags": 1
+},
+"6,14": {
+"flags": 1
+},
+"6,18": {
+"flags": 1
+},
+"6,2": {
+"flags": 1
+},
+"6,8": {
+"flags": 1
+},
+"7,13": {
+"flags": 1
+},
+"7,14": {
+"flags": 1
+},
+"7,3": {
+"flags": 1
+},
+"7,4": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"7,6": {
+"flags": 1
+},
+"7,7": {
+"flags": 1
+},
+"8,13": {
+"flags": 1
+},
+"8,14": {
+"flags": 1
+},
+"8,18": {
+"flags": 1
+},
+"8,19": {
+"flags": 1
+},
+"8,20": {
+"flags": 1
+},
+"8,7": {
+"flags": 1
+},
+"9,10": {
+"flags": 1
+},
+"9,11": {
+"flags": 1
+},
+"9,13": {
+"flags": 1
+},
+"9,14": {
+"flags": 1
+},
+"9,18": {
+"flags": 1
+},
+"9,7": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Eventos" type="Node2D" parent="." unique_id=2043049347]
+
+[node name="EventoGimnasioMalvalona" type="Node2D" parent="Eventos" unique_id=1560825963]
+editor_description = "pokeruby MauvilleCity_Gym/scripts.inc: puzle de interruptores (OnLoad, Switch1-3), ERICO y la medalla"
+script = ExtResource("s_gimnasio")
+
+[node name="Interruptor1" parent="Eventos" unique_id=2033845639 instance=ExtResource("p_disparador")]
+editor_description = "pokeruby MauvilleCity_Gym coord_event (0,9) Switch1 (VAR_TEMP_0 == 0: dispara siempre)"
+id_evento = &"interruptor_1"
+zonas_tiles = Array[Rect2i]([Rect2i(0, 9, 1, 1)])
+
+[node name="Interruptor2" parent="Eventos" unique_id=48010563 instance=ExtResource("p_disparador")]
+editor_description = "pokeruby MauvilleCity_Gym coord_event (8,11) Switch2 (VAR_TEMP_0 == 0: dispara siempre)"
+id_evento = &"interruptor_2"
+zonas_tiles = Array[Rect2i]([Rect2i(8, 11, 1, 1)])
+
+[node name="Interruptor3" parent="Eventos" unique_id=1621411050 instance=ExtResource("p_disparador")]
+editor_description = "pokeruby MauvilleCity_Gym coord_event (4,15) Switch3 (VAR_TEMP_0 == 0: dispara siempre)"
+id_evento = &"interruptor_3"
+zonas_tiles = Array[Rect2i]([Rect2i(4, 15, 1, 1)])

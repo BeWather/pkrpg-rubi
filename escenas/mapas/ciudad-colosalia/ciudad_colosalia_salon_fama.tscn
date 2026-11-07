@@ -1,0 +1,747 @@
+[gd_scene format=4 uid="uid://b2nq043aq88mv"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mapa"]
+[ext_resource type="PackedScene" path="res://escenas/mapas/capas_agua.tscn" id="2_k4no1"]
+[ext_resource type="TileSet" uid="uid://1m82wo5f8q7a" path="res://graficos/tilesets/tileset_colosalia_salon_fama.tres" id="2_tiles"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_tp"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="5_npc_base"]
+[ext_resource type="Texture2D" uid="uid://bq7w2xkp4vnm3" path="res://graficos/editor/editor_tile_spawn.png" id="9_n7bsr"]
+[ext_resource type="Script" uid="uid://b8uf2sc0cp6my" path="res://escenas/mapas/marcador_spawn_debug.gd" id="10_dq7nn"]
+[ext_resource type="SpriteFrames" uid="uid://bar6pwfy6ctbd" path="res://escenas/avatares/npc_038.tres" id="f_npc_038"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="s_evento"]
+[ext_resource type="Script" uid="uid://cpm4cun1qvf1l" path="res://scripts/eventos/ciudad_colosalia/evento_salon_fama.gd" id="s_salon"]
+
+[node name="SalonFama" type="Node2D" unique_id=1587360703]
+editor_description = "pokeruby EverGrandeCity_HallOfFame (LAYOUT_EVER_GRANDE_CITY_HALL_OF_FAME, 15x17). Generada por herramientas/importar_interiores_colosalia.py."
+script = ExtResource("1_mapa")
+nombre_interno = "ciudad_colosalia_salon_fama"
+seccion = "CIUDAD_COLOSALIA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_COLOSALIA"
+solo_caminar = true
+musica_mapa = "SALA_GLORIA"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=414280056]
+tile_map_data = PackedByteArray("AAAAAAAAAAAEABkAAAAAAAEAAAAEABoAAAAAAAIAAAAEABsAAAAAAAMAAAAEABwAAAAAAAQAAAAEABwAAAAAAAUAAAAEABwAAAAAAAYAAAAEABwAAAAAAAcAAAAEABwAAAAAAAgAAAAEABwAAAAAAAkAAAAEABwAAAAAAAoAAAAEABwAAAAAAAsAAAAEABwAAAAAAAwAAAAEABwAAAAAAA0AAAAEABwAAAAAAA4AAAAEABwAAAAAAA8AAAAEAB0AAAAAABAAAAABAAAAAAABAAAAAAAFABkAAAABAAEAAAAFABoAAAABAAIAAAAFABsAAAABAAMAAAAFABwAAAABAAQAAAAFABwAAAABAAUAAAAFABwAAAABAAYAAAAFABwAAAABAAcAAAAFABwAAAABAAgAAAAFABwAAAABAAkAAAAFABwAAAABAAoAAAAFABwAAAABAAsAAAAFABwAAAABAAwAAAAFABwAAAABAA0AAAAFABwAAAABAA4AAAAFABwAAAABAA8AAAAFAB0AAAABABAAAAABAAAAAAACAAAAAAAEAB4AAAACAAEAAAAEAB8AAAACAAIAAAAGAB8AAAACAAMAAAAGAB4AAAACAAQAAAAGAB4AAAACAAUAAAAGAB4AAAACAAYAAAAGAB4AAAACAAcAAAAGAB4AAAACAAgAAAAGAB4AAAACAAkAAAAGAB4AAAACAAoAAAAGAB4AAAACAAsAAAAGAB4AAAACAAwAAAAGAB4AAAACAA0AAAAGAB4AAAACAA4AAAAGAB4AAAACAA8AAAAGAB4AAAACABAAAAABAAAAAAADAAAAAAAFAB4AAAADAAEAAAAFAB8AAAADAAIAAAAGAB8AAAADAAMAAAAGAB4AAAADAAQAAAAGAB4AAAADAAUAAAAGAB4AAAADAAYAAAAGAB4AAAADAAcAAAAGAB4AAAADAAgAAAAGAB4AAAADAAkAAAAGAB4AAAADAAoAAAAGAB4AAAADAAsAAAAGAB4AAAADAAwAAAAGAB4AAAADAA0AAAAGAB4AAAADAA4AAAAGAB4AAAADAA8AAAAGAB4AAAADABAAAAABAAAAAAAEAAAAAAAEAB4AAAAEAAEAAAAEAB8AAAAEAAIAAAAGAB8AAAAEAAMAAAAGAB4AAAAEAAQAAAAGAB4AAAAEAAUAAAAGAB4AAAAEAAYAAAAGAB4AAAAEAAcAAAAGAB4AAAAEAAgAAAAGAB4AAAAEAAkAAAAGAB4AAAAEAAoAAAAGAB4AAAAEAAsAAAAGAB4AAAAEAAwAAAAGAB4AAAAEAA0AAAAGAB4AAAAEAA4AAAAGAB4AAAAEAA8AAAAGAB4AAAAEABAAAAABAAAAAAAFAAAAAAAAABoAAAAFAAEAAAAAABsAAAAFAAIAAAAAABwAAAAFAAMAAAAAAB0AAAAFAAQAAAAGAB4AAAAFAAUAAAAGAB4AAAAFAAYAAAAGAB4AAAAFAAcAAAAGAB4AAAAFAAgAAAAGAB4AAAAFAAkAAAAGAB4AAAAFAAoAAAAGAB4AAAAFAAsAAAAGAB4AAAAFAAwAAAAGAB4AAAAFAA0AAAAGAB4AAAAFAA4AAAAGAB4AAAAFAA8AAAAGAB4AAAAFABAAAAAHAB8AAAAGAAAAAAABABoAAAAGAAEAAAABABsAAAAGAAIAAAABABwAAAAGAAMAAAABAB0AAAAGAAQAAAABAB4AAAAGAAUAAAABAB8AAAAGAAYAAAAGAB4AAAAGAAcAAAAGAB4AAAAGAAgAAAAGAB4AAAAGAAkAAAAGAB4AAAAGAAoAAAAGAB4AAAAGAAsAAAAGAB4AAAAGAAwAAAAGAB4AAAAGAA0AAAAGAB4AAAAGAA4AAAAGAB4AAAAGAA8AAAAGAB4AAAAGABAAAAAAAB8AAAAHAAAAAAABABoAAAAHAAEAAAABABsAAAAHAAIAAAABABwAAAAHAAMAAAACAB0AAAAHAAQAAAACAB4AAAAHAAUAAAACAB8AAAAHAAYAAAAGAB4AAAAHAAcAAAAGAB4AAAAHAAgAAAAGAB4AAAAHAAkAAAAGAB4AAAAHAAoAAAAGAB4AAAAHAAsAAAAGAB4AAAAHAAwAAAAGAB4AAAAHAA0AAAAGAB4AAAAHAA4AAAAGAB4AAAAHAA8AAAAGAB4AAAAHABAAAAAAAB8AAAAIAAAAAAACABoAAAAIAAEAAAACABsAAAAIAAIAAAACABwAAAAIAAMAAAAAAB4AAAAIAAQAAAADAB4AAAAIAAUAAAADAB8AAAAIAAYAAAAGAB4AAAAIAAcAAAAGAB4AAAAIAAgAAAAGAB4AAAAIAAkAAAAGAB4AAAAIAAoAAAAGAB4AAAAIAAsAAAAGAB4AAAAIAAwAAAAGAB4AAAAIAA0AAAAGAB4AAAAIAA4AAAAGAB4AAAAIAA8AAAAGAB4AAAAIABAAAAAAAB8AAAAJAAAAAAADABoAAAAJAAEAAAADABsAAAAJAAIAAAADABwAAAAJAAMAAAADAB0AAAAJAAQAAAAGAB4AAAAJAAUAAAAGAB4AAAAJAAYAAAAGAB4AAAAJAAcAAAAGAB4AAAAJAAgAAAAGAB4AAAAJAAkAAAAGAB4AAAAJAAoAAAAGAB4AAAAJAAsAAAAGAB4AAAAJAAwAAAAGAB4AAAAJAA0AAAAGAB4AAAAJAA4AAAAGAB4AAAAJAA8AAAAGAB4AAAAJABAAAAAHAB4AAAAKAAAAAAAEAB4AAAAKAAEAAAAEAB8AAAAKAAIAAAAGAB8AAAAKAAMAAAAGAB4AAAAKAAQAAAAGAB4AAAAKAAUAAAAGAB4AAAAKAAYAAAAGAB4AAAAKAAcAAAAGAB4AAAAKAAgAAAAGAB4AAAAKAAkAAAAGAB4AAAAKAAoAAAAGAB4AAAAKAAsAAAAGAB4AAAAKAAwAAAAGAB4AAAAKAA0AAAAGAB4AAAAKAA4AAAAGAB4AAAAKAA8AAAAGAB4AAAAKABAAAAABAAAAAAALAAAAAAAFAB4AAAALAAEAAAAFAB8AAAALAAIAAAAGAB8AAAALAAMAAAAGAB4AAAALAAQAAAAGAB4AAAALAAUAAAAGAB4AAAALAAYAAAAGAB4AAAALAAcAAAAGAB4AAAALAAgAAAAGAB4AAAALAAkAAAAGAB4AAAALAAoAAAAGAB4AAAALAAsAAAAGAB4AAAALAAwAAAAGAB4AAAALAA0AAAAGAB4AAAALAA4AAAAGAB4AAAALAA8AAAAGAB4AAAALABAAAAABAAAAAAAMAAAAAAAEAB4AAAAMAAEAAAAEAB8AAAAMAAIAAAAGAB8AAAAMAAMAAAAGAB4AAAAMAAQAAAAGAB4AAAAMAAUAAAAGAB4AAAAMAAYAAAAGAB4AAAAMAAcAAAAGAB4AAAAMAAgAAAAGAB4AAAAMAAkAAAAGAB4AAAAMAAoAAAAGAB4AAAAMAAsAAAAGAB4AAAAMAAwAAAAGAB4AAAAMAA0AAAAGAB4AAAAMAA4AAAAGAB4AAAAMAA8AAAAGAB4AAAAMABAAAAABAAAAAAANAAAAAAAGABkAAAANAAEAAAAGABoAAAANAAIAAAAGABsAAAANAAMAAAAGABwAAAANAAQAAAAGABwAAAANAAUAAAAGABwAAAANAAYAAAAGABwAAAANAAcAAAAGABwAAAANAAgAAAAGABwAAAANAAkAAAAGABwAAAANAAoAAAAGABwAAAANAAsAAAAGABwAAAANAAwAAAAGABwAAAANAA0AAAAGABwAAAANAA4AAAAGABwAAAANAA8AAAAGAB0AAAANABAAAAABAAAAAAAOAAAAAAAHABkAAAAOAAEAAAAHABoAAAAOAAIAAAAHABsAAAAOAAMAAAAHABwAAAAOAAQAAAAHABwAAAAOAAUAAAAHABwAAAAOAAYAAAAHABwAAAAOAAcAAAAHABwAAAAOAAgAAAAHABwAAAAOAAkAAAAHABwAAAAOAAoAAAAHABwAAAAOAAsAAAAHABwAAAAOAAwAAAAHABwAAAAOAA0AAAAHABwAAAAOAA4AAAAHABwAAAAOAA8AAAAHAB0AAAAOABAAAAABAAAAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Agua" type="TileMapLayer" parent="." unique_id=1994837510]
+
+[node name="CapasAgua" parent="." unique_id=784880692 instance=ExtResource("2_k4no1")]
+
+[node name="Superior" type="TileMapLayer" parent="." unique_id=1493179494]
+z_index = 2
+tile_map_data = PackedByteArray("AAAAAAAAAAAMABkAAAABAAAAAAANABkAAAAFABAAAAAPAB8AAAAJABAAAAAPAB4AAAANAAAAAAAOABkAAAAOAAAAAAAPABkAAAAOAA8AAAALABYAAAAAAA8AAAAIABYAAAABAA8AAAAJABYAAAANAA8AAAAKABYAAAAOABEAAAAHABkAAAANABEAAAAHABkAAAAMABEAAAAHABkAAAALABEAAAAHABkAAAAKABEAAAAHABkAAAAJABEAAAAHABkAAAAIABEAAAAHABkAAAAHABEAAAAHABkAAAAGABEAAAAHABkAAAAFABEAAAAHABkAAAAEABEAAAAHABkAAAADABEAAAAHABkAAAACABEAAAAHABkAAAABABEAAAAHABkAAAAAABEAAAAHABkAAAABABAAAAAHABkAAAACABAAAAAHABkAAAADABAAAAAHABkAAAAEABAAAAAHABkAAAAKABAAAAAHABkAAAALABAAAAAHABkAAAAMABAAAAAHABkAAAANABAAAAAHABkAAAAOABAAAAAHABkAAAAAABAAAAAHABkAAAAOABIAAAAHABkAAAANABIAAAAHABkAAAAMABIAAAAHABkAAAALABIAAAAHABkAAAAKABIAAAAHABkAAAAJABIAAAAHABkAAAAIABIAAAAHABkAAAAHABIAAAAHABkAAAAGABIAAAAHABkAAAAFABIAAAAHABkAAAAEABIAAAAHABkAAAAAABIAAAAHABkAAAABABIAAAAHABkAAAACABIAAAAHABkAAAADABIAAAAHABkAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1373329937]
+script = ExtResource("3_tp")
+tile_data = {
+"0,10": {
+"flags": 1
+},
+"0,11": {
+"flags": 1
+},
+"0,12": {
+"flags": 1
+},
+"0,13": {
+"flags": 1
+},
+"0,14": {
+"flags": 1
+},
+"0,15": {
+"flags": 1
+},
+"0,3": {
+"flags": 1
+},
+"0,4": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"0,6": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"0,8": {
+"flags": 1
+},
+"0,9": {
+"flags": 1
+},
+"1,10": {
+"flags": 32768
+},
+"1,11": {
+"flags": 32768
+},
+"1,12": {
+"flags": 32768
+},
+"1,13": {
+"flags": 32768
+},
+"1,14": {
+"flags": 32768
+},
+"1,15": {
+"flags": 32768
+},
+"1,16": {
+"flags": 32769
+},
+"1,2": {
+"flags": 32769
+},
+"1,3": {
+"flags": 32768
+},
+"1,4": {
+"flags": 32768
+},
+"1,5": {
+"flags": 32768
+},
+"1,6": {
+"flags": 32768
+},
+"1,7": {
+"flags": 32768
+},
+"1,8": {
+"flags": 32768
+},
+"1,9": {
+"flags": 32768
+},
+"10,1": {
+"flags": 1
+},
+"10,10": {
+"flags": 32768
+},
+"10,11": {
+"flags": 32768
+},
+"10,12": {
+"flags": 32768
+},
+"10,13": {
+"flags": 32768
+},
+"10,14": {
+"flags": 32768
+},
+"10,15": {
+"flags": 32768
+},
+"10,16": {
+"flags": 32769
+},
+"10,2": {
+"flags": 32768
+},
+"10,3": {
+"flags": 32768
+},
+"10,4": {
+"flags": 32768
+},
+"10,5": {
+"flags": 32768
+},
+"10,6": {
+"flags": 32768
+},
+"10,7": {
+"flags": 32768
+},
+"10,8": {
+"flags": 32768
+},
+"10,9": {
+"flags": 32768
+},
+"11,1": {
+"flags": 1
+},
+"11,10": {
+"flags": 32768
+},
+"11,11": {
+"flags": 32768
+},
+"11,12": {
+"flags": 32768
+},
+"11,13": {
+"flags": 32768
+},
+"11,14": {
+"flags": 32768
+},
+"11,15": {
+"flags": 32768
+},
+"11,16": {
+"flags": 32769
+},
+"11,2": {
+"flags": 32768
+},
+"11,3": {
+"flags": 32768
+},
+"11,4": {
+"flags": 32768
+},
+"11,5": {
+"flags": 32768
+},
+"11,6": {
+"flags": 32768
+},
+"11,7": {
+"flags": 32768
+},
+"11,8": {
+"flags": 32768
+},
+"11,9": {
+"flags": 32768
+},
+"12,1": {
+"flags": 1
+},
+"12,10": {
+"flags": 32768
+},
+"12,11": {
+"flags": 32768
+},
+"12,12": {
+"flags": 32768
+},
+"12,13": {
+"flags": 32768
+},
+"12,14": {
+"flags": 32768
+},
+"12,15": {
+"flags": 32768
+},
+"12,16": {
+"flags": 32769
+},
+"12,2": {
+"flags": 32768
+},
+"12,3": {
+"flags": 32768
+},
+"12,4": {
+"flags": 32768
+},
+"12,5": {
+"flags": 32768
+},
+"12,6": {
+"flags": 32768
+},
+"12,7": {
+"flags": 32768
+},
+"12,8": {
+"flags": 32768
+},
+"12,9": {
+"flags": 32768
+},
+"13,10": {
+"flags": 32768
+},
+"13,11": {
+"flags": 32768
+},
+"13,12": {
+"flags": 32768
+},
+"13,13": {
+"flags": 32768
+},
+"13,14": {
+"flags": 32768
+},
+"13,15": {
+"flags": 32768
+},
+"13,16": {
+"flags": 32769
+},
+"13,2": {
+"flags": 32769
+},
+"13,3": {
+"flags": 32768
+},
+"13,4": {
+"flags": 32768
+},
+"13,5": {
+"flags": 32768
+},
+"13,6": {
+"flags": 32768
+},
+"13,7": {
+"flags": 32768
+},
+"13,8": {
+"flags": 32768
+},
+"13,9": {
+"flags": 32768
+},
+"14,10": {
+"flags": 1
+},
+"14,11": {
+"flags": 1
+},
+"14,12": {
+"flags": 1
+},
+"14,13": {
+"flags": 1
+},
+"14,14": {
+"flags": 1
+},
+"14,15": {
+"flags": 1
+},
+"14,3": {
+"flags": 1
+},
+"14,4": {
+"flags": 1
+},
+"14,5": {
+"flags": 1
+},
+"14,6": {
+"flags": 1
+},
+"14,7": {
+"flags": 1
+},
+"14,8": {
+"flags": 1
+},
+"14,9": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,10": {
+"flags": 32768
+},
+"2,11": {
+"flags": 32768
+},
+"2,12": {
+"flags": 32768
+},
+"2,13": {
+"flags": 32768
+},
+"2,14": {
+"flags": 32768
+},
+"2,15": {
+"flags": 32768
+},
+"2,16": {
+"flags": 32769
+},
+"2,2": {
+"flags": 32768
+},
+"2,3": {
+"flags": 32768
+},
+"2,4": {
+"flags": 32768
+},
+"2,5": {
+"flags": 32768
+},
+"2,6": {
+"flags": 32768
+},
+"2,7": {
+"flags": 32768
+},
+"2,8": {
+"flags": 32768
+},
+"2,9": {
+"flags": 32768
+},
+"3,1": {
+"flags": 1
+},
+"3,10": {
+"flags": 32768
+},
+"3,11": {
+"flags": 32768
+},
+"3,12": {
+"flags": 32768
+},
+"3,13": {
+"flags": 32768
+},
+"3,14": {
+"flags": 32768
+},
+"3,15": {
+"flags": 32768
+},
+"3,16": {
+"flags": 32769
+},
+"3,2": {
+"flags": 32768
+},
+"3,3": {
+"flags": 32768
+},
+"3,4": {
+"flags": 32768
+},
+"3,5": {
+"flags": 32768
+},
+"3,6": {
+"flags": 32768
+},
+"3,7": {
+"flags": 32768
+},
+"3,8": {
+"flags": 32768
+},
+"3,9": {
+"flags": 32768
+},
+"4,1": {
+"flags": 1
+},
+"4,10": {
+"flags": 32768
+},
+"4,11": {
+"flags": 32768
+},
+"4,12": {
+"flags": 32768
+},
+"4,13": {
+"flags": 32768
+},
+"4,14": {
+"flags": 32768
+},
+"4,15": {
+"flags": 32768
+},
+"4,16": {
+"flags": 32769
+},
+"4,2": {
+"flags": 32768
+},
+"4,3": {
+"flags": 32768
+},
+"4,4": {
+"flags": 32768
+},
+"4,5": {
+"flags": 32768
+},
+"4,6": {
+"flags": 32768
+},
+"4,7": {
+"flags": 32768
+},
+"4,8": {
+"flags": 32768
+},
+"4,9": {
+"flags": 32768
+},
+"5,10": {
+"flags": 32768
+},
+"5,11": {
+"flags": 32768
+},
+"5,12": {
+"flags": 32768
+},
+"5,13": {
+"flags": 32768
+},
+"5,14": {
+"flags": 32768
+},
+"5,15": {
+"flags": 32768
+},
+"5,16": {
+"flags": 32769
+},
+"5,2": {
+"flags": 1
+},
+"5,3": {
+"flags": 1
+},
+"5,4": {
+"flags": 32768
+},
+"5,5": {
+"flags": 32768
+},
+"5,6": {
+"flags": 32768
+},
+"5,7": {
+"flags": 32768
+},
+"5,8": {
+"flags": 32768
+},
+"5,9": {
+"flags": 32768
+},
+"6,10": {
+"flags": 32768
+},
+"6,11": {
+"flags": 32768
+},
+"6,12": {
+"flags": 32768
+},
+"6,13": {
+"flags": 32768
+},
+"6,14": {
+"flags": 32768
+},
+"6,15": {
+"flags": 32768
+},
+"6,16": {
+"flags": 32768
+},
+"6,17": {
+"flags": 32769
+},
+"6,4": {
+"flags": 1
+},
+"6,5": {
+"flags": 32768
+},
+"6,6": {
+"flags": 32768
+},
+"6,7": {
+"flags": 32768
+},
+"6,8": {
+"flags": 32768
+},
+"6,9": {
+"flags": 32768
+},
+"7,10": {
+"flags": 32768
+},
+"7,11": {
+"flags": 32768
+},
+"7,12": {
+"flags": 32768
+},
+"7,13": {
+"flags": 32768
+},
+"7,14": {
+"flags": 32768
+},
+"7,15": {
+"flags": 32768
+},
+"7,16": {
+"flags": 32768
+},
+"7,17": {
+"flags": 32769
+},
+"7,4": {
+"flags": 1
+},
+"7,5": {
+"flags": 32768
+},
+"7,6": {
+"flags": 32768
+},
+"7,7": {
+"flags": 32768
+},
+"7,8": {
+"flags": 32768
+},
+"7,9": {
+"flags": 32768
+},
+"8,10": {
+"flags": 32768
+},
+"8,11": {
+"flags": 32768
+},
+"8,12": {
+"flags": 32768
+},
+"8,13": {
+"flags": 32768
+},
+"8,14": {
+"flags": 32768
+},
+"8,15": {
+"flags": 32768
+},
+"8,16": {
+"flags": 32768
+},
+"8,17": {
+"flags": 32769
+},
+"8,4": {
+"flags": 1
+},
+"8,5": {
+"flags": 32768
+},
+"8,6": {
+"flags": 32768
+},
+"8,7": {
+"flags": 32768
+},
+"8,8": {
+"flags": 32768
+},
+"8,9": {
+"flags": 32768
+},
+"9,10": {
+"flags": 32768
+},
+"9,11": {
+"flags": 32768
+},
+"9,12": {
+"flags": 32768
+},
+"9,13": {
+"flags": 32768
+},
+"9,14": {
+"flags": 32768
+},
+"9,15": {
+"flags": 32768
+},
+"9,16": {
+"flags": 32769
+},
+"9,2": {
+"flags": 1
+},
+"9,3": {
+"flags": 1
+},
+"9,4": {
+"flags": 32768
+},
+"9,5": {
+"flags": 32768
+},
+"9,6": {
+"flags": 32768
+},
+"9,7": {
+"flags": 32768
+},
+"9,8": {
+"flags": 32768
+},
+"9,9": {
+"flags": 32768
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1020158483]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Maximo" parent="NPCs" unique_id=1581726201 instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby EverGrandeCity_HallOfFame objeto 1 (6,16) STEVEN FACE_UP: 0x0. Lo dirige Eventos/EventoSalonFama"
+position = Vector2(104, 270)
+script = ExtResource("s_evento")
+tipo_movimiento = 7
+selec_frames = ExtResource("f_npc_038")
+coord = Vector2i(6, 16)
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1021533809]
+
+[node name="EventoSalonFama" type="Node2D" parent="Eventos" unique_id=240565969]
+editor_description = "pokeruby EverGrandeCity_HallOfFame/scripts.inc "
+script = ExtResource("s_salon")
+maximo = NodePath("../../NPCs/Maximo")
+
+[node name="SpawnDebug" type="Sprite2D" parent="." unique_id=340858345]
+modulate = Color(1, 1, 1, 0.7458026)
+z_index = 1000
+position = Vector2(56, 184)
+texture = ExtResource("9_n7bsr")
+script = ExtResource("10_dq7nn")
+metadata/_custom_type_script = "uid://b8uf2sc0cp6my"

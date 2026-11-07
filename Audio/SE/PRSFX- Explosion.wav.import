@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cp4401hv2wbla"
+path="res://.godot/imported/PRSFX- Explosion.wav-c6ee8d5b1dbbe6ffc726313262f9af73.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Explosion.wav"
+dest_files=["res://.godot/imported/PRSFX- Explosion.wav-c6ee8d5b1dbbe6ffc726313262f9af73.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

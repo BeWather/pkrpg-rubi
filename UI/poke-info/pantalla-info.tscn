@@ -1,0 +1,997 @@
+[gd_scene format=3 uid="uid://b66ggvyxuyojd"]
+
+[ext_resource type="Script" uid="uid://h2kri3ds4cwm" path="res://UI/poke-info/pantalla_info.gd" id="1_ic3dj"]
+[ext_resource type="Texture2D" uid="uid://vuo4mutp0crk" path="res://UI/poke-info/pantalla-info-pag1.png" id="1_pqcvr"]
+[ext_resource type="Texture2D" uid="uid://ct78fny7v163x" path="res://UI/poke-info/pantalla-info-titulos.png" id="2_88bvx"]
+[ext_resource type="Texture2D" uid="uid://ofr6n605hil" path="res://UI/poke-info/pantalla-info-pag2v.png" id="3_bf7gj"]
+[ext_resource type="Texture2D" uid="uid://dv2oqpt2l3f4r" path="res://graficos/batalla/balls-catch.png" id="3_c7rd6"]
+[ext_resource type="LabelSettings" uid="uid://1gyaj7gqp6vv" path="res://UI/poke-info/pantalla-info-2.tres" id="4_0olpm"]
+[ext_resource type="Script" uid="uid://45m5x2qyjlsm" path="res://UI/pokeball_sprite.gd" id="4_a8etd"]
+[ext_resource type="Texture2D" uid="uid://cx5hmuiryw4dw" path="res://UI/poke-info/pantalla-info-pag3v.png" id="4_g54ev"]
+[ext_resource type="LabelSettings" uid="uid://ddeyj12qt266" path="res://UI/poke-info/pantalla-info.tres" id="4_wdg80"]
+[ext_resource type="Texture2D" uid="uid://byaqgf5txyaix" path="res://UI/poke-info/pantalla-info-pag3-extra.png" id="5_22h44"]
+[ext_resource type="Script" uid="uid://b1awn5ii5piqr" path="res://UI/pokemon_sprite.gd" id="5_pokemon"]
+[ext_resource type="Texture2D" uid="uid://4yilr1xmlwcs" path="res://graficos/tipos-pokemon.png" id="6_gn5bj"]
+[ext_resource type="Texture2D" uid="uid://cnih5vsravfrx" path="res://UI/poke-info/pantalla-info-pag3-extra2.png" id="6_rgwh8"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="8_pasof"]
+[ext_resource type="Texture2D" uid="uid://c4fs3qxna7mjs" path="res://UI/equipo/pantalla-equipo-estado.png" id="11_ciifb"]
+[ext_resource type="Texture2D" uid="uid://cj24v7dtwrsko" path="res://graficos/batalla/batalla_estados.png" id="12_s0q55"]
+[ext_resource type="Script" uid="uid://d36hq52xgo0y0" path="res://UI/selector_simple.gd" id="14_3uj13"]
+[ext_resource type="Texture2D" uid="uid://dkj8r8lve77de" path="res://UI/poke-info/categorias-concurso.png" id="15_catcon"]
+[ext_resource type="Texture2D" uid="uid://c680jd4e2ebx8" path="res://UI/poke-info/corazones-concurso.png" id="16_corcon"]
+[ext_resource type="LabelSettings" path="res://UI/poke-info/texto_blanco_sombra_gris.tres" id="17_blanco"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_memfa"]
+atlas = ExtResource("3_c7rd6")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54psl"]
+atlas = ExtResource("3_c7rd6")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0er5w"]
+atlas = ExtResource("3_c7rd6")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yfkva"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_memfa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54psl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0er5w")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a8etd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yfkva"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b4jyk"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 16, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6xhc"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 32, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_velr0"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 48, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvxdv"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 64, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_meje6"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 80, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ws7cs"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 96, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jonlk"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 112, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_quptl"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 128, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnq6t"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 144, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_us7uq"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 160, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2f27q"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 176, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pdgih"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 192, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m75nw"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 208, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lily1"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 224, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lo6vb"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 240, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r78gc"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 256, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x8e3j"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 272, 32, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkpwf"]
+atlas = ExtResource("6_gn5bj")
+region = Rect2(0, 288, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dcfui"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yfkva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b4jyk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y6xhc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_velr0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvxdv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_meje6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ws7cs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jonlk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_quptl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnq6t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_us7uq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2f27q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pdgih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m75nw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lily1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lo6vb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r78gc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x8e3j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkpwf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_a8etd"]
+line_spacing = 0.0
+font = ExtResource("8_pasof")
+font_size = 14
+font_color = Color(0.972549, 0.972549, 0.972549, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_gn5bj"]
+line_spacing = 0.0
+font = ExtResource("8_pasof")
+font_size = 8
+font_color = Color(0.972549, 0.972549, 0.972549, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3uj13"]
+line_spacing = 0.0
+font = ExtResource("8_pasof")
+font_size = 9
+font_color = Color(0.972549, 0.972549, 0.972549, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_elryd"]
+line_spacing = 0.0
+font = ExtResource("8_pasof")
+font_size = 10
+font_color = Color(0.972549, 0.972549, 0.972549, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_65joe"]
+line_spacing = 0.0
+font = ExtResource("8_pasof")
+font_size = 14
+font_color = Color(0.909804, 0.909804, 0.658824, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_memfa"]
+line_spacing = 0.0
+font = ExtResource("8_pasof")
+font_size = 9
+font_color = Color(0, 0, 0, 1)
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 0.376471)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n51cf"]
+atlas = ExtResource("2_88bvx")
+region = Rect2(0, 0, 240, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r36l6"]
+atlas = ExtResource("2_88bvx")
+region = Rect2(0, 16, 240, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kcjc0"]
+atlas = ExtResource("2_88bvx")
+region = Rect2(0, 32, 240, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jj1v"]
+atlas = ExtResource("2_88bvx")
+region = Rect2(0, 48, 240, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wiy8o"]
+atlas = ExtResource("2_88bvx")
+region = Rect2(0, 64, 240, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1nwht"]
+atlas = ExtResource("2_88bvx")
+region = Rect2(0, 80, 240, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nk541"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n51cf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r36l6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kcjc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jj1v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wiy8o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1nwht")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gn5bj"]
+atlas = ExtResource("12_s0q55")
+region = Rect2(0, 0, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3uj13"]
+atlas = ExtResource("12_s0q55")
+region = Rect2(0, 8, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_elryd"]
+atlas = ExtResource("12_s0q55")
+region = Rect2(0, 16, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65joe"]
+atlas = ExtResource("12_s0q55")
+region = Rect2(0, 24, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dcfui"]
+atlas = ExtResource("12_s0q55")
+region = Rect2(0, 32, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydjv2"]
+atlas = ExtResource("12_s0q55")
+region = Rect2(0, 40, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vissf"]
+atlas = ExtResource("12_s0q55")
+region = Rect2(0, 48, 24, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_memfa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gn5bj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3uj13")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_elryd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65joe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dcfui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydjv2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vissf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PantallaInfo" type="Node2D" unique_id=1011964809]
+script = ExtResource("1_ic3dj")
+
+[node name="Pantalla-info-pag1" type="Sprite2D" parent="." unique_id=1197314562]
+texture = ExtResource("1_pqcvr")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="PokeballSprite" type="AnimatedSprite2D" parent="Pantalla-info-pag1" unique_id=954404566]
+position = Vector2(6, 106)
+sprite_frames = SubResource("SpriteFrames_yfkva")
+centered = false
+offset = Vector2(0, 18)
+script = ExtResource("4_a8etd")
+metadata/_custom_type_script = "uid://45m5x2qyjlsm"
+
+[node name="PokemonSprite" type="AnimatedSprite2D" parent="Pantalla-info-pag1" unique_id=178479567]
+position = Vector2(8, 32)
+sprite_frames = SubResource("SpriteFrames_a8etd")
+centered = false
+flip_h = true
+script = ExtResource("5_pokemon")
+
+[node name="tipo1" type="AnimatedSprite2D" parent="Pantalla-info-pag1" unique_id=214657225]
+position = Vector2(120, 48)
+sprite_frames = SubResource("SpriteFrames_dcfui")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="tipo2" type="AnimatedSprite2D" parent="Pantalla-info-pag1" unique_id=1172116204]
+position = Vector2(160, 48)
+sprite_frames = SubResource("SpriteFrames_dcfui")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="num_dex" type="Label" parent="Pantalla-info-pag1" unique_id=1374194474]
+offset_left = 19.0
+offset_top = 16.0
+offset_right = 37.0
+offset_bottom = 31.0
+text = "001"
+label_settings = ExtResource("4_wdg80")
+metadata/_edit_lock_ = true
+
+[node name="mote" type="Label" parent="Pantalla-info-pag1" unique_id=1722019832]
+z_index = 1
+offset_left = 8.0
+offset_top = 96.0
+offset_right = 62.0
+offset_bottom = 111.0
+text = "ZIGZAGOON"
+label_settings = ExtResource("4_wdg80")
+metadata/_edit_lock_ = true
+
+[node name="nombre_interno" type="Label" parent="Pantalla-info-pag1" unique_id=506977828]
+offset_left = 8.0
+offset_top = 111.0
+offset_right = 68.0
+offset_bottom = 126.0
+text = "/ZIGZAGOON"
+label_settings = ExtResource("4_wdg80")
+metadata/_edit_lock_ = true
+
+[node name="nivel" type="Label" parent="Pantalla-info-pag1" unique_id=28254741]
+offset_left = 26.0
+offset_top = 126.0
+offset_right = 57.0
+offset_bottom = 141.0
+text = "Nv100"
+label_settings = ExtResource("4_wdg80")
+metadata/_edit_lock_ = true
+
+[node name="sexo" type="Label" parent="Pantalla-info-pag1" unique_id=356899140]
+offset_left = 58.0
+offset_top = 126.0
+offset_right = 66.0
+offset_bottom = 141.0
+text = "♂"
+label_settings = ExtResource("4_wdg80")
+metadata/_edit_lock_ = true
+
+[node name="marca_circulo" type="Label" parent="Pantalla-info-pag1" unique_id=471389617]
+offset_left = 44.0
+offset_top = 14.0
+offset_right = 57.0
+offset_bottom = 35.0
+text = "●"
+label_settings = SubResource("LabelSettings_a8etd")
+max_lines_visible = 1
+visible_characters = 1
+metadata/_edit_lock_ = true
+
+[node name="marca_cuadrado" type="Label" parent="Pantalla-info-pag1" unique_id=681158248]
+offset_left = 53.0
+offset_top = 20.0
+offset_right = 66.0
+offset_bottom = 41.0
+text = "■"
+label_settings = SubResource("LabelSettings_gn5bj")
+metadata/_edit_lock_ = true
+
+[node name="marca_triangulo" type="Label" parent="Pantalla-info-pag1" unique_id=942306138]
+offset_left = 60.0
+offset_top = 19.0
+offset_right = 73.0
+offset_bottom = 40.0
+text = "▲"
+label_settings = SubResource("LabelSettings_3uj13")
+metadata/_edit_lock_ = true
+
+[node name="marca_corazon" type="Label" parent="Pantalla-info-pag1" unique_id=1520161449]
+offset_left = 69.0
+offset_top = 19.0
+offset_right = 82.0
+offset_bottom = 40.0
+text = "♥"
+label_settings = SubResource("LabelSettings_elryd")
+metadata/_edit_lock_ = true
+
+[node name="eo_nombre" type="Label" parent="Pantalla-info-pag1" unique_id=1685969416]
+offset_left = 106.0
+offset_top = 32.0
+offset_right = 136.0
+offset_bottom = 47.0
+text = "MA7AS"
+label_settings = ExtResource("4_wdg80")
+metadata/_edit_lock_ = true
+
+[node name="eo_id" type="Label" parent="Pantalla-info-pag1" unique_id=1366017397]
+offset_left = 193.0
+offset_top = 32.0
+offset_right = 223.0
+offset_bottom = 47.0
+text = "99333"
+label_settings = ExtResource("4_wdg80")
+metadata/_edit_lock_ = true
+
+[node name="habilidad" type="Label" parent="Pantalla-info-pag1" unique_id=1411946903]
+offset_left = 88.0
+offset_top = 72.0
+offset_right = 136.0
+offset_bottom = 87.0
+text = "ESPESURA"
+label_settings = ExtResource("4_wdg80")
+metadata/_edit_lock_ = true
+
+[node name="habilidad_descripcion" type="Label" parent="Pantalla-info-pag1" unique_id=493549195]
+offset_left = 88.0
+offset_top = 88.0
+offset_right = 224.0
+offset_bottom = 103.0
+text = "Sube ataques tipo PLANTA."
+label_settings = ExtResource("4_0olpm")
+metadata/_edit_lock_ = true
+
+[node name="notas" type="RichTextLabel" parent="Pantalla-info-pag1" unique_id=593038138]
+offset_left = 88.0
+offset_top = 113.0
+offset_right = 232.0
+offset_bottom = 144.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.25098)
+theme_override_fonts/normal_font = ExtResource("8_pasof")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "Naturaleza [color=red]AMABLE[/color], Nv[color=red]5[/color], [color=red]RUTA 101[/color] (visto)."
+metadata/_edit_lock_ = true
+
+[node name="variocolor" type="Label" parent="Pantalla-info-pag1" unique_id=227304610]
+offset_left = 66.0
+offset_top = 123.0
+offset_right = 79.0
+offset_bottom = 144.0
+text = "★"
+label_settings = SubResource("LabelSettings_65joe")
+max_lines_visible = 1
+visible_characters = 1
+metadata/_edit_lock_ = true
+
+[node name="curado" type="Label" parent="Pantalla-info-pag1" unique_id=4710648]
+offset_left = 21.0
+offset_top = 131.0
+offset_right = 28.0
+offset_bottom = 152.0
+text = "•"
+label_settings = SubResource("LabelSettings_memfa")
+metadata/_edit_lock_ = true
+
+[node name="Pantalla-info-pestanas" type="AnimatedSprite2D" parent="." unique_id=2096278040]
+sprite_frames = SubResource("SpriteFrames_nk541")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Pantalla-info-pag2v" type="Sprite2D" parent="." unique_id=1297336516]
+position = Vector2(80, 16)
+texture = ExtResource("3_bf7gj")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="objeto" type="Label" parent="Pantalla-info-pag2v" unique_id=514688377]
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 16.0
+offset_bottom = 31.0
+text = "NO TIENE"
+label_settings = ExtResource("4_0olpm")
+metadata/_edit_lock_ = true
+
+[node name="cintas" type="Label" parent="Pantalla-info-pag2v" unique_id=354977390]
+offset_left = 88.0
+offset_top = 16.0
+offset_right = 133.0
+offset_bottom = 31.0
+text = "NO TIENE"
+label_settings = ExtResource("4_0olpm")
+metadata/_edit_lock_ = true
+
+[node name="ps" type="Label" parent="Pantalla-info-pag2v" unique_id=1674921454]
+offset_left = 52.0
+offset_top = 40.0
+offset_right = 94.0
+offset_bottom = 55.0
+text = "888/999"
+label_settings = ExtResource("4_0olpm")
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="ataque" type="Label" parent="Pantalla-info-pag2v" unique_id=1172812312]
+offset_left = 64.0
+offset_top = 56.0
+offset_right = 82.0
+offset_bottom = 71.0
+text = "888"
+label_settings = ExtResource("4_0olpm")
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="defensa" type="Label" parent="Pantalla-info-pag2v" unique_id=447071394]
+offset_left = 64.0
+offset_top = 72.0
+offset_right = 82.0
+offset_bottom = 87.0
+text = "888"
+label_settings = ExtResource("4_0olpm")
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="at_esp" type="Label" parent="Pantalla-info-pag2v" unique_id=234819017]
+offset_left = 135.0
+offset_top = 40.0
+offset_right = 153.0
+offset_bottom = 55.0
+text = "888"
+label_settings = ExtResource("4_0olpm")
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="def_esp" type="Label" parent="Pantalla-info-pag2v" unique_id=617735853]
+offset_left = 135.0
+offset_top = 56.0
+offset_right = 153.0
+offset_bottom = 71.0
+text = "888"
+label_settings = ExtResource("4_0olpm")
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="veloc" type="Label" parent="Pantalla-info-pag2v" unique_id=158523927]
+offset_left = 135.0
+offset_top = 72.0
+offset_right = 153.0
+offset_bottom = 87.0
+text = "888"
+label_settings = ExtResource("4_0olpm")
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="puntos_exp" type="Label" parent="Pantalla-info-pag2v" unique_id=485949225]
+offset_left = 88.0
+offset_top = 97.0
+offset_right = 153.0
+offset_bottom = 112.0
+text = "88888"
+label_settings = ExtResource("4_0olpm")
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="sig_nivel" type="Label" parent="Pantalla-info-pag2v" unique_id=1838076600]
+offset_left = 88.0
+offset_top = 112.0
+offset_right = 153.0
+offset_bottom = 127.0
+text = "888"
+label_settings = ExtResource("4_0olpm")
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="BarraExp" type="ColorRect" parent="Pantalla-info-pag2v" unique_id=94741215]
+offset_left = 88.0
+offset_top = 130.0
+offset_right = 152.0
+offset_bottom = 133.0
+color = Color(100, 1, 0.749, 0.7)
+
+[node name="Pantalla-info-estado" type="Sprite2D" parent="." unique_id=1879006456]
+position = Vector2(0, 144)
+texture = ExtResource("11_ciifb")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Pantalla-info-estado-icono" type="AnimatedSprite2D" parent="Pantalla-info-estado" unique_id=1082923146]
+position = Vector2(51, 4)
+sprite_frames = SubResource("SpriteFrames_memfa")
+centered = false
+
+[node name="Pantalla-info-pag3-extra" type="Sprite2D" parent="." unique_id=1390048887]
+position = Vector2(0, 109)
+texture = ExtResource("5_22h44")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="mov_potencia" type="Label" parent="Pantalla-info-pag3-extra" unique_id=1120255702]
+offset_left = 59.0
+offset_top = 11.0
+offset_right = 78.0
+offset_bottom = 26.0
+text = "333"
+label_settings = ExtResource("4_0olpm")
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="mov_precision" type="Label" parent="Pantalla-info-pag3-extra" unique_id=411081643]
+offset_left = 59.0
+offset_top = 27.0
+offset_right = 78.0
+offset_bottom = 42.0
+text = "333"
+label_settings = ExtResource("4_0olpm")
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="etiqueta_exhib" type="Label" parent="Pantalla-info-pag3-extra" unique_id=1193554911]
+visible = false
+offset_left = 8.0
+offset_top = 11.0
+offset_right = 48.0
+offset_bottom = 26.0
+text = "EXHIB."
+label_settings = ExtResource("17_blanco")
+
+[node name="etiqueta_inhib" type="Label" parent="Pantalla-info-pag3-extra" unique_id=1192581618]
+visible = false
+offset_left = 8.0
+offset_top = 27.0
+offset_right = 48.0
+offset_bottom = 42.0
+text = "INHIB."
+label_settings = ExtResource("17_blanco")
+
+[node name="Corazones" type="Node2D" parent="Pantalla-info-pag3-extra" unique_id=1888218978]
+visible = false
+
+[node name="atractivo1" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=685972815]
+position = Vector2(48, 11)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 8, 8)
+
+[node name="atractivo2" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=1538721022]
+position = Vector2(56, 11)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 8, 8)
+
+[node name="atractivo3" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=1820266491]
+position = Vector2(64, 11)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 8, 8)
+
+[node name="atractivo4" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=1321375873]
+position = Vector2(72, 11)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 8, 8)
+
+[node name="atractivo5" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=1101477934]
+position = Vector2(48, 19)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 8, 8)
+
+[node name="atractivo6" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=1666795837]
+position = Vector2(56, 19)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 8, 8)
+
+[node name="atractivo7" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=1403776195]
+position = Vector2(64, 19)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 8, 8)
+
+[node name="atractivo8" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=661950873]
+position = Vector2(72, 19)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 8, 8)
+
+[node name="interferencia1" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=1020384223]
+position = Vector2(48, 27)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(24, 0, 8, 8)
+
+[node name="interferencia2" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=1062776282]
+position = Vector2(56, 27)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(24, 0, 8, 8)
+
+[node name="interferencia3" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=494954833]
+position = Vector2(64, 27)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(24, 0, 8, 8)
+
+[node name="interferencia4" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=1411015217]
+position = Vector2(72, 27)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(24, 0, 8, 8)
+
+[node name="interferencia5" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=1762644551]
+position = Vector2(48, 35)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(24, 0, 8, 8)
+
+[node name="interferencia6" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=1139877448]
+position = Vector2(56, 35)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(24, 0, 8, 8)
+
+[node name="interferencia7" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=1753368347]
+position = Vector2(64, 35)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(24, 0, 8, 8)
+
+[node name="interferencia8" type="Sprite2D" parent="Pantalla-info-pag3-extra/Corazones" unique_id=1577578443]
+position = Vector2(72, 35)
+texture = ExtResource("16_corcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(24, 0, 8, 8)
+
+[node name="Pantalla-info-pag3v" type="Sprite2D" parent="." unique_id=405058248]
+position = Vector2(80, 16)
+texture = ExtResource("4_g54ev")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="salir" type="Sprite2D" parent="Pantalla-info-pag3v" unique_id=1138420586]
+visible = false
+position = Vector2(5, 76)
+texture = ExtResource("6_rgwh8")
+centered = false
+
+[node name="tipo1" type="AnimatedSprite2D" parent="Pantalla-info-pag3v" unique_id=1137565482]
+position = Vector2(7, 16)
+sprite_frames = SubResource("SpriteFrames_dcfui")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="tipo2" type="AnimatedSprite2D" parent="Pantalla-info-pag3v" unique_id=1112053297]
+position = Vector2(7, 32)
+sprite_frames = SubResource("SpriteFrames_dcfui")
+frame = 1
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="tipo3" type="AnimatedSprite2D" parent="Pantalla-info-pag3v" unique_id=352458013]
+position = Vector2(7, 48)
+sprite_frames = SubResource("SpriteFrames_dcfui")
+frame = 2
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="tipo4" type="AnimatedSprite2D" parent="Pantalla-info-pag3v" unique_id=841688150]
+position = Vector2(7, 64)
+sprite_frames = SubResource("SpriteFrames_dcfui")
+frame = 3
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="categoria1" type="Sprite2D" parent="Pantalla-info-pag3v" unique_id=439152282]
+visible = false
+position = Vector2(7, 16)
+texture = ExtResource("15_catcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 16)
+
+[node name="categoria2" type="Sprite2D" parent="Pantalla-info-pag3v" unique_id=295323579]
+visible = false
+position = Vector2(7, 32)
+texture = ExtResource("15_catcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 16)
+
+[node name="categoria3" type="Sprite2D" parent="Pantalla-info-pag3v" unique_id=907139880]
+visible = false
+position = Vector2(7, 48)
+texture = ExtResource("15_catcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 16)
+
+[node name="categoria4" type="Sprite2D" parent="Pantalla-info-pag3v" unique_id=102330400]
+visible = false
+position = Vector2(7, 64)
+texture = ExtResource("15_catcon")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 16)
+
+[node name="cursor_fijo" type="Control" parent="Pantalla-info-pag3v" unique_id=787992688]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 32.0
+offset_right = 154.0
+offset_bottom = 48.0
+script = ExtResource("14_3uj13")
+color = Color(0.188, 0.659, 0.973, 1)
+metadata/_custom_type_script = "uid://d36hq52xgo0y0"
+
+[node name="cursor_movil" type="Control" parent="Pantalla-info-pag3v" unique_id=2139911555]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 6.0
+offset_top = 16.0
+offset_right = 154.0
+offset_bottom = 32.0
+script = ExtResource("14_3uj13")
+color = Color(0.973, 0.314, 0.188, 1)
+parpadeo = true
+metadata/_custom_type_script = "uid://d36hq52xgo0y0"
+
+[node name="mov1" type="Label" parent="Pantalla-info-pag3v" unique_id=652619888]
+offset_left = 40.0
+offset_top = 16.0
+offset_right = 112.0
+offset_bottom = 31.0
+pivot_offset = Vector2(24, 27)
+text = "PLACAJE"
+label_settings = ExtResource("4_wdg80")
+metadata/_edit_lock_ = true
+
+[node name="mov2" type="Label" parent="Pantalla-info-pag3v" unique_id=604753100]
+offset_left = 40.0
+offset_top = 32.0
+offset_right = 112.0
+offset_bottom = 47.0
+pivot_offset = Vector2(24, 27)
+text = "FORTALEZA"
+label_settings = ExtResource("4_wdg80")
+metadata/_edit_lock_ = true
+
+[node name="mov3" type="Label" parent="Pantalla-info-pag3v" unique_id=961943643]
+offset_left = 40.0
+offset_top = 48.0
+offset_right = 112.0
+offset_bottom = 63.0
+pivot_offset = Vector2(24, 27)
+text = "BOFETÓN LODO"
+label_settings = ExtResource("4_wdg80")
+metadata/_edit_lock_ = true
+
+[node name="mov4" type="Label" parent="Pantalla-info-pag3v" unique_id=1325273782]
+offset_left = 40.0
+offset_top = 64.0
+offset_right = 112.0
+offset_bottom = 79.0
+pivot_offset = Vector2(24, 27)
+text = "GOLPE CABEZA"
+label_settings = ExtResource("4_wdg80")
+metadata/_edit_lock_ = true
+
+[node name="pp1" type="Label" parent="Pantalla-info-pag3v" unique_id=404319418]
+offset_left = 121.0
+offset_top = 16.0
+offset_right = 153.0
+offset_bottom = 31.0
+text = "33/35"
+label_settings = ExtResource("4_0olpm")
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="pp2" type="Label" parent="Pantalla-info-pag3v" unique_id=2057454468]
+offset_left = 121.0
+offset_top = 32.0
+offset_right = 153.0
+offset_bottom = 47.0
+text = "33/35"
+label_settings = ExtResource("4_0olpm")
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="pp3" type="Label" parent="Pantalla-info-pag3v" unique_id=1310814940]
+offset_left = 121.0
+offset_top = 48.0
+offset_right = 153.0
+offset_bottom = 63.0
+text = "33/35"
+label_settings = ExtResource("4_0olpm")
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="pp4" type="Label" parent="Pantalla-info-pag3v" unique_id=2068388372]
+offset_left = 121.0
+offset_top = 64.0
+offset_right = 153.0
+offset_bottom = 79.0
+text = "3/5"
+label_settings = ExtResource("4_0olpm")
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="mov_desc" type="Label" parent="Pantalla-info-pag3v" unique_id=1380388148]
+offset_left = 8.0
+offset_top = 105.0
+offset_right = 154.0
+offset_bottom = 135.0
+text = "Tensa la musculatura para aumentar la DEFENSA"
+label_settings = ExtResource("4_0olpm")
+autowrap_mode = 2
+metadata/_edit_lock_ = true

@@ -1,0 +1,1864 @@
+{
+	"temas": {
+		"ABANDONED_SHIP": {
+			"archivo": "1-92 Abandoned Ship.mp3",
+			"bucle_fin": 60.2,
+			"bucle_inicio": 21.8,
+			"descripcion": "Barco abandonado",
+			"volumen": 1.05
+		},
+		"ABNORMAL_WEATHER": {
+			"archivo": "2-02 Abnormal Weather.mp3",
+			"bucle_fin": 47.35,
+			"bucle_inicio": 11.8,
+			"descripcion": "Clima anómalo",
+			"volumen": 1.61
+		},
+		"ARCHIE_MAXIE_BATTLE": {
+			"archivo": "1-83 Archie - Maxie Battle!.mp3",
+			"bucle_fin": 79.51,
+			"bucle_inicio": 23.69,
+			"descripcion": "Batalla contra Archie / Maxie",
+			"volumen": 1.0
+		},
+		"ARRECIPOLIS": {
+			"archivo": "1-88 Sootopolis City.mp3",
+			"bucle_fin": 79.53,
+			"bucle_inicio": 25.28,
+			"descripcion": "Arrecípolis",
+			"volumen": 1.25
+		},
+		"AUXILIO": {
+			"archivo": "410_auxilio.ogg",
+			"bucle_fin": 8.108,
+			"bucle_inicio": 1.9304,
+			"descripcion": "MUS_HELP (MUS_EVENT0) 8.1 s bucle",
+			"ruta": "res://Audio/music_gba/410_auxilio.ogg",
+			"song_id": 410.0,
+			"volumen": 2.06
+		},
+		"BAJO_AGUA": {
+			"archivo": "411_bajo_agua.ogg",
+			"bucle_fin": 86.927,
+			"bucle_inicio": 25.247,
+			"descripcion": "MUS_UNDERWATER (MUS_DEEPDEEP) 86.9 s bucle",
+			"ruta": "res://Audio/music_gba/411_bajo_agua.ogg",
+			"song_id": 411.0,
+			"volumen": 1.26
+		},
+		"BARCO_ABANDONADO": {
+			"archivo": "381_barco_abandonado.ogg",
+			"bucle_fin": 39.494,
+			"bucle_inicio": 0.9189,
+			"descripcion": "MUS_ABANDONED_SHIP (MUS_DAN02) 39.5 s bucle",
+			"ruta": "res://Audio/music_gba/381_barco_abandonado.ogg",
+			"song_id": 381.0,
+			"volumen": 1.48
+		},
+		"BATALLA_ALTO_MANDO": {
+			"archivo": "465_batalla_alto_mando.ogg",
+			"bucle_fin": 61.967,
+			"bucle_inicio": 11.2701,
+			"descripcion": "MUS_VS_ELITE_FOUR (MUS_BATTLE38) 62.0 s bucle",
+			"ruta": "res://Audio/music_gba/465_batalla_alto_mando.ogg",
+			"song_id": 465.0,
+			"volumen": 1.14
+		},
+		"BATALLA_ARCHIE_MAXIE": {
+			"archivo": "466_batalla_archie_maxie.ogg",
+			"bucle_fin": 79.396,
+			"bucle_inicio": 23.2916,
+			"descripcion": "MUS_VS_AQUA_MAGMA_LEADER (MUS_BATTLE30) 79.4 s bucle",
+			"ruta": "res://Audio/music_gba/466_batalla_archie_maxie.ogg",
+			"song_id": 466.0,
+			"volumen": 1.19
+		},
+		"BATALLA_CAMPEON": {
+			"archivo": "461_batalla_campeon.ogg",
+			"bucle_fin": 65.968,
+			"bucle_inicio": 11.3864,
+			"descripcion": "MUS_VS_CHAMPION (MUS_BATTLE33) 66.0 s bucle",
+			"ruta": "res://Audio/music_gba/461_batalla_campeon.ogg",
+			"song_id": 461.0,
+			"volumen": 1.04
+		},
+		"BATALLA_ENTRENADOR": {
+			"archivo": "459_batalla_entrenador.ogg",
+			"bucle_fin": 90.136,
+			"bucle_inicio": 12.1989,
+			"descripcion": "MUS_VS_TRAINER (MUS_BATTLE20) 90.1 s bucle",
+			"ruta": "res://Audio/music_gba/459_batalla_entrenador.ogg",
+			"song_id": 459.0,
+			"volumen": 1.06
+		},
+		"BATALLA_ENTRENADOR_1": {
+			"archivo": "1-16 Trainer Battle!.mp3",
+			"bucle_fin": 147.48,
+			"bucle_inicio": 69.9,
+			"descripcion": "Batalla contra entrenador",
+			"volumen": 1.0
+		},
+		"BATALLA_EQUIPO_AQUA_MAGMA": {
+			"archivo": "458_batalla_equipo_aqua_magma.ogg",
+			"bucle_fin": 101.299,
+			"bucle_inicio": 12.0941,
+			"descripcion": "MUS_VS_AQUA_MAGMA (MUS_BATTLE31) 101.3 s bucle",
+			"ruta": "res://Audio/music_gba/458_batalla_equipo_aqua_magma.ogg",
+			"song_id": 458,
+			"volumen": 1.2
+		},
+		"BATALLA_KYOGRE_GROUDON": {
+			"archivo": "463_batalla_kyogre_groudon.ogg",
+			"bucle_fin": 49.206,
+			"bucle_inicio": 9.8442,
+			"descripcion": "MUS_VS_KYOGRE_GROUDON (MUS_BATTLE34) 49.2 s bucle",
+			"ruta": "res://Audio/music_gba/463_batalla_kyogre_groudon.ogg",
+			"song_id": 463.0,
+			"volumen": 1.14
+		},
+		"BATALLA_LEYENDA_CABLE": {
+			"archivo": "358_batalla_leyenda_cable.ogg",
+			"bucle_fin": 106.972,
+			"bucle_inicio": 12.9955,
+			"descripcion": "MUS_C_VS_LEGEND_BEAST (MUS_SUIKUN) 107.0 s bucle",
+			"ruta": "res://Audio/music_gba/358_batalla_leyenda_cable.ogg",
+			"song_id": 358.0,
+			"volumen": 1.44
+		},
+		"BATALLA_LIDER_GIMNASIO": {
+			"archivo": "460_batalla_lider_gimnasio.ogg",
+			"bucle_fin": 76.272,
+			"bucle_inicio": 12.3149,
+			"descripcion": "MUS_VS_GYM_LEADER (MUS_BATTLE32) 76.3 s bucle",
+			"ruta": "res://Audio/music_gba/460_batalla_lider_gimnasio.ogg",
+			"song_id": 460.0,
+			"volumen": 1.03
+		},
+		"BATALLA_REGI": {
+			"archivo": "462_batalla_regi.ogg",
+			"bucle_fin": 60.28,
+			"bucle_inicio": 30.1432,
+			"descripcion": "MUS_VS_REGI (MUS_BATTLE36) 60.3 s bucle",
+			"ruta": "res://Audio/music_gba/462_batalla_regi.ogg",
+			"song_id": 462.0,
+			"volumen": 1.2
+		},
+		"BATALLA_RIVAL": {
+			"archivo": "464_batalla_rival.ogg",
+			"bucle_fin": 65.205,
+			"bucle_inicio": 12.3144,
+			"descripcion": "MUS_VS_RIVAL (MUS_BATTLE35) 65.2 s bucle",
+			"ruta": "res://Audio/music_gba/464_batalla_rival.ogg",
+			"song_id": 464.0,
+			"volumen": 1.08
+		},
+		"BATALLA_SALVAJE": {
+			"archivo": "457_batalla_salvaje.ogg",
+			"bucle_fin": 52.902,
+			"bucle_inicio": 13.5395,
+			"descripcion": "MUS_VS_WILD (MUS_BATTLE27) 52.9 s bucle",
+			"ruta": "res://Audio/music_gba/457_batalla_salvaje.ogg",
+			"song_id": 457.0,
+			"volumen": 1.11
+		},
+		"BATALLA_SALVAJE_1": {
+			"archivo": "1-08 Wild Pokémon Battle!.mp3",
+			"bucle_fin": 51.94,
+			"bucle_inicio": 12.74,
+			"descripcion": "Batalla contra Pokémon salvaje",
+			"volumen": 1.0
+		},
+		"BATALLA_SUICUNE_RAIKOU_ENTEI": {
+			"archivo": "2-23 Suicune, Raikou, Entei Battle! (Unused).mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "",
+			"volumen": 1.0
+		},
+		"BATTLE_ARENA": {
+			"archivo": "2-08 Battle Arena.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Arena de Batalla",
+			"volumen": 1.35
+		},
+		"BATTLE_DOME_LOBBY": {
+			"archivo": "2-09 Battle Dome Lobby.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Vestíbulo de la Cúpula de Batalla",
+			"volumen": 1.91
+		},
+		"BATTLE_DOME_TOURNAMENT": {
+			"archivo": "2-10 Battle Dome Tournament.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Torneo de la Cúpula de Batalla",
+			"volumen": 1.0
+		},
+		"BATTLE_FACTORY": {
+			"archivo": "2-07 Battle Factory.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Fábrica de Batalla",
+			"volumen": 1.0
+		},
+		"BATTLE_FRONTIER": {
+			"archivo": "2-04 Battle Frontier.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Frontera de Batalla",
+			"volumen": 1.0
+		},
+		"BATTLE_PALACE": {
+			"archivo": "2-12 Battle Palace.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Palacio de Batalla",
+			"volumen": 1.26
+		},
+		"BATTLE_PIKE": {
+			"archivo": "2-11 Battle Pike.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Pica de Batalla",
+			"volumen": 1.27
+		},
+		"BATTLE_PYRAMID": {
+			"archivo": "2-13 Battle Pyramid.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Pirámide de Batalla",
+			"volumen": 1.21
+		},
+		"BATTLE_PYRAMID_SUMMIT": {
+			"archivo": "2-14 Battle Pyramid Summit.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Cima de la Pirámide de Batalla",
+			"volumen": 2.47
+		},
+		"BATTLE_TENT": {
+			"archivo": "1-42 Battle Tent.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Carpa de Batalla",
+			"volumen": 1.0
+		},
+		"BATTLE_TOWER": {
+			"archivo": "2-05 Battle Tower.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Torre de Batalla",
+			"volumen": 1.14
+		},
+		"BICICLETA": {
+			"archivo": "403_bicicleta.ogg",
+			"bucle_fin": 50.679,
+			"bucle_inicio": 1.7572,
+			"descripcion": "MUS_CYCLING (MUS_CYCLING) 50.7 s bucle",
+			"ruta": "res://Audio/music_gba/403_bicicleta.ogg",
+			"song_id": 403.0,
+			"volumen": 1.61
+		},
+		"BIENVENIDA_POKEMON_RUTA_123": {
+			"archivo": "1-04. Welcome To The World of Pokemon! ~ Route 123.mp3",
+			"bucle_fin": 66.32,
+			"bucle_inicio": 19.87,
+			"descripcion": "Bienvenido al mundo Pokémon",
+			"volumen": 1.0
+		},
+		"BOSQUE_CUEVA_SENDERO": {
+			"archivo": "1-25. Petalburg Woods ~ Granite Cave ~ Jagged Pass ~ Fiery Path.mp3",
+			"bucle_fin": 41.11,
+			"bucle_inicio": 2.34,
+			"descripcion": "Bosque Petalia, Cueva Granito, Ruinas Desierto",
+			"volumen": 1.46
+		},
+		"BOSQUE_PETALIA": {
+			"archivo": "366_bosque_petalia.ogg",
+			"bucle_fin": 42.433,
+			"bucle_inicio": 3.4898,
+			"descripcion": "MUS_PETALBURG_WOODS (MUS_DAN01) 42.4 s bucle",
+			"ruta": "res://Audio/music_gba/366_bosque_petalia.ogg",
+			"song_id": 366.0,
+			"volumen": 2.23
+		},
+		"BRENDAN": {
+			"archivo": "1-65 Brendan.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Brendan",
+			"volumen": 1.17
+		},
+		"BUCEO": {
+			"archivo": "1-87 Diving.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Buceo",
+			"volumen": 1.0
+		},
+		"CABEL_CAR": {
+			"archivo": "1-59 Cabel Car.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Teleférico",
+			"volumen": 1.0
+		},
+		"CALLE_VICTORIA": {
+			"archivo": "1-95 Victory Road.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Camino de la Victoria",
+			"volumen": 1.0
+		},
+		"CAMARA_SELLADA": {
+			"archivo": "438_camara_sellada.ogg",
+			"bucle_fin": 36.177,
+			"bucle_inicio": 0.0125,
+			"descripcion": "MUS_SEALED_CHAMBER (MUS_MABOROSI) 36.2 s bucle",
+			"ruta": "res://Audio/music_gba/438_camara_sellada.ogg",
+			"song_id": 438.0,
+			"volumen": 1.55
+		},
+		"CAPTURA_POKEMON": {
+			"archivo": "352_captura_pokemon.ogg",
+			"bucle_fin": 14.022,
+			"bucle_inicio": 0.2425,
+			"descripcion": "MUS_CAUGHT (MUS_KACHI22) 14.0 s bucle",
+			"ruta": "res://Audio/music_gba/352_captura_pokemon.ogg",
+			"song_id": 352.0,
+			"volumen": 1.38
+		},
+		"CASA_TRUCO": {
+			"archivo": "448_casa_truco.ogg",
+			"bucle_fin": 44.316,
+			"bucle_inicio": 1.773,
+			"descripcion": "MUS_TRICK_HOUSE (MUS_KARAKURI) 44.3 s bucle",
+			"ruta": "res://Audio/music_gba/448_casa_truco.ogg",
+			"song_id": 448.0,
+			"volumen": 1.48
+		},
+		"CENTRO_COMUNICACION_CABLE": {
+			"archivo": "356_centro_comunicacion_cable.ogg",
+			"bucle_fin": 34.192,
+			"bucle_inicio": 2.0456,
+			"descripcion": "MUS_C_COMM_CENTER (MUS_PCC) 34.2 s bucle",
+			"ruta": "res://Audio/music_gba/356_centro_comunicacion_cable.ogg",
+			"song_id": 356.0,
+			"volumen": 1.53
+		},
+		"CENTRO_POKEMON": {
+			"archivo": "400_centro_pokemon.ogg",
+			"bucle_fin": 39.42,
+			"bucle_inicio": 2.3345,
+			"descripcion": "MUS_POKE_CENTER (MUS_POKECEN) 39.4 s bucle",
+			"ruta": "res://Audio/music_gba/400_centro_pokemon.ogg",
+			"song_id": 400.0,
+			"volumen": 1.42
+		},
+		"CHAMPION_BATTLE": {
+			"archivo": "1-101 Champion Battle!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Batalla contra el Campeón",
+			"volumen": 1.0
+		},
+		"CHAMPION_DEFEATED": {
+			"archivo": "1-102 Champion Defeated!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Campeón derrotado",
+			"volumen": 1.0
+		},
+		"CHAMPION_ENCOUNTERED": {
+			"archivo": "1-100 Champion Encountered!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Encuentro con el Campeón",
+			"volumen": 1.0
+		},
+		"CIUDAD_ARBORADA": {
+			"archivo": "1-69 Fortree City.mp3",
+			"bucle_fin": 35.49,
+			"bucle_inicio": 5.49,
+			"descripcion": "Ciudad Folcarna",
+			"volumen": 1.0
+		},
+		"CIUDAD_ARRECOPOLIS": {
+			"archivo": "445_ciudad_arrecopolis.ogg",
+			"bucle_fin": 54.764,
+			"bucle_inicio": 0.2499,
+			"descripcion": "MUS_SOOTOPOLIS (MUS_RUNECITY) 54.8 s bucle",
+			"ruta": "res://Audio/music_gba/445_ciudad_arrecopolis.ogg",
+			"song_id": 445.0,
+			"volumen": 1.77
+		},
+		"CIUDAD_COLOSALIA": {
+			"archivo": "422_ciudad_colosalia.ogg",
+			"bucle_fin": 68.308,
+			"bucle_inicio": 8.0345,
+			"descripcion": "MUS_EVER_GRANDE (MUS_RAINBOW) 68.3 s bucle",
+			"ruta": "res://Audio/music_gba/422_ciudad_colosalia.ogg",
+			"song_id": 422.0,
+			"volumen": 1.52
+		},
+		"CIUDAD_ESCASO": {
+			"archivo": "363_ciudad_escaso.ogg",
+			"bucle_fin": 38.607,
+			"bucle_inicio": 0.0314,
+			"descripcion": "MUS_OLDALE (MUS_MACHI_S4) 38.6 s bucle",
+			"ruta": "res://Audio/music_gba/363_ciudad_escaso.ogg",
+			"song_id": 363.0,
+			"volumen": 1.22
+		},
+		"CIUDAD_FERRICA": {
+			"archivo": "399_ciudad_ferrica.ogg",
+			"bucle_fin": 61.947,
+			"bucle_inicio": 1.6731,
+			"descripcion": "MUS_RUSTBORO (MUS_GOTOWN) 61.9 s bucle",
+			"ruta": "res://Audio/music_gba/399_ciudad_ferrica.ogg",
+			"song_id": 399.0,
+			"volumen": 1.36
+		},
+		"CIUDAD_FERRICA_MALVALONA_ALGARIA": {
+			"archivo": "1-30. Rustboro City ~ Mauville City ~ Mossdeep City.mp3",
+			"bucle_fin": 63.55,
+			"bucle_inicio": 3.56,
+			"descripcion": "Ciudad Férrica, Malvalona y Algaria",
+			"volumen": 1.0
+		},
+		"CIUDAD_FOLCARNA": {
+			"archivo": "382_ciudad_folcarna.ogg",
+			"bucle_fin": 33.907,
+			"bucle_inicio": 3.7705,
+			"descripcion": "MUS_FORTREE (MUS_MACHI_S3) 33.9 s bucle",
+			"ruta": "res://Audio/music_gba/382_ciudad_folcarna.ogg",
+			"song_id": 382.0,
+			"volumen": 1.31
+		},
+		"CIUDAD_OROMAR": {
+			"archivo": "408_ciudad_oromar.ogg",
+			"bucle_fin": 56.211,
+			"bucle_inicio": 0.0388,
+			"descripcion": "MUS_LILYCOVE (MUS_MINAMO) 56.2 s bucle",
+			"ruta": "res://Audio/music_gba/408_ciudad_oromar.ogg",
+			"song_id": 408.0,
+			"volumen": 1.4
+		},
+		"CIUDAD_PETALIA": {
+			"archivo": "362_ciudad_petalia.ogg",
+			"bucle_fin": 32.543,
+			"bucle_inicio": 1.9208,
+			"descripcion": "MUS_PETALBURG (MUS_MACHI_S2) 32.5 s bucle",
+			"ruta": "res://Audio/music_gba/362_ciudad_petalia.ogg",
+			"song_id": 362.0,
+			"volumen": 1.23
+		},
+		"CIUDAD_PLATEADA_GSC": {
+			"archivo": "357_ciudad_plateada_gsc.ogg",
+			"bucle_fin": 67.815,
+			"bucle_inicio": 7.5411,
+			"descripcion": "MUS_GSC_PEWTER (MUS_NIBI) 67.8 s bucle",
+			"ruta": "res://Audio/music_gba/357_ciudad_plateada_gsc.ogg",
+			"song_id": 357.0,
+			"volumen": 1.43
+		},
+		"CIUDAD_PORTUAL": {
+			"archivo": "433_ciudad_portual.ogg",
+			"bucle_fin": 82.648,
+			"bucle_inicio": 0.9933,
+			"descripcion": "MUS_SLATEPORT (MUS_FINECITY) 82.6 s bucle",
+			"ruta": "res://Audio/music_gba/433_ciudad_portual.ogg",
+			"song_id": 433.0,
+			"volumen": 1.57
+		},
+		"CONCURSO_CABLE_1": {
+			"archivo": "393_concurso_cable_1.ogg",
+			"bucle_fin": 41.459,
+			"bucle_inicio": 0.0203,
+			"descripcion": "MUS_LINK_CONTEST_P1 (MUS_TEST1) 41.5 s bucle",
+			"ruta": "res://Audio/music_gba/393_concurso_cable_1.ogg",
+			"song_id": 393.0,
+			"volumen": 1.8
+		},
+		"CONCURSO_CABLE_2": {
+			"archivo": "394_concurso_cable_2.ogg",
+			"bucle_fin": 41.451,
+			"bucle_inicio": 0.0132,
+			"descripcion": "MUS_LINK_CONTEST_P2 (MUS_TEST2) 41.5 s bucle",
+			"ruta": "res://Audio/music_gba/394_concurso_cable_2.ogg",
+			"song_id": 394.0,
+			"volumen": 1.46
+		},
+		"CONCURSO_CABLE_3": {
+			"archivo": "395_concurso_cable_3.ogg",
+			"bucle_fin": 41.452,
+			"bucle_inicio": 0.0133,
+			"descripcion": "MUS_LINK_CONTEST_P3 (MUS_TEST3) 41.5 s bucle",
+			"ruta": "res://Audio/music_gba/395_concurso_cable_3.ogg",
+			"song_id": 395.0,
+			"volumen": 2.14
+		},
+		"CONCURSO_CABLE_4": {
+			"archivo": "396_concurso_cable_4.ogg",
+			"bucle_fin": 41.475,
+			"bucle_inicio": 0.0368,
+			"descripcion": "MUS_LINK_CONTEST_P4 (MUS_TEST4) 41.5 s bucle",
+			"ruta": "res://Audio/music_gba/396_concurso_cable_4.ogg",
+			"song_id": 396.0,
+			"volumen": 1.55
+		},
+		"CONCURSO_GANADOR": {
+			"archivo": "439_concurso_ganador.ogg",
+			"bucle_fin": 13.26,
+			"bucle_inicio": 6.7466,
+			"descripcion": "MUS_CONTEST_WINNER (MUS_CON_FAN) 13.3 s bucle",
+			"ruta": "res://Audio/music_gba/439_concurso_ganador.ogg",
+			"song_id": 439.0,
+			"volumen": 1.68
+		},
+		"CONCURSO_POKEMON": {
+			"archivo": "440_concurso_pokemon.ogg",
+			"bucle_fin": 41.442,
+			"bucle_inicio": 0.0034,
+			"descripcion": "MUS_CONTEST (MUS_CONTEST0) 41.4 s bucle",
+			"ruta": "res://Audio/music_gba/440_concurso_pokemon.ogg",
+			"song_id": 440.0,
+			"volumen": 1.44
+		},
+		"CONCURSO_POKEMON_VESTIBULO": {
+			"archivo": "1-52 Pokémon Contest Lobby.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Vestíbulo del Concurso Pokémon",
+			"volumen": 2.01
+		},
+		"CONCURSO_RESULTADOS": {
+			"archivo": "446_concurso_resultados.ogg",
+			"bucle_fin": 15.569,
+			"bucle_inicio": 0.5008,
+			"descripcion": "MUS_CONTEST_RESULTS (MUS_CON_K) 15.6 s bucle",
+			"ruta": "res://Audio/music_gba/446_concurso_resultados.ogg",
+			"song_id": 446.0,
+			"volumen": 1.78
+		},
+		"CONCURSO_VESTIBULO": {
+			"archivo": "452_concurso_vestibulo.ogg",
+			"bucle_fin": 33.922,
+			"bucle_inicio": 3.7847,
+			"descripcion": "MUS_CONTEST_LOBBY (MUS_CONLOBBY) 33.9 s bucle",
+			"ruta": "res://Audio/music_gba/452_concurso_vestibulo.ogg",
+			"song_id": 452.0,
+			"volumen": 2.85
+		},
+		"CONGRATULATIONS_YOUR_POKEMON_EVOLVED": {
+			"archivo": "1-68 Congratulations! Your Pokémon Evolved!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "¡Felicidades, tu Pokémon evolucionó! ¡Huevo eclosionado!",
+			"volumen": 1.0
+		},
+		"CONTEST_RESULTS_ANNOUNCEMENT": {
+			"archivo": "1-54 Contest Results Announcement.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Anuncio de resultados del concurso",
+			"volumen": 1.35
+		},
+		"CONTEST_WINNER": {
+			"archivo": "1-55 Contest Winner!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "¡Ganaste!",
+			"volumen": 1.24
+		},
+		"CREDITOS": {
+			"archivo": "455_creditos.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_CREDITS (MUS_THANKFOR) 172.8 s jingle",
+			"ruta": "res://Audio/music_gba/455_creditos.ogg",
+			"song_id": 455.0,
+			"volumen": 1.34
+		},
+		"CROSSING_THE_SEA": {
+			"archivo": "1-36 Crossing the Sea.mp3",
+			"bucle_fin": 33.29,
+			"bucle_inicio": 8.67,
+			"descripcion": "Cruzando el mar",
+			"volumen": 1.13
+		},
+		"CUEVA_ORIGEN": {
+			"archivo": "386_cueva_origen.ogg",
+			"bucle_fin": 44.01,
+			"bucle_inicio": 0.6127,
+			"descripcion": "MUS_CAVE_OF_ORIGIN (MUS_DAN03) 44.0 s bucle",
+			"ruta": "res://Audio/music_gba/386_cueva_origen.ogg",
+			"song_id": 386.0,
+			"volumen": 1.35
+		},
+		"CUEVA_ORIGEN_CASCADA_METEORO": {
+			"archivo": "1-89. Cave of Origin ~ Meteor Falls.mp3",
+			"bucle_fin": 55.9,
+			"bucle_inicio": 12.7,
+			"descripcion": "Cueva del Origen - Cave of Origin - Meteor Falls",
+			"volumen": 1.0
+		},
+		"CURACION_POKEMON": {
+			"archivo": "368_curacion_pokemon.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_HEAL (MUS_ME_ASA) 2.1 s jingle",
+			"ruta": "res://Audio/music_gba/368_curacion_pokemon.ogg",
+			"song_id": 368.0,
+			"volumen": 2.47
+		},
+		"DEOXYS_BATTLE": {
+			"archivo": "2-19 Deoxys Battle!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Batalla contra Deoxys",
+			"volumen": 1.0
+		},
+		"DEOXYS_ENCOUNTERED": {
+			"archivo": "2-18 Deoxys Encountered!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Encuentro con Deoxys",
+			"volumen": 1.55
+		},
+		"DEPARTURE_FROM_THE_HOENN_REGION_2": {
+			"archivo": "1-01 Departure From the Hoenn Region 2.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Salida de la región de Hoenn",
+			"volumen": 1.0
+		},
+		"DESPIERTAN_LEGENDARIOS": {
+			"archivo": "388_despiertan_legendarios.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_AWAKEN_LEGEND (MUS_ME_TAMA) 11.6 s jingle",
+			"ruta": "res://Audio/music_gba/388_despiertan_legendarios.ogg",
+			"song_id": 388.0,
+			"volumen": 0.97
+		},
+		"DOUBLE_BATTLE": {
+			"archivo": "1-02 Double Battle.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Batalla doble",
+			"volumen": 1.0
+		},
+		"DROUGHT": {
+			"archivo": "1-85 Drought.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Sequía",
+			"volumen": 3.83
+		},
+		"ELITE_FOUR_MEMBER_BATTLE": {
+			"archivo": "1-99 Elite Four Member Battle!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Batalla contra un Alto Mando",
+			"volumen": 1.0
+		},
+		"ELITE_FOUR_MEMBER_ENCOUNTERED": {
+			"archivo": "1-98 Elite Four Member Encountered!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Encuentro con un Alto Mando",
+			"volumen": 1.02
+		},
+		"EL_FIN": {
+			"archivo": "1-106 The End.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Fin",
+			"volumen": 3.5
+		},
+		"ENCUENTRO_ALTO_MANDO": {
+			"archivo": "450_encuentro_alto_mando.ogg",
+			"bucle_fin": 22.049,
+			"bucle_inicio": 0.4512,
+			"descripcion": "MUS_ENCOUNTER_ELITE_FOUR (MUS_SITENNOU) 22.0 s bucle",
+			"ruta": "res://Audio/music_gba/450_encuentro_alto_mando.ogg",
+			"song_id": 450.0,
+			"volumen": 1.55
+		},
+		"ENCUENTRO_CABALLERO": {
+			"archivo": "397_encuentro_caballero.ogg",
+			"bucle_fin": 18.398,
+			"bucle_inicio": 1.4379,
+			"descripcion": "MUS_ENCOUNTER_RICH (MUS_TEST) 18.4 s bucle",
+			"ruta": "res://Audio/music_gba/397_encuentro_caballero.ogg",
+			"song_id": 397.0,
+			"volumen": 1.66
+		},
+		"ENCUENTRO_CAMPEON": {
+			"archivo": "454_encuentro_campeon.ogg",
+			"bucle_fin": 30.61,
+			"bucle_inicio": 3.4366,
+			"descripcion": "MUS_ENCOUNTER_CHAMPION (MUS_DAIGO) 30.6 s bucle",
+			"ruta": "res://Audio/music_gba/454_encuentro_campeon.ogg",
+			"song_id": 454.0,
+			"volumen": 1.3
+		},
+		"ENCUENTRO_CHICA": {
+			"archivo": "379_encuentro_chica.ogg",
+			"bucle_fin": 15.502,
+			"bucle_inicio": 2.1082,
+			"descripcion": "MUS_ENCOUNTER_GIRL (MUS_SYOUJOEYE) 15.5 s bucle",
+			"ruta": "res://Audio/music_gba/379_encuentro_chica.ogg",
+			"song_id": 379.0,
+			"volumen": 1.3
+		},
+		"ENCUENTRO_CHICO": {
+			"archivo": "380_encuentro_chico.ogg",
+			"bucle_fin": 15.76,
+			"bucle_inicio": 1.7799,
+			"descripcion": "MUS_ENCOUNTER_MALE (MUS_BOYEYE) 15.8 s bucle",
+			"ruta": "res://Audio/music_gba/380_encuentro_chico.ogg",
+			"song_id": 380.0,
+			"volumen": 1.32
+		},
+		"ENCUENTRO_ENTREVISTADORES": {
+			"archivo": "453_encuentro_entrevistadores.ogg",
+			"bucle_fin": 10.315,
+			"bucle_inicio": 3.5174,
+			"descripcion": "MUS_ENCOUNTER_INTERVIEWER (MUS_INTER_V) 10.3 s bucle",
+			"ruta": "res://Audio/music_gba/453_encuentro_entrevistadores.ogg",
+			"song_id": 453.0,
+			"volumen": 2.39
+		},
+		"ENCUENTRO_EQUIPO_AQUA": {
+			"archivo": "419_encuentro_equipo_aqua.ogg",
+			"bucle_fin": 31.234,
+			"bucle_inicio": 3.6753,
+			"descripcion": "MUS_ENCOUNTER_AQUA (MUS_AQA_0) 31.2 s bucle",
+			"ruta": "res://Audio/music_gba/419_encuentro_equipo_aqua.ogg",
+			"song_id": 419.0,
+			"volumen": 1.46
+		},
+		"ENCUENTRO_EQUIPO_MAGMA": {
+			"archivo": "441_encuentro_equipo_magma.ogg",
+			"bucle_fin": 21.393,
+			"bucle_inicio": 0.2139,
+			"descripcion": "MUS_ENCOUNTER_MAGMA (MUS_MGM0) 21.4 s bucle",
+			"ruta": "res://Audio/music_gba/441_encuentro_equipo_magma.ogg",
+			"song_id": 441.0,
+			"volumen": 1.74
+		},
+		"ENCUENTRO_GEMELOS": {
+			"archivo": "449_encuentro_gemelos.ogg",
+			"bucle_fin": 10.817,
+			"bucle_inicio": 3.6172,
+			"descripcion": "MUS_ENCOUNTER_TWINS (MUS_HUTAGO) 10.8 s bucle",
+			"ruta": "res://Audio/music_gba/449_encuentro_gemelos.ogg",
+			"song_id": 449.0,
+			"volumen": 1.77
+		},
+		"ENCUENTRO_GENIAL": {
+			"archivo": "417_encuentro_genial.ogg",
+			"bucle_fin": 31.242,
+			"bucle_inicio": 3.6838,
+			"descripcion": "MUS_ENCOUNTER_COOL (MUS_KAKKOII) 31.2 s bucle",
+			"ruta": "res://Audio/music_gba/417_encuentro_genial.ogg",
+			"song_id": 417.0,
+			"volumen": 1.28
+		},
+		"ENCUENTRO_MONTANERO": {
+			"archivo": "451_encuentro_montanero.ogg",
+			"bucle_fin": 16.975,
+			"bucle_inicio": 1.9067,
+			"descripcion": "MUS_ENCOUNTER_HIKER (MUS_YAMA_EYE) 17.0 s bucle",
+			"ruta": "res://Audio/music_gba/451_encuentro_montanero.ogg",
+			"song_id": 451.0,
+			"volumen": 1.75
+		},
+		"ENCUENTRO_MUJER": {
+			"archivo": "407_encuentro_mujer.ogg",
+			"bucle_fin": 13.397,
+			"bucle_inicio": 2.6815,
+			"descripcion": "MUS_ENCOUNTER_FEMALE (MUS_GIRLEYE) 13.4 s bucle",
+			"ruta": "res://Audio/music_gba/407_encuentro_mujer.ogg",
+			"song_id": 407.0,
+			"volumen": 1.4
+		},
+		"ENCUENTRO_NADADOR": {
+			"archivo": "385_encuentro_nadador.ogg",
+			"bucle_fin": 12.73,
+			"bucle_inicio": 2.5505,
+			"descripcion": "MUS_ENCOUNTER_SWIMMER (MUS_SWIMEYE) 12.7 s bucle",
+			"ruta": "res://Audio/music_gba/385_encuentro_nadador.ogg",
+			"song_id": 385.0,
+			"volumen": 1.15
+		},
+		"ENCUENTRO_PSIQUICA": {
+			"archivo": "416_encuentro_psiquica.ogg",
+			"bucle_fin": 14.223,
+			"bucle_inicio": 0.4441,
+			"descripcion": "MUS_ENCOUNTER_INTENSE (MUS_HAGESHII) 14.2 s bucle",
+			"ruta": "res://Audio/music_gba/416_encuentro_psiquica.ogg",
+			"song_id": 416.0,
+			"volumen": 1.44
+		},
+		"ENCUENTRO_SOSPECHOSO": {
+			"archivo": "423_encuentro_sospechoso.ogg",
+			"bucle_fin": 21.275,
+			"bucle_inicio": 3.4939,
+			"descripcion": "MUS_ENCOUNTER_SUSPICIOUS (MUS_AYASII) 21.3 s bucle",
+			"ruta": "res://Audio/music_gba/423_encuentro_sospechoso.ogg",
+			"song_id": 423.0,
+			"volumen": 1.5
+		},
+		"ENDING": {
+			"archivo": "1-105 Ending.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Créditos finales",
+			"volumen": 1.0
+		},
+		"ENTERED_INTO_THE_HALL_OF_FAME": {
+			"archivo": "1-104 Entered into the Hall of Fame.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Entrada al Salón de la Fama",
+			"volumen": 1.06
+		},
+		"ENTRENADORES_1": {
+			"archivo": "1-15. Youngster ~ Camper~ Bug Catcher.mp3",
+			"bucle_fin": 25.18,
+			"bucle_inicio": 11.26,
+			"descripcion": "Presentación entrenadores básicos",
+			"volumen": 1.0
+		},
+		"ENTRENADOR_DERROTADO": {
+			"archivo": "1-17 Trainer Defeated!.mp3",
+			"bucle_fin": 29.73,
+			"bucle_inicio": 15.62,
+			"descripcion": "Entrenador derrotado",
+			"volumen": 1.0
+		},
+		"EQUIPO_AQUA_APARECE": {
+			"archivo": "1-26 Team Aqua Appears!.mp3",
+			"bucle_fin": 44.2,
+			"bucle_inicio": 16.77,
+			"descripcion": "Aparece el Team Aqua",
+			"volumen": 1.04
+		},
+		"EQUIPO_AQUA_MAGMA_BATALLA": {
+			"archivo": "1-27 Team Aqua - Magma Battle!.mp3",
+			"bucle_fin": 120.52,
+			"bucle_inicio": 31.72,
+			"descripcion": "Batalla contra el Team Aqua / Magma",
+			"volumen": 1.0
+		},
+		"EQUIPO_AQUA_MAGMA_DERROTADO": {
+			"archivo": "1-28 Team Aqua - Magma Defeated!.mp3",
+			"bucle_fin": 12.84,
+			"bucle_inicio": 6.08,
+			"descripcion": "Team Aqua / Magma derrotado",
+			"volumen": 1.16
+		},
+		"EQUIPO_AQUA_MAGMA_ESCONDITE": {
+			"archivo": "1-81 Team Aqua - Magma Hideout.mp3",
+			"bucle_fin": 47.95,
+			"bucle_inicio": 7.27,
+			"descripcion": "Escondite del Team Aqua / Magma",
+			"volumen": 1.35
+		},
+		"EQUIPO_MAGMA_APARECE": {
+			"archivo": "1-82 Team Magma Appears!.mp3",
+			"bucle_fin": 36.5,
+			"bucle_inicio": 15.43,
+			"descripcion": "Aparece el Team Magma",
+			"volumen": 1.13
+		},
+		"ESCONDITE_EQUIPO_AQUA_MAGMA": {
+			"archivo": "430_escondite_equipo_aqua_magma.ogg",
+			"bucle_fin": 40.855,
+			"bucle_inicio": 0.0023,
+			"descripcion": "MUS_AQUA_MAGMA_HIDEOUT (MUS_AJITO) 40.9 s bucle",
+			"ruta": "res://Audio/music_gba/430_escondite_equipo_aqua_magma.ogg",
+			"song_id": 430.0,
+			"volumen": 1.89
+		},
+		"ESCUELA_ENTRENADORES": {
+			"archivo": "435_escuela_entrenadores.ogg",
+			"bucle_fin": 37.42,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_SCHOOL (MUS_P_SCHOOL) 37.4 s bucle",
+			"ruta": "res://Audio/music_gba/435_escuela_entrenadores.ogg",
+			"song_id": 435.0,
+			"volumen": 1.89
+		},
+		"ESCUELA_ENTRENADORES_POKEMON": {
+			"archivo": "1-31 Pokémon Trainer's School.mp3",
+			"bucle_fin": 41.14,
+			"bucle_inicio": 3.9,
+			"descripcion": "Escuela de Entrenadores Pokémon",
+			"volumen": 1.29
+		},
+		"EVOLUCION": {
+			"archivo": "377_evolucion.ogg",
+			"bucle_fin": 32.176,
+			"bucle_inicio": 16.1025,
+			"descripcion": "MUS_EVOLUTION (MUS_SHINKA) 32.2 s bucle",
+			"ruta": "res://Audio/music_gba/377_evolucion.ogg",
+			"song_id": 377.0,
+			"volumen": 1.42
+		},
+		"EVOLUCION_COMPLETA": {
+			"archivo": "371_evolucion_completa.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_EVOLVED (MUS_FANFA5) 3.7 s jingle",
+			"ruta": "res://Audio/music_gba/371_evolucion_completa.ogg",
+			"song_id": 371.0,
+			"volumen": 1.21
+		},
+		"EVOLUCION_INTRO": {
+			"archivo": "376_evolucion_intro.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_EVOLUTION_INTRO (MUS_ME_SHINKA) 1.2 s jingle",
+			"ruta": "res://Audio/music_gba/376_evolucion_intro.ogg",
+			"song_id": 376.0,
+			"volumen": 1.82
+		},
+		"EXCURSIONISTA_NADADOR": {
+			"archivo": "1-39. Tuber ~ Picnicker.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Presentación nadador / excursionista",
+			"volumen": 1.0
+		},
+		"EXTERIOR_MONTE_VATE": {
+			"archivo": "434_exterior_monte_vate.ogg",
+			"bucle_fin": 82.76,
+			"bucle_inicio": 21.2971,
+			"descripcion": "MUS_MT_PYRE_EXTERIOR (MUS_MACHUPI) 82.8 s bucle",
+			"ruta": "res://Audio/music_gba/434_exterior_monte_vate.ogg",
+			"song_id": 434.0,
+			"volumen": 1.77
+		},
+		"FINAL": {
+			"archivo": "456_final.ogg",
+			"bucle_fin": 102.558,
+			"bucle_inicio": 0.9128,
+			"descripcion": "MUS_END (MUS_END) 102.6 s bucle",
+			"ruta": "res://Audio/music_gba/456_final.ogg",
+			"song_id": 456.0,
+			"volumen": 5.46
+		},
+		"FRONTIER_BRAIN_BATTLE": {
+			"archivo": "2-15 Frontier Brain Battle!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Batalla contra un Cerebro de la Frontera",
+			"volumen": 1.0
+		},
+		"GAME_CORNER": {
+			"archivo": "1-45 Game Corner.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Sala de juegos",
+			"volumen": 1.26
+		},
+		"GANADOR": {
+			"archivo": "1-46 Winner!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "¡Ganaste!",
+			"volumen": 1.0
+		},
+		"GENTLEMAN": {
+			"archivo": "1-72. Gentleman.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Presentación caballero",
+			"volumen": 1.11
+		},
+		"GIMNASIO": {
+			"archivo": "364_gimnasio.ogg",
+			"bucle_fin": 33.914,
+			"bucle_inicio": 0.0099,
+			"descripcion": "MUS_GYM (MUS_GIM) 33.9 s bucle",
+			"ruta": "res://Audio/music_gba/364_gimnasio.ogg",
+			"song_id": 364.0,
+			"volumen": 1.28
+		},
+		"GIMNASIO_POKEMON": {
+			"archivo": "1-32 Pokémon Gym.mp3",
+			"bucle_fin": 52.53,
+			"bucle_inicio": 18.78,
+			"descripcion": "Gimnasio Pokémon",
+			"volumen": 1.0
+		},
+		"HORA_PESCAR": {
+			"archivo": "1-48 Reel Time.mp3",
+			"bucle_fin": 21.44,
+			"bucle_inicio": 12.7,
+			"descripcion": "Hora de pescar",
+			"volumen": 1.0
+		},
+		"INTRO": {
+			"archivo": "414_intro.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_INTRO (MUS_DEMO1) 85.8 s jingle",
+			"ruta": "res://Audio/music_gba/414_intro.ogg",
+			"song_id": 414.0,
+			"volumen": 1.39
+		},
+		"INTRO_BATALLA": {
+			"archivo": "442_intro_batalla.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_INTRO_BATTLE (MUS_T_BATTLE) 31.6 s jingle",
+			"ruta": "res://Audio/music_gba/442_intro_batalla.ogg",
+			"song_id": 442.0,
+			"volumen": 1.1
+		},
+		"IN_THE_COOLTRAINERS_SIGHTLINE": {
+			"archivo": "1-96 In the Cooltrainer's Sightline!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "A la vista del entrenador genial",
+			"volumen": 1.0
+		},
+		"IN_THE_HEX_MANIACS_SIGHTLINE": {
+			"archivo": "1-78 In the Hex Maniac's Sightline!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "A la vista de la fanática oculta",
+			"volumen": 1.03
+		},
+		"IN_THE_HIKERS_SIGHTLINE": {
+			"archivo": "1-61 In the Hiker's Sightline!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "A la vista del montañero",
+			"volumen": 1.0
+		},
+		"IN_THE_PSYCHICS_SIGHTLINE": {
+			"archivo": "1-80 In the Psychic's Sightline!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "A la vista del psíquico",
+			"volumen": 1.03
+		},
+		"IN_THE_SWIMMERS_SIGHTLINE": {
+			"archivo": "1-91 In the Swimmer's Sightline!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "A la vista del nadador",
+			"volumen": 1.0
+		},
+		"IN_THE_TWINS_SIGHTLINE": {
+			"archivo": "1-57 In the Twins' Sightline!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "A la vista de los gemelos",
+			"volumen": 1.41
+		},
+		"JACKPOT": {
+			"archivo": "389_jackpot.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_SLOTS_JACKPOT (MUS_ME_B_BIG) 4.4 s jingle",
+			"ruta": "res://Audio/music_gba/389_jackpot.ogg",
+			"song_id": 389.0,
+			"volumen": 1.09
+		},
+		"LABORATORIO_ABEDUL": {
+			"archivo": "383_laboratorio_abedul.ogg",
+			"bucle_fin": 28.94,
+			"bucle_inicio": 0.0085,
+			"descripcion": "MUS_BIRCH_LAB (MUS_ODAMAKI) 28.9 s bucle",
+			"ruta": "res://Audio/music_gba/383_laboratorio_abedul.ogg",
+			"song_id": 383.0,
+			"volumen": 1.42
+		},
+		"LABORATORIO_PROFESOR_ABEDUL": {
+			"archivo": "1-10 Professor Birch's Laboratory.mp3",
+			"bucle_fin": 39.36,
+			"bucle_inicio": 10.55,
+			"descripcion": "Laboratorio del Profesor Abedul",
+			"volumen": 1.0
+		},
+		"LASS_BEAUTY_LADY": {
+			"archivo": "1-23. Lass ~ Beauty ~ Lady.mp3",
+			"bucle_fin": 13.7,
+			"bucle_inicio": 3.03,
+			"descripcion": "Presentación entrenadoras",
+			"volumen": 1.0
+		},
+		"LA_SALA_DE_LA_GLORIA": {
+			"archivo": "1-103 The Room of Glory.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "La sala de la gloria",
+			"volumen": 1.12
+		},
+		"LEGENDARY_POKEMON_BATTLE": {
+			"archivo": "1-90 Legendary Pokémon Battle!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Batalla contra un Pokémon legendario",
+			"volumen": 1.0
+		},
+		"LEVEL_UP": {
+			"archivo": "1-18 Level Up!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Subida de nivel",
+			"volumen": 1.12
+		},
+		"LIDER_GIMNASIO_BATALLA": {
+			"archivo": "1-33 Gym Leader Battle!.mp3",
+			"bucle_fin": 106.11,
+			"bucle_inicio": 42.44,
+			"descripcion": "Batalla contra Líder de Gimnasio",
+			"volumen": 1.0
+		},
+		"LIDER_GIMNASIO_DERROTADO": {
+			"archivo": "1-34 Gym Leader Defeated!.mp3",
+			"bucle_fin": 52.63,
+			"bucle_inicio": 10.89,
+			"descripcion": "Líder de Gimnasio derrotado",
+			"volumen": 1.0
+		},
+		"LITTLEROOT_TOWN_UNUSED_ALTERNATE": {
+			"archivo": "2-25 Littleroot Town (Unused Alternate).mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Pueblo Raíz",
+			"volumen": 1.15
+		},
+		"LLUVIA_INTENSA": {
+			"archivo": "443_lluvia_intensa.ogg",
+			"bucle_fin": 30.638,
+			"bucle_inicio": 0.5015,
+			"descripcion": "MUS_WEATHER_KYOGRE (MUS_OOAME) 30.6 s bucle",
+			"ruta": "res://Audio/music_gba/443_lluvia_intensa.ogg",
+			"song_id": 443.0,
+			"volumen": 1.94
+		},
+		"LOSER": {
+			"archivo": "1-47 Loser....mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Perdiste...",
+			"volumen": 1.13
+		},
+		"LOS_ENTREVISTADORES": {
+			"archivo": "1-63 The Interviewers.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Los entrevistadores",
+			"volumen": 1.67
+		},
+		"LOS_POKEMON_LEGENDARIOS_DESPIERTAN": {
+			"archivo": "1-84 The Legendary Pokémon Awaken!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Los Pokémon legendarios despiertan",
+			"volumen": 1.0
+		},
+		"MALA_SUERTE": {
+			"archivo": "391_mala_suerte.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_TOO_BAD (MUS_ME_ZANNEN) 2.5 s jingle",
+			"ruta": "res://Audio/music_gba/391_mala_suerte.ogg",
+			"song_id": 391.0,
+			"volumen": 1.64
+		},
+		"MATCH_CALL": {
+			"archivo": "2-01 Match Call.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Llamada de enlace",
+			"volumen": 1.0
+		},
+		"MEW_BATTLE": {
+			"archivo": "2-17 Mew Battle!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Batalla contra Mew",
+			"volumen": 1.0
+		},
+		"MONTE_CENIZO": {
+			"archivo": "406_monte_cinabrio.ogg",
+			"bucle_fin": 94.328,
+			"bucle_inicio": 3.9174,
+			"descripcion": "MUS_MT_CHIMNEY (MUS_TOZAN) 94.3 s bucle",
+			"ruta": "res://Audio/music_gba/406_monte_cinabrio.ogg",
+			"song_id": 406.0,
+			"volumen": 1.54
+		},
+		"MONTE_CENIZO_EM": {
+			"archivo": "1-60 Mt. Chimney.mp3",
+			"bucle_fin": 94.328,
+			"bucle_inicio": 3.9174,
+			"descripcion": "Monte Cenizo ~ Mt. Chimney",
+			"volumen": 1.02
+		},
+		"MONTE_PIRICO": {
+			"archivo": "432_monte_vate.ogg",
+			"bucle_fin": 53.593,
+			"bucle_inicio": 0.0165,
+			"descripcion": "MUS_MT_PYRE (MUS_M_DUNGON) 53.6 s bucle",
+			"ruta": "res://Audio/music_gba/432_monte_vate.ogg",
+			"song_id": 432.0,
+			"volumen": 1.87
+		},
+		"MONTE_PIRICO_CUEVA_CARDUMEN": {
+			"archivo": "1-77. Mt. Pyre ~ Shoal Cave.mp3",
+			"bucle_fin": 54.51,
+			"bucle_inicio": 1.17,
+			"descripcion": "Monte Pírico y Cueva Cardumen ~ Mt. Pyre and Shoat Cave",
+			"volumen": 1.18
+		},
+		"MONTE_PIRICO_EXTERIOR": {
+			"archivo": "1-79 Mt. Pyre Exterior.mp3",
+			"bucle_fin": 100.23,
+			"bucle_inicio": 39.04,
+			"descripcion": "Exterior del Monte Pírico ~ Mt. Pyre exterior",
+			"volumen": 1.2
+		},
+		"MOVE_DELETED": {
+			"archivo": "1-75 Move Deleted.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Movimiento olvidado",
+			"volumen": 1.0
+		},
+		"MOVIMIENTO_OLVIDADO": {
+			"archivo": "378_movimiento_olvidado.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_MOVE_DELETED (MUS_ME_WASURE) 2.6 s jingle",
+			"ruta": "res://Audio/music_gba/378_movimiento_olvidado.ogg",
+			"song_id": 378.0,
+			"volumen": 1.71
+		},
+		"MUSEO_CALAGUA": {
+			"archivo": "373_museo_oromar.ogg",
+			"bucle_fin": 89.548,
+			"bucle_inicio": 0.9121,
+			"descripcion": "MUS_LILYCOVE_MUSEUM (MUS_BIJYUTU) 89.5 s bucle",
+			"ruta": "res://Audio/music_gba/373_museo_oromar.ogg",
+			"song_id": 373.0,
+			"volumen": 1.61
+		},
+		"MUSEO_CALAGUA_EM": {
+			"archivo": "1-74 Lilycove Museum.mp3",
+			"bucle_fin": 89.548,
+			"bucle_inicio": 0.9121,
+			"descripcion": "Museo de Calagua",
+			"volumen": 1.1
+		},
+		"MUSEO_OCEANICO": {
+			"archivo": "375_museo_oceanico.ogg",
+			"bucle_fin": 80.501,
+			"bucle_inicio": 16.2089,
+			"descripcion": "MUS_OCEANIC_MUSEUM (MUS_FUNE_KAN) 80.5 s bucle",
+			"ruta": "res://Audio/music_gba/375_museo_oceanico.ogg",
+			"song_id": 375.0,
+			"volumen": 1.61
+		},
+		"NAVEGACION": {
+			"archivo": "431_navegacion.ogg",
+			"bucle_fin": 31.138,
+			"bucle_inicio": 6.4095,
+			"descripcion": "MUS_SAILING (MUS_M_BOAT) 31.1 s bucle",
+			"ruta": "res://Audio/music_gba/431_navegacion.ogg",
+			"song_id": 431.0,
+			"volumen": 1.58
+		},
+		"OBTAINED_A_BATTLE_SYMBOL": {
+			"archivo": "2-16 Obtained a Battle Symbol!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Obtuviste un símbolo de batalla",
+			"volumen": 1.0
+		},
+		"OBTENER_BAYA": {
+			"archivo": "387_obtener_baya.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_OBTAIN_BERRY (MUS_ME_KINOMI) 1.8 s jingle",
+			"ruta": "res://Audio/music_gba/387_obtener_baya.ogg",
+			"song_id": 387.0,
+			"volumen": 1.55
+		},
+		"OBTENER_MEDALLA": {
+			"archivo": "369_obtener_medalla.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_OBTAIN_BADGE (MUS_ME_BACHI) 5.2 s jingle",
+			"ruta": "res://Audio/music_gba/369_obtener_medalla.ogg",
+			"song_id": 369.0,
+			"volumen": 1.0
+		},
+		"OBTENER_MT": {
+			"archivo": "372_obtener_mt.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_OBTAIN_TMHM (MUS_ME_WAZA) 3.3 s jingle",
+			"ruta": "res://Audio/music_gba/372_obtener_mt.ogg",
+			"song_id": 372.0,
+			"volumen": 1.03
+		},
+		"OBTENER_OBJETO": {
+			"archivo": "370_obtener_objeto.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_OBTAIN_ITEM (MUS_FANFA4) 2.3 s jingle",
+			"ruta": "res://Audio/music_gba/370_obtener_objeto.ogg",
+			"song_id": 370.0,
+			"volumen": 1.63
+		},
+		"OBTENIDA_BAYA": {
+			"archivo": "1-24 Obtained a Berry!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Obtuviste una baya",
+			"volumen": 1.0
+		},
+		"OBTENIDA_MEDALLA": {
+			"archivo": "1-35 Obtained a Badge!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Obtuviste una medalla",
+			"volumen": 1.0
+		},
+		"OBTENIDA_UNA_MT": {
+			"archivo": "1-38 Obtained a TM!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Obtuviste una MT",
+			"volumen": 1.0
+		},
+		"OBTENIDOS_PB": {
+			"archivo": "2-06 Obtained BP!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Obtuviste PB",
+			"volumen": 1.0
+		},
+		"OBTENIDO_OBJETO": {
+			"archivo": "1-29 Obtained an Item!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Obtuviste un objeto",
+			"volumen": 1.05
+		},
+		"PANTALLA_TITULO": {
+			"archivo": "413_pantalla_titulo.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_TITLE (MUS_TITLE3) 100.5 s jingle",
+			"ruta": "res://Audio/music_gba/413_pantalla_titulo.ogg",
+			"song_id": 413.0,
+			"volumen": 1.25
+		},
+		"PARTIDA_REGION_HOENN": {
+			"archivo": "1-01 Departure From the Hoenn Region.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "",
+			"volumen": 1.0
+		},
+		"PEWTER_CITY_UNUSED": {
+			"archivo": "2-22 Pewter City (Unused).mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Ciudad Plateada",
+			"volumen": 1.0
+		},
+		"POKEMON_COMMUNICATION_CENTER_UNUSED": {
+			"archivo": "2-20 Pokémon Communication Center (Unused).mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Centro de Comunicación Pokémon",
+			"volumen": 1.09
+		},
+		"POKEMON_CONTEST_UNUSED_ALT_1": {
+			"archivo": "2-26 Pokémon Contest (Unused Alt 1).mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Concurso Pokémon",
+			"volumen": 1.18
+		},
+		"POKEMON_CONTEST_UNUSED_ALT_2": {
+			"archivo": "2-27 Pokémon Contest (Unused Alt 2).mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Concurso Pokémon",
+			"volumen": 1.07
+		},
+		"POKEMON_CONTEST_UNUSED_ALT_3": {
+			"archivo": "2-28 Pokémon Contest (Unused Alt 3).mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Concurso Pokémon",
+			"volumen": 1.42
+		},
+		"POKEMON_CONTEST_UNUSED_ALT_4": {
+			"archivo": "2-29 Pokémon Contest (Unused Alt 4).mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Concurso Pokémon",
+			"volumen": 1.16
+		},
+		"POKEMON_RECUPERADOS": {
+			"archivo": "1-14 Pokémon Healing.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Curación Pokémon",
+			"volumen": 1.22
+		},
+		"POKEMON_SALVAJE_DERROTADO": {
+			"archivo": "1-09 Wild Pokémon Defeated!.mp3",
+			"bucle_fin": 24.91,
+			"bucle_inicio": 11.2,
+			"descripcion": "Pokémon salvaje derrotado",
+			"volumen": 1.0
+		},
+		"PREMIO_PEQUENO": {
+			"archivo": "390_premio_pequeno.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_SLOTS_WIN (MUS_ME_B_SMALL) 2.6 s jingle",
+			"ruta": "res://Audio/music_gba/390_premio_pequeno.ogg",
+			"song_id": 390.0,
+			"volumen": 1.13
+		},
+		"PRUEBA_PUEBLO_RAIZ": {
+			"archivo": "350_prueba_pueblo_raiz.ogg",
+			"bucle_fin": 36.846,
+			"bucle_inicio": 0.0121,
+			"descripcion": "MUS_LITTLEROOT_TEST (MUS_TETSUJI) 36.8 s bucle",
+			"ruta": "res://Audio/music_gba/350_prueba_pueblo_raiz.ogg",
+			"song_id": 350.0,
+			"volumen": 1.63
+		},
+		"PUEBLO_AZULIZA": {
+			"archivo": "427_pueblo_azuliza.ogg",
+			"bucle_fin": 66.701,
+			"bucle_inicio": 0.0149,
+			"descripcion": "MUS_DEWFORD (MUS_HIGHTOWN) 66.7 s bucle",
+			"ruta": "res://Audio/music_gba/427_pueblo_azuliza.ogg",
+			"song_id": 427.0,
+			"volumen": 1.68
+		},
+		"PUEBLO_ESCASO": {
+			"archivo": "1-12. Oldale Town ~ Lavaridge Town.mp3",
+			"bucle_fin": 42.51,
+			"bucle_inicio": 4.1,
+			"descripcion": "Pueblo Escaso / Pueblo Lavacalda",
+			"volumen": 1.0
+		},
+		"PUEBLO_OROMAR": {
+			"archivo": "1-73 Lilycove City.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "",
+			"volumen": 1.0
+		},
+		"PUEBLO_PARDAL": {
+			"archivo": "437_pueblo_pardal.ogg",
+			"bucle_fin": 53.792,
+			"bucle_inicio": 0.0316,
+			"descripcion": "MUS_FALLARBOR (MUS_TONEKUSA) 53.8 s bucle",
+			"ruta": "res://Audio/music_gba/437_pueblo_pardal.ogg",
+			"song_id": 437.0,
+			"volumen": 1.66
+		},
+		"PUEBLO_PARDAL_EMERALD": {
+			"archivo": "1-58 Fallarbor Town.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Pueblo Pardal",
+			"volumen": 1.2
+		},
+		"PUEBLO_RAIZ": {
+			"archivo": "405_pueblo_raiz.ogg",
+			"bucle_fin": 54.416,
+			"bucle_inicio": 0.8394,
+			"descripcion": "MUS_LITTLEROOT (MUS_MISHIRO) 54.4 s bucle",
+			"ruta": "res://Audio/music_gba/405_pueblo_raiz.ogg",
+			"song_id": 405.0,
+			"volumen": 1.65
+		},
+		"PUEBLO_VERDEGAL": {
+			"archivo": "398_pueblo_verdegal.ogg",
+			"bucle_fin": 46.498,
+			"bucle_inicio": 0.5726,
+			"descripcion": "MUS_VERDANTURF (MUS_GOMACHI0) 46.5 s bucle",
+			"ruta": "res://Audio/music_gba/398_pueblo_verdegal.ogg",
+			"song_id": 398.0,
+			"volumen": 1.41
+		},
+		"RADIO_TOWER_TAKEOVER_UNUSED": {
+			"archivo": "2-24 Radio Tower Takeover! (Unused).mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "",
+			"volumen": 1.0
+		},
+		"RAYQUAZAS_DESCENT": {
+			"archivo": "2-03 Rayquaza's Descent!.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "El descenso de Rayquaza",
+			"volumen": 1.0
+		},
+		"ROUTE_118_NEAR_MAUVILLE_ROUTE_119_133_134": {
+			"archivo": "1-64. Route 118 [near Mauville], Route 119, 133 - 134.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "",
+			"volumen": 1.0
+		},
+		"RUINAS_DESIERTO": {
+			"archivo": "ruinas desierto.mp3",
+			"bucle_fin": 39.14,
+			"bucle_inicio": 2.98,
+			"descripcion": "",
+			"volumen": 1.51
+		},
+		"RULETA": {
+			"archivo": "392_ruleta.ogg",
+			"bucle_fin": 19.984,
+			"bucle_inicio": 15.5974,
+			"descripcion": "MUS_ROULETTE (MUS_BD_TIME) 20.0 s bucle",
+			"ruta": "res://Audio/music_gba/392_ruleta.ogg",
+			"song_id": 392.0,
+			"volumen": 1.49
+		},
+		"RUTA_101": {
+			"archivo": "359_ruta_101.ogg",
+			"bucle_fin": 34.123,
+			"bucle_inicio": 0.2858,
+			"descripcion": "MUS_ROUTE101 (MUS_DOORO1) 34.1 s bucle",
+			"ruta": "res://Audio/music_gba/359_ruta_101.ogg",
+			"song_id": 359.0,
+			"volumen": 1.42
+		},
+		"RUTA_102": {
+			"archivo": "1-11. Route 101 - 103.mp3",
+			"bucle_fin": 43.39,
+			"bucle_inicio": 9.71,
+			"descripcion": "Rutas 101, 102 y 103 (alias)",
+			"volumen": 1.01
+		},
+		"RUTA_104A109": {
+			"archivo": "1-22. Route 104 - 109 ~ Route 115 - 116.mp3",
+			"bucle_fin": 50.21,
+			"bucle_inicio": 12.53,
+			"descripcion": "",
+			"volumen": 1.0
+		},
+		"RUTA_104_109": {
+			"archivo": "401_ruta_104_109.ogg",
+			"bucle_fin": 41.62,
+			"bucle_inicio": 3.7819,
+			"descripcion": "MUS_ROUTE104 (MUS_NEXTROAD) 41.6 s bucle",
+			"ruta": "res://Audio/music_gba/401_ruta_104_109.ogg",
+			"song_id": 401.0,
+			"volumen": 1.27
+		},
+		"RUTA_110": {
+			"archivo": "360_ruta_110.ogg",
+			"bucle_fin": 36.781,
+			"bucle_inicio": 0.2487,
+			"descripcion": "MUS_ROUTE110 (MUS_DOORO_X1) 36.8 s bucle",
+			"ruta": "res://Audio/music_gba/360_ruta_110.ogg",
+			"song_id": 360.0,
+			"volumen": 1.28
+		},
+		"RUTA_110_A_118_EXCEPTO_113": {
+			"archivo": "1-43. Route 110, Route 111 (surrounding the desert), Route 112, Route 114 - 118.mp3",
+			"bucle_fin": 44.0,
+			"bucle_inicio": 8.01,
+			"descripcion": "",
+			"volumen": 1.0
+		},
+		"RUTA_111": {
+			"archivo": "409_ruta_111.ogg",
+			"bucle_fin": 42.197,
+			"bucle_inicio": 2.0146,
+			"descripcion": "MUS_ROUTE111 (MUS_ASHROAD) 42.2 s bucle",
+			"ruta": "res://Audio/music_gba/409_ruta_111.ogg",
+			"song_id": 409.0,
+			"volumen": 1.58
+		},
+		"RUTA_111_DESIERTO": {
+			"archivo": "1-62. Route 111 [Desert].mp3",
+			"bucle_fin": 46.0,
+			"bucle_inicio": 6.0,
+			"descripcion": "",
+			"volumen": 1.03
+		},
+		"RUTA_113": {
+			"archivo": "418_ruta_113.ogg",
+			"bucle_fin": 68.057,
+			"bucle_inicio": 0.2491,
+			"descripcion": "MUS_ROUTE113 (MUS_KAZANBAI) 68.1 s bucle",
+			"ruta": "res://Audio/music_gba/418_ruta_113.ogg",
+			"song_id": 418.0,
+			"volumen": 1.49
+		},
+		"RUTA_119": {
+			"archivo": "402_ruta_119.ogg",
+			"bucle_fin": 73.574,
+			"bucle_inicio": 16.8502,
+			"descripcion": "MUS_ROUTE119 (MUS_GRANROAD) 73.6 s bucle",
+			"ruta": "res://Audio/music_gba/402_ruta_119.ogg",
+			"song_id": 402.0,
+			"volumen": 1.44
+		},
+		"RUTA_120_132": {
+			"archivo": "361_ruta_120_132.ogg",
+			"bucle_fin": 57.615,
+			"bucle_inicio": 0.0367,
+			"descripcion": "MUS_ROUTE120 (MUS_DOORO_X3) 57.6 s bucle",
+			"ruta": "res://Audio/music_gba/361_ruta_120_132.ogg",
+			"song_id": 361.0,
+			"volumen": 1.3
+		},
+		"RUTA_122": {
+			"archivo": "374_ruta_122.ogg",
+			"bucle_fin": 50.561,
+			"bucle_inicio": 3.8994,
+			"descripcion": "MUS_ROUTE122 (MUS_DOORO_X4) 50.6 s bucle",
+			"ruta": "res://Audio/music_gba/374_ruta_122.ogg",
+			"song_id": 374.0,
+			"volumen": 1.23
+		},
+		"RUTA_38": {
+			"archivo": "2-21 Route 38 (Unused).mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "",
+			"volumen": 1.01
+		},
+		"RUTA_38_GSC": {
+			"archivo": "351_ruta_38_gsc.ogg",
+			"bucle_fin": 37.124,
+			"bucle_inicio": 3.7386,
+			"descripcion": "MUS_GSC_ROUTE38 (MUS_FIELD13) 37.1 s bucle",
+			"ruta": "res://Audio/music_gba/351_ruta_38_gsc.ogg",
+			"song_id": 351.0,
+			"volumen": 1.41
+		},
+		"SALA_GLORIA": {
+			"archivo": "447_sala_gloria.ogg",
+			"bucle_fin": 34.397,
+			"bucle_inicio": 0.5604,
+			"descripcion": "MUS_HALL_OF_FAME_ROOM (MUS_EIKOU_R) 34.4 s bucle",
+			"ruta": "res://Audio/music_gba/447_sala_gloria.ogg",
+			"song_id": 447.0,
+			"volumen": 1.71
+		},
+		"SALA_JUEGOS": {
+			"archivo": "426_sala_juegos.ogg",
+			"bucle_fin": 70.303,
+			"bucle_inicio": 0.101,
+			"descripcion": "MUS_GAME_CORNER (MUS_CASINO) 70.3 s bucle",
+			"ruta": "res://Audio/music_gba/426_sala_juegos.ogg",
+			"song_id": 426.0,
+			"volumen": 1.81
+		},
+		"SALON_FAMA": {
+			"archivo": "436_salon_fama.ogg",
+			"bucle_fin": 35.858,
+			"bucle_inicio": 0.2799,
+			"descripcion": "MUS_HALL_OF_FAME (MUS_DENDOU) 35.9 s bucle",
+			"ruta": "res://Audio/music_gba/436_salon_fama.ogg",
+			"song_id": 436.0,
+			"volumen": 1.47
+		},
+		"SEQUIA": {
+			"archivo": "444_sequia.ogg",
+			"bucle_fin": 49.474,
+			"bucle_inicio": 0.0121,
+			"descripcion": "MUS_WEATHER_GROUDON (MUS_HIDERI) 49.5 s bucle",
+			"ruta": "res://Audio/music_gba/444_sequia.ogg",
+			"song_id": 444.0,
+			"volumen": 4.21
+		},
+		"SIGUEME": {
+			"archivo": "420_sigueme.ogg",
+			"bucle_fin": 26.378,
+			"bucle_inicio": 3.775,
+			"descripcion": "MUS_FOLLOW_ME (MUS_TSURETEK) 26.4 s bucle",
+			"ruta": "res://Audio/music_gba/420_sigueme.ogg",
+			"song_id": 420.0,
+			"volumen": 2.07
+		},
+		"SUBIDA_NIVEL": {
+			"archivo": "367_subida_nivel.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_LEVEL_UP (MUS_FANFA1) 1.2 s jingle",
+			"ruta": "res://Audio/music_gba/367_subida_nivel.ogg",
+			"song_id": 367.0,
+			"volumen": 1.96
+		},
+		"SURF": {
+			"archivo": "365_surf.ogg",
+			"bucle_fin": 71.68,
+			"bucle_inicio": 1.1095,
+			"descripcion": "MUS_SURF (MUS_NAMINORI) 71.7 s bucle",
+			"ruta": "res://Audio/music_gba/365_surf.ogg",
+			"song_id": 365.0,
+			"volumen": 1.17
+		},
+		"TELEFERICO": {
+			"archivo": "425_teleferico.ogg",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "MUS_CABLE_CAR (MUS_ROPEWAY) 12.3 s jingle",
+			"ruta": "res://Audio/music_gba/425_teleferico.ogg",
+			"song_id": 425.0,
+			"volumen": 1.41
+		},
+		"TEMA_AURA": {
+			"archivo": "415_tema_aura.ogg",
+			"bucle_fin": 33.918,
+			"bucle_inicio": 3.7808,
+			"descripcion": "MUS_ENCOUNTER_MAY (MUS_GIRL_SUP) 33.9 s bucle",
+			"ruta": "res://Audio/music_gba/415_tema_aura.ogg",
+			"song_id": 415.0,
+			"volumen": 1.49
+		},
+		"TEMA_BRENDAN": {
+			"archivo": "421_tema_brendan.ogg",
+			"bucle_fin": 33.921,
+			"bucle_inicio": 3.7843,
+			"descripcion": "MUS_ENCOUNTER_BRENDAN (MUS_BOY_SUP) 33.9 s bucle",
+			"ruta": "res://Audio/music_gba/421_tema_brendan.ogg",
+			"song_id": 421.0,
+			"volumen": 1.58
+		},
+		"TEMA_DEL_TITULO": {
+			"archivo": "1-03 Title Theme.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Tema del título",
+			"volumen": 1.0
+		},
+		"TIENDA_POKEMON": {
+			"archivo": "404_tienda_pokemon.ogg",
+			"bucle_fin": 44.851,
+			"bucle_inicio": 5.6065,
+			"descripcion": "MUS_POKE_MART (MUS_FRIENDLY) 44.9 s bucle",
+			"ruta": "res://Audio/music_gba/404_tienda_pokemon.ogg",
+			"song_id": 404.0,
+			"volumen": 1.31
+		},
+		"TORMENTA": {
+			"archivo": "1-86 Heavy Rain.mp3",
+			"bucle_fin": 0.0,
+			"bucle_inicio": 0.0,
+			"descripcion": "Lluvia intensa",
+			"volumen": 1.45
+		},
+		"TORRE_BATALLA": {
+			"archivo": "384_torre_batalla.ogg",
+			"bucle_fin": 40.041,
+			"bucle_inicio": 0.4776,
+			"descripcion": "MUS_B_TOWER (MUS_B_TOWER) 40.0 s bucle",
+			"ruta": "res://Audio/music_gba/384_torre_batalla.ogg",
+			"song_id": 384.0,
+			"volumen": 1.28
+		},
+		"TORRE_RADIO_GSC": {
+			"archivo": "467_torre_radio_gsc.ogg",
+			"bucle_fin": 39.855,
+			"bucle_inicio": 0.2084,
+			"descripcion": "MUS_GSC_RADIO_TOWER_TAKEOVER 39.9 s bucle",
+			"ruta": "res://Audio/music_gba/467_torre_radio_gsc.ogg",
+			"song_id": 467.0,
+			"volumen": 1.36
+		},
+		"VICTORIA_CAMINO_VICTORIA": {
+			"archivo": "429_victoria_camino_victoria.ogg",
+			"bucle_fin": 54.016,
+			"bucle_inicio": 9.0284,
+			"descripcion": "MUS_VICTORY_ROAD (MUS_C_ROAD) 54.0 s bucle",
+			"ruta": "res://Audio/music_gba/429_victoria_camino_victoria.ogg",
+			"song_id": 429.0,
+			"volumen": 1.44
+		},
+		"VICTORIA_ENTRENADOR": {
+			"archivo": "412_victoria_entrenador.ogg",
+			"bucle_fin": 16.28,
+			"bucle_inicio": 2.0985,
+			"descripcion": "MUS_VICTORY_TRAINER (MUS_KACHI1) 16.3 s bucle",
+			"ruta": "res://Audio/music_gba/412_victoria_entrenador.ogg",
+			"song_id": 412.0,
+			"volumen": 1.28
+		},
+		"VICTORIA_EQUIPO_AQUA_MAGMA": {
+			"archivo": "424_victoria_equipo_aqua_magma.ogg",
+			"bucle_fin": 10.518,
+			"bucle_inicio": 3.7203,
+			"descripcion": "MUS_VICTORY_AQUA_MAGMA (MUS_KACHI4) 10.5 s bucle",
+			"ruta": "res://Audio/music_gba/424_victoria_equipo_aqua_magma.ogg",
+			"song_id": 424.0,
+			"volumen": 1.7
+		},
+		"VICTORIA_LIDER_GIMNASIO": {
+			"archivo": "354_victoria_lider_gimnasio.ogg",
+			"bucle_fin": 48.188,
+			"bucle_inicio": 6.2645,
+			"descripcion": "MUS_VICTORY_GYM_LEADER (MUS_KACHI3) 48.2 s bucle",
+			"ruta": "res://Audio/music_gba/354_victoria_lider_gimnasio.ogg",
+			"song_id": 354.0,
+			"volumen": 1.28
+		},
+		"VICTORIA_LIGA": {
+			"archivo": "355_victoria_liga.ogg",
+			"bucle_fin": 35.123,
+			"bucle_inicio": 7.5641,
+			"descripcion": "MUS_VICTORY_LEAGUE (MUS_KACHI5) 35.1 s bucle",
+			"ruta": "res://Audio/music_gba/355_victoria_liga.ogg",
+			"song_id": 355.0,
+			"volumen": 1.21
+		},
+		"VICTORIA_SALVAJE": {
+			"archivo": "353_victoria_salvaje.ogg",
+			"bucle_fin": 15.675,
+			"bucle_inicio": 1.8958,
+			"descripcion": "MUS_VICTORY_WILD (MUS_KACHI2) 15.7 s bucle",
+			"ruta": "res://Audio/music_gba/353_victoria_salvaje.ogg",
+			"song_id": 353.0,
+			"volumen": 1.37
+		},
+		"VILLA_RAIZ": {
+			"archivo": "1-05 Littleroot Town.mp3",
+			"bucle_fin": 72.45,
+			"bucle_inicio": 19.11,
+			"descripcion": "Villa Raíz — tema principal",
+			"volumen": 1.12
+		},
+		"ZONA_SAFARI": {
+			"archivo": "428_zona_safari.ogg",
+			"bucle_fin": 20.607,
+			"bucle_inicio": 0.2306,
+			"descripcion": "MUS_SAFARI_ZONE (MUS_SAFARI) 20.6 s bucle",
+			"ruta": "res://Audio/music_gba/428_zona_safari.ogg",
+			"song_id": 428.0,
+			"volumen": 1.39
+		}
+	}
+}

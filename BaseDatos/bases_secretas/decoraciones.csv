@@ -1,0 +1,648 @@
+id,es,en
+BASES_DECOR_001_NOMBRE,MESA PEQUEÑA,SMALL DESK
+BASES_DECOR_001_DESCRIPCION,"Mesa pequeña para
+una sola persona.","A small desk built
+for one."
+BASES_DECOR_002_NOMBRE,MESA POKéMON,POKéMON DESK
+BASES_DECOR_002_DESCRIPCION,"Mesa pequeña con
+forma de POKé BALL.","A small desk built in
+the shape of a POKé
+BALL."
+BASES_DECOR_003_NOMBRE,MESA PESADA,HEAVY DESK
+BASES_DECOR_003_DESCRIPCION,"Mesa grande de
+acero. Decórala.","A large desk made
+of steel. Put some
+decorations on it."
+BASES_DECOR_004_NOMBRE,MESA RÚSTICA,RAGGED DESK
+BASES_DECOR_004_DESCRIPCION,"Mesa grande de
+madera. Decórala.","A large desk made
+of wood. Put some
+decorations on it."
+BASES_DECOR_005_NOMBRE,MESA CÓMODA,COMFORT DESK
+BASES_DECOR_005_DESCRIPCION,"Mesa grande de
+hojas. Decórala.","A large desk made
+of leaves. Put some
+decorations on it."
+BASES_DECOR_006_NOMBRE,MESA BONITA,PRETTY DESK
+BASES_DECOR_006_DESCRIPCION,"Mesa enorme de
+cristal. Decórala
+con muchas cosas.","A huge desk made
+of glass. Holds lots
+of decorations."
+BASES_DECOR_007_NOMBRE,MESA LADRILLO,BRICK DESK
+BASES_DECOR_007_DESCRIPCION,"Mesa enorme de
+ladrillo. Decórala
+con muchas cosas.","A huge desk made
+of brick. Holds lots
+of decorations."
+BASES_DECOR_008_NOMBRE,MESA DE CAMPO,CAMP DESK
+BASES_DECOR_008_DESCRIPCION,"Mesa enorme de
+troncos. Decórala
+con muchas cosas.","A huge desk made
+of logs. Put lots of
+decorations on it."
+BASES_DECOR_009_NOMBRE,MESA FUERTE,HARD DESK
+BASES_DECOR_009_DESCRIPCION,"Mesa enorme de
+piedra. Decórala
+con muchas cosas.","A huge desk made
+of rocks. Holds
+many decorations."
+BASES_DECOR_010_NOMBRE,SILLA PEQUEÑA,SMALL CHAIR
+BASES_DECOR_010_DESCRIPCION,"Silla pequeña para
+una persona.","A small chair made
+for one."
+BASES_DECOR_011_NOMBRE,SILLA POKéMON,POKéMON CHAIR
+BASES_DECOR_011_DESCRIPCION,"Silla pequeña con
+forma de POKé BALL.","A small chair built
+in the shape of a
+POKé BALL."
+BASES_DECOR_012_NOMBRE,SILLA PESADA,HEAVY CHAIR
+BASES_DECOR_012_DESCRIPCION,"Silla pequeña
+de acero.","A small chair made
+of steel."
+BASES_DECOR_013_NOMBRE,SILLA BONITA,PRETTY CHAIR
+BASES_DECOR_013_DESCRIPCION,"Silla pequeña
+de cristal.","A small chair made
+of glass."
+BASES_DECOR_014_NOMBRE,SILLA CÓMODA,COMFORT CHAIR
+BASES_DECOR_014_DESCRIPCION,"Silla pequeña
+de hojas.","A small chair made
+of leaves."
+BASES_DECOR_015_NOMBRE,SILLA RÚSTICA,RAGGED CHAIR
+BASES_DECOR_015_DESCRIPCION,"Silla pequeña
+de madera.","A small chair made
+of wood."
+BASES_DECOR_016_NOMBRE,SILLA LADRILLO,BRICK CHAIR
+BASES_DECOR_016_DESCRIPCION,"Silla pequeña
+de ladrillo.","A small chair made
+of brick."
+BASES_DECOR_017_NOMBRE,SILLA DE CAMPO,CAMP CHAIR
+BASES_DECOR_017_DESCRIPCION,"Silla pequeña
+de troncos.","A small chair made
+of logs."
+BASES_DECOR_018_NOMBRE,SILLA FUERTE,HARD CHAIR
+BASES_DECOR_018_DESCRIPCION,"Silla pequeña
+de piedra.","A small chair made
+of rock."
+BASES_DECOR_019_NOMBRE,PLANTA ROJA,RED PLANT
+BASES_DECOR_019_DESCRIPCION,"Maceta con planta
+de color rojo vivo.","A vivid red potted
+plant."
+BASES_DECOR_020_NOMBRE,PL. TROPICAL,TROPICAL PLANT
+BASES_DECOR_020_DESCRIPCION,"Exuberante planta
+tropical.","A flowering tropical
+plant in a pot."
+BASES_DECOR_021_NOMBRE,FLORES BONITAS,PRETTY FLOWERS
+BASES_DECOR_021_DESCRIPCION,"Maceta llena de
+flores muy bonitas.","A pot of cute
+flowers."
+BASES_DECOR_022_NOMBRE,PL. COLORIDA,COLORFUL PLANT
+BASES_DECOR_022_DESCRIPCION,"Macetón lleno de
+flores de colores.","A large pot with
+many colorful
+flowers."
+BASES_DECOR_023_NOMBRE,PLANTA GRANDE,BIG PLANT
+BASES_DECOR_023_DESCRIPCION,"Planta grande con
+forma de sombrilla.","A large, umbrella-
+shaped plant in a
+big pot."
+BASES_DECOR_024_NOMBRE,PLANTA ENORME,GORGEOUS PLANT
+BASES_DECOR_024_DESCRIPCION,"Planta enorme
+e imponente.","A large, impressive
+plant in a big pot."
+BASES_DECOR_025_NOMBRE,LADRILLO ROJO,RED BRICK
+BASES_DECOR_025_DESCRIPCION,"Ladrillo de color
+rojo. Ponle cosas
+encima.","A red-colored brick.
+Decorations can be
+placed on top."
+BASES_DECOR_026_NOMBRE,LADR. AMARILLO,YELLOW BRICK
+BASES_DECOR_026_DESCRIPCION,"Ladrillo de color
+amarillo. Ponle
+cosas encima.","A yellow-colored
+brick. Put some
+decorations on top."
+BASES_DECOR_027_NOMBRE,LADRILLO AZUL,BLUE BRICK
+BASES_DECOR_027_DESCRIPCION,"Ladrillo de color
+azul. Ponle cosas
+encima.","A blue-colored
+brick. Put some
+decorations on top."
+BASES_DECOR_028_NOMBRE,GLOBO ROJO,RED BALLOON
+BASES_DECOR_028_DESCRIPCION,"Globo rojo de agua.
+Si lo pisas, explota.","A red balloon filled
+with water. Bursts
+if stepped on."
+BASES_DECOR_029_NOMBRE,GLOBO AZUL,BLUE BALLOON
+BASES_DECOR_029_DESCRIPCION,"Globo azul de agua.
+Si lo pisas, explota.","A blue balloon filled
+with water. Bursts
+if stepped on."
+BASES_DECOR_030_NOMBRE,GLOBO AMARILLO,YELLOW BALLOON
+BASES_DECOR_030_DESCRIPCION,"Globo amarillo de
+agua. Si lo pisas,
+explota.","A yellow balloon
+filled with water.
+Pops if stepped on."
+BASES_DECOR_031_NOMBRE,TIENDA ROJA,RED TENT
+BASES_DECOR_031_DESCRIPCION,"Tienda grande roja.
+Sirve de escondite.","A large red tent.
+You can hide inside
+it."
+BASES_DECOR_032_NOMBRE,TIENDA AZUL,BLUE TENT
+BASES_DECOR_032_DESCRIPCION,"Tienda grande azul.
+Sirve de escondite.","A large blue tent.
+You can hide inside
+it."
+BASES_DECOR_033_NOMBRE,TABLA,SOLID BOARD
+BASES_DECOR_033_DESCRIPCION,"Colócala sobre un
+agujero y cruza  
+al otro lado.","Place over a hole to
+cross to the other
+side."
+BASES_DECOR_034_NOMBRE,TOBOGÁN,SLIDE
+BASES_DECOR_034_DESCRIPCION,"Sirve para 
+deslizarse desde
+una plataforma.","Use to slide down
+from the platform."
+BASES_DECOR_035_NOMBRE,VALLA LARGA,FENCE LENGTH
+BASES_DECOR_035_DESCRIPCION,"Pequeña valla que
+bloquea el paso.","A small fence that
+blocks passage."
+BASES_DECOR_036_NOMBRE,VALLA ANCHA,FENCE WIDTH
+BASES_DECOR_036_DESCRIPCION,"Pequeña valla que
+bloquea el paso.","A small fence that
+blocks passage."
+BASES_DECOR_037_NOMBRE,NEUMÁTICO,TIRE
+BASES_DECOR_037_DESCRIPCION,"Neumático viejo.
+Ponle cosas encima.","An old large tire.
+Decorations can be
+placed on top."
+BASES_DECOR_038_NOMBRE,PODIO,STAND
+BASES_DECOR_038_DESCRIPCION,"Gran pedestal
+con escalones.","A large pedestal
+with steps."
+BASES_DECOR_039_NOMBRE,BOLA DE LODO,MUD BALL
+BASES_DECOR_039_DESCRIPCION,"Gran bola de lodo
+que se deshace
+si la pisas.","A large ball of mud.
+Crumbles if stepped
+on."
+BASES_DECOR_040_NOMBRE,PUERTA RARA,BREAKABLE DOOR
+BASES_DECOR_040_DESCRIPCION,"Es extraña, pero
+puede atravesarse
+sin problema.","A weird door that
+people can walk
+right through."
+BASES_DECOR_041_NOMBRE,ADORNO ARENA,SAND ORNAMENT
+BASES_DECOR_041_DESCRIPCION,"Adorno de arena
+que se desmorona
+con sólo tocarlo.","An ornament made
+of sand. Crumbles if
+touched."
+BASES_DECOR_042_NOMBRE,ESCUDO PLATA,SILVER SHIELD
+BASES_DECOR_042_DESCRIPCION,"Se gana al vencer 
+50 veces seguidas 
+en TORRE BATALLA.","Awarded for 50
+straight wins at
+the BATTLE TOWER."
+BASES_DECOR_043_NOMBRE,ESCUDO DE ORO,GOLD SHIELD
+BASES_DECOR_043_DESCRIPCION,"Premio por 100 
+victorias seguidas
+en TORRE BATALLA.","Awarded for 100
+straight wins at
+the BATTLE TOWER."
+BASES_DECOR_044_NOMBRE,ADORNO CRISTAL,GLASS ORNAMENT
+BASES_DECOR_044_DESCRIPCION,"Réplica en cristal
+de una escultura
+del MUSEO DE ARTE.","A glass replica of
+a famous sculpture
+at the ART MUSEUM."
+BASES_DECOR_045_NOMBRE,TELEVISIÓN,TV
+BASES_DECOR_045_DESCRIPCION,"Tele de juguete
+de color gris.","A small, gray-
+colored toy TV."
+BASES_DECOR_046_NOMBRE,TELE REDONDA,ROUND TV
+BASES_DECOR_046_DESCRIPCION,"Tele de juguete con
+forma de SEEDOT.","A toy TV modeled
+in the image of a
+SEEDOT."
+BASES_DECOR_047_NOMBRE,TELE BONITA,CUTE TV
+BASES_DECOR_047_DESCRIPCION,"Tele de juguete con
+forma de SKITTY.","A toy TV modeled
+in the image of a
+SKITTY."
+BASES_DECOR_048_NOMBRE,TAPETE BRILLO,GLITTER MAT
+BASES_DECOR_048_DESCRIPCION,"Tapete viejo que
+brilla si lo pisas.","An odd mat that
+glitters if stepped
+on."
+BASES_DECOR_049_NOMBRE,TAPETE MUELLE,JUMP MAT
+BASES_DECOR_049_DESCRIPCION,"Tapete mágico
+que te hace saltar
+si lo pisas.","A trick mat that
+jumps when it is
+stepped on."
+BASES_DECOR_050_NOMBRE,TAPETE GIRO,SPIN MAT
+BASES_DECOR_050_DESCRIPCION,"Tapete mágico
+que te hace girar
+si lo pisas.","A trick mat that
+spins around when
+stepped on."
+BASES_DECOR_051_NOMBRE,TAP. DO MENOR,C Low NOTE MAT
+BASES_DECOR_051_DESCRIPCION,"Tapete que suena
+en do menor,
+si lo pisas.","A mat that plays
+a low C note when
+stepped on."
+BASES_DECOR_052_NOMBRE,TAPETE NOTA RE,D NOTE MAT
+BASES_DECOR_052_DESCRIPCION,"Tapete que toca
+re, si lo pisas.","A mat that plays
+a D note when
+stepped on."
+BASES_DECOR_053_NOMBRE,TAPETE NOTA MI,E NOTE MAT
+BASES_DECOR_053_DESCRIPCION,"Tapete que toca
+mi, si lo pisas.","A mat that plays
+an E note when
+stepped on."
+BASES_DECOR_054_NOMBRE,TAPETE NOTA FA,F NOTE MAT
+BASES_DECOR_054_DESCRIPCION,"Tapete que toca
+fa, si lo pisas.","A mat that plays
+an F note when
+stepped on."
+BASES_DECOR_055_NOMBRE,TAP. NOTA SOL,G NOTE MAT
+BASES_DECOR_055_DESCRIPCION,"Tapete que toca
+sol, si lo pisas.","A mat that plays
+a G note when
+stepped on."
+BASES_DECOR_056_NOMBRE,TAPETE NOTA LA,A NOTE MAT
+BASES_DECOR_056_DESCRIPCION,"Tapete que toca
+la, si lo pisas.","A mat that plays
+an A note when
+stepped on."
+BASES_DECOR_057_NOMBRE,TAPETE NOTA SI,B NOTE MAT
+BASES_DECOR_057_DESCRIPCION,"Tapete que toca
+si, si lo pisas.","A mat that plays
+a B note when
+stepped on."
+BASES_DECOR_058_NOMBRE,TAP. DO MAYOR,C High NOTE MAT
+BASES_DECOR_058_DESCRIPCION,"Tapete que suena
+en do mayor,
+si lo pisas.","A mat that plays
+a high C note when
+stepped on."
+BASES_DECOR_059_NOMBRE,TAPETE SURF,SURF MAT
+BASES_DECOR_059_DESCRIPCION,"Tapete con dibujo
+de SURF.
+Ponle cosas encima.","A mat designed with
+a SURF image.
+Put items on top."
+BASES_DECOR_060_NOMBRE,TAPETE TRUENO,THUNDER MAT
+BASES_DECOR_060_DESCRIPCION,"Tapete con dibujo
+de TRUENO.
+Ponle cosas encima.","A mat designed with
+a THUNDER image.
+Put items on top."
+BASES_DECOR_061_NOMBRE,TAP. LLAMARADA,FIRE BLAST MAT
+BASES_DECOR_061_DESCRIPCION,"Tapete con dibujo
+de LLAMARADA.
+Ponle cosas encima.","A mat designed with
+a FIRE BLAST image.
+Put items on top."
+BASES_DECOR_062_NOMBRE,T. NIEVE POLVO,POWDER SNOW MAT
+BASES_DECOR_062_DESCRIPCION,"Tapete con dibujo
+de NIEVE POLVO.
+Ponle cosas encima.","A mat with a POWDER
+SNOW image design.
+Put items on top."
+BASES_DECOR_063_NOMBRE,TAP. ATRACCIÓN,ATTRACT MAT
+BASES_DECOR_063_DESCRIPCION,"Tapete con dibujo
+de ATRACCIÓN.
+Ponle cosas encima.","A mat designed with
+an ATTRACT image.
+Put items on top."
+BASES_DECOR_064_NOMBRE,TAPETE FISURA,FISSURE MAT
+BASES_DECOR_064_DESCRIPCION,"Tapete con dibujo
+de FISURA.
+Ponle cosas encima.","A mat designed with
+a FISSURE image.
+Put items on top."
+BASES_DECOR_065_NOMBRE,TAPETE PÚAS,SPIKES MAT
+BASES_DECOR_065_DESCRIPCION,"Tapete con dibujo
+de PÚAS.
+Ponle cosas encima.","A mat designed with
+a SPIKES image.
+Put items on top."
+BASES_DECOR_066_NOMBRE,P. POKé BALL,BALL POSTER
+BASES_DECOR_066_DESCRIPCION,"Póster pequeño de
+POKé BALL.","A small poster
+printed with POKé
+BALLS."
+BASES_DECOR_067_NOMBRE,PÓSTER VERDE,GREEN POSTER
+BASES_DECOR_067_DESCRIPCION,"Póster pequeño
+de TREECKO.","A small poster with
+a TREECKO print."
+BASES_DECOR_068_NOMBRE,PÓSTER ROJO,RED POSTER
+BASES_DECOR_068_DESCRIPCION,"Póster pequeño
+de TORCHIC.","A small poster with
+a TORCHIC print."
+BASES_DECOR_069_NOMBRE,PÓSTER AZUL,BLUE POSTER
+BASES_DECOR_069_DESCRIPCION,"Póster pequeño
+de MUDKIP.","A small poster with
+a MUDKIP print."
+BASES_DECOR_070_NOMBRE,PÓSTER BONITO,CUTE POSTER
+BASES_DECOR_070_DESCRIPCION,"Póster pequeño
+de AZURILL.","A small poster with
+an AZURILL print."
+BASES_DECOR_071_NOMBRE,PÓSTER PIKA,PIKA POSTER
+BASES_DECOR_071_DESCRIPCION,"Póster grande
+de PIKACHU
+y PICHU.","A large poster with
+a PIKACHU and
+PICHU print."
+BASES_DECOR_072_NOMBRE,PÓSTER GRANDE,LONG POSTER
+BASES_DECOR_072_DESCRIPCION,"Póster grande
+de SEVIPER.","A large poster with
+a SEVIPER print."
+BASES_DECOR_073_NOMBRE,PÓSTER MAR,SEA POSTER
+BASES_DECOR_073_DESCRIPCION,"Póster grande
+de RELICANTH.","A large poster with
+a RELICANTH print."
+BASES_DECOR_074_NOMBRE,PÓSTER CIELO,SKY POSTER
+BASES_DECOR_074_DESCRIPCION,"Póster grande
+de WINGULL.","A large poster with
+a WINGULL print."
+BASES_DECOR_075_NOMBRE,PÓSTER BESO,KISS POSTER
+BASES_DECOR_075_DESCRIPCION,"Póster grande
+de SMOOCHUM.","A large poster with
+a SMOOCHUM print."
+BASES_DECOR_076_NOMBRE,MUÑECO PICHU,PICHU DOLL
+BASES_DECOR_076_DESCRIPCION,"Muñeco de PICHU.
+Ponlo en una
+mesa o tapete.","A PICHU doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_077_NOMBRE,MUÑECO PIKACHU,PIKACHU DOLL
+BASES_DECOR_077_DESCRIPCION,"Muñeco de PIKACHU.
+Ponlo en una
+mesa o tapete.","A PIKACHU doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_078_NOMBRE,MUÑECO MARILL,MARILL DOLL
+BASES_DECOR_078_DESCRIPCION,"Muñeco de MARILL.
+Ponlo en una
+mesa o tapete.","A MARILL doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_079_NOMBRE,MUÑECO TOGEPI,TOGEPI DOLL
+BASES_DECOR_079_DESCRIPCION,"Muñeco de TOGEPI.
+Ponlo en una
+mesa o tapete.","A TOPGEPI doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_080_NOMBRE,MUÑ. CYNDAQUIL,CYNDAQUIL DOLL
+BASES_DECOR_080_DESCRIPCION,"Muñeco de
+CYNDAQUIL. Ponlo en
+una mesa o tapete.","A CYNDAQUIL doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_081_NOMBRE,MUÑ. CHIKORITA,CHIKORITA DOLL
+BASES_DECOR_081_DESCRIPCION,"Muñeco de
+CHIKORITA. Ponlo en
+una mesa o tapete.","A CHIKORITA doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_082_NOMBRE,MUÑ. TOTODILE,TOTODILE DOLL
+BASES_DECOR_082_DESCRIPCION,"Muñeco de
+TOTODILE. Ponlo en
+una mesa o tapete.","A TOTODILE doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_083_NOMBRE,MUÑ. JIGGLYPUFF,JIGGLYPUFF DOLL
+BASES_DECOR_083_DESCRIPCION,"Muñeco de JIGGLY-
+PUFF. Ponlo en una
+mesa o tapete.","A JIGGLYPUFF doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_084_NOMBRE,MUÑECO MEOWTH,MEOWTH DOLL
+BASES_DECOR_084_DESCRIPCION,"Muñeco de MEOWTH.
+Ponlo en una
+mesa o tapete.","A MEOWTH doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_085_NOMBRE,MUÑECO CLEFAIRY,CLEFAIRY DOLL
+BASES_DECOR_085_DESCRIPCION,"Muñeco de
+CLEFAIRY. Ponlo en
+una mesa o tapete.","A CLEFAIRY doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_086_NOMBRE,MUÑECO DITTO,DITTO DOLL
+BASES_DECOR_086_DESCRIPCION,"Muñeco de DITTO.
+Ponlo en una mesa
+o tapete.","A DITTO doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_087_NOMBRE,MUÑECO SMOOCHUM,SMOOCHUM DOLL
+BASES_DECOR_087_DESCRIPCION,"Muñeco de SMOO-
+CHUM. Ponlo en
+una mesa o tapete.","A SMOOCHUM doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_088_NOMBRE,MUÑECO TREECKO,TREECKO DOLL
+BASES_DECOR_088_DESCRIPCION,"Muñeco de
+TREECKO. Ponlo en
+una mesa o tapete.","A TREECKO doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_089_NOMBRE,MUÑECO TORCHIC,TORCHIC DOLL
+BASES_DECOR_089_DESCRIPCION,"Muñeco de
+TORCHIC. Ponlo en
+una mesa o tapete.","A TORCHIC doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_090_NOMBRE,MUÑECO MUDKIP,MUDKIP DOLL
+BASES_DECOR_090_DESCRIPCION,"Muñeco de MUDKIP.
+Ponlo en una mesa
+o tapete.","A MUDKIP doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_091_NOMBRE,MUÑECO DUSKULL,DUSKULL DOLL
+BASES_DECOR_091_DESCRIPCION,"Muñeco de DUSKULL.
+Ponlo en una mesa
+o tapete.","A DUSKULL doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_092_NOMBRE,MUÑECO WYNAUT,WYNAUT DOLL
+BASES_DECOR_092_DESCRIPCION,"Muñeco de WYNAUT.
+Ponlo en una mesa
+o tapete.","A WYNAUT doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_093_NOMBRE,MUÑECO BALTOY,BALTOY DOLL
+BASES_DECOR_093_DESCRIPCION,"Muñeco de BALTOY.
+Ponlo en una mesa
+o tapete.","A BALTOY doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_094_NOMBRE,MUÑECO KECLEON,KECLEON DOLL
+BASES_DECOR_094_DESCRIPCION,"Muñeco de KECLEON.
+Ponlo en una mesa
+o tapete.","A KECLEON doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_095_NOMBRE,MUÑECO AZURILL,AZURILL DOLL
+BASES_DECOR_095_DESCRIPCION,"Muñeco de AZURILL.
+Ponlo en una mesa
+o tapete.","An AZURILL doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_096_NOMBRE,MUÑECO SKITTY,SKITTY DOLL
+BASES_DECOR_096_DESCRIPCION,"Muñeco de SKITTY.
+Ponlo en una mesa
+o tapete.","A SKITTY doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_097_NOMBRE,MUÑECO SWABLU,SWABLU DOLL
+BASES_DECOR_097_DESCRIPCION,"Muñeco de SWABLU.
+Ponlo en una mesa
+o tapete.","A SWABLU doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_098_NOMBRE,MUÑECO GULPIN,GULPIN DOLL
+BASES_DECOR_098_DESCRIPCION,"Muñeco de GULPIN.
+Ponlo en una mesa
+o tapete.","A GULPIN doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_099_NOMBRE,MUÑECO LOTAD,LOTAD DOLL
+BASES_DECOR_099_DESCRIPCION,"Muñeco de LOTAD.
+Ponlo en una mesa
+o tapete.","A LOTAD doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_100_NOMBRE,MUÑECO SEEDOT,SEEDOT DOLL
+BASES_DECOR_100_DESCRIPCION,"Muñeco de SEEDOT.
+Ponlo en una mesa
+o tapete.","A SEEDOT doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_101_NOMBRE,COJÍN PIKA,PIKA CUSHION
+BASES_DECOR_101_DESCRIPCION,"Cojín de PIKACHU.
+Ponlo en una mesa
+o tapete.","A PIKACHU cushion.
+Place it on a mat
+or a desk."
+BASES_DECOR_102_NOMBRE,COJÍN REDONDO,ROUND CUSHION
+BASES_DECOR_102_DESCRIPCION,"Cojín de MARILL.
+Ponlo en una mesa
+o tapete.","A MARILL cushion.
+Place it on a mat
+or a desk."
+BASES_DECOR_103_NOMBRE,COJÍN BESO,KISS CUSHION
+BASES_DECOR_103_DESCRIPCION,"Cojín de SMOOCHUM.
+Ponlo en una mesa
+o tapete.","A SMOOCHUM
+cushion. Place it on
+a mat or a desk."
+BASES_DECOR_104_NOMBRE,COJÍN ZIGZAGOON,ZIGZAG CUSHION
+BASES_DECOR_104_DESCRIPCION,"Cojín de ZIGZA-
+GOON. Ponlo en
+una mesa o tapete.","A ZIGZAGOON
+cushion. Place it on
+a mat or a desk."
+BASES_DECOR_105_NOMBRE,COJÍN SPINDA,SPIN CUSHION
+BASES_DECOR_105_DESCRIPCION,"Cojín de SPINDA.
+Ponlo en una mesa
+o tapete.","A SPINDA cushion.
+Place it on a mat
+or a desk."
+BASES_DECOR_106_NOMBRE,COJÍN DIAMANTE,DIAMOND CUSHION
+BASES_DECOR_106_DESCRIPCION,"Cojín de SABLEYE.
+Ponlo en una mesa
+o tapete.","A SABLEYE cushion.
+Place it on a mat
+or a desk."
+BASES_DECOR_107_NOMBRE,COJÍN BALL,BALL CUSHION
+BASES_DECOR_107_DESCRIPCION,"Cojín con forma de
+BALL. Ponlo en una
+mesa o tapete.","A BALL cushion.
+Place it on a mat
+or a desk."
+BASES_DECOR_108_NOMBRE,COJÍN PLANTA,GRASS CUSHION
+BASES_DECOR_108_DESCRIPCION,"Cojín estampado de
+planta. Ponlo en una
+mesa o tapete.","A grass-mark
+cushion. Place it on
+a mat or a desk."
+BASES_DECOR_109_NOMBRE,COJÍN FUEGO,FIRE CUSHION
+BASES_DECOR_109_DESCRIPCION,"Cojín estampado de
+fuego. Ponlo en una
+mesa o tapete.","A fire-mark
+cushion. Place it on
+a mat or a desk."
+BASES_DECOR_110_NOMBRE,COJÍN AGUA,WATER CUSHION
+BASES_DECOR_110_DESCRIPCION,"Cojín estampado de
+agua. Ponlo en una
+mesa o tapete.","A water-mark
+cushion. Place it on
+a mat or a desk."
+BASES_DECOR_111_NOMBRE,MUÑECO SNORLAX,SNORLAX DOLL
+BASES_DECOR_111_DESCRIPCION,"Muñeco grande.
+Ponlo en una mesa
+o tapete.","A large doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_112_NOMBRE,MUÑECO RHYDON,RHYDON DOLL
+BASES_DECOR_112_DESCRIPCION,"Muñeco grande.
+Ponlo en una mesa
+o tapete.","A large doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_113_NOMBRE,MUÑECO LAPRAS,LAPRAS DOLL
+BASES_DECOR_113_DESCRIPCION,"Muñeco grande.
+Ponlo en una mesa
+o tapete.","A large doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_114_NOMBRE,MUÑECO VENUSAUR,VENUSAUR DOLL
+BASES_DECOR_114_DESCRIPCION,"Muñeco grande.
+Ponlo en una mesa
+o tapete.","A large doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_115_NOMBRE,MUÑECO CHARIZAR,CHARIZARD DOLL
+BASES_DECOR_115_DESCRIPCION,"Muñeco grande.
+Ponlo en una mesa
+o tapete.","A large doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_116_NOMBRE,MUÑ. BLASTOISE,BLASTOISE DOLL
+BASES_DECOR_116_DESCRIPCION,"Muñeco grande.
+Ponlo en una mesa
+o tapete.","A large doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_117_NOMBRE,MUÑECO WAILMER,WAILMER DOLL
+BASES_DECOR_117_DESCRIPCION,"Muñeco grande.
+Ponlo en una mesa
+o tapete.","A large doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_118_NOMBRE,MUÑECO REGIROCK,REGIROCK DOLL
+BASES_DECOR_118_DESCRIPCION,"Muñeco grande.
+Ponlo en una mesa
+o tapete.","A large doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_119_NOMBRE,MUÑECO REGICE,REGICE DOLL
+BASES_DECOR_119_DESCRIPCION,"Muñeco grande.
+Ponlo en una mesa
+o tapete.","A large doll.
+Place it on a mat
+or a desk."
+BASES_DECOR_120_NOMBRE,MUÑ. REGISTEEL,REGISTEEL DOLL
+BASES_DECOR_120_DESCRIPCION,"Muñeco grande.
+Ponlo en una mesa
+o tapete.","A large doll.
+Place it on a mat
+or a desk."

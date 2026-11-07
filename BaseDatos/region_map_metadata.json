@@ -1,0 +1,912 @@
+{
+	"hoenn_poi": [
+		{
+			"id": "villa_raiz",
+			"map_id": "villa_raiz",
+			"nombre": "VILLA RAÍZ",
+			"tile": [4, 11],
+			"tile_size": [1, 1],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "villa_raiz", "cx": 13, "cy": 9, "cx_f": 22, "cy_f": 9}
+		},
+		{
+			"id": "ruta_101",
+			"map_id": "ruta_101",
+			"nombre": "RUTA 101",
+			"tile": [4, 10],
+			"tile_size": [1, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "pueblo_escaso",
+			"map_id": "pueblo_escaso",
+			"nombre": "PUEBLO ESCASO",
+			"tile": [4, 9],
+			"tile_size": [1, 1],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "pueblo_escaso", "cx": 6, "cy": 17}
+		},
+		{
+			"id": "ruta_102",
+			"map_id": "ruta_102",
+			"nombre": "RUTA 102",
+			"tile": [2, 9],
+			"tile_size": [2, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "ciudad_petalia",
+			"map_id": "ciudad_petalia",
+			"nombre": "CIUDAD PETALIA",
+			"tile": [1, 9],
+			"tile_size": [1, 1],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "ciudad_petalia", "cx": 20, "cy": 19}
+		},
+		{
+			"id": "ruta_103",
+			"map_id": "ruta_103",
+			"nombre": "RUTA 103",
+			"tile": [4, 8],
+			"tile_size": [4, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "ruta_104",
+			"map_id": "ruta_104",
+			"nombre": "RUTA 104",
+			"tile": [0, 7],
+			"tile_size": [1, 3],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "floristeria",
+			"map_id": "floristeria",
+			"nombre": "FLORISTERÍA",
+			"tile": [0, 7],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_FLOWER_SHOP"
+		},
+		{
+			"id": "bosque_petalia",
+			"map_id": "bosque_petalia",
+			"nombre": "BOSQUE PETALIA",
+			"tile": [0, 8],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "casa_sr_arenque",
+			"map_id": "casa_sr_arenque",
+			"nombre": "CASA del SR. ARENQUE",
+			"tile": [0, 8],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_MR_BRINEY_HOUSE"
+		},
+		{
+			"id": "ciudad_ferrica",
+			"map_id": "ciudad_ferrica",
+			"nombre": "CIUDAD FÉRRICA",
+			"tile": [0, 5],
+			"tile_size": [1, 2],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "ciudad_ferrica", "cx": 16, "cy": 39}
+		},
+		{
+			"id": "ruta_105",
+			"map_id": "ruta_105",
+			"nombre": "RUTA 105",
+			"tile": [0, 10],
+			"tile_size": [1, 3],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "cueva_insular",
+			"map_id": "cueva_insular",
+			"nombre": "CUEVA INSULAR",
+			"tile": [0, 10],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_ISLAND_CAVE"
+		},
+		{
+			"id": "ruta_106",
+			"map_id": "ruta_106",
+			"nombre": "RUTA 106",
+			"tile": [0, 13],
+			"tile_size": [3, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "cueva_granito",
+			"map_id": "cueva_granito",
+			"nombre": "CUEVA GRANITO",
+			"tile": [1, 13],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "pueblo_azuliza",
+			"map_id": "pueblo_azuliza",
+			"nombre": "PUEBLO AZULIZA",
+			"tile": [2, 14],
+			"tile_size": [1, 1],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "pueblo_azuliza", "cx": 8, "cy": 11}
+		},
+		{
+			"id": "ruta_107",
+			"map_id": "ruta_107",
+			"nombre": "RUTA 107",
+			"tile": [3, 14],
+			"tile_size": [3, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "ruta_108",
+			"map_id": "ruta_108",
+			"nombre": "RUTA 108",
+			"tile": [6, 14],
+			"tile_size": [2, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "nao_abandonada",
+			"map_id": "nao_abandonada",
+			"nombre": "NAO ABANDONADA",
+			"tile": [6, 14],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_ABANDONED_SHIP"
+		},
+		{
+			"id": "ruta_109",
+			"map_id": "ruta_109",
+			"nombre": "RUTA 109",
+			"tile": [8, 12],
+			"tile_size": [1, 3],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "casa_playa",
+			"map_id": "casa_playa",
+			"nombre": "CASA de la PLAYA",
+			"tile": [8, 12],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_SEASHORE_HOUSE"
+		},
+		{
+			"id": "playa_portual",
+			"map_id": "playa_portual",
+			"nombre": "PLAYA de CDAD. PORTUAL",
+			"tile": [8, 12],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "ciudad_portual",
+			"map_id": "ciudad_portual",
+			"nombre": "CIUDAD PORTUAL",
+			"tile": [8, 10],
+			"tile_size": [1, 2],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "ciudad_portual", "cx": 19, "cy": 20}
+		},
+		{
+			"id": "ruta_110",
+			"map_id": "ruta_110",
+			"nombre": "RUTA 110",
+			"tile": [8, 7],
+			"tile_size": [1, 3],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "camino_bicis",
+			"map_id": "camino_bicis",
+			"nombre": "CAMINO de BICIS",
+			"tile": [8, 7],
+			"tile_size": [1, 3],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "malvalanova",
+			"map_id": "malvalanova",
+			"nombre": "MALVALANOVA",
+			"tile": [8, 7],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_NEW_MAUVILLE"
+		},
+		{
+			"id": "casa_treta",
+			"map_id": "casa_treta",
+			"nombre": "CASA TRETA",
+			"tile": [8, 9],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_TRICK_HOUSE"
+		},
+		{
+			"id": "ciudad_malvalona",
+			"map_id": "ciudad_malvalona",
+			"nombre": "CIUDAD MALVALONA",
+			"tile": [8, 6],
+			"tile_size": [2, 1],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "ciudad_malvalona", "cx": 22, "cy": 6}
+		},
+		{
+			"id": "ruta_111",
+			"map_id": "ruta_111",
+			"nombre": "RUTA 111",
+			"tile": [8, 0],
+			"tile_size": [1, 6],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "posada_abuela",
+			"map_id": "posada_abuela",
+			"nombre": "POSADA de la ABUELA",
+			"tile": [8, 0],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_OLD_LADY_REST_SHOP"
+		},
+		{
+			"id": "ruinas_desierto",
+			"map_id": "ruinas_desierto",
+			"nombre": "RUINAS DESIERTO",
+			"tile": [8, 3],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_DESERT_RUINS"
+		},
+		{
+			"id": "familia_estratega",
+			"map_id": "familia_estratega",
+			"nombre": "La familia ESTRATEGA",
+			"tile": [8, 4],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_WINSTRATE_FAMILY"
+		},
+		{
+			"id": "desierto",
+			"map_id": "desierto",
+			"nombre": "DESIERTO",
+			"tile": [8, 1],
+			"tile_size": [1, 4],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "ruta_112",
+			"map_id": "ruta_112",
+			"nombre": "RUTA 112",
+			"tile": [6, 3],
+			"tile_size": [2, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "teleferico_baja",
+			"map_id": "teleferico_baja",
+			"nombre": "TELEFÉRICO",
+			"tile": [7, 3],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "senda_ignea",
+			"map_id": "senda_ignea",
+			"nombre": "SENDA ÍGNEA",
+			"tile": [6, 3],
+			"tile_size": [2, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_FIERY_PATH"
+		},
+		{
+			"id": "monte_cenizo",
+			"map_id": "monte_cenizo",
+			"nombre": "MONTE CENIZO",
+			"tile": [6, 1],
+			"tile_size": [2, 2],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "teleferico_alta",
+			"map_id": "teleferico_alta",
+			"nombre": "TELEFÉRICO",
+			"tile": [6, 2],
+			"tile_size": [1, 1],
+			"prioridad": 3,
+			"vuelo": false
+		},
+		{
+			"id": "desfiladero",
+			"map_id": "desfiladero",
+			"nombre": "DESFILADERO",
+			"tile": [6, 2],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "desfiladero_b",
+			"map_id": "desfiladero_b",
+			"nombre": "DESFILADERO",
+			"tile": [6, 3],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "pueblo_lavacalda",
+			"map_id": "pueblo_lavacalda",
+			"nombre": "PUEBLO LAVACALDA",
+			"tile": [5, 3],
+			"tile_size": [1, 1],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "pueblo_lavacalda", "cx": 9, "cy": 7}
+		},
+		{
+			"id": "ruta_113",
+			"map_id": "ruta_113",
+			"nombre": "RUTA 113",
+			"tile": [4, 0],
+			"tile_size": [4, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "taller_vidrio",
+			"map_id": "taller_vidrio",
+			"nombre": "TALLER de VIDRIO",
+			"tile": [5, 0],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_GLASS_WORKSHOP"
+		},
+		{
+			"id": "pueblo_pardal",
+			"map_id": "pueblo_pardal",
+			"nombre": "PUEBLO PARDAL",
+			"tile": [3, 0],
+			"tile_size": [1, 1],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "pueblo_pardal", "cx": 14, "cy": 8}
+		},
+		{
+			"id": "ruta_114b",
+			"map_id": "ruta_114",
+			"nombre": "RUTA 114",
+			"tile": [2, 0],
+			"tile_size": [1, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "casa_fosilmaniaco",
+			"map_id": "casa_fosilmaniaco",
+			"nombre": "CASA del FOSILMANÍACO",
+			"tile": [2, 0],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_FOSSIL_MANIACS_HOUSE"
+		},
+		{
+			"id": "ruta_114",
+			"map_id": "ruta_114",
+			"nombre": "RUTA 114",
+			"tile": [1, 0],
+			"tile_size": [1, 3],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "casa_aredia",
+			"map_id": "casa_aredia",
+			"nombre": "CASA de AREDIA",
+			"tile": [1, 1],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_LANETTES_HOUSE"
+		},
+		{
+			"id": "cascada_meteoro",
+			"map_id": "cascada_meteoro",
+			"nombre": "CASCADA METEORO",
+			"tile": [1, 2],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "ruta_115",
+			"map_id": "ruta_115",
+			"nombre": "RUTA 115",
+			"tile": [0, 2],
+			"tile_size": [1, 3],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "cascada_meteorob",
+			"map_id": "cascada_meteoro",
+			"nombre": "CASCADA METEORO",
+			"tile": [0, 2],
+			"tile_size": [1, 2],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "ruta_116",
+			"map_id": "ruta_116",
+			"nombre": "RUTA 116",
+			"tile": [1, 5],
+			"tile_size": [4, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "posada_tunelero",
+			"map_id": "posada_tunelero",
+			"nombre": "POSADA del TUNELERO",
+			"tile": [2, 5],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_TUNNELERS_REST_HOUSE"
+		},
+		{
+			"id": "tunel_fervergal",
+			"map_id": "tunel_fervergal",
+			"nombre": "TÚNEL FERVERGAL",
+			"tile": [2, 5],
+			"tile_size": [2, 1],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "pueblo_verdegal",
+			"map_id": "pueblo_verdegal",
+			"nombre": "PUEBLO VERDEGAL",
+			"tile": [4, 6],
+			"tile_size": [1, 1],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "pueblo_verdegal", "cx": 16, "cy": 4}
+		},
+		{
+			"id": "ruta_117",
+			"map_id": "ruta_117",
+			"nombre": "RUTA 117",
+			"tile": [5, 6],
+			"tile_size": [3, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "guarderia",
+			"map_id": "guarderia",
+			"nombre": "GUARDERÍA POKéMON",
+			"tile": [7, 6],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_POKEMON_DAYCARE"
+		},
+		{
+			"id": "ruta_118",
+			"map_id": "ruta_118",
+			"nombre": "RUTA 118",
+			"tile": [10, 6],
+			"tile_size": [2, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "ruta_119",
+			"map_id": "ruta_119",
+			"nombre": "RUTA 119",
+			"tile": [11, 0],
+			"tile_size": [1, 6],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "inst_meteo",
+			"map_id": "inst_meteo",
+			"nombre": "INST. METEOROLÓGICO",
+			"tile": [11, 1],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "ciudad_arborada",
+			"map_id": "ciudad_arborada",
+			"nombre": "CIUDAD ARBORADA",
+			"tile": [12, 0],
+			"tile_size": [1, 1],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "ciudad_arborada", "cx": 5, "cy": 7}
+		},
+		{
+			"id": "ruta_120",
+			"map_id": "ruta_120",
+			"nombre": "RUTA 120",
+			"tile": [13, 0],
+			"tile_size": [1, 4],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "gruta_solar",
+			"map_id": "gruta_solar",
+			"nombre": "GRUTA SOLAR",
+			"tile": [13, 0],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_SCORCHED_SLAB"
+		},
+		{
+			"id": "tumba_antigua",
+			"map_id": "tumba_antigua",
+			"nombre": "TUMBA ANTIGUA",
+			"tile": [13, 2],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_ANCIENT_TOMB"
+		},
+		{
+			"id": "ruta_121",
+			"map_id": "ruta_121",
+			"nombre": "RUTA 121",
+			"tile": [14, 3],
+			"tile_size": [4, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "entrada_safari",
+			"map_id": "",
+			"nombre": "ENTRADA al SAFARI",
+			"tile": [16, 3],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "zona_safari",
+			"map_id": "zona_safari",
+			"nombre": "ZONA SAFARI",
+			"tile": [16, 2],
+			"tile_size": [1, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "ruta_122",
+			"map_id": "ruta_122",
+			"nombre": "RUTA 122",
+			"tile": [16, 4],
+			"tile_size": [1, 2],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "monte_pirico",
+			"map_id": "monte_pirico",
+			"nombre": "MONTE PÍRICO",
+			"tile": [16, 4],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "monte_pirico_b",
+			"map_id": "monte_pirico_b",
+			"nombre": "MONTE PÍRICO",
+			"tile": [16, 5],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "ruta_123",
+			"map_id": "ruta_123",
+			"nombre": "RUTA 123",
+			"tile": [12, 6],
+			"tile_size": [5, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "casa_bayologo",
+			"map_id": "casa_bayologo",
+			"nombre": "CASA del BAYÓLOGO",
+			"tile": [12, 6],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_BERRY_MASTERS_HOUSE"
+		},
+		{
+			"id": "ciudad_calagua",
+			"map_id": "ciudad_calagua",
+			"nombre": "CIUDAD CALAGUA",
+			"tile": [18, 3],
+			"tile_size": [2, 1],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "ciudad_calagua", "cx": 24, "cy": 15}
+		},
+		{
+			"id": "ruta_124",
+			"map_id": "ruta_124",
+			"nombre": "RUTA 124",
+			"tile": [20, 3],
+			"tile_size": [4, 3],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "casa_buscatesoros",
+			"map_id": "casa_buscatesoros",
+			"nombre": "CASA del BUSCATESOROS",
+			"tile": [23, 4],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_HUNTERS_HOUSE"
+		},
+		{
+			"id": "ruta_125",
+			"map_id": "ruta_125",
+			"nombre": "RUTA 125",
+			"tile": [24, 3],
+			"tile_size": [2, 2],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "cueva_cardumen",
+			"map_id": "cueva_cardumen",
+			"nombre": "CUEVA CARDUMEN",
+			"tile": [24, 4],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false
+		},
+		{
+			"id": "ciudad_algaria",
+			"map_id": "ciudad_algaria",
+			"nombre": "CIUDAD ALGARIA",
+			"tile": [24, 5],
+			"tile_size": [2, 1],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "ciudad_algaria", "cx": 28, "cy": 17}
+		},
+		{
+			"id": "ruta_126",
+			"map_id": "ruta_126",
+			"nombre": "RUTA 126",
+			"tile": [20, 6],
+			"tile_size": [3, 3],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "arrecipolis",
+			"map_id": "arrecipolis",
+			"nombre": "ARRECÍPOLIS",
+			"tile": [21, 7],
+			"tile_size": [1, 1],
+			"prioridad": 6,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "arrecipolis", "cx": 43, "cy": 32}
+		},
+		{
+			"id": "ruta_127",
+			"map_id": "ruta_127",
+			"nombre": "RUTA 127",
+			"tile": [23, 6],
+			"tile_size": [3, 3],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "ruta_128",
+			"map_id": "ruta_128",
+			"nombre": "RUTA 128",
+			"tile": [23, 9],
+			"tile_size": [4, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "caverna_abisal",
+			"map_id": "caverna_abisal",
+			"nombre": "CAVERNA ABISAL",
+			"tile": [24, 9],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_SEAFLOOR_CAVERN"
+		},
+		{
+			"id": "ruta_129",
+			"map_id": "ruta_129",
+			"nombre": "RUTA 129",
+			"tile": [24, 10],
+			"tile_size": [2, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "ruta_130",
+			"map_id": "ruta_130",
+			"nombre": "RUTA 130",
+			"tile": [21, 10],
+			"tile_size": [3, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "ruta_131",
+			"map_id": "ruta_131",
+			"nombre": "RUTA 131",
+			"tile": [18, 10],
+			"tile_size": [3, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "pilar_celeste",
+			"map_id": "pilar_celeste",
+			"nombre": "PILAR CELESTE",
+			"tile": [19, 10],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_SKY_PILLAR"
+		},
+		{
+			"id": "pueblo_oromar",
+			"map_id": "pueblo_oromar",
+			"nombre": "PUEBLO OROMAR",
+			"tile": [17, 10],
+			"tile_size": [1, 1],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "pueblo_oromar", "cx": 8, "cy": 16}
+		},
+		{
+			"id": "ruta_132",
+			"map_id": "ruta_132",
+			"nombre": "RUTA 132",
+			"tile": [15, 10],
+			"tile_size": [2, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "ruta_133",
+			"map_id": "ruta_133",
+			"nombre": "RUTA 133",
+			"tile": [12, 10],
+			"tile_size": [3, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "ruta_134",
+			"map_id": "ruta_134",
+			"nombre": "RUTA 134",
+			"tile": [9, 10],
+			"tile_size": [3, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "camara_sellada",
+			"map_id": "camara_sellada",
+			"nombre": "CÁMARA SELLADA",
+			"tile": [11, 10],
+			"tile_size": [1, 1],
+			"prioridad": 2,
+			"vuelo": false,
+			"bandera": "FLAG_LANDMARK_SEALED_CHAMBER"
+		},
+		{
+			"id": "corriente",
+			"map_id": "",
+			"nombre": "CORRIENTE OCEÁNICA",
+			"tile": [9, 10],
+			"tile_size": [8, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "ciudad_colosalia",
+			"map_id": "ciudad_colosalia",
+			"nombre": "CIUDAD COLOSALIA",
+			"tile": [27, 8],
+			"tile_size": [1, 2],
+			"prioridad": 4,
+			"vuelo": true,
+			"vuelo_destino": {"mapa": "ciudad_colosalia", "cx": 27, "cy": 49},
+			"vuelo_zonas_bandera": "SYS_POKEMON_LEAGUE_FLY",
+			"vuelo_zonas": [
+				{"tile": [27, 8], "nombre": "LIGA POKéMON", "vuelo_destino": {"mapa": "ciudad_colosalia", "cx": 18, "cy": 6}},
+				{"tile": [27, 9], "nombre": "CENTRO POKéMON", "vuelo_destino": {"mapa": "ciudad_colosalia", "cx": 27, "cy": 49}}
+			]
+		},
+		{
+			"id": "frente_batalla",
+			"map_id": "frente_batalla",
+			"nombre": "TORRE BATALLA",
+			"tile": [22, 12],
+			"tile_size": [1, 1],
+			"prioridad": 4,
+			"vuelo": false
+		},
+		{
+			"id": "isla_del_sur",
+			"map_id": "isla_del_sur",
+			"nombre": "ISLA SUR",
+			"tile": [12, 14],
+			"tile_size": [1, 1],
+			"prioridad": 4,
+			"vuelo": false
+		}
+	]
+}

@@ -1,0 +1,151 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/pokenav/condicion_pokenav.gd" id="e1"]
+[ext_resource type="PackedScene" path="res://UI/pokenav/fondo_pokenav.tscn" id="e2"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/cabecera_condicion.png" id="e3"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/caja_descripcion.png" id="e4"]
+[ext_resource type="LabelSettings" path="res://UI/texto_normal_negro.tres" id="e5"]
+[ext_resource type="Script" path="res://UI/pokenav/lista_botones_pokenav.gd" id="e6"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/botones_condicion.png" id="e7"]
+[ext_resource type="PackedScene" path="res://UI/pokenav/boton_pokenav.tscn" id="e8"]
+[ext_resource type="PackedScene" path="res://UI/pokenav/brillo_pokenav.tscn" id="e9"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/botones_busqueda.png" id="e10"]
+[ext_resource type="PackedScene" path="res://UI/pokenav/lista_pokenav.tscn" id="e11"]
+[ext_resource type="PackedScene" path="res://UI/pokenav/vista_condicion_pokenav.tscn" id="e12"]
+
+[sub_resource type="Animation" id="Anim_2"]
+resource_name = "entrada"
+length = 0.26667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Superficie/Cabecera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-128, 1), Vector2(0, 1)]
+}
+
+[sub_resource type="Animation" id="Anim_3"]
+resource_name = "salida"
+length = 0.26667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Superficie/Cabecera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1), Vector2(-128, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="Lib_4"]
+_data = {
+&"entrada": SubResource("Anim_2"),
+&"salida": SubResource("Anim_3")
+}
+
+[node name="CondicionPokenav" type="Node2D"]
+script = ExtResource("e1")
+
+[node name="Superficie" type="Node2D" parent="."]
+
+[node name="Fondo" parent="Superficie" instance=ExtResource("e2")]
+
+[node name="Cabecera" type="Sprite2D" parent="Superficie"]
+texture = ExtResource("e3")
+position = Vector2(-128, 1)
+centered = false
+
+[node name="CajaDescripcion" type="Sprite2D" parent="Superficie"]
+texture = ExtResource("e4")
+position = Vector2(0, 0)
+centered = false
+
+[node name="Descripcion" type="Label" parent="Superficie"]
+layout_mode = 0
+offset_left = 24
+offset_top = 136
+offset_right = 216
+offset_bottom = 151
+text = ""
+label_settings = ExtResource("e5")
+horizontal_alignment = 1
+
+[node name="BotonesMenu" type="Node2D" parent="Superficie"]
+script = ExtResource("e6")
+
+[node name="Boton0" parent="Superficie/BotonesMenu" instance=ExtResource("e8")]
+position = Vector2(136, 48)
+hoja = ExtResource("e7")
+filas_hoja = 3
+fila = 0
+
+[node name="Boton1" parent="Superficie/BotonesMenu" instance=ExtResource("e8")]
+position = Vector2(136, 68)
+hoja = ExtResource("e7")
+filas_hoja = 3
+fila = 1
+
+[node name="Boton2" parent="Superficie/BotonesMenu" instance=ExtResource("e8")]
+position = Vector2(136, 88)
+hoja = ExtResource("e7")
+filas_hoja = 3
+fila = 2
+
+[node name="Brillo" parent="Superficie/BotonesMenu" instance=ExtResource("e9")]
+
+[node name="BotonesBusqueda" type="Node2D" parent="Superficie"]
+script = ExtResource("e6")
+
+[node name="Boton0" parent="Superficie/BotonesBusqueda" instance=ExtResource("e8")]
+position = Vector2(136, 32)
+hoja = ExtResource("e10")
+filas_hoja = 6
+fila = 0
+
+[node name="Boton1" parent="Superficie/BotonesBusqueda" instance=ExtResource("e8")]
+position = Vector2(136, 48)
+hoja = ExtResource("e10")
+filas_hoja = 6
+fila = 1
+
+[node name="Boton2" parent="Superficie/BotonesBusqueda" instance=ExtResource("e8")]
+position = Vector2(136, 64)
+hoja = ExtResource("e10")
+filas_hoja = 6
+fila = 2
+
+[node name="Boton3" parent="Superficie/BotonesBusqueda" instance=ExtResource("e8")]
+position = Vector2(136, 80)
+hoja = ExtResource("e10")
+filas_hoja = 6
+fila = 3
+
+[node name="Boton4" parent="Superficie/BotonesBusqueda" instance=ExtResource("e8")]
+position = Vector2(136, 96)
+hoja = ExtResource("e10")
+filas_hoja = 6
+fila = 4
+
+[node name="Boton5" parent="Superficie/BotonesBusqueda" instance=ExtResource("e8")]
+position = Vector2(136, 112)
+hoja = ExtResource("e10")
+filas_hoja = 6
+fila = 5
+
+[node name="Brillo" parent="Superficie/BotonesBusqueda" instance=ExtResource("e9")]
+
+[node name="Lista" parent="Superficie" instance=ExtResource("e11")]
+
+[node name="Vista" parent="." instance=ExtResource("e12")]
+visible = false
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("Lib_4")

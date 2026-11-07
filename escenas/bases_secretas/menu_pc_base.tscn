@@ -1,0 +1,88 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://scripts/bases_secretas/menu_pc_base.gd" id="1"]
+[ext_resource type="Texture2D" path="res://UI/caja_dialogo_1.png" id="2"]
+[ext_resource type="LabelSettings" path="res://UI/texto_normal_negro.tres" id="3"]
+[ext_resource type="Script" path="res://UI/selector_simple.gd" id="4"]
+[ext_resource type="Texture2D" path="res://UI/menu_box_1.png" id="5"]
+[ext_resource type="Script" path="res://scripts/clases/MenuBoxComponent.gd" id="6"]
+
+[node name="MenuPC" type="Control" node_paths=PackedStringArray("panel", "filas", "cursor", "ayuda")]
+visible = false
+mouse_filter = 2
+script = ExtResource("1")
+panel = NodePath("Opciones")
+filas = [NodePath("Opciones/Fila0"), NodePath("Opciones/Fila1"), NodePath("Opciones/Fila2"), NodePath("Opciones/Fila3")]
+cursor = NodePath("Opciones/Cursor")
+ayuda = NodePath("Descripcion/Texto")
+
+[node name="Opciones" type="NinePatchRect" parent="."]
+offset_right = 104.0
+offset_bottom = 80.0
+texture = ExtResource("5")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MenuBoxComponent" type="Node" parent="Opciones"]
+script = ExtResource("6")
+
+[node name="Fila0" type="Label" parent="Opciones"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 96.0
+offset_bottom = 24.0
+label_settings = ExtResource("3")
+
+[node name="Fila1" type="Label" parent="Opciones"]
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 96.0
+offset_bottom = 40.0
+label_settings = ExtResource("3")
+
+[node name="Fila2" type="Label" parent="Opciones"]
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 96.0
+offset_bottom = 56.0
+label_settings = ExtResource("3")
+
+[node name="Fila3" type="Label" parent="Opciones"]
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 96.0
+offset_bottom = 72.0
+label_settings = ExtResource("3")
+
+[node name="Cursor" type="Control" parent="Opciones"]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 97.0
+offset_bottom = 24.0
+script = ExtResource("4")
+color = Color(0.937255, 0.431373, 0.376471, 1)
+ancho_borde = 1
+
+[node name="Descripcion" type="NinePatchRect" parent="."]
+offset_top = 112.0
+offset_right = 240.0
+offset_bottom = 160.0
+texture = ExtResource("2")
+patch_margin_left = 16
+patch_margin_top = 8
+patch_margin_right = 16
+patch_margin_bottom = 8
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[node name="Texto" type="Label" parent="Descripcion"]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 224.0
+offset_bottom = 40.0
+autowrap_mode = 1
+label_settings = ExtResource("3")

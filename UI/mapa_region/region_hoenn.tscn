@@ -1,0 +1,195 @@
+[gd_scene format=3 uid="uid://cv8spt3dh1mk7"]
+
+[ext_resource type="Texture2D" uid="uid://bcbks1b3yduaq" path="res://UI/mapa_region/region_hoenn.png" id="1_mrxww"]
+[ext_resource type="Script" uid="uid://cvpmxuy0qpmlb" path="res://UI/mapa_region/region_hoenn.gd" id="1_x4xbl"]
+[ext_resource type="Texture2D" uid="uid://dhy10n4ch5thk" path="res://UI/mapa_region/fondo_mr.png" id="2_2sges"]
+[ext_resource type="Texture2D" uid="uid://c8pheb32t0pj6" path="res://UI/mapa_region/pokenav_buttom.png" id="2_x4xbl"]
+[ext_resource type="LabelSettings" uid="uid://qk2pmmasfvv" path="res://UI/texto_normal_blanco.tres" id="3_4rnid"]
+[ext_resource type="Texture2D" uid="uid://fxs2rnbvehda" path="res://UI/mapa_region/barra_titulo.png" id="3_8bigo"]
+[ext_resource type="Texture2D" uid="uid://v6kexaw8rq10" path="res://UI/menu_box_1.png" id="3_bqwc8"]
+[ext_resource type="Texture2D" uid="uid://supk0l5hkj8n" path="res://UI/mapa_region/pokenav_icon.png" id="4_bqwc8"]
+[ext_resource type="LabelSettings" uid="uid://dloc0dcjbkv2v" path="res://UI/texto_normal_negro.tres" id="4_hvka4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hvka4"]
+atlas = ExtResource("4_bqwc8")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mpktf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hvka4")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa351"]
+atlas = ExtResource("4_bqwc8")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tgl5b"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aa351")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg511"]
+atlas = ExtResource("4_bqwc8")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bhj3g"]
+atlas = ExtResource("4_bqwc8")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8n3gt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lg511")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bhj3g")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="RegionHoenn" type="Control" unique_id=1273409158]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_x4xbl")
+cursor_node_path = NodePath("zoom/cursor")
+cursor_center_offset = Vector2(4, 12)
+label_nombre_path = NodePath("detalles/nombre")
+metadata/_edit_lock_ = true
+
+[node name="zoom" type="Node2D" parent="." unique_id=1904254547]
+metadata/_edit_lock_ = true
+
+[node name="fondo" type="Sprite2D" parent="zoom" unique_id=590067142]
+position = Vector2(-16, -16)
+scale = Vector2(340, 1)
+texture = ExtResource("2_2sges")
+centered = false
+
+[node name="RegionHoenn" type="Sprite2D" parent="zoom" unique_id=810987603]
+texture = ExtResource("1_mrxww")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="chico" type="AnimatedSprite2D" parent="zoom" unique_id=1985698187]
+visible = false
+position = Vector2(93, 106)
+sprite_frames = SubResource("SpriteFrames_mpktf")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="chica" type="AnimatedSprite2D" parent="zoom" unique_id=221207158]
+visible = false
+position = Vector2(110, 106)
+sprite_frames = SubResource("SpriteFrames_tgl5b")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="cursor" type="AnimatedSprite2D" parent="zoom" unique_id=1924149049]
+position = Vector2(36, 100)
+sprite_frames = SubResource("SpriteFrames_8n3gt")
+frame_progress = 0.200629
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="BarraTitulo" type="Sprite2D" parent="." unique_id=1881893812]
+visible = false
+position = Vector2(144, 0)
+texture = ExtResource("3_8bigo")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="vista" type="Label" parent="BarraTitulo" unique_id=377543163]
+offset_left = 8.0
+offset_top = 5.0
+offset_right = 89.0
+offset_bottom = 20.0
+text = "VISTA COMPLETA"
+label_settings = ExtResource("3_4rnid")
+metadata/_edit_lock_ = true
+
+[node name="detalles" type="NinePatchRect" parent="." unique_id=1547709790]
+layout_mode = 0
+offset_left = 128.0
+offset_top = 128.0
+offset_right = 240.0
+offset_bottom = 160.0
+texture = ExtResource("3_bqwc8")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="nombre" type="Label" parent="detalles" unique_id=1439046062]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 89.0
+offset_bottom = 23.0
+text = "VILLA RAÍZ"
+label_settings = ExtResource("4_hvka4")
+metadata/_edit_lock_ = true
+
+[node name="PokenavButtom" type="Sprite2D" parent="." unique_id=1531986909]
+visible = false
+position = Vector2(0, 144)
+texture = ExtResource("2_x4xbl")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="btn_accion" type="Label" parent="PokenavButtom" unique_id=1204071045]
+offset_left = 16.0
+offset_right = 55.0
+offset_bottom = 15.0
+text = "PARC."
+label_settings = ExtResource("3_4rnid")
+metadata/_edit_lock_ = true
+
+[node name="btn_cancelar" type="Label" parent="PokenavButtom" unique_id=1519115401]
+offset_left = 72.0
+offset_right = 111.0
+offset_bottom = 15.0
+text = "SALIR"
+label_settings = ExtResource("3_4rnid")
+metadata/_edit_lock_ = true
+
+[node name="CuadroRegion" type="NinePatchRect" parent="." unique_id=873422969]
+layout_mode = 0
+offset_left = 168.0
+offset_right = 240.0
+offset_bottom = 32.0
+texture = ExtResource("3_bqwc8")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+metadata/_edit_lock_ = true
+
+[node name="NombreRegion" type="Label" parent="CuadroRegion" unique_id=1709190493]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 64.0
+offset_bottom = 23.0
+text = "HOENN"
+label_settings = ExtResource("4_hvka4")
+horizontal_alignment = 1
+metadata/_edit_lock_ = true

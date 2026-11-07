@@ -1,0 +1,134 @@
+[gd_scene format=4 uid="uid://bvdgk73g2mr35"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_pdiea"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_gmy5l"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_1kuix"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="9_f57ta"]
+[ext_resource type="SpriteFrames" uid="uid://c8eclcahjsyf3" path="res://escenas/avatares/npc_006.tres" id="or_f_006"]
+[ext_resource type="SpriteFrames" uid="uid://borgo2f2dfmil" path="res://escenas/avatares/npc_055.tres" id="or_f_055"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="or_npc_base"]
+[ext_resource type="Script" uid="uid://bjgl0jw3u1cuj" path="res://scripts/npc/intercambio_npc.gd" id="or_s_intercambio"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="or_s_npc_evento"]
+
+[node name="Casa" type="Node2D" unique_id=2013019303]
+script = ExtResource("1_pdiea")
+nombre_interno = "pueblo_oromar_casa3"
+seccion = "PUEBLO_OROMAR"
+esInterior = true
+mapa_exterior_asociado = "PUEBLO_OROMAR"
+solo_caminar = true
+musica_mapa = "CIUDAD_OROMAR"
+metadata/esInterior = true
+
+[node name="NPCs" type="Node2D" parent="." unique_id=674171378]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Chica" parent="NPCs" unique_id=1334561417 instance=ExtResource("or_npc_base")]
+editor_description = "pokeruby PacifidlogTown_House3 objeto 1 (3,5) GIRL_2 FACE_DOWN_AND_RIGHT (MSGBOX_NPC)"
+position = Vector2(56, 94)
+id_texto = "OROMAR_CASA3_CHICA"
+tipo_movimiento = 15
+selec_frames = ExtResource("or_f_006")
+coord = Vector2i(3, 5)
+
+[node name="Comerciante" parent="NPCs" unique_id=1741405351 instance=ExtResource("or_npc_base")]
+editor_description = "pokeruby PacifidlogTown_House3 objeto 2 (4,2) WOMAN_5 FACE_RIGHT (1,1): Trader (pide un BELLOSSOM y da CORSOLA COROSO). Lo dirige Eventos/Intercambio (IntercambioNpc, tabla OROMAR de intercambios_npc.json); id_texto es el de despues del intercambio"
+position = Vector2(72, 46)
+script = ExtResource("or_s_npc_evento")
+id_texto = "OROMAR_CASA3_COMERCIANTE"
+tipo_movimiento = 10
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("or_f_055")
+coord = Vector2i(4, 2)
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1587394027]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADIAAAAAAAEAAAAAADMAAAAAAAIAAAAAADQAAAAJAAAAAAACADIAAAAJAAEAAAACADMAAAAJAAIAAAACADQAAAAIAAAAAAAHADIAAAAHAAAAAAABADIAAAAGAAAAAAABADIAAAAFAAAAAAABADIAAAAEAAAAAAABADIAAAADAAAAAAAFADYAAAACAAAAAAAEADYAAAABAAAAAAABADIAAAADAAEAAAAFADcAAAADAAIAAAAFADgAAAAEAAEAAAABADMAAAAEAAIAAAABADQAAAAFAAEAAAABADMAAAAFAAIAAAAHADYAAAAGAAEAAAAAADcAAAAGAAIAAAAAADgAAAAHAAEAAAABADcAAAAHAAIAAAABADgAAAAIAAEAAAAHADMAAAAIAAIAAAAHADQAAAABAAIAAAAAADYAAAACAAIAAAAEADgAAAABAAEAAAAAADUAAAACAAEAAAAEADcAAAABAAMAAAAEADIAAAABAAQAAAAEADMAAAACAAMAAAAFADIAAAACAAQAAAAFADMAAAAHAAMAAAAFADIAAAAHAAQAAAAFADMAAAAIAAMAAAAGADIAAAAIAAQAAAAGADMAAAABAAUAAAAEADMAAAABAAYAAAAEADQAAAACAAUAAAAFADMAAAACAAYAAAAFADQAAAAHAAUAAAAFADMAAAAHAAYAAAAFADQAAAAIAAUAAAAGADMAAAAIAAYAAAAGADQAAAAGAAMAAAAFADIAAAAGAAQAAAAHADUAAAAFAAMAAAAFADIAAAAFAAQAAAADADUAAAAEAAMAAAAFADIAAAAEAAQAAAACADUAAAADAAMAAAAFADIAAAADAAQAAAAGADUAAAAGAAUAAAAHADUAAAAGAAYAAAAFADQAAAAFAAUAAAADADYAAAAFAAYAAAAFADQAAAAEAAUAAAACADYAAAAEAAYAAAAFADQAAAADAAUAAAAGADUAAAADAAYAAAAFADQAAAAAAAMAAAABADQAAAAAAAQAAAABADQAAAAAAAUAAAAHADYAAAAAAAYAAAABADQAAAAAAAcAAAAHADYAAAAAAAgAAAABADQAAAAJAAQAAAADADQAAAAJAAMAAAADADQAAAAJAAUAAAADADQAAAAJAAYAAAADADQAAAAJAAcAAAADADQAAAAJAAgAAAADADQAAAAEAAgAAAAEADUAAAAFAAgAAAAFADUAAAAIAAgAAAADADQAAAAHAAgAAAADADQAAAAGAAgAAAADADQAAAAIAAcAAAADADQAAAAHAAcAAAADADQAAAAGAAcAAAADADQAAAAFAAcAAAADADQAAAAEAAcAAAADADQAAAADAAcAAAADADQAAAACAAcAAAADADQAAAABAAcAAAADADQAAAABAAgAAAADADQAAAACAAgAAAADADQAAAADAAgAAAADADQAAAA=")
+tile_set = ExtResource("2_gmy5l")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=158774947]
+tile_map_data = PackedByteArray("AAAJAAgAAAAJADcAAAAAAAgAAAAIADcAAAA=")
+tile_set = ExtResource("2_gmy5l")
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1390907238]
+position = Vector2(72, 134)
+script = ExtResource("3_1kuix")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_oromar"
+posicion_destino = Vector2(12, 24)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1224134487]
+position = Vector2(88, 134)
+script = ExtResource("3_1kuix")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_oromar"
+posicion_destino = Vector2(12, 24)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Eventos" type="Node2D" parent="." unique_id=896651203]
+
+[node name="Intercambio" type="Node2D" parent="Eventos" unique_id=693335238]
+editor_description = "pokeruby PacifidlogTown_House3/scripts.inc: EventScript_Trader (intercambio con NPC, entrada 2 de gIngameTrades)"
+script = ExtResource("or_s_intercambio")
+npc = NodePath("../../NPCs/Comerciante")
+id_intercambio = "OROMAR"
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=2144607964]
+script = ExtResource("9_f57ta")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,4": {
+"flags": 1
+},
+"4,5": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,2": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"

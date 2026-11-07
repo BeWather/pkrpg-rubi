@@ -1,0 +1,2735 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/efecto_particulas_nativo.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/i5_candidate_hit_tile0.png" id="2_golpe"]
+[ext_resource type="Shader" path="res://escenas/batalla/animaciones_nativas/mezcla_gba.gdshader" id="3_mezcla"]
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/fondo_movimiento.gd" id="4_fondo"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/claw_slash.png" id="20_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/fang_attack_pal_192_32x32_0_16_32_48.png" id="21_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/gust_pal_9_32x64_0_cycle.png" id="22_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/poison_bubble_pal_150_16x16_0.png" id="23_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/slam_hit_2_pal_277_64x64_0_64.png" id="24_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/small_ember_pal_29_32x32_0_16_32_48_64.png" id="25_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/swipe_pal_222_32x32_0_16_32_48.png" id="26_tex"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Wing Attack1.wav" id="10_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Double Slap.wav" id="11_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Harden.wav" id="12_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Razor Wind1.wav" id="13_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Sacred Fire2.wav" id="14_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Dragon Claw.wav" id="15_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Scratch.wav" id="16_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Vital Throw1.wav" id="17_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Comet Punch.wav" id="18_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Bite.wav" id="19_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Toxic1.wav" id="20_se"]
+
+[sub_resource type="ShaderMaterial" id="Mezcla"]
+shader = ExtResource("3_mezcla")
+
+[sub_resource type="Animation" id="Animation_ataque_ala"]
+resource_name = "ataque_ala"
+length = 2.65
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.5333, 0.8499, 1.2833, 1.4833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(12, 4), 1, 16, false],
+"method": &"elipse"
+}, {
+"args": [&"atacante", Vector2(24, 0), 9],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(16, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"atacante", 11],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0999, 0.8499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Rafaga"), [&"atacante", Vector2(-25, 0)], [&"defensor", Vector2(0, 0)], 46, {"espera": 25, "mover": 20, "zoom": [[16, 256, 0], [10, 0, 24]], "cuadros": [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7], "duraciones": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Vector2(-16, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0999, 0.8499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Rafaga"), [&"atacante", Vector2(25, 0)], [&"defensor", Vector2(0, 0)], 46, {"espera": 25, "mover": 20, "zoom": [[16, 256, 0], [10, 0, 24]], "cuadros": [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7], "duraciones": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0999, 0.4499)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}],
+"times": PackedFloat32Array(0.8499, 0.9499)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_ala_de_acero"]
+resource_name = "ala_de_acero"
+length = 3.716667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1166, 1.1666, 1.5999, 1.9166, 2.3499, 2.5499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", 63, 4.0, true],
+"method": &"brillo_metalico"
+}, {
+"args": [&"atacante", Vector2(12, 4), 1, 16, false],
+"method": &"elipse"
+}, {
+"args": [&"atacante", Vector2(24, 0), 9],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(16, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"atacante", 11],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.1666, 1.9166),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Rafaga"), [&"atacante", Vector2(-25, 0)], [&"defensor", Vector2(0, 0)], 46, {"espera": 25, "mover": 20, "zoom": [[16, 256, 0], [10, 0, 24]], "cuadros": [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7], "duraciones": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Vector2(-16, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1666, 1.9166),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Rafaga"), [&"atacante", Vector2(25, 0)], [&"defensor", Vector2(0, 0)], 46, {"espera": 25, "mover": 20, "zoom": [[16, 256, 0], [10, 0, 24]], "cuadros": [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7], "duraciones": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0999, 0.5833, 1.1666, 1.5166)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(1.9166)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_garra_brutal"]
+resource_name = "garra_brutal"
+length = 2.016667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1499, 0.2333, 0.2499, 0.4833, 0.8499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(24, 0), 6, 2],
+"method": &"embestida"
+}, {
+"args": [&"defensor", Vector2(2, 0), 18, 1, true],
+"method": &"sacudir_alterna"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(-10, -10)], [], 21, {"subprioridad": [38, 28], "cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": false, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(10, -10)], [], 21, {"subprioridad": [38, 28], "cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": true, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2499, 0.4833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Garra"), [&"defensor", Vector2(-10, 10)], [], 21, {"subprioridad": [38, 28], "cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": false, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(10, 10)], [], 21, {"subprioridad": [38, 28], "cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": true, "fijo": true}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(0.2499, 0.4833)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_garra_dragon"]
+resource_name = "garra_dragon"
+length = 3.55
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1666, 0.2333, 0.2999, 0.3666, 0.4333, 0.4999, 0.5666, 0.6333, 0.6999, 0.7666, 0.8333, 0.8999, 0.9666, 1.0333, 1.0999, 1.1666, 1.2333, 1.2999, 1.3666, 1.4333, 1.4999, 1.5666, 1.6333, 2.3833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 0.6129, 0, 1), 0, 8, 4],
+"method": &"mezclar_paleta"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Vector2(24, 0), 6, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(-10, -10)], [], 21, {"subprioridad": [38, 28], "cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": false, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Vector2(24, 0), 6, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(10, -10)], [], 21, {"subprioridad": [38, 28], "cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": true, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0999, 0.8999, 0.9666, 1.1666, 1.2333, 1.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(0, 2), 15, 1, false],
+"method": &"sacudir"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(-10, 10)], [], 21, {"subprioridad": [38, 28], "cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": false, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(10, 10)], [], 21, {"subprioridad": [38, 28], "cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": true, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Color(1, 0.6129, 0, 1), 8, 0, 4],
+"method": &"mezclar_paleta"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0999, 0.9666, 1.2333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [[&"atacante", &"defensor"], Vector2(0, -4), 2, 5],
+"method": &"temblor_pantalla"
+}, {
+"args": [[&"atacante", &"defensor"], Vector2(0, -4), 2, 5],
+"method": &"temblor_pantalla"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.9666, 1.2333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.9666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SonidoAtacante")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.0999)
+}
+tracks/5/use_blend = true
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SonidoDefensor")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}],
+"times": PackedFloat32Array(0.9666, 1.2333)
+}
+tracks/6/use_blend = true
+
+[sub_resource type="Animation" id="Animation_garra_dragon_rival"]
+resource_name = "garra_dragon_rival"
+length = 3.55
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1666, 0.2333, 0.2999, 0.3666, 0.4333, 0.4999, 0.5666, 0.6333, 0.6999, 0.7666, 0.8333, 0.8999, 0.9666, 1.0333, 1.0999, 1.1666, 1.2333, 1.2999, 1.3666, 1.4333, 1.4999, 1.5666, 1.6333, 2.3833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 0.6129, 0, 1), 0, 8, 4],
+"method": &"mezclar_paleta"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Vector2(24, 0), 6, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(-10, -10)], [], 21, {"subprioridad": [38, 28], "cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": false, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Vector2(24, 0), 6, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(10, -10)], [], 21, {"subprioridad": [38, 28], "cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": true, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0999, 0.8999, 0.9666, 1.1666, 1.2333, 1.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(0, 2), 15, 1, false],
+"method": &"sacudir"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(-10, 10)], [], 21, {"subprioridad": [38, 28], "cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": false, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(10, 10)], [], 21, {"subprioridad": [38, 28], "cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": true, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Color(1, 0.6129, 0, 1), 8, 0, 4],
+"method": &"mezclar_paleta"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0999, 0.9666, 1.2333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [[&"atacante", &"defensor"], Vector2(0, -4), 2, 5],
+"method": &"temblor_pantalla"
+}, {
+"args": [[&"atacante", &"defensor"], Vector2(0, -4), 2, 5],
+"method": &"temblor_pantalla"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.9666, 1.2333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"subprioridad": [28, 38], "velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.9666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SonidoAtacante")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.0999)
+}
+tracks/5/use_blend = true
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SonidoDefensor")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}],
+"times": PackedFloat32Array(0.9666, 1.2333)
+}
+tracks/6/use_blend = true
+
+[sub_resource type="Animation" id="Animation_golpes_furia"]
+resource_name = "golpes_furia"
+length = 1.916667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.1499, 0.3499, 0.4499, 0.7499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(25, 0), 5, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Zarpazo"), [&"defensor", Vector2(16, 0)], [], 17, {"subprioridad": [38, 28], "cuadros": [0, 1, 2, 3], "duraciones": [4, 4, 4, 4], "voltear": true, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Vector2(25, 0), 5, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Zarpazo"), [&"defensor", Vector2(-16, 0)], [], 17, {"subprioridad": [38, 28], "cuadros": [0, 1, 2, 3], "duraciones": [4, 4, 4, 4], "voltear": false, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1499, 0.4499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"defensor", Vector2(3, 0), 5, 1, false],
+"method": &"sacudir_alterna"
+}, {
+"args": [&"defensor", Vector2(4, 0), 7, 1, false],
+"method": &"sacudir_alterna"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}],
+"times": PackedFloat32Array(0.1499, 0.4499)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_desarme"]
+resource_name = "desarme"
+length = 1.933333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1999, 0.3666, 0.4666, 0.5666, 0.7666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(24, 0), 4, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("GolpeGiratorio"), [&"defensor", Vector2(-16, -16)], [], 9, {"subprioridad": [38, 28], "orbita": [20, -20, 256, 11], "giro_por_frame": 0.098175, "cuadros": [0, 1], "duraciones": [4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [[&"fondo", &"atacante", &"defensor"], Color(1, 1, 1, 1), 0.625, 6, 1, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"defensor", Vector2(0, 3), 6, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"defensor", 6],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1999, 0.3666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.6875, 10, false, false],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(12, 10), 3],
+"method": &"deslizar"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"atacante", 5],
+"method": &"volver"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}],
+"times": PackedFloat32Array(0.1999, 0.3666)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_desarme_rival"]
+resource_name = "desarme_rival"
+length = 1.933333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1999, 0.3666, 0.4666, 0.5666, 0.7666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(24, 0), 4, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("GolpeGiratorio"), [&"defensor", Vector2(-16, -16)], [], 9, {"subprioridad": [38, 28], "orbita": [20, -20, 256, 11], "giro_por_frame": 0.098175, "cuadros": [0, 1], "duraciones": [4, 4], "voltear": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [[&"fondo", &"atacante", &"defensor"], Color(1, 1, 1, 1), 0.625, 6, 1, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"defensor", Vector2(0, 3), 6, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"defensor", 6],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1999, 0.3666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.6875, 10, false, false],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(12, 10), 3],
+"method": &"deslizar"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"atacante", 5],
+"method": &"volver"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}],
+"times": PackedFloat32Array(0.1999, 0.3666)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_colmillo_veneno"]
+resource_name = "colmillo_veneno"
+length = 3.05
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.2333, 0.2999, 0.6666, 0.7999, 0.9333, 0.9666, 1.0666, 1.1999, 1.2666, 1.3333, 1.5666, 1.8833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [NodePath("Colmillo"), [&"defensor", Vector2(0, 0)], [], 33, {"subprioridad": [38, 28], "zoom": [[512, 512, 0], [-32, -32, 8]], "cuadros": [0, 1, 2, 3], "duraciones": [8, 16, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"defensor", Vector2(3, 0), 10, 1, false],
+"method": &"sacudir"
+}, {
+"args": [&"defensor", Color(0.8387, 0, 0.8387, 1), 0, 0.75, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(20, -20)], [], 22, {"subprioridad": [38, 28], "velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(-20, 15)], [], 22, {"subprioridad": [38, 28], "velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Color(0.8387, 0, 0.8387, 1), 0.75, 0, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(0, 0)], [], 22, {"subprioridad": [38, 28], "velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(-20, -20)], [], 22, {"subprioridad": [38, 28], "velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Color(0.8387, 0, 0.8387, 1), 0, 0.75, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(16, -8)], [], 22, {"subprioridad": [38, 28], "velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Color(0.8387, 0, 0.8387, 1), 0.75, 0, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(10, 10)], [], 22, {"subprioridad": [38, 28], "velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoDefensor")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}],
+"times": PackedFloat32Array(0.0999, 0.6666, 0.7999, 0.9333, 1.0666, 1.1999, 1.3333)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_ataque_ala_d20"]
+resource_name = "ataque_ala_d20"
+length = 2.65
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.5333, 0.8499, 1.2833, 1.4833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(12, 4), 1, 16, false],
+"method": &"elipse"
+}, {
+"args": [&"atacante", Vector2(24, 0), 9],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(-16, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"atacante", 11],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0999, 0.8499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Rafaga"), [&"atacante", Vector2(-25, 0)], [&"defensor", Vector2(0, 0)], 46, {"espera": 25, "mover": 20, "zoom": [[16, 256, 0], [10, 0, 24]], "cuadros": [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7], "duraciones": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Vector2(16, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0999, 0.8499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Rafaga"), [&"atacante", Vector2(25, 0)], [&"defensor", Vector2(0, 0)], 46, {"espera": 25, "mover": 20, "zoom": [[16, 256, 0], [10, 0, 24]], "cuadros": [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7], "duraciones": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0999, 0.4499)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}],
+"times": PackedFloat32Array(0.8499, 0.9499)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_ala_de_acero_d20"]
+resource_name = "ala_de_acero_d20"
+length = 3.716667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1166, 1.1666, 1.5999, 1.9166, 2.3499, 2.5499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", 63, 4.0, true],
+"method": &"brillo_metalico"
+}, {
+"args": [&"atacante", Vector2(12, 4), 1, 16, false],
+"method": &"elipse"
+}, {
+"args": [&"atacante", Vector2(24, 0), 9],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(-16, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"atacante", 11],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.1666, 1.9166),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Rafaga"), [&"atacante", Vector2(-25, 0)], [&"defensor", Vector2(0, 0)], 46, {"espera": 25, "mover": 20, "zoom": [[16, 256, 0], [10, 0, 24]], "cuadros": [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7], "duraciones": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Vector2(16, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1666, 1.9166),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Rafaga"), [&"atacante", Vector2(25, 0)], [&"defensor", Vector2(0, 0)], 46, {"espera": 25, "mover": 20, "zoom": [[16, 256, 0], [10, 0, 24]], "cuadros": [0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7, 0, 1, 2, 3, 4, 5, 6, 7], "duraciones": [2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0999, 0.5833, 1.1666, 1.5166)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(1.9166)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_garra_brutal_d02"]
+resource_name = "garra_brutal_d02"
+length = 2.016667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1499, 0.2333, 0.2499, 0.4833, 0.8499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(24, 0), 6, 2],
+"method": &"embestida"
+}, {
+"args": [&"defensor", Vector2(2, 0), 18, 1, true],
+"method": &"sacudir_alterna"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(-10, -10)], [], 21, {"cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": false, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(10, -10)], [], 21, {"cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": true, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.2499, 0.4833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Garra"), [&"defensor", Vector2(-10, 10)], [], 21, {"cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": false, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(10, 10)], [], 21, {"cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": true, "fijo": true}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.2499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(0.2499, 0.4833)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_garra_dragon_d02"]
+resource_name = "garra_dragon_d02"
+length = 3.55
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1666, 0.2333, 0.2999, 0.3666, 0.4333, 0.4999, 0.5666, 0.6333, 0.6999, 0.7666, 0.8333, 0.8999, 0.9666, 1.0333, 1.0999, 1.1666, 1.2333, 1.2999, 1.3666, 1.4333, 1.4999, 1.5666, 1.6333, 2.3833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 0.6129, 0, 1), 0, 8, 4],
+"method": &"mezclar_paleta"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Vector2(24, 0), 6, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(-10, -10)], [], 21, {"cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": false, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Vector2(24, 0), 6, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(10, -10)], [], 21, {"cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": true, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0999, 0.8999, 0.9666, 1.1666, 1.2333, 1.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(0, 2), 15, 1, false],
+"method": &"sacudir"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(-10, 10)], [], 21, {"cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": false, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(10, 10)], [], 21, {"cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": true, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Color(1, 0.6129, 0, 1), 8, 0, 4],
+"method": &"mezclar_paleta"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0999, 0.9666, 1.2333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [[&"atacante", &"defensor"], Vector2(0, -4), 2, 5],
+"method": &"temblor_pantalla"
+}, {
+"args": [[&"atacante", &"defensor"], Vector2(0, -4), 2, 5],
+"method": &"temblor_pantalla"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.9666, 1.2333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.9666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SonidoAtacante")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.0999)
+}
+tracks/5/use_blend = true
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SonidoDefensor")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}],
+"times": PackedFloat32Array(0.9666, 1.2333)
+}
+tracks/6/use_blend = true
+
+[sub_resource type="Animation" id="Animation_garra_dragon_d13"]
+resource_name = "garra_dragon_d13"
+length = 3.55
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1666, 0.2333, 0.2999, 0.3666, 0.4333, 0.4999, 0.5666, 0.6333, 0.6999, 0.7666, 0.8333, 0.8999, 0.9666, 1.0333, 1.0999, 1.1666, 1.2333, 1.2999, 1.3666, 1.4333, 1.4999, 1.5666, 1.6333, 2.3833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 0.6129, 0, 1), 0, 8, 4],
+"method": &"mezclar_paleta"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Vector2(24, 0), 6, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(-10, -10)], [], 21, {"cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": false, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Vector2(24, 0), 6, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(10, -10)], [], 21, {"cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": true, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 21, {"velocidad": Vector2(0, -2.25), "onda_x": [42, 8], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 31)], [], 26, {"velocidad": Vector2(0, -1.5625), "onda_x": [-42, 11], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0999, 0.8999, 0.9666, 1.1666, 1.2333, 1.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(0, 2), 15, 1, false],
+"method": &"sacudir"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(-10, 10)], [], 21, {"cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": false, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 26, {"velocidad": Vector2(0, -2), "onda_x": [46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Garra"), [&"defensor", Vector2(10, 10)], [], 21, {"cuadros": [0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4], "voltear": true, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Color(1, 0.6129, 0, 1), 8, 0, 4],
+"method": &"mezclar_paleta"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0999, 0.9666, 1.2333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 28)], [], 31, {"velocidad": Vector2(0, -2.0625), "onda_x": [50, 13], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [[&"atacante", &"defensor"], Vector2(0, -4), 2, 5],
+"method": &"temblor_pantalla"
+}, {
+"args": [[&"atacante", &"defensor"], Vector2(0, -4), 2, 5],
+"method": &"temblor_pantalla"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.9666, 1.2333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 32)], [], 21, {"velocidad": Vector2(0, -1.875), "onda_x": [-46, 16], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("Ascua"), [&"atacante_base", Vector2(0, 33)], [], 31, {"velocidad": Vector2(0, -1.8125), "onda_x": [-50, 15], "cuadros": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 1, 2, 3, 4], "duraciones": [4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4], "fijo": true}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.9666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SonidoAtacante")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.0999)
+}
+tracks/5/use_blend = true
+tracks/6/type = "audio"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SonidoDefensor")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}],
+"times": PackedFloat32Array(0.9666, 1.2333)
+}
+tracks/6/use_blend = true
+
+[sub_resource type="Animation" id="Animation_golpes_furia_d02"]
+resource_name = "golpes_furia_d02"
+length = 1.916667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.1499, 0.3499, 0.4499, 0.7499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(25, 0), 5, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Zarpazo"), [&"defensor", Vector2(16, 0)], [], 17, {"cuadros": [0, 1, 2, 3], "duraciones": [4, 4, 4, 4], "voltear": true, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"atacante", Vector2(25, 0), 5, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Zarpazo"), [&"defensor", Vector2(-16, 0)], [], 17, {"cuadros": [0, 1, 2, 3], "duraciones": [4, 4, 4, 4], "voltear": false, "fijo": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1499, 0.4499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"defensor", Vector2(3, 0), 5, 1, false],
+"method": &"sacudir_alterna"
+}, {
+"args": [&"defensor", Vector2(4, 0), 7, 1, false],
+"method": &"sacudir_alterna"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}],
+"times": PackedFloat32Array(0.1499, 0.4499)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_desarme_doble"]
+resource_name = "desarme_doble"
+length = 1.933333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1999, 0.3666, 0.4666, 0.5666, 0.7666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(24, 0), 4, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("GolpeGiratorio"), [&"defensor", Vector2(-16, -16)], [], 9, {"subprioridad": [38, 28], "orbita": [20, -20, 256, 11], "giro_por_frame": 0.098175, "cuadros": [0, 1], "duraciones": [4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [[&"fondo", &"atacante", &"defensor", &"companero_atacante", &"companero_defensor"], Color(1, 1, 1, 1), 0.625, 6, 1, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"defensor", Vector2(0, 3), 6, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"defensor", 6],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1999, 0.3666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.6875, 10, false, false],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(12, 10), 3],
+"method": &"deslizar"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"atacante", 5],
+"method": &"volver"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}],
+"times": PackedFloat32Array(0.1999, 0.3666)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_desarme_doble_rival"]
+resource_name = "desarme_doble_rival"
+length = 1.933333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1999, 0.3666, 0.4666, 0.5666, 0.7666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(24, 0), 4, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("GolpeGiratorio"), [&"defensor", Vector2(-16, -16)], [], 9, {"subprioridad": [38, 28], "orbita": [20, -20, 256, 11], "giro_por_frame": 0.098175, "cuadros": [0, 1], "duraciones": [4, 4], "voltear": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [[&"fondo", &"atacante", &"defensor", &"companero_atacante", &"companero_defensor"], Color(1, 1, 1, 1), 0.625, 6, 1, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"defensor", Vector2(0, 3), 6, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"defensor", 6],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1999, 0.3666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.6875, 10, false, false],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(12, 10), 3],
+"method": &"deslizar"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"atacante", 5],
+"method": &"volver"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}],
+"times": PackedFloat32Array(0.1999, 0.3666)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_desarme_d02"]
+resource_name = "desarme_d02"
+length = 1.933333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1999, 0.3666, 0.4666, 0.5666, 0.7666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(24, 0), 4, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("GolpeGiratorio"), [&"defensor", Vector2(16, -16)], [], 9, {"orbita": [-20, -20, 256, 11], "giro_por_frame": -0.098175, "cuadros": [0, 1], "duraciones": [4, 4], "voltear": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [[&"fondo", &"atacante", &"defensor"], Color(1, 1, 1, 1), 0.625, 6, 1, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"defensor", Vector2(0, 3), 6, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"defensor", 6],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1999, 0.3666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.6875, 10, false, false],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(-12, 10), 3],
+"method": &"deslizar"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"atacante", 5],
+"method": &"volver"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}],
+"times": PackedFloat32Array(0.1999, 0.3666)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_desarme_d13"]
+resource_name = "desarme_d13"
+length = 1.933333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1999, 0.3666, 0.4666, 0.5666, 0.7666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(24, 0), 4, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("GolpeGiratorio"), [&"defensor", Vector2(16, -16)], [], 9, {"orbita": [-20, -20, 256, 11], "giro_por_frame": -0.098175, "cuadros": [0, 1], "duraciones": [4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [[&"fondo", &"atacante", &"defensor"], Color(1, 1, 1, 1), 0.625, 6, 1, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"defensor", Vector2(0, 3), 6, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"defensor", 6],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1999, 0.3666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.6875, 10, false, false],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(-12, 10), 3],
+"method": &"deslizar"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"atacante", 5],
+"method": &"volver"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}],
+"times": PackedFloat32Array(0.1999, 0.3666)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_desarme_d00"]
+resource_name = "desarme_d00"
+length = 1.933333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1999, 0.3666, 0.4666, 0.5666, 0.7666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(24, 0), 4, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("GolpeGiratorio"), [&"defensor", Vector2(-16, -16)], [], 9, {"subprioridad": [38, 28], "orbita": [20, -20, 256, 11], "giro_por_frame": 0.098175, "cuadros": [0, 1], "duraciones": [4, 4], "voltear": true}],
+"method": &"sprite_efecto"
+}, {
+"args": [[&"fondo", &"atacante", &"defensor", &"companero_atacante"], Color(1, 1, 1, 1), 0.625, 6, 1, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"defensor", Vector2(0, 3), 6, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"defensor", 6],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1999, 0.3666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.6875, 10, false, false],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(12, 10), 3],
+"method": &"deslizar"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"atacante", 5],
+"method": &"volver"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}],
+"times": PackedFloat32Array(0.1999, 0.3666)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_desarme_d11"]
+resource_name = "desarme_d11"
+length = 1.933333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1999, 0.3666, 0.4666, 0.5666, 0.7666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(24, 0), 4, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("GolpeGiratorio"), [&"defensor", Vector2(-16, -16)], [], 9, {"subprioridad": [38, 28], "orbita": [20, -20, 256, 11], "giro_por_frame": 0.098175, "cuadros": [0, 1], "duraciones": [4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [[&"fondo", &"atacante", &"defensor", &"companero_atacante"], Color(1, 1, 1, 1), 0.625, 6, 1, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"defensor", Vector2(0, 3), 6, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"defensor", 6],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1999, 0.3666),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.6875, 10, false, false],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(12, 10), 3],
+"method": &"deslizar"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"atacante", 5],
+"method": &"volver"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}],
+"times": PackedFloat32Array(0.1999, 0.3666)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_colmillo_veneno_d02"]
+resource_name = "colmillo_veneno_d02"
+length = 3.05
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.2333, 0.2999, 0.6666, 0.7999, 0.9333, 0.9666, 1.0666, 1.1999, 1.2666, 1.3333, 1.5666, 1.8833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [NodePath("Colmillo"), [&"defensor", Vector2(0, 0)], [], 33, {"zoom": [[512, 512, 0], [-32, -32, 8]], "cuadros": [0, 1, 2, 3], "duraciones": [8, 16, 4, 4]}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"defensor", Vector2(3, 0), 10, 1, false],
+"method": &"sacudir"
+}, {
+"args": [&"defensor", Color(0.8387, 0, 0.8387, 1), 0, 0.75, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(20, -20)], [], 22, {"velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(-20, 15)], [], 22, {"velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Color(0.8387, 0, 0.8387, 1), 0.75, 0, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(0, 0)], [], 22, {"velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(-20, -20)], [], 22, {"velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Color(0.8387, 0, 0.8387, 1), 0, 0.75, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(16, -8)], [], 22, {"velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}, {
+"args": [&"defensor", Color(0.8387, 0, 0.8387, 1), 0.75, 0, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("BurbujaVeneno"), [&"defensor", Vector2(10, 10)], [], 22, {"velocidad": Vector2(0, -0.1875), "onda_x": [4, 11], "zoom": [[156, 156, 0], [5, 5, 20]]}],
+"method": &"sprite_efecto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoDefensor")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}],
+"times": PackedFloat32Array(0.0999, 0.6666, 0.7999, 0.9333, 1.0666, 1.1999, 1.3333)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_golpes"]
+_data = {
+&"ataque_ala": SubResource("Animation_ataque_ala"),
+&"ala_de_acero": SubResource("Animation_ala_de_acero"),
+&"garra_brutal": SubResource("Animation_garra_brutal"),
+&"garra_dragon": SubResource("Animation_garra_dragon"),
+&"garra_dragon_rival": SubResource("Animation_garra_dragon_rival"),
+&"golpes_furia": SubResource("Animation_golpes_furia"),
+&"desarme": SubResource("Animation_desarme"),
+&"desarme_rival": SubResource("Animation_desarme_rival"),
+&"colmillo_veneno": SubResource("Animation_colmillo_veneno"),
+&"ataque_ala_d20": SubResource("Animation_ataque_ala_d20"),
+&"ataque_ala_d31": SubResource("Animation_ataque_ala_d20"),
+&"ala_de_acero_d20": SubResource("Animation_ala_de_acero_d20"),
+&"ala_de_acero_d31": SubResource("Animation_ala_de_acero_d20"),
+&"garra_brutal_d02": SubResource("Animation_garra_brutal_d02"),
+&"garra_brutal_d20": SubResource("Animation_garra_brutal_d02"),
+&"garra_brutal_d13": SubResource("Animation_garra_brutal_d02"),
+&"garra_brutal_d31": SubResource("Animation_garra_brutal_d02"),
+&"garra_dragon_d02": SubResource("Animation_garra_dragon_d02"),
+&"garra_dragon_d20": SubResource("Animation_garra_dragon_d02"),
+&"garra_dragon_d13": SubResource("Animation_garra_dragon_d13"),
+&"garra_dragon_d31": SubResource("Animation_garra_dragon_d13"),
+&"golpes_furia_d02": SubResource("Animation_golpes_furia_d02"),
+&"golpes_furia_d20": SubResource("Animation_golpes_furia_d02"),
+&"golpes_furia_d13": SubResource("Animation_golpes_furia_d02"),
+&"golpes_furia_d31": SubResource("Animation_golpes_furia_d02"),
+&"desarme_doble": SubResource("Animation_desarme_doble"),
+&"desarme_doble_rival": SubResource("Animation_desarme_doble_rival"),
+&"desarme_d02": SubResource("Animation_desarme_d02"),
+&"desarme_d20": SubResource("Animation_desarme_d02"),
+&"desarme_d13": SubResource("Animation_desarme_d13"),
+&"desarme_d31": SubResource("Animation_desarme_d13"),
+&"desarme_d00": SubResource("Animation_desarme_d00"),
+&"desarme_d22": SubResource("Animation_desarme_d00"),
+&"desarme_d11": SubResource("Animation_desarme_d11"),
+&"desarme_d33": SubResource("Animation_desarme_d11"),
+&"colmillo_veneno_d02": SubResource("Animation_colmillo_veneno_d02"),
+&"colmillo_veneno_d20": SubResource("Animation_colmillo_veneno_d02"),
+&"colmillo_veneno_d13": SubResource("Animation_colmillo_veneno_d02"),
+&"colmillo_veneno_d31": SubResource("Animation_colmillo_veneno_d02")
+}
+
+[node name="GolpesSprite2" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+material_mezcla = SubResource("Mezcla")
+voltear_imagen_con_lado = false
+
+[node name="Fondo" type="Node2D" parent="."]
+script = ExtResource("4_fondo")
+
+[node name="Imagen" type="Sprite2D" parent="Fondo"]
+visible = false
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="Velo" type="ColorRect" parent="Fondo"]
+visible = false
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="Golpe" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+texture = ExtResource("2_golpe")
+
+[node name="GolpeOpaco" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_golpe")
+
+[node name="Estela" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+
+[node name="BurbujaVeneno" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("23_tex")
+
+[node name="Ascua" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("25_tex")
+vframes = 5
+
+[node name="Rafaga" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("22_tex")
+vframes = 8
+
+[node name="Garra" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("20_tex")
+vframes = 5
+
+[node name="Zarpazo" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("26_tex")
+vframes = 4
+
+[node name="GolpeGiratorio" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("24_tex")
+vframes = 2
+
+[node name="Colmillo" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("21_tex")
+vframes = 4
+
+[node name="SonidoAtacante" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoDefensor" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoCentro" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_golpes")

@@ -1,0 +1,827 @@
+[gd_scene format=4 uid="uid://dilayt4m8phh6"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_frpiq"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_dn2u3"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_6b6is"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_hgihp"]
+[ext_resource type="Script" uid="uid://8uymdhpcd3qe" path="res://scripts/eventos/cartel_evento.gd" id="pt_cartel"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="pt_npc_base"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="pt_npc_evento"]
+[ext_resource type="SpriteFrames" uid="uid://q6liftwxrkde" path="res://escenas/avatares/npc_048.tres" id="pt_npc_048"]
+[ext_resource type="Script" path="res://scripts/eventos/ruta_110/evento_casa_treta_prueba5.gd" id="pt_evento"]
+[ext_resource type="PackedScene" path="res://escenas/eventos/disparador_evento_por_tiles.tscn" id="pt_disparador"]
+
+[node name="CasaTretaPrueba5" type="Node2D" unique_id=759417394]
+script = ExtResource("1_frpiq")
+nombre_interno = "ruta_110_casa_treta_prueba5"
+seccion = "RUTA_110"
+esInterior = true
+mapa_exterior_asociado = "RUTA_110"
+solo_caminar = true
+musica_mapa = "CASA_TRUCO"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=946209375]
+tile_map_data = PackedByteArray("AAAAAAAAAAAZAAAAAAAAAAEAAAAZAAEAAAAAAAIAAAAYAA0AAAAAAAMAAAAYAA0AAAAAAAQAAAAYAA0AAAAAAAUAAAAYAA0AAAAAAAYAAAAYAA0AAAAAAAcAAAAYAA0AAAAAAAgAAAAYAA0AAAAAAAkAAAAYAA0AAAAAAAoAAAAYAA0AAAAAAAsAAAAYAA0AAAAAAAwAAAAYAA0AAAAAAA0AAAAYAA0AAAAAAA4AAAAYAA0AAAAAAA8AAAAYAA0AAAAAABAAAAAYAA0AAAAAABEAAAAYAA0AAAAAABIAAAAYAA0AAAAAABMAAAAYAAEAAAAAABQAAAAYAAEAAAAAABUAAAAIAAsAAAABAAAAAAAZAAAAAAABAAEAAAAZAAEAAAABAAIAAAAYAA0AAAABAAMAAAAYAA0AAAABAAQAAAAYAA0AAAABAAUAAAAYAAEAAAABAAYAAAAYAAEAAAABAAcAAAAYAAEAAAABAAgAAAAYAAEAAAABAAkAAAAYAA0AAAABAAoAAAAYAA0AAAABAAsAAAAYAA0AAAABAAwAAAAYAA0AAAABAA0AAAAYAA0AAAABAA4AAAAYAA0AAAABAA8AAAAYAA0AAAABABAAAAAYAA0AAAABABEAAAAYAA0AAAABABIAAAAYAA0AAAABABMAAAAYAAEAAAABABQAAAAYAAEAAAABABUAAAAJAAsAAAACAAAAAAAZAAAAAAACAAEAAAAZAAEAAAACAAIAAAAYAA0AAAACAAMAAAAYAA0AAAACAAQAAAAYAAEAAAACAAUAAAAYAAEAAAACAAYAAAAYAAEAAAACAAcAAAAYAAEAAAACAAgAAAAYAAEAAAACAAkAAAAbAAIAAAACAAoAAAAYAA0AAAACAAsAAAAYAA0AAAACAAwAAAAYAA0AAAACAA0AAAAYAA0AAAACAA4AAAAYAA0AAAACAA8AAAAYAA0AAAACABAAAAAYAA0AAAACABEAAAAYAA0AAAACABIAAAAYAA0AAAACABMAAAAYAAEAAAACABQAAAAYAA0AAAACABUAAAAYAA0AAAADAAAAAAAZAAAAAAADAAEAAAAZAAEAAAADAAIAAAAYAA0AAAADAAMAAAAYAAEAAAADAAQAAAAYAAEAAAADAAUAAAAYAAEAAAADAAYAAAAYAAEAAAADAAcAAAAYAAEAAAADAAgAAAAYAAEAAAADAAkAAAAYAA0AAAADAAoAAAAYAA0AAAADAAsAAAAYAA0AAAADAAwAAAAYAA0AAAADAA0AAAAYAA0AAAADAA4AAAAYAA0AAAADAA8AAAAYAA0AAAADABAAAAAYAA0AAAADABEAAAAYAA0AAAADABIAAAAYAA0AAAADABMAAAAYAAEAAAADABQAAAAYAA0AAAADABUAAAAYAA0AAAAEAAAAAAAZAAAAAAAEAAEAAAAZAAEAAAAEAAIAAAAYAA0AAAAEAAMAAAAYAAEAAAAEAAQAAAAYAAEAAAAEAAUAAAAYAAEAAAAEAAYAAAAYAAEAAAAEAAcAAAAYAAEAAAAEAAgAAAAYAA0AAAAEAAkAAAAYAA0AAAAEAAoAAAAYAA0AAAAEAAsAAAAYAA0AAAAEAAwAAAAYAA0AAAAEAA0AAAAYAA0AAAAEAA4AAAAYAA0AAAAEAA8AAAAYAA0AAAAEABAAAAAYAA0AAAAEABEAAAAYAA0AAAAEABIAAAAYAA0AAAAEABMAAAAYAAEAAAAEABQAAAAYAA0AAAAEABUAAAAYAA0AAAAFAAAAAAAZAAAAAAAFAAEAAAAZAAEAAAAFAAIAAAAYAAIAAAAFAAMAAAAYAAEAAAAFAAQAAAAYAAEAAAAFAAUAAAAYAAEAAAAFAAYAAAAYAA0AAAAFAAcAAAAYAA0AAAAFAAgAAAAYAA0AAAAFAAkAAAAYAA0AAAAFAAoAAAAYAA0AAAAFAAsAAAAYAA0AAAAFAAwAAAAYAAEAAAAFAA0AAAAYAAEAAAAFAA4AAAAYAAEAAAAFAA8AAAAYAA0AAAAFABAAAAAYAA0AAAAFABEAAAAYAA0AAAAFABIAAAAYAAEAAAAFABMAAAAYAAEAAAAFABQAAAAYAAEAAAAFABUAAAAYAA0AAAAGAAAAAAAZAAAAAAAGAAEAAAAZAAEAAAAGAAIAAAAYAAIAAAAGAAMAAAAYAAEAAAAGAAQAAAAYAAEAAAAGAAUAAAAYAAEAAAAGAAYAAAAYAA0AAAAGAAcAAAAYAA0AAAAGAAgAAAAYAA0AAAAGAAkAAAAYAA0AAAAGAAoAAAAYAA0AAAAGAAsAAAAYAAEAAAAGAAwAAAAYAAEAAAAGAA0AAAAYAAEAAAAGAA4AAAAYAAEAAAAGAA8AAAAYAAEAAAAGABAAAAAYAA0AAAAGABEAAAAYAAEAAAAGABIAAAAYAAEAAAAGABMAAAAYAAEAAAAGABQAAAAYAAEAAAAGABUAAAAYAAEAAAAHAAAAAAAZAAAAAAAHAAEAAAAZAAEAAAAHAAIAAAAYAAIAAAAHAAMAAAAYAAEAAAAHAAQAAAAYAAEAAAAHAAUAAAAYAA0AAAAHAAYAAAAYAA0AAAAHAAcAAAAYAA0AAAAHAAgAAAAYAA0AAAAHAAkAAAAYAA0AAAAHAAoAAAAYAAEAAAAHAAsAAAAYAAEAAAAHAAwAAAAYAAEAAAAHAA0AAAAYAAEAAAAHAA4AAAAYAAEAAAAHAA8AAAAYAAEAAAAHABAAAAAYAAEAAAAHABEAAAAYAAEAAAAHABIAAAAYAAEAAAAHABMAAAAYAAEAAAAHABQAAAAYAAEAAAAHABUAAAAYAAEAAAAIAAAAAAAZAAAAAAAIAAEAAAAZAAEAAAAIAAIAAAAYAAIAAAAIAAMAAAAYAAEAAAAIAAQAAAAYAAEAAAAIAAUAAAAYAA0AAAAIAAYAAAAYAA0AAAAIAAcAAAAYAA0AAAAIAAgAAAAYAA0AAAAIAAkAAAAYAA0AAAAIAAoAAAAYAAEAAAAIAAsAAAAYAAEAAAAIAAwAAAAYAAEAAAAIAA0AAAAYAAEAAAAIAA4AAAAYAA0AAAAIAA8AAAAYAA0AAAAIABAAAAAYAA0AAAAIABEAAAAYAAEAAAAIABIAAAAYAAEAAAAIABMAAAAYAAEAAAAIABQAAAAYAAEAAAAIABUAAAAYAAEAAAAJAAAAAAAZAAAAAAAJAAEAAAAZAAEAAAAJAAIAAAAYAAIAAAAJAAMAAAAYAAEAAAAJAAQAAAAYAAEAAAAJAAUAAAAYAAEAAAAJAAYAAAAYAA0AAAAJAAcAAAAYAA0AAAAJAAgAAAAYAAEAAAAJAAkAAAAYAAEAAAAJAAoAAAAYAAEAAAAJAAsAAAAYAAEAAAAJAAwAAAAYAAEAAAAJAA0AAAAYAA0AAAAJAA4AAAAYAA0AAAAJAA8AAAAYAA0AAAAJABAAAAAYAA0AAAAJABEAAAAYAA0AAAAJABIAAAAYAAEAAAAJABMAAAAYAAEAAAAJABQAAAAYAAEAAAAJABUAAAAYAA0AAAAKAAAAAAAZAAAAAAAKAAEAAAAZAAEAAAAKAAIAAAAYAA0AAAAKAAMAAAAYAAEAAAAKAAQAAAAYAAEAAAAKAAUAAAAYAAEAAAAKAAYAAAAYAAEAAAAKAAcAAAAYAAEAAAAKAAgAAAAYAAEAAAAKAAkAAAAYAAEAAAAKAAoAAAAYAAEAAAAKAAsAAAAYAAEAAAAKAAwAAAAYAAEAAAAKAA0AAAAYAA0AAAAKAA4AAAAYAA0AAAAKAA8AAAAYAA0AAAAKABAAAAAYAA0AAAAKABEAAAAYAA0AAAAKABIAAAAYAA0AAAAKABMAAAAYAA0AAAAKABQAAAAYAA0AAAAKABUAAAAYAA0AAAALAAAAAAAZAAAAAAALAAEAAAAZAAEAAAALAAIAAAAYAA0AAAALAAMAAAAYAAEAAAALAAQAAAAYAAEAAAALAAUAAAAYAAEAAAALAAYAAAAYAAEAAAALAAcAAAAYAAEAAAALAAgAAAAYAAEAAAALAAkAAAAYAAEAAAALAAoAAAAYAAEAAAALAAsAAAAYAAEAAAALAAwAAAAYAA0AAAALAA0AAAAYAA0AAAALAA4AAAAYAA0AAAALAA8AAAAYAA0AAAALABAAAAAYAA0AAAALABEAAAAYAA0AAAALABIAAAAYAA0AAAALABMAAAAYAA0AAAALABQAAAAYAA0AAAALABUAAAAYAA0AAAAMAAAAAAAaAAAAAAAMAAEAAAAaAAEAAAAMAAIAAAAYAAIAAAAMAAMAAAAYAAEAAAAMAAQAAAAYAAEAAAAMAAUAAAAYAAEAAAAMAAYAAAAYAAEAAAAMAAcAAAAYAAEAAAAMAAgAAAAYAAEAAAAMAAkAAAAYAAEAAAAMAAoAAAAYAAEAAAAMAAsAAAAYAA0AAAAMAAwAAAAYAA0AAAAMAA0AAAAYAA0AAAAMAA4AAAAYAA0AAAAMAA8AAAAYAA0AAAAMABAAAAAYAA0AAAAMABEAAAAYAA0AAAAMABIAAAAYAA0AAAAMABMAAAAYAA0AAAAMABQAAAAYAA0AAAAMABUAAAAYAA0AAAANAAAAAAAfAA0AAAANAAEAAAAfAA4AAAANAAIAAAAYAAIAAAANAAMAAAAYAA0AAAANAAQAAAAYAA0AAAANAAUAAAAYAA0AAAANAAYAAAAYAAEAAAANAAcAAAAYAAEAAAANAAgAAAAYAAEAAAANAAkAAAAYAAEAAAANAAoAAAAYAA0AAAANAAsAAAAYAA0AAAANAAwAAAAYAA0AAAANAA0AAAAYAA0AAAANAA4AAAAYAA0AAAANAA8AAAAYAA0AAAANABAAAAAYAA0AAAANABEAAAAYAA0AAAANABIAAAAYAA0AAAANABMAAAAYAA0AAAANABQAAAAYAA0AAAANABUAAAAYAA0AAAAOAAAAAAAcAAAAAAAOAAEAAAAcAAEAAAAOAAIAAAAYAAIAAAAOAAMAAAAYAA0AAAAOAAQAAAAYAA0AAAAOAAUAAAAYAA0AAAAOAAYAAAAYAA0AAAAOAAcAAAAYAA0AAAAOAAgAAAAYAA0AAAAOAAkAAAAYAA0AAAAOAAoAAAAYAA0AAAAOAAsAAAAYAA0AAAAOAAwAAAAYAA0AAAAOAA0AAAAYAA0AAAAOAA4AAAAYAA0AAAAOAA8AAAAYAA0AAAAOABAAAAAYAA0AAAAOABEAAAAYAA0AAAAOABIAAAAYAA0AAAAOABMAAAAYAA0AAAAOABQAAAAYAA0AAAAOABUAAAAYAA0AAAA=")
+tile_set = ExtResource("2_dn2u3")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=334918610]
+tile_set = ExtResource("2_dn2u3")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1077642025]
+
+[node name="NPCs" type="Node2D" parent="." unique_id=491424303]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1320006000]
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1773046390]
+script = ExtResource("3_6b6is")
+tile_data = {
+"0,0": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"0,10": {
+"flags": 1
+},
+"0,11": {
+"flags": 1
+},
+"0,12": {
+"flags": 1
+},
+"0,13": {
+"flags": 1
+},
+"0,14": {
+"flags": 1
+},
+"0,15": {
+"flags": 1
+},
+"0,16": {
+"flags": 1
+},
+"0,17": {
+"flags": 1
+},
+"0,18": {
+"flags": 1
+},
+"0,2": {
+"flags": 1
+},
+"0,3": {
+"flags": 1
+},
+"0,4": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"0,6": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"0,8": {
+"flags": 1
+},
+"0,9": {
+"flags": 1
+},
+"1,0": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,10": {
+"flags": 1
+},
+"1,11": {
+"flags": 1
+},
+"1,12": {
+"flags": 1
+},
+"1,13": {
+"flags": 1
+},
+"1,14": {
+"flags": 1
+},
+"1,15": {
+"flags": 1
+},
+"1,16": {
+"flags": 1
+},
+"1,17": {
+"flags": 1
+},
+"1,18": {
+"flags": 1
+},
+"1,2": {
+"flags": 1
+},
+"1,3": {
+"flags": 1
+},
+"1,4": {
+"flags": 1
+},
+"1,9": {
+"flags": 1
+},
+"10,0": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,13": {
+"flags": 1
+},
+"10,14": {
+"flags": 1
+},
+"10,15": {
+"flags": 1
+},
+"10,16": {
+"flags": 1
+},
+"10,17": {
+"flags": 1
+},
+"10,18": {
+"flags": 1
+},
+"10,19": {
+"flags": 1
+},
+"10,2": {
+"flags": 1
+},
+"10,20": {
+"flags": 1
+},
+"10,21": {
+"flags": 1
+},
+"11,0": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,12": {
+"flags": 1
+},
+"11,13": {
+"flags": 1
+},
+"11,14": {
+"flags": 1
+},
+"11,15": {
+"flags": 1
+},
+"11,16": {
+"flags": 1
+},
+"11,17": {
+"flags": 1
+},
+"11,18": {
+"flags": 1
+},
+"11,19": {
+"flags": 1
+},
+"11,2": {
+"flags": 1
+},
+"11,20": {
+"flags": 1
+},
+"11,21": {
+"flags": 1
+},
+"12,0": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,11": {
+"flags": 1
+},
+"12,12": {
+"flags": 1
+},
+"12,13": {
+"flags": 1
+},
+"12,14": {
+"flags": 1
+},
+"12,15": {
+"flags": 1
+},
+"12,16": {
+"flags": 1
+},
+"12,17": {
+"flags": 1
+},
+"12,18": {
+"flags": 1
+},
+"12,19": {
+"flags": 1
+},
+"12,20": {
+"flags": 1
+},
+"12,21": {
+"flags": 1
+},
+"13,0": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,10": {
+"flags": 1
+},
+"13,11": {
+"flags": 1
+},
+"13,12": {
+"flags": 1
+},
+"13,13": {
+"flags": 1
+},
+"13,14": {
+"flags": 1
+},
+"13,15": {
+"flags": 1
+},
+"13,16": {
+"flags": 1
+},
+"13,17": {
+"flags": 1
+},
+"13,18": {
+"flags": 1
+},
+"13,19": {
+"flags": 1
+},
+"13,20": {
+"flags": 1
+},
+"13,21": {
+"flags": 1
+},
+"13,3": {
+"flags": 1
+},
+"13,4": {
+"flags": 1
+},
+"13,5": {
+"flags": 1
+},
+"14,0": {
+"flags": 1
+},
+"14,1": {
+"flags": 1
+},
+"14,10": {
+"flags": 1
+},
+"14,11": {
+"flags": 1
+},
+"14,12": {
+"flags": 1
+},
+"14,13": {
+"flags": 1
+},
+"14,14": {
+"flags": 1
+},
+"14,15": {
+"flags": 1
+},
+"14,16": {
+"flags": 1
+},
+"14,17": {
+"flags": 1
+},
+"14,18": {
+"flags": 1
+},
+"14,19": {
+"flags": 1
+},
+"14,20": {
+"flags": 1
+},
+"14,21": {
+"flags": 1
+},
+"14,3": {
+"flags": 1
+},
+"14,4": {
+"flags": 1
+},
+"14,5": {
+"flags": 1
+},
+"14,6": {
+"flags": 1
+},
+"14,7": {
+"flags": 1
+},
+"14,8": {
+"flags": 1
+},
+"14,9": {
+"flags": 1
+},
+"2,0": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,10": {
+"flags": 1
+},
+"2,11": {
+"flags": 1
+},
+"2,12": {
+"flags": 1
+},
+"2,13": {
+"flags": 1
+},
+"2,14": {
+"flags": 1
+},
+"2,15": {
+"flags": 1
+},
+"2,16": {
+"flags": 1
+},
+"2,17": {
+"flags": 1
+},
+"2,18": {
+"flags": 1
+},
+"2,2": {
+"flags": 1
+},
+"2,20": {
+"flags": 1
+},
+"2,21": {
+"flags": 1
+},
+"2,3": {
+"flags": 1
+},
+"2,9": {
+"flags": 1
+},
+"3,0": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,10": {
+"flags": 1
+},
+"3,11": {
+"flags": 1
+},
+"3,12": {
+"flags": 1
+},
+"3,13": {
+"flags": 1
+},
+"3,14": {
+"flags": 1
+},
+"3,15": {
+"flags": 1
+},
+"3,16": {
+"flags": 1
+},
+"3,17": {
+"flags": 1
+},
+"3,18": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"3,20": {
+"flags": 1
+},
+"3,21": {
+"flags": 1
+},
+"3,9": {
+"flags": 1
+},
+"4,0": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,10": {
+"flags": 1
+},
+"4,11": {
+"flags": 1
+},
+"4,12": {
+"flags": 1
+},
+"4,13": {
+"flags": 1
+},
+"4,14": {
+"flags": 1
+},
+"4,15": {
+"flags": 1
+},
+"4,16": {
+"flags": 1
+},
+"4,17": {
+"flags": 1
+},
+"4,18": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"4,20": {
+"flags": 1
+},
+"4,21": {
+"flags": 1
+},
+"4,8": {
+"flags": 1
+},
+"4,9": {
+"flags": 1
+},
+"5,0": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,10": {
+"flags": 1
+},
+"5,11": {
+"flags": 1
+},
+"5,15": {
+"flags": 1
+},
+"5,16": {
+"flags": 1
+},
+"5,17": {
+"flags": 1
+},
+"5,21": {
+"flags": 1
+},
+"5,6": {
+"flags": 1
+},
+"5,7": {
+"flags": 1
+},
+"5,8": {
+"flags": 1
+},
+"5,9": {
+"flags": 1
+},
+"6,0": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,10": {
+"flags": 1
+},
+"6,16": {
+"flags": 1
+},
+"6,6": {
+"flags": 1
+},
+"6,7": {
+"flags": 1
+},
+"6,8": {
+"flags": 1
+},
+"6,9": {
+"flags": 1
+},
+"7,0": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"7,6": {
+"flags": 1
+},
+"7,7": {
+"flags": 1
+},
+"7,8": {
+"flags": 1
+},
+"7,9": {
+"flags": 1
+},
+"8,0": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,14": {
+"flags": 1
+},
+"8,15": {
+"flags": 1
+},
+"8,16": {
+"flags": 1
+},
+"8,5": {
+"flags": 1
+},
+"8,6": {
+"flags": 1
+},
+"8,7": {
+"flags": 1
+},
+"8,8": {
+"flags": 1
+},
+"8,9": {
+"flags": 1
+},
+"9,0": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,13": {
+"flags": 1
+},
+"9,14": {
+"flags": 1
+},
+"9,15": {
+"flags": 1
+},
+"9,16": {
+"flags": 1
+},
+"9,17": {
+"flags": 1
+},
+"9,21": {
+"flags": 1
+},
+"9,6": {
+"flags": 1
+},
+"9,7": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="WarpCompletado" type="Sprite2D" parent="." unique_id=21363971]
+position = Vector2(216, 22)
+script = ExtResource("4_hgihp")
+ruta_mapa_destino = "ruta_110_casa_treta"
+posicion_destino = Vector2(29, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="WarpRetirarse1" type="Sprite2D" parent="." unique_id=1825224057]
+position = Vector2(8, 342)
+script = ExtResource("4_hgihp")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_110_casa_treta"
+posicion_destino = Vector2(5, 2)
+direccion = Vector2(0, 1)
+
+[node name="WarpRetirarse2" type="Sprite2D" parent="." unique_id=2121485367]
+position = Vector2(24, 342)
+script = ExtResource("4_hgihp")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_110_casa_treta"
+posicion_destino = Vector2(5, 2)
+direccion = Vector2(0, 1)
+
+[node name="Pergamino" type="Sprite2D" parent="Carteles" unique_id=1330005001 groups=["Cartel"]]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 bg_event (2,9) sign BG_EVENT_PLAYER_FACING_ANY, EventScript_Scroll. Lo resuelve Eventos/EventoPrueba."
+position = Vector2(40, 152)
+script = ExtResource("pt_cartel")
+capa_datos = 0
+id_texto = "CASA_TRETA_PERGAMINO_LEIDO"
+coord_tile = Vector2i(2, 9)
+
+[node name="Puerta" type="Sprite2D" parent="Carteles" unique_id=1330005002 groups=["Cartel"]]
+editor_description = "pokeruby Route110_TrickHousePuzzle_EventScript_Door (metatile 0x277, MB_TRICK_HOUSE_PUZZLE_DOOR): solo se lee mirando al norte desde (13,2)."
+position = Vector2(216, 24)
+script = ExtResource("pt_cartel")
+capa_datos = 0
+id_texto = "CASA_TRETA_PUERTA_CERRADA"
+coord_tile = Vector2i(13, 1)
+direccion = 1
+
+[node name="Mecaneco1" parent="NPCs" unique_id=1330005003 instance=ExtResource("pt_npc_base")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 objeto 1 (9,19) MAN_1 FACE_LEFT: MECANECO 1. Lo resuelve Eventos/EventoPrueba."
+position = Vector2(152, 318)
+script = ExtResource("pt_npc_evento")
+id_texto = "CASA_TRETA_P5_MECA1_CORRECTO"
+tipo_movimiento = 9
+selec_frames = ExtResource("pt_npc_048")
+coord = Vector2i(9, 19)
+
+[node name="Mecaneco2" parent="NPCs" unique_id=1330005004 instance=ExtResource("pt_npc_base")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 objeto 2 (5,14) MAN_1 FACE_RIGHT: MECANECO 2. Lo resuelve Eventos/EventoPrueba."
+position = Vector2(88, 238)
+script = ExtResource("pt_npc_evento")
+id_texto = "CASA_TRETA_P5_MECA1_CORRECTO"
+tipo_movimiento = 10
+selec_frames = ExtResource("pt_npc_048")
+coord = Vector2i(5, 14)
+
+[node name="Mecaneco3" parent="NPCs" unique_id=1330005005 instance=ExtResource("pt_npc_base")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 objeto 3 (12,10) MAN_1 FACE_LEFT: MECANECO 3. Lo resuelve Eventos/EventoPrueba."
+position = Vector2(200, 174)
+script = ExtResource("pt_npc_evento")
+id_texto = "CASA_TRETA_P5_MECA1_CORRECTO"
+tipo_movimiento = 9
+selec_frames = ExtResource("pt_npc_048")
+coord = Vector2i(12, 10)
+
+[node name="Mecaneco4" parent="NPCs" unique_id=1330005006 instance=ExtResource("pt_npc_base")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 objeto 4 (12,5) MAN_1 FACE_LEFT: MECANECO 4. Lo resuelve Eventos/EventoPrueba."
+position = Vector2(200, 94)
+script = ExtResource("pt_npc_evento")
+id_texto = "CASA_TRETA_P5_MECA1_CORRECTO"
+tipo_movimiento = 9
+selec_frames = ExtResource("pt_npc_048")
+coord = Vector2i(12, 5)
+
+[node name="Mecaneco5" parent="NPCs" unique_id=1330005007 instance=ExtResource("pt_npc_base")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 objeto 5 (1,6) MAN_1 FACE_RIGHT: MECANECO 5. Lo resuelve Eventos/EventoPrueba."
+position = Vector2(24, 110)
+script = ExtResource("pt_npc_evento")
+id_texto = "CASA_TRETA_P5_MECA1_CORRECTO"
+tipo_movimiento = 10
+selec_frames = ExtResource("pt_npc_048")
+coord = Vector2i(1, 6)
+
+[node name="EventoPrueba" type="Node2D" parent="Eventos" unique_id=1330005008]
+editor_description = "pokeruby Route110_TrickHousePuzzle5: pergamino, puerta (13,1), MECANECOS y acertijos. Contrato en documentacion/20261014-casa-treta-fase1.md."
+script = ExtResource("pt_evento")
+numero_prueba = 5
+pergamino = NodePath("../../Carteles/Pergamino")
+puerta = NodePath("../../Carteles/Puerta")
+capa_suelo = NodePath("../../Suelo")
+datos_tiles = NodePath("../../TPTileDataMap")
+mecanecos = Array[NodePath]([NodePath("../../NPCs/Mecaneco1"), NodePath("../../NPCs/Mecaneco2"), NodePath("../../NPCs/Mecaneco3"), NodePath("../../NPCs/Mecaneco4"), NodePath("../../NPCs/Mecaneco5")])
+
+[node name="Meca1Pasos0" parent="Eventos/EventoPrueba" unique_id=1330005009 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 coord_event (8,19) Mechadoll1Trigger0, VAR_TEMP_1 == 0 (el MECANECO da 0 pasos)"
+id_evento = &"meca1_t0"
+zonas_tiles = Array[Rect2i]([Rect2i(8, 19, 1, 1)])
+
+[node name="Meca1Pasos1" parent="Eventos/EventoPrueba" unique_id=1330005010 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 coord_event (7,19) Mechadoll1Trigger1, VAR_TEMP_1 == 0 (el MECANECO da 1 pasos)"
+id_evento = &"meca1_t1"
+zonas_tiles = Array[Rect2i]([Rect2i(7, 19, 1, 1)])
+
+[node name="Meca1Pasos2" parent="Eventos/EventoPrueba" unique_id=1330005011 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 coord_event (6,19) Mechadoll1Trigger2, VAR_TEMP_1 == 0 (el MECANECO da 2 pasos)"
+id_evento = &"meca1_t2"
+zonas_tiles = Array[Rect2i]([Rect2i(6, 19, 1, 1)])
+
+[node name="Meca1Pasos3" parent="Eventos/EventoPrueba" unique_id=1330005012 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 coord_event (5,19) Mechadoll1Trigger3, VAR_TEMP_1 == 0 (el MECANECO da 3 pasos)"
+id_evento = &"meca1_t3"
+zonas_tiles = Array[Rect2i]([Rect2i(5, 19, 1, 1)])
+
+[node name="Meca2Pasos0" parent="Eventos/EventoPrueba" unique_id=1330005013 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 coord_event (6,14) Mechadoll2Trigger0, VAR_TEMP_2 == 0 (el MECANECO da 0 pasos)"
+id_evento = &"meca2_t0"
+zonas_tiles = Array[Rect2i]([Rect2i(6, 14, 1, 1)])
+
+[node name="Meca2Pasos1" parent="Eventos/EventoPrueba" unique_id=1330005014 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 coord_event (7,14) Mechadoll2Trigger1, VAR_TEMP_2 == 0 (el MECANECO da 1 pasos)"
+id_evento = &"meca2_t1"
+zonas_tiles = Array[Rect2i]([Rect2i(7, 14, 1, 1)])
+
+[node name="Meca3Pasos0" parent="Eventos/EventoPrueba" unique_id=1330005015 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 coord_event (11,10) Mechadoll3Trigger0, VAR_TEMP_3 == 0 (el MECANECO da 0 pasos)"
+id_evento = &"meca3_t0"
+zonas_tiles = Array[Rect2i]([Rect2i(11, 10, 1, 1)])
+
+[node name="Meca3Pasos1" parent="Eventos/EventoPrueba" unique_id=1330005016 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 coord_event (10,10) Mechadoll3Trigger1, VAR_TEMP_3 == 0 (el MECANECO da 1 pasos)"
+id_evento = &"meca3_t1"
+zonas_tiles = Array[Rect2i]([Rect2i(10, 10, 1, 1)])
+
+[node name="Meca3Pasos2" parent="Eventos/EventoPrueba" unique_id=1330005017 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 coord_event (9,10) Mechadoll3Trigger2, VAR_TEMP_3 == 0 (el MECANECO da 2 pasos)"
+id_evento = &"meca3_t2"
+zonas_tiles = Array[Rect2i]([Rect2i(9, 10, 1, 1)])
+
+[node name="Meca4Pasos0" parent="Eventos/EventoPrueba" unique_id=1330005018 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 coord_event (11,5) Mechadoll4Trigger0, VAR_TEMP_4 == 0 (el MECANECO da 0 pasos)"
+id_evento = &"meca4_t0"
+zonas_tiles = Array[Rect2i]([Rect2i(11, 5, 1, 1)])
+
+[node name="Meca4Pasos1" parent="Eventos/EventoPrueba" unique_id=1330005019 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 coord_event (10,5) Mechadoll4Trigger1, VAR_TEMP_4 == 0 (el MECANECO da 1 pasos)"
+id_evento = &"meca4_t1"
+zonas_tiles = Array[Rect2i]([Rect2i(10, 5, 1, 1)])
+
+[node name="Meca5Pasos0" parent="Eventos/EventoPrueba" unique_id=1330005020 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 coord_event (2,6) Mechadoll5Trigger0, VAR_TEMP_5 == 0 (el MECANECO da 0 pasos)"
+id_evento = &"meca5_t0"
+zonas_tiles = Array[Rect2i]([Rect2i(2, 6, 1, 1)])
+
+[node name="Meca5Pasos1" parent="Eventos/EventoPrueba" unique_id=1330005021 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 coord_event (3,6) Mechadoll5Trigger1, VAR_TEMP_5 == 0 (el MECANECO da 1 pasos)"
+id_evento = &"meca5_t1"
+zonas_tiles = Array[Rect2i]([Rect2i(3, 6, 1, 1)])
+
+[node name="Meca5Pasos2" parent="Eventos/EventoPrueba" unique_id=1330005022 instance=ExtResource("pt_disparador")]
+editor_description = "pokeruby Route110_TrickHousePuzzle5 coord_event (4,6) Mechadoll5Trigger2, VAR_TEMP_5 == 0 (el MECANECO da 2 pasos)"
+id_evento = &"meca5_t2"
+zonas_tiles = Array[Rect2i]([Rect2i(4, 6, 1, 1)])

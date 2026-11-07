@@ -1,0 +1,1188 @@
+{
+	"version": 1,
+	"fuentes_sha256": {
+		"data/layouts/layouts.json": "8dc80f71ba8b99be430040ee2454607951364a0ab45f410361a538b1219e8cd8",
+		"data/tilesets/primary/building/metatile_attributes.bin": "7a153a1748dc4bd03e621acad6c6b7e90c2d3acfc467a928ad23d21f34e73128",
+		"data/tilesets/secondary/brendans_mays_house/metatile_attributes.bin": "681fbf2833b194308ee88cb3a115e30f6e211df42ced7ce05e6d511a050c3667",
+		"data/layouts/LittlerootTown_BrendansHouse_2F/map.bin": "72eae76dbfcee002900607f22bf24e81f15f995eca6b3069482cd4c4031d21e9",
+		"data/layouts/LittlerootTown_MaysHouse_2F/map.bin": "fa152564cbd0cac085b4d4f7242d7a57304be01d90937b4a820d9979821b9461"
+	},
+	"habitaciones": [
+		{
+			"casa": 1,
+			"mapa_original": "LittlerootTown_BrendansHouse_2F",
+			"escena": "res://escenas/mapas/Villa Raíz/nodo_casa_1_piso_2.tscn",
+			"ancho": 9,
+			"alto": 8,
+			"celdas": [
+				{
+					"metatile_id": 594,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 596,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 592,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 596,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 598,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 551,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 523,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 524,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 525,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 602,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 603,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 597,
+					"comportamiento": 133,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 613,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 2,
+					"comportamiento": 134,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 559,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 531,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 532,
+					"comportamiento": 96,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 533,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 610,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 611,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 632,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 614,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 605,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 632,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 518,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 517,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 519,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 635,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 636,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 637,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 664,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 665,
+					"comportamiento": 181,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 665,
+					"comportamiento": 181,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 666,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 643,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 644,
+					"comportamiento": 192,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 645,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 672,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 673,
+					"comportamiento": 195,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 673,
+					"comportamiento": 195,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 674,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 651,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 4
+				},
+				{
+					"metatile_id": 652,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 653,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 4
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 672,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 673,
+					"comportamiento": 195,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 673,
+					"comportamiento": 195,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 674,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 516,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 680,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 681,
+					"comportamiento": 181,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 681,
+					"comportamiento": 181,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 682,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 516,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				}
+			],
+			"atlas_comportamientos": {
+				"0:0:0:0": 0,
+				"0:0:1:0": 0,
+				"0:0:2:0": 0,
+				"0:0:3:0": 0,
+				"0:0:4:0": 0,
+				"0:0:5:0": 0,
+				"0:0:6:0": 0,
+				"0:0:7:0": 0,
+				"0:1:0:0": 0,
+				"0:1:1:0": 0,
+				"0:1:2:0": 0,
+				"0:1:3:0": 0,
+				"0:1:4:0": 192,
+				"0:1:5:0": 0,
+				"0:1:6:0": 0,
+				"0:1:7:0": 0,
+				"0:2:0:0": 0,
+				"0:2:1:0": 133,
+				"0:2:2:0": 0,
+				"0:2:3:0": 0,
+				"0:2:4:0": 0,
+				"0:2:5:0": 0,
+				"0:2:6:0": 0,
+				"0:2:7:0": 0,
+				"0:3:0:0": 0,
+				"0:3:1:0": 0,
+				"0:3:2:0": 0,
+				"0:3:3:0": 0,
+				"0:3:4:0": 0,
+				"0:3:5:0": 0,
+				"0:3:6:0": 0,
+				"0:3:7:0": 0,
+				"0:4:0:0": 0,
+				"0:4:1:0": 134,
+				"0:4:2:0": 0,
+				"0:4:5:0": 181,
+				"0:4:6:0": 181,
+				"0:4:7:0": 0,
+				"0:5:0:0": 0,
+				"0:5:1:0": 0,
+				"0:5:2:0": 0,
+				"0:5:5:0": 195,
+				"0:5:6:0": 181,
+				"0:5:7:0": 0,
+				"0:6:0:0": 0,
+				"0:6:1:0": 0,
+				"0:6:2:0": 0,
+				"0:6:3:0": 181,
+				"0:6:4:0": 195,
+				"0:6:5:0": 195,
+				"0:6:6:0": 181,
+				"0:6:7:0": 0,
+				"0:7:0:0": 0,
+				"0:7:1:0": 96,
+				"0:7:2:0": 0,
+				"0:7:3:0": 181,
+				"0:7:4:0": 181,
+				"0:7:5:0": 181,
+				"0:7:6:0": 181,
+				"0:7:7:0": 0,
+				"0:8:0:0": 0,
+				"0:8:1:0": 0,
+				"0:8:2:0": 0,
+				"0:8:3:0": 0,
+				"0:8:4:0": 0,
+				"0:8:5:0": 0,
+				"0:8:6:0": 0,
+				"0:8:7:0": 0,
+				"0:4:3:0": 181,
+				"0:4:4:0": 181,
+				"0:5:3:0": 181,
+				"0:5:4:0": 195
+			},
+			"sha256_enlace_capa_suelo": "23cee578aa5a6ff526d0bbcf2bd87e1987b1b22ba1a38c3575a2f71f261d4a09"
+		},
+		{
+			"casa": 2,
+			"mapa_original": "LittlerootTown_MaysHouse_2F",
+			"escena": "res://escenas/mapas/Villa Raíz/nodo_casa_2_piso_2.tscn",
+			"ancho": 9,
+			"alto": 8,
+			"celdas": [
+				{
+					"metatile_id": 520,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 524,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 522,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 551,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 598,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 596,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 592,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 596,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 593,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 528,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 532,
+					"comportamiento": 96,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 530,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 559,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 2,
+					"comportamiento": 134,
+					"tipo_capa_original": 0,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 613,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 597,
+					"comportamiento": 133,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 600,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 601,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 581,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 517,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 519,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 517,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 605,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 615,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 517,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 608,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 609,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 516,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 664,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 665,
+					"comportamiento": 181,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 665,
+					"comportamiento": 181,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 666,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 640,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 641,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 642,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 516,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 672,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 673,
+					"comportamiento": 195,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 673,
+					"comportamiento": 195,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 674,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 648,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 649,
+					"comportamiento": 192,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 650,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 516,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 672,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 673,
+					"comportamiento": 195,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 673,
+					"comportamiento": 195,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 674,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 656,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 4
+				},
+				{
+					"metatile_id": 657,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 1,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 658,
+					"comportamiento": 0,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 4
+				},
+				{
+					"metatile_id": 516,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 680,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 681,
+					"comportamiento": 181,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 681,
+					"comportamiento": 181,
+					"tipo_capa_original": 1,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 682,
+					"comportamiento": 181,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 0
+				},
+				{
+					"metatile_id": 516,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				},
+				{
+					"metatile_id": 513,
+					"comportamiento": 0,
+					"tipo_capa_original": 0,
+					"colision_original": 0,
+					"elevacion_original": 3
+				}
+			],
+			"atlas_comportamientos": {
+				"0:13:0:0": 0,
+				"0:13:1:0": 0,
+				"0:13:2:0": 0,
+				"0:13:3:0": 0,
+				"0:13:4:0": 0,
+				"0:13:5:0": 0,
+				"0:13:6:0": 0,
+				"0:13:7:0": 0,
+				"0:14:0:0": 0,
+				"0:14:1:0": 96,
+				"0:14:2:0": 0,
+				"0:14:3:0": 181,
+				"0:14:4:0": 181,
+				"0:14:5:0": 181,
+				"0:14:6:0": 181,
+				"0:14:7:0": 0,
+				"0:15:0:0": 0,
+				"0:15:1:0": 0,
+				"0:15:2:0": 0,
+				"0:15:3:0": 181,
+				"0:15:4:0": 195,
+				"0:15:5:0": 195,
+				"0:15:6:0": 181,
+				"0:15:7:0": 0,
+				"0:16:0:0": 0,
+				"0:16:1:0": 0,
+				"0:16:2:0": 0,
+				"0:16:3:0": 181,
+				"0:16:4:0": 195,
+				"0:16:5:0": 195,
+				"0:16:6:0": 181,
+				"0:16:7:0": 0,
+				"0:17:0:0": 0,
+				"0:17:1:0": 134,
+				"0:17:2:0": 0,
+				"0:17:3:0": 181,
+				"0:17:4:0": 181,
+				"0:17:5:0": 181,
+				"0:17:6:0": 181,
+				"0:17:7:0": 0,
+				"0:18:0:0": 0,
+				"0:18:1:0": 0,
+				"0:18:2:0": 0,
+				"0:18:3:0": 0,
+				"0:18:4:0": 0,
+				"0:18:5:0": 0,
+				"0:18:6:0": 0,
+				"0:18:7:0": 0,
+				"0:19:0:0": 0,
+				"0:19:1:0": 133,
+				"0:19:2:0": 0,
+				"0:19:3:0": 0,
+				"0:19:4:0": 0,
+				"0:19:5:0": 0,
+				"0:19:6:0": 0,
+				"0:19:7:0": 0,
+				"0:20:0:0": 0,
+				"0:20:1:0": 0,
+				"0:20:2:0": 0,
+				"0:20:3:0": 0,
+				"0:20:4:0": 192,
+				"0:20:5:0": 0,
+				"0:20:6:0": 0,
+				"0:20:7:0": 0,
+				"0:21:0:0": 0,
+				"0:21:1:0": 0,
+				"0:21:2:0": 0,
+				"0:21:3:0": 0,
+				"0:21:4:0": 0,
+				"0:21:5:0": 0,
+				"0:21:6:0": 0,
+				"0:21:7:0": 0
+			},
+			"sha256_enlace_capa_suelo": "482fe35d9d6c34f145f28ad49479facc30dd213a9e35a1bf9fd3079fff8e3489"
+		}
+	]
+}

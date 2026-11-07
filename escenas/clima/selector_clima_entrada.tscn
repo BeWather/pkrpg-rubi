@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/clima/selector_clima_entrada.gd" id="1"]
+
+[node name="SelectorClimaEntrada" type="Node"]
+script = ExtResource("1")

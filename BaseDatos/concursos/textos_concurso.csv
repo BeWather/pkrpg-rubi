@@ -1,0 +1,156 @@
+id,es,en
+CONCURSO_RECEPCION_SALUDO,¡Hola!\p¡Nos encargamos de organizar los\nCONCURSOS POKéMON de nivel {nivel}!,"Hello, there!\pWe're accepting registrations for\n{nivel} Rank POKéMON CONTESTS."
+CONCURSO_RECEPCION_QUIERES_INSCRIBIR,"Si quieres, podemos inscribir a tu\nPOKéMON en un CONCURSO.",Would you like to enter your POKéMON\nin our CONTESTS?
+CONCURSO_RECEPCION_QUE_SABER,¿Qué te gustaría saber?,Which topic would you like?
+CONCURSO_RECEPCION_INFO_QUE_ES,En un CONCURSO POKéMON participan\ncuatro ENTRENADORES y cada uno de\w\nellos presenta un POKéMON.\pUn CONCURSO consta de dos partes.\pLa primera votación es un sondeo de\npopularidad en el que participa\w\nel público.\pEn la segunda votación los POKéMON\nexhiben sus distintos movimientos.\pPlanea con cuidado estas exhibiciones\nde forma que atraigas lo más posible la\w\natención del JUEZ y entusiasmes al\w\npúblico. Debes sobresalir.\pLas dos puntuaciones obtenidas se\ncombinan al final.\pEl POKéMON que reúna más puntos\nserá el ganador.,"A POKéMON CONTEST involves four\nTRAINERS entering one POKéMON each\w\nin competitive judging.\pA CONTEST has two stages of judging,\nprimary and secondary.\pPrimary judging is a popularity poll\ninvolving the audience.\pSecondary judging features appeals\nby the POKéMON using their moves.\pPlan appeals carefully to earn the\nmost attention of the JUDGE and\w\nexcite the audience.\w\nDo your best to stand out.\pThe primary and secondary scores are\nadded at the end.\pThe POKéMON garnering the highest\nscore is declared the winner."
+CONCURSO_RECEPCION_INFO_TIPOS,"Hay cinco tipos de CONCURSO.\pLas categorías son CARISMA, BELLEZA,\nDULZURA, INGENIO y DUREZA.\pElige el CONCURSO que convenga más al\nPOKéMON con el que vas a participar.","There are five kinds of CONTESTS.\pCOOL, BEAUTY, CUTE, SMART, and\nTOUGH are the five categories.\pChoose the CONTEST that is right for\nthe POKéMON you plan to enter."
+CONCURSO_RECEPCION_INFO_NIVELES,"Hay cuatro niveles en los CONCURSOS\nPOKéMON.\pSon los niveles NORMAL, ALTO,\nAVANZADO y EXPERTO.\pEn el nivel NORMAL puede participar\ncualquier POKéMON.\pTodo POKéMON que haya ganado en un\nCONCURSO del nivel NORMAL puede\w\nparticipar en el nivel ALTO de la misma\w\ncategoría.\pDel mismo modo, si gana en el nivel ALTO,\npuede participar en el nivel AVANZADO y,\w\nsi vuelve a ganar, llegar hasta el nivel\w\nEXPERTO de la misma categoría.\pUn POKéMON que haya ganado en el nivel\nEXPERTO puede competir en el mismo\w\ntantas veces como desee su\w\nENTRENADOR.","There are four ranks of POKéMON\nCONTESTS.\pNORMAL, SUPER, HYPER and MASTER\nare the four ranks.\pIn the NORMAL Rank, any POKéMON may\nenter.\pAny POKéMON that won a NORMAL Rank\nCONTEST may move up the SUPER Rank in\w\nthe same category.\pIn the same way, a SUPER Rank winner\ncan move up to the HYPER Rank, and a\w\nHYPER Rank winner can advance to the\w\nMASTER Rank in the same category.\pA POKéMON that won in the MASTER Rank\nmay compete in the MASTER Rank as\w\noften as its TRAINER wants."
+CONCURSO_RECEPCION_ELEGIR_POKEMON,¿Con qué POKéMON quieres participar?,Which POKéMON would you like to enter?
+CONCURSO_RECEPCION_PASE_EN_VERDEGAL,Puede participar todo aquel que tenga\nun PASE de CONCURSO.\pConsíguelo en la SALA de CONCURSOS\ndel NIVEL NORMAL de PUEBLO\w\nVERDEGAL totalmente gratis.\pRecoge tu PASE de CONCURSO y\nvuelve cuando quieras.,Anyone with a CONTEST PASS may enter.\pYou may obtain a CONTEST PASS at the\nNORMAL RANK CONTEST HALL in\w\nVERDANTURF TOWN free of charge.\pPlease obtain a CONTEST PASS and\ncome again.
+CONCURSO_RECEPCION_OFRECE_PASE,"Puede participar todo aquel que tenga\nun PASE de CONCURSO.\pSi no tienes uno, te lo puedo expedir\nahora mismo.\p¿Quieres un PASE de CONCURSO?","Anyone with a CONTEST PASS may enter.\pIf you don't have one, I can issue one\nfor you right now.\pWould you like me to issue you a\nCONTEST PASS?"
+CONCURSO_RECEPCION_AQUI_LO_TIENES,¡Aquí lo tienes!,Here you go!
+CONCURSO_RECEPCION_YA_TIENE_PASE,"¿Eh?\pPero si ya te hemos expedido un\nPASE de CONCURSO, {PN}.\pNo te olvides de traerlo cuando vuelvas.","Oh?\pWe've already issued you a CONTEST\nPASS, {PN}.\pPlease come back with your CONTEST\nPASS."
+CONCURSO_RECEPCION_VUELVE,Vuelve siempre que quieras participar\nen algún CONCURSO.,Please visit whenever you would like\nto enter a CONTEST.
+CONCURSO_RECEPCION_QUE_CONCURSO,¿En qué CONCURSO quieres participar?,Which CONTEST would you like to enter?
+CONCURSO_RECEPCION_NO_CUALIFICADO,"Lo siento, pero tu POKéMON todavía\nno está cualificado para competir\w\nen este nivel...","I'm terribly sorry, but your POKéMON\nis not qualified to compete at this\w\nRank yet..."
+CONCURSO_RECEPCION_HUEVO,"Lo siento, pero un HUEVO no puede\nparticipar en un CONCURSO POKéMON.","I'm sorry, but an EGG cannot take part\nin a POKéMON CONTEST."
+CONCURSO_RECEPCION_DEBILITADO,Parece que tu POKéMON no está en\ncondiciones de competir...,Your POKéMON appears to be in no\ncondition to take part in a CONTEST...
+CONCURSO_RECEPCION_YA_GANO,"Anda, esa CINTA...\pTu POKéMON ya ha ganado este\nCONCURSO, ¿verdad?\p¿Quieres participar igualmente?","Oh, but that RIBBON...\pYour POKéMON has won this CONTEST\nbefore, hasn't it?\pWould you like to enter it in this\nCONTEST anyway?"
+CONCURSO_RECEPCION_CONFIRMAR,¿Éste es el POKéMON que va a competir?,Is that your CONTEST POKéMON?
+CONCURSO_RECEPCION_INSCRITO,"Muy bien, hemos inscrito a tu POKéMON\nen este CONCURSO.\pTu POKéMON tiene la entrada n.º 4.\nEl CONCURSO empezará enseguida.","Okay, your POKéMON will be entered\nin this CONTEST.\pYour POKéMON is Entry No. 4.\nThe CONTEST will begin shortly."
+CONCURSO_RECEPCION_PASA,Pasa por aquí.\n¡Buena suerte!,Please come in through here.\nGood luck!
+CONCURSO_RECEPCION_PREMIO_GUARDADO,"¡Felicidades! ¡Tu POKéMON es el\nganador del CONCURSO!\pTenemos tu premio aquí.\nSígueme, por favor...","Congratulations! Your POKéMON is the\nCONTEST winner!\pWe have your prize right here.\nPlease, right this way!"
+CONCURSO_RECEPCION_PREMIO_LUEGO,Vuelve a recoger tu premio\nmás adelante.,Please come back for your prize\nlater on.
+CONCURSO_SALA_PRESENTACION,PRESENTADORA: ¡Hola! ¡Estamos a punto\nde empezar un CONCURSO POKéMON de\w\n{categoria} del nivel {nivel}!\pLos ENTRENADORES y POKéMON\nparticipantes son los siguientes...,MC: Hello! We're just getting started\nwith a {nivel} Rank POKéMON\w\n{categoria} CONTEST!\pThe participating TRAINERS and their\nPOKéMON are as follows:
+CONCURSO_SALA_ENTRADA,"PRESENTADORA: ¡Entrada n.º {numero}!\n¡{mon}, de {entrenador}!",MC: Entry No. {numero}!\n{entrenador}'s {mon}!
+CONCURSO_SALA_PRIMERA_VOTACION,PRESENTADORA: Acabamos de conocer a\nlos cuatro POKéMON participantes.\p¡Es hora de realizar la primera votación!\pEl público votará a su POKéMON\nfavorito entre los participantes.\p¡Que empiece la votación!,"MC: We've just seen the four POKéMON\ncontestants.\pNow it's time for primary judging!\pThe audience will vote on their\nfavorite POKéMON contestants.\pWithout any further ado, let the\nvoting begin!"
+CONCURSO_SALA_VOTANDO,Se está realizando la votación...,Voting under way...
+CONCURSO_SALA_SEGUNDA_VOTACION,"¡La votación ha concluido!\pMientras se recuentan los votos,\npasemos a la segunda votación.\pSe trata del muy esperado momento\nde las exhibiciones.\pEsperemos que los participantes nos\nimpresionen exhibiendo sus mejores\w\ny más sorprendentes movimientos.\p¡Es hora de mostrar entusiasmo!\n¡Adelante con las exhibiciones!","Voting is now complete!\pWhile the votes are being tallied,\nlet's move on to secondary judging!\pThe second stage of judging is the\nmuch anticipated appeal time!\pMay the contestants amaze us with\nsuperb appeals of dazzling moves!\pLet's see a little enthusiasm!\nLet's appeal!"
+CONCURSO_SALA_FIN_VOTACION,PRESENTADORA: ¡Ha concluido\nla votación!,MC: That's it for judging!
+CONCURSO_SALA_GRACIAS,¡Muchas gracias por ofrecernos esta\nmagnífica exhibición!\p¡La votación ha finalizado!\n¡Os agradecemos el esfuerzo realizado!,Thank you all for a most wonderful\ndisplay of quality appeals!\pThis concludes all judging!\nThank you for your fine efforts!
+CONCURSO_SALA_PROCLAMAR,Sólo queda proclamar al ganador de\neste emocionante evento.\pEl JUEZ está a punto de anunciar\nal vencedor...,"Now, all that remains is the pulse-\npounding proclamation of the winner.\pThe JUDGE looks ready to make the\nannouncement!"
+CONCURSO_SALA_JUEZ_GANADOR,JUEZ: El ganador es...,JUDGE: I will now declare the winner!
+CONCURSO_SALA_FELICIDADES_GANADOR,"PRESENTADORA: ¡La entrada n.º {numero}!\p{mon} y {entrenador},\n¡muchas felicidades!","MC: Entry No. {numero}!\p{mon} and {entrenador},\ncongratulations!"
+CONCURSO_SALA_CINTA,¡Te entregamos esta CINTA como\npremio a tu gran actuación!,We confer on you this RIBBON as your\nprize!
+CONCURSO_SALA_RECIBIO_CINTA,{PN} recibió una CINTA.,{PN} received a RIBBON.
+CONCURSO_SALA_PUSO_CINTA,{PN} le puso la CINTA a\n{mon}.,{PN} put the RIBBON on\n{mon}.
+CONCURSO_SALA_PREMIO,PRESENTADORA: ¡Aquí está!\nTe rogamos que aceptes el premio.,MC: Here you are!\nPlease accept your prize!
+CONCURSO_SALA_FELICIDADES,PRESENTADORA: ¡Felicidades!\nEsperamos que vuelvas a concursar.,MC: Congratulations!\nPlease do compete again!
+CONCURSO_SALA_PREMIO_EN_RECEPCION,Puedes recoger tu premio en el\nmostrador de recepción más adelante.\w\nEsperamos que vuelvas a concursar.,Please pick up your prize at the\nreception counter later.\pPlease do compete again!
+CONCURSO_MENU_INSCRIBIR,ENTRAR,ENTER
+CONCURSO_MENU_INFORMACION,INFO.,INFO
+CONCURSO_MENU_SALIR,SALIR,CANCEL
+CONCURSO_MENU_QUE_ES,¿Qué es CONCURSO?,WHAT'S A CONTEST?
+CONCURSO_MENU_TIPOS,Tipos de CONCURSO,TYPES OF CONTESTS
+CONCURSO_MENU_NIVELES,Niveles,RANKS
+CONCURSO_MENU_CATEGORIA_0,CONC. CARISMA,COOL
+CONCURSO_MENU_CATEGORIA_1,CONC. BELLEZA,BEAUTY
+CONCURSO_MENU_CATEGORIA_2,CONC. DULZURA,CUTE
+CONCURSO_MENU_CATEGORIA_3,CONC. INGENIO,SMART
+CONCURSO_MENU_CATEGORIA_4,CONC. DUREZA,TOUGH
+CONCURSO_NIVEL_0,NORMAL,NORMAL
+CONCURSO_NIVEL_1,ALTO,SUPER
+CONCURSO_NIVEL_2,AVANZADO,HYPER
+CONCURSO_NIVEL_3,EXPERTO,MASTER
+CONCURSO_CATEGORIA_0,CARISMA,COOL
+CONCURSO_CATEGORIA_1,BELLEZA,BEAUTY
+CONCURSO_CATEGORIA_2,DULZURA,CUTE
+CONCURSO_CATEGORIA_3,INGENIO,SMART
+CONCURSO_CATEGORIA_4,DUREZA,TOUGH
+CONCURSO_EXHIBICION_N,¡Exhibición n.º {n}!\n¿Qué movimiento vas a usar?,Appeal no. {n}!\nWhich move will be played?
+CONCURSO_EXHIBICION_N_NO_PARTICIPA,¡Exhibición n.º {n}!\n¡Pero no puede participar!,Appeal no. {n}!\nBut it can't participate!
+CONCURSO_SE_EXHIBIO,¡{mon} se exhibió con\n{mov}!,{mon} appealed with\n{mov}!
+CONCURSO_OBSERVA,{mon} se quedó mirando\na los demás.,{mon} was watching\nthe others.
+CONCURSO_FIN_EXHIBICIONES,¡Se acabó el tiempo\nde las exhibiciones!,We're all out of\nAppeal Time!
+CONCURSO_NERVIOSO_NO_ACTUA,{mon} estaba demasiado\nnervioso para moverse.,{mon} was too\nnervous to move.
+CONCURSO_NO_PODRA,{mon} no podrá exhibirse\nen el siguiente turno...,{mon} can't appeal\nnext turn...
+CONCURSO_COMBO_BIEN,La combinación de\nexhibiciones salió bien.,The appeal combo went\nover well.
+CONCURSO_JUEZ_EXPECTANTE,El JUEZ miró a {mon}\ncon expectación.,The JUDGE looked at\n{mon} expectantly.
+CONCURSO_REPETICION,{mon} decepcionó por\nrepetir la exhibición.,{mon} disappointed\nby repeating an appeal.
+CONCURSO_PUBLICO_BIEN,La {cat} de {mon}\ngustó mucho.,{mon}'s {cat}\nwent over great.
+CONCURSO_PUBLICO_MAL,La {cat} de {mon}\nno gustó demasiado...,{mon}'s {cat}\ndidn't go over well here...
+CONCURSO_PUBLICO_ENTUSIASMA,¡La {cat} de {mon}\nentusiasmó al público!,{mon}'s {cat}\ngot the crowd going.
+CONCURSO_PUBLICO_SIGUE,El público sigue mirando\na {otro}.,The crowd continues to\nwatch {otro}.
+CONCURSO_IGNORADO,Nadie hizo caso a {mov}\nde {mon}.,{mon}'s\n{mov} is ignored.
+CONCURSO_ATENCION_0,{mon} no llamó\nnada la atención...,{mon} failed to\nstand out at all...
+CONCURSO_ATENCION_1,{mon} no destacó\ndemasiado...,{mon} didn't stand\nout very much...
+CONCURSO_ATENCION_2,{mon} llamó un poco\nla atención.,{mon} caught a\nlittle attention.
+CONCURSO_ATENCION_3,{mon} atrajo mucho\nla atención.,{mon} attracted a\nlot of attention.
+CONCURSO_ATENCION_4,¡{mon} acaparó toda\nla atención!,{mon} commanded\ntotal attention.
+CONCURSO_ATENCION_5,{mon} no se ha\nexhibido.,{mon} hasn't made\nits appeal.
+CONCURSO_SENTIMIENTO_0,timidez,shyness
+CONCURSO_SENTIMIENTO_1,inquietud,anxiety
+CONCURSO_SENTIMIENTO_2,pereza,laziness
+CONCURSO_SENTIMIENTO_3,indecisión,hesitancy
+CONCURSO_SENTIMIENTO_4,miedo,fear
+CONCURSO_CUALIDAD_0,carisma,coolness
+CONCURSO_CUALIDAD_1,belleza,beauty
+CONCURSO_CUALIDAD_2,dulzura,cuteness
+CONCURSO_CUALIDAD_3,ingenio,smartness
+CONCURSO_CUALIDAD_4,dureza,toughness
+CONCURSO_RESULTADOS_ANUNCIO,¡Anunciamos los resultados!,Announcing the results!
+CONCURSO_RESULTADOS_RONDA1,¡Resultados de la primera votación!,The preliminary results!
+CONCURSO_RESULTADOS_RONDA2,¡Resultados de la segunda votación!,Round 2 results!
+CONCURSO_RESULTADOS_GANO,¡Ha ganado {mon} de {entrenador}!,{entrenador}'s {mon} won!
+CONCURSO_CADENA_MORE_CONSCIOUS,Se ha vuelto más consciente\nde los demás POKéMON.,It became more conscious\nof the other POKéMON.
+CONCURSO_CADENA_NO_APPEAL,{mon} ya no podrá\nexhibirse después de esto.,{mon} can't make an\nappeal after this.
+CONCURSO_CADENA_SETTLE_DOWN,Se ha tranquilizado\nun poquito.,It settled down just a\nlittle bit.
+CONCURSO_CADENA_OBLIVIOUS_TO_OTHERS,Ya no se fija en los\ndemás POKéMON.,It became oblivious to\nthe other POKéMON.
+CONCURSO_CADENA_LESS_AWARE,Se fija menos en los\ndemás POKéMON.,It became less aware of\nthe other POKéMON.
+CONCURSO_CADENA_STOPPED_CARING,Ya no le importan mucho\nlos demás POKéMON.,It stopped caring about\nother POKéMON much.
+CONCURSO_CADENA_STARTLE_ATTEMPT,Intentó sobresaltar a los\ndemás POKéMON.,It tried to startle the\nother POKéMON.
+CONCURSO_CADENA_DAZZLE_ATTEMPT,Intentó deslumbrar a\nlos demás.,It tried to dazzle the\nothers.
+CONCURSO_CADENA_JUDGE_LOOK_AWAY2,El JUEZ apartó la mirada\nde {mon}.,The JUDGE looked away\nfrom {mon}.
+CONCURSO_CADENA_UNNERVE_ATTEMPT,Intentó poner nervioso\nal siguiente POKéMON.,It tried to unnerve the\nnext POKéMON.
+CONCURSO_CADENA_NERVOUS,{mon} se puso\nnervioso.,{mon} became\nnervous.
+CONCURSO_CADENA_UNNERVE_WAITING,La exhibición intentó poner\nnerviosos a los que esperan.,The appeal tried to\nunnerve waiting POKéMON.
+CONCURSO_CADENA_TAUNT_WELL,Provocó a los POKéMON\nque lo hacían bien.,It taunted POKéMON\ndoing well.
+CONCURSO_CADENA_REGAINED_FORM,{mon} volvió a\nsu estado normal.,{mon} regained its\nform.
+CONCURSO_CADENA_JAM_WELL,Intentó molestar a los\nPOKéMON que lo hacían bien.,It tried to jam POKéMON\ndoing well.
+CONCURSO_CADENA_HUSTLE_STANDOUT,"{mon}, que destacaba,\nse esforzó todavía más.",The standout {mon}\nhustled even more.
+CONCURSO_CADENA_WORK_HARD_UNNOTICED,"{mon}, que pasaba\ndesapercibido, se esforzó.",The largely unnoticed\n{mon} worked hard.
+CONCURSO_CADENA_WORK_BEFORE,Lo hizo tan bien como\nlos POKéMON anteriores.,It worked as much as\nPOKéMON before it.
+CONCURSO_CADENA_APPEAL_NOT_WELL,La exhibición de {mon}\nno salió bien.,{mon}'s appeal did\nnot go well.
+CONCURSO_CADENA_WORK_PRECEDING,Lo hizo tan bien como\nel POKéMON anterior.,It worked as much as the\npreceding POKéMON.
+CONCURSO_CADENA_APPEAL_NOT_WELL2,La exhibición de {mon}\nno salió bien.,{mon}'s appeal did\nnot go well.
+CONCURSO_CADENA_APPEAL_NOT_SHOWN_WELL,La exhibición de {mon}\nno se pudo apreciar bien.,{mon}'s appeal\ncouldn't be shown well.
+CONCURSO_CADENA_APPEAL_SLIGHTLY_WELL,La exhibición de {mon}\nsalió un poco bien.,{mon}'s appeal\nwent slightly well.
+CONCURSO_CADENA_APPEAL_PRETTY_WELL,La exhibición de {mon}\nsalió bastante bien.,{mon}'s appeal\nwent pretty well.
+CONCURSO_CADENA_APPEAL_EXCELLENTLY,¡La exhibición de {mon}\nsalió de maravilla!,{mon}'s appeal\nwent excellently.
+CONCURSO_CADENA_APPEAL_DUD,La exhibición de {mon}\nfue un fiasco.,{mon}'s appeal was\na dud.
+CONCURSO_CADENA_APPEAL_NOT_VERY_WELL,La exhibición de {mon}\nno salió muy bien.,{mon}'s appeal did\nnot work very well.
+CONCURSO_CADENA_APPEAL_SLIGHTLY_WELL2,La exhibición de {mon}\nsalió un poco bien.,{mon}'s appeal\nwent slightly well.
+CONCURSO_CADENA_APPEAL_PRETTY_WELL2,La exhibición de {mon}\nsalió bastante bien.,{mon}'s appeal\nwent pretty well.
+CONCURSO_CADENA_APPEAL_VERY_WELL,La exhibición de {mon}\nsalió muy bien.,{mon}'s appeal\nwent very well.
+CONCURSO_CADENA_APPEAL_EXCELLENTLY2,¡La exhibición de {mon}\nsalió de maravilla!,{mon}'s appeal\nwent excellently.
+CONCURSO_CADENA_SAME_TYPE_GOOD,¡Es del mismo tipo que el\nPOKéMON anterior! ¡Bien!,It's the same type as the\nPOKéMON before - good!
+CONCURSO_CADENA_DIFF_TYPE_GOOD,¡No es del mismo tipo que\nel anterior! ¡Bien!,It's not the same type as\nthe one before - good!
+CONCURSO_CADENA_STOOD_OUT_AS_MUCH,Destacó mucho más que\nel POKéMON anterior.,It stood out much more\nthan the POKéMON before.
+CONCURSO_CADENA_NOT_AS_WELL,No lo hizo tan bien como\nel POKéMON anterior.,It didn't do as well as the\nPOKéMON before.
+CONCURSO_CADENA_CONDITION_ROSE,La forma de {mon}\nmejoró más de lo normal.,{mon}'s condition\nrose above usual.
+CONCURSO_CADENA_HOT_STATUS,¡La gran forma de {mon}\nhizo brillar su exhibición!,{mon}'s hot status\nmade it a great appeal!
+CONCURSO_CADENA_MOVE_UP_LINE,Avanzó en la fila para la\nsiguiente exhibición.,It moved up in line for\nthe next appeal.
+CONCURSO_CADENA_MOVE_BACK_LINE,Retrocedió en la fila para\nla siguiente exhibición.,It moved back in line once\nfor the next appeal.
+CONCURSO_CADENA_SCRAMBLE_ORDER,Alteró el orden del\nsiguiente turno.,It scrambled up the\norder for the next turn.
+CONCURSO_CADENA_JUDGE_EXPECTANTLY2,El JUEZ miró a {mon}\ncon expectación.,The JUDGE looked at\n{mon} expectantly.
+CONCURSO_CADENA_WENT_OVER_WELL,La combinación de\nexhibiciones salió bien.,The appeal combo went\nover well.
+CONCURSO_CADENA_WENT_OVER_VERY_WELL,La combinación de\nexhibiciones salió muy bien.,The appeal combo went\nover very well.
+CONCURSO_CADENA_APPEAL_COMBO_EXCELLENTLY,¡La combinación de\nexhibiciones fue genial!,The appeal combo went\nover excellently.
+CONCURSO_CADENA_AVERT_GAZE,{mon} logró apartar\nla mirada.,{mon} managed to\navert its gaze.
+CONCURSO_CADENA_AVOID_SEEING,{mon} logró no\nverlo.,{mon} managed to\navoid seeing it.
+CONCURSO_CADENA_NOT_FAZED,A {mon} no le afectan\nesas cosas.,{mon} isn't fazed\nby that sort of thing.
+CONCURSO_CADENA_LITTLE_DISTRACTED,{mon} se distrajo\nun poco.,{mon} became a\nlittle distracted.
+CONCURSO_CADENA_ATTEMPT_STARTLE,Intentó sobresaltar a los\ndemás POKéMON.,It tried to startle the\nother POKéMON.
+CONCURSO_CADENA_LOOKED_DOWN,{mon} bajó la mirada\npor la distracción.,{mon} looked down\nout of distraction.
+CONCURSO_CADENA_TURNED_BACK,{mon} se dio la vuelta\npor la distracción.,{mon} turned back\nout of distraction.
+CONCURSO_CADENA_UTTER_CRY,{mon} no pudo evitar\nsoltar un grito.,{mon} couldn't help\nuttering a cry.
+CONCURSO_CADENA_LEAPT_UP,{mon} no pudo evitar\ndar un salto.,{mon} couldn't help\nleaping up.
+CONCURSO_CADENA_TRIPPED_OVER,{mon} tropezó por\nla distracción.,{mon} tripped over\nout of distraction.
+CONCURSO_CADENA_MESSED_UP2,Pero le salió mal.,But it messed up.
+CONCURSO_CADENA_FAILED_TARGET_NERVOUS,Pero no consiguió poner\nnervioso al objetivo.,But it failed to make\nthe target nervous.
+CONCURSO_CADENA_FAILED_ANYONE_NERVOUS,Pero no consiguió poner\nnervioso a nadie.,But it failed to make\nanyone nervous.
+CONCURSO_CADENA_IGNORED,Pero nadie le hizo caso...,But it was ignored...
+CONCURSO_CADENA_NO_CONDITION_IMPROVE,Pero no pudo mejorar\nsu forma...,But it couldn't improve\nits condition...
+CONCURSO_CADENA_BAD_CONDITION_WEAK_APPEAL,Su mala forma hizo que\nla exhibición fuera floja.,Its bad condition\nresulted in a weak appeal.
+CONCURSO_CADENA_UNAFFECTED,A {mon} no le\nafectó.,{mon} was\nunaffected.
+CONCURSO_CADENA_ATTRACTED_ATTENTION,Atrajo la atención\ndel público.,It attracted the crowd's\nattention.

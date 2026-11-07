@@ -1,0 +1,824 @@
+[gd_scene format=4 uid="uid://873cslua3o3t"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mapa"]
+[ext_resource type="TileSet" uid="uid://dkpk44rr6h6pc" path="res://graficos/tilesets/tileset_inicial.tres" id="2_inicial"]
+[ext_resource type="TileSet" uid="uid://dr6pdn62kfd7j" path="res://graficos/tilesets/tileset_cuevas.tres" id="3_cuevas"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_tp"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="5_warp"]
+[ext_resource type="Script" uid="uid://x5m8gvrhbcg" path="res://escenas/mapas/cartel_imagen.gd" id="6_cartel"]
+[ext_resource type="Script" uid="uid://cnf8lw5puq36r" path="res://scripts/eventos/regi/puzle_braille.gd" id="7_puzle"]
+[ext_resource type="Script" uid="uid://db20dc8tv5u7u" path="res://scripts/eventos/regi/cierre_por_bandera.gd" id="8_cierre"]
+[ext_resource type="Texture2D" uid="uid://dlvxqntugvtoc" path="res://graficos/braille/camara_sellada_abc.png" id="braille_camara_sellada_abc"]
+[ext_resource type="Texture2D" uid="uid://b0i6mkp63yjg5" path="res://graficos/braille/camara_sellada_coma.png" id="braille_camara_sellada_coma"]
+[ext_resource type="Texture2D" uid="uid://4t4d6cgibdu3" path="res://graficos/braille/camara_sellada_def.png" id="braille_camara_sellada_def"]
+[ext_resource type="Texture2D" uid="uid://bac4wnteten5a" path="res://graficos/braille/camara_sellada_excavar.png" id="braille_camara_sellada_excavar"]
+[ext_resource type="Texture2D" uid="uid://c2hwiv8nfvcfv" path="res://graficos/braille/camara_sellada_ghi.png" id="braille_camara_sellada_ghi"]
+[ext_resource type="Texture2D" uid="uid://dcjdvk6qi3xeh" path="res://graficos/braille/camara_sellada_jkl.png" id="braille_camara_sellada_jkl"]
+[ext_resource type="Texture2D" uid="uid://d0ir61q3mnwwr" path="res://graficos/braille/camara_sellada_mno.png" id="braille_camara_sellada_mno"]
+[ext_resource type="Texture2D" uid="uid://bw7d6070oo80i" path="res://graficos/braille/camara_sellada_pqrs.png" id="braille_camara_sellada_pqrs"]
+[ext_resource type="Texture2D" uid="uid://c4ov2wt3na0fa" path="res://graficos/braille/camara_sellada_punto.png" id="braille_camara_sellada_punto"]
+[ext_resource type="Texture2D" uid="uid://bitdk3sbn1bey" path="res://graficos/braille/camara_sellada_tuv.png" id="braille_camara_sellada_tuv"]
+[ext_resource type="Texture2D" uid="uid://fc167r2pnk52" path="res://graficos/braille/camara_sellada_wxyz.png" id="braille_camara_sellada_wxyz"]
+
+[node name="CamaraSelladaExterior" type="Node2D" unique_id=1369206330]
+editor_description = "pokeruby SealedChamber_OuterRoom (21x23). Generada por herramientas/importar_camara_sellada.py."
+y_sort_enabled = true
+script = ExtResource("1_mapa")
+nombre_interno = "CAMARA_SELLADA_EXTERIOR"
+seccion = "CAMARA_SELLADA"
+esInterior = true
+es_cueva = true
+mapa_exterior_asociado = "RUTA_134"
+mostrar_nombre_al_entrar = true
+mapa_inmersion = "bajo_agua_camara_sellada"
+celda_inmersion_fija = Vector2i(12, 44)
+mapa_huida = "bajo_agua_camara_sellada"
+celda_huida = Vector2i(12, 44)
+musica_mapa = "CAMARA_SELLADA"
+
+[node name="Agua" type="TileMapLayer" parent="." unique_id=758626234]
+tile_map_data = PackedByteArray("AAAJABIAAAAHAAQAAAAJABMAAAAHAAQAAAAKABIAAAAHAAQAAAALABIAAAAHAAQAAAALABMAAAAHAAQAAAAIABEAAAAHAAQAAAAJABEAAAAHAAQAAAAKABEAAAAHAAQAAAALABEAAAAHAAQAAAAMABEAAAAHAAQAAAAMABIAAAAHAAQAAAAMABMAAAAHAAQAAAAMABQAAAAHAAQAAAALABQAAAAHAAQAAAAKABQAAAAHAAQAAAAJABQAAAAHAAQAAAAIABQAAAAHAAQAAAAIABMAAAAHAAQAAAAIABIAAAAHAAQAAAAKABMAAAAHAAQAAAA=")
+tile_set = ExtResource("2_inicial")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="AnimacionAgua" type="TileMapLayer" parent="." unique_id=504079910]
+tile_map_data = PackedByteArray("AAAIABEAAAAIAAQAAAAJABEAAAAIAAQAAAAKABEAAAAIAAQAAAALABEAAAAIAAQAAAAIABIAAAAIAAQAAAAIABMAAAAIAAQAAAAIABQAAAAIAAQAAAAJABIAAAAIAAQAAAAJABMAAAAIAAQAAAAJABQAAAAIAAQAAAAKABIAAAAIAAQAAAAKABMAAAAIAAQAAAAKABQAAAAIAAQAAAALABIAAAAIAAQAAAALABMAAAAIAAQAAAALABQAAAAIAAQAAAAMABEAAAAIAAQAAAAMABIAAAAIAAQAAAAMABMAAAAIAAQAAAAMABQAAAAIAAQAAAA=")
+tile_set = ExtResource("2_inicial")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Orilla" type="TileMapLayer" parent="." unique_id=1713094313]
+tile_map_data = PackedByteArray("AAAIABEAAAAKAAAAAAAMABEAAAAMAAAAAAALABEAAAALAAAAAAAKABEAAAALAAAAAAAJABEAAAALAAAAAAAIABIAAAAKAAEAAAAIABMAAAAKAAEAAAAMABIAAAAMAAEAAAAMABMAAAAMAAEAAAA=")
+tile_set = ExtResource("2_inicial")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=906017696]
+tile_map_data = PackedByteArray("AAAAAAAAAQADAAMAAAAAAAEAAQACAAIAAAAAAAIAAQACAAIAAAAAAAMAAQACAAIAAAAAAAQAAQACAAIAAAAAAAUAAQACAAIAAAAAAAYAAQACAAIAAAAAAAcAAQACAAIAAAAAAAgAAQACAAIAAAAAAAkAAQACAAIAAAAAAAoAAQACAAIAAAAAAAsAAQACAAIAAAAAAAwAAQACAAIAAAAAAA0AAQACAAIAAAAAAA4AAQACAAIAAAAAAA8AAQACAAIAAAAAABAAAQACAAIAAAAAABEAAQACAAIAAAAAABIAAQACAAIAAAAAABMAAQACAAIAAAAAABQAAQACAAIAAAAAABUAAQACAAIAAAAAABYAAQAEAAQAAAABAAAAAQABAAMAAAABAAEAAQADAAMAAAABAAIAAQACAAIAAAABAAMAAQACAAIAAAABAAQAAQACAAIAAAABAAUAAQACAAIAAAABAAYAAQACAAIAAAABAAcAAQACAAIAAAABAAgAAQACAAIAAAABAAkAAQACAAIAAAABAAoAAQACAAIAAAABAAsAAQACAAIAAAABAAwAAQACAAIAAAABAA0AAQACAAIAAAABAA4AAQACAAIAAAABAA8AAQACAAIAAAABABAAAQACAAIAAAABABEAAQACAAIAAAABABIAAQACAAIAAAABABMAAQACAAIAAAABABQAAQACAAIAAAABABUAAQAEAAQAAAABABYAAQAEAAQAAAACAAAAAQABAAMAAAACAAEAAQABAAMAAAACAAIAAQADAAMAAAACAAMAAQACAAIAAAACAAQAAQACAAIAAAACAAUAAQACAAIAAAACAAYAAQACAAIAAAACAAcAAQACAAIAAAACAAgAAQACAAIAAAACAAkAAQACAAIAAAACAAoAAQACAAIAAAACAAsAAQACAAIAAAACAAwAAQACAAIAAAACAA0AAQACAAIAAAACAA4AAQACAAIAAAACAA8AAQACAAIAAAACABAAAQACAAIAAAACABEAAQACAAIAAAACABIAAQACAAIAAAACABMAAQACAAIAAAACABQAAQAEAAQAAAACABUAAQABAAEAAAACABYAAQABAAEAAAADAAAAAQABAAMAAAADAAEAAQABAAMAAAADAAIAAQABAAMAAAADAAMAAQABAAAAAAADAAQAAQABAAAAAAADAAUAAQAAAAEAAAADAAYAAQAAAAMAAAADAAcAAQABAAAAAAADAAgAAQAAAAEAAAADAAkAAQAAAAMAAAADAAoAAQABAAAAAAADAAsAAQAAAAEAAAADAAwAAQAAAAMAAAADAA0AAQABAAAAAAADAA4AAQAAAAEAAAADAA8AAQAAAAMAAAADABAAAQABAAAAAAADABEAAQABAAAAAAADABIAAQABAAAAAAADABMAAQABAAAAAAADABQAAQAHAAwAAAADABUAAQABAAEAAAADABYAAQABAAEAAAAEAAAAAQABAAMAAAAEAAEAAQABAAMAAAAEAAIAAQABAAMAAAAEAAMAAQABAAAAAAAEAAQAAQABAAAAAAAEAAUAAQABAAEAAAAEAAYAAQAFAAYAAAAEAAcAAQABAAAAAAAEAAgAAQABAAEAAAAEAAkAAQAFAAYAAAAEAAoAAQABAAAAAAAEAAsAAQABAAEAAAAEAAwAAQAFAAYAAAAEAA0AAQABAAAAAAAEAA4AAQABAAEAAAAEAA8AAQAFAAYAAAAEABAAAQABAAAAAAAEABEAAQABAAAAAAAEABIAAQABAAAAAAAEABMAAQABAAAAAAAEABQAAQAHAAwAAAAEABUAAQABAAEAAAAEABYAAQABAAEAAAAFAAAAAQABAAMAAAAFAAEAAQABAAMAAAAFAAIAAQABAAMAAAAFAAMAAQABAAAAAAAFAAQAAQABAAAAAAAFAAUAAQABAAEAAAAFAAYAAQAFAAYAAAAFAAcAAQABAAAAAAAFAAgAAQABAAEAAAAFAAkAAQAFAAYAAAAFAAoAAQABAAAAAAAFAAsAAQABAAEAAAAFAAwAAQAFAAYAAAAFAA0AAQABAAAAAAAFAA4AAQABAAEAAAAFAA8AAQAFAAYAAAAFABAAAQABAAAAAAAFABEAAQABAAAAAAAFABIAAQABAAAAAAAFABMAAQABAAAAAAAFABQAAQAHAAwAAAAFABUAAQABAAEAAAAFABYAAQABAAEAAAAGAAAAAQABAAMAAAAGAAEAAQABAAMAAAAGAAIAAQABAAMAAAAGAAMAAQABAAAAAAAGAAQAAQABAAAAAAAGAAUAAQABAAEAAAAGAAYAAQAFAAYAAAAGAAcAAQABAAAAAAAGAAgAAQABAAEAAAAGAAkAAQAFAAYAAAAGAAoAAQABAAAAAAAGAAsAAQABAAEAAAAGAAwAAQAFAAYAAAAGAA0AAQABAAAAAAAGAA4AAQABAAEAAAAGAA8AAQAFAAYAAAAGABAAAQABAAAAAAAGABEAAQABAAAAAAAGABIAAQABAAAAAAAGABMAAQABAAAAAAAGABQAAQAHAAwAAAAGABUAAQABAAEAAAAGABYAAQABAAEAAAAHAAAAAQABAAMAAAAHAAEAAQABAAMAAAAHAAIAAQABAAMAAAAHAAMAAQABAAAAAAAHAAQAAQABAAAAAAAHAAUAAQACAAEAAAAHAAYAAQACAAMAAAAHAAcAAQABAAAAAAAHAAgAAQACAAEAAAAHAAkAAQACAAMAAAAHAAoAAQABAAAAAAAHAAsAAQACAAEAAAAHAAwAAQACAAMAAAAHAA0AAQABAAAAAAAHAA4AAQACAAEAAAAHAA8AAQACAAMAAAAHABAAAQABAAAAAAAHABEAAQABAAAAAAAHABIAAQABAAAAAAAHABMAAQABAAAAAAAHABQAAQAHAAwAAAAHABUAAQABAAEAAAAHABYAAQABAAEAAAAIAAAAAQABAAMAAAAIAAEAAQAAAAwAAAAIAAIAAQABAAUAAAAIAAMAAQABAAAAAAAIAAQAAQABAAAAAAAIAAUAAQABAAAAAAAIAAYAAQABAAAAAAAIAAcAAQABAAAAAAAIAAgAAQABAAAAAAAIAAkAAQABAAAAAAAIAAoAAQABAAAAAAAIAAsAAQABAAAAAAAIAAwAAQABAAAAAAAIAA0AAQABAAAAAAAIAA4AAQABAAAAAAAIAA8AAQABAAAAAAAIABAAAQABAAAAAAAIABQAAQADAA4AAAAIABUAAQABAAEAAAAIABYAAQABAAEAAAAJAAAAAQABAAMAAAAJAAEAAQACAAUAAAAJAAIAAQACAAYAAAAJAAMAAQABAAAAAAAJAAQAAQABAAAAAAAJAAUAAQAAAAEAAAAJAAYAAQAAAAMAAAAJAAcAAQABAAAAAAAJAAgAAQAAAAEAAAAJAAkAAQAAAAMAAAAJAAoAAQABAAAAAAAJAAsAAQAAAAEAAAAJAAwAAQAAAAMAAAAJAA0AAQABAAAAAAAJAA4AAQAAAAEAAAAJAA8AAQAAAAMAAAAJABAAAQABAAAAAAAJABQAAQADAA4AAAAJABUAAQABAAEAAAAJABYAAQABAAEAAAAKAAAAAQABAAMAAAAKAAEAAQADAAUAAAAKAAIAAQADAAYAAAAKAAMAAQABAAAAAAAKAAQAAQABAAAAAAAKAAUAAQABAAEAAAAKAAYAAQAFAAYAAAAKAAcAAQABAAAAAAAKAAgAAQABAAEAAAAKAAkAAQAFAAYAAAAKAAoAAQABAAAAAAAKAAsAAQABAAEAAAAKAAwAAQAFAAYAAAAKAA0AAQABAAAAAAAKAA4AAQABAAEAAAAKAA8AAQAFAAYAAAAKABAAAQABAAAAAAAKABQAAQADAA4AAAAKABUAAQABAAEAAAAKABYAAQABAAEAAAALAAAAAQABAAMAAAALAAEAAQAEAAUAAAALAAIAAQAEAAYAAAALAAMAAQABAAAAAAALAAQAAQABAAAAAAALAAUAAQABAAEAAAALAAYAAQAFAAYAAAALAAcAAQABAAAAAAALAAgAAQABAAEAAAALAAkAAQAFAAYAAAALAAoAAQABAAAAAAALAAsAAQABAAEAAAALAAwAAQAFAAYAAAALAA0AAQABAAAAAAALAA4AAQABAAEAAAALAA8AAQAFAAYAAAALABAAAQABAAAAAAALABQAAQADAA4AAAALABUAAQABAAEAAAALABYAAQABAAEAAAAMAAAAAQABAAMAAAAMAAEAAQABAAwAAAAMAAIAAQABAAUAAAAMAAMAAQABAAAAAAAMAAQAAQABAAAAAAAMAAUAAQABAAEAAAAMAAYAAQAFAAYAAAAMAAcAAQABAAAAAAAMAAgAAQABAAEAAAAMAAkAAQAFAAYAAAAMAAoAAQABAAAAAAAMAAsAAQABAAEAAAAMAAwAAQAFAAYAAAAMAA0AAQABAAAAAAAMAA4AAQABAAEAAAAMAA8AAQAFAAYAAAAMABAAAQABAAAAAAAMABQAAQADAA4AAAAMABUAAQABAAEAAAAMABYAAQABAAEAAAANAAAAAQABAAMAAAANAAEAAQABAAMAAAANAAIAAQABAAMAAAANAAMAAQABAAAAAAANAAQAAQABAAAAAAANAAUAAQACAAEAAAANAAYAAQACAAMAAAANAAcAAQABAAAAAAANAAgAAQACAAEAAAANAAkAAQACAAMAAAANAAoAAQABAAAAAAANAAsAAQACAAEAAAANAAwAAQACAAMAAAANAA0AAQABAAAAAAANAA4AAQACAAEAAAANAA8AAQACAAMAAAANABAAAQABAAAAAAANABEAAQABAAAAAAANABIAAQABAAAAAAANABMAAQABAAAAAAANABQAAQAHAAwAAAANABUAAQABAAEAAAANABYAAQABAAEAAAAOAAAAAQABAAMAAAAOAAEAAQABAAMAAAAOAAIAAQABAAMAAAAOAAMAAQABAAAAAAAOAAQAAQABAAAAAAAOAAUAAQABAAAAAAAOAAYAAQABAAAAAAAOAAcAAQABAAAAAAAOAAgAAQABAAAAAAAOAAkAAQABAAAAAAAOAAoAAQABAAAAAAAOAAsAAQABAAAAAAAOAAwAAQABAAAAAAAOAA0AAQABAAAAAAAOAA4AAQABAAAAAAAOAA8AAQABAAAAAAAOABAAAQABAAAAAAAOABEAAQABAAAAAAAOABIAAQABAAAAAAAOABMAAQABAAAAAAAOABQAAQAHAAwAAAAOABUAAQABAAEAAAAOABYAAQABAAEAAAAPAAAAAQABAAMAAAAPAAEAAQABAAMAAAAPAAIAAQABAAMAAAAPAAMAAQABAAAAAAAPAAQAAQABAAAAAAAPAAUAAQAAAAEAAAAPAAYAAQAAAAMAAAAPAAcAAQABAAAAAAAPAAgAAQAAAAEAAAAPAAkAAQAAAAMAAAAPAAoAAQABAAAAAAAPAAsAAQABAAAAAAAPAAwAAQABAAAAAAAPAA0AAQABAAAAAAAPAA4AAQABAAAAAAAPAA8AAQABAAAAAAAPABAAAQABAAAAAAAPABEAAQABAAAAAAAPABIAAQABAAAAAAAPABMAAQABAAAAAAAPABQAAQAHAAwAAAAPABUAAQABAAEAAAAPABYAAQABAAEAAAAQAAAAAQABAAMAAAAQAAEAAQABAAMAAAAQAAIAAQABAAMAAAAQAAMAAQABAAAAAAAQAAQAAQABAAAAAAAQAAUAAQABAAEAAAAQAAYAAQAFAAYAAAAQAAcAAQABAAAAAAAQAAgAAQABAAEAAAAQAAkAAQAFAAYAAAAQAAoAAQABAAAAAAAQAAsAAQABAAAAAAAQAAwAAQABAAAAAAAQAA0AAQABAAAAAAAQAA4AAQABAAAAAAAQAA8AAQABAAAAAAAQABAAAQABAAAAAAAQABEAAQABAAAAAAAQABIAAQABAAAAAAAQABMAAQABAAAAAAAQABQAAQAHAAwAAAAQABUAAQABAAEAAAAQABYAAQABAAEAAAARAAAAAQABAAMAAAARAAEAAQABAAMAAAARAAIAAQABAAMAAAARAAMAAQABAAAAAAARAAQAAQABAAAAAAARAAUAAQACAAEAAAARAAYAAQACAAMAAAARAAcAAQABAAAAAAARAAgAAQACAAEAAAARAAkAAQACAAMAAAARAAoAAQABAAAAAAARAAsAAQABAAAAAAARAAwAAQABAAAAAAARAA0AAQABAAAAAAARAA4AAQABAAAAAAARAA8AAQABAAAAAAARABAAAQABAAAAAAARABEAAQABAAAAAAARABIAAQABAAAAAAARABMAAQABAAAAAAARABQAAQAHAAwAAAARABUAAQABAAEAAAARABYAAQABAAEAAAASAAAAAQABAAMAAAASAAEAAQABAAMAAAASAAIAAQAEAAMAAAASAAMAAQAAAAIAAAASAAQAAQAAAAIAAAASAAUAAQAAAAIAAAASAAYAAQAAAAIAAAASAAcAAQAAAAIAAAASAAgAAQAAAAIAAAASAAkAAQAAAAIAAAASAAoAAQAAAAIAAAASAAsAAQAAAAIAAAASAAwAAQAAAAIAAAASAA0AAQAAAAIAAAASAA4AAQAAAAIAAAASAA8AAQAAAAIAAAASABAAAQAAAAIAAAASABEAAQAAAAIAAAASABIAAQAAAAIAAAASABMAAQAAAAIAAAASABQAAQADAAQAAAASABUAAQABAAEAAAASABYAAQABAAEAAAATAAAAAQABAAMAAAATAAEAAQAEAAMAAAATAAIAAQAAAAIAAAATAAMAAQAAAAIAAAATAAQAAQAAAAIAAAATAAUAAQAAAAIAAAATAAYAAQAAAAIAAAATAAcAAQAAAAIAAAATAAgAAQAAAAIAAAATAAkAAQAAAAIAAAATAAoAAQAAAAIAAAATAAsAAQAAAAIAAAATAAwAAQAAAAIAAAATAA0AAQAAAAIAAAATAA4AAQAAAAIAAAATAA8AAQAAAAIAAAATABAAAQAAAAIAAAATABEAAQAAAAIAAAATABIAAQAAAAIAAAATABMAAQAAAAIAAAATABQAAQAAAAIAAAATABUAAQADAAQAAAATABYAAQADAAQAAAAUAAAAAQAEAAMAAAAUAAEAAQAAAAIAAAAUAAIAAQAAAAIAAAAUAAMAAQAAAAIAAAAUAAQAAQAAAAIAAAAUAAUAAQAAAAIAAAAUAAYAAQAAAAIAAAAUAAcAAQAAAAIAAAAUAAgAAQAAAAIAAAAUAAkAAQAAAAIAAAAUAAoAAQAAAAIAAAAUAAsAAQAAAAIAAAAUAAwAAQAAAAIAAAAUAA0AAQAAAAIAAAAUAA4AAQAAAAIAAAAUAA8AAQAAAAIAAAAUABAAAQAAAAIAAAAUABEAAQAAAAIAAAAUABIAAQAAAAIAAAAUABMAAQAAAAIAAAAUABQAAQAAAAIAAAAUABUAAQAAAAIAAAAUABYAAQADAAQAAAAYAAwAAQABAAIAAAD8/w0AAQABAAIAAAAFAP3/AQABAAIAAAANABgAAQABAAIAAAAJABgAAQABAAIAAAAJABcAAQABAAIAAAAIABcAAQABAAIAAAAHABcAAQABAAIAAAAGABcAAQABAAIAAAAFABcAAQABAAIAAAAEABcAAQABAAIAAAADABcAAQABAAIAAAACABcAAQABAAIAAAABABcAAQABAAIAAAAAABcAAQABAAIAAAD//xcAAQABAAIAAAD//xYAAQABAAIAAAD//xUAAQABAAIAAAD//xQAAQABAAIAAAD//xMAAQABAAIAAAD//xIAAQABAAIAAAD//xEAAQABAAIAAAD//xAAAQABAAIAAAD//w8AAQABAAIAAAD//w4AAQABAAIAAAD//w0AAQABAAIAAAD//wwAAQABAAIAAAD//wsAAQABAAIAAAD//woAAQABAAIAAAD//wkAAQABAAIAAAD//wgAAQABAAIAAAD//wcAAQABAAIAAAD//wYAAQABAAIAAAD//wUAAQABAAIAAAD//wQAAQABAAIAAAD//wMAAQABAAIAAAD//wIAAQABAAIAAAD//wEAAQABAAIAAAD//wAAAQABAAIAAAD/////AQABAAIAAAD///7/AQABAAIAAAD///3/AQABAAIAAAD+//3/AQABAAIAAAD9//3/AQABAAIAAAD8//3/AQABAAIAAAD8//7/AQABAAIAAAD8////AQABAAIAAAD8/wAAAQABAAIAAAD8/wEAAQABAAIAAAD8/wIAAQABAAIAAAD8/wMAAQABAAIAAAD8/wQAAQABAAIAAAD8/wUAAQABAAIAAAD8/wYAAQABAAIAAAD8/wcAAQABAAIAAAD8/wgAAQABAAIAAAD8/wkAAQABAAIAAAD8/woAAQABAAIAAAD8/wsAAQABAAIAAAD8/wwAAQABAAIAAAD9/wwAAQABAAIAAAD9/wsAAQABAAIAAAD9/woAAQABAAIAAAD9/wkAAQABAAIAAAD9/wgAAQABAAIAAAD9/wcAAQABAAIAAAD9/wYAAQABAAIAAAD9/wUAAQABAAIAAAD9/wQAAQABAAIAAAD9/wMAAQABAAIAAAD9/wIAAQABAAIAAAD9/wEAAQABAAIAAAD9/wAAAQABAAIAAAD9////AQABAAIAAAD9//7/AQABAAIAAAD+//7/AQABAAIAAAD+////AQABAAIAAAD+/wAAAQABAAIAAAD+/wEAAQABAAIAAAD+/wIAAQABAAIAAAD+/wMAAQABAAIAAAD+/wQAAQABAAIAAAD+/wUAAQABAAIAAAD+/wYAAQABAAIAAAD+/wcAAQABAAIAAAD+/wgAAQABAAIAAAD+/wkAAQABAAIAAAD+/woAAQABAAIAAAD+/wsAAQABAAIAAAD+/wwAAQABAAIAAAD+/w0AAQABAAIAAAD9/w0AAQABAAIAAAD9/w4AAQABAAIAAAD8/w4AAQABAAIAAAD8/w8AAQABAAIAAAD8/xAAAQABAAIAAAD8/xEAAQABAAIAAAD8/xIAAQABAAIAAAD8/xMAAQABAAIAAAD8/xQAAQABAAIAAAD8/xUAAQABAAIAAAD8/xYAAQABAAIAAAD8/xcAAQABAAIAAAD8/xgAAQABAAIAAAD9/xgAAQABAAIAAAD9/xcAAQABAAIAAAD9/xYAAQABAAIAAAD9/xUAAQABAAIAAAD9/xQAAQABAAIAAAD9/xMAAQABAAIAAAD9/xIAAQABAAIAAAD9/xEAAQABAAIAAAD9/xAAAQABAAIAAAD9/w8AAQABAAIAAAD+/w8AAQABAAIAAAD+/w4AAQABAAIAAAD+/xAAAQABAAIAAAD+/xEAAQABAAIAAAD+/xIAAQABAAIAAAD+/xMAAQABAAIAAAD+/xQAAQABAAIAAAD+/xUAAQABAAIAAAD+/xYAAQABAAIAAAD+/xcAAQABAAIAAAD+/xgAAQABAAIAAAD//xgAAQABAAIAAAAAABgAAQABAAIAAAABABgAAQABAAIAAAACABgAAQABAAIAAAADABgAAQABAAIAAAAEABgAAQABAAIAAAAFABgAAQABAAIAAAAGABgAAQABAAIAAAAHABgAAQABAAIAAAAIABgAAQABAAIAAAAAAP3/AQABAAIAAAAAAP7/AQABAAIAAAAAAP//AQABAAIAAAABAP//AQABAAIAAAABAP7/AQABAAIAAAABAP3/AQABAAIAAAACAP3/AQABAAIAAAACAP7/AQABAAIAAAACAP//AQABAAIAAAADAP//AQABAAIAAAADAP7/AQABAAIAAAADAP3/AQABAAIAAAAEAP3/AQABAAIAAAAEAP7/AQABAAIAAAAEAP//AQABAAIAAAAFAP//AQABAAIAAAAFAP7/AQABAAIAAAAGAP7/AQABAAIAAAAGAP3/AQABAAIAAAAHAP3/AQABAAIAAAAHAP7/AQABAAIAAAAHAP//AQABAAIAAAAGAP//AQABAAIAAAAIAP//AQABAAIAAAAIAP7/AQABAAIAAAAIAP3/AQABAAIAAAAJAP3/AQABAAIAAAAJAP7/AQABAAIAAAAJAP//AQABAAIAAAAKAP//AQABAAIAAAAKAP7/AQABAAIAAAAKAP3/AQABAAIAAAALAP3/AQABAAIAAAALAP7/AQABAAIAAAALAP//AQABAAIAAAAMAP//AQABAAIAAAAMAP7/AQABAAIAAAAMAP3/AQABAAIAAAANAP3/AQABAAIAAAANAP7/AQABAAIAAAANAP//AQABAAIAAAAOAP//AQABAAIAAAAOAP7/AQABAAIAAAAOAP3/AQABAAIAAAAPAP3/AQABAAIAAAAPAP7/AQABAAIAAAAPAP//AQABAAIAAAAQAP//AQABAAIAAAAQAP7/AQABAAIAAAAQAP3/AQABAAIAAAARAP3/AQABAAIAAAARAP7/AQABAAIAAAARAP//AQABAAIAAAASAP//AQABAAIAAAASAP7/AQABAAIAAAASAP3/AQABAAIAAAATAP3/AQABAAIAAAATAP7/AQABAAIAAAATAP//AQABAAIAAAAUAP//AQABAAIAAAAUAP7/AQABAAIAAAAUAP3/AQABAAIAAAAVAP3/AQABAAIAAAAVAP7/AQABAAIAAAAVAP//AQABAAIAAAAVAAAAAQABAAIAAAAVAAEAAQABAAIAAAAVAAIAAQABAAIAAAAVAAMAAQABAAIAAAAVAAQAAQABAAIAAAAVAAUAAQABAAIAAAAVAAYAAQABAAIAAAAVAAcAAQABAAIAAAAVAAgAAQABAAIAAAAVAAkAAQABAAIAAAAVAAoAAQABAAIAAAAVAAsAAQABAAIAAAAVAAwAAQABAAIAAAAVAA0AAQABAAIAAAAVAA4AAQABAAIAAAAVAA8AAQABAAIAAAAVABAAAQABAAIAAAAVABEAAQABAAIAAAAVABIAAQABAAIAAAAVABMAAQABAAIAAAAVABQAAQABAAIAAAAVABUAAQABAAIAAAAVABYAAQABAAIAAAAVABcAAQABAAIAAAAUABcAAQABAAIAAAATABcAAQABAAIAAAASABcAAQABAAIAAAARABcAAQABAAIAAAAQABcAAQABAAIAAAAPABcAAQABAAIAAAAOABcAAQABAAIAAAANABcAAQABAAIAAAAMABcAAQABAAIAAAALABcAAQABAAIAAAAKABcAAQABAAIAAAAKABgAAQABAAIAAAALABgAAQABAAIAAAAMABgAAQABAAIAAAAOABgAAQABAAIAAAAPABgAAQABAAIAAAAQABgAAQABAAIAAAARABgAAQABAAIAAAASABgAAQABAAIAAAATABgAAQABAAIAAAAUABgAAQABAAIAAAAVABgAAQABAAIAAAAWABgAAQABAAIAAAAWABcAAQABAAIAAAAWABYAAQABAAIAAAAWABUAAQABAAIAAAAWABQAAQABAAIAAAAWABMAAQABAAIAAAAWABIAAQABAAIAAAAWABEAAQABAAIAAAAWABAAAQABAAIAAAAWAA8AAQABAAIAAAAWAA4AAQABAAIAAAAWAA0AAQABAAIAAAAWAAwAAQABAAIAAAAWAAsAAQABAAIAAAAWAAoAAQABAAIAAAAWAAkAAQABAAIAAAAWAAgAAQABAAIAAAAWAAcAAQABAAIAAAAWAAYAAQABAAIAAAAWAAUAAQABAAIAAAAWAAQAAQABAAIAAAAWAAMAAQABAAIAAAAWAAIAAQABAAIAAAAWAAEAAQABAAIAAAAWAAAAAQABAAIAAAAWAP//AQABAAIAAAAWAP7/AQABAAIAAAAWAP3/AQABAAIAAAAXAP3/AQABAAIAAAAXAP7/AQABAAIAAAAXAP//AQABAAIAAAAXAAAAAQABAAIAAAAXAAEAAQABAAIAAAAXAAIAAQABAAIAAAAXAAMAAQABAAIAAAAXAAQAAQABAAIAAAAXAAUAAQABAAIAAAAXAAYAAQABAAIAAAAXAAcAAQABAAIAAAAXAAgAAQABAAIAAAAXAAkAAQABAAIAAAAXAAoAAQABAAIAAAAXAAsAAQABAAIAAAAXAAwAAQABAAIAAAAXAA0AAQABAAIAAAAXAA4AAQABAAIAAAAXAA8AAQABAAIAAAAXABAAAQABAAIAAAAXABEAAQABAAIAAAAXABIAAQABAAIAAAAXABMAAQABAAIAAAAXABQAAQABAAIAAAAXABUAAQABAAIAAAAXABYAAQABAAIAAAAXABcAAQABAAIAAAAXABgAAQABAAIAAAAYABgAAQABAAIAAAAYABcAAQABAAIAAAAYABYAAQABAAIAAAAYABUAAQABAAIAAAAYABQAAQABAAIAAAAYABMAAQABAAIAAAAYABIAAQABAAIAAAAYABEAAQABAAIAAAAYABAAAQABAAIAAAAYAA8AAQABAAIAAAAYAA4AAQABAAIAAAAYAA0AAQABAAIAAAAYAAsAAQABAAIAAAAYAAoAAQABAAIAAAAYAAkAAQABAAIAAAAYAAgAAQABAAIAAAAYAAcAAQABAAIAAAAYAAYAAQABAAIAAAAYAAUAAQABAAIAAAAYAAQAAQABAAIAAAAYAAMAAQABAAIAAAAYAAIAAQABAAIAAAAYAAEAAQABAAIAAAAYAAAAAQABAAIAAAAYAP//AQABAAIAAAAYAP7/AQABAAIAAAAYAP3/AQABAAIAAAA=")
+tile_set = ExtResource("3_cuevas")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1139683365]
+script = ExtResource("4_tp")
+tile_data = {
+"10,1": {
+"flags": 1
+},
+"10,11": {
+"flags": 1
+},
+"10,12": {
+"flags": 1
+},
+"10,14": {
+"flags": 1
+},
+"10,15": {
+"flags": 1
+},
+"10,17": {
+"flags": 2
+},
+"10,18": {
+"flags": 35184372088834
+},
+"10,19": {
+"flags": 35184372088834
+},
+"10,20": {
+"flags": 1
+},
+"10,5": {
+"flags": 1
+},
+"10,6": {
+"flags": 1
+},
+"10,8": {
+"flags": 1
+},
+"10,9": {
+"flags": 1
+},
+"11,11": {
+"flags": 1
+},
+"11,12": {
+"flags": 1
+},
+"11,14": {
+"flags": 1
+},
+"11,15": {
+"flags": 1
+},
+"11,17": {
+"flags": 2
+},
+"11,18": {
+"flags": 35184372088834
+},
+"11,19": {
+"flags": 35184372088834
+},
+"11,2": {
+"flags": 1
+},
+"11,20": {
+"flags": 1
+},
+"11,5": {
+"flags": 1
+},
+"11,6": {
+"flags": 1
+},
+"11,8": {
+"flags": 1
+},
+"11,9": {
+"flags": 1
+},
+"12,11": {
+"flags": 1
+},
+"12,12": {
+"flags": 1
+},
+"12,14": {
+"flags": 1
+},
+"12,15": {
+"flags": 1
+},
+"12,17": {
+"flags": 2
+},
+"12,18": {
+"flags": 2
+},
+"12,19": {
+"flags": 2
+},
+"12,2": {
+"flags": 1
+},
+"12,20": {
+"flags": 1
+},
+"12,5": {
+"flags": 1
+},
+"12,6": {
+"flags": 1
+},
+"12,8": {
+"flags": 1
+},
+"12,9": {
+"flags": 1
+},
+"13,11": {
+"flags": 1
+},
+"13,12": {
+"flags": 1
+},
+"13,14": {
+"flags": 1
+},
+"13,15": {
+"flags": 1
+},
+"13,2": {
+"flags": 1
+},
+"13,20": {
+"flags": 1
+},
+"13,5": {
+"flags": 1
+},
+"13,6": {
+"flags": 1
+},
+"13,8": {
+"flags": 1
+},
+"13,9": {
+"flags": 1
+},
+"14,2": {
+"flags": 1
+},
+"14,20": {
+"flags": 1
+},
+"15,2": {
+"flags": 1
+},
+"15,20": {
+"flags": 1
+},
+"15,5": {
+"flags": 1
+},
+"15,6": {
+"flags": 1
+},
+"15,8": {
+"flags": 1
+},
+"15,9": {
+"flags": 1
+},
+"16,2": {
+"flags": 1
+},
+"16,20": {
+"flags": 1
+},
+"16,5": {
+"flags": 1
+},
+"16,6": {
+"flags": 1
+},
+"16,8": {
+"flags": 1
+},
+"16,9": {
+"flags": 1
+},
+"17,2": {
+"flags": 1
+},
+"17,20": {
+"flags": 1
+},
+"17,5": {
+"flags": 1
+},
+"17,6": {
+"flags": 1
+},
+"17,8": {
+"flags": 1
+},
+"17,9": {
+"flags": 1
+},
+"18,10": {
+"flags": 1
+},
+"18,11": {
+"flags": 1
+},
+"18,12": {
+"flags": 1
+},
+"18,13": {
+"flags": 1
+},
+"18,14": {
+"flags": 1
+},
+"18,15": {
+"flags": 1
+},
+"18,16": {
+"flags": 1
+},
+"18,17": {
+"flags": 1
+},
+"18,18": {
+"flags": 1
+},
+"18,19": {
+"flags": 1
+},
+"18,3": {
+"flags": 1
+},
+"18,4": {
+"flags": 1
+},
+"18,7": {
+"flags": 1
+},
+"2,10": {
+"flags": 1
+},
+"2,13": {
+"flags": 1
+},
+"2,16": {
+"flags": 1
+},
+"2,17": {
+"flags": 1
+},
+"2,18": {
+"flags": 1
+},
+"2,19": {
+"flags": 1
+},
+"2,3": {
+"flags": 1
+},
+"2,4": {
+"flags": 1
+},
+"2,7": {
+"flags": 1
+},
+"3,11": {
+"flags": 1
+},
+"3,12": {
+"flags": 1
+},
+"3,14": {
+"flags": 1
+},
+"3,15": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"3,20": {
+"flags": 1
+},
+"3,5": {
+"flags": 1
+},
+"3,6": {
+"flags": 1
+},
+"3,8": {
+"flags": 1
+},
+"3,9": {
+"flags": 1
+},
+"4,11": {
+"flags": 1
+},
+"4,12": {
+"flags": 1
+},
+"4,14": {
+"flags": 1
+},
+"4,15": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"4,20": {
+"flags": 1
+},
+"4,5": {
+"flags": 1
+},
+"4,6": {
+"flags": 1
+},
+"4,8": {
+"flags": 1
+},
+"4,9": {
+"flags": 1
+},
+"5,11": {
+"flags": 1
+},
+"5,12": {
+"flags": 1
+},
+"5,14": {
+"flags": 1
+},
+"5,15": {
+"flags": 1
+},
+"5,2": {
+"flags": 1
+},
+"5,20": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"5,6": {
+"flags": 1
+},
+"5,8": {
+"flags": 1
+},
+"5,9": {
+"flags": 1
+},
+"6,11": {
+"flags": 1
+},
+"6,12": {
+"flags": 1
+},
+"6,14": {
+"flags": 1
+},
+"6,15": {
+"flags": 1
+},
+"6,2": {
+"flags": 1
+},
+"6,20": {
+"flags": 1
+},
+"6,5": {
+"flags": 1
+},
+"6,6": {
+"flags": 1
+},
+"6,8": {
+"flags": 1
+},
+"6,9": {
+"flags": 1
+},
+"7,11": {
+"flags": 1
+},
+"7,12": {
+"flags": 1
+},
+"7,14": {
+"flags": 1
+},
+"7,15": {
+"flags": 1
+},
+"7,2": {
+"flags": 1
+},
+"7,20": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"7,6": {
+"flags": 1
+},
+"7,8": {
+"flags": 1
+},
+"7,9": {
+"flags": 1
+},
+"8,17": {
+"flags": 2
+},
+"8,18": {
+"flags": 2
+},
+"8,19": {
+"flags": 2
+},
+"8,2": {
+"flags": 1
+},
+"8,20": {
+"flags": 1
+},
+"9,11": {
+"flags": 1
+},
+"9,12": {
+"flags": 1
+},
+"9,14": {
+"flags": 1
+},
+"9,15": {
+"flags": 1
+},
+"9,17": {
+"flags": 2
+},
+"9,18": {
+"flags": 35184372088834
+},
+"9,19": {
+"flags": 35184372088834
+},
+"9,2": {
+"flags": 1
+},
+"9,20": {
+"flags": 1
+},
+"9,5": {
+"flags": 1
+},
+"9,6": {
+"flags": 1
+},
+"9,8": {
+"flags": 1
+},
+"9,9": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=343875784]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1876803836]
+
+[node name="Braille5_6" type="Sprite2D" parent="Carteles" unique_id=1303583637 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 0 (5,6): SealedChamber_OuterRoom_EventScript_15F12C"
+position = Vector2(88, 104)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_abc")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(5, 6)
+
+[node name="Braille5_9" type="Sprite2D" parent="Carteles" unique_id=1358606600 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 1 (5,9): SealedChamber_OuterRoom_EventScript_15F13A"
+position = Vector2(88, 152)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_ghi")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(5, 9)
+
+[node name="Braille5_12" type="Sprite2D" parent="Carteles" unique_id=1130055749 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 2 (5,12): SealedChamber_OuterRoom_EventScript_15F148"
+position = Vector2(88, 200)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_mno")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(5, 12)
+
+[node name="Braille5_15" type="Sprite2D" parent="Carteles" unique_id=1865902691 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 3 (5,15): SealedChamber_OuterRoom_EventScript_15F156"
+position = Vector2(88, 248)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_tuv")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(5, 15)
+
+[node name="Braille11_6" type="Sprite2D" parent="Carteles" unique_id=294729237 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 4 (11,6): SealedChamber_OuterRoom_EventScript_15F164"
+position = Vector2(184, 104)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_def")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(11, 6)
+
+[node name="Braille11_9" type="Sprite2D" parent="Carteles" unique_id=1382725186 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 5 (11,9): SealedChamber_OuterRoom_EventScript_15F172"
+position = Vector2(184, 152)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_jkl")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(11, 9)
+
+[node name="Braille11_12" type="Sprite2D" parent="Carteles" unique_id=1654146472 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 6 (11,12): SealedChamber_OuterRoom_EventScript_15F180"
+position = Vector2(184, 200)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_pqrs")
+celda_ventana = Vector2i(7, 6)
+coord_tile = Vector2i(11, 12)
+
+[node name="Braille11_15" type="Sprite2D" parent="Carteles" unique_id=90349931 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 7 (11,15): SealedChamber_OuterRoom_EventScript_15F19C"
+position = Vector2(184, 248)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_wxyz")
+celda_ventana = Vector2i(7, 6)
+coord_tile = Vector2i(11, 15)
+
+[node name="Braille16_6" type="Sprite2D" parent="Carteles" unique_id=870485721 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 8 (16,6): SealedChamber_OuterRoom_EventScript_15F18E"
+position = Vector2(264, 104)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_punto")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(16, 6)
+
+[node name="Braille16_9" type="Sprite2D" parent="Carteles" unique_id=879636123 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 9 (16,9): SealedChamber_OuterRoom_EventScript_15F1AA"
+position = Vector2(264, 152)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_coma")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(16, 9)
+
+[node name="Braille10_2" type="Sprite2D" parent="Carteles" unique_id=2051714927 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 10 (10,2): SealedChamber_OuterRoom_EventScript_15F1B8"
+position = Vector2(168, 40)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_excavar")
+celda_ventana = Vector2i(2, 6)
+textos_condicionales = Dictionary[String, String]({
+"braille_excavar": "CAMARA_REGI_AGUJERO"
+})
+coord_tile = Vector2i(10, 2)
+
+[node name="Braille6_6" type="Sprite2D" parent="Carteles" unique_id=1871262218 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 11 (6,6): SealedChamber_OuterRoom_EventScript_15F12C"
+position = Vector2(104, 104)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_abc")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(6, 6)
+
+[node name="Braille4_6" type="Sprite2D" parent="Carteles" unique_id=2099031236 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 12 (4,6): SealedChamber_OuterRoom_EventScript_15F12C"
+position = Vector2(72, 104)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_abc")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(4, 6)
+
+[node name="Braille4_9" type="Sprite2D" parent="Carteles" unique_id=580156457 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 13 (4,9): SealedChamber_OuterRoom_EventScript_15F13A"
+position = Vector2(72, 152)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_ghi")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(4, 9)
+
+[node name="Braille6_9" type="Sprite2D" parent="Carteles" unique_id=1932958522 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 14 (6,9): SealedChamber_OuterRoom_EventScript_15F13A"
+position = Vector2(104, 152)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_ghi")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(6, 9)
+
+[node name="Braille4_12" type="Sprite2D" parent="Carteles" unique_id=697896006 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 15 (4,12): SealedChamber_OuterRoom_EventScript_15F148"
+position = Vector2(72, 200)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_mno")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(4, 12)
+
+[node name="Braille6_12" type="Sprite2D" parent="Carteles" unique_id=996399005 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 16 (6,12): SealedChamber_OuterRoom_EventScript_15F148"
+position = Vector2(104, 200)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_mno")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(6, 12)
+
+[node name="Braille4_15" type="Sprite2D" parent="Carteles" unique_id=1985795440 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 17 (4,15): SealedChamber_OuterRoom_EventScript_15F156"
+position = Vector2(72, 248)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_tuv")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(4, 15)
+
+[node name="Braille6_15" type="Sprite2D" parent="Carteles" unique_id=460688333 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 18 (6,15): SealedChamber_OuterRoom_EventScript_15F156"
+position = Vector2(104, 248)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_tuv")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(6, 15)
+
+[node name="Braille10_6" type="Sprite2D" parent="Carteles" unique_id=480068254 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 19 (10,6): SealedChamber_OuterRoom_EventScript_15F164"
+position = Vector2(168, 104)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_def")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(10, 6)
+
+[node name="Braille12_6" type="Sprite2D" parent="Carteles" unique_id=1012921020 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 20 (12,6): SealedChamber_OuterRoom_EventScript_15F164"
+position = Vector2(200, 104)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_def")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(12, 6)
+
+[node name="Braille10_9" type="Sprite2D" parent="Carteles" unique_id=194564585 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 21 (10,9): SealedChamber_OuterRoom_EventScript_15F172"
+position = Vector2(168, 152)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_jkl")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(10, 9)
+
+[node name="Braille12_9" type="Sprite2D" parent="Carteles" unique_id=754654492 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 22 (12,9): SealedChamber_OuterRoom_EventScript_15F172"
+position = Vector2(200, 152)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_jkl")
+celda_ventana = Vector2i(9, 6)
+coord_tile = Vector2i(12, 9)
+
+[node name="Braille10_12" type="Sprite2D" parent="Carteles" unique_id=1804022560 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 23 (10,12): SealedChamber_OuterRoom_EventScript_15F180"
+position = Vector2(168, 200)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_pqrs")
+celda_ventana = Vector2i(7, 6)
+coord_tile = Vector2i(10, 12)
+
+[node name="Braille12_12" type="Sprite2D" parent="Carteles" unique_id=664043814 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 24 (12,12): SealedChamber_OuterRoom_EventScript_15F180"
+position = Vector2(200, 200)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_pqrs")
+celda_ventana = Vector2i(7, 6)
+coord_tile = Vector2i(12, 12)
+
+[node name="Braille10_15" type="Sprite2D" parent="Carteles" unique_id=1342983434 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 25 (10,15): SealedChamber_OuterRoom_EventScript_15F19C"
+position = Vector2(168, 248)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_wxyz")
+celda_ventana = Vector2i(7, 6)
+coord_tile = Vector2i(10, 15)
+
+[node name="Braille12_15" type="Sprite2D" parent="Carteles" unique_id=633903719 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 26 (12,15): SealedChamber_OuterRoom_EventScript_15F19C"
+position = Vector2(200, 248)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_wxyz")
+celda_ventana = Vector2i(7, 6)
+coord_tile = Vector2i(12, 15)
+
+[node name="Braille9_2" type="Sprite2D" parent="Carteles" unique_id=141874465 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 27 (9,2): SealedChamber_OuterRoom_EventScript_15F1D9"
+position = Vector2(152, 40)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_excavar")
+celda_ventana = Vector2i(2, 6)
+coord_tile = Vector2i(9, 2)
+
+[node name="Braille11_2" type="Sprite2D" parent="Carteles" unique_id=172177987 groups=["Cartel"]]
+editor_description = "pokeruby SealedChamber_OuterRoom bg_event 28 (11,2): SealedChamber_OuterRoom_EventScript_15F1D9"
+position = Vector2(184, 40)
+script = ExtResource("6_cartel")
+imagen = ExtResource("braille_camara_sellada_excavar")
+celda_ventana = Vector2i(2, 6)
+coord_tile = Vector2i(11, 2)
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1475033967]
+
+[node name="CierreEntrada" type="Node" parent="Eventos" unique_id=864997722]
+editor_description = "SealedChamber_OuterRoom_EventScript_15F0F5: EntranceCover y SealedChamberBraille_Mid impasables en (9..11, 1..2) sin FLAG_SYS_BRAILLE_DIG"
+script = ExtResource("8_cierre")
+bandera = "braille_excavar"
+capa = NodePath("../../Suelo")
+fuente = 1
+tiles_cerrados = Dictionary[Vector2i, Vector2i]({
+Vector2i(9, 1): Vector2i(1, 5),
+Vector2i(9, 2): Vector2i(5, 6),
+Vector2i(10, 1): Vector2i(1, 5),
+Vector2i(10, 2): Vector2i(5, 6),
+Vector2i(11, 1): Vector2i(1, 5),
+Vector2i(11, 2): Vector2i(5, 6)
+})
+celdas_bloqueadas = Array[Vector2i]([Vector2i(9, 1), Vector2i(10, 1), Vector2i(11, 1), Vector2i(9, 2), Vector2i(10, 2), Vector2i(11, 2)])
+datos_tiles = NodePath("../../TPTileDataMap")
+
+[node name="PuzleExcavar" type="Node2D" parent="Eventos" unique_id=225233667]
+editor_description = "ShouldDoBrailleDigEffect / DoBrailleDigEffect (braille_puzzles.c)"
+script = ExtResource("7_puzle")
+tipo = 0
+bandera = "braille_excavar"
+celdas = Array[Vector2i]([Vector2i(9, 3), Vector2i(10, 3), Vector2i(11, 3)])
+cierres = Array[NodePath]([NodePath("../CierreEntrada")])
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1047012679]
+position = Vector2(168, 38)
+script = ExtResource("5_warp")
+tipo_warp = 2
+ruta_mapa_destino = "camara_sellada_interior"
+posicion_destino = Vector2(10, 19)
+direccion = Vector2(0, -1)

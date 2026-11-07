@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wgnudao6qeig"
+path="res://.godot/imported/1-43. Route 110, Route 111 (surrounding the desert), Route 112, Route 114 - 118.mp3-82de4bea4f745fc0354a2fe2519dde47.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-43. Route 110, Route 111 (surrounding the desert), Route 112, Route 114 - 118.mp3"
+dest_files=["res://.godot/imported/1-43. Route 110, Route 111 (surrounding the desert), Route 112, Route 114 - 118.mp3-82de4bea4f745fc0354a2fe2519dde47.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

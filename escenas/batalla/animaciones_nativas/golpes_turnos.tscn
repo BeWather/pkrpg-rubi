@@ -1,0 +1,350 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/efecto_golpe_nativo.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/i5_candidate_hit_tile0.png" id="2_golpe"]
+[ext_resource type="Shader" path="res://escenas/batalla/animaciones_nativas/mezcla_gba.gdshader" id="3_mezcla"]
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/fondo_movimiento.gd" id="4_fondo"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Take Down1.wav" id="10_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Comet Punch.wav" id="11_se"]
+
+[sub_resource type="ShaderMaterial" id="Mezcla"]
+shader = ExtResource("3_mezcla")
+
+[sub_resource type="Animation" id="Animation_venganza_par"]
+resource_name = "venganza_par"
+length = 2.216667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4333, 1.0499),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 0, 0, 1), 0, 0.6875, 0.125, 4],
+"method": &"tinte"
+}, {
+"args": [&"atacante", Color(1, 0, 0, 1), 0.6875, 0, 0.125, 4],
+"method": &"tinte"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.0499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"atacante", Vector2(1, 0), 32, 1, false],
+"method": &"sacudir_alterna"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0, 0.1666)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_venganza_impar"]
+resource_name = "venganza_impar"
+length = 3.733333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 1.0999, 1.1833, 1.1999, 1.2166, 1.3166, 1.4333, 1.8333, 1.9666, 2.5666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 0, 0, 1), 0, 11, 2],
+"method": &"mezclar_paleta"
+}, {
+"args": [&"atacante", Vector2(24, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(3, 0), 16, 1, true],
+"method": &"sacudir_alterna"
+}, {
+"args": [&"defensor", Vector2(18, -8), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"atacante", Vector2(2, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"defensor", Vector2(-18, 8), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(-8, -5), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"atacante", 7],
+"method": &"volver"
+}, {
+"args": [&"atacante", Color(1, 0, 0, 1), 11, 0, 2],
+"method": &"mezclar_paleta"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499, 1.1999),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"atacante", Vector2(1, 0), 32, 1, false],
+"method": &"sacudir_alterna"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.2166)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}],
+"times": PackedFloat32Array(1.1999, 1.3166, 1.4333)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_venganza_impar_d20"]
+resource_name = "venganza_impar_d20"
+length = 3.733333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 1.0999, 1.1833, 1.1999, 1.2166, 1.3166, 1.4333, 1.8333, 1.9666, 2.5666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 0, 0, 1), 0, 11, 2],
+"method": &"mezclar_paleta"
+}, {
+"args": [&"atacante", Vector2(24, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(3, 0), 16, 1, true],
+"method": &"sacudir_alterna"
+}, {
+"args": [&"defensor", Vector2(-18, -8), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"atacante", Vector2(2, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"defensor", Vector2(18, 8), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(8, -5), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"atacante", 7],
+"method": &"volver"
+}, {
+"args": [&"atacante", Color(1, 0, 0, 1), 11, 0, 2],
+"method": &"mezclar_paleta"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499, 1.1999),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"atacante", Vector2(1, 0), 32, 1, false],
+"method": &"sacudir_alterna"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.2166)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}],
+"times": PackedFloat32Array(1.1999, 1.3166, 1.4333)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_golpes"]
+_data = {
+&"venganza_par": SubResource("Animation_venganza_par"),
+&"venganza_impar": SubResource("Animation_venganza_impar"),
+&"venganza_impar_d20": SubResource("Animation_venganza_impar_d20"),
+&"venganza_impar_d31": SubResource("Animation_venganza_impar_d20")
+}
+
+[node name="GolpesTurnos" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+material_mezcla = SubResource("Mezcla")
+
+[node name="Fondo" type="Node2D" parent="."]
+script = ExtResource("4_fondo")
+
+[node name="Imagen" type="Sprite2D" parent="Fondo"]
+visible = false
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="Velo" type="ColorRect" parent="Fondo"]
+visible = false
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="Golpe" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+texture = ExtResource("2_golpe")
+
+[node name="GolpeOpaco" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_golpe")
+
+[node name="Estela" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+
+[node name="SonidoAtacante" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoDefensor" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoCentro" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_golpes")

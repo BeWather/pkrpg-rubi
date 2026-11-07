@@ -1,0 +1,151 @@
+[gd_scene format=4 uid="uid://dlioo0vyvs6oo"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_t0b5m"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_3eqa3"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_74y6o"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_o5v42"]
+[ext_resource type="SpriteFrames" uid="uid://borgo2f2dfmil" path="res://escenas/avatares/npc_055.tres" id="ar_f_055"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="ar_npc_base"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="ar_s_evento"]
+[ext_resource type="SpriteFrames" uid="uid://cugc1qj5nqao6" path="res://escenas/avatares/npc_011.tres" id="ar_f_011"]
+[ext_resource type="Script" uid="uid://cgpmomq3542yj" path="res://scripts/npc/npc_pokemon.gd" id="ar_s_pokemon"]
+[ext_resource type="SpriteFrames" uid="uid://dbalbpmidq8ir" path="res://escenas/avatares/npc_wingull.tres" id="ar_f_wingull"]
+[ext_resource type="Script" path="res://scripts/eventos/ciudad_arborada/evento_interiores_arborada.gd" id="ar_s_ev_int"]
+[ext_resource type="Script" path="res://scripts/mapas/television.gd" id="tv_television"]
+[ext_resource type="Script" uid="uid://cix41nrfux4xa" path="res://scripts/mapas/tile_alterno.gd" id="tv_tile_alterno"]
+
+[node name="Casa" type="Node2D" unique_id=1201946613]
+script = ExtResource("1_t0b5m")
+nombre_interno = "ciudad_arborada_casa5"
+seccion = "CIUDAD_ARBORADA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_ARBORADA"
+solo_caminar = true
+musica_mapa = "CIUDAD_ARBORADA"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=997252449]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADkAAAABAAAAAAABADkAAAACAAAAAAABADkAAAADAAAAAAAGADcAAAAEAAAAAAAHADcAAAAGAAAAAAADADkAAAAHAAAAAAACADkAAAAFAAAAAAABADkAAAADAAEAAAAGADcAAAAEAAEAAAAHADcAAAADAAIAAAAGADcAAAAEAAIAAAAHADcAAAADAAMAAAAGADgAAAAEAAMAAAAHADgAAAAHAAEAAAACADoAAAAHAAIAAAACADsAAAAAAAEAAAAAADoAAAAAAAIAAAAAADsAAAAGAAEAAAAGAAMAAAAGAAIAAAADADoAAAAFAAEAAAABADoAAAAFAAIAAAADADsAAAACAAIAAAAEAD0AAAACAAMAAAAEADsAAAACAAEAAAAEADwAAAABAAEAAAADADwAAAABAAIAAAADAD0AAAACAAUAAAABADsAAAACAAQAAAABADsAAAADAAQAAAABADsAAAAEAAQAAAABADsAAAAFAAQAAAABADsAAAAFAAUAAAABADsAAAAFAAMAAAADADsAAAAHAAMAAAABADsAAAAGAAMAAAABADsAAAAGAAQAAAABADsAAAAHAAQAAAABADsAAAAGAAUAAAABADsAAAABAAUAAAABADsAAAABAAQAAAABADsAAAAAAAQAAAABADsAAAAAAAMAAAABADsAAAABAAMAAAABADsAAAAAAAUAAAABADsAAAAHAAUAAAABADsAAAADAAUAAAAEADoAAAAEAAUAAAAFADoAAAA=")
+tile_set = ExtResource("2_3eqa3")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=863292143]
+tile_map_data = PackedByteArray("AAAAAAUAAAAIADcAAAAHAAUAAAAJADcAAAA=")
+tile_set = ExtResource("2_3eqa3")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=575270243]
+z_index = 1
+y_sort_enabled = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=248948740]
+script = ExtResource("3_74y6o")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"1,2": {
+"flags": 1
+},
+"2,2": {
+"flags": 1
+},
+"3,3": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"4,3": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1543604165]
+position = Vector2(56, 86)
+script = ExtResource("4_o5v42")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_arborada"
+posicion_destino = Vector2(32, 2)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1119012595]
+position = Vector2(72, 86)
+script = ExtResource("4_o5v42")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_arborada"
+posicion_destino = Vector2(32, 2)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1848635463]
+
+[node name="Mujer" parent="NPCs" unique_id=1045285342 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_House4 objeto 1 (6,4) WOMAN_5 WANDER_AROUND (1,1)"
+position = Vector2(104, 78)
+id_texto = "ARBORADA_CASA5_MUJER"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("ar_f_055")
+coord = Vector2i(6, 4)
+
+[node name="Chico" parent="NPCs" unique_id=883805578 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_House4 objeto 2 (1,3) BOY_3 FACE_DOWN: manda a su WINGULL de recado y luego da la HIERBA MENTAL. Lo dirige Eventos/EventoInteriores"
+position = Vector2(24, 62)
+script = ExtResource("ar_s_evento")
+id_texto = "ARBORADA_CASA5_CHICO_ENVIA"
+tipo_movimiento = 8
+selec_frames = ExtResource("ar_f_011")
+coord = Vector2i(1, 3)
+
+[node name="Wingull" parent="NPCs" unique_id=1453470109 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_House4 objeto 3 (2,3) WINGULL FACE_DOWN, playmoncry; flag FLAG_HIDE_WINGULL_FORTREE_HOUSE = arborada_wingull_fuera"
+position = Vector2(40, 62)
+script = ExtResource("ar_s_pokemon")
+tamano_sprite = 3
+numero_nacional = 278
+bandera_ocultar = "arborada_wingull_fuera"
+id_texto = "ARBORADA_CASA5_WINGULL"
+tipo_movimiento = 8
+selec_frames = ExtResource("ar_f_wingull")
+coord = Vector2i(2, 3)
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1581050427]
+
+[node name="EventoInteriores" type="Node2D" parent="Eventos" unique_id=1125546386]
+editor_description = "pokeruby FortreeCity_House4/scripts.inc: el chico y el recado de su WINGULL (HIERBA MENTAL)"
+script = ExtResource("ar_s_ev_int")
+chico = NodePath("../../NPCs/Chico")
+wingull = NodePath("../../NPCs/Wingull")
+
+[node name="TilesAlternos" type="Node2D" parent="." unique_id=1716225549]
+
+[node name="PantallaTele" type="Node2D" parent="TilesAlternos" unique_id=1550270605]
+position = Vector2(104, 24)
+script = ExtResource("tv_tile_alterno")
+capa = NodePath("../../Suelo")
+coord_tile = Vector2i(6, 1)
+atlas_alterno = Vector2i(0, 5)
+
+[node name="Television" type="Sprite2D" parent="Carteles" unique_id=933152794]
+editor_description = "MB_TELEVISION de pokeruby: Event_TV (ProgramacionTV)."
+position = Vector2(104, 24)
+script = ExtResource("tv_television")
+coord_tile = Vector2i(6, 1)
+direccion = 1
+pantalla = NodePath("../../TilesAlternos/PantallaTele")

@@ -1,0 +1,158 @@
+[gd_scene format=4 uid="uid://co0bf4uecxqtc"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_tyerc"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_qr4h7"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_l77vs"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_fryj5"]
+[ext_resource type="SpriteFrames" uid="uid://dr1hww5bqlubq" path="res://escenas/avatares/npc_012.tres" id="c1_npc_012"]
+[ext_resource type="SpriteFrames" uid="uid://ct3gr3wlu1nb" path="res://escenas/avatares/npc_054.tres" id="c1_npc_054"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="c1_npc_base"]
+[ext_resource type="Script" uid="uid://dmy4ir5m1ul04" path="res://scripts/npc/npc_dialogo_condicional.gd" id="c1_dialogo"]
+[ext_resource type="Script" path="res://scripts/mapas/television.gd" id="tv_television"]
+[ext_resource type="Script" uid="uid://cix41nrfux4xa" path="res://scripts/mapas/tile_alterno.gd" id="tv_tile_alterno"]
+
+[node name="Casa1" type="Node2D" unique_id=337747448]
+script = ExtResource("1_tyerc")
+nombre_interno = "ciudad_portual_casa1"
+seccion = "CIUDAD_PORTUAL"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_PORTUAL"
+solo_caminar = true
+musica_mapa = "CIUDAD_PORTUAL"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1660786405]
+tile_map_data = PackedByteArray("AAAAAAAAAAAGABAAAAAAAAEAAAAGABEAAAAAAAIAAAAGABIAAAABAAAAAAAHABAAAAABAAEAAAAHABEAAAABAAIAAAAHABIAAAACAAAAAAAAAAYAAAACAAIAAAAAAAcAAAACAAEAAAAGAAMAAAADAAAAAAAFAAAAAAADAAEAAAAFAAEAAAAEAAAAAAAFAAAAAAAEAAEAAAAFAAEAAAAGAAAAAAAFAAAAAAAGAAEAAAAFAAEAAAAFAAAAAAAGAAAAAAAFAAEAAAAGAAEAAAAHAAAAAAAFAAAAAAAHAAEAAAAAAA0AAAAIAAAAAAAFAAAAAAAIAAEAAAAEAA0AAAAJAAAAAAAFAAAAAAAJAAEAAAAFAA0AAAAKAAAAAAAAAA8AAAAKAAEAAAAAABAAAAAHAAIAAAAAAA4AAAAIAAIAAAAEAA4AAAAJAAIAAAAFAA4AAAAKAAIAAAAAABEAAAAGAAIAAAAEAAQAAAAFAAIAAAAEAAQAAAAEAAIAAAAEAAQAAAADAAIAAAAEAAQAAAAEAAQAAAADAAUAAAAEAAUAAAADAAUAAAAHAAQAAAAEAAUAAAAHAAUAAAAEAAUAAAAFAAQAAAACAAkAAAAFAAUAAAACAAoAAAAGAAQAAAADAAkAAAAGAAUAAAADAAoAAAADAAcAAAAAAAEAAAAEAAcAAAABAAEAAAAKAAcAAAACAAUAAAAAAAcAAAABABMAAAAAAAMAAAABAAcAAAAAAAQAAAABAAcAAAAAAAUAAAABAAcAAAAAAAYAAAABAAcAAAABAAcAAAADAAQAAAACAAcAAAADAAQAAAABAAYAAAADAAQAAAACAAYAAAADAAQAAAADAAYAAAADAAQAAAAEAAYAAAADAAQAAAAFAAYAAAADAAQAAAAGAAYAAAADAAQAAAAHAAYAAAADAAQAAAAIAAYAAAADAAQAAAAJAAYAAAADAAQAAAAKAAYAAAADAAQAAAAKAAUAAAADAAQAAAAJAAUAAAADAAQAAAAIAAUAAAADAAQAAAAIAAQAAAADAAQAAAAJAAQAAAADAAQAAAAKAAQAAAADAAQAAAAKAAMAAAADAAQAAAAJAAMAAAADAAQAAAAIAAMAAAADAAQAAAAHAAMAAAADAAQAAAAGAAMAAAADAAQAAAAFAAMAAAADAAQAAAAEAAMAAAADAAQAAAADAAMAAAADAAQAAAACAAMAAAADAAQAAAABAAMAAAADAAQAAAABAAQAAAADAAQAAAACAAQAAAADAAQAAAADAAQAAAADAAQAAAADAAUAAAADAAQAAAACAAUAAAADAAQAAAABAAUAAAADAAQAAAAFAAcAAAADAAQAAAAGAAcAAAADAAQAAAAHAAcAAAADAAQAAAAIAAcAAAADAAQAAAAJAAcAAAADAAQAAAA=")
+tile_set = ExtResource("2_qr4h7")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=937628487]
+tile_map_data = PackedByteArray("AAAAAAYAAAACAAcAAAAKAAYAAAACAAcAAAA=")
+tile_set = ExtResource("2_qr4h7")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=615828127]
+position = Vector2(56, 118)
+script = ExtResource("3_l77vs")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_portual"
+posicion_destino = Vector2(21, 44)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=1450428448]
+position = Vector2(72, 118)
+script = ExtResource("3_l77vs")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_portual"
+posicion_destino = Vector2(21, 44)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=534991545]
+script = ExtResource("4_fryj5")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,7": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,4": {
+"flags": 1
+},
+"6,5": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=902757812]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Hombre" parent="NPCs" unique_id=1310200001 instance=ExtResource("c1_npc_base")]
+editor_description = "pokeruby SlateportCity_House2 objeto 1 (4,4) MAN_3 FACE_RIGHT (PokefanM, MSGBOX_NPC)"
+position = Vector2(72, 78)
+id_texto = "PORTUAL_CASA1_HOMBRE"
+tipo_movimiento = 10
+selec_frames = ExtResource("c1_npc_054")
+coord = Vector2i(4, 4)
+
+[node name="Nina" parent="NPCs" unique_id=1310200002 instance=ExtResource("c1_npc_base")]
+editor_description = "pokeruby SlateportCity_House2 objeto 2 (7,4) GIRL_3 FACE_LEFT (checkitem ITEM_CONTEST_PASS)"
+position = Vector2(120, 78)
+script = ExtResource("c1_dialogo")
+textos_condicionales = Dictionary[String, String]({
+"OBJETO_EN_MOCHILA_PASECONCURSO": "PORTUAL_CASA1_NINA_CON_PASE"
+})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "PORTUAL_CASA1_NINA_SIN_PASE"
+tipo_movimiento = 9
+selec_frames = ExtResource("c1_npc_012")
+coord = Vector2i(7, 4)
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1916597714]
+
+[node name="TilesAlternos" type="Node2D" parent="." unique_id=233585894]
+
+[node name="PantallaTele" type="Node2D" parent="TilesAlternos" unique_id=1781612310]
+position = Vector2(40, 24)
+script = ExtResource("tv_tile_alterno")
+capa = NodePath("../../Suelo")
+coord_tile = Vector2i(2, 1)
+atlas_alterno = Vector2i(0, 5)
+
+[node name="Television" type="Sprite2D" parent="Carteles" unique_id=2000938123]
+editor_description = "MB_TELEVISION de pokeruby: Event_TV (ProgramacionTV)."
+position = Vector2(40, 24)
+script = ExtResource("tv_television")
+coord_tile = Vector2i(2, 1)
+direccion = 1
+pantalla = NodePath("../../TilesAlternos/PantallaTele")

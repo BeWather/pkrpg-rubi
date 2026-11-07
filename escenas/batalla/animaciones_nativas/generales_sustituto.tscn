@@ -1,0 +1,1467 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/efecto_general_nativo.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/i5_candidate_hit_tile0.png" id="2_golpe"]
+[ext_resource type="Shader" path="res://escenas/batalla/animaciones_nativas/mezcla_gba.gdshader" id="3_mezcla"]
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/fondo_movimiento.gd" id="4_fondo"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Double Team.wav" id="10_se"]
+
+[sub_resource type="ShaderMaterial" id="Mezcla"]
+shader = ExtResource("3_mezcla")
+
+[sub_resource type="Animation" id="Animation_sustituto_fuera"]
+resource_name = "sustituto_fuera"
+length = 2.833333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9499, 1.6666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"atacante", 16, 0, 3],
+"method": &"opacidad_battler"
+}, {
+"args": [&"atacante", Color(1, 1, 1, 1), 0, 0, 0],
+"method": &"mezclar_paleta"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9499, 1.6666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 1, 1, 1), 0, 16, 0],
+"method": &"mezclar_paleta"
+}, {
+"args": [true, true],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_sustituto_fuera_rival"]
+resource_name = "sustituto_fuera_rival"
+length = 2.8
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9499, 1.6333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"atacante", 16, 0, 3],
+"method": &"opacidad_battler"
+}, {
+"args": [&"atacante", Color(1, 1, 1, 1), 0, 0, 0],
+"method": &"mezclar_paleta"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9499, 1.6333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 1, 1, 1), 0, 16, 0],
+"method": &"mezclar_paleta"
+}, {
+"args": [true, true],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_sustituto_aparece"]
+resource_name = "sustituto_aparece"
+length = 2.283333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.1166),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.1166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_sustituto_a_pokemon"]
+resource_name = "sustituto_a_pokemon"
+length = 1.883333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7166),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.7166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_sustituto_a_pokemon_rival"]
+resource_name = "sustituto_a_pokemon_rival"
+length = 1.85
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_pokemon_a_sustituto"]
+resource_name = "pokemon_a_sustituto"
+length = 1.883333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.7166),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.7166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_pokemon_a_sustituto_rival"]
+resource_name = "pokemon_a_sustituto_rival"
+length = 1.85
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_robo_general"]
+resource_name = "robo_general"
+length = 3.05
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.5499, 1.8833),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"defensor", 5, 5120, 4, false],
+"method": &"oscilar"
+}, {
+"args": [],
+"method": &"robo_carrera"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.8833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.5499)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_robo_general_sustituto"]
+resource_name = "robo_general_sustituto"
+length = 4.483333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.8166, 1.2666, 2.5999, 3.3166),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [&"defensor", 5, 5120, 4, false],
+"method": &"oscilar"
+}, {
+"args": [],
+"method": &"robo_carrera"
+}, {
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3.3166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(1.2666)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_robo_general_sustituto_rival"]
+resource_name = "robo_general_sustituto_rival"
+length = 4.416667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.7833, 1.2333, 2.5666, 3.2499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [&"defensor", 5, 5120, 4, false],
+"method": &"oscilar"
+}, {
+"args": [],
+"method": &"robo_carrera"
+}, {
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3.2499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(1.2333)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_robo_general_companero"]
+resource_name = "robo_general_companero"
+length = 2.1
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.5499, 0.9333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"defensor", 5, 5120, 4, false],
+"method": &"oscilar"
+}, {
+"args": [6],
+"method": &"robo_companero"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.9333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.5499)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_robo_general_companero_sustituto"]
+resource_name = "robo_general_companero_sustituto"
+length = 3.533333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.8166, 1.2666, 1.6499, 2.3666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [&"defensor", 5, 5120, 4, false],
+"method": &"oscilar"
+}, {
+"args": [6],
+"method": &"robo_companero"
+}, {
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.3666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(1.2666)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_robo_general_companero_sustituto_rival"]
+resource_name = "robo_general_companero_sustituto_rival"
+length = 3.466667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.7833, 1.2333, 1.6166, 2.2999),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [&"defensor", 5, 5120, 4, false],
+"method": &"oscilar"
+}, {
+"args": [6],
+"method": &"robo_companero"
+}, {
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.2999),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(1.2333)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_sustituto_fuera_doble"]
+resource_name = "sustituto_fuera_doble"
+length = 2.566667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9499, 1.3999),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"atacante", 16, 0, 3],
+"method": &"opacidad_battler"
+}, {
+"args": [&"atacante", Color(1, 1, 1, 1), 0, 0, 0],
+"method": &"mezclar_paleta"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9499, 1.3999),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 1, 1, 1), 0, 16, 0],
+"method": &"mezclar_paleta"
+}, {
+"args": [true, true],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_sustituto_fuera_doble_rival"]
+resource_name = "sustituto_fuera_doble_rival"
+length = 2.633333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9499, 1.4666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"atacante", 16, 0, 3],
+"method": &"opacidad_battler"
+}, {
+"args": [&"atacante", Color(1, 1, 1, 1), 0, 0, 0],
+"method": &"mezclar_paleta"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9499, 1.4666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 1, 1, 1), 0, 16, 0],
+"method": &"mezclar_paleta"
+}, {
+"args": [true, true],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_sustituto_fuera_d21"]
+resource_name = "sustituto_fuera_d21"
+length = 2.966667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9499, 1.7999),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"atacante", 16, 0, 3],
+"method": &"opacidad_battler"
+}, {
+"args": [&"atacante", Color(1, 1, 1, 1), 0, 0, 0],
+"method": &"mezclar_paleta"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9499, 1.7999),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"atacante", Color(1, 1, 1, 1), 0, 16, 0],
+"method": &"mezclar_paleta"
+}, {
+"args": [true, true],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_sustituto_a_pokemon_doble"]
+resource_name = "sustituto_a_pokemon_doble"
+length = 1.616667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_sustituto_a_pokemon_doble_rival"]
+resource_name = "sustituto_a_pokemon_doble_rival"
+length = 1.683333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5166),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_sustituto_a_pokemon_d21"]
+resource_name = "sustituto_a_pokemon_d21"
+length = 2.016667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_pokemon_a_sustituto_doble"]
+resource_name = "pokemon_a_sustituto_doble"
+length = 1.616667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_pokemon_a_sustituto_doble_rival"]
+resource_name = "pokemon_a_sustituto_doble_rival"
+length = 1.683333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5166),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_pokemon_a_sustituto_d21"]
+resource_name = "pokemon_a_sustituto_d21"
+length = 2.016667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_robo_general_sustituto_doble"]
+resource_name = "robo_general_sustituto_doble"
+length = 3.95
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.5499, 0.9999, 2.3333, 2.7833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [&"defensor", 5, 5120, 4, false],
+"method": &"oscilar"
+}, {
+"args": [],
+"method": &"robo_carrera"
+}, {
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.7833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.9999)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_robo_general_sustituto_doble_rival"]
+resource_name = "robo_general_sustituto_doble_rival"
+length = 4.083333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.6166, 1.0666, 2.3999, 2.9166),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [&"defensor", 5, 5120, 4, false],
+"method": &"oscilar"
+}, {
+"args": [],
+"method": &"robo_carrera"
+}, {
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.9166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(1.0666)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_robo_general_sustituto_d21"]
+resource_name = "robo_general_sustituto_d21"
+length = 4.75
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.9499, 1.3999, 2.7333, 3.5833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [&"defensor", 5, 5120, 4, false],
+"method": &"oscilar"
+}, {
+"args": [],
+"method": &"robo_carrera"
+}, {
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(3.5833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(1.3999)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_robo_general_companero_sustituto_doble"]
+resource_name = "robo_general_companero_sustituto_doble"
+length = 3
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.5499, 0.9999, 1.3833, 1.8333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [&"defensor", 5, 5120, 4, false],
+"method": &"oscilar"
+}, {
+"args": [6],
+"method": &"robo_companero"
+}, {
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.8333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.9999)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_robo_general_companero_sustituto_doble_rival"]
+resource_name = "robo_general_companero_sustituto_doble_rival"
+length = 3.133333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.6166, 1.0666, 1.4499, 1.9666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [&"defensor", 5, 5120, 4, false],
+"method": &"oscilar"
+}, {
+"args": [6],
+"method": &"robo_companero"
+}, {
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.9666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(1.0666)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_robo_general_companero_sustituto_d21"]
+resource_name = "robo_general_companero_sustituto_d21"
+length = 3.8
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.9499, 1.3999, 1.7833, 2.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [true, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [&"defensor", 5, 5120, 4, false],
+"method": &"oscilar"
+}, {
+"args": [6],
+"method": &"robo_companero"
+}, {
+"args": [false, false],
+"method": &"intercambio_sustituto"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.6333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(1.3999)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_golpes"]
+_data = {
+&"sustituto_fuera": SubResource("Animation_sustituto_fuera"),
+&"sustituto_fuera_rival": SubResource("Animation_sustituto_fuera_rival"),
+&"sustituto_aparece": SubResource("Animation_sustituto_aparece"),
+&"sustituto_a_pokemon": SubResource("Animation_sustituto_a_pokemon"),
+&"sustituto_a_pokemon_rival": SubResource("Animation_sustituto_a_pokemon_rival"),
+&"pokemon_a_sustituto": SubResource("Animation_pokemon_a_sustituto"),
+&"pokemon_a_sustituto_rival": SubResource("Animation_pokemon_a_sustituto_rival"),
+&"robo_general": SubResource("Animation_robo_general"),
+&"robo_general_sustituto": SubResource("Animation_robo_general_sustituto"),
+&"robo_general_sustituto_rival": SubResource("Animation_robo_general_sustituto_rival"),
+&"robo_general_companero": SubResource("Animation_robo_general_companero"),
+&"robo_general_companero_sustituto": SubResource("Animation_robo_general_companero_sustituto"),
+&"robo_general_companero_sustituto_rival": SubResource("Animation_robo_general_companero_sustituto_rival"),
+&"sustituto_fuera_doble": SubResource("Animation_sustituto_fuera_doble"),
+&"sustituto_fuera_doble_rival": SubResource("Animation_sustituto_fuera_doble_rival"),
+&"sustituto_fuera_d21": SubResource("Animation_sustituto_fuera_d21"),
+&"sustituto_fuera_d23": SubResource("Animation_sustituto_fuera_d21"),
+&"sustituto_fuera_d30": SubResource("Animation_sustituto_fuera_d21"),
+&"sustituto_fuera_d32": SubResource("Animation_sustituto_fuera_d21"),
+&"sustituto_fuera_d20": SubResource("Animation_sustituto_fuera_d21"),
+&"sustituto_fuera_d31": SubResource("Animation_sustituto_fuera_d21"),
+&"sustituto_fuera_d22": SubResource("Animation_sustituto_fuera_d21"),
+&"sustituto_fuera_d33": SubResource("Animation_sustituto_fuera_d21"),
+&"sustituto_a_pokemon_doble": SubResource("Animation_sustituto_a_pokemon_doble"),
+&"sustituto_a_pokemon_doble_rival": SubResource("Animation_sustituto_a_pokemon_doble_rival"),
+&"sustituto_a_pokemon_d21": SubResource("Animation_sustituto_a_pokemon_d21"),
+&"sustituto_a_pokemon_d23": SubResource("Animation_sustituto_a_pokemon_d21"),
+&"sustituto_a_pokemon_d30": SubResource("Animation_sustituto_a_pokemon_d21"),
+&"sustituto_a_pokemon_d32": SubResource("Animation_sustituto_a_pokemon_d21"),
+&"sustituto_a_pokemon_d20": SubResource("Animation_sustituto_a_pokemon_d21"),
+&"sustituto_a_pokemon_d31": SubResource("Animation_sustituto_a_pokemon_d21"),
+&"sustituto_a_pokemon_d22": SubResource("Animation_sustituto_a_pokemon_d21"),
+&"sustituto_a_pokemon_d33": SubResource("Animation_sustituto_a_pokemon_d21"),
+&"pokemon_a_sustituto_doble": SubResource("Animation_pokemon_a_sustituto_doble"),
+&"pokemon_a_sustituto_doble_rival": SubResource("Animation_pokemon_a_sustituto_doble_rival"),
+&"pokemon_a_sustituto_d21": SubResource("Animation_pokemon_a_sustituto_d21"),
+&"pokemon_a_sustituto_d23": SubResource("Animation_pokemon_a_sustituto_d21"),
+&"pokemon_a_sustituto_d30": SubResource("Animation_pokemon_a_sustituto_d21"),
+&"pokemon_a_sustituto_d32": SubResource("Animation_pokemon_a_sustituto_d21"),
+&"pokemon_a_sustituto_d20": SubResource("Animation_pokemon_a_sustituto_d21"),
+&"pokemon_a_sustituto_d31": SubResource("Animation_pokemon_a_sustituto_d21"),
+&"pokemon_a_sustituto_d22": SubResource("Animation_pokemon_a_sustituto_d21"),
+&"pokemon_a_sustituto_d33": SubResource("Animation_pokemon_a_sustituto_d21"),
+&"robo_general_sustituto_doble": SubResource("Animation_robo_general_sustituto_doble"),
+&"robo_general_sustituto_doble_rival": SubResource("Animation_robo_general_sustituto_doble_rival"),
+&"robo_general_sustituto_d21": SubResource("Animation_robo_general_sustituto_d21"),
+&"robo_general_sustituto_d23": SubResource("Animation_robo_general_sustituto_d21"),
+&"robo_general_sustituto_d30": SubResource("Animation_robo_general_sustituto_d21"),
+&"robo_general_sustituto_d32": SubResource("Animation_robo_general_sustituto_d21"),
+&"robo_general_sustituto_d20": SubResource("Animation_robo_general_sustituto_d21"),
+&"robo_general_sustituto_d31": SubResource("Animation_robo_general_sustituto_d21"),
+&"robo_general_sustituto_d22": SubResource("Animation_robo_general_sustituto_d21"),
+&"robo_general_sustituto_d33": SubResource("Animation_robo_general_sustituto_d21"),
+&"robo_general_companero_sustituto_doble": SubResource("Animation_robo_general_companero_sustituto_doble"),
+&"robo_general_companero_sustituto_doble_rival": SubResource("Animation_robo_general_companero_sustituto_doble_rival"),
+&"robo_general_companero_sustituto_d21": SubResource("Animation_robo_general_companero_sustituto_d21"),
+&"robo_general_companero_sustituto_d23": SubResource("Animation_robo_general_companero_sustituto_d21"),
+&"robo_general_companero_sustituto_d30": SubResource("Animation_robo_general_companero_sustituto_d21"),
+&"robo_general_companero_sustituto_d32": SubResource("Animation_robo_general_companero_sustituto_d21"),
+&"robo_general_companero_sustituto_d20": SubResource("Animation_robo_general_companero_sustituto_d21"),
+&"robo_general_companero_sustituto_d31": SubResource("Animation_robo_general_companero_sustituto_d21"),
+&"robo_general_companero_sustituto_d22": SubResource("Animation_robo_general_companero_sustituto_d21"),
+&"robo_general_companero_sustituto_d33": SubResource("Animation_robo_general_companero_sustituto_d21")
+}
+
+[node name="GeneralesSustituto" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+material_mezcla = SubResource("Mezcla")
+voltear_imagen_con_lado = false
+
+[node name="Fondo" type="Node2D" parent="."]
+script = ExtResource("4_fondo")
+
+[node name="Imagen" type="Sprite2D" parent="Fondo"]
+visible = false
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="Velo" type="ColorRect" parent="Fondo"]
+visible = false
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="Golpe" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+texture = ExtResource("2_golpe")
+
+[node name="GolpeOpaco" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_golpe")
+
+[node name="Estela" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+
+[node name="SonidoAtacante" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoDefensor" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoCentro" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_golpes")

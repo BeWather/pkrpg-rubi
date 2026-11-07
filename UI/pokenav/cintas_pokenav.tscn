@@ -1,0 +1,474 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/pokenav/cintas_pokenav.gd" id="e1"]
+[ext_resource type="PackedScene" path="res://UI/pokenav/fondo_pokenav.tscn" id="e2"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/cabecera_cintas.png" id="e3"]
+[ext_resource type="LabelSettings" path="res://UI/texto_normal_negro.tres" id="e4"]
+[ext_resource type="PackedScene" path="res://UI/pokenav/lista_pokenav.tscn" id="e5"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/barra_inferior.png" id="e6"]
+[ext_resource type="Texture2D" path="res://UI/menu_box_1.png" id="e7"]
+[ext_resource type="Script" path="res://scripts/clases/MenuBoxComponent.gd" id="e8"]
+[ext_resource type="Script" path="res://UI/pokemon_sprite.gd" id="e9"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/cintas_iconos.png" id="e10"]
+
+[sub_resource type="Animation" id="Anim_2"]
+resource_name = "zoom_entrada"
+length = 0.06667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.06667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.5, 0.5), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Anim_3"]
+resource_name = "zoom_salida"
+length = 0.06667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.06667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0.5, 0.5)]
+}
+
+[sub_resource type="AnimationLibrary" id="Lib_4"]
+_data = {
+&"zoom_entrada": SubResource("Anim_2"),
+&"zoom_salida": SubResource("Anim_3")
+}
+
+[sub_resource type="Animation" id="Anim_6"]
+resource_name = "entrada"
+length = 0.26667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cabecera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-128, 1), Vector2(0, 1)]
+}
+
+[sub_resource type="Animation" id="Anim_7"]
+resource_name = "salida"
+length = 0.26667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cabecera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1), Vector2(-128, 1)]
+}
+
+[sub_resource type="Animation" id="Anim_8"]
+resource_name = "vista_entrada"
+length = 0.13333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vista:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.13333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Anim_9"]
+resource_name = "vista_salida"
+length = 0.13333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Vista:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.13333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="Lib_10"]
+_data = {
+&"entrada": SubResource("Anim_6"),
+&"salida": SubResource("Anim_7"),
+&"vista_entrada": SubResource("Anim_8"),
+&"vista_salida": SubResource("Anim_9")
+}
+
+[node name="CintasPokenav" type="Node2D"]
+script = ExtResource("e1")
+
+[node name="Fondo" parent="." instance=ExtResource("e2")]
+
+[node name="Cabecera" type="Sprite2D" parent="."]
+texture = ExtResource("e3")
+position = Vector2(-128, 1)
+centered = false
+
+[node name="Contador" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4
+offset_top = 40
+offset_right = 86
+offset_bottom = 55
+text = ""
+label_settings = ExtResource("e4")
+
+[node name="Lista" parent="." instance=ExtResource("e5")]
+
+[node name="Vista" type="Node2D" parent="."]
+visible = false
+modulate = Color(1, 1, 1, 0)
+
+[node name="Barra" type="Sprite2D" parent="Vista"]
+texture = ExtResource("e6")
+position = Vector2(0, 144)
+centered = false
+
+[node name="Marco" type="NinePatchRect" parent="Vista"]
+layout_mode = 0
+offset_left = 80
+offset_top = 24
+offset_right = 240
+offset_bottom = 144
+texture = ExtResource("e7")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MenuBoxComponent" type="Node" parent="Vista/Marco"]
+script = ExtResource("e8")
+
+[node name="Pokemon" type="AnimatedSprite2D" parent="Vista"]
+position = Vector2(38, 104)
+script = ExtResource("e9")
+
+[node name="Nombre" type="Label" parent="Vista"]
+layout_mode = 0
+offset_left = 104
+offset_top = 6
+offset_right = 232
+offset_bottom = 21
+text = ""
+label_settings = ExtResource("e4")
+
+[node name="Rejilla" type="Node2D" parent="Vista"]
+
+[node name="Celda0" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(88, 32)
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 32, 16, 16)
+visible = false
+
+[node name="Celda1" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(104, 32)
+centered = false
+region_enabled = true
+region_rect = Rect2(32, 32, 16, 16)
+visible = false
+
+[node name="Celda2" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(120, 32)
+centered = false
+region_enabled = true
+region_rect = Rect2(64, 32, 16, 16)
+visible = false
+
+[node name="Celda3" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(136, 32)
+centered = false
+region_enabled = true
+region_rect = Rect2(96, 32, 16, 16)
+visible = false
+
+[node name="Celda4" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(152, 32)
+centered = false
+region_enabled = true
+region_rect = Rect2(128, 32, 16, 16)
+visible = false
+
+[node name="Celda5" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(168, 32)
+centered = false
+region_enabled = true
+region_rect = Rect2(160, 32, 16, 16)
+visible = false
+
+[node name="Celda6" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(184, 32)
+centered = false
+region_enabled = true
+region_rect = Rect2(192, 32, 16, 16)
+visible = false
+
+[node name="Celda7" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(200, 32)
+centered = false
+region_enabled = true
+region_rect = Rect2(224, 32, 16, 16)
+visible = false
+
+[node name="Celda8" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(216, 32)
+centered = false
+region_enabled = true
+region_rect = Rect2(256, 32, 16, 16)
+visible = false
+
+[node name="Celda9" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(88, 48)
+centered = false
+region_enabled = true
+region_rect = Rect2(288, 32, 16, 16)
+visible = false
+
+[node name="Celda10" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(104, 48)
+centered = false
+region_enabled = true
+region_rect = Rect2(320, 32, 16, 16)
+visible = false
+
+[node name="Celda11" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(120, 48)
+centered = false
+region_enabled = true
+region_rect = Rect2(352, 32, 16, 16)
+visible = false
+
+[node name="Celda12" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(136, 48)
+centered = false
+region_enabled = true
+region_rect = Rect2(384, 32, 16, 16)
+visible = false
+
+[node name="Celda13" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(152, 48)
+centered = false
+region_enabled = true
+region_rect = Rect2(416, 32, 16, 16)
+visible = false
+
+[node name="Celda14" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(168, 48)
+centered = false
+region_enabled = true
+region_rect = Rect2(448, 32, 16, 16)
+visible = false
+
+[node name="Celda15" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(184, 48)
+centered = false
+region_enabled = true
+region_rect = Rect2(480, 32, 16, 16)
+visible = false
+
+[node name="Celda16" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(200, 48)
+centered = false
+region_enabled = true
+region_rect = Rect2(512, 32, 16, 16)
+visible = false
+
+[node name="Celda17" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(216, 48)
+centered = false
+region_enabled = true
+region_rect = Rect2(544, 32, 16, 16)
+visible = false
+
+[node name="Celda18" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(88, 64)
+centered = false
+region_enabled = true
+region_rect = Rect2(576, 32, 16, 16)
+visible = false
+
+[node name="Celda19" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(104, 64)
+centered = false
+region_enabled = true
+region_rect = Rect2(608, 32, 16, 16)
+visible = false
+
+[node name="Celda20" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(120, 64)
+centered = false
+region_enabled = true
+region_rect = Rect2(640, 32, 16, 16)
+visible = false
+
+[node name="Celda21" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(136, 64)
+centered = false
+region_enabled = true
+region_rect = Rect2(672, 32, 16, 16)
+visible = false
+
+[node name="Celda22" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(152, 64)
+centered = false
+region_enabled = true
+region_rect = Rect2(704, 32, 16, 16)
+visible = false
+
+[node name="Celda23" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(168, 64)
+centered = false
+region_enabled = true
+region_rect = Rect2(736, 32, 16, 16)
+visible = false
+
+[node name="Celda24" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(184, 64)
+centered = false
+region_enabled = true
+region_rect = Rect2(768, 32, 16, 16)
+visible = false
+
+[node name="Celda25" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(200, 64)
+centered = false
+region_enabled = true
+region_rect = Rect2(800, 32, 16, 16)
+visible = false
+
+[node name="Celda26" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(216, 64)
+centered = false
+region_enabled = true
+region_rect = Rect2(832, 32, 16, 16)
+visible = false
+
+[node name="Celda27" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(88, 80)
+centered = false
+region_enabled = true
+region_rect = Rect2(864, 32, 16, 16)
+visible = false
+
+[node name="Celda28" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(104, 80)
+centered = false
+region_enabled = true
+region_rect = Rect2(896, 32, 16, 16)
+visible = false
+
+[node name="Celda29" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(120, 80)
+centered = false
+region_enabled = true
+region_rect = Rect2(928, 32, 16, 16)
+visible = false
+
+[node name="Celda30" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(136, 80)
+centered = false
+region_enabled = true
+region_rect = Rect2(960, 32, 16, 16)
+visible = false
+
+[node name="Celda31" type="Sprite2D" parent="Vista/Rejilla"]
+texture = ExtResource("e10")
+position = Vector2(152, 80)
+centered = false
+region_enabled = true
+region_rect = Rect2(992, 32, 16, 16)
+visible = false
+
+[node name="Linea1" type="Label" parent="Vista"]
+layout_mode = 0
+offset_left = 90
+offset_top = 104
+offset_right = 236
+offset_bottom = 119
+text = ""
+label_settings = ExtResource("e4")
+
+[node name="Linea2" type="Label" parent="Vista"]
+layout_mode = 0
+offset_left = 90
+offset_top = 120
+offset_right = 236
+offset_bottom = 135
+text = ""
+label_settings = ExtResource("e4")
+
+[node name="Zoom" type="Sprite2D" parent="Vista"]
+texture = ExtResource("e10")
+position = Vector2(96, 40)
+centered = true
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 32)
+z_index = 5
+scale = Vector2(0.5, 0.5)
+visible = false
+
+[node name="Anim" type="AnimationPlayer" parent="Vista/Zoom"]
+libraries/ = SubResource("Lib_4")
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("Lib_10")

@@ -1,0 +1,166 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://addons/tilemap_inspector/editores/editor_encuentros_visual/fila_slot.gd" id="1_fila"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tarjeta"]
+content_margin_left = 8.0
+content_margin_top = 4.0
+content_margin_right = 8.0
+content_margin_bottom = 4.0
+bg_color = Color(0.13, 0.15, 0.2, 1)
+border_width_left = 3
+border_color = Color(0.35, 0.55, 0.95, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_barra_fondo"]
+bg_color = Color(0.08, 0.09, 0.12, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_barra_relleno"]
+bg_color = Color(0.36, 0.78, 0.42, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="FilaSlot" type="PanelContainer"]
+custom_minimum_size = Vector2(0, 76)
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_tarjeta")
+script = ExtResource("1_fila")
+
+[node name="Fila" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Numero" type="Label" parent="Fila"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(28, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.6, 0.7, 1)
+theme_override_font_sizes/font_size = 14
+text = "01"
+horizontal_alignment = 2
+
+[node name="Icono" type="TextureRect" parent="Fila"]
+unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_vertical = 4
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Especie" type="VBoxContainer" parent="Fila"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_constants/separation = 2
+
+[node name="Nombre" type="Label" parent="Fila/Especie"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.86, 0.35, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 22
+text = "(vacío)"
+clip_text = true
+
+[node name="Edicion" type="HBoxContainer" parent="Fila/Especie"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Interno" type="LineEdit" parent="Fila/Especie/Edicion"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "nombre_interno de la especie (tabla Pokemon)"
+placeholder_text = "NOMBRE_INTERNO"
+
+[node name="EtiquetaNivel" type="Label" parent="Fila/Especie/Edicion"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.65, 0.75, 1)
+text = "Nv."
+
+[node name="NivelMin" type="SpinBox" parent="Fila/Especie/Edicion"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Nivel mínimo"
+min_value = 1.0
+value = 1.0
+
+[node name="Guion" type="Label" parent="Fila/Especie/Edicion"]
+layout_mode = 2
+text = "–"
+
+[node name="NivelMax" type="SpinBox" parent="Fila/Especie/Edicion"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Nivel máximo"
+min_value = 1.0
+value = 1.0
+
+[node name="Probabilidad" type="VBoxContainer" parent="Fila"]
+custom_minimum_size = Vector2(130, 0)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 3
+
+[node name="Porcentaje" type="Label" parent="Fila/Probabilidad"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.95, 0.55, 1)
+theme_override_font_sizes/font_size = 20
+text = "—"
+horizontal_alignment = 2
+
+[node name="Barra" type="ProgressBar" parent="Fila/Probabilidad"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 8)
+layout_mode = 2
+theme_override_styles/background = SubResource("StyleBoxFlat_barra_fondo")
+theme_override_styles/fill = SubResource("StyleBoxFlat_barra_relleno")
+show_percentage = false
+
+[node name="Grupo" type="Label" parent="Fila/Probabilidad"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.75, 1, 1)
+theme_override_font_sizes/font_size = 11
+horizontal_alignment = 2
+
+[node name="Acciones" type="VBoxContainer" parent="Fila"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 2
+
+[node name="Subir" type="Button" parent="Fila/Acciones"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Subir slot (cambia su probabilidad)"
+text = "▲"
+flat = true
+
+[node name="Bajar" type="Button" parent="Fila/Acciones"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Bajar slot (cambia su probabilidad)"
+text = "▼"
+flat = true
+
+[node name="Eliminar" type="Button" parent="Fila"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 4
+tooltip_text = "Eliminar slot"
+text = "✖"
+flat = true

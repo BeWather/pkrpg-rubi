@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://cxyib3877ctj3"
+
+[deps]
+
+files=["res://BaseDatos/concursos/textos_concurso.es.translation", "res://BaseDatos/concursos/textos_concurso.en.translation"]
+
+source_file="res://BaseDatos/concursos/textos_concurso.csv"
+dest_files=["res://BaseDatos/concursos/textos_concurso.es.translation", "res://BaseDatos/concursos/textos_concurso.en.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

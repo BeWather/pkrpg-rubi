@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wch2it0u5tmy"
+path="res://.godot/imported/1-68 Congratulations! Your Pokémon Evolved!.mp3-b2fffb7cddb6af7011ca78ca54701824.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-68 Congratulations! Your Pokémon Evolved!.mp3"
+dest_files=["res://.godot/imported/1-68 Congratulations! Your Pokémon Evolved!.mp3-b2fffb7cddb6af7011ca78ca54701824.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

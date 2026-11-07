@@ -1,0 +1,73 @@
+[gd_scene format=4 uid="uid://bkp0pja5hj6sf"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mgjyb"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_arcw8"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_jc5mg"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_dj7e6"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="cc_npc_base"]
+[ext_resource type="SpriteFrames" uid="uid://buukulhhkfyjc" path="res://escenas/avatares/npc_050.tres" id="cc_npc_050"]
+[ext_resource type="Script" uid="uid://cgpmomq3542yj" path="res://scripts/npc/npc_pokemon.gd" id="cc_pokemon"]
+[ext_resource type="SpriteFrames" uid="uid://cwleqbqas7i2n" path="res://escenas/avatares/npc_111.tres" id="cc_npc_111"]
+
+[node name="Casa4" type="Node2D" unique_id=749470543]
+script = ExtResource("1_mgjyb")
+nombre_interno = "ciudad_calagua_casa4"
+seccion = "CIUDAD_CALAGUA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_CALAGUA"
+solo_caminar = true
+musica_mapa = "CIUDAD_OROMAR"
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=991336295]
+tile_map_data = PackedByteArray("AAAAAAAAAAAGABAAAAAAAAEAAAAGABEAAAABAAAAAAAHABAAAAABAAEAAAAHABEAAAACAAAAAAABAA8AAAACAAEAAAABABAAAAADAAAAAAACAA8AAAADAAEAAAACABAAAAAEAAAAAAAFAAAAAAAEAAEAAAAFAAEAAAAFAAAAAAAHAAAAAAAFAAEAAAAHAAEAAAAGAAAAAAAFAAAAAAAGAAEAAAAFAAEAAAAHAAAAAAAFAAAAAAAHAAEAAAAFAAEAAAAIAAAAAAAFAAAAAAAIAAEAAAAAABIAAAAJAAAAAAAFAAAAAAAJAAEAAAAAABIAAAACAAIAAAABABEAAAAAAAIAAAAGABIAAAABAAIAAAAHABIAAAAIAAIAAAAAABMAAAAJAAIAAAAAABMAAAAHAAIAAAAEAAQAAAAGAAIAAAAEAAQAAAAFAAIAAAAEAAQAAAAEAAIAAAAEAAQAAAADAAIAAAACABEAAAAAAAYAAAABAAcAAAAAAAUAAAABAAcAAAAAAAQAAAABAAcAAAAAAAMAAAABAAcAAAABAAMAAAAFAAYAAAABAAQAAAAFAAcAAAABAAUAAAAFAAcAAAABAAYAAAAFAAgAAAACAAMAAAAGAAYAAAACAAQAAAAAAAkAAAACAAUAAAAAAAoAAAACAAYAAAAGAAgAAAADAAMAAAAGAAYAAAADAAQAAAABAAkAAAADAAUAAAABAAoAAAADAAYAAAAGAAgAAAAEAAMAAAAGAAYAAAAEAAQAAAACABwAAAAEAAUAAAACABwAAAAEAAYAAAAGAAgAAAAFAAMAAAAGAAYAAAAFAAQAAAAGAAcAAAAFAAUAAAAGAAcAAAAFAAYAAAAGAAgAAAAGAAMAAAAGAAYAAAAGAAQAAAAGAAcAAAAGAAUAAAAGAAcAAAAGAAYAAAAGAAgAAAAHAAMAAAAHAAYAAAAHAAQAAAAHAAcAAAAHAAUAAAAHAAcAAAAHAAYAAAAHAAgAAAAIAAMAAAADAAQAAAAIAAQAAAADAAQAAAAIAAUAAAADAAQAAAAIAAYAAAADAAQAAAAJAAMAAAADAAQAAAAJAAQAAAADAAQAAAAJAAUAAAADAAQAAAAJAAYAAAADAAQAAAAAAAgAAAABAAcAAAABAAgAAAADAAQAAAACAAgAAAADAAQAAAADAAgAAAAAAAEAAAAEAAgAAAABAAEAAAAFAAgAAAADAAQAAAAGAAgAAAADAAQAAAAHAAgAAAADAAQAAAAIAAgAAAADAAQAAAAJAAgAAAACAAUAAAAJAAcAAAADAAQAAAAIAAcAAAADAAQAAAAHAAcAAAADAAQAAAAGAAcAAAADAAQAAAAFAAcAAAADAAQAAAAEAAcAAAADAAQAAAADAAcAAAADAAQAAAACAAcAAAADAAQAAAABAAcAAAADAAQAAAAAAAcAAAABAAcAAAA=")
+tile_set = ExtResource("2_arcw8")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=450578402]
+tile_map_data = PackedByteArray("AAAJAAcAAAACAAcAAAA=")
+tile_set = ExtResource("2_arcw8")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=211795028]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Experto" parent="NPCs" unique_id=1330400000 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_House1 objeto 1 (4,5) OLD_MAN_1 FACE_LEFT (MSGBOX_NPC)"
+position = Vector2(72, 94)
+id_texto = "CALAGUA_CASA4_EXPERTO"
+tipo_movimiento = 9
+selec_frames = ExtResource("cc_npc_050")
+coord = Vector2i(4, 5)
+
+[node name="Kecleon" parent="NPCs" unique_id=1330400001 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_House1 objeto 2 (4,4) KECLEON_1 FACE_DOWN, playmoncry"
+position = Vector2(72, 78)
+script = ExtResource("cc_pokemon")
+numero_nacional = 352
+id_texto = "CALAGUA_CASA4_KECLEON"
+tipo_movimiento = 8
+selec_frames = ExtResource("cc_npc_111")
+coord = Vector2i(4, 4)
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1016168764]
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1951418542]
+script = ExtResource("3_jc5mg")
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=2039454932]
+position = Vector2(56, 134)
+script = ExtResource("4_dj7e6")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_calagua"
+posicion_destino = Vector2(42, 6)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=30303994]
+position = Vector2(72, 134)
+script = ExtResource("4_dj7e6")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_calagua"
+posicion_destino = Vector2(42, 6)
+direccion = Vector2(0, 1)
+dar_paso = true

@@ -1,0 +1,126 @@
+{
+  "source": "pokeruby/src/data/battle_moves.c F_AFFECTED_BY_MAGIC_COAT",
+  "certified_complete": false,
+  "moves": {
+    "28": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "39": {
+      "target": "TARGET_BOTH_ENEMIES"
+    },
+    "43": {
+      "target": "TARGET_BOTH_ENEMIES"
+    },
+    "45": {
+      "target": "TARGET_BOTH_ENEMIES"
+    },
+    "47": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "48": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "73": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "77": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "78": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "79": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "81": {
+      "target": "TARGET_BOTH_ENEMIES"
+    },
+    "86": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "92": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "95": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "103": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "108": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "109": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "137": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "139": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "142": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "147": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "148": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "169": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "178": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "184": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "186": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "204": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "207": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "212": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "213": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "230": {
+      "target": "TARGET_BOTH_ENEMIES"
+    },
+    "260": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "261": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "281": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "297": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "313": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "319": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "320": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "321": {
+      "target": "TARGET_SELECTED_POKEMON"
+    },
+    "335": {
+      "target": "TARGET_SELECTED_POKEMON"
+    }
+  }
+}

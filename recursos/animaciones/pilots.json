@@ -1,0 +1,72 @@
+{
+  "schema_version": 1,
+  "definitions": [
+    {"key":"ruby:move/1","coverage":"adapted","source_script":"Move_POUND","steps":[
+      {"op":"effect","behavior":"impact","texture":"res://graficos/batalla/animaciones/impact.png","ticks":12},
+      {"op":"effect","behavior":"shake","selector":"target","x":3,"ticks":12},
+      {"op":"sound","path":"res://Audio/SE/PRSFX- Pound.wav"},
+      {"op":"marker","name":"impact"},{"op":"barrier"}]},
+    {"key":"ruby:move/33","coverage":"adapted","source_script":"Move_TACKLE","steps":[
+      {"op":"effect","behavior":"lunge","selector":"attacker","ticks":16,"distance":18},
+      {"op":"wait","ticks":8},{"op":"effect","behavior":"impact","texture":"res://graficos/batalla/animaciones/impact.png","ticks":12},
+      {"op":"effect","behavior":"shake","x":3,"ticks":12},{"op":"marker","name":"impact"},{"op":"barrier"}]},
+    {"key":"ruby:move/52","coverage":"adapted","source_script":"Move_EMBER","steps":[
+      {"op":"effect","behavior":"projectile","texture":"res://graficos/batalla/animaciones/small_ember.png","frames":5,"ticks":30,"arc":8},
+      {"op":"wait","ticks":4},{"op":"effect","behavior":"projectile","texture":"res://graficos/batalla/animaciones/small_ember.png","frames":5,"ticks":30,"arc":-8},
+      {"op":"wait","ticks":26},{"op":"marker","name":"impact"},
+      {"op":"effect","behavior":"flash","color":"ff8c33","ticks":16},{"op":"barrier"}]},
+    {"key":"ruby:move/53","coverage":"adapted","source_script":"Move_FLAMETHROWER","steps":[
+      {"op":"effect","behavior":"shake","selector":"attacker","x":0,"y":2,"ticks":46},
+      {"op":"wait","ticks":6},{"op":"sound","path":"res://Audio/SE/PRSFX- Flamethrower.wav"},
+      {"op":"effect","behavior":"projectile","texture":"res://graficos/batalla/animaciones/small_ember.png","frames":5,"ticks":30,"arc":16,"phase":0,"repeat":6,"interval":2,"arrival_marker":"impact"},
+      {"op":"wait","ticks":2},
+      {"op":"effect","behavior":"shake","selector":"targets","x":3,"ticks":43},
+      {"op":"effect","behavior":"projectile","texture":"res://graficos/batalla/animaciones/small_ember.png","frames":5,"ticks":30,"arc":16,"phase":1.5,"repeat":16,"interval":2},
+      {"op":"effect","behavior":"flash","color":"ff9b55","ticks":30},{"op":"barrier"}]},
+    {"key":"ruby:move/55","coverage":"prototype","source_script":"Move_WATER_GUN","steps":[
+      {"op":"effect","behavior":"projectile","color":"70cfff","ticks":24,"arc":3,"repeat":5,"interval":3},
+      {"op":"wait","ticks":24},{"op":"marker","name":"impact"},
+      {"op":"effect","behavior":"ring","color":"70cfff","ticks":16},{"op":"effect","behavior":"shake","ticks":16},{"op":"barrier"}]},
+    {"key":"ruby:move/57","coverage":"prototype","source_script":"Move_SURF","steps":[
+      {"op":"effect","behavior":"wave","color":"368dcecc","ticks":96},
+      {"op":"wait","ticks":24},{"op":"sound","path":"res://Audio/SE/PRSFX- Surf.wav"},
+      {"op":"wait","ticks":24},{"op":"marker","name":"impact"},
+      {"op":"effect","behavior":"shake","selector":"targets","x":2,"y":1,"ticks":24},{"op":"barrier"}]},
+    {"key":"ruby:move/58","coverage":"prototype","source_script":"Move_ICE_BEAM","steps":[
+      {"op":"effect","behavior":"beam","color":"85edff","ticks":48},
+      {"op":"wait","ticks":20},{"op":"marker","name":"impact"},
+      {"op":"effect","behavior":"flash","color":"86d9ff","ticks":24},{"op":"effect","behavior":"ring","color":"86d9ff","ticks":20},{"op":"barrier"}]},
+    {"key":"ruby:move/76","coverage":"prototype","source_script":"Move_SOLAR_BEAM","steps":[
+      {"op":"variant","charge":[
+        {"op":"effect","behavior":"ring","selector":"attacker","color":"fff078","ticks":60,"repeat":4,"interval":12},
+        {"op":"effect","behavior":"flash","selector":"attacker","color":"fff078","ticks":72},{"op":"marker","name":"charged"},{"op":"barrier"}
+      ],"release":[
+        {"op":"effect","behavior":"darken","color":"25420b99","ticks":90},
+        {"op":"effect","behavior":"beam","color":"f2ff81","ticks":60},{"op":"wait","ticks":24},
+        {"op":"marker","name":"impact"},{"op":"effect","behavior":"shake","x":4,"ticks":36},{"op":"barrier"}
+      ]}]},
+    {"key":"ruby:move/89","coverage":"prototype","source_script":"Move_EARTHQUAKE","steps":[
+      {"op":"effect","behavior":"shake","selector":"all","x":3,"y":2,"ticks":64},
+      {"op":"wait","ticks":24},{"op":"marker","name":"impact"},{"op":"barrier"}]},
+    {"key":"ruby:move/115","coverage":"prototype","source_script":"Move_REFLECT","steps":[
+      {"op":"sound","path":"res://Audio/SE/PRSFX- Reflect.wav"},
+      {"op":"effect","behavior":"barrier","selector":"attacker_side","color":"7eaaff","ticks":60},
+      {"op":"wait","ticks":20},{"op":"effect","behavior":"ring","selector":"attacker","color":"cce8ff","ticks":30},
+      {"op":"marker","name":"presented"},{"op":"barrier"}]},
+    {"key":"ruby:move/240","coverage":"prototype","source_script":"Move_RAIN_DANCE","steps":[
+      {"op":"effect","behavior":"darken","color":"102045aa","ticks":180},
+      {"op":"wait","ticks":15},{"op":"effect","behavior":"rain","color":"83bfff","ticks":150},
+      {"op":"sound","path":"res://Audio/SE/PRSFX- Rain Dance.wav"},
+      {"op":"wait","ticks":120},{"op":"marker","name":"presented"},{"op":"barrier"}]},
+    {"key":"ruby:move/270","coverage":"prototype","source_script":"Move_HELPING_HAND","steps":[
+      {"op":"effect","behavior":"clap","selector":"target","color":"ffe1aa","ticks":60},
+      {"op":"wait","ticks":19},{"op":"effect","behavior":"shake","selector":"target","x":2,"ticks":10},
+      {"op":"wait","ticks":14},{"op":"effect","behavior":"shake","selector":"target","x":2,"ticks":10},
+      {"op":"wait","ticks":20},{"op":"effect","behavior":"flash","selector":"target","color":"fff280","ticks":20},
+      {"op":"marker","name":"presented"},{"op":"barrier"}]},
+    {"key":"custom:blue_flame","coverage":"custom","source_script":"Move_FLAMETHROWER","steps":[
+      {"op":"effect","behavior":"projectile","texture":"res://graficos/batalla/animaciones/small_ember.png","frames":5,"color":"80bfff","recolor":true,"ticks":24,"arc":12,"repeat":12,"interval":3},
+      {"op":"wait","ticks":24},{"op":"marker","name":"impact"},
+      {"op":"effect","behavior":"ring","color":"339dff","ticks":30},{"op":"effect","behavior":"shake","x":4,"ticks":24},{"op":"barrier"}]}
+  ]
+}

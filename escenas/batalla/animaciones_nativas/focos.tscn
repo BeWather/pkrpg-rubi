@@ -1,0 +1,2969 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/efecto_capas_nativo.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/i5_candidate_hit_tile0.png" id="2_golpe"]
+[ext_resource type="Shader" path="res://escenas/batalla/animaciones_nativas/mezcla_gba.gdshader" id="3_mezcla"]
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/fondo_movimiento.gd" id="4_fondo"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/confetti_pal_240_8x8_0_1_2_3_4_5_6_7_8_9_10_11.png" id="20_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/spotlight_pal_226_64x64_0.png" id="21_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/tag_hand_pal_64_32x32_16.png" id="22_tex"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Astonish1.wav" id="10_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Encore.wav" id="11_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Fake Out1.wav" id="12_se"]
+
+[sub_resource type="ShaderMaterial" id="Mezcla"]
+shader = ExtResource("3_mezcla")
+
+[sub_resource type="Animation" id="Animation_otra_vez"]
+resource_name = "otra_vez"
+length = 4.8
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.8166, 1.1166, 2.9166, 3.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [0, 10, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [NodePath("Foco"), [&"defensor_base", Vector2(0, -8)], 125, {"subprioridad": [38, 28], "ventana_foco": true, "zoom": [[0, 384, 0], [16, 0, 20], [0, 0, 84], [-16, 0, 19]], "ruta": [[Vector2(0, 0), 20, 0], [Vector2(9, 0), 21, 0], [Vector2(-10, 0), 41, 0], [Vector2(0, 0), 21, 0]], "oculto_inicio": 1}],
+"method": &"sprite_estado"
+}, {
+"args": [&"defensor", 8, 1536, 5, true],
+"method": &"oscilar"
+}, {
+"args": [10, 0, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8166, 3.6333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("ManoTag"), [&"atacante_base", Vector2(-14, 0)], 108, {"subprioridad": [28, 38], "ruta": [[Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0]], "voltear": true, "encima_foco": true}],
+"method": &"sprite_estado"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("ManoTag"), [&"atacante_base", Vector2(14, 0)], 108, {"subprioridad": [28, 38], "ruta": [[Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0]], "voltear": false, "encima_foco": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.9166, 1.1166, 1.3166, 1.5166, 1.7166, 1.9166, 2.1166, 2.3166, 2.5166)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}],
+"times": PackedFloat32Array(1.1166)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_otra_vez_rival"]
+resource_name = "otra_vez_rival"
+length = 4.8
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.8166, 1.1166, 2.9166, 3.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [0, 10, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [NodePath("Foco"), [&"defensor_base", Vector2(0, -8)], 125, {"subprioridad": [38, 28], "ventana_foco": true, "zoom": [[0, 384, 0], [16, 0, 20], [0, 0, 84], [-16, 0, 19]], "ruta": [[Vector2(0, 0), 20, 0], [Vector2(9, 0), 21, 0], [Vector2(-10, 0), 41, 0], [Vector2(0, 0), 21, 0]], "oculto_inicio": 1}],
+"method": &"sprite_estado"
+}, {
+"args": [&"defensor", 8, 1536, 5, true],
+"method": &"oscilar"
+}, {
+"args": [10, 0, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8166, 3.6333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("ManoTag"), [&"atacante_base", Vector2(-14, 0)], 108, {"subprioridad": [28, 38], "ruta": [[Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0]], "voltear": true, "encima_foco": true, "fijo": true}],
+"method": &"sprite_estado"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("ManoTag"), [&"atacante_base", Vector2(14, 0)], 108, {"subprioridad": [28, 38], "ruta": [[Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0]], "voltear": false, "encima_foco": true, "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.9166, 1.1166, 1.3166, 1.5166, 1.7166, 1.9166, 2.1166, 2.3166, 2.5166)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}],
+"times": PackedFloat32Array(1.1166)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_camelo"]
+resource_name = "camelo"
+length = 4.75
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.8166, 0.8499, 1.0499, 1.0833, 2.8666, 3.5833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [0, 10, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [NodePath("Foco"), [&"defensor_base", Vector2(0, -8)], 122, {"subprioridad": [38, 28], "ventana_foco": true, "zoom": [[0, 384, 0], [16, 0, 20], [0, 0, 81], [-16, 0, 19]], "oculto_inicio": 1}],
+"method": &"sprite_estado"
+}, {
+"args": [&"defensor", Vector2(0, 10), 5, 2],
+"method": &"embestida"
+}, {
+"args": [&"defensor", Vector2(0, 10), 5, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}, {
+"args": [10, 0, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.0833, 3.5833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 0, "velocidad": Vector2(6.95703, -4.39453), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 6, "velocidad": Vector2(-4.07422, -3.95312), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 11, "velocidad": Vector2(5.59766, -4.83203), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 2, "velocidad": Vector2(-3.46875, -3.41406), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 7, "velocidad": Vector2(6.43359, -4.03516), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 4, "velocidad": Vector2(-5.31641, -3.22266), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 10, "velocidad": Vector2(5.89453, -4.69141), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 1, "velocidad": Vector2(-4.35938, -3.66016), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 8, "velocidad": Vector2(7.32422, -4.98047), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 5, "velocidad": Vector2(-5.07422, -3.98828), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/12/type = "method"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath(".")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath(".")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/14/type = "method"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath(".")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 0, "velocidad": Vector2(6.95703, -4.39453), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/15/type = "method"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath(".")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 6, "velocidad": Vector2(-4.07422, -3.95312), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/16/type = "method"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 11, "velocidad": Vector2(5.59766, -4.83203), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/17/type = "method"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath(".")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 2, "velocidad": Vector2(-3.46875, -3.41406), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/18/type = "method"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath(".")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 7, "velocidad": Vector2(6.43359, -4.03516), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/19/type = "method"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath(".")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 4, "velocidad": Vector2(-5.31641, -3.22266), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/20/type = "method"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath(".")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 10, "velocidad": Vector2(5.89453, -4.69141), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/21/type = "method"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath(".")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 1, "velocidad": Vector2(-4.35938, -3.66016), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/22/type = "method"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath(".")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 8, "velocidad": Vector2(7.32422, -4.98047), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/23/type = "method"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath(".")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 5, "velocidad": Vector2(-5.07422, -3.98828), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/24/type = "method"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath(".")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/25/type = "method"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath(".")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/26/type = "method"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath(".")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 0, "velocidad": Vector2(6.95703, -4.39453), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/27/type = "method"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath(".")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 6, "velocidad": Vector2(-4.07422, -3.95312), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/28/type = "method"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath(".")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 11, "velocidad": Vector2(5.59766, -4.83203), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/29/type = "method"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath(".")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 2, "velocidad": Vector2(-3.46875, -3.41406), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/30/type = "method"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath(".")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 7, "velocidad": Vector2(6.43359, -4.03516), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/31/type = "method"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath(".")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 4, "velocidad": Vector2(-5.31641, -3.22266), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/32/type = "method"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath(".")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 10, "velocidad": Vector2(5.89453, -4.69141), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/33/type = "method"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath(".")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 1, "velocidad": Vector2(-4.35938, -3.66016), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/34/type = "method"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath(".")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 8, "velocidad": Vector2(7.32422, -4.98047), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/35/type = "method"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath(".")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 5, "velocidad": Vector2(-5.07422, -3.98828), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/36/type = "method"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath(".")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/37/type = "method"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath(".")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/38/type = "audio"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("SonidoDefensor")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}],
+"times": PackedFloat32Array(0.0999, 1.1999)
+}
+tracks/38/use_blend = true
+tracks/39/type = "audio"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("SonidoAtacante")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}],
+"times": PackedFloat32Array(1.0833)
+}
+tracks/39/use_blend = true
+
+[sub_resource type="Animation" id="Animation_camelo_rival"]
+resource_name = "camelo_rival"
+length = 4.75
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.8166, 0.8499, 1.0499, 1.0833, 2.8666, 3.5833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [0, 10, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [NodePath("Foco"), [&"defensor_base", Vector2(0, -8)], 122, {"subprioridad": [38, 28], "ventana_foco": true, "zoom": [[0, 384, 0], [16, 0, 20], [0, 0, 81], [-16, 0, 19]], "oculto_inicio": 1}],
+"method": &"sprite_estado"
+}, {
+"args": [&"defensor", Vector2(0, 10), 5, 2],
+"method": &"embestida"
+}, {
+"args": [&"defensor", Vector2(0, 10), 5, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}, {
+"args": [10, 0, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.0833, 3.5833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 0, "velocidad": Vector2(6.95703, -4.39453), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 6, "velocidad": Vector2(-4.07422, -3.95312), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 11, "velocidad": Vector2(5.59766, -4.83203), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 2, "velocidad": Vector2(-3.46875, -3.41406), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 7, "velocidad": Vector2(6.43359, -4.03516), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 4, "velocidad": Vector2(-5.31641, -3.22266), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 10, "velocidad": Vector2(5.89453, -4.69141), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 1, "velocidad": Vector2(-4.35938, -3.66016), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 8, "velocidad": Vector2(7.32422, -4.98047), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 5, "velocidad": Vector2(-5.07422, -3.98828), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/12/type = "method"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath(".")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath(".")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/14/type = "method"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath(".")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 0, "velocidad": Vector2(6.95703, -4.39453), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/15/type = "method"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath(".")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 6, "velocidad": Vector2(-4.07422, -3.95312), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/16/type = "method"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 11, "velocidad": Vector2(5.59766, -4.83203), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/17/type = "method"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath(".")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 2, "velocidad": Vector2(-3.46875, -3.41406), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/18/type = "method"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath(".")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 7, "velocidad": Vector2(6.43359, -4.03516), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/19/type = "method"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath(".")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 4, "velocidad": Vector2(-5.31641, -3.22266), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/20/type = "method"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath(".")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 10, "velocidad": Vector2(5.89453, -4.69141), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/21/type = "method"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath(".")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 1, "velocidad": Vector2(-4.35938, -3.66016), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/22/type = "method"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath(".")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 8, "velocidad": Vector2(7.32422, -4.98047), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/23/type = "method"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath(".")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 5, "velocidad": Vector2(-5.07422, -3.98828), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/24/type = "method"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath(".")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/25/type = "method"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath(".")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/26/type = "method"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath(".")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 0, "velocidad": Vector2(6.95703, -4.39453), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/27/type = "method"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath(".")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 6, "velocidad": Vector2(-4.07422, -3.95312), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/28/type = "method"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath(".")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 11, "velocidad": Vector2(5.59766, -4.83203), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/29/type = "method"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath(".")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 2, "velocidad": Vector2(-3.46875, -3.41406), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/30/type = "method"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath(".")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 7, "velocidad": Vector2(6.43359, -4.03516), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/31/type = "method"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath(".")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 4, "velocidad": Vector2(-5.31641, -3.22266), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/32/type = "method"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath(".")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 10, "velocidad": Vector2(5.89453, -4.69141), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/33/type = "method"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath(".")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 1, "velocidad": Vector2(-4.35938, -3.66016), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/34/type = "method"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath(".")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 8, "velocidad": Vector2(7.32422, -4.98047), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/35/type = "method"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath(".")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 5, "velocidad": Vector2(-5.07422, -3.98828), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/36/type = "method"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath(".")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/37/type = "method"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath(".")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/38/type = "audio"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("SonidoDefensor")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}],
+"times": PackedFloat32Array(0.0999, 1.1999)
+}
+tracks/38/use_blend = true
+tracks/39/type = "audio"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("SonidoAtacante")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}],
+"times": PackedFloat32Array(1.0833)
+}
+tracks/39/use_blend = true
+
+[sub_resource type="Animation" id="Animation_otra_vez_d02"]
+resource_name = "otra_vez_d02"
+length = 4.8
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.8166, 1.1166, 2.9166, 3.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [0, 10, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [NodePath("Foco"), [&"defensor_base", Vector2(0, -8)], 125, {"ventana_foco": true, "zoom": [[0, 384, 0], [16, 0, 20], [0, 0, 84], [-16, 0, 19]], "ruta": [[Vector2(0, 0), 20, 0], [Vector2(9, 0), 21, 0], [Vector2(-10, 0), 41, 0], [Vector2(0, 0), 21, 0]], "oculto_inicio": 1}],
+"method": &"sprite_estado"
+}, {
+"args": [&"defensor", 8, 1536, 5, true],
+"method": &"oscilar"
+}, {
+"args": [10, 0, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8166, 3.6333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("ManoTag"), [&"atacante_base", Vector2(-14, 0)], 108, {"ruta": [[Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0]], "voltear": true, "encima_foco": true}],
+"method": &"sprite_estado"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("ManoTag"), [&"atacante_base", Vector2(14, 0)], 108, {"ruta": [[Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0]], "voltear": false, "encima_foco": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.9166, 1.1166, 1.3166, 1.5166, 1.7166, 1.9166, 2.1166, 2.3166, 2.5166)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}],
+"times": PackedFloat32Array(1.1166)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_otra_vez_d13"]
+resource_name = "otra_vez_d13"
+length = 4.8
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.8166, 1.1166, 2.9166, 3.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": [0, 10, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [NodePath("Foco"), [&"defensor_base", Vector2(0, -8)], 125, {"ventana_foco": true, "zoom": [[0, 384, 0], [16, 0, 20], [0, 0, 84], [-16, 0, 19]], "ruta": [[Vector2(0, 0), 20, 0], [Vector2(9, 0), 21, 0], [Vector2(-10, 0), 41, 0], [Vector2(0, 0), 21, 0]], "oculto_inicio": 1}],
+"method": &"sprite_estado"
+}, {
+"args": [&"defensor", 8, 1536, 5, true],
+"method": &"oscilar"
+}, {
+"args": [10, 0, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8166, 3.6333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("ManoTag"), [&"atacante_base", Vector2(-14, 0)], 108, {"ruta": [[Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(12, 0), 6, 0], [Vector2(0, 0), 6, 0]], "voltear": true, "encima_foco": true, "fijo": true}],
+"method": &"sprite_estado"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.8166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("ManoTag"), [&"atacante_base", Vector2(14, 0)], 108, {"ruta": [[Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0], [Vector2(-12, 0), 6, 0], [Vector2(0, 0), 6, 0]], "voltear": false, "encima_foco": true, "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.9166, 1.1166, 1.3166, 1.5166, 1.7166, 1.9166, 2.1166, 2.3166, 2.5166)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}],
+"times": PackedFloat32Array(1.1166)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_camelo_d02"]
+resource_name = "camelo_d02"
+length = 4.75
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.8166, 0.8499, 1.0499, 1.0833, 2.8666, 3.5833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [0, 10, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [NodePath("Foco"), [&"defensor_base", Vector2(0, -8)], 122, {"ventana_foco": true, "zoom": [[0, 384, 0], [16, 0, 20], [0, 0, 81], [-16, 0, 19]], "oculto_inicio": 1}],
+"method": &"sprite_estado"
+}, {
+"args": [&"defensor", Vector2(0, 10), 5, 2],
+"method": &"embestida"
+}, {
+"args": [&"defensor", Vector2(0, 10), 5, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}, {
+"args": [10, 0, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.0833, 3.5833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 0, "velocidad": Vector2(6.95703, -4.39453), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 6, "velocidad": Vector2(-4.07422, -3.95312), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 11, "velocidad": Vector2(5.59766, -4.83203), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 2, "velocidad": Vector2(-3.46875, -3.41406), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 7, "velocidad": Vector2(6.43359, -4.03516), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 4, "velocidad": Vector2(-5.31641, -3.22266), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 10, "velocidad": Vector2(5.89453, -4.69141), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 1, "velocidad": Vector2(-4.35938, -3.66016), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 8, "velocidad": Vector2(7.32422, -4.98047), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 5, "velocidad": Vector2(-5.07422, -3.98828), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/12/type = "method"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath(".")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath(".")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/14/type = "method"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath(".")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 0, "velocidad": Vector2(6.95703, -4.39453), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/15/type = "method"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath(".")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 6, "velocidad": Vector2(-4.07422, -3.95312), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/16/type = "method"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 11, "velocidad": Vector2(5.59766, -4.83203), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/17/type = "method"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath(".")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 2, "velocidad": Vector2(-3.46875, -3.41406), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/18/type = "method"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath(".")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 7, "velocidad": Vector2(6.43359, -4.03516), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/19/type = "method"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath(".")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 4, "velocidad": Vector2(-5.31641, -3.22266), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/20/type = "method"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath(".")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 10, "velocidad": Vector2(5.89453, -4.69141), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/21/type = "method"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath(".")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 1, "velocidad": Vector2(-4.35938, -3.66016), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/22/type = "method"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath(".")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 8, "velocidad": Vector2(7.32422, -4.98047), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/23/type = "method"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath(".")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 5, "velocidad": Vector2(-5.07422, -3.98828), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/24/type = "method"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath(".")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/25/type = "method"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath(".")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/26/type = "method"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath(".")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 0, "velocidad": Vector2(6.95703, -4.39453), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/27/type = "method"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath(".")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 6, "velocidad": Vector2(-4.07422, -3.95312), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/28/type = "method"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath(".")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 11, "velocidad": Vector2(5.59766, -4.83203), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/29/type = "method"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath(".")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 2, "velocidad": Vector2(-3.46875, -3.41406), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/30/type = "method"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath(".")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 7, "velocidad": Vector2(6.43359, -4.03516), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/31/type = "method"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath(".")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 4, "velocidad": Vector2(-5.31641, -3.22266), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/32/type = "method"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath(".")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 10, "velocidad": Vector2(5.89453, -4.69141), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/33/type = "method"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath(".")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 1, "velocidad": Vector2(-4.35938, -3.66016), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/34/type = "method"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath(".")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 8, "velocidad": Vector2(7.32422, -4.98047), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/35/type = "method"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath(".")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 5, "velocidad": Vector2(-5.07422, -3.98828), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/36/type = "method"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath(".")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/37/type = "method"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath(".")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875)}],
+"method": &"sprite_estado"
+}]
+}
+tracks/38/type = "audio"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("SonidoDefensor")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}],
+"times": PackedFloat32Array(0.0999, 1.1999)
+}
+tracks/38/use_blend = true
+tracks/39/type = "audio"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("SonidoAtacante")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}],
+"times": PackedFloat32Array(1.0833)
+}
+tracks/39/use_blend = true
+
+[sub_resource type="Animation" id="Animation_camelo_d13"]
+resource_name = "camelo_d13"
+length = 4.75
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.8166, 0.8499, 1.0499, 1.0833, 2.8666, 3.5833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [0, 10, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [NodePath("Foco"), [&"defensor_base", Vector2(0, -8)], 122, {"ventana_foco": true, "zoom": [[0, 384, 0], [16, 0, 20], [0, 0, 81], [-16, 0, 19]], "oculto_inicio": 1}],
+"method": &"sprite_estado"
+}, {
+"args": [&"defensor", Vector2(0, 10), 5, 2],
+"method": &"embestida"
+}, {
+"args": [&"defensor", Vector2(0, 10), 5, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}, {
+"args": [10, 0, 4],
+"method": &"oscurecer_fuera"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.0833, 3.5833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 0, "velocidad": Vector2(6.95703, -4.39453), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 6, "velocidad": Vector2(-4.07422, -3.95312), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 11, "velocidad": Vector2(5.59766, -4.83203), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 2, "velocidad": Vector2(-3.46875, -3.41406), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 7, "velocidad": Vector2(6.43359, -4.03516), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 4, "velocidad": Vector2(-5.31641, -3.22266), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath(".")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 10, "velocidad": Vector2(5.89453, -4.69141), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath(".")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 1, "velocidad": Vector2(-4.35938, -3.66016), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 8, "velocidad": Vector2(7.32422, -4.98047), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/11/type = "method"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath(".")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 5, "velocidad": Vector2(-5.07422, -3.98828), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/12/type = "method"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath(".")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/13/type = "method"
+tracks/13/imported = false
+tracks/13/enabled = true
+tracks/13/path = NodePath(".")
+tracks/13/interp = 1
+tracks/13/loop_wrap = true
+tracks/13/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/14/type = "method"
+tracks/14/imported = false
+tracks/14/enabled = true
+tracks/14/path = NodePath(".")
+tracks/14/interp = 1
+tracks/14/loop_wrap = true
+tracks/14/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 0, "velocidad": Vector2(6.95703, -4.39453), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/15/type = "method"
+tracks/15/imported = false
+tracks/15/enabled = true
+tracks/15/path = NodePath(".")
+tracks/15/interp = 1
+tracks/15/loop_wrap = true
+tracks/15/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 6, "velocidad": Vector2(-4.07422, -3.95312), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/16/type = "method"
+tracks/16/imported = false
+tracks/16/enabled = true
+tracks/16/path = NodePath(".")
+tracks/16/interp = 1
+tracks/16/loop_wrap = true
+tracks/16/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 11, "velocidad": Vector2(5.59766, -4.83203), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/17/type = "method"
+tracks/17/imported = false
+tracks/17/enabled = true
+tracks/17/path = NodePath(".")
+tracks/17/interp = 1
+tracks/17/loop_wrap = true
+tracks/17/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 2, "velocidad": Vector2(-3.46875, -3.41406), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/18/type = "method"
+tracks/18/imported = false
+tracks/18/enabled = true
+tracks/18/path = NodePath(".")
+tracks/18/interp = 1
+tracks/18/loop_wrap = true
+tracks/18/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 7, "velocidad": Vector2(6.43359, -4.03516), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/19/type = "method"
+tracks/19/imported = false
+tracks/19/enabled = true
+tracks/19/path = NodePath(".")
+tracks/19/interp = 1
+tracks/19/loop_wrap = true
+tracks/19/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 4, "velocidad": Vector2(-5.31641, -3.22266), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/20/type = "method"
+tracks/20/imported = false
+tracks/20/enabled = true
+tracks/20/path = NodePath(".")
+tracks/20/interp = 1
+tracks/20/loop_wrap = true
+tracks/20/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 10, "velocidad": Vector2(5.89453, -4.69141), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/21/type = "method"
+tracks/21/imported = false
+tracks/21/enabled = true
+tracks/21/path = NodePath(".")
+tracks/21/interp = 1
+tracks/21/loop_wrap = true
+tracks/21/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 1, "velocidad": Vector2(-4.35938, -3.66016), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/22/type = "method"
+tracks/22/imported = false
+tracks/22/enabled = true
+tracks/22/path = NodePath(".")
+tracks/22/interp = 1
+tracks/22/loop_wrap = true
+tracks/22/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 8, "velocidad": Vector2(7.32422, -4.98047), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/23/type = "method"
+tracks/23/imported = false
+tracks/23/enabled = true
+tracks/23/path = NodePath(".")
+tracks/23/interp = 1
+tracks/23/loop_wrap = true
+tracks/23/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 5, "velocidad": Vector2(-5.07422, -3.98828), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/24/type = "method"
+tracks/24/imported = false
+tracks/24/enabled = true
+tracks/24/path = NodePath(".")
+tracks/24/interp = 1
+tracks/24/loop_wrap = true
+tracks/24/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/25/type = "method"
+tracks/25/imported = false
+tracks/25/enabled = true
+tracks/25/path = NodePath(".")
+tracks/25/interp = 1
+tracks/25/loop_wrap = true
+tracks/25/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/26/type = "method"
+tracks/26/imported = false
+tracks/26/enabled = true
+tracks/26/path = NodePath(".")
+tracks/26/interp = 1
+tracks/26/loop_wrap = true
+tracks/26/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 0, "velocidad": Vector2(6.95703, -4.39453), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/27/type = "method"
+tracks/27/imported = false
+tracks/27/enabled = true
+tracks/27/path = NodePath(".")
+tracks/27/interp = 1
+tracks/27/loop_wrap = true
+tracks/27/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 6, "velocidad": Vector2(-4.07422, -3.95312), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/28/type = "method"
+tracks/28/imported = false
+tracks/28/enabled = true
+tracks/28/path = NodePath(".")
+tracks/28/interp = 1
+tracks/28/loop_wrap = true
+tracks/28/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 11, "velocidad": Vector2(5.59766, -4.83203), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/29/type = "method"
+tracks/29/imported = false
+tracks/29/enabled = true
+tracks/29/path = NodePath(".")
+tracks/29/interp = 1
+tracks/29/loop_wrap = true
+tracks/29/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 2, "velocidad": Vector2(-3.46875, -3.41406), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/30/type = "method"
+tracks/30/imported = false
+tracks/30/enabled = true
+tracks/30/path = NodePath(".")
+tracks/30/interp = 1
+tracks/30/loop_wrap = true
+tracks/30/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 7, "velocidad": Vector2(6.43359, -4.03516), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/31/type = "method"
+tracks/31/imported = false
+tracks/31/enabled = true
+tracks/31/path = NodePath(".")
+tracks/31/interp = 1
+tracks/31/loop_wrap = true
+tracks/31/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 4, "velocidad": Vector2(-5.31641, -3.22266), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/32/type = "method"
+tracks/32/imported = false
+tracks/32/enabled = true
+tracks/32/path = NodePath(".")
+tracks/32/interp = 1
+tracks/32/loop_wrap = true
+tracks/32/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 10, "velocidad": Vector2(5.89453, -4.69141), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/33/type = "method"
+tracks/33/imported = false
+tracks/33/enabled = true
+tracks/33/path = NodePath(".")
+tracks/33/interp = 1
+tracks/33/loop_wrap = true
+tracks/33/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 1, "velocidad": Vector2(-4.35938, -3.66016), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/34/type = "method"
+tracks/34/imported = false
+tracks/34/enabled = true
+tracks/34/path = NodePath(".")
+tracks/34/interp = 1
+tracks/34/loop_wrap = true
+tracks/34/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 8, "velocidad": Vector2(7.32422, -4.98047), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/35/type = "method"
+tracks/35/imported = false
+tracks/35/enabled = true
+tracks/35/path = NodePath(".")
+tracks/35/interp = 1
+tracks/35/loop_wrap = true
+tracks/35/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 5, "velocidad": Vector2(-5.07422, -3.98828), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/36/type = "method"
+tracks/36/imported = false
+tracks/36/enabled = true
+tracks/36/path = NodePath(".")
+tracks/36/interp = 1
+tracks/36/loop_wrap = true
+tracks/36/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(-8, 104)], 31, {"cuadro": 3, "velocidad": Vector2(6.19922, -3.75), "aceleracion": Vector2(-0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/37/type = "method"
+tracks/37/imported = false
+tracks/37/enabled = true
+tracks/37/path = NodePath(".")
+tracks/37/interp = 1
+tracks/37/loop_wrap = true
+tracks/37/keys = {
+"times": PackedFloat32Array(1.0833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Confeti"), [&"pantalla", Vector2(248, 104)], 31, {"cuadro": 9, "velocidad": Vector2(-4.90625, -4.14453), "aceleracion": Vector2(0.0859375, 0.1875), "fijo": true}],
+"method": &"sprite_estado"
+}]
+}
+tracks/38/type = "audio"
+tracks/38/imported = false
+tracks/38/enabled = true
+tracks/38/path = NodePath("SonidoDefensor")
+tracks/38/interp = 1
+tracks/38/loop_wrap = true
+tracks/38/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}],
+"times": PackedFloat32Array(0.0999, 1.1999)
+}
+tracks/38/use_blend = true
+tracks/39/type = "audio"
+tracks/39/imported = false
+tracks/39/enabled = true
+tracks/39/path = NodePath("SonidoAtacante")
+tracks/39/interp = 1
+tracks/39/loop_wrap = true
+tracks/39/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}],
+"times": PackedFloat32Array(1.0833)
+}
+tracks/39/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_golpes"]
+_data = {
+&"otra_vez": SubResource("Animation_otra_vez"),
+&"otra_vez_rival": SubResource("Animation_otra_vez_rival"),
+&"camelo": SubResource("Animation_camelo"),
+&"camelo_rival": SubResource("Animation_camelo_rival"),
+&"otra_vez_d02": SubResource("Animation_otra_vez_d02"),
+&"otra_vez_d20": SubResource("Animation_otra_vez_d02"),
+&"otra_vez_d13": SubResource("Animation_otra_vez_d13"),
+&"otra_vez_d31": SubResource("Animation_otra_vez_d13"),
+&"camelo_d02": SubResource("Animation_camelo_d02"),
+&"camelo_d20": SubResource("Animation_camelo_d02"),
+&"camelo_d13": SubResource("Animation_camelo_d13"),
+&"camelo_d31": SubResource("Animation_camelo_d13")
+}
+
+[node name="Focos" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+material_mezcla = SubResource("Mezcla")
+voltear_imagen_con_lado = false
+
+[node name="Fondo" type="Node2D" parent="."]
+script = ExtResource("4_fondo")
+
+[node name="Imagen" type="Sprite2D" parent="Fondo"]
+visible = false
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="Velo" type="ColorRect" parent="Fondo"]
+visible = false
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="Golpe" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+texture = ExtResource("2_golpe")
+
+[node name="GolpeOpaco" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_golpe")
+
+[node name="Estela" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+
+[node name="ManoTag" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("22_tex")
+
+[node name="Foco" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("21_tex")
+
+[node name="Confeti" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("20_tex")
+vframes = 12
+
+[node name="SonidoAtacante" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoDefensor" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoCentro" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_golpes")

@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://blm4hxe6hl3fm"]
+
+[ext_resource type="Texture2D" uid="uid://bbsvl7kjiw57" path="res://UI/reloj-pared/am.png" id="1_r0gta"]
+[ext_resource type="Texture2D" uid="uid://cd252n84cktge" path="res://UI/reloj-pared/pm.png" id="2_2uy0e"]
+[ext_resource type="Texture2D" uid="uid://blrtl77vfgakt" path="res://UI/reloj-pared/reloj-base-chica.png" id="3_5i5fb"]
+[ext_resource type="Texture2D" uid="uid://dgj8k2qnncp2l" path="res://UI/reloj-pared/reloj-base-chico.png" id="4_e7lnp"]
+[ext_resource type="Texture2D" uid="uid://nvm0o3nx3e60" path="res://UI/reloj-pared/cruceta.png" id="5_ssc55"]
+[ext_resource type="LabelSettings" uid="uid://c81qy0om4apsn" path="res://UI/texto_blanco_altocontraste.tres" id="6_o317m"]
+[ext_resource type="Texture2D" uid="uid://dhptp6b78qjii" path="res://UI/reloj-pared/aguja_larga.png" id="7_uqlnn"]
+[ext_resource type="Texture2D" uid="uid://bj5qkh217oxlt" path="res://UI/reloj-pared/aguja_corta.png" id="8_3kcsw"]
+[ext_resource type="Script" path="res://UI/reloj-pared/reloj_pared.gd" id="9_reloj"]
+
+[node name="RelojPared" type="Control" unique_id=593059980]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_reloj")
+
+[node name="FondoAmPm" type="ColorRect" parent="." unique_id=290492267]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 88.0
+offset_right = 140.0
+offset_bottom = 128.0
+color = Color(0.25882354, 0.25490198, 0.3529412, 1)
+metadata/_edit_lock_ = true
+
+[node name="Am" type="Sprite2D" parent="." unique_id=84531664]
+position = Vector2(112, 102)
+texture = ExtResource("1_r0gta")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Pm" type="Sprite2D" parent="." unique_id=2079244163]
+position = Vector2(112, 102)
+texture = ExtResource("2_2uy0e")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="RelojBaseChica" type="Sprite2D" parent="." unique_id=1962137407]
+texture = ExtResource("3_5i5fb")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="RelojBaseChico" type="Sprite2D" parent="." unique_id=1617967063]
+texture = ExtResource("4_e7lnp")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Cruceta" type="Sprite2D" parent="." unique_id=1360182810]
+position = Vector2(16, 112)
+texture = ExtResource("5_ssc55")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="ValeSalir" type="Label" parent="." unique_id=827283016]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 128.0
+offset_right = 222.0
+offset_bottom = 143.0
+text = "SALIR"
+label_settings = ExtResource("6_o317m")
+metadata/_edit_lock_ = true
+
+[node name="AgujaLarga" type="Sprite2D" parent="." unique_id=1415599823]
+position = Vector2(120, 80)
+texture = ExtResource("7_uqlnn")
+offset = Vector2(0, -24)
+metadata/_edit_lock_ = true
+
+[node name="AgujaCorta" type="Sprite2D" parent="." unique_id=433040797]
+position = Vector2(120, 80)
+texture = ExtResource("8_3kcsw")
+offset = Vector2(0, -24)
+metadata/_edit_lock_ = true

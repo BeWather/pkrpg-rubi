@@ -1,0 +1,67 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://ocy3x56xcl71"]
+
+[ext_resource type="Texture2D" uid="uid://ddj0cmurk1okj" path="res://escenas/mapas/animaciones/hierba_muy_alta.png" id="1_d4cee"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fblui"]
+atlas = ExtResource("1_d4cee")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vj3um"]
+atlas = ExtResource("1_d4cee")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_owjxg"]
+atlas = ExtResource("1_d4cee")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4rl1"]
+atlas = ExtResource("1_d4cee")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpnxw"]
+atlas = ExtResource("1_d4cee")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84poa"]
+atlas = ExtResource("1_d4cee")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_na5bl"]
+atlas = ExtResource("1_d4cee")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tnbg"]
+atlas = ExtResource("1_d4cee")
+region = Rect2(112, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fblui")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vj3um")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_owjxg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4rl1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpnxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84poa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_na5bl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1tnbg")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 12.0
+}]

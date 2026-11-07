@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dgcn71dm5w815"
+path="res://.godot/imported/PRSFX- Shiny.wav-5f138dd9e009b0124ffa65cb4743197b.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Shiny.wav"
+dest_files=["res://.godot/imported/PRSFX- Shiny.wav-5f138dd9e009b0124ffa65cb4743197b.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,203 @@
+[gd_scene format=4 uid="uid://d2m6wpcpehcn4"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_xeo7x"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_g3ca4"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_e4v4q"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_wvu6a"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="cc_npc_base"]
+[ext_resource type="Script" path="res://scripts/npc/npc_dialogo_por_contador.gd" id="cc_chico"]
+[ext_resource type="SpriteFrames" uid="uid://bjywxxfru5l41" path="res://escenas/avatares/npc_108.tres" id="cc_npc_108"]
+[ext_resource type="Script" uid="uid://dmy4ir5m1ul04" path="res://scripts/npc/npc_dialogo_condicional.gd" id="cc_dialogo"]
+[ext_resource type="SpriteFrames" uid="uid://c6lw4imugjphu" path="res://escenas/avatares/npc_047.tres" id="cc_npc_047"]
+[ext_resource type="SpriteFrames" uid="uid://q6liftwxrkde" path="res://escenas/avatares/npc_048.tres" id="cc_npc_048"]
+[ext_resource type="Script" path="res://scripts/eventos/ciudad_calagua/evento_casas_calagua.gd" id="cc_ev_EventoCasasCalagua"]
+[ext_resource type="Script" path="res://scripts/mapas/television.gd" id="tv_television"]
+[ext_resource type="Script" uid="uid://cix41nrfux4xa" path="res://scripts/mapas/tile_alterno.gd" id="tv_tile_alterno"]
+
+[node name="Casa2" type="Node2D" unique_id=749470543]
+script = ExtResource("1_xeo7x")
+nombre_interno = "ciudad_calagua_casa2"
+seccion = "CIUDAD_CALAGUA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_CALAGUA"
+solo_caminar = true
+musica_mapa = "CIUDAD_OROMAR"
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=991336295]
+tile_map_data = PackedByteArray("AAAAAAAAAAAGABAAAAAAAAEAAAAGABEAAAABAAAAAAAHABAAAAABAAEAAAAHABEAAAACAAAAAAAAAAYAAAACAAEAAAAGAAMAAAADAAAAAAAFAAAAAAADAAEAAAAFAAEAAAAEAAAAAAAFAAAAAAAEAAEAAAAFAAEAAAAFAAAAAAAGAAAAAAAFAAEAAAAGAAEAAAAGAAAAAAAFAAAAAAAGAAEAAAAFAAEAAAAHAAAAAAAFAAAAAAAHAAEAAAAAAA0AAAAIAAAAAAAFAAAAAAAIAAEAAAAEAA0AAAAJAAAAAAAFAAAAAAAJAAEAAAAFAA0AAAAKAAAAAAAAAA8AAAAKAAEAAAAAABAAAAACAAIAAAAAAAcAAAAAAAIAAAAGABIAAAABAAIAAAAHABIAAAAIAAIAAAAEAA4AAAAJAAIAAAAFAA4AAAAHAAIAAAAAAA4AAAAKAAIAAAAAABEAAAAGAAIAAAAEAAQAAAAFAAIAAAAEAAQAAAAEAAIAAAAEAAQAAAADAAIAAAAEAAQAAAAAAAYAAAABAAcAAAAAAAUAAAABAAcAAAAAAAQAAAABAAcAAAAAAAMAAAABAAcAAAAAAAcAAAABABMAAAAKAAcAAAACAAUAAAABAAMAAAADAAQAAAABAAQAAAADAAQAAAABAAUAAAADAAQAAAABAAYAAAADAAQAAAABAAcAAAADAAQAAAACAAMAAAADAAQAAAACAAQAAAADAAQAAAACAAUAAAADAAQAAAACAAYAAAADAAQAAAACAAcAAAADAAQAAAADAAMAAAADAAQAAAADAAQAAAADAAQAAAADAAUAAAADAAQAAAADAAYAAAADAAQAAAADAAcAAAAAAAEAAAAEAAMAAAADAAQAAAAEAAQAAAADAAUAAAAEAAUAAAADAAUAAAAEAAYAAAADAAQAAAAEAAcAAAABAAEAAAAFAAMAAAADAAQAAAAFAAQAAAACAAkAAAAFAAUAAAACAAoAAAAFAAYAAAADAAQAAAAFAAcAAAADAAQAAAAGAAMAAAADAAQAAAAGAAQAAAADAAkAAAAGAAUAAAADAAoAAAAGAAYAAAADAAQAAAAGAAcAAAADAAQAAAAHAAMAAAADAAQAAAAHAAQAAAAEAAUAAAAHAAUAAAAEAAUAAAAHAAYAAAADAAQAAAAHAAcAAAADAAQAAAAIAAMAAAADAAQAAAAIAAQAAAADAAQAAAAIAAUAAAADAAQAAAAIAAYAAAADAAQAAAAIAAcAAAADAAQAAAAJAAMAAAADAAQAAAAJAAQAAAADAAQAAAAJAAUAAAADAAQAAAAJAAYAAAADAAQAAAAJAAcAAAADAAQAAAAKAAMAAAADAAQAAAAKAAQAAAADAAQAAAAKAAUAAAADAAQAAAAKAAYAAAADAAQAAAA=")
+tile_set = ExtResource("2_g3ca4")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=450578402]
+tile_map_data = PackedByteArray("AAAAAAYAAAACAAcAAAAKAAYAAAACAAcAAAA=")
+tile_set = ExtResource("2_g3ca4")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=211795028]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Chico1" parent="NPCs" unique_id=1330200000 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_House3 objeto 5 (2,3) BOY_5 (lock, faceplayer, switch VAR_TEMP_1: 4 frases, el contador lo sortea EventoCasasCalagua)"
+position = Vector2(40, 62)
+script = ExtResource("cc_chico")
+contador = "calagua_casa2_chicos"
+textos_por_valor = PackedStringArray("CALAGUA_CASA2_CHICOS_0", "CALAGUA_CASA2_CHICOS_1", "CALAGUA_CASA2_CHICOS_2", "CALAGUA_CASA2_CHICOS_3")
+id_texto = "CALAGUA_CASA2_CHICOS_0"
+tipo_movimiento = 8
+selec_frames = ExtResource("cc_npc_108")
+coord = Vector2i(2, 3)
+
+[node name="Chico2" parent="NPCs" unique_id=1330200001 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_House3 objeto 3 (1,4) BOY_5 (lock, faceplayer, switch VAR_TEMP_1: 4 frases, el contador lo sortea EventoCasasCalagua)"
+position = Vector2(24, 78)
+script = ExtResource("cc_chico")
+contador = "calagua_casa2_chicos"
+textos_por_valor = PackedStringArray("CALAGUA_CASA2_CHICOS_0", "CALAGUA_CASA2_CHICOS_1", "CALAGUA_CASA2_CHICOS_2", "CALAGUA_CASA2_CHICOS_3")
+id_texto = "CALAGUA_CASA2_CHICOS_0"
+tipo_movimiento = 8
+selec_frames = ExtResource("cc_npc_108")
+coord = Vector2i(1, 4)
+
+[node name="Chico3" parent="NPCs" unique_id=1330200002 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_House3 objeto 4 (2,5) BOY_5 (lock, faceplayer, switch VAR_TEMP_1: 4 frases, el contador lo sortea EventoCasasCalagua)"
+position = Vector2(40, 94)
+script = ExtResource("cc_chico")
+contador = "calagua_casa2_chicos"
+textos_por_valor = PackedStringArray("CALAGUA_CASA2_CHICOS_0", "CALAGUA_CASA2_CHICOS_1", "CALAGUA_CASA2_CHICOS_2", "CALAGUA_CASA2_CHICOS_3")
+id_texto = "CALAGUA_CASA2_CHICOS_0"
+tipo_movimiento = 7
+selec_frames = ExtResource("cc_npc_108")
+coord = Vector2i(2, 5)
+
+[node name="Chico4" parent="NPCs" unique_id=1330200003 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_House3 objeto 1 (3,4) BOY_5 (lock, faceplayer, switch VAR_TEMP_1: 4 frases, el contador lo sortea EventoCasasCalagua)"
+position = Vector2(56, 78)
+script = ExtResource("cc_chico")
+contador = "calagua_casa2_chicos"
+textos_por_valor = PackedStringArray("CALAGUA_CASA2_CHICOS_0", "CALAGUA_CASA2_CHICOS_1", "CALAGUA_CASA2_CHICOS_2", "CALAGUA_CASA2_CHICOS_3")
+id_texto = "CALAGUA_CASA2_CHICOS_0"
+tipo_movimiento = 8
+selec_frames = ExtResource("cc_npc_108")
+coord = Vector2i(3, 4)
+
+[node name="Mujer" parent="NPCs" unique_id=1330200004 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_House3 objeto 2 (7,4) WOMAN_2 FACE_LEFT (PokefanF: MSGBOX_YESNO + FaceOriginalDirection)"
+position = Vector2(120, 78)
+script = ExtResource("cc_dialogo")
+id_texto_si = "CALAGUA_CASA2_MUJER_EXPLICA"
+id_texto_no = "CALAGUA_CASA2_MUJER_NO"
+volver_direccion_original = true
+id_texto = "CALAGUA_CASA2_MUJER_PIDE"
+tipo_movimiento = 9
+selec_frames = ExtResource("cc_npc_047")
+coord = Vector2i(7, 4)
+
+[node name="Hombre" parent="NPCs" unique_id=1330200005 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_House3 objeto 6 (7,5) MAN_1 FACE_LEFT (lock, faceplayer, msgbox + FaceOriginalDirection)"
+position = Vector2(120, 94)
+script = ExtResource("cc_dialogo")
+volver_direccion_original = true
+id_texto = "CALAGUA_CASA2_HOMBRE"
+tipo_movimiento = 9
+selec_frames = ExtResource("cc_npc_048")
+coord = Vector2i(7, 5)
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1016168764]
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1951418542]
+script = ExtResource("3_e4v4q")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,7": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,4": {
+"flags": 1
+},
+"6,5": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=2039454932]
+position = Vector2(56, 118)
+script = ExtResource("4_wvu6a")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_calagua"
+posicion_destino = Vector2(11, 22)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=30303994]
+position = Vector2(72, 118)
+script = ExtResource("4_wvu6a")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_calagua"
+posicion_destino = Vector2(11, 22)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1330200007]
+
+[node name="EventoCasasCalagua" type="Node2D" parent="Eventos" unique_id=1330200006]
+editor_description = "pokeruby LilycoveCity_House3 OnTransition: random 4 → VAR_TEMP_1 (la frase de los cuatro chicos)."
+script = ExtResource("cc_ev_EventoCasasCalagua")
+contador = "calagua_casa2_chicos"
+
+[node name="TilesAlternos" type="Node2D" parent="." unique_id=1178537819]
+
+[node name="PantallaTele" type="Node2D" parent="TilesAlternos" unique_id=1690051963]
+position = Vector2(40, 24)
+script = ExtResource("tv_tile_alterno")
+capa = NodePath("../../Suelo")
+coord_tile = Vector2i(2, 1)
+atlas_alterno = Vector2i(0, 5)
+
+[node name="Television" type="Sprite2D" parent="Carteles" unique_id=1456332655]
+editor_description = "MB_TELEVISION de pokeruby: Event_TV (ProgramacionTV)."
+position = Vector2(40, 24)
+script = ExtResource("tv_television")
+coord_tile = Vector2i(2, 1)
+direccion = 1
+pantalla = NodePath("../../TilesAlternos/PantallaTele")

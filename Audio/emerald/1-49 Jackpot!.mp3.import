@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bmuydirvb1vxe"
+path="res://.godot/imported/1-49 Jackpot!.mp3-d91f99ba322d7d9a977b5c1e20614e33.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-49 Jackpot!.mp3"
+dest_files=["res://.godot/imported/1-49 Jackpot!.mp3-d91f99ba322d7d9a977b5c1e20614e33.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

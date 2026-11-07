@@ -1,0 +1,5 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://dr0ca4r0mp3r1" path="res://graficos/roca_romper/roca_romper.tscn" id="1_romper"]
+
+[node name="RocaRomper" instance=ExtResource("1_romper")]

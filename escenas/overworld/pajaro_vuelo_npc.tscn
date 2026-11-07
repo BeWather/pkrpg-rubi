@@ -1,0 +1,10 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/eventos/pajaro_vuelo_npc.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/efectos_campo/pajaro_vuelo.png" id="2_textura"]
+
+[node name="PajaroVueloNpc" type="Sprite2D"]
+z_index = 100
+z_as_relative = false
+texture = ExtResource("2_textura")
+script = ExtResource("1_script")

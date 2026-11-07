@@ -1,0 +1,405 @@
+[gd_scene format=3 uid="uid://bu46riuaaoqke"]
+
+[ext_resource type="Script" uid="uid://2iofjeauta0w" path="res://UI/cajas_pc/pantalla_cajas_pc.gd" id="1_tg4e3"]
+[ext_resource type="Texture2D" uid="uid://pygd7tmybdoh" path="res://UI/cajas_pc/tile-fondo.png" id="2_5io67"]
+[ext_resource type="Shader" uid="uid://du412vqj27q1k" path="res://UI/cajas_pc/scroll_fondo.gdshader" id="2_mjaa5"]
+[ext_resource type="Texture2D" uid="uid://nx1iukny10qg" path="res://UI/cajas_pc/dock_info.png" id="4_4y67f"]
+[ext_resource type="Texture2D" uid="uid://dg16erpc3xyw3" path="res://UI/cajas_pc/info-anim.png" id="5_me1ff"]
+[ext_resource type="LabelSettings" uid="uid://c81qy0om4apsn" path="res://UI/texto_blanco_altocontraste.tres" id="5_nqn38"]
+[ext_resource type="LabelSettings" uid="uid://ddeyj12qt266" path="res://UI/poke-info/pantalla-info.tres" id="6_kaeiw"]
+[ext_resource type="Texture2D" uid="uid://bku5d8uff7wxm" path="res://UI/cajas_pc/boton_cerrar.png" id="7_hryus"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="7_x0vod"]
+[ext_resource type="Texture2D" uid="uid://b6qr6jubgvs1b" path="res://UI/cajas_pc/pc_base_equipo.png" id="8_0egq1"]
+[ext_resource type="Texture2D" uid="uid://bwgg18w0c7agm" path="res://UI/cajas_pc/pc_sombra_marcas.png" id="8_forjr"]
+[ext_resource type="Texture2D" uid="uid://dos3uqyhd310v" path="res://UI/cajas_pc/dock-equipo.png" id="10_tg4e3"]
+[ext_resource type="PackedScene" uid="uid://dyt8co7wqhy1l" path="res://UI/cajas_pc/dock_caja.tscn" id="11_tg4e3"]
+[ext_resource type="Texture2D" uid="uid://odun83p0aoxh" path="res://UI/cajas_pc/mano.png" id="13_lscpc"]
+[ext_resource type="Texture2D" uid="uid://bgr6ioi43yjd" path="res://graficos/pokemon/front/BAYLEEF.png" id="14_fvq4n"]
+[ext_resource type="Script" uid="uid://b1awn5ii5piqr" path="res://UI/pokemon_sprite.gd" id="15_tg4e3"]
+[ext_resource type="Script" uid="uid://dfsuap1n1fl55" path="res://UI/cajas_pc/DockEquipoController.gd" id="16_tg4e3"]
+[ext_resource type="Script" uid="uid://wokh1dum8fy6" path="res://UI/cajas_pc/DockInfoController.gd" id="17_tg4e3"]
+[ext_resource type="PackedScene" uid="uid://cbwart0mnk562" path="res://UI/cajas_pc/menu_pc.tscn" id="19_lscpc"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4y67f"]
+shader = ExtResource("2_mjaa5")
+shader_parameter/scroll_speed = Vector2(-16, 16)
+shader_parameter/time_scale = 1.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nqn38"]
+atlas = ExtResource("7_hryus")
+region = Rect2(0, 0, 72, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kaeiw"]
+atlas = ExtResource("7_hryus")
+region = Rect2(0, 16, 72, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x0vod"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nqn38")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kaeiw")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vxpck"]
+line_spacing = 0.0
+font = ExtResource("7_x0vod")
+font_size = 14
+font_color = Color(0.909804, 0.909804, 0.658824, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5f40r"]
+line_spacing = 0.0
+font = ExtResource("7_x0vod")
+font_size = 14
+font_color = Color(0.972549, 0.972549, 0.972549, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_dnv3l"]
+line_spacing = 0.0
+font = ExtResource("7_x0vod")
+font_size = 8
+font_color = Color(0.972549, 0.972549, 0.972549, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sybne"]
+line_spacing = 0.0
+font = ExtResource("7_x0vod")
+font_size = 9
+font_color = Color(0.972549, 0.972549, 0.972549, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sqwfn"]
+line_spacing = 0.0
+font = ExtResource("7_x0vod")
+font_size = 10
+font_color = Color(0.972549, 0.972549, 0.972549, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_ase7i"]
+font = ExtResource("7_x0vod")
+font_size = 12
+shadow_size = 0
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(1, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ux4p5"]
+atlas = ExtResource("5_me1ff")
+region = Rect2(0, 0, 80, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2pmpx"]
+atlas = ExtResource("5_me1ff")
+region = Rect2(0, 16, 80, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rwtl2"]
+atlas = ExtResource("5_me1ff")
+region = Rect2(0, 32, 80, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45vpx"]
+atlas = ExtResource("5_me1ff")
+region = Rect2(0, 48, 80, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vjr8q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ux4p5")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2pmpx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rwtl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45vpx")
+}],
+"loop": 1,
+"name": &"encendido",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0egq1"]
+atlas = ExtResource("14_fvq4n")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qpoc0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0egq1")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgju3"]
+atlas = ExtResource("13_lscpc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vxpck"]
+atlas = ExtResource("13_lscpc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5f40r"]
+atlas = ExtResource("13_lscpc")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dnv3l"]
+atlas = ExtResource("13_lscpc")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qpoc0"]
+atlas = ExtResource("13_lscpc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lscpc"]
+atlas = ExtResource("13_lscpc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sybne"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgju3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vxpck")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5f40r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dnv3l")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qpoc0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lscpc")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 2.0
+}]
+
+[node name="PantallaCajasPC" type="Control" unique_id=816009164]
+z_index = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tg4e3")
+metadata/_edit_lock_ = true
+
+[node name="tile-fondo" type="Sprite2D" parent="." unique_id=47941283]
+texture_repeat = 2
+material = SubResource("ShaderMaterial_4y67f")
+texture = ExtResource("2_5io67")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+metadata/_edit_lock_ = true
+
+[node name="bt-cerrar" type="AnimatedSprite2D" parent="." unique_id=1609160587]
+position = Vector2(168, 0)
+sprite_frames = SubResource("SpriteFrames_x0vod")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="EjeCajas" type="Node2D" parent="." unique_id=2116597382]
+
+[node name="DockCaja" parent="EjeCajas" unique_id=1505247350 instance=ExtResource("11_tg4e3")]
+
+[node name="DockInfo" type="Sprite2D" parent="." unique_id=1448216660]
+texture = ExtResource("4_4y67f")
+centered = false
+script = ExtResource("17_tg4e3")
+metadata/_edit_lock_ = true
+
+[node name="info" type="Node2D" parent="DockInfo" unique_id=692966901]
+metadata/_edit_lock_ = true
+
+[node name="mote" type="Label" parent="DockInfo/info" unique_id=752373946]
+z_index = 1
+offset_left = 8.0
+offset_top = 88.0
+offset_right = 62.0
+offset_bottom = 103.0
+text = "ZIGZAGOON"
+label_settings = ExtResource("5_nqn38")
+metadata/_edit_lock_ = true
+
+[node name="nombre_interno" type="Label" parent="DockInfo/info" unique_id=960594379]
+offset_left = 8.0
+offset_top = 103.0
+offset_right = 68.0
+offset_bottom = 118.0
+text = "/ZIGZAGOON"
+label_settings = ExtResource("5_nqn38")
+metadata/_edit_lock_ = true
+
+[node name="nivel" type="Label" parent="DockInfo/info" unique_id=1366246458]
+offset_left = 15.0
+offset_top = 118.0
+offset_right = 46.0
+offset_bottom = 133.0
+text = "Nv100"
+label_settings = ExtResource("5_nqn38")
+metadata/_edit_lock_ = true
+
+[node name="sexo" type="Label" parent="DockInfo/info" unique_id=1163970742]
+offset_left = 48.0
+offset_top = 118.0
+offset_right = 56.0
+offset_bottom = 133.0
+text = "♂"
+label_settings = ExtResource("6_kaeiw")
+metadata/_edit_lock_ = true
+
+[node name="variocolor" type="Label" parent="DockInfo/info" unique_id=1599706833]
+offset_left = 57.0
+offset_top = 115.0
+offset_right = 70.0
+offset_bottom = 136.0
+text = "★"
+label_settings = SubResource("LabelSettings_vxpck")
+max_lines_visible = 1
+visible_characters = 1
+metadata/_edit_lock_ = true
+
+[node name="PcSombraMarcas" type="Sprite2D" parent="DockInfo/info" unique_id=1682953258]
+position = Vector2(40, 149)
+texture = ExtResource("8_forjr")
+metadata/_edit_lock_ = true
+
+[node name="marca_circulo" type="Label" parent="DockInfo/info" unique_id=615656826]
+offset_left = 24.0
+offset_top = 137.0
+offset_right = 37.0
+offset_bottom = 158.0
+text = "●"
+label_settings = SubResource("LabelSettings_5f40r")
+max_lines_visible = 1
+visible_characters = 1
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="marca_cuadrado" type="Label" parent="DockInfo/info" unique_id=80647054]
+offset_left = 33.0
+offset_top = 143.0
+offset_right = 46.0
+offset_bottom = 164.0
+text = "■"
+label_settings = SubResource("LabelSettings_dnv3l")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="marca_triangulo" type="Label" parent="DockInfo/info" unique_id=874828673]
+offset_left = 40.0
+offset_top = 142.0
+offset_right = 53.0
+offset_bottom = 163.0
+text = "▲"
+label_settings = SubResource("LabelSettings_sybne")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="marca_corazon" type="Label" parent="DockInfo/info" unique_id=370519120]
+offset_left = 49.0
+offset_top = 142.0
+offset_right = 62.0
+offset_bottom = 163.0
+text = "♥"
+label_settings = SubResource("LabelSettings_sqwfn")
+metadata/_edit_use_anchors_ = true
+metadata/_edit_lock_ = true
+
+[node name="objeto" type="Label" parent="DockInfo/info" unique_id=1387921401]
+offset_left = 8.0
+offset_top = 132.0
+offset_right = 74.0
+offset_bottom = 147.0
+text = "REPARTIR EXP"
+label_settings = SubResource("LabelSettings_ase7i")
+metadata/_edit_lock_ = true
+
+[node name="info_anim" type="AnimatedSprite2D" parent="DockInfo" unique_id=1107989304]
+sprite_frames = SubResource("SpriteFrames_vjr8q")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="PokemonSprite" type="AnimatedSprite2D" parent="DockInfo" unique_id=1672355298]
+position = Vector2(8, 16)
+sprite_frames = SubResource("SpriteFrames_qpoc0")
+centered = false
+script = ExtResource("15_tg4e3")
+metadata/_edit_lock_ = true
+
+[node name="Dock-equipo" type="Sprite2D" parent="." unique_id=2065588007]
+position = Vector2(80, -160)
+texture = ExtResource("10_tg4e3")
+centered = false
+offset = Vector2(0, -16)
+script = ExtResource("16_tg4e3")
+metadata/_edit_lock_ = true
+
+[node name="slot0" type="Sprite2D" parent="Dock-equipo" unique_id=1648766250]
+position = Vector2(9, 55)
+texture = ExtResource("8_0egq1")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="slot1" type="Sprite2D" parent="Dock-equipo" unique_id=439351181]
+position = Vector2(57, 7)
+texture = ExtResource("8_0egq1")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="slot2" type="Sprite2D" parent="Dock-equipo" unique_id=1326110023]
+position = Vector2(57, 31)
+texture = ExtResource("8_0egq1")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="slot3" type="Sprite2D" parent="Dock-equipo" unique_id=1692987887]
+position = Vector2(57, 55)
+texture = ExtResource("8_0egq1")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="slot4" type="Sprite2D" parent="Dock-equipo" unique_id=258441695]
+position = Vector2(57, 79)
+texture = ExtResource("8_0egq1")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="slot5" type="Sprite2D" parent="Dock-equipo" unique_id=82436192]
+position = Vector2(57, 103)
+texture = ExtResource("8_0egq1")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="mano" type="AnimatedSprite2D" parent="." unique_id=1148932393]
+z_index = 1
+position = Vector2(100, 32)
+sprite_frames = SubResource("SpriteFrames_sybne")
+metadata/_edit_lock_ = true
+
+[node name="MenuPC" parent="." unique_id=1124278533 instance=ExtResource("19_lscpc")]
+z_index = 1
+layout_mode = 1

@@ -1,0 +1,21 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/mapas/region_overworld.gd" id="1_region"]
+[ext_resource type="PackedScene" uid="uid://b1lb5wf8eqo24" path="res://escenas/mapas/bajo_el_agua/bajo_agua_1.tscn" id="2_agua1"]
+[ext_resource type="PackedScene" uid="uid://cn2pauo6k3gsx" path="res://escenas/mapas/bajo_el_agua/bajo_agua_2.tscn" id="3_agua2"]
+[ext_resource type="PackedScene" uid="uid://65sof6oehe7b" path="res://escenas/mapas/bajo_el_agua/bajo_agua_3.tscn" id="4_agua3"]
+[ext_resource type="PackedScene" uid="uid://bgjnm7ur0sp5p" path="res://escenas/mapas/bajo_el_agua/bajo_agua_4.tscn" id="5_agua4"]
+
+[node name="BajoElAgua" type="Node2D"]
+script = ExtResource("1_region")
+
+[node name="BajoAgua1" parent="." instance=ExtResource("2_agua1")]
+
+[node name="BajoAgua2" parent="." instance=ExtResource("3_agua2")]
+position = Vector2(0, 1280)
+
+[node name="BajoAgua3" parent="." instance=ExtResource("4_agua3")]
+position = Vector2(1280, 1280)
+
+[node name="BajoAgua4" parent="." instance=ExtResource("5_agua4")]
+position = Vector2(1280, 2560)

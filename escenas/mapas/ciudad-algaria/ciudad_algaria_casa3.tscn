@@ -1,0 +1,142 @@
+[gd_scene format=4 uid="uid://b0chrn6j61hph"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_8rrhq"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_v5y03"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_liekp"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_ytoth"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="al_base"]
+[ext_resource type="Script" uid="uid://b3r00pidr48xb" path="res://scripts/npc/npc_regalo_objeto.gd" id="al_regalo"]
+[ext_resource type="SpriteFrames" uid="uid://7rjhsrbts6wi" path="res://escenas/avatares/npc_069.tres" id="al_npc_069"]
+[ext_resource type="Script" path="res://scripts/mapas/television.gd" id="tv_television"]
+[ext_resource type="Script" uid="uid://cix41nrfux4xa" path="res://scripts/mapas/tile_alterno.gd" id="tv_tile_alterno"]
+
+[node name="Casa" type="Node2D" unique_id=749470543]
+script = ExtResource("1_8rrhq")
+seccion = "CIUDAD_ALGARIA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_ALGARIA"
+solo_caminar = true
+nombre_interno = "ciudad_algaria_casa3"
+musica_mapa = "CIUDAD_FERRICA"
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=991336295]
+tile_map_data = PackedByteArray("AAAAAAAAAAAGABAAAAAAAAEAAAAGABEAAAABAAAAAAAHABAAAAABAAEAAAAHABEAAAACAAAAAAAAAAYAAAACAAEAAAAGAAMAAAADAAAAAAAFAAAAAAADAAEAAAAFAAEAAAAEAAAAAAAFAAAAAAAEAAEAAAAFAAEAAAAFAAAAAAAGAAAAAAAFAAEAAAAGAAEAAAAGAAAAAAAFAAAAAAAGAAEAAAAFAAEAAAAHAAAAAAAFAAAAAAAHAAEAAAAAAA0AAAAIAAAAAAAFAAAAAAAIAAEAAAAEAA0AAAAJAAAAAAAFAAAAAAAJAAEAAAAFAA0AAAAKAAAAAAAAAA8AAAAKAAEAAAAAABAAAAACAAIAAAAAAAcAAAAAAAIAAAAGABIAAAABAAIAAAAHABIAAAAIAAIAAAAEAA4AAAAJAAIAAAAFAA4AAAAHAAIAAAAAAA4AAAAKAAIAAAAAABEAAAAGAAIAAAAEAAQAAAAFAAIAAAAEAAQAAAAEAAIAAAAEAAQAAAADAAIAAAAEAAQAAAAAAAYAAAABAAcAAAAAAAUAAAABAAcAAAAAAAQAAAABAAcAAAAAAAMAAAABAAcAAAAAAAcAAAABABMAAAAKAAcAAAACAAUAAAABAAMAAAADAAQAAAABAAQAAAADAAQAAAABAAUAAAADAAQAAAABAAYAAAADAAQAAAABAAcAAAADAAQAAAACAAMAAAADAAQAAAACAAQAAAADAAQAAAACAAUAAAADAAQAAAACAAYAAAADAAQAAAACAAcAAAADAAQAAAADAAMAAAADAAQAAAADAAQAAAADAAQAAAADAAUAAAADAAQAAAADAAYAAAADAAQAAAADAAcAAAAAAAEAAAAEAAMAAAADAAQAAAAEAAQAAAADAAUAAAAEAAUAAAADAAUAAAAEAAYAAAADAAQAAAAEAAcAAAABAAEAAAAFAAMAAAADAAQAAAAFAAQAAAACAAkAAAAFAAUAAAACAAoAAAAFAAYAAAADAAQAAAAFAAcAAAADAAQAAAAGAAMAAAADAAQAAAAGAAQAAAADAAkAAAAGAAUAAAADAAoAAAAGAAYAAAADAAQAAAAGAAcAAAADAAQAAAAHAAMAAAADAAQAAAAHAAQAAAAEAAUAAAAHAAUAAAAEAAUAAAAHAAYAAAADAAQAAAAHAAcAAAADAAQAAAAIAAMAAAADAAQAAAAIAAQAAAADAAQAAAAIAAUAAAADAAQAAAAIAAYAAAADAAQAAAAIAAcAAAADAAQAAAAJAAMAAAADAAQAAAAJAAQAAAADAAQAAAAJAAUAAAADAAQAAAAJAAYAAAADAAQAAAAJAAcAAAADAAQAAAAKAAMAAAADAAQAAAAKAAQAAAADAAQAAAAKAAUAAAADAAQAAAAKAAYAAAADAAQAAAA=")
+tile_set = ExtResource("2_v5y03")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=450578402]
+tile_map_data = PackedByteArray("AAAAAAYAAAACAAcAAAAKAAYAAAACAAcAAAA=")
+tile_set = ExtResource("2_v5y03")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=211795028]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1016168764]
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1951418542]
+script = ExtResource("3_liekp")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,7": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,4": {
+"flags": 1
+},
+"6,5": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=2039454932]
+position = Vector2(56, 118)
+script = ExtResource("4_ytoth")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_algaria"
+posicion_destino = Vector2(49, 6)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=30303994]
+position = Vector2(72, 118)
+script = ExtResource("4_ytoth")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_algaria"
+posicion_destino = Vector2(49, 6)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Pescador" parent="NPCs" unique_id=1250301 instance=ExtResource("al_base")]
+editor_description = "pokeruby MossdeepCity_House3 objeto 1 (4,4) FISHERMAN FACE_RIGHT: regala la SUPERCAÑA una vez (FLAG_RECEIVED_SUPER_ROD)"
+position = Vector2(72, 78)
+script = ExtResource("al_regalo")
+objeto = "SUPERCANA"
+bandera = "algaria_supercana_recibida"
+id_texto_entregado = "ALGARIA_CASA3_SUPERCANA_YA"
+texto_tras_entregar = "ALGARIA_CASA3_SUPERCANA_TRAS"
+pregunta_si_no = true
+id_texto_si = "ALGARIA_CASA3_SUPERCANA_SI"
+id_texto_no = "ALGARIA_CASA3_SUPERCANA_NO"
+id_texto = "ALGARIA_CASA3_SUPERCANA_PREGUNTA"
+tipo_movimiento = 10
+selec_frames = ExtResource("al_npc_069")
+coord = Vector2i(4, 4)
+
+[node name="TilesAlternos" type="Node2D" parent="." unique_id=305728143]
+
+[node name="PantallaTele" type="Node2D" parent="TilesAlternos" unique_id=1860173380]
+position = Vector2(40, 24)
+script = ExtResource("tv_tile_alterno")
+capa = NodePath("../../Suelo")
+coord_tile = Vector2i(2, 1)
+atlas_alterno = Vector2i(0, 5)
+
+[node name="Television" type="Sprite2D" parent="Carteles" unique_id=978379565]
+editor_description = "MB_TELEVISION de pokeruby: Event_TV (ProgramacionTV)."
+position = Vector2(40, 24)
+script = ExtResource("tv_television")
+coord_tile = Vector2i(2, 1)
+direccion = 1
+pantalla = NodePath("../../TilesAlternos/PantallaTele")

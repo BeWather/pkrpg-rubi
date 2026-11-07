@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://cwkojxaphmfce"]
+
+[ext_resource type="Script" uid="uid://dlqxxm7i4mprc" path="res://UI/pc_casa/menu_pc_casa.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://bnnqhsstfknsg" path="res://UI/menu_box_7.png" id="2_menu"]
+[ext_resource type="LabelSettings" uid="uid://dloc0dcjbkv2v" path="res://UI/texto_normal_negro.tres" id="4_label"]
+[ext_resource type="Script" uid="uid://d36hq52xgo0y0" path="res://UI/selector_simple.gd" id="6_cursor"]
+
+[node name="MenuPCCasa" type="Control" unique_id=274047148]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="CuadroOpciones" type="NinePatchRect" parent="." unique_id=459986627]
+layout_mode = 0
+offset_right = 88.0
+offset_bottom = 80.0
+texture = ExtResource("2_menu")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Opcion1" type="Label" parent="CuadroOpciones" unique_id=1827096066]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 80.0
+offset_bottom = 24.0
+label_settings = ExtResource("4_label")
+
+[node name="Opcion2" type="Label" parent="CuadroOpciones" unique_id=891872857]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 80.0
+offset_bottom = 40.0
+label_settings = ExtResource("4_label")
+
+[node name="Opcion3" type="Label" parent="CuadroOpciones" unique_id=114148609]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 80.0
+offset_bottom = 56.0
+label_settings = ExtResource("4_label")
+
+[node name="Opcion4" type="Label" parent="CuadroOpciones" unique_id=864323453]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 80.0
+offset_bottom = 72.0
+label_settings = ExtResource("4_label")
+
+[node name="Cursor" type="Control" parent="CuadroOpciones" unique_id=1263482185]
+anchors_preset = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 81.0
+offset_bottom = 24.0
+mouse_filter = 2
+script = ExtResource("6_cursor")
+color = Color(0.937255, 0.431373, 0.376471, 1)
+ancho_borde = 1

@@ -1,0 +1,4239 @@
+{
+	"version": 1,
+	"rutas": [
+		{
+			"mapa": "ruta_110",
+			"offset_godot": [
+				0,
+				0
+			],
+			"capa_datos": 0,
+			"dimensiones_originales": [
+				40,
+				100
+			],
+			"celdas_coincidentes": 2326,
+			"anclas": [
+				{
+					"original": [
+						0,
+						0
+					],
+					"local": [
+						0,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				},
+				{
+					"original": [
+						1,
+						0
+					],
+					"local": [
+						1,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				},
+				{
+					"original": [
+						2,
+						0
+					],
+					"local": [
+						2,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				}
+			]
+		},
+		{
+			"mapa": "ruta_111",
+			"offset_godot": [
+				0,
+				0
+			],
+			"capa_datos": 0,
+			"dimensiones_originales": [
+				40,
+				140
+			],
+			"celdas_coincidentes": 4547,
+			"anclas": [
+				{
+					"original": [
+						2,
+						0
+					],
+					"local": [
+						2,
+						0
+					],
+					"sha256_rgba": "d84ac913e4f8ba5a83e2365cb72370ed7aa0560c236ada9b4465e44669f7be32"
+				},
+				{
+					"original": [
+						3,
+						0
+					],
+					"local": [
+						3,
+						0
+					],
+					"sha256_rgba": "7ca5b49fd6495d7084467271ab61b81cb6d84cff4ddbc4d1fad2c38bd0a30e36"
+				},
+				{
+					"original": [
+						12,
+						0
+					],
+					"local": [
+						12,
+						0
+					],
+					"sha256_rgba": "d84ac913e4f8ba5a83e2365cb72370ed7aa0560c236ada9b4465e44669f7be32"
+				}
+			]
+		},
+		{
+			"mapa": "ruta_113",
+			"offset_godot": [
+				0,
+				0
+			],
+			"capa_datos": 0,
+			"dimensiones_originales": [
+				100,
+				20
+			],
+			"celdas_coincidentes": 1723,
+			"anclas": [
+				{
+					"original": [
+						11,
+						0
+					],
+					"local": [
+						11,
+						0
+					],
+					"sha256_rgba": "b9c5d56d1c44ebe8bf9995055bad012487c487440ecbb85e62f596793148eaf9"
+				},
+				{
+					"original": [
+						12,
+						0
+					],
+					"local": [
+						12,
+						0
+					],
+					"sha256_rgba": "6930a788506e90ec53434402482228ff4b2aad48fdda969a75877a0169605f69"
+				},
+				{
+					"original": [
+						13,
+						0
+					],
+					"local": [
+						13,
+						0
+					],
+					"sha256_rgba": "6930a788506e90ec53434402482228ff4b2aad48fdda969a75877a0169605f69"
+				}
+			]
+		},
+		{
+			"mapa": "ruta_114",
+			"offset_godot": [
+				0,
+				0
+			],
+			"capa_datos": 0,
+			"dimensiones_originales": [
+				40,
+				80
+			],
+			"celdas_coincidentes": 2292,
+			"anclas": [
+				{
+					"original": [
+						0,
+						0
+					],
+					"local": [
+						0,
+						0
+					],
+					"sha256_rgba": "64d79ee0fd9f4e095001bb3b46cac15863c0788fee395b8066d59be797fa491f"
+				},
+				{
+					"original": [
+						1,
+						0
+					],
+					"local": [
+						1,
+						0
+					],
+					"sha256_rgba": "fcd07bad8be544820d77a164df398076f57a5d29167e523e650e30224b16b189"
+				},
+				{
+					"original": [
+						2,
+						0
+					],
+					"local": [
+						2,
+						0
+					],
+					"sha256_rgba": "64d79ee0fd9f4e095001bb3b46cac15863c0788fee395b8066d59be797fa491f"
+				}
+			]
+		},
+		{
+			"mapa": "ruta_115",
+			"offset_godot": [
+				-21,
+				-34
+			],
+			"capa_datos": 0,
+			"dimensiones_originales": [
+				40,
+				80
+			],
+			"celdas_coincidentes": 1792,
+			"anclas": [
+				{
+					"original": [
+						1,
+						0
+					],
+					"local": [
+						-20,
+						-34
+					],
+					"sha256_rgba": "b5c1341ec6828051252e0ed53e48cececb361d7c283cb28a700b7252f94ef1cc"
+				},
+				{
+					"original": [
+						2,
+						0
+					],
+					"local": [
+						-19,
+						-34
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				},
+				{
+					"original": [
+						3,
+						0
+					],
+					"local": [
+						-18,
+						-34
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				}
+			]
+		},
+		{
+			"mapa": "ruta_116",
+			"offset_godot": [
+				0,
+				2
+			],
+			"capa_datos": 0,
+			"dimensiones_originales": [
+				100,
+				20
+			],
+			"celdas_coincidentes": 1259,
+			"anclas": [
+				{
+					"original": [
+						41,
+						0
+					],
+					"local": [
+						41,
+						2
+					],
+					"sha256_rgba": "70dd657a79b481ab5e5684dc1b436ab1ea277506f7c97c2cf8344edcd1f7c204"
+				},
+				{
+					"original": [
+						40,
+						1
+					],
+					"local": [
+						40,
+						3
+					],
+					"sha256_rgba": "ae33243a902f3872bc55d3e86e8e4f8446656a4ecd15d46628bde20e96a80a63"
+				},
+				{
+					"original": [
+						41,
+						1
+					],
+					"local": [
+						41,
+						3
+					],
+					"sha256_rgba": "70dd657a79b481ab5e5684dc1b436ab1ea277506f7c97c2cf8344edcd1f7c204"
+				}
+			]
+		},
+		{
+			"mapa": "ruta_118",
+			"offset_godot": [
+				0,
+				0
+			],
+			"capa_datos": 0,
+			"dimensiones_originales": [
+				80,
+				20
+			],
+			"celdas_coincidentes": 1019,
+			"anclas": [
+				{
+					"original": [
+						0,
+						0
+					],
+					"local": [
+						0,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				},
+				{
+					"original": [
+						1,
+						0
+					],
+					"local": [
+						1,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				},
+				{
+					"original": [
+						2,
+						0
+					],
+					"local": [
+						2,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				}
+			]
+		},
+		{
+			"mapa": "ruta_119",
+			"offset_godot": [
+				0,
+				0
+			],
+			"capa_datos": 0,
+			"dimensiones_originales": [
+				40,
+				140
+			],
+			"celdas_coincidentes": 3896,
+			"anclas": [
+				{
+					"original": [
+						0,
+						0
+					],
+					"local": [
+						0,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				},
+				{
+					"original": [
+						1,
+						0
+					],
+					"local": [
+						1,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				},
+				{
+					"original": [
+						2,
+						0
+					],
+					"local": [
+						2,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				}
+			]
+		},
+		{
+			"mapa": "ruta_120",
+			"offset_godot": [
+				0,
+				0
+			],
+			"capa_datos": 0,
+			"dimensiones_originales": [
+				40,
+				100
+			],
+			"celdas_coincidentes": 2871,
+			"anclas": [
+				{
+					"original": [
+						0,
+						0
+					],
+					"local": [
+						0,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				},
+				{
+					"original": [
+						1,
+						0
+					],
+					"local": [
+						1,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				},
+				{
+					"original": [
+						2,
+						0
+					],
+					"local": [
+						2,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				}
+			]
+		},
+		{
+			"mapa": "ruta_121",
+			"offset_godot": [
+				0,
+				0
+			],
+			"capa_datos": 0,
+			"dimensiones_originales": [
+				80,
+				20
+			],
+			"celdas_coincidentes": 868,
+			"anclas": [
+				{
+					"original": [
+						0,
+						0
+					],
+					"local": [
+						0,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				},
+				{
+					"original": [
+						1,
+						0
+					],
+					"local": [
+						1,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				},
+				{
+					"original": [
+						2,
+						0
+					],
+					"local": [
+						2,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				}
+			]
+		},
+		{
+			"mapa": "ruta_123",
+			"offset_godot": [
+				0,
+				0
+			],
+			"capa_datos": 0,
+			"dimensiones_originales": [
+				140,
+				20
+			],
+			"celdas_coincidentes": 2166,
+			"anclas": [
+				{
+					"original": [
+						0,
+						0
+					],
+					"local": [
+						0,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				},
+				{
+					"original": [
+						1,
+						0
+					],
+					"local": [
+						1,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				},
+				{
+					"original": [
+						2,
+						0
+					],
+					"local": [
+						2,
+						0
+					],
+					"sha256_rgba": "b764e9f82c6defaa05052e5c2891caf5ddd02e7ad8c6175a7fb91f0f79d2b03c"
+				}
+			]
+		},
+		{
+			"mapa": "ruta_125",
+			"offset_godot": [
+				0,
+				0
+			],
+			"capa_datos": 0,
+			"dimensiones_originales": [
+				80,
+				40
+			],
+			"celdas_coincidentes": 321,
+			"anclas": [
+				{
+					"original": [
+						24,
+						1
+					],
+					"local": [
+						24,
+						1
+					],
+					"sha256_rgba": "d84ac913e4f8ba5a83e2365cb72370ed7aa0560c236ada9b4465e44669f7be32"
+				},
+				{
+					"original": [
+						33,
+						1
+					],
+					"local": [
+						33,
+						1
+					],
+					"sha256_rgba": "7ca5b49fd6495d7084467271ab61b81cb6d84cff4ddbc4d1fad2c38bd0a30e36"
+				},
+				{
+					"original": [
+						27,
+						2
+					],
+					"local": [
+						27,
+						2
+					],
+					"sha256_rgba": "d84ac913e4f8ba5a83e2365cb72370ed7aa0560c236ada9b4465e44669f7be32"
+				}
+			]
+		},
+		{
+			"mapa": "ruta_127",
+			"offset_godot": [
+				0,
+				0
+			],
+			"capa_datos": 0,
+			"dimensiones_originales": [
+				80,
+				80
+			],
+			"celdas_coincidentes": 561,
+			"anclas": [
+				{
+					"original": [
+						5,
+						0
+					],
+					"local": [
+						5,
+						0
+					],
+					"sha256_rgba": "7ca5b49fd6495d7084467271ab61b81cb6d84cff4ddbc4d1fad2c38bd0a30e36"
+				},
+				{
+					"original": [
+						16,
+						0
+					],
+					"local": [
+						16,
+						0
+					],
+					"sha256_rgba": "36e6b4102ec34a3a1c6d520da2793d46bae667a7c9fa074a543b334f1f0d4d52"
+				},
+				{
+					"original": [
+						1,
+						1
+					],
+					"local": [
+						1,
+						1
+					],
+					"sha256_rgba": "7ca5b49fd6495d7084467271ab61b81cb6d84cff4ddbc4d1fad2c38bd0a30e36"
+				}
+			]
+		}
+	],
+	"entradas": [
+		{
+			"id": 181,
+			"mapa": "ruta_110",
+			"celda_original": [
+				16,
+				25
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				16,
+				25
+			],
+			"capa_datos": 0,
+			"tipo": "arbol",
+			"metatile_cerrado": 38,
+			"metatile_abierto": 54,
+			"comportamiento_cerrado": 150,
+			"palabra_layout_original": 1062,
+			"variante": "general_026",
+			"celda_aproximacion_godot": [
+				16,
+				26
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_026.tscn",
+			"capas_visuales": [
+				"Agua",
+				"AnimacionAgua",
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Agua": [
+					0,
+					7,
+					4,
+					0
+				],
+				"AnimacionAgua": [
+					0,
+					8,
+					4,
+					0
+				],
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Arbolado": [
+					1,
+					7,
+					1,
+					0
+				]
+			}
+		},
+		{
+			"id": 191,
+			"mapa": "ruta_110",
+			"celda_original": [
+				17,
+				25
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				17,
+				25
+			],
+			"capa_datos": 0,
+			"tipo": "arbol",
+			"metatile_cerrado": 39,
+			"metatile_abierto": 55,
+			"comportamiento_cerrado": 156,
+			"palabra_layout_original": 1063,
+			"variante": "general_027",
+			"celda_aproximacion_godot": [
+				17,
+				26
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_027.tscn",
+			"capas_visuales": [
+				"Agua",
+				"AnimacionAgua",
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Agua": [
+					0,
+					7,
+					4,
+					0
+				],
+				"AnimacionAgua": [
+					0,
+					8,
+					4,
+					0
+				],
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Arbolado": [
+					1,
+					8,
+					1,
+					0
+				]
+			}
+		},
+		{
+			"id": 13,
+			"mapa": "ruta_111",
+			"celda_original": [
+				35,
+				1
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				35,
+				1
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				35,
+				2
+			],
+			"palabra_layout_original_sur": 12401,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					1,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					7,
+					9,
+					0
+				]
+			}
+		},
+		{
+			"id": 33,
+			"mapa": "ruta_111",
+			"celda_original": [
+				27,
+				27
+			],
+			"elevacion_original": 3,
+			"celda_godot": [
+				27,
+				27
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 424,
+			"metatile_abierto": 425,
+			"comportamiento_cerrado": 148,
+			"palabra_layout_original": 1448,
+			"variante": "general_1a8",
+			"celda_aproximacion_godot": [
+				27,
+				28
+			],
+			"palabra_layout_original_sur": 12401,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a8.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					1,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					7,
+					9,
+					0
+				]
+			}
+		},
+		{
+			"id": 121,
+			"mapa": "ruta_111",
+			"celda_original": [
+				33,
+				34
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				33,
+				34
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 424,
+			"metatile_abierto": 425,
+			"comportamiento_cerrado": 148,
+			"palabra_layout_original": 1448,
+			"variante": "general_1a8",
+			"celda_aproximacion_godot": [
+				33,
+				35
+			],
+			"palabra_layout_original_sur": 12577,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a8.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					1,
+					1,
+					0
+				],
+				"Rocas": [
+					0,
+					7,
+					9,
+					0
+				]
+			}
+		},
+		{
+			"id": 131,
+			"mapa": "ruta_111",
+			"celda_original": [
+				24,
+				36
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				24,
+				36
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 424,
+			"metatile_abierto": 425,
+			"comportamiento_cerrado": 148,
+			"palabra_layout_original": 1448,
+			"variante": "general_1a8",
+			"celda_aproximacion_godot": [
+				24,
+				37
+			],
+			"palabra_layout_original_sur": 12881,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a8.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					17,
+					18,
+					0
+				],
+				"Rocas": [
+					0,
+					7,
+					9,
+					0
+				]
+			}
+		},
+		{
+			"id": 141,
+			"mapa": "ruta_111",
+			"celda_original": [
+				34,
+				50
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				34,
+				50
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 424,
+			"metatile_abierto": 425,
+			"comportamiento_cerrado": 148,
+			"palabra_layout_original": 1448,
+			"variante": "general_1a8",
+			"celda_aproximacion_godot": [
+				34,
+				51
+			],
+			"palabra_layout_original_sur": 12881,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a8.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					17,
+					18,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 153,
+			"mapa": "ruta_111",
+			"celda_original": [
+				35,
+				31
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				35,
+				31
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 424,
+			"metatile_abierto": 425,
+			"comportamiento_cerrado": 148,
+			"palabra_layout_original": 1448,
+			"variante": "general_1a8",
+			"celda_aproximacion_godot": [
+				35,
+				32
+			],
+			"palabra_layout_original_sur": 12401,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a8.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					1,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					7,
+					9,
+					0
+				]
+			}
+		},
+		{
+			"id": 161,
+			"mapa": "ruta_111",
+			"celda_original": [
+				13,
+				19
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				13,
+				19
+			],
+			"capa_datos": 0,
+			"tipo": "arbol",
+			"metatile_cerrado": 38,
+			"metatile_abierto": 54,
+			"comportamiento_cerrado": 150,
+			"palabra_layout_original": 1062,
+			"variante": "general_026",
+			"celda_aproximacion_godot": [
+				13,
+				20
+			],
+			"palabra_layout_original_sur": 12569,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_026.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Arbolado": [
+					1,
+					7,
+					1,
+					0
+				]
+			}
+		},
+		{
+			"id": 164,
+			"mapa": "ruta_111",
+			"celda_original": [
+				14,
+				19
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				14,
+				19
+			],
+			"capa_datos": 0,
+			"tipo": "arbol",
+			"metatile_cerrado": 39,
+			"metatile_abierto": 55,
+			"comportamiento_cerrado": 156,
+			"palabra_layout_original": 1063,
+			"variante": "general_027",
+			"celda_aproximacion_godot": [
+				14,
+				20
+			],
+			"palabra_layout_original_sur": 12569,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_027.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Arbolado": [
+					1,
+					8,
+					1,
+					0
+				]
+			}
+		},
+		{
+			"id": 3,
+			"mapa": "ruta_113",
+			"celda_original": [
+				49,
+				8
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				49,
+				8
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				49,
+				9
+			],
+			"palabra_layout_original_sur": 12824,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					14,
+					27,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 41,
+			"mapa": "ruta_114",
+			"celda_original": [
+				9,
+				47
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				9,
+				47
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 520,
+			"metatile_abierto": 528,
+			"comportamiento_cerrado": 146,
+			"palabra_layout_original": 1544,
+			"variante": "fallarbor_208",
+			"celda_aproximacion_godot": [
+				9,
+				48
+			],
+			"palabra_layout_original_sur": 16961,
+			"escena": "escenas/bases_secretas/entradas/entrada_fallarbor_208.tscn",
+			"capas_visuales": [
+				"Rocas",
+				"RocasP2"
+			],
+			"celdas_visuales_originales": {
+				"Rocas": [
+					0,
+					1,
+					24,
+					0
+				],
+				"RocasP2": [
+					0,
+					1,
+					25,
+					0
+				]
+			}
+		},
+		{
+			"id": 51,
+			"mapa": "ruta_114",
+			"celda_original": [
+				30,
+				51
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				30,
+				51
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 520,
+			"metatile_abierto": 528,
+			"comportamiento_cerrado": 146,
+			"palabra_layout_original": 1544,
+			"variante": "fallarbor_208",
+			"celda_aproximacion_godot": [
+				30,
+				52
+			],
+			"palabra_layout_original_sur": 21057,
+			"escena": "escenas/bases_secretas/entradas/entrada_fallarbor_208.tscn",
+			"capas_visuales": [
+				"Rocas",
+				"RocasP2"
+			],
+			"celdas_visuales_originales": {
+				"Rocas": [
+					0,
+					1,
+					24,
+					0
+				],
+				"RocasP2": [
+					0,
+					0,
+					27,
+					0
+				]
+			}
+		},
+		{
+			"id": 61,
+			"mapa": "ruta_114",
+			"celda_original": [
+				11,
+				62
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				11,
+				62
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 520,
+			"metatile_abierto": 528,
+			"comportamiento_cerrado": 146,
+			"palabra_layout_original": 1544,
+			"variante": "fallarbor_208",
+			"celda_aproximacion_godot": [
+				11,
+				63
+			],
+			"palabra_layout_original_sur": 21057,
+			"escena": "escenas/bases_secretas/entradas/entrada_fallarbor_208.tscn",
+			"capas_visuales": [
+				"Rocas",
+				"RocasP2"
+			],
+			"celdas_visuales_originales": {
+				"Rocas": [
+					0,
+					1,
+					24,
+					0
+				],
+				"RocasP2": [
+					0,
+					1,
+					25,
+					0
+				]
+			}
+		},
+		{
+			"id": 71,
+			"mapa": "ruta_114",
+			"celda_original": [
+				19,
+				70
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				19,
+				70
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 520,
+			"metatile_abierto": 528,
+			"comportamiento_cerrado": 146,
+			"palabra_layout_original": 1544,
+			"variante": "fallarbor_208",
+			"celda_aproximacion_godot": [
+				19,
+				71
+			],
+			"palabra_layout_original_sur": 29249,
+			"escena": "escenas/bases_secretas/entradas/entrada_fallarbor_208.tscn",
+			"capas_visuales": [
+				"Rocas",
+				"RocasP2"
+			],
+			"celdas_visuales_originales": {
+				"Rocas": [
+					0,
+					1,
+					24,
+					0
+				],
+				"RocasP2": [
+					0,
+					1,
+					25,
+					0
+				]
+			}
+		},
+		{
+			"id": 73,
+			"mapa": "ruta_114",
+			"celda_original": [
+				32,
+				57
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				32,
+				57
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 520,
+			"metatile_abierto": 528,
+			"comportamiento_cerrado": 146,
+			"palabra_layout_original": 1544,
+			"variante": "fallarbor_208",
+			"celda_aproximacion_godot": [
+				32,
+				58
+			],
+			"palabra_layout_original_sur": 21057,
+			"escena": "escenas/bases_secretas/entradas/entrada_fallarbor_208.tscn",
+			"capas_visuales": [
+				"Rocas",
+				"RocasP2"
+			],
+			"celdas_visuales_originales": {
+				"Rocas": [
+					0,
+					1,
+					24,
+					0
+				],
+				"RocasP2": [
+					0,
+					0,
+					27,
+					0
+				]
+			}
+		},
+		{
+			"id": 182,
+			"mapa": "ruta_114",
+			"celda_original": [
+				11,
+				27
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				11,
+				27
+			],
+			"capa_datos": 0,
+			"tipo": "arbol",
+			"metatile_cerrado": 38,
+			"metatile_abierto": 54,
+			"comportamiento_cerrado": 150,
+			"palabra_layout_original": 13350,
+			"variante": "general_026",
+			"celda_aproximacion_godot": [
+				11,
+				28
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_026.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Arbolado": [
+					1,
+					7,
+					1,
+					0
+				]
+			}
+		},
+		{
+			"id": 192,
+			"mapa": "ruta_114",
+			"celda_original": [
+				12,
+				27
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				12,
+				27
+			],
+			"capa_datos": 0,
+			"tipo": "arbol",
+			"metatile_cerrado": 39,
+			"metatile_abierto": 55,
+			"comportamiento_cerrado": 156,
+			"palabra_layout_original": 13351,
+			"variante": "general_027",
+			"celda_aproximacion_godot": [
+				12,
+				28
+			],
+			"palabra_layout_original_sur": 12292,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_027.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Arbolado": [
+					1,
+					8,
+					1,
+					0
+				]
+			}
+		},
+		{
+			"id": 21,
+			"mapa": "ruta_115",
+			"celda_original": [
+				20,
+				53
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				-1,
+				19
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				-1,
+				20
+			],
+			"palabra_layout_original_sur": 12580,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					4,
+					7,
+					0
+				],
+				"Arbolado": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 42,
+			"mapa": "ruta_115",
+			"celda_original": [
+				32,
+				39
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				11,
+				5
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 520,
+			"metatile_abierto": 528,
+			"comportamiento_cerrado": 146,
+			"palabra_layout_original": 1544,
+			"variante": "fallarbor_208",
+			"celda_aproximacion_godot": [
+				11,
+				6
+			],
+			"palabra_layout_original_sur": 12865,
+			"escena": "escenas/bases_secretas/entradas/entrada_fallarbor_208.tscn",
+			"capas_visuales": [
+				"Rocas",
+				"RocasP2"
+			],
+			"celdas_visuales_originales": {
+				"Rocas": [
+					0,
+					1,
+					24,
+					0
+				],
+				"RocasP2": [
+					0,
+					1,
+					25,
+					0
+				]
+			}
+		},
+		{
+			"id": 43,
+			"mapa": "ruta_115",
+			"celda_original": [
+				23,
+				8
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				2,
+				-26
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 520,
+			"metatile_abierto": 528,
+			"comportamiento_cerrado": 146,
+			"palabra_layout_original": 1544,
+			"variante": "fallarbor_208",
+			"celda_aproximacion_godot": [
+				2,
+				-25
+			],
+			"palabra_layout_original_sur": 12865,
+			"escena": "escenas/bases_secretas/entradas/entrada_fallarbor_208.tscn",
+			"capas_visuales": [
+				"Rocas",
+				"RocasP2"
+			],
+			"celdas_visuales_originales": {
+				"Rocas": [
+					0,
+					1,
+					24,
+					0
+				],
+				"RocasP2": [
+					0,
+					1,
+					25,
+					0
+				]
+			}
+		},
+		{
+			"id": 52,
+			"mapa": "ruta_115",
+			"celda_original": [
+				26,
+				15
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				5,
+				-19
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 520,
+			"metatile_abierto": 528,
+			"comportamiento_cerrado": 146,
+			"palabra_layout_original": 1544,
+			"variante": "fallarbor_208",
+			"celda_aproximacion_godot": [
+				5,
+				-18
+			],
+			"palabra_layout_original_sur": 21057,
+			"escena": "escenas/bases_secretas/entradas/entrada_fallarbor_208.tscn",
+			"capas_visuales": [
+				"Rocas",
+				"RocasP2"
+			],
+			"celdas_visuales_originales": {
+				"Rocas": [
+					0,
+					1,
+					24,
+					0
+				],
+				"RocasP2": [
+					0,
+					1,
+					25,
+					0
+				]
+			}
+		},
+		{
+			"id": 53,
+			"mapa": "ruta_115",
+			"celda_original": [
+				32,
+				46
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				11,
+				12
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 520,
+			"metatile_abierto": 528,
+			"comportamiento_cerrado": 146,
+			"palabra_layout_original": 1544,
+			"variante": "fallarbor_208",
+			"celda_aproximacion_godot": [
+				11,
+				13
+			],
+			"palabra_layout_original_sur": 12865,
+			"escena": "escenas/bases_secretas/entradas/entrada_fallarbor_208.tscn",
+			"capas_visuales": [
+				"Rocas",
+				"RocasP2"
+			],
+			"celdas_visuales_originales": {
+				"Rocas": [
+					0,
+					1,
+					24,
+					0
+				],
+				"RocasP2": [
+					0,
+					1,
+					25,
+					0
+				]
+			}
+		},
+		{
+			"id": 62,
+			"mapa": "ruta_115",
+			"celda_original": [
+				21,
+				18
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				0,
+				-16
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 520,
+			"metatile_abierto": 528,
+			"comportamiento_cerrado": 146,
+			"palabra_layout_original": 1544,
+			"variante": "fallarbor_208",
+			"celda_aproximacion_godot": [
+				0,
+				-15
+			],
+			"palabra_layout_original_sur": 21057,
+			"escena": "escenas/bases_secretas/entradas/entrada_fallarbor_208.tscn",
+			"capas_visuales": [
+				"Rocas",
+				"RocasP2"
+			],
+			"celdas_visuales_originales": {
+				"Rocas": [
+					0,
+					1,
+					24,
+					0
+				],
+				"RocasP2": [
+					0,
+					1,
+					25,
+					0
+				]
+			}
+		},
+		{
+			"id": 63,
+			"mapa": "ruta_115",
+			"celda_original": [
+				25,
+				24
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				4,
+				-10
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 520,
+			"metatile_abierto": 528,
+			"comportamiento_cerrado": 146,
+			"palabra_layout_original": 1544,
+			"variante": "fallarbor_208",
+			"celda_aproximacion_godot": [
+				4,
+				-9
+			],
+			"palabra_layout_original_sur": 12865,
+			"escena": "escenas/bases_secretas/entradas/entrada_fallarbor_208.tscn",
+			"capas_visuales": [
+				"Rocas",
+				"RocasP2"
+			],
+			"celdas_visuales_originales": {
+				"Rocas": [
+					0,
+					1,
+					24,
+					0
+				],
+				"RocasP2": [
+					0,
+					1,
+					25,
+					0
+				]
+			}
+		},
+		{
+			"id": 72,
+			"mapa": "ruta_115",
+			"celda_original": [
+				32,
+				6
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				11,
+				-28
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 520,
+			"metatile_abierto": 528,
+			"comportamiento_cerrado": 146,
+			"palabra_layout_original": 1544,
+			"variante": "fallarbor_208",
+			"celda_aproximacion_godot": [
+				11,
+				-27
+			],
+			"palabra_layout_original_sur": 12865,
+			"escena": "escenas/bases_secretas/entradas/entrada_fallarbor_208.tscn",
+			"capas_visuales": [
+				"Rocas",
+				"RocasP2"
+			],
+			"celdas_visuales_originales": {
+				"Rocas": [
+					0,
+					1,
+					24,
+					0
+				],
+				"RocasP2": [
+					0,
+					1,
+					25,
+					0
+				]
+			}
+		},
+		{
+			"id": 133,
+			"mapa": "ruta_115",
+			"celda_original": [
+				8,
+				30
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				-13,
+				-4
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 424,
+			"metatile_abierto": 425,
+			"comportamiento_cerrado": 148,
+			"palabra_layout_original": 1448,
+			"variante": "general_1a8",
+			"celda_aproximacion_godot": [
+				-13,
+				-3
+			],
+			"palabra_layout_original_sur": 12580,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a8.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					4,
+					7,
+					0
+				],
+				"Arbolado": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 174,
+			"mapa": "ruta_115",
+			"celda_original": [
+				7,
+				20
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				-14,
+				-14
+			],
+			"capa_datos": 0,
+			"tipo": "arbol",
+			"metatile_cerrado": 38,
+			"metatile_abierto": 54,
+			"comportamiento_cerrado": 150,
+			"palabra_layout_original": 1062,
+			"variante": "general_026",
+			"celda_aproximacion_godot": [
+				-14,
+				-13
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_026.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Arbolado": [
+					1,
+					7,
+					1,
+					0
+				]
+			}
+		},
+		{
+			"id": 183,
+			"mapa": "ruta_115",
+			"celda_original": [
+				8,
+				20
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				-13,
+				-14
+			],
+			"capa_datos": 0,
+			"tipo": "arbol",
+			"metatile_cerrado": 39,
+			"metatile_abierto": 55,
+			"comportamiento_cerrado": 156,
+			"palabra_layout_original": 1063,
+			"variante": "general_027",
+			"celda_aproximacion_godot": [
+				-13,
+				-13
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_027.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Arbolado": [
+					1,
+					8,
+					1,
+					0
+				]
+			}
+		},
+		{
+			"id": 81,
+			"mapa": "ruta_116",
+			"celda_original": [
+				71,
+				4
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				71,
+				6
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 432,
+			"metatile_abierto": 433,
+			"comportamiento_cerrado": 154,
+			"palabra_layout_original": 1456,
+			"variante": "general_1b0",
+			"celda_aproximacion_godot": [
+				71,
+				7
+			],
+			"palabra_layout_original_sur": 12401,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1b0.tscn",
+			"capas_visuales": [
+				"RocasN1",
+				"RocasN2"
+			],
+			"celdas_visuales_originales": {
+				"RocasN1": [
+					0,
+					1,
+					7,
+					0
+				],
+				"RocasN2": [
+					0,
+					1,
+					9,
+					0
+				]
+			}
+		},
+		{
+			"id": 91,
+			"mapa": "ruta_116",
+			"celda_original": [
+				79,
+				11
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				79,
+				13
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 432,
+			"metatile_abierto": 433,
+			"comportamiento_cerrado": 154,
+			"palabra_layout_original": 1456,
+			"variante": "general_1b0",
+			"celda_aproximacion_godot": [
+				79,
+				14
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1b0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"RocasN1"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"RocasN1": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 102,
+			"mapa": "ruta_116",
+			"celda_original": [
+				56,
+				6
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				56,
+				8
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 432,
+			"metatile_abierto": 433,
+			"comportamiento_cerrado": 154,
+			"palabra_layout_original": 1456,
+			"variante": "general_1b0",
+			"celda_aproximacion_godot": [
+				56,
+				9
+			],
+			"palabra_layout_original_sur": 20593,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1b0.tscn",
+			"capas_visuales": [
+				"RocasN1",
+				"RocasN2"
+			],
+			"celdas_visuales_originales": {
+				"RocasN1": [
+					0,
+					1,
+					7,
+					0
+				],
+				"RocasN2": [
+					0,
+					1,
+					9,
+					0
+				]
+			}
+		},
+		{
+			"id": 112,
+			"mapa": "ruta_116",
+			"celda_original": [
+				55,
+				15
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				55,
+				17
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 432,
+			"metatile_abierto": 433,
+			"comportamiento_cerrado": 154,
+			"palabra_layout_original": 1456,
+			"variante": "general_1b0",
+			"celda_aproximacion_godot": [
+				55,
+				18
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1b0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"RocasN1"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"RocasN1": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 1,
+			"mapa": "ruta_118",
+			"celda_original": [
+				47,
+				14
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				47,
+				14
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				47,
+				15
+			],
+			"palabra_layout_original_sur": 12580,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					1,
+					1,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 11,
+			"mapa": "ruta_118",
+			"celda_original": [
+				67,
+				6
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				67,
+				6
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				67,
+				7
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 122,
+			"mapa": "ruta_118",
+			"celda_original": [
+				29,
+				5
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				29,
+				5
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				29,
+				6
+			],
+			"palabra_layout_original_sur": 12580,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					1,
+					1,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 163,
+			"mapa": "ruta_118",
+			"celda_original": [
+				47,
+				5
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				47,
+				5
+			],
+			"capa_datos": 0,
+			"tipo": "arbol",
+			"metatile_cerrado": 39,
+			"metatile_abierto": 55,
+			"comportamiento_cerrado": 156,
+			"palabra_layout_original": 1063,
+			"variante": "general_027",
+			"celda_aproximacion_godot": [
+				47,
+				6
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_027.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Arbolado": [
+					1,
+					8,
+					1,
+					0
+				]
+			}
+		},
+		{
+			"id": 171,
+			"mapa": "ruta_118",
+			"celda_original": [
+				46,
+				5
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				46,
+				5
+			],
+			"capa_datos": 0,
+			"tipo": "arbol",
+			"metatile_cerrado": 38,
+			"metatile_abierto": 54,
+			"comportamiento_cerrado": 150,
+			"palabra_layout_original": 1062,
+			"variante": "general_026",
+			"celda_aproximacion_godot": [
+				46,
+				6
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_026.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Arbolado": [
+					1,
+					7,
+					1,
+					0
+				]
+			}
+		},
+		{
+			"id": 23,
+			"mapa": "ruta_119",
+			"celda_original": [
+				26,
+				81
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				26,
+				81
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 432,
+			"metatile_abierto": 433,
+			"comportamiento_cerrado": 154,
+			"palabra_layout_original": 1456,
+			"variante": "general_1b0",
+			"celda_aproximacion_godot": [
+				26,
+				82
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1b0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 103,
+			"mapa": "ruta_119",
+			"celda_original": [
+				16,
+				81
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				16,
+				81
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 432,
+			"metatile_abierto": 433,
+			"comportamiento_cerrado": 154,
+			"palabra_layout_original": 1456,
+			"variante": "general_1b0",
+			"celda_aproximacion_godot": [
+				16,
+				82
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1b0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					7,
+					9,
+					0
+				]
+			}
+		},
+		{
+			"id": 113,
+			"mapa": "ruta_119",
+			"celda_original": [
+				16,
+				28
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				16,
+				28
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 432,
+			"metatile_abierto": 433,
+			"comportamiento_cerrado": 154,
+			"palabra_layout_original": 1456,
+			"variante": "general_1b0",
+			"celda_aproximacion_godot": [
+				16,
+				29
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1b0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 173,
+			"mapa": "ruta_119",
+			"celda_original": [
+				19,
+				76
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				19,
+				76
+			],
+			"capa_datos": 0,
+			"tipo": "arbol",
+			"metatile_cerrado": 39,
+			"metatile_abierto": 55,
+			"comportamiento_cerrado": 156,
+			"palabra_layout_original": 1063,
+			"variante": "general_027",
+			"celda_aproximacion_godot": [
+				19,
+				77
+			],
+			"palabra_layout_original_sur": 12302,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_027.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Arbolado": [
+					1,
+					8,
+					1,
+					0
+				]
+			}
+		},
+		{
+			"id": 193,
+			"mapa": "ruta_119",
+			"celda_original": [
+				18,
+				76
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				18,
+				76
+			],
+			"capa_datos": 0,
+			"tipo": "arbol",
+			"metatile_cerrado": 38,
+			"metatile_abierto": 54,
+			"comportamiento_cerrado": 150,
+			"palabra_layout_original": 1062,
+			"variante": "general_026",
+			"celda_aproximacion_godot": [
+				18,
+				77
+			],
+			"palabra_layout_original_sur": 12302,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_026.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Arbolado": [
+					1,
+					7,
+					1,
+					0
+				]
+			}
+		},
+		{
+			"id": 201,
+			"mapa": "ruta_119",
+			"celda_original": [
+				5,
+				2
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				5,
+				2
+			],
+			"capa_datos": 0,
+			"tipo": "arbusto",
+			"metatile_cerrado": 625,
+			"metatile_abierto": 632,
+			"comportamiento_cerrado": 152,
+			"palabra_layout_original": 1649,
+			"variante": "fortree_271",
+			"celda_aproximacion_godot": [
+				5,
+				3
+			],
+			"palabra_layout_original_sur": 12302,
+			"escena": "escenas/bases_secretas/entradas/entrada_fortree_271.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Estructuras"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Estructuras": [
+					1,
+					3,
+					7,
+					0
+				]
+			}
+		},
+		{
+			"id": 202,
+			"mapa": "ruta_119",
+			"celda_original": [
+				4,
+				89
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				4,
+				89
+			],
+			"capa_datos": 0,
+			"tipo": "arbusto",
+			"metatile_cerrado": 625,
+			"metatile_abierto": 632,
+			"comportamiento_cerrado": 152,
+			"palabra_layout_original": 1649,
+			"variante": "fortree_271",
+			"celda_aproximacion_godot": [
+				4,
+				90
+			],
+			"palabra_layout_original_sur": 12309,
+			"escena": "escenas/bases_secretas/entradas/entrada_fortree_271.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Estructuras"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Estructuras": [
+					1,
+					3,
+					7,
+					0
+				]
+			}
+		},
+		{
+			"id": 211,
+			"mapa": "ruta_119",
+			"celda_original": [
+				5,
+				15
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				5,
+				15
+			],
+			"capa_datos": 0,
+			"tipo": "arbusto",
+			"metatile_cerrado": 625,
+			"metatile_abierto": 632,
+			"comportamiento_cerrado": 152,
+			"palabra_layout_original": 1649,
+			"variante": "fortree_271",
+			"celda_aproximacion_godot": [
+				5,
+				16
+			],
+			"palabra_layout_original_sur": 12303,
+			"escena": "escenas/bases_secretas/entradas/entrada_fortree_271.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Estructuras"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Estructuras": [
+					1,
+					3,
+					7,
+					0
+				]
+			}
+		},
+		{
+			"id": 212,
+			"mapa": "ruta_119",
+			"celda_original": [
+				7,
+				101
+			],
+			"elevacion_original": 3,
+			"celda_godot": [
+				7,
+				101
+			],
+			"capa_datos": 0,
+			"tipo": "arbusto",
+			"metatile_cerrado": 625,
+			"metatile_abierto": 632,
+			"comportamiento_cerrado": 152,
+			"palabra_layout_original": 1649,
+			"variante": "fortree_271",
+			"celda_aproximacion_godot": [
+				7,
+				102
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_fortree_271.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Estructuras"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Estructuras": [
+					1,
+					3,
+					7,
+					0
+				]
+			}
+		},
+		{
+			"id": 221,
+			"mapa": "ruta_119",
+			"celda_original": [
+				34,
+				24
+			],
+			"elevacion_original": 3,
+			"celda_godot": [
+				34,
+				24
+			],
+			"capa_datos": 0,
+			"tipo": "arbusto",
+			"metatile_cerrado": 625,
+			"metatile_abierto": 632,
+			"comportamiento_cerrado": 152,
+			"palabra_layout_original": 1649,
+			"variante": "fortree_271",
+			"celda_aproximacion_godot": [
+				34,
+				25
+			],
+			"palabra_layout_original_sur": 12309,
+			"escena": "escenas/bases_secretas/entradas/entrada_fortree_271.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Estructuras"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Estructuras": [
+					1,
+					3,
+					7,
+					0
+				]
+			}
+		},
+		{
+			"id": 223,
+			"mapa": "ruta_119",
+			"celda_original": [
+				4,
+				15
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				4,
+				15
+			],
+			"capa_datos": 0,
+			"tipo": "arbusto",
+			"metatile_cerrado": 625,
+			"metatile_abierto": 632,
+			"comportamiento_cerrado": 152,
+			"palabra_layout_original": 1649,
+			"variante": "fortree_271",
+			"celda_aproximacion_godot": [
+				4,
+				16
+			],
+			"palabra_layout_original_sur": 12303,
+			"escena": "escenas/bases_secretas/entradas/entrada_fortree_271.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Estructuras"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Estructuras": [
+					1,
+					3,
+					7,
+					0
+				]
+			}
+		},
+		{
+			"id": 231,
+			"mapa": "ruta_119",
+			"celda_original": [
+				31,
+				73
+			],
+			"elevacion_original": 3,
+			"celda_godot": [
+				31,
+				73
+			],
+			"capa_datos": 0,
+			"tipo": "arbusto",
+			"metatile_cerrado": 625,
+			"metatile_abierto": 632,
+			"comportamiento_cerrado": 152,
+			"palabra_layout_original": 13937,
+			"variante": "fortree_271",
+			"celda_aproximacion_godot": [
+				31,
+				74
+			],
+			"palabra_layout_original_sur": 12302,
+			"escena": "escenas/bases_secretas/entradas/entrada_fortree_271.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Estructuras"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Estructuras": [
+					1,
+					3,
+					7,
+					0
+				]
+			}
+		},
+		{
+			"id": 233,
+			"mapa": "ruta_119",
+			"celda_original": [
+				6,
+				2
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				6,
+				2
+			],
+			"capa_datos": 0,
+			"tipo": "arbusto",
+			"metatile_cerrado": 625,
+			"metatile_abierto": 632,
+			"comportamiento_cerrado": 152,
+			"palabra_layout_original": 1649,
+			"variante": "fortree_271",
+			"celda_aproximacion_godot": [
+				6,
+				3
+			],
+			"palabra_layout_original_sur": 12302,
+			"escena": "escenas/bases_secretas/entradas/entrada_fortree_271.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Estructuras"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Estructuras": [
+					1,
+					3,
+					7,
+					0
+				]
+			}
+		},
+		{
+			"id": 93,
+			"mapa": "ruta_120",
+			"celda_original": [
+				18,
+				12
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				18,
+				12
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 432,
+			"metatile_abierto": 433,
+			"comportamiento_cerrado": 154,
+			"palabra_layout_original": 1456,
+			"variante": "general_1b0",
+			"celda_aproximacion_godot": [
+				18,
+				13
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1b0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					1,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 101,
+			"mapa": "ruta_120",
+			"celda_original": [
+				28,
+				62
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				28,
+				62
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 432,
+			"metatile_abierto": 433,
+			"comportamiento_cerrado": 154,
+			"palabra_layout_original": 1456,
+			"variante": "general_1b0",
+			"celda_aproximacion_godot": [
+				28,
+				63
+			],
+			"palabra_layout_original_sur": 12401,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1b0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					1,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 111,
+			"mapa": "ruta_120",
+			"celda_original": [
+				30,
+				62
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				30,
+				62
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 432,
+			"metatile_abierto": 433,
+			"comportamiento_cerrado": 154,
+			"palabra_layout_original": 1456,
+			"variante": "general_1b0",
+			"celda_aproximacion_godot": [
+				30,
+				63
+			],
+			"palabra_layout_original_sur": 12401,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1b0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					1,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 203,
+			"mapa": "ruta_120",
+			"celda_original": [
+				38,
+				54
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				38,
+				54
+			],
+			"capa_datos": 0,
+			"tipo": "arbusto",
+			"metatile_cerrado": 625,
+			"metatile_abierto": 632,
+			"comportamiento_cerrado": 152,
+			"palabra_layout_original": 1649,
+			"variante": "fortree_271",
+			"celda_aproximacion_godot": [
+				38,
+				55
+			],
+			"palabra_layout_original_sur": 12309,
+			"escena": "escenas/bases_secretas/entradas/entrada_fortree_271.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Estructuras"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Estructuras": [
+					1,
+					3,
+					7,
+					0
+				]
+			}
+		},
+		{
+			"id": 204,
+			"mapa": "ruta_120",
+			"celda_original": [
+				5,
+				76
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				5,
+				76
+			],
+			"capa_datos": 0,
+			"tipo": "arbusto",
+			"metatile_cerrado": 625,
+			"metatile_abierto": 632,
+			"comportamiento_cerrado": 152,
+			"palabra_layout_original": 1649,
+			"variante": "fortree_271",
+			"celda_aproximacion_godot": [
+				5,
+				77
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_fortree_271.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Estructuras"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Estructuras": [
+					1,
+					3,
+					7,
+					0
+				]
+			}
+		},
+		{
+			"id": 213,
+			"mapa": "ruta_120",
+			"celda_original": [
+				31,
+				23
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				31,
+				23
+			],
+			"capa_datos": 0,
+			"tipo": "arbusto",
+			"metatile_cerrado": 625,
+			"metatile_abierto": 632,
+			"comportamiento_cerrado": 152,
+			"palabra_layout_original": 1649,
+			"variante": "fortree_271",
+			"celda_aproximacion_godot": [
+				31,
+				24
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_fortree_271.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Estructuras"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Estructuras": [
+					1,
+					3,
+					7,
+					0
+				]
+			}
+		},
+		{
+			"id": 222,
+			"mapa": "ruta_120",
+			"celda_original": [
+				26,
+				10
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				26,
+				10
+			],
+			"capa_datos": 0,
+			"tipo": "arbusto",
+			"metatile_cerrado": 625,
+			"metatile_abierto": 632,
+			"comportamiento_cerrado": 152,
+			"palabra_layout_original": 1649,
+			"variante": "fortree_271",
+			"celda_aproximacion_godot": [
+				26,
+				11
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_fortree_271.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Estructuras"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Estructuras": [
+					1,
+					3,
+					7,
+					0
+				]
+			}
+		},
+		{
+			"id": 232,
+			"mapa": "ruta_120",
+			"celda_original": [
+				29,
+				85
+			],
+			"elevacion_original": 5,
+			"celda_godot": [
+				29,
+				85
+			],
+			"capa_datos": 0,
+			"tipo": "arbusto",
+			"metatile_cerrado": 625,
+			"metatile_abierto": 632,
+			"comportamiento_cerrado": 152,
+			"palabra_layout_original": 1649,
+			"variante": "fortree_271",
+			"celda_aproximacion_godot": [
+				29,
+				86
+			],
+			"palabra_layout_original_sur": 20501,
+			"escena": "escenas/bases_secretas/entradas/entrada_fortree_271.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Estructuras"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Estructuras": [
+					1,
+					3,
+					7,
+					0
+				]
+			}
+		},
+		{
+			"id": 12,
+			"mapa": "ruta_121",
+			"celda_original": [
+				40,
+				11
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				40,
+				11
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				40,
+				12
+			],
+			"palabra_layout_original_sur": 12301,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 22,
+			"mapa": "ruta_121",
+			"celda_original": [
+				18,
+				13
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				18,
+				13
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				18,
+				14
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					7,
+					9,
+					0
+				]
+			}
+		},
+		{
+			"id": 162,
+			"mapa": "ruta_121",
+			"celda_original": [
+				43,
+				7
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				43,
+				7
+			],
+			"capa_datos": 0,
+			"tipo": "arbol",
+			"metatile_cerrado": 39,
+			"metatile_abierto": 55,
+			"comportamiento_cerrado": 156,
+			"palabra_layout_original": 1063,
+			"variante": "general_027",
+			"celda_aproximacion_godot": [
+				43,
+				8
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_027.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Arbolado": [
+					1,
+					8,
+					1,
+					0
+				]
+			}
+		},
+		{
+			"id": 172,
+			"mapa": "ruta_121",
+			"celda_original": [
+				42,
+				7
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				42,
+				7
+			],
+			"capa_datos": 0,
+			"tipo": "arbol",
+			"metatile_cerrado": 38,
+			"metatile_abierto": 54,
+			"comportamiento_cerrado": 150,
+			"palabra_layout_original": 1062,
+			"variante": "general_026",
+			"celda_aproximacion_godot": [
+				42,
+				8
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_026.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Arbolado"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Arbolado": [
+					1,
+					7,
+					1,
+					0
+				]
+			}
+		},
+		{
+			"id": 82,
+			"mapa": "ruta_123",
+			"celda_original": [
+				47,
+				3
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				47,
+				3
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				47,
+				4
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 83,
+			"mapa": "ruta_123",
+			"celda_original": [
+				57,
+				5
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				57,
+				5
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				57,
+				6
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 92,
+			"mapa": "ruta_123",
+			"celda_original": [
+				49,
+				3
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				49,
+				3
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				49,
+				4
+			],
+			"palabra_layout_original_sur": 12289,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Suelo": [
+					0,
+					6,
+					7,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 2,
+			"mapa": "ruta_125",
+			"celda_original": [
+				53,
+				10
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				53,
+				10
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				53,
+				11
+			],
+			"palabra_layout_original_sur": 12580,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Agua",
+				"AnimacionAgua",
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Agua": [
+					0,
+					14,
+					12,
+					0
+				],
+				"AnimacionAgua": [
+					0,
+					8,
+					4,
+					0
+				],
+				"Suelo": [
+					5,
+					8,
+					8,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 32,
+			"mapa": "ruta_125",
+			"celda_original": [
+				55,
+				11
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				55,
+				11
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				55,
+				12
+			],
+			"palabra_layout_original_sur": 12710,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Agua",
+				"AnimacionAgua",
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Agua": [
+					0,
+					14,
+					12,
+					0
+				],
+				"AnimacionAgua": [
+					0,
+					8,
+					4,
+					0
+				],
+				"Suelo": [
+					5,
+					8,
+					8,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 132,
+			"mapa": "ruta_125",
+			"celda_original": [
+				7,
+				25
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				7,
+				25
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				7,
+				26
+			],
+			"palabra_layout_original_sur": 12710,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Agua",
+				"AnimacionAgua",
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Agua": [
+					0,
+					14,
+					12,
+					0
+				],
+				"AnimacionAgua": [
+					0,
+					8,
+					4,
+					0
+				],
+				"Suelo": [
+					5,
+					8,
+					8,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 152,
+			"mapa": "ruta_125",
+			"celda_original": [
+				24,
+				32
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				24,
+				32
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 416,
+			"metatile_abierto": 417,
+			"comportamiento_cerrado": 144,
+			"palabra_layout_original": 1440,
+			"variante": "general_1a0",
+			"celda_aproximacion_godot": [
+				24,
+				33
+			],
+			"palabra_layout_original_sur": 12710,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a0.tscn",
+			"capas_visuales": [
+				"Agua",
+				"AnimacionAgua",
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Agua": [
+					0,
+					14,
+					12,
+					0
+				],
+				"AnimacionAgua": [
+					0,
+					8,
+					4,
+					0
+				],
+				"Suelo": [
+					5,
+					8,
+					8,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 31,
+			"mapa": "ruta_127",
+			"celda_original": [
+				59,
+				67
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				59,
+				67
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 424,
+			"metatile_abierto": 425,
+			"comportamiento_cerrado": 148,
+			"palabra_layout_original": 1448,
+			"variante": "general_1a8",
+			"celda_aproximacion_godot": [
+				59,
+				68
+			],
+			"palabra_layout_original_sur": 12580,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a8.tscn",
+			"capas_visuales": [
+				"Agua",
+				"AnimacionAgua",
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Agua": [
+					0,
+					14,
+					12,
+					0
+				],
+				"AnimacionAgua": [
+					0,
+					8,
+					4,
+					0
+				],
+				"Suelo": [
+					5,
+					8,
+					8,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 123,
+			"mapa": "ruta_127",
+			"celda_original": [
+				45,
+				24
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				45,
+				24
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 424,
+			"metatile_abierto": 425,
+			"comportamiento_cerrado": 148,
+			"palabra_layout_original": 1448,
+			"variante": "general_1a8",
+			"celda_aproximacion_godot": [
+				45,
+				25
+			],
+			"palabra_layout_original_sur": 12710,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a8.tscn",
+			"capas_visuales": [
+				"Agua",
+				"AnimacionAgua",
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Agua": [
+					0,
+					14,
+					12,
+					0
+				],
+				"AnimacionAgua": [
+					0,
+					8,
+					4,
+					0
+				],
+				"Suelo": [
+					5,
+					8,
+					8,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 142,
+			"mapa": "ruta_127",
+			"celda_original": [
+				59,
+				72
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				59,
+				72
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 424,
+			"metatile_abierto": 425,
+			"comportamiento_cerrado": 148,
+			"palabra_layout_original": 1448,
+			"variante": "general_1a8",
+			"celda_aproximacion_godot": [
+				59,
+				73
+			],
+			"palabra_layout_original_sur": 12710,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a8.tscn",
+			"capas_visuales": [
+				"Agua",
+				"AnimacionAgua",
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Agua": [
+					0,
+					14,
+					12,
+					0
+				],
+				"AnimacionAgua": [
+					0,
+					8,
+					4,
+					0
+				],
+				"Suelo": [
+					5,
+					8,
+					8,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 143,
+			"mapa": "ruta_127",
+			"celda_original": [
+				61,
+				21
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				61,
+				21
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 424,
+			"metatile_abierto": 425,
+			"comportamiento_cerrado": 148,
+			"palabra_layout_original": 1448,
+			"variante": "general_1a8",
+			"celda_aproximacion_godot": [
+				61,
+				22
+			],
+			"palabra_layout_original_sur": 12686,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a8.tscn",
+			"capas_visuales": [
+				"Agua",
+				"AnimacionAgua",
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Agua": [
+					0,
+					14,
+					12,
+					0
+				],
+				"AnimacionAgua": [
+					0,
+					8,
+					4,
+					0
+				],
+				"Suelo": [
+					5,
+					8,
+					8,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		},
+		{
+			"id": 151,
+			"mapa": "ruta_127",
+			"celda_original": [
+				67,
+				63
+			],
+			"elevacion_original": 0,
+			"celda_godot": [
+				67,
+				63
+			],
+			"capa_datos": 0,
+			"tipo": "cueva",
+			"metatile_cerrado": 424,
+			"metatile_abierto": 425,
+			"comportamiento_cerrado": 148,
+			"palabra_layout_original": 1448,
+			"variante": "general_1a8",
+			"celda_aproximacion_godot": [
+				67,
+				64
+			],
+			"palabra_layout_original_sur": 12710,
+			"escena": "escenas/bases_secretas/entradas/entrada_general_1a8.tscn",
+			"capas_visuales": [
+				"Agua",
+				"AnimacionAgua",
+				"Suelo",
+				"Rocas"
+			],
+			"celdas_visuales_originales": {
+				"Agua": [
+					0,
+					14,
+					12,
+					0
+				],
+				"AnimacionAgua": [
+					0,
+					8,
+					4,
+					0
+				],
+				"Suelo": [
+					5,
+					8,
+					8,
+					0
+				],
+				"Rocas": [
+					0,
+					1,
+					8,
+					0
+				]
+			}
+		}
+	],
+	"variantes": {
+		"general_026": {
+			"tipo": "arbol",
+			"ticks_apertura": 40,
+			"flip_efecto": false
+		},
+		"general_027": {
+			"tipo": "arbol",
+			"ticks_apertura": 40,
+			"flip_efecto": true
+		},
+		"general_1a0": {
+			"tipo": "cueva",
+			"ticks_apertura": 20,
+			"flip_efecto": false
+		},
+		"general_1a8": {
+			"tipo": "cueva",
+			"ticks_apertura": 20,
+			"flip_efecto": false
+		},
+		"fallarbor_208": {
+			"tipo": "cueva",
+			"ticks_apertura": 20,
+			"flip_efecto": false
+		},
+		"general_1b0": {
+			"tipo": "cueva",
+			"ticks_apertura": 20,
+			"flip_efecto": false
+		},
+		"fortree_271": {
+			"tipo": "arbusto",
+			"ticks_apertura": 20,
+			"flip_efecto": false
+		}
+	},
+	"conversion_paleta_exterior": "RGB5 << 3, igual al atlas Godot existente",
+	"fuentes_decomp": {
+		"data/layouts/Route110/map.bin": "468e55e0c1a07f0079421269617a846fcd0d35ed149396f473ec4c41f7d09184",
+		"data/layouts/Route111/map.bin": "ae1df9fa5a452d8fb2eea971a7c213793df82ae65a4f4b901b14fb7a0ad78dee",
+		"data/layouts/Route113/map.bin": "4bb0171024d40ac97185cea719338d89a4925a0f9ad46999ffb55b5fa5280ad3",
+		"data/layouts/Route114/map.bin": "26570f0cb7d3137ae99c3b2c09c6a39ab9aba0290ef1521f91480b63c0cac080",
+		"data/layouts/Route115/map.bin": "8b3c1887be9e6ce94ab1cd8755e87ec8def4e2576ba2ec7c710ba7671dfcc466",
+		"data/layouts/Route116/map.bin": "c7f35f75a6b61f80f70fb2ca8ef4d1fbb4b5cb27473d6f6af56a7c5848cdc32d",
+		"data/layouts/Route118/map.bin": "853bc7dff96160df8ce141827a726e8f0f757f6c13405fed64f1dba536d019fd",
+		"data/layouts/Route119/map.bin": "51333cf17d12622c84dc4774fa28dabdbe97ba85e68c40ff378be7b6fb8c09ee",
+		"data/layouts/Route120/map.bin": "a2f141302d3e9557cdb2d57172ce5d9cbca50ee673274133ed8b9fd5263fbc97",
+		"data/layouts/Route121/map.bin": "2b1d93ed37de847138c3f8490194777cbad8a6ef1d7e0826937124c23c02da67",
+		"data/layouts/Route123/map.bin": "427122b86ed0845961fe0f1ba14fc3468d4509d95962c1d83ecaf6ee47482f9c",
+		"data/layouts/Route125/map.bin": "a03ab0cf81497db9e80ab03b3370fb3872ea6ff623d6ff1bcfb446ecca14aaf8",
+		"data/layouts/Route127/map.bin": "f01e4c769355a9e1a7d935f6426c7b443fb73bf16c04024f3b1db9c97768bb9c",
+		"data/layouts/layouts.json": "8dc80f71ba8b99be430040ee2454607951364a0ab45f410361a538b1219e8cd8",
+		"data/tilesets/primary/general/metatile_attributes.bin": "06c9548a6c70d133b6d47638090f5d36f3fec92aace3d90deca758a4404cfa9b",
+		"data/tilesets/primary/general/metatiles.bin": "07a79bc27b75495daa2e97522d500e789605cd3ab43175be98665b52b93e18d4",
+		"data/tilesets/primary/general/palettes/00.pal": "e7fec32eef41a79d6d45e7f5af9dc74717a1d40ce07aa7cef37eeb7edd47f579",
+		"data/tilesets/primary/general/palettes/01.pal": "c17687ece4bb432d345b43b4e806ebba741553b1ed83b0f46207ce537db5d25c",
+		"data/tilesets/primary/general/palettes/02.pal": "6a2609b1c79e8489ed11182eb075edf0e25d80b5b3b7912c0de20dc5da594eb9",
+		"data/tilesets/primary/general/palettes/03.pal": "1556f735bbb61b32d99e9feba63441c83cfc25ea11d5aaa7c99ac3be92cc7a19",
+		"data/tilesets/primary/general/palettes/04.pal": "36f8de115ed9a96bab2035f4d3d10988ac2365e4fc2b530feb7ea2ef09772f68",
+		"data/tilesets/primary/general/palettes/05.pal": "8356b54b4d39ed880b83f39c82b61699dd720e28eb2ebc2d80a4bd360d8720e2",
+		"data/tilesets/primary/general/tiles.png": "c90ac9f65bdb61ed5ba69afb37ec0d78ee062b7500903e6b9abd073bc0035a02",
+		"data/tilesets/secondary/fallarbor/metatile_attributes.bin": "d8fc4339df8ac82ff93c9858bc00511409865756810a01f217585e7bcf6a12c3",
+		"data/tilesets/secondary/fallarbor/metatiles.bin": "1b1fedf59f805aa46414f662e20645b896b34b05c0e578acc2d166ac909f461b",
+		"data/tilesets/secondary/fallarbor/palettes/06.pal": "253883bd6cd274820313cb90331bbb9ecb719065996696fae6d174dd5a2a7cd1",
+		"data/tilesets/secondary/fallarbor/palettes/07.pal": "170066d770a9e7ec6d5cde37a69d4c4151c2ee78a047acf146124d8f4b812631",
+		"data/tilesets/secondary/fallarbor/palettes/08.pal": "015ef54cc5f6ff2ecf41d891b9e4036d071d2b4d67de0abee0f516440e54a66a",
+		"data/tilesets/secondary/fallarbor/palettes/09.pal": "4d384849f2b3fc1d72060bda026c7fa71f094d370ccbf2c79337d53dfc3ea543",
+		"data/tilesets/secondary/fallarbor/palettes/10.pal": "a12734d98b6804ecefdab082c3ed7735517256e3dfdb0bae18e447176110aae2",
+		"data/tilesets/secondary/fallarbor/palettes/11.pal": "a3202cb0944118052dcfb41b85daa9274f5fd95920e44f5f3af9784efe640bf4",
+		"data/tilesets/secondary/fallarbor/palettes/12.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/fallarbor/palettes/13.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/fallarbor/palettes/14.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/fallarbor/palettes/15.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/fallarbor/tiles.png": "eb99292a9b0c7eb085c207287d64bb2e484d45e71f60a67e9c4dd505322f349f",
+		"data/tilesets/secondary/fortree/metatile_attributes.bin": "61e9a9b9a8d708586e621ad5a9e48e096dd7428f2c9cfa6bab54b8cbd44c75d2",
+		"data/tilesets/secondary/fortree/metatiles.bin": "de288d8086b45eb7414802b980ffb826f7d487254981e2a81087e6296b42a106",
+		"data/tilesets/secondary/fortree/palettes/06.pal": "7a1f5c1a1a30d0a92e46108d84de3108af0eea7808a7793dc342794a3b79265d",
+		"data/tilesets/secondary/fortree/palettes/07.pal": "7a1f5c1a1a30d0a92e46108d84de3108af0eea7808a7793dc342794a3b79265d",
+		"data/tilesets/secondary/fortree/palettes/08.pal": "594316a68b40f800d41c27ab62089155bcec94cde88899ecea0053dca903722f",
+		"data/tilesets/secondary/fortree/palettes/09.pal": "8754ad0b52b1846f710c0a163f51bbb3c98a494f97096901d83b79714b07407e",
+		"data/tilesets/secondary/fortree/palettes/10.pal": "062f09cf13cac2c1f8ff624e207fa2d3d022d01d0101ef5c2989613db325d1ae",
+		"data/tilesets/secondary/fortree/palettes/11.pal": "aa7f36d14b53cf738a6f04b1cdf1993d82ad5baf70e57454df2541dbba51d5f6",
+		"data/tilesets/secondary/fortree/palettes/12.pal": "7a1f5c1a1a30d0a92e46108d84de3108af0eea7808a7793dc342794a3b79265d",
+		"data/tilesets/secondary/fortree/palettes/13.pal": "804001ff750f57b3f7170a863f06e86f2b460fb9b53eacef438c83fc14a624cd",
+		"data/tilesets/secondary/fortree/palettes/14.pal": "7a1f5c1a1a30d0a92e46108d84de3108af0eea7808a7793dc342794a3b79265d",
+		"data/tilesets/secondary/fortree/palettes/15.pal": "1579046ed0c59dcfa931c6d4b181f363f714dd2127fc04f960f74be95287195b",
+		"data/tilesets/secondary/fortree/tiles.png": "5762b579f6738a41743021e4d4cbe522ae8cc88c39518c63c7937d16a83510d0",
+		"data/tilesets/secondary/lilycove/metatile_attributes.bin": "89a199ac8077cdc00c77661f1f0e4c80149cc1f71adecc856cc02e7a04edc9c5",
+		"data/tilesets/secondary/lilycove/metatiles.bin": "53605ab0d11eb48b2d2c904688c1da4efd4a5a2f9ace68c6eb777292764313b5",
+		"data/tilesets/secondary/lilycove/palettes/06.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/lilycove/palettes/07.pal": "e24f118fbb08f7d3bb88ff26dc46b78328680646d134ed2183dc290125a63874",
+		"data/tilesets/secondary/lilycove/palettes/08.pal": "80800c96c3c97036176a71fb013ac77e53f7d26047a91bc80fb6f5eab409682a",
+		"data/tilesets/secondary/lilycove/palettes/09.pal": "c3e783f3dad19a02031be98f1cd33077a6ef84adc32c46a3789fdbf767c120a1",
+		"data/tilesets/secondary/lilycove/palettes/10.pal": "7e17452792474c02994aee640e9129dbd3536007083c6d51efdb75b2314a5a96",
+		"data/tilesets/secondary/lilycove/palettes/11.pal": "b94b89a50285290cd437592d3da37ac722d4acf1e04f36cbd038ab14f0193994",
+		"data/tilesets/secondary/lilycove/palettes/12.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/lilycove/palettes/13.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/lilycove/palettes/14.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/lilycove/palettes/15.pal": "1579046ed0c59dcfa931c6d4b181f363f714dd2127fc04f960f74be95287195b",
+		"data/tilesets/secondary/lilycove/tiles.png": "fabe0d78bfdc50dae4b80a509d1415011758e22fb01a1626cd065fee2e9ed2c2",
+		"data/tilesets/secondary/mauville/metatile_attributes.bin": "7ef1856018b80cff8b45dad31b0b6cdce0493c5fe3213184138d244275796bd3",
+		"data/tilesets/secondary/mauville/metatiles.bin": "f5d0e73515ccc27d986aa92cc6572afd07123eef174e91e34581bfc52461a262",
+		"data/tilesets/secondary/mauville/palettes/06.pal": "9255037113f80e0e7992a483b92b978eb4156fc4ad0756c1c07404778b5f6303",
+		"data/tilesets/secondary/mauville/palettes/07.pal": "3780dc2cbd802dc86cbfdcc8f2638bb8da982413e918d8b92c4c1b881cf9c7c6",
+		"data/tilesets/secondary/mauville/palettes/08.pal": "91f221ce8c5ecebea2b2ee72b1e19e4ca000ccc219ef745363894eafff554a79",
+		"data/tilesets/secondary/mauville/palettes/09.pal": "19a0b0acc96a89d14809dda22f6f686764a92687b10fc3ea5782119a3432c57e",
+		"data/tilesets/secondary/mauville/palettes/10.pal": "9fc9cb44ed05eb2d0490a8e727b1196bc13e9a07ffde8bca438d208b8bf9291c",
+		"data/tilesets/secondary/mauville/palettes/11.pal": "3a7e224bec3ffa174315a1c19991a09f3cbd516a195e4554f90d102506d77839",
+		"data/tilesets/secondary/mauville/palettes/12.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/mauville/palettes/13.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/mauville/palettes/14.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/mauville/palettes/15.pal": "1579046ed0c59dcfa931c6d4b181f363f714dd2127fc04f960f74be95287195b",
+		"data/tilesets/secondary/mauville/tiles.png": "b0de1465d52b507098858db94d2e78b97c89b1defd1023e860c31308ef9524f2",
+		"data/tilesets/secondary/mossdeep/metatile_attributes.bin": "f4866ce89f9de813fda43f20b5ffc8073fbcde273ad989556968a2a3c4d4bc2a",
+		"data/tilesets/secondary/mossdeep/metatiles.bin": "c71636d5785cabfc4c19fc851f4c036fc5729c98f44cc9668763a61fbc5f0667",
+		"data/tilesets/secondary/mossdeep/palettes/06.pal": "dc27805ba5e8346ba440cfe3406911cdbd3ff9e7bd19c5a208812005b4e5c06a",
+		"data/tilesets/secondary/mossdeep/palettes/07.pal": "e11f3454914f2bcb87346085cc171d4b24523d99a5e016a819d23d0e97fec20a",
+		"data/tilesets/secondary/mossdeep/palettes/08.pal": "bad4ccbbe62f585c4d937da01a671e8425b51f1adf5d10778fad68effaae5c3a",
+		"data/tilesets/secondary/mossdeep/palettes/09.pal": "2f3caab66ce60194f77f885790300fa30c1268bd3d3a303d772aa84dbce668eb",
+		"data/tilesets/secondary/mossdeep/palettes/10.pal": "98a6f8ba1ba91ec815d9c94913936a75376c7837fc0299882aa6df1c47430eef",
+		"data/tilesets/secondary/mossdeep/palettes/11.pal": "513e8a02379763e8b09d394588d4bd2f7e123aa1a4e694c9032297b287a7b36f",
+		"data/tilesets/secondary/mossdeep/palettes/12.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/mossdeep/palettes/13.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/mossdeep/palettes/14.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/mossdeep/palettes/15.pal": "1579046ed0c59dcfa931c6d4b181f363f714dd2127fc04f960f74be95287195b",
+		"data/tilesets/secondary/mossdeep/tiles.png": "9c76003e536d564e25c00350cd67df2ef6a6ab97e3c4b0fa1b40baeb49b60b0e",
+		"data/tilesets/secondary/rustboro/metatile_attributes.bin": "fa6921bf5b08fd050884742479b1ce1e56093ac65d33796acec58a00feec3659",
+		"data/tilesets/secondary/rustboro/metatiles.bin": "fab5e8bcb5ca858b0e9660d6b912ff6b7b54112539eaad26ce48fdf8192907dc",
+		"data/tilesets/secondary/rustboro/palettes/06.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/rustboro/palettes/07.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/rustboro/palettes/08.pal": "0885b78b5b2881227ed69d4977806472c377e1cceb57f2e9f52633721a8d683c",
+		"data/tilesets/secondary/rustboro/palettes/09.pal": "9c4d7d7edac7dfac02b849281ef51a4a383b328f12b17945b17b6469d7cc1db4",
+		"data/tilesets/secondary/rustboro/palettes/10.pal": "d42e58ab5e506e390ae8851c2dcdf6f4da69df03cc51662375145776e968dad1",
+		"data/tilesets/secondary/rustboro/palettes/11.pal": "e4a2006635d6723cca052d114b861b780e8d2b3266cb4568c8f9bbcbc5b5bc86",
+		"data/tilesets/secondary/rustboro/palettes/12.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/rustboro/palettes/13.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/rustboro/palettes/14.pal": "ea391b70a00c55f0fe13590e345ee9b66fb9013864b737f40258d99f70f6eb04",
+		"data/tilesets/secondary/rustboro/palettes/15.pal": "1579046ed0c59dcfa931c6d4b181f363f714dd2127fc04f960f74be95287195b",
+		"data/tilesets/secondary/rustboro/tiles.png": "f9f573453d6f389ca0822effd08192d7e64b178c698cb5a92b8f5f95ab2a0d44",
+		"graphics/field_effect_objects/palettes/08.pal": "6a2609b1c79e8489ed11182eb075edf0e25d80b5b3b7912c0de20dc5da594eb9",
+		"graphics/unknown_sprites/83D25C4/0.png": "6ea00f019669138fa6b17bedfdebe75cb288405263756d85622914d91dbe1b7e",
+		"graphics/unknown_sprites/83D25C4/1.png": "d22fc209f69b76cc68abea05e3c68da1e6380f460047fd3b194d5f8d6b6bef39",
+		"graphics/unknown_sprites/83D25C4/2.png": "c2055ca243c8c9c38dc8df4b3758f2b78accb06e840e6cb886e2521288ef3ed7",
+		"graphics/unknown_sprites/83D25C4/3.png": "b19220c8cc101988d7a13c125303181b303b98970ee4d91fa256227cf491c121",
+		"graphics/unknown_sprites/83D25C4/4.png": "a906e38e5c66bbaf55885014d20d6196650880ce8557bb64394a392ab02a8603",
+		"graphics/unknown_sprites/83D25EC/0.png": "9696522318bc314e319191f833de0f892498744e9a66772de4569ca0376fbc2b",
+		"graphics/unknown_sprites/83D25EC/1.png": "c4b523e3e03214923b513738c6a8da215fc9749ac097f095ad951db6783780d9",
+		"graphics/unknown_sprites/83D25EC/2.png": "79342dcb2bff0b03abf9fce17291549c7b5686b80f182de3a5e06f775010d288",
+		"graphics/unknown_sprites/83D25EC/3.png": "4f4a17ed95c352b0ef91bec9bec404a988c427f57ea6c96c934b5c3aa0988089",
+		"graphics/unknown_sprites/83D25EC/4.png": "8fd3a84578a2b94a1998bda6f791fdeed3f122cfbaec294e034707d937b9e3d8",
+		"src/fldeff_secretpower.c": "808a91eb7b8efaf234c5b0b00d72ce09f9fee6c3e0e5c73f4a38e2a8510edfb1",
+		"src/secret_base.c": "0b546bd9f70f91ea09ad12456e22c4f447ac0948b0bb7e93367d634300b3cd46"
+	}
+}

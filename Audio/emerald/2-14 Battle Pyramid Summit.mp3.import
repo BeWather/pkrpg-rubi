@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fe0nrxyk8nu"
+path="res://.godot/imported/2-14 Battle Pyramid Summit.mp3-8c2d6627c2f231f9bcb637b850717a23.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/2-14 Battle Pyramid Summit.mp3"
+dest_files=["res://.godot/imported/2-14 Battle Pyramid Summit.mp3-8c2d6627c2f231f9bcb637b850717a23.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

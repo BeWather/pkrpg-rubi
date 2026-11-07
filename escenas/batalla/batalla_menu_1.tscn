@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://d3i5kshewmfrs"]
+
+[ext_resource type="Texture2D" uid="uid://v6kexaw8rq10" path="res://UI/menu_box_1.png" id="1_s560g"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="2_3f8rf"]
+[ext_resource type="Script" uid="uid://bgvvu4kj4ti2a" path="res://escenas/batalla/batalla_menu_1.gd" id="2_mw157"]
+[ext_resource type="Texture2D" uid="uid://c78aiq8pny8cs" path="res://graficos/batalla/batalla_menu_1.png" id="3_005sr"]
+[ext_resource type="AudioStream" uid="uid://17b6judf3tx1" path="res://Audio/SE/Choose.WAV" id="5_kncsf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1apwv"]
+font = ExtResource("2_3f8rf")
+font_size = 15
+font_color = Color(0.282353, 0.282353, 0.282353, 1)
+shadow_size = 0
+shadow_color = Color(0.282353, 0.282353, 0.282353, 0.25098)
+shadow_offset = Vector2(1, 0)
+
+[node name="BatallaMenu" type="NinePatchRect" unique_id=1843832606]
+offset_right = 104.0
+offset_bottom = 48.0
+texture = ExtResource("1_s560g")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_mw157")
+metadata/_edit_lock_ = true
+
+[node name="lucha" type="Label" parent="." unique_id=2005969365]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 50.0
+offset_bottom = 23.0
+text = "LUCHA"
+label_settings = SubResource("LabelSettings_1apwv")
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="pokemon" type="Label" parent="." unique_id=214715111]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 50.0
+offset_bottom = 39.0
+text = "POKéMON"
+label_settings = SubResource("LabelSettings_1apwv")
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="mochila" type="Label" parent="." unique_id=1895875633]
+texture_filter = 1
+layout_mode = 0
+offset_left = 54.0
+offset_top = 8.0
+offset_right = 96.0
+offset_bottom = 23.0
+text = "MOCHILA"
+label_settings = SubResource("LabelSettings_1apwv")
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="huida" type="Label" parent="." unique_id=457148346]
+texture_filter = 1
+layout_mode = 0
+offset_left = 54.0
+offset_top = 24.0
+offset_right = 96.0
+offset_bottom = 39.0
+text = "HUIDA"
+label_settings = SubResource("LabelSettings_1apwv")
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="cursor" type="TextureRect" parent="." unique_id=83906422]
+layout_mode = 0
+offset_left = 53.0
+offset_top = 23.0
+offset_right = 97.0
+offset_bottom = 41.0
+texture = ExtResource("3_005sr")
+
+[node name="sonido" type="AudioStreamPlayer" parent="." unique_id=89618724]
+stream = ExtResource("5_kncsf")

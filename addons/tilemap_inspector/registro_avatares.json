@@ -1,0 +1,699 @@
+{
+	"version": 1,
+	"recientes": [
+		"uid://damgta0thpof0",
+		"uid://llyr2ayqqnnp",
+		"uid://rvhay5tgmegy",
+		"uid://k8r6n7d6tftr",
+		"uid://dsh3jot1vcx8",
+		"uid://cugc1qj5nqao6",
+		"uid://bbaly7nva7dkv",
+		"uid://ctyp02eubucwm"
+	],
+	"avatares": [
+		{
+			"nombre": "npc_001",
+			"uid": "uid://bkw3hndn42rqc",
+			"ruta": "res://escenas/avatares/npc_001.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_002",
+			"uid": "uid://rg7cfxe2iy3m",
+			"ruta": "res://escenas/avatares/npc_002.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_003",
+			"uid": "uid://k8r6n7d6tftr",
+			"ruta": "res://escenas/avatares/npc_003.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_004",
+			"uid": "uid://bms66bpk8w77d",
+			"ruta": "res://escenas/avatares/npc_004.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_005",
+			"uid": "uid://dsh3jot1vcx8",
+			"ruta": "res://escenas/avatares/npc_005.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_006",
+			"uid": "uid://c8eclcahjsyf3",
+			"ruta": "res://escenas/avatares/npc_006.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_007",
+			"uid": "uid://cxkxw6hvqv62v",
+			"ruta": "res://escenas/avatares/npc_007.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_008",
+			"uid": "uid://c4v7i5xgf87q7",
+			"ruta": "res://escenas/avatares/npc_008.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_009",
+			"uid": "uid://now553w3ynsm",
+			"ruta": "res://escenas/avatares/npc_009.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_010",
+			"uid": "uid://bvhd4qu3is3pt",
+			"ruta": "res://escenas/avatares/npc_010.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_011",
+			"uid": "uid://cugc1qj5nqao6",
+			"ruta": "res://escenas/avatares/npc_011.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_012",
+			"uid": "uid://dr1hww5bqlubq",
+			"ruta": "res://escenas/avatares/npc_012.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_013",
+			"uid": "uid://cfy52d08b3upp",
+			"ruta": "res://escenas/avatares/npc_013.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_014",
+			"uid": "uid://byyvoc0dmfygr",
+			"ruta": "res://escenas/avatares/npc_014.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_015",
+			"uid": "uid://cy2tf0sbgdeui",
+			"ruta": "res://escenas/avatares/npc_015.tres",
+			"tags": []
+		},
+		{
+			"nombre": "Enfemera",
+			"uid": "uid://d0y222l1gmlf",
+			"ruta": "res://escenas/avatares/npc_016.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_017",
+			"uid": "uid://c0ts707qvxfax",
+			"ruta": "res://escenas/avatares/npc_017.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_018",
+			"uid": "uid://blksta48icop1",
+			"ruta": "res://escenas/avatares/npc_018.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_019",
+			"uid": "uid://ctfpoynxvo8xb",
+			"ruta": "res://escenas/avatares/npc_019.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_020",
+			"uid": "uid://b6sswtsk5qcq",
+			"ruta": "res://escenas/avatares/npc_020.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_021",
+			"uid": "uid://biydhpw1shdox",
+			"ruta": "res://escenas/avatares/npc_021.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_022",
+			"uid": "uid://bsguhy7xxuon6",
+			"ruta": "res://escenas/avatares/npc_022.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_023",
+			"uid": "uid://c6rr70f3rkwdf",
+			"ruta": "res://escenas/avatares/npc_023.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_024",
+			"uid": "uid://mpten153lp7t",
+			"ruta": "res://escenas/avatares/npc_024.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_025",
+			"uid": "uid://c3lyn7qbe2ghk",
+			"ruta": "res://escenas/avatares/npc_025.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_026",
+			"uid": "uid://ddpbgnsxddpwl",
+			"ruta": "res://escenas/avatares/npc_026.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_027",
+			"uid": "uid://ds1lihygyt1d0",
+			"ruta": "res://escenas/avatares/npc_027.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_028",
+			"uid": "uid://damgta0thpof0",
+			"ruta": "res://escenas/avatares/npc_028.tres",
+			"tags": []
+		},
+		{
+			"nombre": "JOVEN",
+			"uid": "uid://dlgsjg2806wak",
+			"ruta": "res://escenas/avatares/npc_029.tres",
+			"tags": []
+		},
+		{
+			"nombre": "CAZABICHOS",
+			"uid": "uid://cukr82blprid",
+			"ruta": "res://escenas/avatares/npc_030.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_031",
+			"uid": "uid://dfpgad0skjl3c",
+			"ruta": "res://escenas/avatares/npc_031.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_032",
+			"uid": "uid://c5umb4imbb1p",
+			"ruta": "res://escenas/avatares/npc_032.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_033",
+			"uid": "uid://bffusi6aoaqoc",
+			"ruta": "res://escenas/avatares/npc_033.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_034",
+			"uid": "uid://b1o1ixadi8s7g",
+			"ruta": "res://escenas/avatares/npc_034.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_035",
+			"uid": "uid://cekcll3m7i2e8",
+			"ruta": "res://escenas/avatares/npc_035.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_036",
+			"uid": "uid://ciqxabi7dld0v",
+			"ruta": "res://escenas/avatares/npc_036.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_037",
+			"uid": "uid://cjrulm1krb2ui",
+			"ruta": "res://escenas/avatares/npc_037.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_038",
+			"uid": "uid://bar6pwfy6ctbd",
+			"ruta": "res://escenas/avatares/npc_038.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_039",
+			"uid": "uid://b4mj7km5ppxw6",
+			"ruta": "res://escenas/avatares/npc_039.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_040",
+			"uid": "uid://c7o8ddsg5s6rd",
+			"ruta": "res://escenas/avatares/npc_040.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_041",
+			"uid": "uid://y2okv1piv7bf",
+			"ruta": "res://escenas/avatares/npc_041.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_042",
+			"uid": "uid://cvnj47upyd2ca",
+			"ruta": "res://escenas/avatares/npc_042.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_043",
+			"uid": "uid://crptpek5fo5ha",
+			"ruta": "res://escenas/avatares/npc_043.tres",
+			"tags": []
+		},
+		{
+			"nombre": "Mamá",
+			"uid": "uid://56jm4c32kybq",
+			"ruta": "res://escenas/avatares/npc_044.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_045",
+			"uid": "uid://dctwn72apmppw",
+			"ruta": "res://escenas/avatares/npc_045.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_046",
+			"uid": "uid://be7w4lh6yejph",
+			"ruta": "res://escenas/avatares/npc_046.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_047",
+			"uid": "uid://c6lw4imugjphu",
+			"ruta": "res://escenas/avatares/npc_047.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_048",
+			"uid": "uid://q6liftwxrkde",
+			"ruta": "res://escenas/avatares/npc_048.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_049",
+			"uid": "uid://br8ndfy138tgu",
+			"ruta": "res://escenas/avatares/npc_049.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_050",
+			"uid": "uid://buukulhhkfyjc",
+			"ruta": "res://escenas/avatares/npc_050.tres",
+			"tags": []
+		},
+		{
+			"nombre": "Abuela",
+			"uid": "uid://hejh224ycfno",
+			"ruta": "res://escenas/avatares/npc_051.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_052",
+			"uid": "uid://bmiijupbogopu",
+			"ruta": "res://escenas/avatares/npc_052.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_053",
+			"uid": "uid://yclduvphmj43",
+			"ruta": "res://escenas/avatares/npc_053.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_054",
+			"uid": "uid://ct3gr3wlu1nb",
+			"ruta": "res://escenas/avatares/npc_054.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_055",
+			"uid": "uid://borgo2f2dfmil",
+			"ruta": "res://escenas/avatares/npc_055.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_056",
+			"uid": "uid://54qs3ihvxxbm",
+			"ruta": "res://escenas/avatares/npc_056.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_057",
+			"uid": "uid://c3em8cga3bach",
+			"ruta": "res://escenas/avatares/npc_057.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_058",
+			"uid": "uid://15i436nqmahw",
+			"ruta": "res://escenas/avatares/npc_058.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_059",
+			"uid": "uid://ddjwupd2vhfas",
+			"ruta": "res://escenas/avatares/npc_059.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_060",
+			"uid": "uid://bsfxgq2rhmuup",
+			"ruta": "res://escenas/avatares/npc_060.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_061",
+			"uid": "uid://botaed3oif5tm",
+			"ruta": "res://escenas/avatares/npc_061.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_062",
+			"uid": "uid://8ic0mgm0x0bk",
+			"ruta": "res://escenas/avatares/npc_062.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_063",
+			"uid": "uid://bekclhrhmq4q7",
+			"ruta": "res://escenas/avatares/npc_063.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_064",
+			"uid": "uid://dlmqb6ogg84xh",
+			"ruta": "res://escenas/avatares/npc_064.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_065",
+			"uid": "uid://rvhay5tgmegy",
+			"ruta": "res://escenas/avatares/npc_065.tres",
+			"tags": []
+		},
+		{
+			"nombre": "CHICA",
+			"uid": "uid://cyl36dlhko7bi",
+			"ruta": "res://escenas/avatares/npc_066.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_067",
+			"uid": "uid://03vwdt8hqw32",
+			"ruta": "res://escenas/avatares/npc_067.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_068",
+			"uid": "uid://w5fb8o7aplvp",
+			"ruta": "res://escenas/avatares/npc_068.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_069",
+			"uid": "uid://7rjhsrbts6wi",
+			"ruta": "res://escenas/avatares/npc_069.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_070",
+			"uid": "uid://djrq5vpont8bh",
+			"ruta": "res://escenas/avatares/npc_070.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_071",
+			"uid": "uid://bmjmxoigiucre",
+			"ruta": "res://escenas/avatares/npc_071.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_072",
+			"uid": "uid://mjsr1wbonvb8",
+			"ruta": "res://escenas/avatares/npc_072.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_073",
+			"uid": "uid://d4j0s22gsun2",
+			"ruta": "res://escenas/avatares/npc_073.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_074",
+			"uid": "uid://cmspnib5vfpfm",
+			"ruta": "res://escenas/avatares/npc_074.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_075",
+			"uid": "uid://roynf00citxt",
+			"ruta": "res://escenas/avatares/npc_075.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_076",
+			"uid": "uid://dkp2gt0shv7l4",
+			"ruta": "res://escenas/avatares/npc_076.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_077",
+			"uid": "uid://l4xpbnysqeg5",
+			"ruta": "res://escenas/avatares/npc_077.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_078",
+			"uid": "uid://dek8eo1lkb0yg",
+			"ruta": "res://escenas/avatares/npc_078.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_079",
+			"uid": "uid://dn5ohw2g30y26",
+			"ruta": "res://escenas/avatares/npc_079.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_080",
+			"uid": "uid://c0xoql5jfg44n",
+			"ruta": "res://escenas/avatares/npc_080.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_081",
+			"uid": "uid://j4urea1ayywq",
+			"ruta": "res://escenas/avatares/npc_081.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_082",
+			"uid": "uid://7yejd1q27gdk",
+			"ruta": "res://escenas/avatares/npc_082.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_083",
+			"uid": "uid://llyr2ayqqnnp",
+			"ruta": "res://escenas/avatares/npc_083.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_084",
+			"uid": "uid://b748xi0ugcjdh",
+			"ruta": "res://escenas/avatares/npc_084.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_085",
+			"uid": "uid://btrprsifbkbxj",
+			"ruta": "res://escenas/avatares/npc_085.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_086",
+			"uid": "uid://8f6ys5ykvvdy",
+			"ruta": "res://escenas/avatares/npc_086.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_087",
+			"uid": "uid://dbmonr27c71jc",
+			"ruta": "res://escenas/avatares/npc_087.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_088",
+			"uid": "uid://cf0ocdnn7ve3t",
+			"ruta": "res://escenas/avatares/npc_088.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_089",
+			"uid": "uid://bro2d3qsb5g7",
+			"ruta": "res://escenas/avatares/npc_089.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_090",
+			"uid": "uid://h1ll1wsbwaiv",
+			"ruta": "res://escenas/avatares/npc_090.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_091",
+			"uid": "uid://v2tj3eet0rdu",
+			"ruta": "res://escenas/avatares/npc_091.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_092",
+			"uid": "uid://c7c2ncm1paxc",
+			"ruta": "res://escenas/avatares/npc_092.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_093",
+			"uid": "uid://lolua5p1pqu5",
+			"ruta": "res://escenas/avatares/npc_093.tres",
+			"tags": []
+		},
+		{
+			"nombre": "Alto Mando",
+			"uid": "uid://bfu60tcu011bx",
+			"ruta": "res://escenas/avatares/npc_094.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_095",
+			"uid": "uid://kkcyr3uabasq",
+			"ruta": "res://escenas/avatares/npc_095.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_096",
+			"uid": "uid://dhve8mnbwaadl",
+			"ruta": "res://escenas/avatares/npc_096.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_097",
+			"uid": "uid://bcf5wj475jnpb",
+			"ruta": "res://escenas/avatares/npc_097.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_098",
+			"uid": "uid://bkrwrdhw0hdon",
+			"ruta": "res://escenas/avatares/npc_098.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_099",
+			"uid": "uid://dod66ebxkoagb",
+			"ruta": "res://escenas/avatares/npc_099.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_100",
+			"uid": "uid://nndm2dhyfxo",
+			"ruta": "res://escenas/avatares/npc_100.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_101",
+			"uid": "uid://bbs0o5pm1e5dm",
+			"ruta": "res://escenas/avatares/npc_101.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_102",
+			"uid": "uid://di0ysknjtask2",
+			"ruta": "res://escenas/avatares/npc_102.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_103",
+			"uid": "uid://xl12cp58oh0",
+			"ruta": "res://escenas/avatares/npc_103.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_104",
+			"uid": "uid://sjjolphaf3li",
+			"ruta": "res://escenas/avatares/npc_104.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_105",
+			"uid": "uid://dvibircwya5sm",
+			"ruta": "res://escenas/avatares/npc_105.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_106",
+			"uid": "uid://cd0fu0lfdudp1",
+			"ruta": "res://escenas/avatares/npc_106.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_107",
+			"uid": "uid://c3qoqq5eoskud",
+			"ruta": "res://escenas/avatares/npc_107.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_108",
+			"uid": "uid://bjywxxfru5l41",
+			"ruta": "res://escenas/avatares/npc_108.tres",
+			"tags": []
+		},
+		{
+			"nombre": "Zigzagoon",
+			"uid": "uid://svxph7131sss",
+			"ruta": "res://escenas/avatares/npc_109.tres",
+			"tags": []
+		},
+		{
+			"nombre": "npc_110",
+			"uid": "uid://dho4bxstap6os",
+			"ruta": "res://escenas/avatares/npc_110.tres",
+			"tags": []
+		},
+		{
+			"nombre": "Azumarill",
+			"uid": "uid://bazum4r1ll8k0",
+			"ruta": "res://escenas/avatares/npc_azumarill.tres",
+			"tags": []
+		},
+		{
+			"nombre": "Mujer 7 Ruby",
+			"uid": "uid://dy2ctuwmsu5k1",
+			"ruta": "res://escenas/avatares/ruby_woman_7.tres",
+			"tags": []
+		},
+		{
+			"nombre": "Ciclista F Ruby",
+			"uid": "uid://bbaly7nva7dkv",
+			"ruta": "res://escenas/avatares/rubi_ciclista_f.tres",
+			"tags": []
+		},
+		{
+			"nombre": "Ciclista M Ruby",
+			"uid": "uid://ctyp02eubucwm",
+			"ruta": "res://escenas/avatares/rubi_ciclista_m.tres",
+			"tags": []
+		}
+	]
+}

@@ -1,0 +1,65 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/tilemap_inspector/editores/editor_encuentros_visual/pestana_tipo.gd" id="1_pestana"]
+
+[node name="PestanaTipo" type="VBoxContainer"]
+size_flags_vertical = 3
+theme_override_constants/separation = 6
+script = ExtResource("1_pestana")
+
+[node name="Cabecera" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="EtiquetaRatio" type="Label" parent="Cabecera"]
+layout_mode = 2
+text = "Ratio de encuentro:"
+
+[node name="Ratio" type="SpinBox" parent="Cabecera"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(90, 0)
+layout_mode = 2
+tooltip_text = "Pasos entre encuentros; 0 = sin encuentros"
+max_value = 999.0
+
+[node name="Pista" type="Label" parent="Cabecera"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.58, 0.65, 1)
+theme_override_font_sizes/font_size = 11
+text = "(0 = sin encuentros)"
+
+[node name="Espacio" type="Control" parent="Cabecera"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Conteo" type="Label" parent="Cabecera"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "0 / 0 slots"
+
+[node name="Agregar" type="Button" parent="Cabecera"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "+ Agregar slot"
+
+[node name="Scroll" type="ScrollContainer" parent="."]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Contenido" type="VBoxContainer" parent="Scroll"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Vacio" type="Label" parent="Scroll/Contenido"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.53, 0.6, 1)
+text = "Sin slots para este tipo. Pulsa «+ Agregar slot» para crear uno."
+horizontal_alignment = 1
+
+[node name="Filas" type="VBoxContainer" parent="Scroll/Contenido"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4

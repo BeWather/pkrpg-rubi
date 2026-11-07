@@ -1,0 +1,445 @@
+[gd_scene format=4 uid="uid://qfanoqx3h5bk"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_2chqn"]
+[ext_resource type="TileSet" uid="uid://cihs7q0xi0yev" path="res://escenas/tileset_interior_edificios_2.tres" id="2_m3mk5"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_imal3"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_m3mk5"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="ce_base"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="ce_evento"]
+[ext_resource type="Script" uid="uid://b3r00pidr48xb" path="res://scripts/npc/npc_regalo_objeto.gd" id="ce_regalo"]
+[ext_resource type="Script" uid="uid://dmy4ir5m1ul04" path="res://scripts/npc/npc_dialogo_condicional.gd" id="ce_condicional"]
+[ext_resource type="SpriteFrames" uid="uid://rvhay5tgmegy" path="res://escenas/avatares/npc_065.tres" id="ce_f_065"]
+[ext_resource type="SpriteFrames" uid="uid://w5fb8o7aplvp" path="res://escenas/avatares/npc_068.tres" id="ce_f_068"]
+[ext_resource type="SpriteFrames" uid="uid://lolua5p1pqu5" path="res://escenas/avatares/npc_093.tres" id="ce_f_093"]
+[ext_resource type="SpriteFrames" uid="uid://borgo2f2dfmil" path="res://escenas/avatares/npc_055.tres" id="ce_f_055"]
+[ext_resource type="SpriteFrames" uid="uid://cfy52d08b3upp" path="res://escenas/avatares/npc_013.tres" id="ce_f_013"]
+[ext_resource type="SpriteFrames" uid="uid://03vwdt8hqw32" path="res://escenas/avatares/npc_067.tres" id="ce_f_067"]
+[ext_resource type="Script" path="res://scripts/eventos/ciudad_algaria/evento_centro_espacial.gd" id="ce_ev_centro"]
+
+[node name="CentroEspacial" type="Node2D" unique_id=1166323007]
+script = ExtResource("1_2chqn")
+seccion = "CIUDAD_ALGARIA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_ALGARIA"
+solo_caminar = true
+nombre_interno = "ciudad_algaria_centro_espacial"
+musica_mapa = "CIUDAD_FERRICA"
+metadata/esInterior = true
+
+[node name="NPCs" type="Node2D" parent="." unique_id=188507344]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1664415098]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAMAAAAMAAAAAAADABYAAAAMAAEAAAADABcAAAANAAAAAAAEABYAAAANAAEAAAAEABcAAAAOAAAAAAAFABYAAAAOAAEAAAAFABcAAAABAAAAAAABAAMAAAACAAAAAAABAAMAAAADAAAAAAAAAB8AAAAEAAAAAAAAAB8AAAAFAAAAAAAAAB8AAAAGAAAAAAAAAB8AAAAHAAAAAAAAAB8AAAAIAAAAAAAAAB8AAAAJAAAAAAAAAB8AAAAKAAAAAAAAAB8AAAALAAAAAAAAAB8AAAAPAAAAAAABAAMAAAALAAEAAAAAACAAAAAKAAEAAAAAACAAAAAJAAEAAAAAACAAAAAIAAEAAAAAACAAAAAHAAEAAAAAACAAAAAGAAEAAAAAACAAAAAFAAEAAAAAACAAAAAEAAEAAAAAACAAAAADAAEAAAAAACAAAAACAAEAAAABABcAAAABAAEAAAAAABcAAAAAAAIAAAAHAC4AAAABAAIAAAAFAC4AAAACAAIAAAAGAC4AAAAAAAEAAAACABcAAAAPAAEAAAABABcAAAAPAAIAAAAGAC4AAAAMAAIAAAAGAC0AAAAOAAIAAAAHAC0AAAANAAIAAAAGACwAAAALAAIAAAAGACwAAAAKAAIAAAAGACwAAAAJAAIAAAAGACwAAAAIAAIAAAAGACwAAAAHAAIAAAAGACwAAAAGAAIAAAAGACwAAAAFAAIAAAAGACwAAAAEAAIAAAAGACwAAAADAAIAAAAGACwAAAAAAAkAAAABAB4AAAAAAAgAAAABAB4AAAAAAAcAAAABAB4AAAAAAAYAAAABAB4AAAAAAAUAAAABAB4AAAAAAAQAAAABAB4AAAAAAAMAAAABAB4AAAABAAMAAAAAAB4AAAABAAQAAAAAAB4AAAABAAUAAAAAAB4AAAABAAYAAAABACwAAAABAAcAAAAAAB4AAAABAAgAAAAAAB4AAAABAAkAAAAAAB4AAAACAAMAAAABACwAAAACAAQAAAAAAB4AAAACAAUAAAAAAC0AAAACAAYAAAAAAC4AAAACAAcAAAABACwAAAACAAgAAAAAAB4AAAACAAkAAAAAAB4AAAADAAMAAAAAAB4AAAADAAQAAAAAAB4AAAADAAUAAAABAC0AAAADAAYAAAABAC4AAAADAAcAAAAAAB4AAAADAAgAAAAAAB4AAAADAAkAAAAAAB4AAAAEAAMAAAAAAB4AAAAEAAQAAAAAAB4AAAAEAAUAAAAAAC0AAAAEAAYAAAAAAC4AAAAEAAcAAAABACwAAAAEAAgAAAAAAB4AAAAEAAkAAAAAAB4AAAAFAAMAAAABACwAAAAFAAQAAAAAAB4AAAAFAAUAAAABAC0AAAAFAAYAAAABAC4AAAAFAAcAAAAAAB4AAAAFAAgAAAAAAB4AAAAFAAkAAAAAAB4AAAAGAAMAAAAAAB4AAAAGAAQAAAAAAB4AAAAGAAUAAAAAAB4AAAAGAAYAAAAAAB4AAAAGAAcAAAAAAB4AAAAGAAgAAAAAAB4AAAAGAAkAAAAAAB4AAAAHAAMAAAAAAB4AAAAHAAQAAAAAAB4AAAAHAAUAAAAAAB4AAAAHAAYAAAAAAB4AAAAHAAcAAAAAAB4AAAAHAAgAAAAAAB4AAAAHAAkAAAAGAAAAAAAIAAMAAAABACwAAAAIAAQAAAAAAB4AAAAIAAUAAAAAAB4AAAAIAAYAAAAAAB4AAAAIAAcAAAAAAB4AAAAIAAgAAAAAAB4AAAAIAAkAAAAHAAAAAAAJAAMAAAAAAB4AAAAJAAQAAAAAAB4AAAAJAAUAAAAAAB4AAAAJAAYAAAAAAB4AAAAJAAcAAAAAAB4AAAAJAAgAAAAAAB4AAAAJAAkAAAAAAB4AAAAKAAMAAAAAAB4AAAAKAAQAAAAAAB4AAAAKAAUAAAADAC0AAAAKAAYAAAABACwAAAAKAAcAAAAAAC0AAAAKAAgAAAAAAC4AAAAKAAkAAAAAAB4AAAALAAMAAAABACwAAAALAAQAAAAAAB4AAAALAAUAAAAEAC0AAAALAAYAAAAAAB4AAAALAAcAAAABAC0AAAALAAgAAAABAC4AAAALAAkAAAABACwAAAAMAAMAAAAAAB4AAAAMAAQAAAAAAB4AAAAMAAUAAAAAAB4AAAAMAAYAAAAAAB4AAAAMAAcAAAAAAC0AAAAMAAgAAAAAAC4AAAAMAAkAAAAAAB4AAAANAAMAAAAAAB4AAAANAAQAAAAAAB4AAAANAAUAAAADAC0AAAANAAYAAAABACwAAAANAAcAAAABAC0AAAANAAgAAAABAC4AAAANAAkAAAABACwAAAAOAAMAAAAAAB4AAAAOAAQAAAAAAB4AAAAOAAUAAAAEAC0AAAAOAAYAAAAAAB4AAAAOAAcAAAAAAB4AAAAOAAgAAAABACwAAAAOAAkAAAAAAB4AAAAPAAMAAAAAAB4AAAAPAAQAAAAAAB4AAAAPAAUAAAAAAB4AAAAPAAYAAAAAAB4AAAAPAAcAAAAAAB4AAAAPAAgAAAAAAB4AAAAPAAkAAAAAAB4AAAAAAPH/AAABAAIAAAAAAPL/AAACAAEAAAAAAPP/AAABAAEAAAAAAPT/AAAAAAMAAAAAAPX/AAAAAAQAAAAAAPb/AAACAC4AAAAAAPf/AAABAB4AAAAAAPj/AAABAB4AAAAAAPn/AAABAB4AAAAAAPr/AAABAB4AAAABAPH/AAABAAMAAAABAPL/AAAAABcAAAABAPP/AAAFAC4AAAABAPT/AAABAB4AAAABAPX/AAAGACoAAAABAPb/AAAGACwAAAABAPf/AAAAAB4AAAABAPj/AAAAAB4AAAABAPn/AAAAAB4AAAABAPr/AAAAAB4AAAACAPH/AAABAAMAAAACAPL/AAABABcAAAACAPP/AAAGAC4AAAACAPT/AAABACwAAAACAPX/AAADAC4AAAACAPb/AAAGACwAAAACAPf/AAAAAB4AAAACAPj/AAADAC0AAAACAPn/AAABACwAAAACAPr/AAAAAB4AAAADAPH/AAAAAB8AAAADAPL/AAAAACAAAAADAPP/AAAGACwAAAADAPT/AAAAAB4AAAADAPX/AAADAC4AAAADAPb/AAAGACwAAAADAPf/AAAAAB4AAAADAPj/AAAEAC0AAAADAPn/AAAAAB4AAAADAPr/AAAAAB4AAAAEAPH/AAAAAB8AAAAEAPL/AAAAACAAAAAEAPP/AAAGACwAAAAEAPT/AAAAAB4AAAAEAPX/AAADAC4AAAAEAPb/AAAGACwAAAAEAPf/AAAAAB4AAAAEAPj/AAAAAB4AAAAEAPn/AAAAAB4AAAAEAPr/AAAAAB4AAAAFAPH/AAAAAB8AAAAFAPL/AAAAACAAAAAFAPP/AAAGACwAAAAFAPT/AAABACwAAAAFAPX/AAADAC4AAAAFAPb/AAAGACwAAAAFAPf/AAAAAB4AAAAFAPj/AAADAC0AAAAFAPn/AAABACwAAAAFAPr/AAAAAB4AAAAGAPH/AAAAAB8AAAAGAPL/AAAAACAAAAAGAPP/AAAGACwAAAAGAPT/AAAAAB4AAAAGAPX/AAADAC4AAAAGAPb/AAAGACwAAAAGAPf/AAAAAB4AAAAGAPj/AAAEAC0AAAAGAPn/AAAAAB4AAAAGAPr/AAAAAB4AAAAHAPH/AAAAAB8AAAAHAPL/AAAAACAAAAAHAPP/AAAGACwAAAAHAPT/AAAAAB4AAAAHAPX/AAADAC4AAAAHAPb/AAAGACwAAAAHAPf/AAAAAB4AAAAHAPj/AAAAAB4AAAAHAPn/AAAAAB4AAAAHAPr/AAAAAB4AAAAIAPH/AAAAAB8AAAAIAPL/AAAAACAAAAAIAPP/AAAGACwAAAAIAPT/AAABACwAAAAIAPX/AAADAC4AAAAIAPb/AAAGACwAAAAIAPf/AAAAAB4AAAAIAPj/AAACAC0AAAAIAPn/AAABACwAAAAIAPr/AAAAAB4AAAAJAPH/AAAAAB8AAAAJAPL/AAAAACAAAAAJAPP/AAAGACwAAAAJAPT/AAAAAB4AAAAJAPX/AAADAC4AAAAJAPb/AAAGACwAAAAJAPf/AAAAAB4AAAAJAPj/AAAEAC0AAAAJAPn/AAAAAB4AAAAJAPr/AAAAAB4AAAAKAPH/AAAAAB8AAAAKAPL/AAAAACAAAAAKAPP/AAAGACwAAAAKAPT/AAAAAB4AAAAKAPX/AAADAC4AAAAKAPb/AAAGACwAAAAKAPf/AAAAAB4AAAAKAPj/AAAAAB4AAAAKAPn/AAAAAB4AAAAKAPr/AAAAAB4AAAALAPH/AAAAAB8AAAALAPL/AAAAACAAAAALAPP/AAAGACwAAAALAPT/AAABACwAAAALAPX/AAADAC4AAAALAPb/AAAGACwAAAALAPf/AAAAAB4AAAALAPj/AAADAC0AAAALAPn/AAABACwAAAALAPr/AAAAAB4AAAAMAPH/AAADABgAAAAMAPL/AAADABkAAAAMAPP/AAAGAC0AAAAMAPT/AAAAAB4AAAAMAPX/AAAEAC4AAAAMAPb/AAAGACwAAAAMAPf/AAAAAB4AAAAMAPj/AAAEAC0AAAAMAPn/AAAAAB4AAAAMAPr/AAAAAB4AAAANAPH/AAAEABgAAAANAPL/AAAEABkAAAANAPP/AAAGACwAAAANAPT/AAAAAB4AAAANAPX/AAAAAB4AAAANAPb/AAAAAB4AAAANAPf/AAAAAB4AAAANAPj/AAAAAB4AAAANAPn/AAAAAB4AAAANAPr/AAAAAB4AAAAOAPH/AAAFABgAAAAOAPL/AAAFABkAAAAOAPP/AAAHAC0AAAAOAPT/AAAAAB4AAAAOAPX/AAAAAB4AAAAOAPb/AAAAAB4AAAAOAPf/AAAAAB4AAAAOAPj/AAAAAB4AAAAOAPn/AAAAAB4AAAAOAPr/AAAAAB4AAAAPAPH/AAABAAMAAAAPAPL/AAABABcAAAAPAPP/AAAGAC4AAAAPAPT/AAAAAB4AAAAPAPX/AAAAAB4AAAAPAPb/AAAAAB4AAAAPAPf/AAAAAB4AAAAPAPj/AAAAAB4AAAAPAPn/AAAAAB4AAAAPAPr/AAAAAB4AAAA=")
+tile_set = ExtResource("2_m3mk5")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=370565018]
+tile_map_data = PackedByteArray("AAAKAAQAAAAJAAAAAAALAAQAAAAKAAAAAAANAAQAAAAJAAAAAAAOAAQAAAAKAAAAAAALAPf/AAAJAAAAAAAMAPf/AAAKAAAAAAAFAPf/AAAJAAAAAAAGAPf/AAAKAAAAAAACAPf/AAAJAAAAAAADAPf/AAAKAAAAAAAIAPf/AAAIAAAAAAAJAPf/AAAKAAAAAAA=")
+tile_set = ExtResource("2_m3mk5")
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1943709852]
+position = Vector2(120, 150)
+script = ExtResource("3_imal3")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_algaria"
+posicion_destino = Vector2(64, 13)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=910951921]
+position = Vector2(136, 150)
+script = ExtResource("3_imal3")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_algaria"
+posicion_destino = Vector2(64, 13)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1568698946]
+script = ExtResource("4_m3mk5")
+tile_data = {
+"0,-11": {
+"flags": 1
+},
+"0,-12": {
+"flags": 1
+},
+"0,-13": {
+"flags": 1
+},
+"0,-14": {
+"flags": 1
+},
+"0,-5": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"1,-11": {
+"flags": 1
+},
+"1,-14": {
+"flags": 1
+},
+"1,-5": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"10,-11": {
+"flags": 1
+},
+"10,-14": {
+"flags": 1
+},
+"10,-5": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,5": {
+"flags": 1
+},
+"10,7": {
+"flags": 1
+},
+"10,8": {
+"flags": 1
+},
+"11,-11": {
+"flags": 1
+},
+"11,-14": {
+"flags": 1
+},
+"11,-5": {
+"flags": 1
+},
+"11,-8": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,5": {
+"flags": 1
+},
+"11,7": {
+"flags": 1
+},
+"11,8": {
+"flags": 1
+},
+"12,-11": {
+"flags": 1
+},
+"12,-14": {
+"flags": 1
+},
+"12,-15": {
+"flags": 1
+},
+"12,-5": {
+"flags": 1
+},
+"12,-8": {
+"flags": 1
+},
+"12,0": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,7": {
+"flags": 1
+},
+"12,8": {
+"flags": 1
+},
+"13,-15": {
+"flags": 1
+},
+"13,-5": {
+"flags": 1
+},
+"13,0": {
+"flags": 1
+},
+"13,5": {
+"flags": 1
+},
+"13,7": {
+"flags": 1
+},
+"13,8": {
+"flags": 1
+},
+"14,-14": {
+"flags": 1
+},
+"14,-15": {
+"flags": 1
+},
+"14,-5": {
+"flags": 1
+},
+"14,0": {
+"flags": 1
+},
+"14,1": {
+"flags": 1
+},
+"14,5": {
+"flags": 1
+},
+"15,-14": {
+"flags": 1
+},
+"15,-5": {
+"flags": 1
+},
+"15,1": {
+"flags": 1
+},
+"2,-11": {
+"flags": 1
+},
+"2,-14": {
+"flags": 1
+},
+"2,-5": {
+"flags": 1
+},
+"2,-8": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,5": {
+"flags": 1
+},
+"2,6": {
+"flags": 1
+},
+"3,-11": {
+"flags": 1
+},
+"3,-14": {
+"flags": 1
+},
+"3,-5": {
+"flags": 1
+},
+"3,-8": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,5": {
+"flags": 1
+},
+"3,6": {
+"flags": 1
+},
+"4,-11": {
+"flags": 1
+},
+"4,-14": {
+"flags": 1
+},
+"4,-5": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,5": {
+"flags": 1
+},
+"4,6": {
+"flags": 1
+},
+"5,-11": {
+"flags": 1
+},
+"5,-14": {
+"flags": 1
+},
+"5,-5": {
+"flags": 1
+},
+"5,-8": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"5,6": {
+"flags": 1
+},
+"6,-11": {
+"flags": 1
+},
+"6,-14": {
+"flags": 1
+},
+"6,-5": {
+"flags": 1
+},
+"6,-8": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,-11": {
+"flags": 1
+},
+"7,-14": {
+"flags": 1
+},
+"7,-5": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,-11": {
+"flags": 1
+},
+"8,-14": {
+"flags": 1
+},
+"8,-5": {
+"flags": 1
+},
+"8,-8": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,-11": {
+"flags": 1
+},
+"9,-14": {
+"flags": 1
+},
+"9,-5": {
+"flags": 1
+},
+"9,-8": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp3" type="Sprite2D" parent="." unique_id=278030819]
+position = Vector2(216, 22)
+script = ExtResource("3_imal3")
+ruta_mapa_destino = "ciudad_algaria_centro_espacial"
+posicion_destino = Vector2(13, -14)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp4" type="Sprite2D" parent="." unique_id=1784218649]
+position = Vector2(216, -218)
+script = ExtResource("3_imal3")
+ruta_mapa_destino = "ciudad_algaria_centro_espacial"
+posicion_destino = Vector2(13, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Mostrador" parent="NPCs" unique_id=1251001 instance=ExtResource("ce_base")]
+editor_description = "pokeruby MossdeepCity_SpaceCenter_1F objeto 1 (7,2) SCIENTIST_1 FACE_UP: mostrador de lanzamientos (RocketLaunchCounter). Lo dirige Eventos/EventoCentroEspacial"
+position = Vector2(120, 46)
+script = ExtResource("ce_evento")
+id_texto = "ALGARIA_CENTRO_ESPACIAL_MOSTRADOR_INMINENTE"
+tipo_movimiento = 7
+selec_frames = ExtResource("ce_f_065")
+coord = Vector2i(7, 2)
+
+[node name="Cientifico" parent="NPCs" unique_id=1251002 instance=ExtResource("ce_base")]
+editor_description = "pokeruby MossdeepCity_SpaceCenter_1F objeto 2 (2,2) SCIENTIST_1 FACE_UP (MSGBOX_NPC)"
+position = Vector2(40, 46)
+id_texto = "ALGARIA_CENTRO_ESPACIAL_CIENTIFICO_1F"
+tipo_movimiento = 7
+selec_frames = ExtResource("ce_f_065")
+coord = Vector2i(2, 2)
+
+[node name="Marinero" parent="NPCs" unique_id=1251003 instance=ExtResource("ce_base")]
+editor_description = "pokeruby MossdeepCity_SpaceCenter_1F objeto 3 (6,6) SAILOR FACE_LEFT: regala la PIEDRA SOLAR una vez (FLAG_RECEIVED_SUN_STONE_MOSSDEEP)"
+position = Vector2(104, 110)
+script = ExtResource("ce_regalo")
+objeto = "PIEDRASOLAR"
+bandera = "algaria_piedra_solar_recibida"
+id_texto_entregado = "ALGARIA_CENTRO_ESPACIAL_MARINERO_METEORITOS"
+texto_tras_entregar = "ALGARIA_CENTRO_ESPACIAL_MARINERO_METEORITOS"
+id_texto = "ALGARIA_CENTRO_ESPACIAL_MARINERO_PIEDRA"
+tipo_movimiento = 9
+selec_frames = ExtResource("ce_f_068")
+coord = Vector2i(6, 6)
+
+[node name="Viejo" parent="NPCs" unique_id=1251004 instance=ExtResource("ce_base")]
+editor_description = "pokeruby MossdeepCity_SpaceCenter_1F objeto 4 (10,2) OLD_MAN_2 FACE_UP (lock + faceplayer + FaceOriginalDirection)"
+position = Vector2(168, 46)
+script = ExtResource("ce_condicional")
+volver_direccion_original = true
+id_texto = "ALGARIA_CENTRO_ESPACIAL_VIEJO"
+tipo_movimiento = 7
+selec_frames = ExtResource("ce_f_093")
+coord = Vector2i(10, 2)
+
+[node name="Mujer" parent="NPCs" unique_id=1251005 instance=ExtResource("ce_base")]
+editor_description = "pokeruby MossdeepCity_SpaceCenter_1F objeto 5 (14,7) WOMAN_5 WANDER_UP_AND_DOWN (1,1) (MSGBOX_NPC)"
+position = Vector2(232, 126)
+id_texto = "ALGARIA_CENTRO_ESPACIAL_MUJER"
+tipo_movimiento = 3
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("ce_f_055")
+coord = Vector2i(14, 7)
+
+[node name="Chico2F" parent="NPCs" unique_id=1251006 instance=ExtResource("ce_base")]
+editor_description = "pokeruby MossdeepCity_SpaceCenter_2F objeto 1 (6,2) BOY_4 FACE_UP (MSGBOX_NPC); la 2F está en y - 15"
+position = Vector2(104, -194)
+id_texto = "ALGARIA_CENTRO_ESPACIAL_NINO"
+tipo_movimiento = 7
+selec_frames = ExtResource("ce_f_013")
+coord = Vector2i(6, -13)
+
+[node name="Caballero2F" parent="NPCs" unique_id=1251007 instance=ExtResource("ce_base")]
+editor_description = "pokeruby MossdeepCity_SpaceCenter_2F objeto 2 (11,8) GENTLEMAN FACE_UP (MSGBOX_NPC); la 2F está en y - 15"
+position = Vector2(184, -98)
+id_texto = "ALGARIA_CENTRO_ESPACIAL_CABALLERO"
+tipo_movimiento = 7
+selec_frames = ExtResource("ce_f_067")
+coord = Vector2i(11, -7)
+
+[node name="Cientifica2F" parent="NPCs" unique_id=1251008 instance=ExtResource("ce_base")]
+editor_description = "pokeruby MossdeepCity_SpaceCenter_2F objeto 3 (5,6) SCIENTIST_1 WANDER_AROUND (1,1) (MSGBOX_NPC); la 2F está en y - 15"
+position = Vector2(88, -130)
+id_texto = "ALGARIA_CENTRO_ESPACIAL_CIENTIFICO_2F"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("ce_f_065")
+coord = Vector2i(5, -9)
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1251020]
+
+[node name="EventoCentroEspacial" type="Node2D" parent="Eventos" unique_id=1251021]
+editor_description = "pokeruby MossdeepCity_SpaceCenter_1F/scripts.inc: el mostrador de lanzamientos (RocketLaunchCounter)"
+script = ExtResource("ce_ev_centro")
+mostrador = NodePath("../../NPCs/Mostrador")

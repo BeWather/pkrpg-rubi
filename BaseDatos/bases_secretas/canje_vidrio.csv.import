@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://dkoedun18804v"
+
+[deps]
+
+files=["res://BaseDatos/bases_secretas/canje_vidrio.es.translation", "res://BaseDatos/bases_secretas/canje_vidrio.en.translation"]
+
+source_file="res://BaseDatos/bases_secretas/canje_vidrio.csv"
+dest_files=["res://BaseDatos/bases_secretas/canje_vidrio.es.translation", "res://BaseDatos/bases_secretas/canje_vidrio.en.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

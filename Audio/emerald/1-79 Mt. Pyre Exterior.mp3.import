@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b8oy02ss3vflk"
+path="res://.godot/imported/1-79 Mt. Pyre Exterior.mp3-0ea7fdeac57efaf4d00d63786655796d.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-79 Mt. Pyre Exterior.mp3"
+dest_files=["res://.godot/imported/1-79 Mt. Pyre Exterior.mp3-0ea7fdeac57efaf4d00d63786655796d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

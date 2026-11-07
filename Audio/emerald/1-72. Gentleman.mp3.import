@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dfgs31aqiadks"
+path="res://.godot/imported/1-72. Gentleman.mp3-c65d9925ec3bb5fbcbead9e5f9903beb.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-72. Gentleman.mp3"
+dest_files=["res://.godot/imported/1-72. Gentleman.mp3-c65d9925ec3bb5fbcbead9e5f9903beb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c32trlx2ikaiu"
+path="res://.godot/imported/PRSFX- Stat Down.wav-931f0d5f25e777c00802aa84b7665369.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Stat Down.wav"
+dest_files=["res://.godot/imported/PRSFX- Stat Down.wav-931f0d5f25e777c00802aa84b7665369.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

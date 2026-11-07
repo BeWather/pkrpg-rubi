@@ -1,0 +1,236 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/pokenav/entrenadores_pokenav.gd" id="e1"]
+[ext_resource type="PackedScene" path="res://UI/pokenav/fondo_pokenav.tscn" id="e2"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/cabecera_entrenadores.png" id="e3"]
+[ext_resource type="LabelSettings" path="res://UI/texto_normal_negro.tres" id="e4"]
+[ext_resource type="PackedScene" path="res://UI/pokenav/lista_pokenav.tscn" id="e5"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/barra_inferior.png" id="e6"]
+[ext_resource type="Texture2D" path="res://UI/menu_box_1.png" id="e7"]
+[ext_resource type="Script" path="res://scripts/clases/MenuBoxComponent.gd" id="e8"]
+[ext_resource type="SpriteFrames" path="res://graficos/trainers64/entrenadores_64.tres" id="e9"]
+
+[sub_resource type="Animation" id="Anim_2"]
+resource_name = "entrada"
+length = 0.26667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cabecera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-128, 1), Vector2(0, 1)]
+}
+
+[sub_resource type="Animation" id="Anim_3"]
+resource_name = "salida"
+length = 0.26667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cabecera:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1), Vector2(-128, 1)]
+}
+
+[sub_resource type="Animation" id="Anim_4"]
+resource_name = "detalle_entrada"
+length = 0.26667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Detalle/Retrato:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.15000),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-34, 104), Vector2(38, 104)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Detalle/Textos:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.00000, 0.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Anim_5"]
+resource_name = "detalle_salida"
+length = 0.15000
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Detalle/Retrato:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.15000),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(38, 104), Vector2(-34, 104)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Detalle/Textos:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.00000, 0.15000),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="Lib_6"]
+_data = {
+&"entrada": SubResource("Anim_2"),
+&"salida": SubResource("Anim_3"),
+&"detalle_entrada": SubResource("Anim_4"),
+&"detalle_salida": SubResource("Anim_5")
+}
+
+[node name="EntrenadoresPokenav" type="Node2D"]
+script = ExtResource("e1")
+
+[node name="Fondo" parent="." instance=ExtResource("e2")]
+
+[node name="Cabecera" type="Sprite2D" parent="."]
+texture = ExtResource("e3")
+position = Vector2(-128, 1)
+centered = false
+
+[node name="Lugar" type="Label" parent="."]
+layout_mode = 0
+offset_left = 4
+offset_top = 40
+offset_right = 86
+offset_bottom = 72
+text = ""
+label_settings = ExtResource("e4")
+autowrap_mode = 2
+
+[node name="Lista" parent="." instance=ExtResource("e5")]
+
+[node name="Detalle" type="Node2D" parent="."]
+visible = false
+
+[node name="Barra" type="Sprite2D" parent="Detalle"]
+texture = ExtResource("e6")
+position = Vector2(0, 144)
+centered = false
+
+[node name="Marco" type="NinePatchRect" parent="Detalle"]
+layout_mode = 0
+offset_left = 88
+offset_top = 0
+offset_right = 240
+offset_bottom = 144
+texture = ExtResource("e7")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MenuBoxComponent" type="Node" parent="Detalle/Marco"]
+script = ExtResource("e8")
+
+[node name="Retrato" type="AnimatedSprite2D" parent="Detalle"]
+position = Vector2(-34, 104)
+sprite_frames = ExtResource("e9")
+
+[node name="Textos" type="Node2D" parent="Detalle"]
+
+[node name="Nombre" type="Label" parent="Detalle/Textos"]
+layout_mode = 0
+offset_left = 4
+offset_top = 34
+offset_right = 86
+offset_bottom = 66
+text = ""
+label_settings = ExtResource("e4")
+autowrap_mode = 2
+
+[node name="TituloEstrategia" type="Label" parent="Detalle/Textos"]
+layout_mode = 0
+offset_left = 96
+offset_top = 6
+offset_right = 232
+offset_bottom = 21
+text = "POKENAV_ESTRATEGIA"
+label_settings = ExtResource("e4")
+
+[node name="TituloPokemon" type="Label" parent="Detalle/Textos"]
+layout_mode = 0
+offset_left = 96
+offset_top = 40
+offset_right = 232
+offset_bottom = 55
+text = "POKENAV_POKEMON"
+label_settings = ExtResource("e4")
+
+[node name="TituloPresentacion" type="Label" parent="Detalle/Textos"]
+layout_mode = 0
+offset_left = 96
+offset_top = 74
+offset_right = 232
+offset_bottom = 89
+text = "POKENAV_PRESENTACION"
+label_settings = ExtResource("e4")
+
+[node name="Estrategia" type="Label" parent="Detalle/Textos"]
+layout_mode = 0
+offset_left = 96
+offset_top = 22
+offset_right = 236
+offset_bottom = 37
+text = ""
+label_settings = ExtResource("e4")
+
+[node name="Pokemon" type="Label" parent="Detalle/Textos"]
+layout_mode = 0
+offset_left = 96
+offset_top = 56
+offset_right = 236
+offset_bottom = 71
+text = ""
+label_settings = ExtResource("e4")
+
+[node name="Presentacion1" type="Label" parent="Detalle/Textos"]
+layout_mode = 0
+offset_left = 96
+offset_top = 90
+offset_right = 236
+offset_bottom = 105
+text = ""
+label_settings = ExtResource("e4")
+
+[node name="Presentacion2" type="Label" parent="Detalle/Textos"]
+layout_mode = 0
+offset_left = 96
+offset_top = 106
+offset_right = 236
+offset_bottom = 121
+text = ""
+label_settings = ExtResource("e4")
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("Lib_6")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lf6pr7lyvel2"
+path="res://.godot/imported/2-10 Battle Dome Tournament.mp3-6e72a0f9360d45b0e8c46c0cb4009a3b.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/2-10 Battle Dome Tournament.mp3"
+dest_files=["res://.godot/imported/2-10 Battle Dome Tournament.mp3-6e72a0f9360d45b0e8c46c0cb4009a3b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

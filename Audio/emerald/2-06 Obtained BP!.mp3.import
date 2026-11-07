@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://daon0ryhnkmur"
+path="res://.godot/imported/2-06 Obtained BP!.mp3-ec665b64f6e09b523ea1a5cfc96f8eff.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/2-06 Obtained BP!.mp3"
+dest_files=["res://.godot/imported/2-06 Obtained BP!.mp3-ec665b64f6e09b523ea1a5cfc96f8eff.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

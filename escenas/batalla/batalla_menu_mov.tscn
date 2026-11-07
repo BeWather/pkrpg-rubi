@@ -1,0 +1,125 @@
+[gd_scene format=3 uid="uid://iqifro7xy8s3"]
+
+[ext_resource type="Texture2D" uid="uid://v6kexaw8rq10" path="res://UI/menu_box_1.png" id="1_7pn37"]
+[ext_resource type="Script" uid="uid://bxfr1sgutvj0s" path="res://escenas/batalla/batalla_menu_movs.gd" id="2_5ju8g"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="3_ddltg"]
+[ext_resource type="Texture2D" uid="uid://dwokcv3olv733" path="res://graficos/batalla/batalla_menu_mov_cursor.png" id="4_tbgxy"]
+[ext_resource type="AudioStream" uid="uid://17b6judf3tx1" path="res://Audio/SE/Choose.WAV" id="5_ox0ni"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_1apwv"]
+font = ExtResource("3_ddltg")
+font_size = 15
+font_color = Color(0.282353, 0.282353, 0.282353, 1)
+shadow_size = 0
+shadow_color = Color(0.282353, 0.282353, 0.282353, 0.25098)
+shadow_offset = Vector2(1, 0)
+
+[node name="BatallaMovimientos" type="NinePatchRect" unique_id=386513474]
+offset_right = 176.0
+offset_bottom = 48.0
+texture = ExtResource("1_7pn37")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_5ju8g")
+metadata/_edit_lock_ = true
+
+[node name="mov1" type="Label" parent="." unique_id=1041644495]
+texture_filter = 1
+layout_mode = 0
+offset_left = 7.0
+offset_top = 8.0
+offset_right = 85.0
+offset_bottom = 23.0
+text = "ABSORBEFUERZA"
+label_settings = SubResource("LabelSettings_1apwv")
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="mov2" type="Label" parent="." unique_id=856411687]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_top = 8.0
+offset_right = 169.0
+offset_bottom = 23.0
+text = "ABSORBE FUERZA"
+label_settings = SubResource("LabelSettings_1apwv")
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="mov3" type="Label" parent="." unique_id=1296870296]
+texture_filter = 1
+layout_mode = 0
+offset_left = 7.0
+offset_top = 24.0
+offset_right = 82.0
+offset_bottom = 39.0
+text = "CABEZA HIERRO"
+label_settings = SubResource("LabelSettings_1apwv")
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="mov4" type="Label" parent="." unique_id=74507851]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_top = 24.0
+offset_right = 130.0
+offset_bottom = 39.0
+text = "HUIDA"
+label_settings = SubResource("LabelSettings_1apwv")
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="cursor" type="TextureRect" parent="." unique_id=1500110585]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 7.0
+offset_right = 169.0
+offset_bottom = 25.0
+texture = ExtResource("4_tbgxy")
+
+[node name="sonido" type="AudioStreamPlayer" parent="." unique_id=287458216]
+stream = ExtResource("5_ox0ni")
+
+[node name="CuadroPPs" type="NinePatchRect" parent="." unique_id=1865680894]
+layout_mode = 0
+offset_left = 176.0
+offset_right = 240.0
+offset_bottom = 48.0
+texture = ExtResource("1_7pn37")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+metadata/_edit_lock_ = true
+
+[node name="pp" type="Label" parent="." unique_id=1534494597]
+texture_filter = 1
+layout_mode = 0
+offset_left = 183.0
+offset_top = 8.0
+offset_right = 238.0
+offset_bottom = 23.0
+text = "PP  35/35"
+label_settings = SubResource("LabelSettings_1apwv")
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="tipo" type="Label" parent="." unique_id=1226248899]
+texture_filter = 1
+layout_mode = 0
+offset_left = 183.0
+offset_top = 24.0
+offset_right = 238.0
+offset_bottom = 39.0
+text = "FANTASMA"
+label_settings = SubResource("LabelSettings_1apwv")
+language = "es_AR"
+metadata/_edit_lock_ = true

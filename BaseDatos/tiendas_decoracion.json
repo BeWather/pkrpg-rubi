@@ -1,0 +1,339 @@
+{
+	"version": 1,
+	"descripcion": "Tiendas de decoracion de Rubi (pokemartdecoration): lista ordenada de decoraciones por dependiente. Nombre, descripcion, categoria y precio salen del catalogo de bases secretas (catalogo.json + textos_decoracion.json); aqui solo se guarda QUE se vende y donde.",
+	"campos": {
+		"decoraciones": "ids de BaseDatos/bases_secretas/catalogo.json (el orden es el de la lista de Rubi; DECOR_NONE la termina)",
+		"simbolos_rubi": "los DECOR_* de la lista original, para trazabilidad y para los tests",
+		"mapa_rubi/script_rubi/lista_rubi": "origen en pokeruby (data/maps/<mapa>/scripts.inc)",
+		"conectado": "true si alguna escena del proyecto ya usa la tienda (TiendaDecoracionNpc, id_tienda)",
+		"condicion_rubi": "condicion de Rubi (goto_if_unset); si la tienda esta conectada la aplica TiendaDecoracionNpc.condicion en la escena"
+	},
+	"tiendas": {
+		"ARBORADA_MESAS": {
+			"mapa_rubi": "FortreeCity_DecorationShop",
+			"script_rubi": "FortreeCity_DecorationShop_EventScript_ClerkDesks",
+			"lista_rubi": "FortreeCity_DecorationShop_PokemartDecor_Desks",
+			"conectado": true,
+			"decoraciones": [
+				1,
+				2,
+				3,
+				4,
+				5,
+				7,
+				8,
+				9
+			],
+			"simbolos_rubi": [
+				"DECOR_SMALL_DESK",
+				"DECOR_POKEMON_DESK",
+				"DECOR_HEAVY_DESK",
+				"DECOR_RAGGED_DESK",
+				"DECOR_COMFORT_DESK",
+				"DECOR_BRICK_DESK",
+				"DECOR_CAMP_DESK",
+				"DECOR_HARD_DESK"
+			]
+		},
+		"ARBORADA_SILLAS": {
+			"mapa_rubi": "FortreeCity_DecorationShop",
+			"script_rubi": "FortreeCity_DecorationShop_EventScript_ClerkChairs",
+			"lista_rubi": "FortreeCity_DecorationShop_PokemartDecor_Chairs",
+			"conectado": true,
+			"decoraciones": [
+				10,
+				11,
+				12,
+				15,
+				14,
+				16,
+				17,
+				18
+			],
+			"simbolos_rubi": [
+				"DECOR_SMALL_CHAIR",
+				"DECOR_POKEMON_CHAIR",
+				"DECOR_HEAVY_CHAIR",
+				"DECOR_RAGGED_CHAIR",
+				"DECOR_COMFORT_CHAIR",
+				"DECOR_BRICK_CHAIR",
+				"DECOR_CAMP_CHAIR",
+				"DECOR_HARD_CHAIR"
+			]
+		},
+		"PORTUAL_MUNECOS": {
+			"mapa_rubi": "SlateportCity",
+			"script_rubi": "SlateportCity_EventScript_DollClerk",
+			"lista_rubi": "SlateportCity_PokemartDecor1_Dolls",
+			"conectado": true,
+			"decoraciones": [
+				95,
+				78,
+				96
+			],
+			"simbolos_rubi": [
+				"DECOR_AZURILL_DOLL",
+				"DECOR_MARILL_DOLL",
+				"DECOR_SKITTY_DOLL"
+			]
+		},
+		"PORTUAL_ADORNOS_1": {
+			"mapa_rubi": "SlateportCity",
+			"script_rubi": "SlateportCity_EventScript_DecorClerk",
+			"lista_rubi": "SlateportCity_PokemartDecor1",
+			"conectado": true,
+			"condicion_rubi": "FLAG_RECEIVED_SECRET_POWER",
+			"decoraciones": [
+				25,
+				27,
+				26,
+				28,
+				29,
+				30,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58
+			],
+			"simbolos_rubi": [
+				"DECOR_RED_BRICK",
+				"DECOR_BLUE_BRICK",
+				"DECOR_YELLOW_BRICK",
+				"DECOR_RED_BALLOON",
+				"DECOR_BLUE_BALLOON",
+				"DECOR_YELLOW_BALLOON",
+				"DECOR_C_LOW_NOTE_MAT",
+				"DECOR_D_NOTE_MAT",
+				"DECOR_E_NOTE_MAT",
+				"DECOR_F_NOTE_MAT",
+				"DECOR_G_NOTE_MAT",
+				"DECOR_A_NOTE_MAT",
+				"DECOR_B_NOTE_MAT",
+				"DECOR_C_HIGH_NOTE_MAT"
+			]
+		},
+		"PORTUAL_ADORNOS_2": {
+			"mapa_rubi": "SlateportCity",
+			"script_rubi": "(sin etiqueta, @ 814BE60: el otro DecorClerk)",
+			"lista_rubi": "SlateportCity_PokemartDecor2",
+			"conectado": false,
+			"condicion_rubi": "FLAG_RECEIVED_SECRET_POWER",
+			"decoraciones": [
+				39,
+				34,
+				35,
+				36,
+				37,
+				40,
+				33,
+				38,
+				45,
+				46,
+				47
+			],
+			"simbolos_rubi": [
+				"DECOR_MUD_BALL",
+				"DECOR_SLIDE",
+				"DECOR_FENCE_LENGTH",
+				"DECOR_FENCE_WIDTH",
+				"DECOR_TIRE",
+				"DECOR_BREAKABLE_DOOR",
+				"DECOR_SOLID_BOARD",
+				"DECOR_STAND",
+				"DECOR_TV",
+				"DECOR_ROUND_TV",
+				"DECOR_CUTE_TV"
+			]
+		},
+		"CALAGUA_AZOTEA": {
+			"mapa_rubi": "LilycoveCity_DepartmentStoreRooftop",
+			"script_rubi": "LilycoveCity_DepartmentStoreRooftop_EventScript_SaleWoman",
+			"lista_rubi": "LilycoveCity_DepartmentStoreRooftop_PokemartDecor_ClearOutSale",
+			"conectado": true,
+			"nota_rubi": "getpricereduction 3: en la liquidacion los precios se reducen (no implementado)",
+			"decoraciones": [
+				39,
+				35,
+				36,
+				37,
+				40,
+				33,
+				41,
+				38,
+				34,
+				45,
+				46,
+				47,
+				117,
+				112
+			],
+			"simbolos_rubi": [
+				"DECOR_MUD_BALL",
+				"DECOR_FENCE_LENGTH",
+				"DECOR_FENCE_WIDTH",
+				"DECOR_TIRE",
+				"DECOR_BREAKABLE_DOOR",
+				"DECOR_SOLID_BOARD",
+				"DECOR_SAND_ORNAMENT",
+				"DECOR_STAND",
+				"DECOR_SLIDE",
+				"DECOR_TV",
+				"DECOR_ROUND_TV",
+				"DECOR_CUTE_TV",
+				"DECOR_WAILMER_DOLL",
+				"DECOR_RHYDON_DOLL"
+			]
+		},
+		"CALAGUA_5F_MUNECOS": {
+			"mapa_rubi": "LilycoveCity_DepartmentStore_5F",
+			"script_rubi": "LilycoveCity_DepartmentStore_5F_EventScript_ClerkFarLeft",
+			"lista_rubi": "LilycoveCity_DepartmentStore_5F_Pokemart_StatBoostersAndStones",
+			"conectado": true,
+			"nota_rubi": "pokemartdecoration2 (MART_TYPE_2): decoraciones. El decomp rotula la lista con ITEM_* y cifras sueltas por error: son ids de decoracion (gDecorations)",
+			"decoraciones": [
+				76,
+				77,
+				78,
+				83,
+				91,
+				92,
+				93,
+				94,
+				95,
+				96,
+				97,
+				98
+			],
+			"simbolos_rubi": [
+				"DECOR_PICHU_DOLL",
+				"DECOR_PIKACHU_DOLL",
+				"DECOR_MARILL_DOLL",
+				"DECOR_JIGGLYPUFF_DOLL",
+				"DECOR_DUSKULL_DOLL",
+				"DECOR_WYNAUT_DOLL",
+				"DECOR_BALTOY_DOLL",
+				"DECOR_KECLEON_DOLL",
+				"DECOR_AZURILL_DOLL",
+				"DECOR_SKITTY_DOLL",
+				"DECOR_SWABLU_DOLL",
+				"DECOR_GULPIN_DOLL"
+			]
+		},
+		"CALAGUA_5F_COJINES": {
+			"mapa_rubi": "LilycoveCity_DepartmentStore_5F",
+			"script_rubi": "LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidLeft",
+			"lista_rubi": "LilycoveCity_DepartmentStore_5F_Pokemart_Treasures",
+			"conectado": true,
+			"nota_rubi": "pokemartdecoration2 (MART_TYPE_2): decoraciones. El decomp rotula la lista con ITEM_* y cifras sueltas por error: son ids de decoracion (gDecorations)",
+			"decoraciones": [
+				101,
+				102,
+				104,
+				105,
+				106,
+				107,
+				108,
+				109,
+				110
+			],
+			"simbolos_rubi": [
+				"DECOR_PIKA_CUSHION",
+				"DECOR_ROUND_CUSHION",
+				"DECOR_ZIGZAG_CUSHION",
+				"DECOR_SPIN_CUSHION",
+				"DECOR_DIAMOND_CUSHION",
+				"DECOR_BALL_CUSHION",
+				"DECOR_GRASS_CUSHION",
+				"DECOR_FIRE_CUSHION",
+				"DECOR_WATER_CUSHION"
+			]
+		},
+		"CALAGUA_5F_POSTERES": {
+			"mapa_rubi": "LilycoveCity_DepartmentStore_5F",
+			"script_rubi": "LilycoveCity_DepartmentStore_5F_EventScript_ClerkMidRight",
+			"lista_rubi": "LilycoveCity_DepartmentStore_5F_Pokemart_Vitamins",
+			"conectado": true,
+			"nota_rubi": "pokemartdecoration2 (MART_TYPE_2): decoraciones. El decomp rotula la lista con ITEM_* y cifras sueltas por error: son ids de decoracion (gDecorations)",
+			"decoraciones": [
+				66,
+				67,
+				68,
+				69,
+				70,
+				71,
+				72,
+				73,
+				74
+			],
+			"simbolos_rubi": [
+				"DECOR_BALL_POSTER",
+				"DECOR_GREEN_POSTER",
+				"DECOR_RED_POSTER",
+				"DECOR_BLUE_POSTER",
+				"DECOR_CUTE_POSTER",
+				"DECOR_PIKA_POSTER",
+				"DECOR_LONG_POSTER",
+				"DECOR_SEA_POSTER",
+				"DECOR_SKY_POSTER"
+			]
+		},
+		"CALAGUA_5F_ALFOMBRAS": {
+			"mapa_rubi": "LilycoveCity_DepartmentStore_5F",
+			"script_rubi": "LilycoveCity_DepartmentStore_5F_EventScript_ClerkFarRight",
+			"lista_rubi": "LilycoveCity_DepartmentStore_5F_Pokemart_VitaminsAndShards",
+			"conectado": true,
+			"nota_rubi": "pokemartdecoration2 (MART_TYPE_2): decoraciones. El decomp rotula la lista con ITEM_* y cifras sueltas por error: son ids de decoracion (gDecorations)",
+			"decoraciones": [
+				59,
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				48,
+				49,
+				50
+			],
+			"simbolos_rubi": [
+				"DECOR_SURF_MAT",
+				"DECOR_THUNDER_MAT",
+				"DECOR_FIRE_BLAST_MAT",
+				"DECOR_POWDER_SNOW_MAT",
+				"DECOR_ATTRACT_MAT",
+				"DECOR_FISSURE_MAT",
+				"DECOR_SPIKES_MAT",
+				"DECOR_GLITTER_MAT",
+				"DECOR_JUMP_MAT",
+				"DECOR_SPIN_MAT"
+			]
+		},
+		"RUTA104_FLORISTERIA": {
+			"mapa_rubi": "Route104_PrettyPetalFlowerShop",
+			"script_rubi": "Route104_PrettyPetalFlowerShop_EventScript_15BE7C",
+			"lista_rubi": "Route104_PrettyPetalFlowerShop_Items",
+			"conectado": true,
+			"nota_rubi": "pokemartdecoration2 (MART_TYPE_2): decoraciones. El decomp rotula la lista ITEM_FULL_RESTORE..ITEM_REVIVE por error: son ids de decoracion (gDecorations). Solo atiende con FLAG_TEMP_1 (conocerla y MEDALLA 3)",
+			"decoraciones": [
+				19,
+				20,
+				21,
+				22,
+				23,
+				24
+			],
+			"simbolos_rubi": [
+				"DECOR_RED_PLANT",
+				"DECOR_TROPICAL_PLANT",
+				"DECOR_PRETTY_FLOWERS",
+				"DECOR_COLORFUL_PLANT",
+				"DECOR_BIG_PLANT",
+				"DECOR_GORGEOUS_PLANT"
+			]
+		}
+	}
+}

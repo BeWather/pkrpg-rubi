@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://fvrs4f670a5v"
+path="res://.godot/imported/1-90 Legendary Pokémon Battle!.mp3-4360cf0c13e0b1829ecfb9e2e8163c1d.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-90 Legendary Pokémon Battle!.mp3"
+dest_files=["res://.godot/imported/1-90 Legendary Pokémon Battle!.mp3-4360cf0c13e0b1829ecfb9e2e8163c1d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

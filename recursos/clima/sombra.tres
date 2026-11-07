@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="DefinicionClima" format=3]
+
+[ext_resource type="Script" uid="uid://bnon731m8jgyp" path="res://scripts/clima/definicion_clima.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+id = &"SOMBRA"
+nombre_editor = "Sombra (Bosque Petalia)"
+tinte = Color(0.8125, 0.8125, 0.8125, 1)
+modo_tinte = 1
+intensidad_base = 1.0
+permite_destellos = false

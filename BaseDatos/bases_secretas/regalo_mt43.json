@@ -1,0 +1,111 @@
+{
+	"version": 1,
+	"sha1_rom": "ae35f6fd52a9258b794d7d3f4c784b8ee3fcde5c",
+	"sha256_rom": "2fd6f3cb65c85880aaadea429af67a7a401b34443bae06125fa787018fcda9a3",
+	"fuentes_decomp": {
+		"charmap.txt": "8c1db143d4f5f8186a6853d076b8b5dbd5d505b64e3c04ed79fe75afa54b7e9c",
+		"data/maps/Route111/map.json": "434b74e1946f88e37fd40ca49eb93f10322e08f299b73159f04bca3d712a0506",
+		"data/scripts/secret_power_tm.inc": "5d2a5f6e2813808a9c3bb6e3b115b7395752c30d03b0c7cf0d8317db514efebb",
+		"data/text/secret_power_tm.inc": "a8d65eaf5162183ac0a0a996dfe178fe849179e9a5f9cbf6116940dcbc3624a2",
+		"data/text/obtain_item.inc": "636c564f408059b15cf31e7afa008713dc8df617a2b6beaa08d8ea913772498c",
+		"data/scripts/obtain_item.inc": "00c90f65b8d8e278744b5b8ef28d2058d02f8ffa819b15e40539cb3edaa5fe01",
+		"data/scripts/new_game.inc": "c890e266ac7fb87aa7fcc598c06106cec3b29eafa1206db13a09213762124e42",
+		"include/constants/flags.h": "d681c699073a1b446d9350a0a6061da559913ced98d347a747f384d024d9399a",
+		"include/constants/global.h": "776c03fcfe5152aca976bacb5b44a4c2fd92bcd369d36c27990c90a9a001bb34",
+		"src/item.c": "59e4adba6b42cf0a60b39ab3c61d00ecce56ee52113b0e834acb53b408ef9d51",
+		"src/event_object_movement.c": "7b62a56bd07edbe8c5ba90bb5cef2f013a03eabf3fdb2047ef87dddef4588ec9"
+	},
+	"npc": {
+		"local_id": 33,
+		"graphics_id": "OBJ_EVENT_GFX_BOY_1",
+		"x": 13,
+		"y": 20,
+		"elevation": 3,
+		"movement_type": "MOVEMENT_TYPE_FACE_UP",
+		"movement_range_x": 1,
+		"movement_range_y": 1,
+		"trainer_type": "TRAINER_TYPE_NONE",
+		"trainer_sight_or_berry_tree_id": "0",
+		"script": "Route111_EventScript_1A3858",
+		"flag": "FLAG_HIDE_SECRET_POWER_MAN"
+	},
+	"retirada": {
+		"Route111_Movement_1A38E3": [
+			"down",
+			"down",
+			"down",
+			"down",
+			"down",
+			"left",
+			"left",
+			"left",
+			"left",
+			"down",
+			"down"
+		],
+		"Route111_Movement_1A38EF": [
+			"left",
+			"down",
+			"down",
+			"down",
+			"down",
+			"down",
+			"left",
+			"left",
+			"left",
+			"down",
+			"down"
+		]
+	},
+	"banderas": {
+		"FLAG_RECEIVED_SECRET_POWER": 96,
+		"FLAG_HIDE_TM_SALESMAN_SLATEPORT": 948,
+		"FLAG_HIDE_SECRET_POWER_MAN": 960
+	},
+	"capacidad_bolsillo": 64,
+	"max_copias": 99,
+	"textos": [
+		{
+			"clave": "MT43_REGALO_PROPUESTA",
+			"direccion": "0x081A6884",
+			"raw_hex": "51CBE91B00D9E700D9E7E8E3ACFE51CBE91B00DCD900DCD9D7DCE3ACFB52BBE2D8D5B800E5E91B00DBE9D5EDAB00C7D900DCD900D7E3E2E7E8E6E9DDD8E300E1DDFEE4E6E3E4DDE300D7E9D5E6E8D9E000DBD9E2D9E6D5E000D5E5E96F00DBE6D5D7DDD5E700D5FAE9E200E1E3EADDE1DDD9E2E8E300CAC9C51BC7C9C8ADFB52CED9E2DBE300E9E2D500DDD8D9D5AB00CED900D8D5E61B00D9E7E8D500C7CE00E4D5E6D5FEE5E9D900E82700E8D5E1D6DD1BE200E8D900D7E3E2E7E8E6E9EDD5E700D9E000E8E9EDE3ADFF",
+			"texto_es": "¿Qué es esto?\n¿Qué he hecho?\\p¡Anda, qué guay! Me he construido mi\npropio cuartel general aquí gracias a\\w\\nun movimiento POKéMON.\\p¡Tengo una idea! Te daré esta MT para\nque tú también te construyas el tuyo."
+		},
+		{
+			"clave": "MT43_REGALO_EXPLICACION",
+			"direccion": "0x081A694F",
+			"raw_hex": "BCE9E7D7D500E9E20017E6D6E3E000DBE6D5E2D8D900E5E9D900E7D9D500E9E200E4E3D7E3FEE117E700D5E2D7DCE300E5E9D900E8E3D8E3E700E0E3E700D8D9E117E7ADFBCFE7D500BEBB14C900CDBFBDCCBFCEC900D8D9E0D5E2E8D9ADFEBDD5D9E61700E9E2D500E0DDD5E2D500ED00E4E3D8E617E7FAE8E6D9E4D5E600DCD5E7E8D500E0D500D7E3E4D5ADFBCED9E2D8E617E700E9E200E1E3E2E823E200D8D900D9E7E4D5D7DDE3FEE4D5E6D500E4E3E2D9E600E8E9E700D7E3E7D5E7ADFBCDD9E61700E8E900D7E9D5E6E8D9E000DBD9E2D9E6D5E0ADADADFE52CECF00BCBBCDBF00CDBFBDCCBFCEBBABFBC2D5EEE8D900E9E2D500D7E3E6E6DDD9E2D8E3ADADADFBC9E8E6D500D7E3E7D5F000E2E300DCD5D7D900DAD5E0E8D500DCD5D7D9E6E7D900E0D5FEBCBBCDBF00CDBFBDCCBFCEBB00D9E200E9E20017E6D6E3E0ADFBCFE7D500BEBB14C900CDBFBDCCBFCEC900D9E200E4D5E6D9D8D9E7FEE6E3D7E3E7D5E700E5E9D900E8D9E2DBD5E200E1E9D9E7D7D5E7ADFBD3E300E8D5E1D6DD1BE200EAE3ED00D500D6E9E7D7D5E600E0E9DBD5E6D9E7FED8E3E2D8D900D7E6D9D5E600E1DD00D6D5E7D9AD0052C7D900E4DDE6E3ABFF",
+			"texto_es": "Busca un árbol grande que sea un poco\nmás ancho que todos los demás.\\pUsa DAÑO SECRETO delante.\nCaerá una liana y podrás\\w\\ntrepar hasta la copa.\\pTendrás un montón de espacio\npara poner tus cosas.\\pSerá tu cuartel general...\n¡TU BASE SECRETA!\\pHazte una corriendo...\\pOtra cosa: no hace falta hacerse la\nBASE SECRETA en un árbol.\\pUsa DAÑO SECRETO en paredes\nrocosas que tengan muescas.\\pYo también voy a buscar lugares\ndonde crear mi base. ¡Me piro!"
+		},
+		{
+			"clave": "MT43_REGALO_RECHAZO",
+			"direccion": "0x081A6B09",
+			"raw_hex": "C9DCB80051E2E300E0E300E5E9DDD9E6D9E7ACFEBCE9D9E2E3B800D5E5E96F00D9E7E8D5E61B00E4E3E600E7DD00D7D5E1D6DDD5E7FAD8D900DDD8D9D5ADFF",
+			"texto_es": "Oh, ¿no lo quieres?\nBueno, aquí estaré por si cambias\\w\\nde idea."
+		},
+		{
+			"clave": "MT43_REGALO_SIN_ESPACIO",
+			"direccion": "0x081A6B48",
+			"raw_hex": "D0D5EDD5B800E2E300E8DDD9E2D9E700E7DDE8DDE300E4D5E6D500D9E7E8E3ADFBCED900E0E300EAE3ED00D500DBE9D5E6D8D5E6B800D5E76F00E5E9D900EAE9D9E0EAD9FED7E9D5E2D8E300E5E9DDD9E6D5E700D500E4E3E6001BE0B80051D9DCACFF",
+			"texto_es": "Vaya, no tienes sitio para esto.\\pTe lo voy a guardar, así que vuelve\ncuando quieras a por él, ¿eh?"
+		},
+		{
+			"clave": "MT43_REGALO_OBTENIDO",
+			"direccion": "0x081A3FAC",
+			"raw_hex": "52C9D6E8E9EAE300FD03ABFF",
+			"texto_es": "¡Obtuvo {objeto}!"
+		},
+		{
+			"clave": "MT43_REGALO_GUARDADO",
+			"direccion": "0x081A3FD1",
+			"raw_hex": "FD0100E4E9E7E300FD03FED9E200D9E000BCC9C6CDC3C6C6C900D8D900FD04ADFF",
+			"texto_es": "{jugador} puso {objeto}\nen el BOLSILLO de {bolsillo}."
+		},
+		{
+			"clave": "MT43_REGALO_BOLSILLO",
+			"direccion": "0x08413E58",
+			"raw_hex": "C7CE00BA00C7C9FF",
+			"texto_es": "MT / MO"
+		}
+	]
+}

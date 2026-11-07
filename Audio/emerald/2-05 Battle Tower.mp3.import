@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dga8ge2wgbgol"
+path="res://.godot/imported/2-05 Battle Tower.mp3-52cf79979ebe42004b411cda826b61f5.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/2-05 Battle Tower.mp3"
+dest_files=["res://.godot/imported/2-05 Battle Tower.mp3-52cf79979ebe42004b411cda826b61f5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

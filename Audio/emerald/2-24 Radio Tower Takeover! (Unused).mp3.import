@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vdp1s2k8m730"
+path="res://.godot/imported/2-24 Radio Tower Takeover! (Unused).mp3-9e989eb1278696c7fc7b71f0b97b891c.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/2-24 Radio Tower Takeover! (Unused).mp3"
+dest_files=["res://.godot/imported/2-24 Radio Tower Takeover! (Unused).mp3-9e989eb1278696c7fc7b71f0b97b891c.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://cwkksjoacpjr"]
+
+[ext_resource type="Texture2D" uid="uid://bkc5s8w0fea3h" path="res://UI/caja_dialogo_1.png" id="1_bomrl"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="2_3a627"]
+[ext_resource type="Script" uid="uid://c7c5cs2uy1m72" path="res://UI/cuadro_dialogo.gd" id="2_trhcm"]
+[ext_resource type="Texture2D" uid="uid://cwf4ytjn4xd2a" path="res://UI/puntero_texto.png" id="4_da351"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tthuk"]
+atlas = ExtResource("4_da351")
+region = Rect2(0, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88ik7"]
+atlas = ExtResource("4_da351")
+region = Rect2(8, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bueie"]
+atlas = ExtResource("4_da351")
+region = Rect2(16, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2owf"]
+atlas = ExtResource("4_da351")
+region = Rect2(24, 0, 8, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nl0jm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tthuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88ik7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bueie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2owf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="CuadroDialogo" type="NinePatchRect" unique_id=106064874]
+offset_right = 240.0
+offset_bottom = 48.0
+texture = ExtResource("1_bomrl")
+patch_margin_left = 16
+patch_margin_top = 8
+patch_margin_right = 16
+patch_margin_bottom = 8
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+script = ExtResource("2_trhcm")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=950635971]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 224.0
+offset_bottom = 38.0
+theme_override_colors/default_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.282353, 0.282353, 0.282353, 0.501961)
+theme_override_constants/line_separation = 0
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("2_3a627")
+theme_override_fonts/mono_font = ExtResource("2_3a627")
+theme_override_font_sizes/normal_font_size = 15
+theme_override_font_sizes/bold_font_size = 15
+theme_override_font_sizes/bold_italics_font_size = 15
+theme_override_font_sizes/italics_font_size = 15
+theme_override_font_sizes/mono_font_size = 15
+bbcode_enabled = true
+text = "Jj¿!¿¡
+Lee
+CHE"
+scroll_active = false
+scroll_following = true
+shortcut_keys_enabled = false
+
+[node name="Cursor" type="AnimatedSprite2D" parent="." unique_id=499921065]
+visible = false
+position = Vector2(224, 30)
+sprite_frames = SubResource("SpriteFrames_nl0jm")
+autoplay = "default"
+frame_progress = 0.38557

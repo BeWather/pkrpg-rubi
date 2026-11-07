@@ -1,0 +1,26 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/concurso/ventana_entrada_concurso.gd" id="1_ventana"]
+
+[node name="VentanaEntradaConcurso" type="CanvasLayer"]
+layer = 5
+script = ExtResource("1_ventana")
+
+[node name="Marco" type="ColorRect" parent="."]
+offset_left = 80.0
+offset_top = 16.0
+offset_right = 160.0
+offset_bottom = 96.0
+mouse_filter = 2
+color = Color(0.282353, 0.282353, 0.282353, 1)
+
+[node name="Fondo" type="ColorRect" parent="Marco"]
+offset_left = 2.0
+offset_top = 2.0
+offset_right = 78.0
+offset_bottom = 78.0
+mouse_filter = 2
+color = Color(0.972549, 0.972549, 0.972549, 1)
+
+[node name="Pokemon" type="Sprite2D" parent="Marco"]
+position = Vector2(40, 40)

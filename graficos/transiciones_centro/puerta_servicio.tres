@@ -1,0 +1,72 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://d3363wyexu0b3"]
+
+[ext_resource type="Texture2D" uid="uid://dqcs3iaxkc04b" path="res://graficos/transiciones_centro/puerta_servicio.png" id="1"]
+
+[sub_resource type="AtlasTexture" id="F3"]
+atlas = ExtResource("1")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="F0"]
+atlas = ExtResource("1")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="F1"]
+atlas = ExtResource("1")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="F2"]
+atlas = ExtResource("1")
+region = Rect2(32, 0, 16, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("F3")
+}],
+"loop": 0,
+"name": &"abierta",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("F0")
+}, {
+"duration": 1.0,
+"texture": SubResource("F1")
+}, {
+"duration": 1.0,
+"texture": SubResource("F2")
+}, {
+"duration": 1.0,
+"texture": SubResource("F3")
+}],
+"loop": 0,
+"name": &"abrir_puerta",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("F3")
+}, {
+"duration": 1.0,
+"texture": SubResource("F2")
+}, {
+"duration": 1.0,
+"texture": SubResource("F1")
+}, {
+"duration": 1.0,
+"texture": SubResource("F0")
+}],
+"loop": 0,
+"name": &"cerrar_puerta",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("F0")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 12.0
+}]

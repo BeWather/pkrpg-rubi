@@ -1,0 +1,97 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/concurso/resultados_concurso.gd" id="1_res"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/resultados_fondo.png" id="2_fondo"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/resultados_panel.png" id="3_panel"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/resultados_ganador.png" id="4_banda"]
+[ext_resource type="PackedScene" path="res://escenas/concurso/fila_resultado_concurso.tscn" id="5_fila"]
+[ext_resource type="FontFile" path="res://fuentes/pokemon-rs.ttf" id="6_fuente"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_rotulo"]
+font = ExtResource("6_fuente")
+font_size = 15
+font_color = Color(1, 1, 1, 1)
+shadow_color = Color(0.5, 0.1, 0.1, 1)
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_cartel"]
+font = ExtResource("6_fuente")
+font_size = 15
+font_color = Color(0.25098, 0.25098, 0.25098, 1)
+shadow_color = Color(0.835294, 0.835294, 0.835294, 1)
+shadow_offset = Vector2(1, 1)
+
+[node name="ResultadosConcurso" type="Node2D"]
+script = ExtResource("1_res")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+texture_repeat = 2
+texture = ExtResource("2_fondo")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="Panel" type="Sprite2D" parent="."]
+texture = ExtResource("3_panel")
+centered = false
+
+[node name="Rotulo" type="Label" parent="."]
+offset_left = 40.0
+offset_top = 3.0
+offset_right = 236.0
+offset_bottom = 19.0
+text = "NORMAL · CARISMA"
+label_settings = SubResource("LabelSettings_rotulo")
+
+[node name="Filas" type="Node2D" parent="."]
+
+[node name="Fila0" parent="Filas" instance=ExtResource("5_fila")]
+position = Vector2(0, 32)
+
+[node name="Fila1" parent="Filas" instance=ExtResource("5_fila")]
+position = Vector2(0, 56)
+
+[node name="Fila2" parent="Filas" instance=ExtResource("5_fila")]
+position = Vector2(0, 80)
+
+[node name="Fila3" parent="Filas" instance=ExtResource("5_fila")]
+position = Vector2(0, 104)
+
+[node name="Cartel" type="Node2D" parent="."]
+visible = false
+position = Vector2(0, 130)
+
+[node name="Fondo" type="ColorRect" parent="Cartel"]
+offset_left = 8.0
+offset_right = 232.0
+offset_bottom = 24.0
+mouse_filter = 2
+color = Color(1, 1, 1, 0.92)
+
+[node name="Texto" type="Label" parent="Cartel"]
+offset_left = 8.0
+offset_top = 2.0
+offset_right = 232.0
+offset_bottom = 22.0
+text = "¡Anunciamos los resultados!"
+label_settings = SubResource("LabelSettings_cartel")
+horizontal_alignment = 1
+
+[node name="Ventana" type="Control" parent="."]
+visible = false
+clip_contents = true
+layout_mode = 3
+offset_top = 80.0
+offset_right = 240.0
+offset_bottom = 80.0
+mouse_filter = 2
+
+[node name="Banda" type="Sprite2D" parent="Ventana"]
+position = Vector2(0, -80)
+texture = ExtResource("4_banda")
+centered = false
+
+[node name="Ganador" type="Sprite2D" parent="Ventana"]
+position = Vector2(272, 0)
+
+[node name="Confeti" type="Node2D" parent="."]

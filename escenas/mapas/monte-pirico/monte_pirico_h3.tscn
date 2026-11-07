@@ -1,0 +1,565 @@
+[gd_scene format=4 uid="uid://bdqbeg4wvrsgg"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_ma3rn"]
+[ext_resource type="TileSet" uid="uid://cihs7q0xi0yev" path="res://escenas/tileset_interior_edificios_2.tres" id="2_pe6r1"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_pe6r1"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_6lmel"]
+[ext_resource type="SpriteFrames" uid="uid://dfpgad0skjl3c" path="res://escenas/avatares/npc_031.tres" id="mp_npc_031"]
+[ext_resource type="SpriteFrames" uid="uid://cyl36dlhko7bi" path="res://escenas/avatares/npc_066.tres" id="mp_npc_066"]
+[ext_resource type="PackedScene" uid="uid://gbm5pvhiq1ej" path="res://escenas/avatares/npc_entrenador.tscn" id="mp_entrenador"]
+[ext_resource type="PackedScene" uid="uid://d0782whl40dem" path="res://escenas/ow_item.tscn" id="mp_item"]
+[ext_resource type="Script" uid="uid://dc1iq4jjdwvjy" path="res://scripts/overworld/suelo_agrietado_mapa.gd" id="mp_suelo"]
+
+[node name="MontePirico" type="Node2D" unique_id=804595119]
+script = ExtResource("1_ma3rn")
+nombre_interno = "MONTE_PIRICO_H3"
+seccion = "MONTE_PIRICO"
+esInterior = true
+solo_caminar = true
+mapa_exterior_asociado = "RUTA_122"
+musica_mapa = "MONTE_PIRICO"
+mostrar_nombre_al_entrar = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1891202316]
+tile_map_data = PackedByteArray("AAAAAAAAAAAEABwAAAAAAAEAAAAEAB0AAAAEAAAAAAAHAB0AAAAEAAEAAAAHAB4AAAAGAAAAAAAHAB0AAAAGAAEAAAAHAB4AAAAHAAAAAAAEABwAAAAHAAEAAAAEAB0AAAAFAAAAAAAEABwAAAAFAAEAAAAEAB0AAAAIAAAAAAAHAB0AAAAIAAEAAAAHAB4AAAAMAAAAAAAEABwAAAAMAAEAAAAEAB0AAAAMAAIAAAAGACQAAAALAAIAAAAHABwAAAAKAAIAAAAHABwAAAAJAAIAAAAHABwAAAAIAAIAAAAHABwAAAAHAAIAAAAGACQAAAAGAAIAAAAGACQAAAAFAAIAAAAGACQAAAAEAAIAAAAHABwAAAADAAIAAAAHABwAAAABAAIAAAAHABwAAAAAAAIAAAAGACQAAAACAAIAAAAHABwAAAAAAAwAAAAHABwAAAAAAAsAAAAHABwAAAAAAAoAAAAHABwAAAAAAAkAAAAGACQAAAAAAAgAAAAGACQAAAAAAAcAAAAHABwAAAAAAAYAAAAGACQAAAAAAAUAAAAGACQAAAAAAAQAAAAHABwAAAAAAAMAAAAGACQAAAABAAwAAAAGABwAAAABAAsAAAAGABwAAAABAAgAAAAGAB0AAAABAAkAAAAGAB0AAAABAAQAAAAGABwAAAABAAUAAAAGABwAAAACAAYAAAAGABwAAAADAAYAAAAGABwAAAADAAcAAAAGABwAAAACAAcAAAAGABwAAAAFAAgAAAAGAB0AAAAEAAgAAAAGAB0AAAAEAAkAAAAGAB0AAAAFAAkAAAAGAB0AAAAFAAsAAAAGABwAAAAEAAsAAAAGAB0AAAAFAAwAAAAGABwAAAAEAAwAAAAGAB0AAAAIAAsAAAAGAB0AAAAJAAsAAAAGABwAAAAJAAwAAAAGABwAAAAIAAwAAAAGAB0AAAALAAwAAAAGAB0AAAALAAsAAAAGAB0AAAAMAAsAAAAGAB0AAAAMAAwAAAAGAB0AAAAMAAkAAAAGABwAAAAMAAgAAAAGABwAAAAJAAkAAAAGAB0AAAAIAAkAAAAGAB0AAAAIAAgAAAAGAB0AAAAJAAgAAAAGAB0AAAAKAAcAAAAGABwAAAAKAAYAAAAGABwAAAALAAYAAAAGABwAAAALAAcAAAAGABwAAAAIAAUAAAAGAB0AAAAIAAQAAAAGABwAAAAJAAQAAAAGABwAAAAFAAUAAAAGAB0AAAAFAAQAAAAGABwAAAAEAAQAAAAGABwAAAAGAAMAAAAGAB0AAAAHAAMAAAAGAB0AAAAMAAMAAAAGAB0AAAAHAAkAAAAGAB0AAAAHAAgAAAAGAB0AAAAHAAcAAAAGABwAAAAHAAYAAAAGAB0AAAAHAAUAAAAGAB0AAAAHAAQAAAAGABwAAAAGAAQAAAAGABwAAAAGAAUAAAAGAB0AAAAGAAYAAAAGAB0AAAAFAAYAAAAGAB0AAAAEAAYAAAAGABwAAAAEAAUAAAAGAB0AAAADAAUAAAAGABwAAAADAAQAAAAGABwAAAADAAMAAAAGABwAAAACAAMAAAAGABwAAAABAAMAAAAGABwAAAACAAQAAAAGABwAAAACAAUAAAAGABwAAAAEAAMAAAAGAB0AAAAFAAMAAAAGAB0AAAAEAAcAAAAGABwAAAAFAAcAAAAGABwAAAAGAAcAAAAGABwAAAAGAAgAAAAGAB0AAAAGAAkAAAAGAB0AAAAGAAoAAAAGABwAAAAFAAoAAAAGABwAAAAEAAoAAAAGABwAAAADAAoAAAAGABwAAAADAAkAAAAGAB0AAAADAAgAAAAGAB0AAAACAAgAAAAGAB0AAAACAAkAAAAGAB0AAAACAAoAAAAGABwAAAABAAoAAAAGABwAAAACAAsAAAAGABwAAAACAAwAAAAGABwAAAADAAwAAAAGAB0AAAADAAsAAAAGAB0AAAAGAAsAAAAGABwAAAAGAAwAAAAIABYAAAAHAAwAAAAGAB0AAAAHAAsAAAAGAB0AAAAHAAoAAAAGAB0AAAAIAAoAAAAGAB0AAAAJAAoAAAAGABwAAAAKAAoAAAAGABwAAAAKAAkAAAAGABwAAAAKAAgAAAAGABwAAAALAAgAAAAGABwAAAALAAkAAAAGABwAAAALAAoAAAAGABwAAAAMAAoAAAAGABwAAAAKAAsAAAAGABwAAAAKAAwAAAAIABYAAAAIAAYAAAAGABwAAAAIAAcAAAAGABwAAAAJAAcAAAAGABwAAAAJAAYAAAAGABwAAAAJAAUAAAAGABwAAAAKAAUAAAAGABwAAAAKAAQAAAAGABwAAAAKAAMAAAAGABwAAAAJAAMAAAAGABwAAAAIAAMAAAAGAB0AAAALAAMAAAAGABwAAAALAAQAAAAGABwAAAALAAUAAAAGABwAAAAMAAUAAAAGAB0AAAAMAAQAAAAGABwAAAAMAAYAAAAGAB0AAAAMAAcAAAAGABwAAAABAAYAAAAGABwAAAABAAcAAAAGABwAAAAJAAAAAAADABgAAAAJAAEAAAADABkAAAAKAAAAAAAEABgAAAAKAAEAAAAEABkAAAALAAAAAAAFABgAAAALAAEAAAAFABkAAAABAAAAAAADABYAAAABAAEAAAADABcAAAACAAAAAAAEABYAAAACAAEAAAAEABcAAAADAAAAAAAFABYAAAADAAEAAAAFABcAAAA=")
+tile_set = ExtResource("2_pe6r1")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1998160653]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Guillermo" parent="NPCs" unique_id=1220003001 instance=ExtResource("mp_entrenador")]
+editor_description = "pokeruby MtPyre_3F objeto 1 (1,4) PSYCHIC_M FACE_DOWN_AND_RIGHT, TRAINER_WILLIAM (MEDIUM GUILLERMO, vision 3)"
+position = Vector2(24, 78)
+npc_id = "monte_pirico_h3_guillermo"
+entrenador_id = 236
+rango_vision = 3
+texto_post_combate = "MONTE_PIRICO_H3_GUILLERMO_POST"
+id_texto = "MONTE_PIRICO_H3_GUILLERMO_INI"
+tipo_movimiento = 15
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("mp_npc_031")
+coord = Vector2i(1, 4)
+loggear = false
+
+[node name="Celia" parent="NPCs" unique_id=1220003002 instance=ExtResource("mp_entrenador")]
+editor_description = "pokeruby MtPyre_3F objeto 2 (12,7) LASS FACE_DOWN_AND_LEFT, TRAINER_KAYLA (MEDIUM CELIA, vision 3)"
+position = Vector2(200, 126)
+npc_id = "monte_pirico_h3_celia"
+entrenador_id = 247
+rango_vision = 3
+texto_post_combate = "MONTE_PIRICO_H3_CELIA_POST"
+id_texto = "MONTE_PIRICO_H3_CELIA_INI"
+tipo_movimiento = 16
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("mp_npc_066")
+coord = Vector2i(12, 7)
+loggear = false
+
+[node name="ItemSuperRepel" parent="NPCs" unique_id=1220003003 instance=ExtResource("mp_item")]
+editor_description = "pokeruby MtPyre_3F objeto 3 (0,7), FLAG_ITEM_MT_PYRE_3F_1 (ITEM_SUPER_REPEL)"
+position = Vector2(8, 126)
+id_item = "monte_pirico_h3_superrepel_01"
+objeto_a_entregar = "SUPERREPEL"
+coord = Vector2i(0, 7)
+
+[node name="SueloAgrietado" type="Node" parent="." unique_id=1220003004]
+editor_description = "MB_MT_PYRE_HOLE de Rubi: los agujeros (bandera AGUJERO del TPTileDataMap) llevan al piso de abajo; llegadas_especiales = warp_event del agujero cuando la celda de llegada no es la misma"
+script = ExtResource("mp_suelo")
+mapa_inferior = "monte_pirico_h2"
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=840542465]
+position = Vector2(40, 22)
+script = ExtResource("3_pe6r1")
+ruta_mapa_destino = "monte_pirico_h4"
+posicion_destino = Vector2(2, 5)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1801736758]
+position = Vector2(168, 22)
+script = ExtResource("3_pe6r1")
+ruta_mapa_destino = "monte_pirico_h2"
+posicion_destino = Vector2(10, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=666725646]
+script = ExtResource("4_6lmel")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,10": {
+"flags": 4294967296
+},
+"0,11": {
+"flags": 4294967296
+},
+"0,12": {
+"flags": 4294967296
+},
+"0,2": {
+"flags": 1
+},
+"0,3": {
+"flags": 1
+},
+"0,4": {
+"flags": 4294967296
+},
+"0,5": {
+"flags": 1
+},
+"0,6": {
+"flags": 1
+},
+"0,7": {
+"flags": 4294967296
+},
+"0,8": {
+"flags": 1
+},
+"0,9": {
+"flags": 1
+},
+"1,0": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,10": {
+"flags": 4294967296
+},
+"1,11": {
+"flags": 4294967296
+},
+"1,2": {
+"flags": 4294967296
+},
+"1,3": {
+"flags": 4294967296
+},
+"1,4": {
+"flags": 4294967296
+},
+"1,5": {
+"flags": 4294967296
+},
+"1,6": {
+"flags": 4294967296
+},
+"1,7": {
+"flags": 4294967296
+},
+"1,8": {
+"flags": 1
+},
+"1,9": {
+"flags": 1
+},
+"10,0": {
+"flags": 1
+},
+"10,10": {
+"flags": 4294967296
+},
+"10,11": {
+"flags": 4294967296
+},
+"10,12": {
+"flags": 536870912
+},
+"10,2": {
+"flags": 4294967296
+},
+"10,3": {
+"flags": 4294967296
+},
+"10,4": {
+"flags": 4294967296
+},
+"10,5": {
+"flags": 4294967296
+},
+"10,6": {
+"flags": 4294967296
+},
+"10,7": {
+"flags": 4294967296
+},
+"10,8": {
+"flags": 4294967296
+},
+"10,9": {
+"flags": 4294967296
+},
+"11,0": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,10": {
+"flags": 4294967296
+},
+"11,11": {
+"flags": 1
+},
+"11,12": {
+"flags": 1
+},
+"11,2": {
+"flags": 4294967296
+},
+"11,3": {
+"flags": 4294967296
+},
+"11,4": {
+"flags": 4294967296
+},
+"11,5": {
+"flags": 4294967296
+},
+"11,6": {
+"flags": 4294967296
+},
+"11,7": {
+"flags": 4294967296
+},
+"11,8": {
+"flags": 4294967296
+},
+"11,9": {
+"flags": 4294967296
+},
+"12,1": {
+"flags": 1
+},
+"12,10": {
+"flags": 4294967296
+},
+"12,11": {
+"flags": 1
+},
+"12,12": {
+"flags": 1
+},
+"12,2": {
+"flags": 1
+},
+"12,3": {
+"flags": 1
+},
+"12,4": {
+"flags": 4294967296
+},
+"12,5": {
+"flags": 1
+},
+"12,6": {
+"flags": 1
+},
+"12,7": {
+"flags": 4294967296
+},
+"12,8": {
+"flags": 4294967296
+},
+"12,9": {
+"flags": 4294967296
+},
+"2,0": {
+"flags": 1
+},
+"2,10": {
+"flags": 4294967296
+},
+"2,11": {
+"flags": 4294967296
+},
+"2,12": {
+"flags": 4294967296
+},
+"2,2": {
+"flags": 4294967296
+},
+"2,3": {
+"flags": 4294967296
+},
+"2,4": {
+"flags": 4294967296
+},
+"2,5": {
+"flags": 4294967296
+},
+"2,6": {
+"flags": 4294967296
+},
+"2,7": {
+"flags": 4294967296
+},
+"2,8": {
+"flags": 1
+},
+"2,9": {
+"flags": 1
+},
+"3,0": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,10": {
+"flags": 4294967296
+},
+"3,11": {
+"flags": 1
+},
+"3,12": {
+"flags": 1
+},
+"3,2": {
+"flags": 4294967296
+},
+"3,3": {
+"flags": 4294967296
+},
+"3,4": {
+"flags": 4294967296
+},
+"3,5": {
+"flags": 4294967296
+},
+"3,6": {
+"flags": 4294967296
+},
+"3,7": {
+"flags": 4294967296
+},
+"3,8": {
+"flags": 1
+},
+"3,9": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,10": {
+"flags": 4294967296
+},
+"4,11": {
+"flags": 1
+},
+"4,12": {
+"flags": 1
+},
+"4,2": {
+"flags": 4294967296
+},
+"4,3": {
+"flags": 1
+},
+"4,4": {
+"flags": 4294967296
+},
+"4,5": {
+"flags": 1
+},
+"4,6": {
+"flags": 4294967296
+},
+"4,7": {
+"flags": 4294967296
+},
+"4,8": {
+"flags": 1
+},
+"4,9": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,10": {
+"flags": 4294967296
+},
+"5,11": {
+"flags": 4294967296
+},
+"5,12": {
+"flags": 4294967296
+},
+"5,2": {
+"flags": 1
+},
+"5,3": {
+"flags": 1
+},
+"5,4": {
+"flags": 4294967296
+},
+"5,5": {
+"flags": 1
+},
+"5,6": {
+"flags": 1
+},
+"5,7": {
+"flags": 4294967296
+},
+"5,8": {
+"flags": 1
+},
+"5,9": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,10": {
+"flags": 4294967296
+},
+"6,11": {
+"flags": 4294967296
+},
+"6,12": {
+"flags": 536870912
+},
+"6,2": {
+"flags": 1
+},
+"6,3": {
+"flags": 1
+},
+"6,4": {
+"flags": 4294967296
+},
+"6,5": {
+"flags": 1
+},
+"6,6": {
+"flags": 1
+},
+"6,7": {
+"flags": 4294967296
+},
+"6,8": {
+"flags": 1
+},
+"6,9": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,10": {
+"flags": 1
+},
+"7,11": {
+"flags": 1
+},
+"7,12": {
+"flags": 1
+},
+"7,2": {
+"flags": 1
+},
+"7,3": {
+"flags": 1
+},
+"7,4": {
+"flags": 4294967296
+},
+"7,5": {
+"flags": 1
+},
+"7,6": {
+"flags": 1
+},
+"7,7": {
+"flags": 4294967296
+},
+"7,8": {
+"flags": 1
+},
+"7,9": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,10": {
+"flags": 1
+},
+"8,11": {
+"flags": 1
+},
+"8,12": {
+"flags": 1
+},
+"8,2": {
+"flags": 4294967296
+},
+"8,3": {
+"flags": 1
+},
+"8,4": {
+"flags": 4294967296
+},
+"8,5": {
+"flags": 1
+},
+"8,6": {
+"flags": 4294967296
+},
+"8,7": {
+"flags": 4294967296
+},
+"8,8": {
+"flags": 1
+},
+"8,9": {
+"flags": 1
+},
+"9,0": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,11": {
+"flags": 4294967296
+},
+"9,12": {
+"flags": 4294967296
+},
+"9,2": {
+"flags": 4294967296
+},
+"9,3": {
+"flags": 4294967296
+},
+"9,4": {
+"flags": 4294967296
+},
+"9,5": {
+"flags": 4294967296
+},
+"9,6": {
+"flags": 4294967296
+},
+"9,7": {
+"flags": 4294967296
+},
+"9,8": {
+"flags": 1
+},
+"9,9": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"

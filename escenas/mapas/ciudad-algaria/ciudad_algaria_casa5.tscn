@@ -1,0 +1,163 @@
+[gd_scene format=4 uid="uid://bwmxw8afwuxr3"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_akawa"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_nnoeu"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_cxgf7"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_8ii8e"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="al_base"]
+[ext_resource type="SpriteFrames" uid="uid://buukulhhkfyjc" path="res://escenas/avatares/npc_050.tres" id="al_npc_050"]
+[ext_resource type="Texture2D" uid="uid://1k8yy4x3smo8" path="res://graficos/puerta-algaria-interior.png" id="al_puerta"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="al_signpost"]
+[ext_resource type="Script" uid="uid://bpvica3x73mj" path="res://scripts/mapas/television.gd" id="tv_television"]
+[ext_resource type="Script" uid="uid://cix41nrfux4xa" path="res://scripts/mapas/tile_alterno.gd" id="tv_tile_alterno"]
+
+[node name="Casa" type="Node2D" unique_id=749470543]
+script = ExtResource("1_akawa")
+nombre_interno = "ciudad_algaria_casa5"
+seccion = "CIUDAD_ALGARIA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_ALGARIA"
+solo_caminar = true
+musica_mapa = "CIUDAD_FERRICA"
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=991336295]
+tile_map_data = PackedByteArray("AAAAAAAAAAAGABAAAAAAAAEAAAAGABEAAAABAAAAAAAHABAAAAABAAEAAAAHABEAAAACAAEAAAACAAEAAAADAAAAAAADAAAAAAADAAEAAAABAAMAAAAEAAAAAAAEAAAAAAAEAAEAAAAEAAEAAAAFAAAAAAAGAAAAAAAFAAEAAAAGAAEAAAAGAAAAAAAFAAAAAAAGAAEAAAAFAAEAAAAHAAAAAAAAAAYAAAAHAAEAAAAGAAMAAAAIAAAAAAAFAAAAAAAIAAEAAAAAAA0AAAAJAAAAAAAGAA0AAAAJAAEAAAAGAA4AAAAKAAAAAAAHAA0AAAAKAAEAAAAHAA4AAAACAAIAAAAEAAQAAAAAAAIAAAAGABIAAAABAAIAAAAHABIAAAAIAAIAAAAAAA4AAAAJAAIAAAAGAA8AAAAHAAIAAAAAAAcAAAAKAAIAAAAHAA8AAAAGAAIAAAAEAAQAAAAFAAIAAAAEAAQAAAAEAAIAAAAEAAQAAAADAAIAAAAEAAQAAAAAAAYAAAABAAcAAAAAAAUAAAABAAcAAAAAAAQAAAABAAcAAAAAAAMAAAABAAcAAAAAAAcAAAABAAcAAAAKAAcAAAACAAUAAAABAAMAAAADAAQAAAABAAQAAAADAAQAAAABAAUAAAADAAQAAAABAAYAAAADAAQAAAABAAcAAAADAAQAAAACAAMAAAADAAQAAAACAAQAAAADAAQAAAACAAUAAAADAAQAAAACAAYAAAADAAQAAAACAAcAAAADAAQAAAADAAMAAAADAAQAAAADAAQAAAADAAQAAAADAAUAAAADAAQAAAADAAYAAAADAAQAAAADAAcAAAAAAAEAAAAEAAMAAAADAAQAAAAEAAQAAAADAAUAAAAEAAUAAAADAAUAAAAEAAYAAAADAAQAAAAEAAcAAAABAAEAAAAFAAMAAAADAAQAAAAFAAQAAAACAAkAAAAFAAUAAAACAAoAAAAFAAYAAAADAAQAAAAFAAcAAAADAAQAAAAGAAMAAAADAAQAAAAGAAQAAAADAAkAAAAGAAUAAAADAAoAAAAGAAYAAAADAAQAAAAGAAcAAAADAAQAAAAHAAMAAAADAAQAAAAHAAQAAAAEAAUAAAAHAAUAAAAEAAUAAAAHAAYAAAADAAQAAAAHAAcAAAADAAQAAAAIAAMAAAADAAQAAAAIAAQAAAADAAQAAAAIAAUAAAADAAQAAAAIAAYAAAADAAQAAAAIAAcAAAADAAQAAAAJAAMAAAADAAQAAAAJAAQAAAADAAQAAAAJAAUAAAADAAQAAAAJAAYAAAADAAQAAAAJAAcAAAACAAUAAAAKAAMAAAADAAQAAAAKAAQAAAADAAQAAAAKAAUAAAADAAQAAAAKAAYAAAADAAQAAAACAAAAAAACAAAAAAA=")
+tile_set = ExtResource("2_nnoeu")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=450578402]
+tile_map_data = PackedByteArray("AAAKAAYAAAACAAcAAAAJAAYAAAACAAcAAAA=")
+tile_set = ExtResource("2_nnoeu")
+
+[node name="PuertaCerrada" type="Sprite2D" parent="." unique_id=1250503]
+editor_description = "pokeruby MossdeepCity_GameCorner_1F EventScript_15AC71: setmetatile Doorway_ClosedTop/ClosedBottom en (3,0) y (3,1) sin ENTRENADOR e-Reader. Sin e-Reader en el proyecto, siempre cerrada; no se anima"
+position = Vector2(56, 22)
+texture = ExtResource("al_puerta")
+region_enabled = true
+region_rect = Rect2(64, 0, 16, 20)
+
+[node name="NPCs" type="Node2D" parent="." unique_id=211795028]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Viejo" parent="NPCs" unique_id=1250501 instance=ExtResource("al_base")]
+editor_description = "pokeruby MossdeepCity_GameCorner_1F objeto 1 (4,4) OLD_MAN_1 FACE_RIGHT (sin el tramo del ENTRENADOR e-Reader)"
+position = Vector2(72, 78)
+id_texto = "ALGARIA_CASA5_VIEJO"
+tipo_movimiento = 10
+selec_frames = ExtResource("al_npc_050")
+coord = Vector2i(4, 4)
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1016168764]
+
+[node name="PuertaAtrancada" type="Sprite2D" parent="Carteles" unique_id=1250502 groups=["Cartel"]]
+editor_description = "pokeruby MossdeepCity_GameCorner_1F bg_event (3,1) ANY: la puerta está atrancada (sin ENTRENADOR e-Reader)"
+position = Vector2(56, 24)
+script = ExtResource("al_signpost")
+id_texto = "ALGARIA_CASA5_CARTEL_PUERTA"
+coord_tile = Vector2i(3, 1)
+
+[node name="Television" type="Sprite2D" parent="Carteles" unique_id=1159781440]
+editor_description = "MB_TELEVISION de pokeruby: Event_TV (ProgramacionTV)."
+position = Vector2(120, 24)
+script = ExtResource("tv_television")
+pantalla = NodePath("../../TilesAlternos/PantallaTele")
+coord_tile = Vector2i(7, 1)
+direccion = 1
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1951418542]
+script = ExtResource("3_cxgf7")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,7": {
+"flags": 1
+},
+"2,0": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,0": {
+"flags": 1
+},
+"4,0": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,4": {
+"flags": 1
+},
+"6,5": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,7": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=2039454932]
+position = Vector2(56, 118)
+script = ExtResource("4_8ii8e")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_algaria"
+posicion_destino = Vector2(36, 24)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=30303994]
+position = Vector2(72, 118)
+script = ExtResource("4_8ii8e")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_algaria"
+posicion_destino = Vector2(36, 24)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp3" type="Sprite2D" parent="." unique_id=2017669792]
+position = Vector2(56, 22)
+script = ExtResource("4_8ii8e")
+ruta_mapa_destino = "ciudad_algaria_casa5_2"
+posicion_destino = Vector2(3, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TilesAlternos" type="Node2D" parent="." unique_id=1975920106]
+
+[node name="PantallaTele" type="Node2D" parent="TilesAlternos" unique_id=1776492376]
+position = Vector2(120, 24)
+script = ExtResource("tv_tile_alterno")
+capa = NodePath("../../Suelo")
+coord_tile = Vector2i(7, 1)
+atlas_alterno = Vector2i(0, 5)

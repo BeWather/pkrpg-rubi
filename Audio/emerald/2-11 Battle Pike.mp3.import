@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5hi8lposlr0o"
+path="res://.godot/imported/2-11 Battle Pike.mp3-19cd407b41d6e7dff3d476e9b5376fd8.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/2-11 Battle Pike.mp3"
+dest_files=["res://.godot/imported/2-11 Battle Pike.mp3-19cd407b41d6e7dff3d476e9b5376fd8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

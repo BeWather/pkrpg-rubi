@@ -1,0 +1,326 @@
+[gd_scene load_steps=8 format=3]
+
+[ext_resource type="Script" path="res://addons/tilemap_inspector/editores/editor_encuentros_visual/editor_encuentros_visual.gd" id="1_editor"]
+[ext_resource type="PackedScene" path="res://addons/tilemap_inspector/editores/editor_encuentros_visual/pestana_tipo.tscn" id="2_pestana"]
+[ext_resource type="Script" path="res://addons/tilemap_inspector/editores/editor_poi/lienzo_mapa_region.gd" id="3_lienzo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fondo"]
+bg_color = Color(0.09, 0.1, 0.13, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.12, 0.135, 0.175, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mapa"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.05, 0.06, 0.08, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.36, 0.5, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_popup"]
+content_margin_left = 2.0
+content_margin_top = 2.0
+content_margin_right = 2.0
+content_margin_bottom = 2.0
+bg_color = Color(0.07, 0.08, 0.11, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.95, 0.72, 0.25, 1)
+
+[node name="EditorEncuentrosVisual" type="Window"]
+title = "Encuentros"
+size = Vector2i(1600, 900)
+wrap_controls = true
+min_size = Vector2i(1280, 720)
+script = ExtResource("1_editor")
+
+[node name="Fondo" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fondo")
+
+[node name="Margen" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Raiz" type="VBoxContainer" parent="Margen"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BarraSuperior" type="HBoxContainer" parent="Margen/Raiz"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Titulo" type="Label" parent="Margen/Raiz/BarraSuperior"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.95, 0.72, 0.25, 1)
+theme_override_font_sizes/font_size = 18
+text = "ENCUENTROS SALVAJES"
+
+[node name="Separador" type="VSeparator" parent="Margen/Raiz/BarraSuperior"]
+layout_mode = 2
+
+[node name="EtiquetaArchivo" type="Label" parent="Margen/Raiz/BarraSuperior"]
+layout_mode = 2
+text = "Archivo:"
+
+[node name="SelectorArchivo" type="OptionButton" parent="Margen/Raiz/BarraSuperior"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Tabla que se edita. La alternativa (3 generaciones, sin slots repetidos) es la que usa el juego con la bandera tabla_encuentros_alternativa."
+selected = 0
+item_count = 2
+popup/item_0/text = "Por defecto · config_encuentros.json"
+popup/item_0/id = 0
+popup/item_1/text = "Alternativo · config_encuentros_alternativo.json"
+popup/item_1/id = 1
+
+[node name="Recargar" type="Button" parent="Margen/Raiz/BarraSuperior"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Volver a leer el archivo del disco"
+text = "⟳ Recargar"
+
+[node name="Espacio" type="Control" parent="Margen/Raiz/BarraSuperior"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Guardar" type="Button" parent="Margen/Raiz/BarraSuperior"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "💾  Guardar"
+
+[node name="Cuerpo" type="HBoxContainer" parent="Margen/Raiz"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="PanelClaves" type="PanelContainer" parent="Margen/Raiz/Cuerpo"]
+custom_minimum_size = Vector2(270, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Claves" type="VBoxContainer" parent="Margen/Raiz/Cuerpo/PanelClaves"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Filtro" type="LineEdit" parent="Margen/Raiz/Cuerpo/PanelClaves/Claves"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Filtra por clave, nombre del lugar o especie"
+placeholder_text = "Buscar clave, lugar o especie…"
+clear_button_enabled = true
+
+[node name="ConteoClaves" type="Label" parent="Margen/Raiz/Cuerpo/PanelClaves/Claves"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.58, 0.65, 1)
+theme_override_font_sizes/font_size = 11
+text = "0 / 0 claves"
+
+[node name="ListaClaves" type="ItemList" parent="Margen/Raiz/Cuerpo/PanelClaves/Claves"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+fixed_icon_size = Vector2i(32, 32)
+
+[node name="Botones" type="HBoxContainer" parent="Margen/Raiz/Cuerpo/PanelClaves/Claves"]
+layout_mode = 2
+
+[node name="NuevaClave" type="Button" parent="Margen/Raiz/Cuerpo/PanelClaves/Claves/Botones"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "+ Nueva"
+
+[node name="EliminarClave" type="Button" parent="Margen/Raiz/Cuerpo/PanelClaves/Claves/Botones"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "✖ Eliminar"
+
+[node name="PanelCentral" type="PanelContainer" parent="Margen/Raiz/Cuerpo"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Central" type="VBoxContainer" parent="Margen/Raiz/Cuerpo/PanelCentral"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="TituloClave" type="Label" parent="Margen/Raiz/Cuerpo/PanelCentral/Central"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 28
+text = "(sin clave)"
+
+[node name="SubtituloClave" type="Label" parent="Margen/Raiz/Cuerpo/PanelCentral/Central"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.75, 1, 1)
+theme_override_font_sizes/font_size = 13
+
+[node name="Pestanas" type="TabContainer" parent="Margen/Raiz/Cuerpo/PanelCentral/Central"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 0
+
+[node name="Hierba" parent="Margen/Raiz/Cuerpo/PanelCentral/Central/Pestanas" instance=ExtResource("2_pestana")]
+layout_mode = 2
+tipo = "hierba"
+metadata/_tab_index = 0
+
+[node name="Agua" parent="Margen/Raiz/Cuerpo/PanelCentral/Central/Pestanas" instance=ExtResource("2_pestana")]
+visible = false
+layout_mode = 2
+tipo = "agua"
+metadata/_tab_index = 1
+
+[node name="Pesca" parent="Margen/Raiz/Cuerpo/PanelCentral/Central/Pestanas" instance=ExtResource("2_pestana")]
+visible = false
+layout_mode = 2
+tipo = "pesca"
+metadata/_tab_index = 2
+
+[node name="Roca" parent="Margen/Raiz/Cuerpo/PanelCentral/Central/Pestanas" instance=ExtResource("2_pestana")]
+visible = false
+layout_mode = 2
+tipo = "roca"
+metadata/_tab_index = 3
+
+[node name="PanelDerecho" type="PanelContainer" parent="Margen/Raiz/Cuerpo"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Derecha" type="VBoxContainer" parent="Margen/Raiz/Cuerpo/PanelDerecho"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="MarcoMapa" type="PanelContainer" parent="Margen/Raiz/Cuerpo/PanelDerecho/Derecha"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_mapa")
+
+[node name="Lienzo" type="Control" parent="Margen/Raiz/Cuerpo/PanelDerecho/Derecha/MarcoMapa"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Clic en un lugar para abrir su clave (varios clics recorren las plantas)"
+script = ExtResource("3_lienzo")
+
+[node name="LugarMapa" type="Label" parent="Margen/Raiz/Cuerpo/PanelDerecho/Derecha"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.86, 0.35, 1)
+theme_override_font_sizes/font_size = 13
+
+[node name="Separador" type="HSeparator" parent="Margen/Raiz/Cuerpo/PanelDerecho/Derecha"]
+layout_mode = 2
+
+[node name="TituloResumen" type="Label" parent="Margen/Raiz/Cuerpo/PanelDerecho/Derecha"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.85, 0.88, 0.95, 1)
+theme_override_font_sizes/font_size = 14
+text = "Probabilidad por especie"
+
+[node name="ScrollResumen" type="ScrollContainer" parent="Margen/Raiz/Cuerpo/PanelDerecho/Derecha"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Resumen" type="VBoxContainer" parent="Margen/Raiz/Cuerpo/PanelDerecho/Derecha/ScrollResumen"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 4
+
+[node name="Estado" type="Label" parent="Margen/Raiz"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.74, 0.82, 1)
+text = "Listo."
+
+[node name="Autocompletado" type="PanelContainer" parent="."]
+unique_name_in_owner = true
+visible = false
+top_level = true
+z_index = 100
+offset_right = 300.0
+offset_bottom = 240.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_popup")
+
+[node name="ListaAutocompletado" type="ItemList" parent="Autocompletado"]
+unique_name_in_owner = true
+texture_filter = 1
+layout_mode = 2
+focus_mode = 0
+fixed_icon_size = Vector2i(32, 32)
+
+[node name="DialogoNuevaClave" type="ConfirmationDialog" parent="."]
+unique_name_in_owner = true
+title = "Nueva clave de encuentros"
+size = Vector2i(380, 120)
+
+[node name="Contenido" type="VBoxContainer" parent="DialogoNuevaClave"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 372.0
+offset_bottom = 71.0
+
+[node name="Etiqueta" type="Label" parent="DialogoNuevaClave/Contenido"]
+layout_mode = 2
+text = "Clave del mapa (ej.: ruta_104):"
+
+[node name="CampoNuevaClave" type="LineEdit" parent="DialogoNuevaClave/Contenido"]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "ruta_104"
+
+[node name="DialogoEliminar" type="ConfirmationDialog" parent="."]
+unique_name_in_owner = true
+title = "Eliminar clave"
+
+[node name="DialogoDescartar" type="ConfirmationDialog" parent="."]
+unique_name_in_owner = true
+title = "Cambios sin guardar"
+ok_button_text = "Descartar"
+dialog_text = "Hay cambios sin guardar. ¿Descartarlos?"
+
+[node name="TemporizadorIconos" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.27
+autostart = true

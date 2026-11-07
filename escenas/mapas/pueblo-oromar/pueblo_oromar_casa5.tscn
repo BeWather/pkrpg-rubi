@@ -1,0 +1,121 @@
+[gd_scene format=4 uid="uid://6fkgnrjefwcg"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_jf3j6"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_mbmd3"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_07v0e"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="7_autay"]
+[ext_resource type="SpriteFrames" uid="uid://ctfpoynxvo8xb" path="res://escenas/avatares/npc_019.tres" id="or_f_019"]
+[ext_resource type="SpriteFrames" uid="uid://borgo2f2dfmil" path="res://escenas/avatares/npc_055.tres" id="or_f_055"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="or_npc_base"]
+
+[node name="Casa" type="Node2D" unique_id=2013019305]
+script = ExtResource("1_jf3j6")
+nombre_interno = "pueblo_oromar_casa5"
+seccion = "PUEBLO_OROMAR"
+esInterior = true
+mapa_exterior_asociado = "PUEBLO_OROMAR"
+solo_caminar = true
+musica_mapa = "CIUDAD_OROMAR"
+metadata/esInterior = true
+
+[node name="NPCs" type="Node2D" parent="." unique_id=674171378]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Hombre" parent="NPCs" unique_id=984893009 instance=ExtResource("or_npc_base")]
+editor_description = "pokeruby PacifidlogTown_House1 objeto 1 (3,5) MAN_6 FACE_DOWN (MSGBOX_NPC)"
+position = Vector2(56, 94)
+id_texto = "OROMAR_CASA5_HOMBRE"
+selec_frames = ExtResource("or_f_019")
+coord = Vector2i(3, 5)
+
+[node name="Mujer" parent="NPCs" unique_id=550333213 instance=ExtResource("or_npc_base")]
+editor_description = "pokeruby PacifidlogTown_House1 objeto 2 (6,4) WOMAN_5 FACE_LEFT (MSGBOX_NPC)"
+position = Vector2(104, 78)
+id_texto = "OROMAR_CASA5_MUJER"
+tipo_movimiento = 9
+selec_frames = ExtResource("or_f_055")
+coord = Vector2i(6, 4)
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1587394027]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADIAAAAAAAEAAAAAADMAAAAAAAIAAAAAADQAAAAJAAAAAAACADIAAAAJAAEAAAACADMAAAAJAAIAAAACADQAAAAIAAAAAAAHADIAAAAHAAAAAAABADIAAAAGAAAAAAABADIAAAAFAAAAAAABADIAAAAEAAAAAAABADIAAAADAAAAAAAFADYAAAACAAAAAAAEADYAAAABAAAAAAABADIAAAADAAEAAAAFADcAAAADAAIAAAAFADgAAAAEAAEAAAABADMAAAAEAAIAAAABADQAAAAFAAEAAAABADMAAAAFAAIAAAAHADYAAAAGAAEAAAAAADcAAAAGAAIAAAAAADgAAAAHAAEAAAABADcAAAAHAAIAAAABADgAAAAIAAEAAAAHADMAAAAIAAIAAAAHADQAAAABAAIAAAAAADYAAAACAAIAAAAEADgAAAABAAEAAAAAADUAAAACAAEAAAAEADcAAAABAAMAAAAEADIAAAABAAQAAAAEADMAAAACAAMAAAAFADIAAAACAAQAAAAFADMAAAAHAAMAAAAFADIAAAAHAAQAAAAFADMAAAAIAAMAAAAGADIAAAAIAAQAAAAGADMAAAABAAUAAAAEADMAAAABAAYAAAAEADQAAAACAAUAAAAFADMAAAACAAYAAAAFADQAAAAHAAUAAAAFADMAAAAHAAYAAAAFADQAAAAIAAUAAAAGADMAAAAIAAYAAAAGADQAAAAGAAMAAAAFADIAAAAGAAQAAAAHADUAAAAFAAMAAAAFADIAAAAFAAQAAAADADUAAAAEAAMAAAAFADIAAAAEAAQAAAACADUAAAADAAMAAAAFADIAAAADAAQAAAAGADUAAAAGAAUAAAAHADUAAAAGAAYAAAAFADQAAAAFAAUAAAADADYAAAAFAAYAAAAFADQAAAAEAAUAAAACADYAAAAEAAYAAAAFADQAAAADAAUAAAAGADUAAAADAAYAAAAFADQAAAAAAAMAAAABADQAAAAAAAQAAAABADQAAAAAAAUAAAAHADYAAAAAAAYAAAABADQAAAAAAAcAAAAHADYAAAAAAAgAAAABADQAAAAJAAQAAAADADQAAAAJAAMAAAADADQAAAAJAAUAAAADADQAAAAJAAYAAAADADQAAAAJAAcAAAADADQAAAAJAAgAAAADADQAAAAEAAgAAAAEADUAAAAFAAgAAAAFADUAAAAIAAgAAAADADQAAAAHAAgAAAADADQAAAAGAAgAAAADADQAAAAIAAcAAAADADQAAAAHAAcAAAADADQAAAAGAAcAAAADADQAAAAFAAcAAAADADQAAAAEAAcAAAADADQAAAADAAcAAAADADQAAAACAAcAAAADADQAAAABAAcAAAADADQAAAABAAgAAAADADQAAAACAAgAAAADADQAAAADAAgAAAADADQAAAA=")
+tile_set = ExtResource("2_mbmd3")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=158774947]
+tile_map_data = PackedByteArray("AAAJAAgAAAAJADcAAAAAAAgAAAAIADcAAAA=")
+tile_set = ExtResource("2_mbmd3")
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1390907238]
+position = Vector2(72, 134)
+script = ExtResource("3_07v0e")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_oromar"
+posicion_destino = Vector2(16, 13)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1224134487]
+position = Vector2(88, 134)
+script = ExtResource("3_07v0e")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_oromar"
+posicion_destino = Vector2(16, 13)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1285776214]
+script = ExtResource("7_autay")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,4": {
+"flags": 1
+},
+"4,5": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,2": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"

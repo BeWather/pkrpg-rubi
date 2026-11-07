@@ -1,0 +1,14 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" path="res://escenas/avatares/npc_base.tscn" id="1_base"]
+[ext_resource type="Script" path="res://scripts/npc/npc_rival.gd" id="2_rival"]
+[ext_resource type="SpriteFrames" path="res://escenas/avatares/rival_aura.tres" id="3_frames"]
+
+[node name="Rival" instance=ExtResource("1_base")]
+editor_description = "Rival reutilizable: AURA para jugador chico, BRUNO para jugadora. Gráficos y anclaje automáticos; en_bici selecciona la bicicleta. El mapa define posición, orientación y evento."
+script = ExtResource("2_rival")
+selec_frames = ExtResource("3_frames")
+
+[node name="AnimatedSprite2D" parent="." index="0"]
+sprite_frames = ExtResource("3_frames")
+offset = Vector2(-8, -22)

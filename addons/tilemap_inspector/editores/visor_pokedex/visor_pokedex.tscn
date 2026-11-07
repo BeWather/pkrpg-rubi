@@ -1,0 +1,159 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://addons/tilemap_inspector/editores/visor_pokedex/visor_pokedex.gd" id="1_visor"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fondo"]
+bg_color = Color(0.09, 0.1, 0.13, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.12, 0.135, 0.175, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="VisorPokedex" type="Window"]
+title = "Pokédex y encuentros"
+size = Vector2i(1400, 860)
+visible = false
+wrap_controls = true
+min_size = Vector2i(1100, 620)
+script = ExtResource("1_visor")
+
+[node name="Fondo" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_fondo")
+
+[node name="Margen" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Raiz" type="VBoxContainer" parent="Margen"]
+layout_mode = 2
+
+[node name="Barra" type="HBoxContainer" parent="Margen/Raiz"]
+layout_mode = 2
+
+[node name="SelectorDex" type="OptionButton" parent="Margen/Raiz/Barra"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Qué POKéDEX listar y en qué orden."
+selected = 0
+item_count = 2
+popup/item_0/text = "POKéDEX de HOENN"
+popup/item_0/id = 0
+popup/item_1/text = "POKéDEX Nacional"
+popup/item_1/id = 1
+
+[node name="SelectorTabla" type="OptionButton" parent="Margen/Raiz/Barra"]
+unique_name_in_owner = true
+layout_mode = 2
+tooltip_text = "Tabla de encuentros. La alternativa se superpone mapa a mapa a la original, como en el juego (administrador_mapa.tscn la tiene activa)."
+selected = 1
+item_count = 2
+popup/item_0/text = "Tabla original"
+popup/item_0/id = 0
+popup/item_1/text = "Tabla alternativa"
+popup/item_1/id = 1
+
+[node name="SelectorFiltro" type="OptionButton" parent="Margen/Raiz/Barra"]
+unique_name_in_owner = true
+layout_mode = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "Todas"
+popup/item_0/id = 0
+popup/item_1/text = "Con encuentro"
+popup/item_1/id = 1
+popup/item_2/text = "Sin encuentro"
+popup/item_2/id = 2
+
+[node name="Busqueda" type="LineEdit" parent="Margen/Raiz/Barra"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Buscar por nombre, número o lugar…"
+clear_button_enabled = true
+
+[node name="Recargar" type="Button" parent="Margen/Raiz/Barra"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Recargar"
+
+[node name="Division" type="HSplitContainer" parent="Margen/Raiz"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Lista" type="Tree" parent="Margen/Raiz/Division"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.4
+hide_root = true
+select_mode = 1
+
+[node name="PanelDetalle" type="PanelContainer" parent="Margen/Raiz/Division"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+
+[node name="Contenido" type="VBoxContainer" parent="Margen/Raiz/Division/PanelDetalle"]
+layout_mode = 2
+
+[node name="Cabecera" type="HBoxContainer" parent="Margen/Raiz/Division/PanelDetalle/Contenido"]
+layout_mode = 2
+
+[node name="Icono" type="TextureRect" parent="Margen/Raiz/Division/PanelDetalle/Contenido/Cabecera"]
+unique_name_in_owner = true
+texture_filter = 1
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Textos" type="VBoxContainer" parent="Margen/Raiz/Division/PanelDetalle/Contenido/Cabecera"]
+layout_mode = 2
+size_flags_horizontal = 3
+alignment = 1
+
+[node name="Nombre" type="Label" parent="Margen/Raiz/Division/PanelDetalle/Contenido/Cabecera/Textos"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+
+[node name="Numeros" type="Label" parent="Margen/Raiz/Division/PanelDetalle/Contenido/Cabecera/Textos"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.7)
+layout_mode = 2
+
+[node name="Detalle" type="Tree" parent="Margen/Raiz/Division/PanelDetalle/Contenido"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+hide_root = true
+select_mode = 1
+
+[node name="Estado" type="Label" parent="Margen/Raiz"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.7)
+layout_mode = 2
+
+[node name="TemporizadorIconos" type="Timer" parent="."]
+unique_name_in_owner = true
+wait_time = 0.27
+autostart = true

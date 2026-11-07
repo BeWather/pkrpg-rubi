@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bjegqe0jg202t"
+path="res://.godot/imported/PRSFX- Hyper Beam.wav-9040688caffebe4311570662c0ede548.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Hyper Beam.wav"
+dest_files=["res://.godot/imported/PRSFX- Hyper Beam.wav-9040688caffebe4311570662c0ede548.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

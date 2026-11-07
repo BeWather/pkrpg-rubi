@@ -1,0 +1,193 @@
+[gd_scene format=4 uid="uid://dcrd1rftmef0e"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_ae281"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_ygg6v"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_vmk0u"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="11_elrdp"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="cb_npc_base"]
+[ext_resource type="SpriteFrames" uid="uid://c6rr70f3rkwdf" path="res://escenas/avatares/npc_023.tres" id="cb_npc_023"]
+[ext_resource type="PackedScene" path="res://escenas/eventos/disparador_evento_por_tiles.tscn" id="cb_disparador"]
+[ext_resource type="Script" uid="uid://d2lhjiw1fq8ox" path="res://scripts/eventos/ruta_110/evento_camino_bici.gd" id="cb_evento"]
+
+[node name="EntradaCaminoBiciSur" type="Node2D" unique_id=759417394]
+script = ExtResource("1_ae281")
+nombre_interno = "ruta_110_entrada_sur"
+seccion = "RUTA_110"
+esInterior = true
+sin_correr = true
+mapa_exterior_asociado = "RUTA_110"
+musica_mapa = "CIUDAD_PORTUAL"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=532478234]
+tile_map_data = PackedByteArray("AAAAAAAAAAAQACkAAAAAAAEAAAAQACoAAAABAAAAAAAQACkAAAABAAEAAAAQACoAAAACAAAAAAAQACkAAAACAAEAAAAQACoAAAADAAAAAAAQACkAAAADAAEAAAAQACoAAAAEAAAAAAAQACkAAAAEAAEAAAAQACoAAAAFAAAAAAAQACkAAAAFAAEAAAAUACsAAAAGAAAAAAAVACkAAAAGAAEAAAAVACoAAAAHAAAAAAAQACkAAAAHAAEAAAAQACoAAAAIAAAAAAATACkAAAAIAAEAAAATACoAAAAJAAAAAAAQACkAAAAJAAEAAAAQACoAAAAKAAAAAAAQACkAAAAKAAEAAAAUACsAAAALAAAAAAAQACkAAAALAAEAAAAQACoAAAAMAAAAAAAQACkAAAAMAAEAAAAQACoAAAANAAAAAAAQACkAAAANAAEAAAAQACoAAAAAAAIAAAAQACcAAAABAAIAAAAQACYAAAACAAIAAAAQACYAAAADAAIAAAAQACYAAAAEAAIAAAAQACYAAAAFAAIAAAAQAC0AAAAGAAIAAAAQACYAAAAHAAIAAAAQACYAAAAIAAIAAAAQACYAAAAJAAIAAAAQACYAAAAKAAIAAAARAC0AAAALAAIAAAAQACcAAAAMAAIAAAAQACYAAAAAAAMAAAAQACgAAAAAAAQAAAAQACgAAAAAAAUAAAAUACQAAAABAAUAAAAWABoAAAACAAUAAAAXABoAAAADAAUAAAAQACUAAAAEAAUAAAAQACUAAAAFAAUAAAAQACUAAAAHAAQAAAASACMAAAAHAAUAAAASACQAAAAIAAQAAAARACMAAAAIAAUAAAARACQAAAAGAAQAAAARACMAAAAGAAUAAAARACQAAAAJAAQAAAASACMAAAAJAAUAAAASACQAAAAKAAUAAAAQACUAAAALAAUAAAAQACUAAAAMAAUAAAAWABoAAAANAAUAAAAXABoAAAAOAAUAAAAUACYAAAAFAAQAAAAQACYAAAAFAAMAAAAQAC4AAAAEAAMAAAAQACUAAAADAAMAAAAQACUAAAACAAMAAAAQACUAAAABAAMAAAAQACUAAAABAAQAAAAQACUAAAACAAQAAAAQACUAAAADAAQAAAAQACUAAAAEAAQAAAAQACUAAAAKAAQAAAAQACYAAAALAAQAAAARACcAAAAMAAQAAAAQACUAAAANAAQAAAAQACUAAAAOAAQAAAAQACUAAAAOAAMAAAAQACUAAAANAAMAAAAQACUAAAAMAAMAAAAQACUAAAALAAMAAAAQACgAAAAKAAMAAAARAC4AAAAOAAIAAAAQACYAAAANAAIAAAAQACYAAAAOAAAAAAAQACkAAAAOAAEAAAAQACoAAAAHAAMAAAAQACwAAAAIAAMAAAARACwAAAAJAAMAAAARACwAAAAGAAMAAAARACwAAAA=")
+tile_set = ExtResource("2_ygg6v")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=334918610]
+tile_map_data = PackedByteArray("AAAAAAQAAAAVACUAAAAOAAQAAAAVACUAAAAGAAQAAAAWACQAAAAHAAQAAAAXACQAAAAIAAQAAAAWACQAAAAJAAQAAAAXACQAAAAHAAIAAAAQACsAAAAIAAIAAAARACsAAAAJAAIAAAARACsAAAAGAAIAAAARACsAAAA=")
+tile_set = ExtResource("2_ygg6v")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="HaciaCamino" type="Sprite2D" parent="." unique_id=844634725]
+position = Vector2(24, 86)
+script = ExtResource("3_vmk0u")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_110"
+posicion_destino = Vector2(16, 88)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="HaciaCamino2" type="Sprite2D" parent="." unique_id=1019377274]
+position = Vector2(40, 86)
+script = ExtResource("3_vmk0u")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_110"
+posicion_destino = Vector2(16, 88)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1077642025]
+
+[node name="NPCs" type="Node2D" parent="." unique_id=491424303]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Guarda" parent="NPCs" unique_id=1320004001 instance=ExtResource("cb_npc_base")]
+editor_description = "pokeruby Route110_SeasideCyclingRoadSouthEntrance objeto 1 (7,2) MART_EMPLOYEE FACE_DOWN (lock/faceplayer/msgbox)"
+position = Vector2(120, 46)
+id_texto = "RUTA_110_BICI_CONTROLADOR"
+tipo_movimiento = 8
+selec_frames = ExtResource("cb_npc_023")
+coord = Vector2i(7, 2)
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1320006000]
+
+[node name="EventoCaminoBici" type="Node2D" parent="Eventos" unique_id=1320006001]
+editor_description = "pokeruby Route110_SeasideCyclingRoadSouthEntrance: coord_events (7,4) VAR_TEMP_1 = 0 y (5,4) VAR_TEMP_1 = 1 (FLAG_SYS_CYCLING_ROAD). Sin estado del reto."
+script = ExtResource("cb_evento")
+
+[node name="Cruce" parent="Eventos/EventoCaminoBici" unique_id=1320006002 instance=ExtResource("cb_disparador")]
+editor_description = "coord_event (7,4) de Rubí, VAR_TEMP_1 = 0: delante del guarda, de izquierda a derecha."
+id_evento = &"cruce"
+zonas_tiles = Array[Rect2i]([Rect2i(7, 4, 1, 1)])
+
+[node name="Salida" parent="Eventos/EventoCaminoBici" unique_id=1320006003 instance=ExtResource("cb_disparador")]
+editor_description = "coord_event (5,4) de Rubí, VAR_TEMP_1 = 1: de derecha a izquierda."
+id_evento = &"salida"
+zonas_tiles = Array[Rect2i]([Rect2i(5, 4, 1, 1)])
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1773046390]
+script = ExtResource("11_elrdp")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,2": {
+"flags": 1
+},
+"10,3": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"14,1": {
+"flags": 1
+},
+"14,5": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,2": {
+"flags": 1
+},
+"5,3": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,3": {
+"flags": 1
+},
+"6,5": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,3": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,3": {
+"flags": 1
+},
+"8,5": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,3": {
+"flags": 1
+},
+"9,5": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="HaciaPuente" type="Sprite2D" parent="." unique_id=713266184]
+position = Vector2(200, 86)
+script = ExtResource("3_vmk0u")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_110"
+posicion_destino = Vector2(19, 88)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="HaciaPuente2" type="Sprite2D" parent="." unique_id=897589849]
+position = Vector2(216, 86)
+script = ExtResource("3_vmk0u")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_110"
+posicion_destino = Vector2(19, 88)
+direccion = Vector2(0, 1)
+dar_paso = true

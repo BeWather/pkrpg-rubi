@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgfiwb3i2p26i"
+path="res://.godot/imported/1-50 Cycling.mp3-bee4603f0255cf43af4d8eb76237b228.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-50 Cycling.mp3"
+dest_files=["res://.godot/imported/1-50 Cycling.mp3-bee4603f0255cf43af4d8eb76237b228.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxr7fucwlbnaw"
+path="res://.godot/imported/1-31 Pokémon Trainer's School.mp3-6cf749d84460290ae165c57e9110c366.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-31 Pokémon Trainer's School.mp3"
+dest_files=["res://.godot/imported/1-31 Pokémon Trainer's School.mp3-6cf749d84460290ae165c57e9110c366.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dg1i4iy6j4dow"
+path="res://.godot/imported/PRSFX- Brick Break1.wav-e14351e6c68d6fc59b26c0b0d4a58c8f.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Brick Break1.wav"
+dest_files=["res://.godot/imported/PRSFX- Brick Break1.wav-e14351e6c68d6fc59b26c0b0d4a58c8f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

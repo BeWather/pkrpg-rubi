@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://basjpxs6stk5v"
+path="res://.godot/imported/1-77. Mt. Pyre ~ Shoal Cave.mp3-cc92cb02842c9d7cb5f24b19f8ceb706.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-77. Mt. Pyre ~ Shoal Cave.mp3"
+dest_files=["res://.godot/imported/1-77. Mt. Pyre ~ Shoal Cave.mp3-cc92cb02842c9d7cb5f24b19f8ceb706.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

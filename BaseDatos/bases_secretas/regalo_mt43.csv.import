@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://c3csvyh3aqmw4"
+
+[deps]
+
+files=["res://BaseDatos/bases_secretas/regalo_mt43.es.translation", "res://BaseDatos/bases_secretas/regalo_mt43.en.translation"]
+
+source_file="res://BaseDatos/bases_secretas/regalo_mt43.csv"
+dest_files=["res://BaseDatos/bases_secretas/regalo_mt43.es.translation", "res://BaseDatos/bases_secretas/regalo_mt43.en.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

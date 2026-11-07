@@ -1,0 +1,111 @@
+{
+	"_comentario": "Concursos de Rubí. umbrales_votacion: votación del público en la sala (data/scripts/contest_hall.inc, LinkContestRoom1_EventScript_1A555A..1A5674): con R1 > umbral[k] aplauden k+1 espectadores, por nivel (0 NORMAL ... 3 EXPERTO). ganadores_por_defecto: gDefaultContestWinners (src/contest_2.c), regenerado por herramientas/importar_concurso_datos.py.",
+	"umbrales_votacion": [
+		[
+			10,
+			20,
+			30,
+			40,
+			50,
+			60,
+			70,
+			80
+		],
+		[
+			90,
+			110,
+			130,
+			150,
+			170,
+			190,
+			210,
+			230
+		],
+		[
+			170,
+			200,
+			230,
+			260,
+			290,
+			320,
+			350,
+			380
+		],
+		[
+			320,
+			360,
+			400,
+			440,
+			480,
+			520,
+			560,
+			600
+		]
+	],
+	"ganadores_por_defecto": [
+		{
+			"personalidad": 0,
+			"ot_id": 65535,
+			"especie": "TAILLOW",
+			"categoria": 3,
+			"mote": "TAILTA",
+			"entrenador": "JUAN"
+		},
+		{
+			"personalidad": 0,
+			"ot_id": 65535,
+			"especie": "BRELOOM",
+			"categoria": 1,
+			"mote": "BRELO",
+			"entrenador": "LISA"
+		},
+		{
+			"personalidad": 0,
+			"ot_id": 65535,
+			"especie": "PELIPPER",
+			"categoria": 0,
+			"mote": "PELEP",
+			"entrenador": "TAIS"
+		},
+		{
+			"personalidad": 0,
+			"ot_id": 65535,
+			"especie": "PELIPPER",
+			"categoria": 0,
+			"mote": "PELEP",
+			"entrenador": "TAIS"
+		},
+		{
+			"personalidad": 0,
+			"ot_id": 65535,
+			"especie": "PELIPPER",
+			"categoria": 0,
+			"mote": "PELEP",
+			"entrenador": "TAIS"
+		},
+		{
+			"personalidad": 0,
+			"ot_id": 65535,
+			"especie": "DELCATTY",
+			"categoria": 3,
+			"mote": "KITSY",
+			"entrenador": "OTILIO"
+		},
+		{
+			"personalidad": 0,
+			"ot_id": 65535,
+			"especie": "GULPIN",
+			"categoria": 2,
+			"mote": "GULPS",
+			"entrenador": "MENCI"
+		},
+		{
+			"personalidad": 0,
+			"ot_id": 65535,
+			"especie": "LOUDRED",
+			"categoria": 4,
+			"mote": "LOUDED",
+			"entrenador": "BASILIO"
+		}
+	]
+}

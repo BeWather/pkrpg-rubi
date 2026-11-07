@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cr8m1vw6yx9pb"]
+
+[ext_resource type="Script" path="res://addons/tilemap_inspector/editores/editor_temas_musicales/editor_temas_musicales.gd" id="1_etm"]
+
+[node name="EditorTemasMusiacales" type="Window"]
+script = ExtResource("1_etm")

@@ -1,0 +1,39 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dp80g3m25ysut"]
+
+[ext_resource type="Texture2D" uid="uid://cgxw0a6jcwmlr" path="res://graficos/batalla/batalla_p2_4f.png" id="1_nmslx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gb1ic"]
+atlas = ExtResource("1_nmslx")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjvlb"]
+atlas = ExtResource("1_nmslx")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_btcuf"]
+atlas = ExtResource("1_nmslx")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q5tow"]
+atlas = ExtResource("1_nmslx")
+region = Rect2(192, 0, 64, 64)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gb1ic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjvlb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btcuf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q5tow")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 4.0
+}]

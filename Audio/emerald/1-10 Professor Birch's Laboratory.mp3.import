@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cwpm7sjkueoya"
+path="res://.godot/imported/1-10 Professor Birch's Laboratory.mp3-a0aab8f6d095d79216f6cf5a81d807d4.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-10 Professor Birch's Laboratory.mp3"
+dest_files=["res://.godot/imported/1-10 Professor Birch's Laboratory.mp3-a0aab8f6d095d79216f6cf5a81d807d4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

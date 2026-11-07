@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://loshmq35elcn"
+path="res://.godot/imported/1-04. Welcome To The World of Pokemon! ~ Route 123.mp3-c343cbdaef664488bab2d75c166bfe00.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-04. Welcome To The World of Pokemon! ~ Route 123.mp3"
+dest_files=["res://.godot/imported/1-04. Welcome To The World of Pokemon! ~ Route 123.mp3-c343cbdaef664488bab2d75c166bfe00.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

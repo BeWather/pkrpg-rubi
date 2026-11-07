@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0va0pe5h1grd"
+path="res://.godot/imported/1-70. Route 120 - 132.mp3-1c1bb2097ea3b218039af7ca8590b130.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-70. Route 120 - 132.mp3"
+dest_files=["res://.godot/imported/1-70. Route 120 - 132.mp3-1c1bb2097ea3b218039af7ca8590b130.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

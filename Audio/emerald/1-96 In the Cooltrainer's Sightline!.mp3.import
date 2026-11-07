@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://coqspwciy40tt"
+path="res://.godot/imported/1-96 In the Cooltrainer's Sightline!.mp3-0a3a6c8c4123aca3f3ff18d39d7f0d40.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-96 In the Cooltrainer's Sightline!.mp3"
+dest_files=["res://.godot/imported/1-96 In the Cooltrainer's Sightline!.mp3-0a3a6c8c4123aca3f3ff18d39d7f0d40.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

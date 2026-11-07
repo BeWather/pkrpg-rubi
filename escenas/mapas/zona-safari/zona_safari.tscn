@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://gnq5qs0u5co3"]
+
+[ext_resource type="PackedScene" uid="uid://clgwy36kkcmaq" path="res://escenas/mapas/zona-safari/zona_safari_1.tscn" id="1_shwhe"]
+[ext_resource type="PackedScene" uid="uid://b4baf4mb0a8ni" path="res://escenas/mapas/zona-safari/zona_safari_2.tscn" id="2_jcf8s"]
+[ext_resource type="PackedScene" uid="uid://bxi4hac5ew6ld" path="res://escenas/mapas/zona-safari/zona_safari_3.tscn" id="3_bo0p8"]
+[ext_resource type="PackedScene" uid="uid://br5jmm6r7d2ta" path="res://escenas/mapas/zona-safari/zona_safari_4.tscn" id="4_jgkrh"]
+
+[node name="ZonaSafari" type="Node2D" unique_id=73612168]
+
+[node name="ZonaSafari1" parent="." unique_id=2096706793 instance=ExtResource("1_shwhe")]
+
+[node name="ZonaSafari2" parent="." unique_id=1221282862 instance=ExtResource("2_jcf8s")]
+position = Vector2(640, 0)
+
+[node name="ZonaSafari3" parent="." unique_id=1730676914 instance=ExtResource("3_bo0p8")]
+position = Vector2(0, 640)
+
+[node name="ZonaSafari4" parent="." unique_id=1699727443 instance=ExtResource("4_jgkrh")]
+position = Vector2(640, 640)

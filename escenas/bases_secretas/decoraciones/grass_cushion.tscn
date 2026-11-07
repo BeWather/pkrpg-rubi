@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Texture2D" path="res://graficos/bases_secretas/decoraciones/grass_cushion.png" id="1"]
+
+[node name="grass_cushion" type="Node2D"]
+texture_filter = 1
+metadata/decoracion_id = 108
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("1")
+offset = Vector2(0, -8)

@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://clawtareklbv0"]
+
+[ext_resource type="Script" uid="uid://dr18uwgq73byt" path="res://graficos/emisor.gd" id="1_077tx"]
+[ext_resource type="Texture2D" uid="uid://ccp0bbv8a7c3y" path="res://graficos/partc_lineas.png" id="1_ca25d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_077tx"]
+atlas = ExtResource("1_ca25d")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pygl"]
+atlas = ExtResource("1_ca25d")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5odsy"]
+atlas = ExtResource("1_ca25d")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sx462"]
+atlas = ExtResource("1_ca25d")
+region = Rect2(24, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afo2t"]
+atlas = ExtResource("1_ca25d")
+region = Rect2(0, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mdg3r"]
+atlas = ExtResource("1_ca25d")
+region = Rect2(8, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_doewv"]
+atlas = ExtResource("1_ca25d")
+region = Rect2(16, 8, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x6ym8"]
+atlas = ExtResource("1_ca25d")
+region = Rect2(24, 8, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1q4cq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_077tx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pygl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5odsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sx462")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afo2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mdg3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_doewv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x6ym8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 12.0
+}]
+
+[node name="emisor" type="Node2D" unique_id=300295879]
+script = ExtResource("1_077tx")
+
+[node name="partic" type="AnimatedSprite2D" parent="." unique_id=122441603]
+sprite_frames = SubResource("SpriteFrames_1q4cq")
+frame_progress = 0.7050213
+centered = false
+offset = Vector2(-4, -4)

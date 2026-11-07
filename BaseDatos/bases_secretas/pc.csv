@@ -1,0 +1,50 @@
+id,es,en
+BASES_PC_INICIO,{nombre} encendió el PC.,{nombre} booted up the PC.
+BASES_PC_PREGUNTA,¿Qué quieres hacer?,What would you like to do?
+BASES_PC_DECORACION,DECORACIÓN,DECORATION
+BASES_PC_RECOGER,RECOGER,PACK UP
+BASES_PC_SALIR,SALIR,CANCEL
+BASES_PC_DECORAR,DECORAR,DECORATE
+BASES_PC_GUARDAR,GUARDAR,PUT AWAY
+BASES_PC_TIRAR,TIRAR,TOSS
+BASES_PC_SALIR_DECORACION,SALIR,EXIT
+BASES_PC_AYUDA_DECORAR,Escoger un objeto para decorar.,Put out the selected decoration item.
+BASES_PC_AYUDA_GUARDAR,Guardar el adorno escogido en el PC.,Store the chosen decoration in the PC.
+BASES_PC_AYUDA_TIRAR,Eliminar los adornos no deseados.,Throw away unwanted decorations.
+BASES_PC_AYUDA_SALIR,"Volver al menú
+anterior.","Go back to the
+previous menu."
+BASES_EDITOR_VACIO,No hay objetos para decorar.,There are no decorations.
+BASES_CAT_MESAS,MESA,DESK
+BASES_CAT_SILLAS,SILLA,CHAIR
+BASES_CAT_PLANTAS,PLANTA,PLANT
+BASES_CAT_ADORNOS,ADORNO,ORNAMENT
+BASES_CAT_ALFOMBRAS,TAPETE,MAT
+BASES_CAT_POSTERES,PÓSTER,POSTER
+BASES_CAT_MUNECOS,MUÑECO,DOLL
+BASES_CAT_COJINES,COJÍN,CUSHION
+BASES_EDITOR_COLOCAR,¿Lo colocas aquí?,Place it here?
+BASES_EDITOR_INVALIDO,Aquí no se puede colocar.,It can't be placed here.
+BASES_EDITOR_CANCELAR,¿Quieres dejar de decorar?,Cancel decorating?
+BASES_EDITOR_EN_USO,Ya se está utilizando.,This is in use already.
+BASES_EDITOR_LIMITE,"No se pueden colocar más adornos.
+La cantidad máxima permitida es {cantidad}.","No more decorations can be placed.
+The most that can be placed is {cantidad}."
+BASES_EDITOR_APOYO,"Aquí no se puede colocar esto.
+Se debe colocar sobre una MESA, etc.","This can't be placed here.
+It must be on a DESK, etc."
+BASES_EDITOR_HABITACION,"Este adorno no se puede colocar
+en tu habitación.","This decoration can't be placed in
+your own room."
+BASES_TIRAR_EN_USO,"Este adorno se está usando.
+No se puede tirar.","This decoration is in use.
+It can't be thrown away."
+BASES_TIRAR_CONFIRMAR,"¿Seguro que quieres 
+tirar {cantidad}?","This {cantidad} will be discarded.
+Is that okay?"
+BASES_TIRAR_FIN,Has tirado el adorno.,The decoration item was thrown away.
+BASES_GUARDAR_CANCELAR,¿Quieres dejar de guardar adornos?,Stop putting away decorations?
+BASES_GUARDAR_NADA,Aquí no hay adornos.,There is no decoration item here.
+BASES_GUARDAR_CONFIRMAR,¿Vuelves a guardarlo en el PC?,Return this decoration to the PC?
+BASES_GUARDAR_FIN,Se ha devuelto el adorno al PC.,The decoration was returned to the PC.
+BASES_GUARDAR_VACIO,No se están usando adornos.,There are no decorations in use.

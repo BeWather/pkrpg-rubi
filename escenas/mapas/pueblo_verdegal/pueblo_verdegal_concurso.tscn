@@ -1,0 +1,762 @@
+[gd_scene format=4 uid="uid://f4cag1ciwtnh"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_jsiuw"]
+[ext_resource type="TileSet" uid="uid://cihs7q0xi0yev" path="res://escenas/tileset_interior_edificios_2.tres" id="2_p4035"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_78vmm"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="4_s033v"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="5_mgt6g"]
+[ext_resource type="SpriteFrames" uid="uid://c3lyn7qbe2ghk" path="res://escenas/avatares/npc_025.tres" id="6_rdt1n"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="25_ktyoo"]
+[ext_resource type="Script" uid="uid://b3r00pidr48xb" path="res://scripts/npc/npc_regalo_objeto.gd" id="30_regalo"]
+[ext_resource type="Script" uid="uid://c073t8te1ol87" path="res://scripts/npc/npc_viejo_licuabayas.gd" id="31_viejo"]
+[ext_resource type="SpriteFrames" uid="uid://bms66bpk8w77d" path="res://escenas/avatares/npc_004.tres" id="32_npc004"]
+[ext_resource type="SpriteFrames" uid="uid://dsh3jot1vcx8" path="res://escenas/avatares/npc_005.tres" id="33_npc005"]
+[ext_resource type="SpriteFrames" uid="uid://bvhd4qu3is3pt" path="res://escenas/avatares/npc_010.tres" id="34_npc010"]
+[ext_resource type="SpriteFrames" uid="uid://cugc1qj5nqao6" path="res://escenas/avatares/npc_011.tres" id="35_npc011"]
+[ext_resource type="SpriteFrames" uid="uid://cfy52d08b3upp" path="res://escenas/avatares/npc_013.tres" id="36_npc013"]
+[ext_resource type="SpriteFrames" uid="uid://b6sswtsk5qcq" path="res://escenas/avatares/npc_020.tres" id="37_npc020"]
+[ext_resource type="SpriteFrames" uid="uid://buukulhhkfyjc" path="res://escenas/avatares/npc_050.tres" id="38_npc050"]
+[ext_resource type="Script" uid="uid://bxiu0k0hceiow" path="res://scripts/npc/npc_recepcionista_concurso.gd" id="99_recepcion"]
+[ext_resource type="Script" uid="uid://8uymdhpcd3qe" path="res://scripts/eventos/cartel_evento.gd" id="lic_cartel"]
+[ext_resource type="Script" uid="uid://b1v63qpd80bps" path="res://scripts/eventos/vestibulo_concurso/evento_maquina_licuabayas.gd" id="lic_evento"]
+[ext_resource type="Script" uid="uid://bllrxdqvoad7t" path="res://scripts/npc/npc_reportero_concurso.gd" id="tv_reportero_concurso"]
+
+[node name="Concurso" type="Node2D" unique_id=759417394]
+script = ExtResource("1_jsiuw")
+nombre_interno = "PUEBLO_VERDEGAL_CONCURSO"
+seccion = "PUEBLO_VERDEGAL"
+esInterior = true
+mapa_exterior_asociado = "PUEBLO_VERDEGAL"
+solo_caminar = true
+musica_mapa = "CONCURSO_VESTIBULO"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=532478234]
+tile_map_data = PackedByteArray("AAAAAAAAAAATAAsAAAAAAAEAAAATAAwAAAABAAAAAAAUAAsAAAABAAEAAAAUAAwAAAACAAAAAAAVAAsAAAACAAEAAAAVAAwAAAADAAEAAAAQABkAAAADAAIAAAAQABoAAAADAAMAAAAQABsAAAAEAAEAAAAVAAYAAAAEAAIAAAARAAQAAAAEAAMAAAARAAwAAAAFAAEAAAAWAAoAAAAFAAIAAAARAAQAAAAFAAMAAAASABsAAAAGAAEAAAAVAAYAAAAGAAIAAAARAAQAAAAGAAMAAAATABsAAAAHAAEAAAAUABkAAAAHAAIAAAAUABoAAAAHAAMAAAAUABsAAAADAAQAAAAWABgAAAADAAAAAAASABkAAAAHAAAAAAASABkAAAAGAAAAAAATABkAAAAEAAAAAAATABkAAAAJAAAAAAASABkAAAAKAAAAAAASABkAAAALAAAAAAASABkAAAAMAAAAAAASABkAAAANAAAAAAASABkAAAAOAAAAAAASABkAAAAIAAAAAAAVAAkAAAAIAAIAAAAVAAoAAAAIAAEAAAAKAAIAAAAJAAEAAAAVAAYAAAAKAAEAAAAVAAYAAAALAAEAAAARABkAAAAMAAEAAAAVAAYAAAANAAEAAAAUAAoAAAAOAAEAAAAVAAYAAAAFAAAAAAAWAAkAAAAKAAMAAAAVABsAAAAMAAUAAAAVABsAAAAOAAUAAAARAAcAAAAOAAYAAAARAAgAAAAOAAMAAAARAAcAAAAOAAQAAAARAAgAAAAOAAIAAAASAAQAAAANAAIAAAARAAQAAAAMAAIAAAARAAQAAAALAAIAAAARAAQAAAAKAAIAAAARAAQAAAAJAAIAAAARAAQAAAAFAAYAAAAUAAAAAAAGAAYAAAAVAAAAAAAEAAQAAAAXAAsAAAAFAAQAAAAXAAsAAAAGAAQAAAAXAAsAAAAHAAQAAAAXAAsAAAAIAAMAAAAWAAwAAAAIAAQAAAAXAAwAAAACAAIAAAARAAQAAAABAAIAAAARAAQAAAAAAAIAAAAQAAQAAAAAAAMAAAAQAAUAAAAAAAQAAAAQAAUAAAAAAAUAAAAQAAUAAAAAAAYAAAAQAAUAAAACAAMAAAAQAAsAAAABAAMAAAAQAAsAAAABAAQAAAAQAAsAAAACAAQAAAAQAAsAAAABAAUAAAAQAAsAAAABAAYAAAAQAAsAAAACAAYAAAAQAAsAAAADAAYAAAAQAAsAAAAEAAYAAAAQAAsAAAAEAAUAAAAQAAsAAAADAAUAAAAQAAsAAAACAAUAAAAQAAsAAAAFAAUAAAAQAAsAAAAGAAUAAAAQAAsAAAAHAAUAAAAQAAsAAAAIAAUAAAAQAAsAAAAJAAUAAAAQAAsAAAAKAAUAAAAQAAsAAAALAAUAAAAQAAsAAAAHAAYAAAAQAAsAAAAIAAYAAAAQAAsAAAAJAAYAAAAQAAsAAAAKAAYAAAAQAAsAAAALAAYAAAAQAAsAAAAMAAYAAAAQAAsAAAANAAYAAAAQAAsAAAANAAUAAAAQAAsAAAANAAQAAAAQAAsAAAANAAMAAAAQAAsAAAAMAAMAAAAQAAsAAAALAAMAAAAQAAsAAAAJAAMAAAAQAAsAAAAJAAQAAAAQAAsAAAAKAAQAAAAQAAsAAAALAAQAAAAQAAsAAAAMAAQAAAAQAAsAAAAAAPr/AAAQAAUAAAAAAPn/AAAQAAUAAAAAAPj/AAAQAAUAAAAAAPf/AAAQAAUAAAAAAPb/AAAQAAUAAAAAAPX/AAAQAAUAAAAAAPT/AAAQAAUAAAAAAPP/AAAQAAUAAAAAAPL/AAAQAAUAAAAAAPH/AAAQAAUAAAAAAPD/AAAQAAUAAAAAAO//AAAQAAUAAAAAAO7/AAAQAAUAAAAAAO3/AAAQAAQAAAABAO3/AAARAAQAAAACAO3/AAARAAQAAAADAO3/AAARAAQAAAAEAO3/AAARAAQAAAAFAO3/AAARAAQAAAAGAO3/AAARAAQAAAAHAO3/AAARAAQAAAAIAO3/AAARAAQAAAAJAO3/AAARAAQAAAAKAO3/AAARAAQAAAALAO3/AAARAAQAAAAMAO3/AAARAAQAAAANAO3/AAARAAQAAAAOAO3/AAARAAQAAAAPAO3/AAARAAQAAAAQAO3/AAARAAQAAAARAO3/AAARAAQAAAASAO3/AAARAAQAAAATAO3/AAARAAQAAAAUAO3/AAASAAQAAAAUAO7/AAASAAUAAAAUAO//AAASAAUAAAAUAPD/AAASAAUAAAAUAPH/AAASAAUAAAAUAPL/AAASAAUAAAAUAPP/AAASAAUAAAAUAPT/AAASAAUAAAAUAPX/AAASAAUAAAAUAPr/AAASAAUAAAAUAPn/AAASAAUAAAAUAPj/AAASAAUAAAAUAPf/AAASAAUAAAAUAPb/AAASAAUAAAATAPr/AAAQAAsAAAASAPr/AAASAAoAAAARAPr/AAAQAAsAAAAQAPr/AAAQAAsAAAAPAPr/AAASAAoAAAAOAPr/AAAQAAsAAAANAPr/AAAQAAsAAAAMAPr/AAAQAAsAAAALAPr/AAAVAAAAAAAKAPr/AAAUAAAAAAAJAPr/AAAQAAsAAAAIAPr/AAAQAAsAAAAHAPr/AAAQAAsAAAAGAPr/AAAQAAsAAAAFAPr/AAASAAoAAAAEAPr/AAAQAAsAAAADAPr/AAAQAAsAAAACAPr/AAASAAoAAAABAPr/AAAQAAsAAAABAO7/AAAQAAsAAAABAO//AAAQAAsAAAABAPD/AAAQAAsAAAABAPH/AAAQAAsAAAABAPL/AAAQAAsAAAABAPP/AAAQAAsAAAABAPT/AAAQAAsAAAABAPX/AAAQAAsAAAABAPb/AAAQAAsAAAABAPf/AAAQAAsAAAABAPj/AAAQAAsAAAABAPn/AAAQAAsAAAACAO7/AAAQAAsAAAACAO//AAAQAAsAAAACAPD/AAAQAAsAAAACAPH/AAAQAAsAAAACAPL/AAAQAAsAAAACAPP/AAAQAAsAAAACAPT/AAAQAAsAAAACAPX/AAAQAAsAAAACAPb/AAAQAAsAAAACAPf/AAAQAAsAAAACAPj/AAAQAAsAAAACAPn/AAAQAAsAAAASAO7/AAAWAAwAAAASAO//AAAWAAwAAAASAPD/AAAWAAwAAAASAPH/AAAWAAwAAAASAPL/AAAWAAwAAAASAPP/AAAWAAwAAAASAPT/AAAWAAwAAAASAPX/AAAWAAwAAAASAPb/AAAWAAwAAAASAPf/AAAWAAwAAAASAPj/AAAXAAwAAAASAPn/AAAQAAsAAAATAO7/AAAQAAsAAAATAO//AAAQAAsAAAATAPD/AAAQAAsAAAATAPH/AAAQAAsAAAATAPL/AAAQAAsAAAATAPP/AAAQAAsAAAATAPT/AAAQAAsAAAATAPX/AAAQAAsAAAATAPb/AAAQAAsAAAATAPf/AAAQAAsAAAATAPj/AAAQAAsAAAATAPn/AAAQAAsAAAAEAO7/AAAVAAEAAAAFAO7/AAAVAAEAAAADAO7/AAAUAAEAAAAQAO7/AAAVAAEAAAARAO7/AAAWAAEAAAAPAO7/AAAVAAEAAAAOAO7/AAAVAAEAAAANAO7/AAAVAAEAAAAMAO7/AAAVAAEAAAALAO7/AAAVAAEAAAAKAO7/AAAVAAEAAAAJAO7/AAAVAAEAAAAIAO7/AAAVAAEAAAAHAO7/AAAVAAEAAAAGAO7/AAAVAAEAAAARAO//AAAWAAQAAAARAPD/AAAWAAQAAAARAPH/AAAWAAQAAAADAO//AAAUAAQAAAADAPD/AAAUAAQAAAADAPH/AAAUAAQAAAAQAPD/AAAVAAQAAAAQAPH/AAAVAAQAAAAPAPH/AAAVAAQAAAAOAPH/AAASAA4AAAANAPH/AAARAA4AAAAMAPH/AAARAA4AAAALAPH/AAARAA4AAAAKAPH/AAARAA4AAAAJAPH/AAARAA4AAAAIAPH/AAARAA4AAAAHAPH/AAARAA4AAAAGAPH/AAAQAA4AAAAFAPH/AAAVAAQAAAAEAPH/AAAVAAQAAAAEAPD/AAAVAAQAAAAEAO//AAAVAAQAAAAFAO//AAAVAAQAAAAGAO//AAAVAAQAAAAHAO//AAAVAAQAAAAIAO//AAAVAAQAAAAJAO//AAAVAAQAAAAKAO//AAAVAAQAAAALAO//AAAVAAQAAAAMAO//AAAVAAQAAAANAO//AAAVAAQAAAAOAO//AAAVAAQAAAAPAO//AAAVAAQAAAAQAO//AAAVAAQAAAAPAPD/AAAVAAQAAAAOAPD/AAASAA0AAAANAPD/AAARAA0AAAAMAPD/AAARAA0AAAALAPD/AAARAA0AAAAKAPD/AAARAA0AAAAJAPD/AAARAA0AAAAIAPD/AAARAA0AAAAHAPD/AAARAA0AAAAGAPD/AAAQAA0AAAAFAPD/AAAVAAQAAAAGAPL/AAAQAA4AAAAGAPP/AAAQAA4AAAAGAPT/AAAQAA4AAAAOAPL/AAASAA4AAAAOAPP/AAASAA4AAAAOAPT/AAASAA4AAAANAPX/AAARAA8AAAAOAPX/AAASAA8AAAAGAPX/AAAQAA8AAAAHAPX/AAARAA8AAAAIAPT/AAARAA4AAAAIAPX/AAARAA8AAAAJAPX/AAATAA0AAAAKAPX/AAAUAA0AAAALAPX/AAAVAA0AAAAMAPX/AAARAA8AAAAMAPT/AAARAA4AAAALAPT/AAARAA4AAAAKAPT/AAARAA4AAAAJAPT/AAARAA4AAAAHAPT/AAARAA4AAAAHAPP/AAARAA4AAAAHAPL/AAARAA4AAAANAPL/AAARAA4AAAANAPP/AAARAA4AAAANAPT/AAARAA4AAAAMAPP/AAARAA4AAAALAPP/AAARAA4AAAAKAPP/AAARABEAAAAJAPP/AAARAA4AAAAIAPP/AAARAA4AAAAIAPL/AAARAA4AAAAJAPL/AAARAA4AAAAKAPL/AAARABAAAAALAPL/AAARAA4AAAAMAPL/AAAXAA4AAAAJAPb/AAATAA4AAAAKAPb/AAAUAA4AAAALAPb/AAAVAA4AAAAJAPf/AAATAA4AAAAKAPf/AAAUAA4AAAALAPf/AAAVAA4AAAAMAPf/AAARAAMAAAAIAPf/AAARAAMAAAAQAPf/AAAVAAMAAAAPAPf/AAAVAAMAAAAOAPf/AAAVAAMAAAANAPf/AAAVAAMAAAAHAPf/AAAVAAMAAAAGAPf/AAAVAAMAAAAFAPf/AAAVAAMAAAAEAPf/AAAVAAMAAAARAPf/AAAWAAMAAAADAPf/AAAUAAMAAAAIAPb/AAAVAAIAAAAHAPb/AAAVAAIAAAAGAPb/AAAVAAIAAAAFAPb/AAAVAAIAAAAEAPb/AAAVAAIAAAAMAPb/AAAVAAIAAAANAPb/AAAVAAIAAAAOAPb/AAAVAAIAAAAPAPb/AAAVAAIAAAAQAPb/AAAVAAIAAAADAPb/AAAUAAIAAAARAPb/AAAWAAIAAAARAPL/AAAWAAQAAAARAPP/AAAWAAQAAAARAPT/AAAWAAQAAAARAPX/AAAWAAQAAAADAPL/AAAUAAQAAAADAPP/AAAUAAQAAAADAPT/AAAUAAQAAAADAPX/AAAUAAQAAAAFAPL/AAAVAAQAAAAFAPP/AAAVAAQAAAAFAPT/AAAVAAQAAAAFAPX/AAAVAAQAAAAEAPX/AAAVAAQAAAAEAPT/AAAVAAQAAAAEAPP/AAAVAAQAAAAEAPL/AAAVAAQAAAAQAPL/AAAVAAQAAAAQAPP/AAAVAAQAAAAQAPT/AAAVAAQAAAAPAPT/AAAVAAQAAAAPAPX/AAAVAAQAAAAPAPP/AAAVAAQAAAAPAPL/AAAVAAQAAAAQAPX/AAAVAAQAAAADAPj/AAAWABgAAAAEAPj/AAAXAAsAAAAFAPj/AAAXAAsAAAAGAPj/AAAXAAsAAAAHAPj/AAAXAAsAAAAIAPj/AAAXAAsAAAAJAPj/AAAXAAsAAAAKAPj/AAAXAAsAAAALAPj/AAAXAAsAAAAMAPj/AAAXAAsAAAANAPj/AAAXAAsAAAAOAPj/AAAXAAsAAAAPAPj/AAAXAAsAAAAQAPj/AAAXAAsAAAARAPj/AAAXAAsAAAARAPn/AAAQAAsAAAAQAPn/AAAQAAsAAAAPAPn/AAAQAAsAAAAOAPn/AAAQAAsAAAANAPn/AAAQAAsAAAAMAPn/AAAQAAsAAAALAPn/AAAQAAsAAAAKAPn/AAAQAAsAAAAJAPn/AAAQAAsAAAAIAPn/AAAQAAsAAAAHAPn/AAAQAAsAAAAGAPn/AAAQAAsAAAAFAPn/AAAQAAsAAAAEAPn/AAAQAAsAAAADAPn/AAAQAAsAAAAAAOz/AAAVAAYAAAABAOz/AAAVAAYAAAACAOz/AAAVAAYAAAADAOz/AAAVAAYAAAAEAOz/AAAVAAYAAAAFAOz/AAAVAAYAAAAGAOz/AAAVAAYAAAAHAOz/AAAVAAYAAAAIAOz/AAAVAAYAAAAJAOz/AAAVAAYAAAAKAOz/AAAVAAYAAAALAOz/AAAVAAYAAAAMAOz/AAAVAAYAAAANAOz/AAAVAAYAAAAOAOz/AAAVAAYAAAAPAOz/AAAVAAYAAAAQAOz/AAAVAAYAAAARAOz/AAAVAAYAAAASAOz/AAAVAAYAAAATAOz/AAAVAAYAAAAUAOz/AAAVAAYAAAAAAOv/AAATAAIAAAABAOv/AAATAAIAAAACAOv/AAATAAIAAAADAOv/AAATAAIAAAAEAOv/AAAQABAAAAAFAOv/AAATAAIAAAAGAOv/AAATAAIAAAAHAOv/AAATAAIAAAAIAOv/AAATAAIAAAAJAOv/AAATAAIAAAAKAOv/AAAQABAAAAALAOv/AAATAAIAAAAMAOv/AAATAAIAAAANAOv/AAATAAIAAAAOAOv/AAATAAIAAAAPAOv/AAATAAIAAAAQAOv/AAAQABAAAAARAOv/AAATAAIAAAASAOv/AAATAAIAAAATAOv/AAATAAIAAAAUAOv/AAATAAIAAAAAAOr/AAARAAIAAAABAOr/AAARAAIAAAACAOr/AAARAAIAAAADAOr/AAARAAIAAAAEAOr/AAAWAA0AAAAFAOr/AAARAAIAAAAGAOr/AAARAAIAAAAHAOr/AAARAAIAAAAIAOr/AAARAAIAAAAJAOr/AAARAAIAAAAKAOr/AAAWAA0AAAALAOr/AAARAAIAAAAMAOr/AAARAAIAAAANAOr/AAARAAIAAAAOAOr/AAARAAIAAAAPAOr/AAARAAIAAAAQAOr/AAAWAA0AAAARAOr/AAARAAIAAAASAOr/AAARAAIAAAATAOr/AAARAAIAAAAUAOr/AAARAAIAAAAAAOn/AAARAAEAAAABAOn/AAARAAEAAAACAOn/AAARAAEAAAADAOn/AAARAAEAAAAEAOn/AAARAAEAAAAFAOn/AAARAAEAAAAGAOn/AAARAAEAAAAHAOn/AAARAAEAAAAIAOn/AAARAAEAAAAJAOn/AAARAAEAAAAKAOn/AAARAAEAAAALAOn/AAARAAEAAAAMAOn/AAARAAEAAAANAOn/AAARAAEAAAAOAOn/AAARAAEAAAAPAOn/AAARAAEAAAAQAOn/AAARAAEAAAARAOn/AAARAAEAAAASAOn/AAARAAEAAAATAOn/AAARAAEAAAAUAOn/AAARAAEAAAA=")
+tile_set = ExtResource("2_p4035")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Suelo2" type="TileMapLayer" parent="." unique_id=2057789450]
+tile_map_data = PackedByteArray("AAAFAAIAAAASABoAAAAGAAIAAAATABoAAAACAPn/AAASAAkAAAAFAPn/AAASAAkAAAASAPn/AAASAAkAAAAPAPn/AAASAAkAAAAMAPH/AAAXAA0AAAA=")
+tile_set = ExtResource("2_p4035")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Tabla" type="TileMapLayer" parent="." unique_id=2100791280]
+tile_map_data = PackedByteArray("AAAEAAMAAAARABsAAAAEAAIAAAARABoAAAA=")
+tile_set = ExtResource("2_p4035")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=844634725]
+position = Vector2(88, 102)
+script = ExtResource("3_78vmm")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_verdegal"
+posicion_destino = Vector2(4, 7)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=1019377274]
+position = Vector2(104, 102)
+script = ExtResource("3_78vmm")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_verdegal"
+posicion_destino = Vector2(4, 7)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1077642025]
+
+[node name="CartelSala1" type="Sprite2D" parent="Carteles" unique_id=1320001001 groups=["Cartel"]]
+editor_description = "pokeruby SlateportCity_ContestHall bg_event (12,14) = Godot (12,-9): EventScript_155671 (MSGBOX_SIGN)"
+position = Vector2(200, -136)
+script = ExtResource("4_s033v")
+id_texto = "VERDEGAL_CONCURSO_SALA_CARTEL"
+coord_tile = Vector2i(12, -9)
+
+[node name="CartelSala2" type="Sprite2D" parent="Carteles" unique_id=1320001002 groups=["Cartel"]]
+editor_description = "pokeruby SlateportCity_ContestHall bg_event (8,14) = Godot (8,-9): EventScript_155671 (MSGBOX_SIGN)"
+position = Vector2(136, -136)
+script = ExtResource("4_s033v")
+id_texto = "VERDEGAL_CONCURSO_SALA_CARTEL"
+coord_tile = Vector2i(8, -9)
+
+[node name="MaquinaLicuabayas" type="Sprite2D" parent="Carteles" unique_id=1601001001 groups=["Cartel"]]
+editor_description = "pokeruby VerdanturfTown_ContestLobby bg_event (12,5) = Godot (12,5): VerdanturfTown_ContestLobby_EventScript_1B763F (LICUABAYAS con 1 rival(es), evento Eventos/MaquinaLicuabayas)"
+position = Vector2(200, 88)
+script = ExtResource("lic_cartel")
+id_texto = "LICUADORA_MAQUINA_PREGUNTA"
+coord_tile = Vector2i(12, 5)
+
+[node name="MaquinaLicuabayasCable" type="Sprite2D" parent="Carteles" unique_id=1601001002 groups=["Cartel"]]
+editor_description = "pokeruby VerdanturfTown_ContestLobby bg_event (10,3) = Godot (10,3): VerdanturfTown_ContestLobby_EventScript_1B782F (LICUABAYAS por cable, evento Eventos/MaquinaLicuabayasCable)"
+position = Vector2(168, 56)
+script = ExtResource("lic_cartel")
+id_texto = "LICUADORA_CABLE_GUARDAR"
+coord_tile = Vector2i(10, 3)
+
+[node name="NPCs" type="Node2D" parent="." unique_id=491424303]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Recepcionista" parent="NPCs" unique_id=1856987497 instance=ExtResource("5_mgt6g")]
+editor_description = "pokeruby VerdanturfTown_ContestLobby objeto 1 (5,2) TEALA FACE_DOWN: ContestReceptionist de nivel NORMAL (expide el PASE de CONCURSO)"
+position = Vector2(88, 46)
+script = ExtResource("99_recepcion")
+tipo_recepcion = 0
+nivel = 0
+textos_condicionales = Dictionary[String, String]({})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+selec_frames = ExtResource("6_rdt1n")
+coord = Vector2i(5, 2)
+
+[node name="ViejoLicuabayas" parent="NPCs" unique_id=1647245266 instance=ExtResource("5_mgt6g")]
+editor_description = "pokeruby VerdanturfTown_ContestLobby objeto 2 (11,5) OLD_MAN_1 FACE_RIGHT: BerryBlendWithNPC; la LICUABAYAS es Eventos/MaquinaLicuabayas"
+position = Vector2(184, 94)
+script = ExtResource("31_viejo")
+texto_intro = "PORTUAL_CONCURSO_LICUADORA_INTRO"
+texto_con_bayas = "PORTUAL_CONCURSO_LICUADORA_CON_BAYAS"
+id_regalo = "concurso_baya_diaria"
+objeto = "BAYAMELOC"
+texto_regalo = "PORTUAL_CONCURSO_LICUADORA_SIN_BAYAS_REGALO"
+texto_despues = "PORTUAL_CONCURSO_LICUADORA_SIN_BAYAS_DESPUES"
+texto_si = ""
+texto_no = ""
+texto_ya_recibido = "PORTUAL_CONCURSO_LICUADORA_SIN_BAYAS_YA"
+texto_mochila_llena = "MOCHILA_LLENA_REGALO"
+objetos_aleatorios = PackedStringArray()
+objetos_por_id_entrenador = PackedStringArray()
+objetos_segundo_regalo = PackedStringArray()
+texto_tras_segundo = ""
+texto_ya_recibido_si = ""
+texto_ya_recibido_no = ""
+tipo_movimiento = 10
+selec_frames = ExtResource("38_npc050")
+coord = Vector2i(11, 5)
+
+[node name="ChicaMT45" parent="NPCs" unique_id=392142322 instance=ExtResource("5_mgt6g")]
+editor_description = "pokeruby VerdanturfTown_ContestLobby objeto 3 (14,2) GIRL_1 FACE_LEFT: MT45 ATRACCIÓN una vez (FLAG_RECEIVED_TM45)"
+position = Vector2(232, 46)
+script = ExtResource("30_regalo")
+objeto = "MT45"
+cantidad = 1
+bandera = "verdegal_mt45_recibida"
+id_texto_entregado = "VERDEGAL_CONCURSO_CHICA_TRAS"
+texto_tras_entregar = ""
+condicion_regalo = ""
+id_texto_sin_condicion = ""
+pregunta_si_no = false
+id_texto_si = ""
+id_texto_no = ""
+textos_entregado = Dictionary[String, String]({})
+medalla_requerida = 0
+volver_direccion_original = false
+id_texto = "VERDEGAL_CONCURSO_CHICA_REGALO"
+tipo_movimiento = 9
+selec_frames = ExtResource("32_npc004")
+coord = Vector2i(14, 2)
+
+[node name="Chico" parent="NPCs" unique_id=877994722 instance=ExtResource("5_mgt6g")]
+editor_description = "pokeruby VerdanturfTown_ContestLobby objeto 4 (1,6) BOY_2 WANDER_AROUND (1,1)"
+position = Vector2(24, 110)
+id_texto = "VERDEGAL_CONCURSO_CHICO"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("33_npc005")
+coord = Vector2i(1, 6)
+
+[node name="Reportero" parent="NPCs" unique_id=1668242160 instance=ExtResource("5_mgt6g")]
+editor_description = "pokeruby VerdanturfTown_ContestLobby objeto 5 (7,5) REPORTER_M FACE_LEFT, FLAG_HIDE_CONTEST_REPORTER_VERDANTURF (visible al volver de un CONCURSO de aquí con sitio en la cola de la TV: ProgramasTV.al_cambiar_de_mapa)"
+position = Vector2(120, 94)
+script = ExtResource("tv_reportero_concurso")
+textos_condicionales = Dictionary[String, String]({})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "PORTUAL_CONCURSO_REPORTERO"
+bandera_mostrar = "concurso_verdegal_reportero_visible"
+tipo_movimiento = 9
+selec_frames = ExtResource("37_npc020")
+coord = Vector2i(7, 5)
+
+[node name="Hombre" parent="NPCs" unique_id=383063165 instance=ExtResource("5_mgt6g")]
+editor_description = "pokeruby VerdanturfTown_ContestLobby objeto 6 (0,3) BOY_3 WANDER_UP_AND_DOWN (0,1)"
+position = Vector2(8, 62)
+id_texto = "VERDEGAL_CONCURSO_HOMBRE"
+tipo_movimiento = 3
+rango = Vector2i(0, 1)
+selec_frames = ExtResource("35_npc011")
+coord = Vector2i(0, 3)
+
+[node name="SalaChicoPresumido" parent="NPCs" unique_id=1442741058 instance=ExtResource("5_mgt6g")]
+editor_description = "pokeruby VerdanturfTown_ContestHall objeto 1 (0,7) BOY_4 WANDER_AROUND (1,3) = Godot (0,-16): MSGBOX_NPC"
+position = Vector2(8, -242)
+id_texto = "VERDEGAL_CONCURSO_SALA_CHICO_PRESUMIDO"
+tipo_movimiento = 2
+rango = Vector2i(1, 3)
+selec_frames = ExtResource("36_npc013")
+coord = Vector2i(0, -16)
+
+[node name="SalaChicoConsejo" parent="NPCs" unique_id=1739115767 instance=ExtResource("5_mgt6g")]
+editor_description = "pokeruby VerdanturfTown_ContestHall objeto 2 (20,15) BOY_3 WANDER_AROUND (1,1) = Godot (20,-8): MSGBOX_NPC"
+position = Vector2(328, -114)
+id_texto = "VERDEGAL_CONCURSO_SALA_CHICO_CONSEJO"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("35_npc011")
+coord = Vector2i(20, -8)
+
+[node name="SalaNina" parent="NPCs" unique_id=250459287 instance=ExtResource("5_mgt6g")]
+editor_description = "pokeruby VerdanturfTown_ContestHall objeto 3 (9,8) LITTLE_GIRL_2 WANDER_AROUND (2,2) = Godot (9,-15): MSGBOX_NPC"
+position = Vector2(152, -226)
+id_texto = "VERDEGAL_CONCURSO_SALA_NINA"
+tipo_movimiento = 2
+rango = Vector2i(2, 2)
+selec_frames = ExtResource("34_npc010")
+coord = Vector2i(9, -15)
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1773046390]
+script = ExtResource("25_ktyoo")
+tile_data = {
+"-1,1": {
+"flags": 1
+},
+"-1,2": {
+"flags": 1
+},
+"-1,3": {
+"flags": 1
+},
+"-1,4": {
+"flags": 1
+},
+"-1,5": {
+"flags": 1
+},
+"-1,6": {
+"flags": 1
+},
+"-1,7": {
+"flags": 1
+},
+"0,-20": {
+"flags": 1
+},
+"0,-5": {
+"flags": 1
+},
+"0,0": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"1,-20": {
+"flags": 1
+},
+"1,-5": {
+"flags": 1
+},
+"1,0": {
+"flags": 1
+},
+"1,7": {
+"flags": 1
+},
+"10,-16": {
+"flags": 1
+},
+"10,-18": {
+"flags": 1
+},
+"10,-20": {
+"flags": 1
+},
+"10,-5": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,3": {
+"flags": 1
+},
+"10,7": {
+"flags": 1
+},
+"11,-16": {
+"flags": 1
+},
+"11,-18": {
+"flags": 1
+},
+"11,-20": {
+"flags": 1
+},
+"11,-5": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,7": {
+"flags": 1
+},
+"12,-11": {
+"flags": 1
+},
+"12,-16": {
+"flags": 1
+},
+"12,-18": {
+"flags": 1
+},
+"12,-20": {
+"flags": 1
+},
+"12,-5": {
+"flags": 1
+},
+"12,-9": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,5": {
+"flags": 1
+},
+"12,7": {
+"flags": 1
+},
+"13,-11": {
+"flags": 1
+},
+"13,-16": {
+"flags": 1
+},
+"13,-18": {
+"flags": 1
+},
+"13,-20": {
+"flags": 1
+},
+"13,-5": {
+"flags": 1
+},
+"13,-9": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,7": {
+"flags": 1
+},
+"14,-11": {
+"flags": 1
+},
+"14,-12": {
+"flags": 1
+},
+"14,-13": {
+"flags": 1
+},
+"14,-14": {
+"flags": 1
+},
+"14,-15": {
+"flags": 1
+},
+"14,-16": {
+"flags": 1
+},
+"14,-18": {
+"flags": 1
+},
+"14,-20": {
+"flags": 1
+},
+"14,-5": {
+"flags": 1
+},
+"14,-9": {
+"flags": 1
+},
+"14,1": {
+"flags": 1
+},
+"14,7": {
+"flags": 1
+},
+"15,-18": {
+"flags": 1
+},
+"15,-20": {
+"flags": 1
+},
+"15,-5": {
+"flags": 1
+},
+"15,-6": {
+"flags": 1
+},
+"15,-9": {
+"flags": 1
+},
+"15,1": {
+"flags": 1
+},
+"15,2": {
+"flags": 1
+},
+"15,3": {
+"flags": 1
+},
+"15,4": {
+"flags": 1
+},
+"15,5": {
+"flags": 1
+},
+"15,6": {
+"flags": 1
+},
+"15,7": {
+"flags": 1
+},
+"16,-18": {
+"flags": 1
+},
+"16,-20": {
+"flags": 1
+},
+"16,-5": {
+"flags": 1
+},
+"16,-9": {
+"flags": 1
+},
+"17,-10": {
+"flags": 1
+},
+"17,-11": {
+"flags": 1
+},
+"17,-12": {
+"flags": 1
+},
+"17,-13": {
+"flags": 1
+},
+"17,-14": {
+"flags": 1
+},
+"17,-15": {
+"flags": 1
+},
+"17,-16": {
+"flags": 1
+},
+"17,-17": {
+"flags": 1
+},
+"17,-18": {
+"flags": 1
+},
+"17,-20": {
+"flags": 1
+},
+"17,-5": {
+"flags": 1
+},
+"17,-9": {
+"flags": 1
+},
+"18,-20": {
+"flags": 1
+},
+"18,-5": {
+"flags": 1
+},
+"18,-6": {
+"flags": 1
+},
+"19,-20": {
+"flags": 1
+},
+"19,-5": {
+"flags": 1
+},
+"2,-20": {
+"flags": 1
+},
+"2,-5": {
+"flags": 1
+},
+"2,-6": {
+"flags": 1
+},
+"2,0": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,7": {
+"flags": 1
+},
+"20,-20": {
+"flags": 1
+},
+"20,-5": {
+"flags": 1
+},
+"3,-10": {
+"flags": 1
+},
+"3,-11": {
+"flags": 1
+},
+"3,-12": {
+"flags": 1
+},
+"3,-13": {
+"flags": 1
+},
+"3,-14": {
+"flags": 1
+},
+"3,-15": {
+"flags": 1
+},
+"3,-16": {
+"flags": 1
+},
+"3,-17": {
+"flags": 1
+},
+"3,-18": {
+"flags": 1
+},
+"3,-20": {
+"flags": 1
+},
+"3,-5": {
+"flags": 1
+},
+"3,-9": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"3,3": {
+"flags": 1
+},
+"3,7": {
+"flags": 1
+},
+"4,-18": {
+"flags": 1
+},
+"4,-20": {
+"flags": 1
+},
+"4,-5": {
+"flags": 1
+},
+"4,-9": {
+"flags": 1
+},
+"4,3": {
+"flags": 1
+},
+"4,7": {
+"flags": 1
+},
+"5,-18": {
+"flags": 1
+},
+"5,-20": {
+"flags": 1
+},
+"5,-5": {
+"flags": 1
+},
+"5,-6": {
+"flags": 1
+},
+"5,-9": {
+"flags": 1
+},
+"5,3": {
+"flags": 1073741825
+},
+"5,7": {
+"flags": 1
+},
+"6,-11": {
+"flags": 1
+},
+"6,-12": {
+"flags": 1
+},
+"6,-13": {
+"flags": 1
+},
+"6,-14": {
+"flags": 1
+},
+"6,-15": {
+"flags": 1
+},
+"6,-16": {
+"flags": 1
+},
+"6,-18": {
+"flags": 1
+},
+"6,-20": {
+"flags": 1
+},
+"6,-5": {
+"flags": 1
+},
+"6,-9": {
+"flags": 1
+},
+"6,3": {
+"flags": 1
+},
+"6,7": {
+"flags": 1
+},
+"7,-11": {
+"flags": 1
+},
+"7,-16": {
+"flags": 1
+},
+"7,-18": {
+"flags": 1
+},
+"7,-20": {
+"flags": 1
+},
+"7,-5": {
+"flags": 1
+},
+"7,-9": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,2": {
+"flags": 1
+},
+"7,3": {
+"flags": 1
+},
+"7,7": {
+"flags": 1
+},
+"8,-11": {
+"flags": 1
+},
+"8,-16": {
+"flags": 1
+},
+"8,-18": {
+"flags": 1
+},
+"8,-20": {
+"flags": 1
+},
+"8,-5": {
+"flags": 1
+},
+"8,-9": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,7": {
+"flags": 1
+},
+"9,-16": {
+"flags": 1
+},
+"9,-18": {
+"flags": 1
+},
+"9,-20": {
+"flags": 1
+},
+"9,-5": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,7": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=897589849]
+position = Vector2(24, 22)
+script = ExtResource("3_78vmm")
+tipo_warp = 2
+ruta_mapa_destino = "pueblo_verdegal_concurso"
+posicion_destino = Vector2(10, -6)
+direccion = Vector2(0, -1)
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=713266184]
+position = Vector2(168, -90)
+script = ExtResource("3_78vmm")
+ruta_mapa_destino = "pueblo_verdegal_concurso"
+posicion_destino = Vector2(1, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp3" type="Sprite2D" parent="." unique_id=626309358]
+position = Vector2(184, -90)
+script = ExtResource("3_78vmm")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_verdegal_concurso"
+posicion_destino = Vector2(1, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1601001010]
+
+[node name="MaquinaLicuabayas" type="Node2D" parent="Eventos" unique_id=1601001011]
+editor_description = "pokeruby data/scripts/pokeblocks.inc: VerdanturfTown_ContestLobby_EventScript_1B763F (setvar VAR_0x8009, 1)"
+script = ExtResource("lic_evento")
+cartel = NodePath("../../Carteles/MaquinaLicuabayas")
+viejo = NodePath("../../NPCs/ViejoLicuabayas")
+
+[node name="MaquinaLicuabayasCable" type="Node2D" parent="Eventos" unique_id=1601001012]
+editor_description = "pokeruby data/scripts/pokeblocks.inc: VerdanturfTown_ContestLobby_EventScript_1B782F (sin cable Game Link)"
+script = ExtResource("lic_evento")
+cartel = NodePath("../../Carteles/MaquinaLicuabayasCable")
+por_cable = true

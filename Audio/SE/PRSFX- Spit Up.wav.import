@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://btrj6npgsky4m"
+path="res://.godot/imported/PRSFX- Spit Up.wav-fa10b4b4b56fab8f60c58f0d6a68a542.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Spit Up.wav"
+dest_files=["res://.godot/imported/PRSFX- Spit Up.wav-fa10b4b4b56fab8f60c58f0d6a68a542.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

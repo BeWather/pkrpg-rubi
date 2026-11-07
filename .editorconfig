@@ -1,0 +1,99 @@
+# EditorConfig: https://editorconfig.org
+# Sincroniza encoding + EOL + estilo entre VS Code, agentes (Copilot) y Godot editor.
+# Reglas se aplican de arriba (raiz) hacia abajo (.git, etc.).
+
+root = true
+
+# --- Defaults: LF + UTF-8 sin BOM + newline al final --------------------
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = tab
+indent_size = 4
+
+# --- Markdown ----------------------------------------------------------
+[*.md]
+trim_trailing_whitespace = false   # el doble-space al final es intencional
+indent_style = space
+indent_size = 4
+
+# --- CSV / JSON (configuración de datos) -------------------------------
+[*.{csv,json,cfg}]
+indent_style = space
+indent_size = 2
+
+# --- CSV: no trim trailing whitespace (puede romper campos con espacios)
+[*.csv]
+trim_trailing_whitespace = false
+
+# --- Makefile y scripts de shell: tabs obligatorios --------------------
+[Makefile]
+indent_style = tab
+
+[*.sh]
+indent_style = tab
+
+# --- PowerShell: tabs NO son validos en PS 5.1, usar spaces + UTF-8 BOM
+[*.ps1]
+indent_style = space
+indent_size = 4
+charset = utf-8-bom
+
+# --- GDScript: 4 espacios, LF -----------------------------------------
+[*.gd]
+indent_style = tab
+indent_size = 4
+
+# --- Escenas/recursos Godot: 2 espacios (formato por defecto) ---------
+[*.{tscn,tres}]
+indent_style = space
+indent_size = 2
+
+# --- Python: 4 espacios (PEP 8) ----------------------------------------
+[*.py]
+indent_style = space
+indent_size = 4
+
+# --- Archivos generados/binarios que no deben tocarse ------------------
+[*.{png,jpg,jpg,jpeg,webp,ogg,mp3,import,uid,tmp,db,apk}]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
+
+# --- Directorios externos/intocables ----------------------------------
+[.git/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
+
+[.godot/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
+
+[exportados/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset
+
+[addons/**]
+charset = unset
+end_of_line = unset
+insert_final_newline = unset
+trim_trailing_whitespace = unset
+indent_style = unset
+indent_size = unset

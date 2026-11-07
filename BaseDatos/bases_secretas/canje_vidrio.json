@@ -1,0 +1,204 @@
+{
+	"version": 1,
+	"sha1_rom": "ae35f6fd52a9258b794d7d3f4c784b8ee3fcde5c",
+	"sha256_rom": "2fd6f3cb65c85880aaadea429af67a7a401b34443bae06125fa787018fcda9a3",
+	"fuentes_decomp": {
+		"charmap.txt": "8c1db143d4f5f8186a6853d076b8b5dbd5d505b64e3c04ed79fe75afa54b7e9c",
+		"data/maps/Route113_GlassWorkshop/scripts.inc": "732c4ad1cdb53f678b3cc071cbed6bd0eea5fb46b9be5786d0cd17342dc03012",
+		"data/maps/Route113_GlassWorkshop/text.inc": "e20d5aabf8e74d447640cb2a22f155271cc578f88ce17a5ba4a2eaa225f71b6d",
+		"data/maps/Route113_GlassWorkshop/map.json": "f3044802b416f50a39f02efe830b006163ef9864bfcf8b21ac147bfe2b962017",
+		"src/field_specials.c": "6debc069ba573bf13e701ab09dd47349a23eb38b71b2af0878966ebb4f2f798c",
+		"src/decoration.c": "8c5e0c816fd041844dfb73805d1a844657a6f755db26b6e467dbf6e14ab7cbfa",
+		"data/scripts/obtain_item.inc": "00c90f65b8d8e278744b5b8ef28d2058d02f8ffa819b15e40539cb3edaa5fe01",
+		"data/text/obtain_item.inc": "636c564f408059b15cf31e7afa008713dc8df617a2b6beaa08d8ea913772498c"
+	},
+	"recetas": [
+		{
+			"indice": 0,
+			"simbolo": "ITEM_BLUE_FLUTE",
+			"costo": 250
+		},
+		{
+			"indice": 1,
+			"simbolo": "ITEM_YELLOW_FLUTE",
+			"costo": 500
+		},
+		{
+			"indice": 2,
+			"simbolo": "ITEM_RED_FLUTE",
+			"costo": 500
+		},
+		{
+			"indice": 3,
+			"simbolo": "ITEM_WHITE_FLUTE",
+			"costo": 1000
+		},
+		{
+			"indice": 4,
+			"simbolo": "ITEM_BLACK_FLUTE",
+			"costo": 1000
+		},
+		{
+			"indice": 5,
+			"simbolo": "DECOR_PRETTY_CHAIR",
+			"costo": 6000
+		},
+		{
+			"indice": 6,
+			"simbolo": "DECOR_PRETTY_DESK",
+			"costo": 8000
+		}
+	],
+	"textos": [
+		{
+			"clave": "VIDRIO_COMPROBAR",
+			"direccion": "0x081A18F5",
+			"raw_hex": "51C2D5E700E6D9D7E3DBDDD8E300D7D9E2DDEED5ACB80052D5D7DC6FE7ABFEBB00EAD9E6ADADAD0052BBD7DC6FE7B800D5D7DC6FE7ABFF",
+			"texto_es": "¿Has recogido ceniza?, ¡achís!\nA ver... ¡Achís, achís!"
+		},
+		{
+			"clave": "VIDRIO_POCA_CENIZA",
+			"direccion": "0x081A192C",
+			"raw_hex": "C7E1E1E1ADADADFEC8E300DCD5ED00D6D5E7E8D5E2E8D900D7D9E2DDEED5B80052D5D7DC6FE7ABFAC8E300E4E9D9D8E300DCD5D7D9E600D7E6DDE7E8D5E000D7E3E200D9E7E8E3ADADADFBBB00EAD9E6ADADAD00CEDDD9E2D9E700E5E9D900D8D5E600FD0200E4D5E7E3E700E4D5E6D5FEE6D9D7E3DBD9E600E7E9DADDD7DDD9E2E8D900D7D9E2DDEED500ED00E5E9D900EDE3FAE4E9D9D8D500DCD5D7D9E6E8D900E9E2D500C0C6BBCFCEBB00BBD4CFC6B80052D5D7DC6FE7ABFF",
+			"texto_es": "Mmmm...\nNo hay bastante ceniza, ¡achís!\\w\\nNo puedo hacer cristal con esto...\\pA ver... Tienes que dar {pasos} pasos para\nrecoger suficiente ceniza y que yo\\w\\npueda hacerte una FLAUTA AZUL, ¡achís!"
+		},
+		{
+			"clave": "VIDRIO_SUFICIENTE",
+			"direccion": "0x081A19E7",
+			"raw_hex": "52C9DCABFECEDDD9E2D9E700E9E200E1E3E2E823E200D8D900D7D9E2DDEED5B80052D5D7DC6FE7ABFBCED900EAE3ED00D500DCD5D7D9E600E9E200E3D6DED9E8E300D8D900D7E6DDE7E8D5E0ADADADFE51BDE917E000E5E9DDD9E6D9E7AC0052BBD7DC6FE7ABFF",
+			"texto_es": "¡Oh!\nTienes un montón de ceniza, ¡achís!\\pTe voy a hacer un objeto de cristal...\n¿Cuál quieres? ¡Achís!"
+		},
+		{
+			"clave": "VIDRIO_CONFIRMAR",
+			"direccion": "0x081A1A4E",
+			"raw_hex": "51CFE2D500FD02ACB80052D5D7DC6FE7ABFE51CDD9DBE9E6E300E5E9D900D9E700D9E7E3AC005252BBBDC25ACDABABFF",
+			"texto_es": "¿Una {nombre}?, ¡achís!\n¿Seguro que es eso? ¡¡ACHÍS!!"
+		},
+		{
+			"clave": "VIDRIO_ELEGIR",
+			"direccion": "0x081A1A7E",
+			"raw_hex": "51BDE917E000E5E9DDD9E6D9E7AC0052BBD7DC6FE7ABFF",
+			"texto_es": "¿Cuál quieres? ¡Achís!"
+		},
+		{
+			"clave": "VIDRIO_ESPERAR",
+			"direccion": "0x081A1A95",
+			"raw_hex": "D0D5E0D9B800E9E2D500FD0200D9E2E8E3E2D7D9E7B8FE52D5D7DC6FE7ABFBCED900E0D500DCD5DBE300D9E200E9E200E1DDE2E9E8E3B80052D5D7DC6FE7ABFECED9E200E9E200E4E3D7E300D8D900E4D5D7DDD9E2D7DDD5B80052BBBDC25ACDABFF",
+			"texto_es": "Vale, una {nombre} entonces,\n¡achís!\\pTe la hago en un minuto, ¡achís!\nTen un poco de paciencia, ¡ACHÍS!"
+		},
+		{
+			"clave": "VIDRIO_FALTAN",
+			"direccion": "0x081A1AF7",
+			"raw_hex": "51CFE2D500FD02ACB80052D5D7DC6FE7ABFBC8E300E8DDD9E2D9E700D6D5E7E8D5E2E8D900D7D9E2DDEED500E4D5E6D500DCD5D7D9E6FED9E7E3B800E0E300E7DDD9E2E8E3B80052D5D7DC6FE7B800D5D7DC6FE7ABFBBB00EAD9E6ADADAD00CEDDD9E2D9E700E5E9D900D8D5E600FD0300E4D5E7E3E700E4D5E6D5FEE6D9D7E3DBD9E600E7E9DADDD7DDD9E2E8D900D7D9E2DDEED500ED00E5E9D900EDE3FAE4E9D9D8D500DCD5D7D9E6E8D900D9E7D900E3D6DED9E8E3B80052D5D7DC6FE7ABFB51CBE9DDD9E6D9E700E5E9D900E8D900DCD5DBD500E3E8E6E300E3D6DED9E8E3FED9E200EAD9EE00D8D9001BE7D9AC00525252BBBDC25ACDABABABFF",
+			"texto_es": "¿Una {nombre}?, ¡achís!\\pNo tienes bastante ceniza para hacer\neso, lo siento, ¡achís, achís!\\pA ver... Tienes que dar {pasos} pasos para\nrecoger suficiente ceniza y que yo\\w\\npueda hacerte ese objeto, ¡achís!\\p¿Quieres que te haga otro objeto\nen vez de ése? ¡¡¡ACHÍS!!!"
+		},
+		{
+			"clave": "VIDRIO_SALIR",
+			"direccion": "0x081A1BF4",
+			"raw_hex": "51C2D5E700E6D9D7E3DBDDD8E300E8E3D8D500D9E7D500D7D9E2DDEED500ED00D5DCE3E6D5FEE2E300E5E9DDD9E6D9E700E2D5D8D500D8D900E2D5D8D5B800D5D7DC6FE7ACFF",
+			"texto_es": "¿Has recogido toda esa ceniza y ahora\nno quieres nada de nada, achís?"
+		},
+		{
+			"clave": "VIDRIO_TERMINADO",
+			"direccion": "0x081A1C3A",
+			"raw_hex": "C2D900D5D7D5D6D5D8E300E8E900FD02ADFECEE3E1D5B800E4D5E6D500E8DDB80052D5D7DC6FE7ABFF",
+			"texto_es": "He acabado tu {nombre}.\nToma, para ti, ¡achís!"
+		},
+		{
+			"clave": "VIDRIO_SIN_MOCHILA",
+			"direccion": "0x081A1C63",
+			"raw_hex": "51BD23E1E3ACFE52CDDD00E2E300E8DDD9E2D9E700E7DDE8DDE300D9E200E0D500C7C9BDC2C3C6BBB800D5D7DC6FE7ABFBCED900EAE3ED00D500DBE9D5E6D8D5E600D9E7E8E3B800D5E76F00E5E9D900EAE9D9E0EAD9FED7E9D5E2D8E300E5E9DDD9E6D5E7B8005252BBBDC25ACDABABFF",
+			"texto_es": "¿Cómo?\n¡Si no tienes sitio en la MOCHILA, achís!\\pTe voy a guardar esto, así que vuelve\ncuando quieras, ¡¡ACHÍS!!"
+		},
+		{
+			"clave": "VIDRIO_SIN_PC",
+			"direccion": "0x081A1CD4",
+			"raw_hex": "51BD23E1E3ACFE52CDDD00E2E300E8DDD9E2D9E700E7DDE8DDE300D9E200D9E000CABDB800D5D7DC6FE7ABFBCED900EAE3ED00D500DBE9D5E6D8D5E600D9E7E8E3B800D5E76F00E5E9D900EAE9D9E0EAD9FED7E9D5E2D8E300E5E9DDD9E6D5E7B8005252BBBDC25ACDABABFF",
+			"texto_es": "¿Cómo?\n¡Si no tienes sitio en el PC, achís!\\pTe voy a guardar esto, así que vuelve\ncuando quieras, ¡¡ACHÍS!!"
+		},
+		{
+			"clave": "VIDRIO_SIN_SACO",
+			"direccion": "0x081A1D40",
+			"raw_hex": "51BD23E1E3AC0052CDDD00E2E300E0E0D9EAD5E700D9E000CDBBBDC9FEC2C9C6C65AC800D7E3E2E8DDDBE3B800D5D7DC6FE7ABFBC6E300E2D9D7D9E7DDE8D5E700E4D5E6D500E4E3D8D9E600E6D9D7E3DBD9E6FED7D9E2DDEED500EAE3E0D717E2DDD7D5B8005252BBBDC25ACDABABFF",
+			"texto_es": "¿Cómo? ¡Si no llevas el SACO\nHOLLÍN contigo, achís!\\pLo necesitas para poder recoger\nceniza volcánica, ¡¡ACHÍS!!"
+		},
+		{
+			"clave": "VIDRIO_OBTENIDO",
+			"direccion": "0x081A402A",
+			"raw_hex": "C9D6E8E9EAE300FD03ADFF",
+			"texto_es": "Obtuvo {nombre}."
+		},
+		{
+			"clave": "VIDRIO_ENVIADO_PC",
+			"direccion": "0x081A405D",
+			"raw_hex": "CDD900D9E2EADD2300FD0300D5E000CABDADFF",
+			"texto_es": "Se envió {nombre} al PC."
+		},
+		{
+			"clave": "VIDRIO_NO_CABE",
+			"direccion": "0x081A4035",
+			"raw_hex": "52C7D5E0D500E7E9D9E6E8D9AB00C8E300E5E9D9D8D500E7DDE8DDE3FEE4D5E6D500FD03ADADADFF",
+			"texto_es": "¡Mala suerte! No queda sitio\npara {nombre}..."
+		},
+		{
+			"clave": "VIDRIO_MENU_0",
+			"direccion": "0x08413C3A",
+			"raw_hex": "C0C6BBCFCEBB00BBD4CFC6FF",
+			"texto_es": "FLAUTA AZUL"
+		},
+		{
+			"clave": "VIDRIO_MENU_1",
+			"direccion": "0x08413C46",
+			"raw_hex": "C0C6AD00BBC7BBCCC3C6C6BBFF",
+			"texto_es": "FL. AMARILLA"
+		},
+		{
+			"clave": "VIDRIO_MENU_2",
+			"direccion": "0x08413C53",
+			"raw_hex": "C0C6BBCFCEBB00CCC9C4BBFF",
+			"texto_es": "FLAUTA ROJA"
+		},
+		{
+			"clave": "VIDRIO_MENU_3",
+			"direccion": "0x08413C5F",
+			"raw_hex": "C0C6AD00BCC6BBC8BDBBFF",
+			"texto_es": "FL. BLANCA"
+		},
+		{
+			"clave": "VIDRIO_MENU_4",
+			"direccion": "0x08413C6A",
+			"raw_hex": "C0C6BBCFCEBB00C8BFC1CCBBFF",
+			"texto_es": "FLAUTA NEGRA"
+		},
+		{
+			"clave": "VIDRIO_MENU_5",
+			"direccion": "0x08413C77",
+			"raw_hex": "CDC3C6C6BB00BDCCC3CDCEBBC6FF",
+			"texto_es": "SILLA CRISTAL"
+		},
+		{
+			"clave": "VIDRIO_MENU_6",
+			"direccion": "0x08413C85",
+			"raw_hex": "C7BFCDBB00BDCCC3CDCEBBC6FF",
+			"texto_es": "MESA CRISTAL"
+		},
+		{
+			"clave": "VIDRIO_MENU_7",
+			"direccion": "0x08411D03",
+			"raw_hex": "CDBBC6C3CCFF",
+			"texto_es": "SALIR"
+		},
+		{
+			"clave": "VIDRIO_OBJETO_OBTENIDO",
+			"direccion": "0x081A3FAC",
+			"raw_hex": "52C9D6E8E9EAE300FD03ABFF",
+			"texto_es": "¡Obtuvo {nombre}!"
+		},
+		{
+			"clave": "VIDRIO_OBJETO_GUARDADO",
+			"direccion": "0x081A3FD1",
+			"raw_hex": "FD0100E4E9E7E300FD03FED9E200D9E000BCC9C6CDC3C6C6C900D8D900FD04ADFF",
+			"texto_es": "{jugador} puso {nombre}\nen el BOLSILLO de {bolsillo}."
+		}
+	]
+}

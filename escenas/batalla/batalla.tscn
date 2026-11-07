@@ -1,0 +1,718 @@
+[gd_scene format=3 uid="uid://b5sfh2dac3bop"]
+
+[ext_resource type="Script" uid="uid://cquokn1wb6yrc" path="res://escenas/batalla/batalla.gd" id="1_cw3ko"]
+[ext_resource type="Texture2D" uid="uid://ofcba32xne1h" path="res://graficos/batalla/fondo_hierba2.png" id="1_i21ft"]
+[ext_resource type="Texture2D" uid="uid://rk6lytt2gta8" path="res://graficos/batalla/caja_dialogo.png" id="2_7lklt"]
+[ext_resource type="Texture2D" uid="uid://ccldoacdercnd" path="res://graficos/batalla/batalla_pasto_1_circulo.png" id="3_ehkre"]
+[ext_resource type="SpriteFrames" uid="uid://dmh6gv83ubier" path="res://graficos/trainers64/entrenadores_64.tres" id="4_gv1qv"]
+[ext_resource type="SpriteFrames" uid="uid://dp80g3m25ysut" path="res://escenas/batalla/jugador_femenino.tres" id="8_x7dcs"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="11_e7kr3"]
+[ext_resource type="Texture2D" uid="uid://b3ok4eqrn7u60" path="res://graficos/batalla/gancho_izquierda.png" id="13_x7dcs"]
+[ext_resource type="Texture2D" uid="uid://bko3yyf6g2mqu" path="res://graficos/batalla/gancho_derecha.png" id="14_hnlsi"]
+[ext_resource type="SpriteFrames" uid="uid://upom08g8ixp4" path="res://escenas/batalla/pokeball_icono.tres" id="15_hnlsi"]
+[ext_resource type="Script" uid="uid://sj0eac78to3k" path="res://escenas/batalla/caja_texto_batalla.gd" id="16_xhk8v"]
+[ext_resource type="Texture2D" uid="uid://cwf4ytjn4xd2a" path="res://UI/puntero_texto.png" id="17_xsuu7"]
+[ext_resource type="PackedScene" uid="uid://gsch8wesfn0w" path="res://escenas/batalla/battle_slot.tscn" id="18_battle_slot"]
+[ext_resource type="PackedScene" uid="uid://qni5pcid557d" path="res://escenas/batalla/cuadro_ps_rival.tscn" id="21_ps_rival"]
+[ext_resource type="PackedScene" uid="uid://bjypbxa2tdbnt" path="res://escenas/batalla/cuadro_ps_jugador.tscn" id="22_ps_jugador"]
+[ext_resource type="PackedScene" path="res://escenas/batalla/cuadro_ps_jugador_doble.tscn" id="23_ps_jugador_doble"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tthuk"]
+atlas = ExtResource("17_xsuu7")
+region = Rect2(0, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88ik7"]
+atlas = ExtResource("17_xsuu7")
+region = Rect2(8, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bueie"]
+atlas = ExtResource("17_xsuu7")
+region = Rect2(16, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2owf"]
+atlas = ExtResource("17_xsuu7")
+region = Rect2(24, 0, 8, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4twsw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tthuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88ik7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bueie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2owf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="Animation" id="Animation_intro_salvaje"]
+resource_name = "1. Intro salvaje"
+length = 2.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CortinaArriba:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(0, -80)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CortinaAbajo:position")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 80), Vector2(0, 160)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Campo/btlSueloArriba:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-128, 48), Vector2(112, 48)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Campo/btlSueloAbajo:position")
+tracks/3/interp = 2
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(240, 101), Vector2(0, 101)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Campo/btlJugador:position")
+tracks/4/interp = 2
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(288, 48), Vector2(45, 48)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UI/CuadroPSRival1:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("UI/CuadroPSRival1:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(2.1, 2.8),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(-120, 6), Vector2(13, 6)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Campo/btlSueloArriba/SlotRival1/Pokemon:material:shader_parameter/efecto_silueta")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0, 2.1, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [true, true, false]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Campo/btlSueloArriba/SlotRival1/Pokemon:material:shader_parameter/color_silueta")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.12, 0.14, 0.2, 0.8)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Campo/btlSueloArriba/SlotRival1/Pokemon:material:shader_parameter/progreso_silueta")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0, 2.1, 2.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.400000019, 0.400000019, 1.0]
+}
+tracks/10/type = "method"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath(".")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(2.1),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_msje_intro_poke_salvaje"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_1b2u7"]
+resource_name = "2. Jugador lanza pokeball"
+length = 0.85
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Campo/btlJugador:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.85),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(45, 48), Vector2(-64, 48)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Campo/btlJugador:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.85),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Campo/btlJugador:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.07, 0.44, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.62),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_iniciar_caida_pokeball"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_mu5g1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/CuadroPSRival1:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/CuadroPSRival1:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(13, 6)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Campo/btlSueloArriba/SlotRival1/Pokemon:material:shader_parameter/efecto_silueta")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Campo/btlSueloArriba/SlotRival1/Pokemon:material:shader_parameter/color_silueta")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.12, 0.14, 0.2, 0.8)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Campo/btlSueloArriba/SlotRival1/Pokemon:material:shader_parameter/progreso_silueta")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.400000019]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Campo/btlJugador:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(45, 48)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Campo/btlJugador:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Campo/btlJugador:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_batalla"]
+_data = {
+&"1. Intro salvaje": SubResource("Animation_intro_salvaje"),
+&"2. Jugador lanza pokeball": SubResource("Animation_1b2u7"),
+&"RESET": SubResource("Animation_mu5g1")
+}
+
+[sub_resource type="Animation" id="Animation_pkb_reset"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Campo/btlSueloAbajo/SlotJugador1/Pokeball:activo_lanzamiento")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Campo/btlSueloAbajo/SlotJugador1/Pokeball:progreso")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Campo/btlSueloAbajo/SlotJugador1/Pokeball:velocidad_rotacion")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-1200.0]
+}
+
+[sub_resource type="Animation" id="Animation_8e3tg"]
+resource_name = "cae_pokeball_y_sale_pokemon"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Campo/btlSueloAbajo/SlotJugador1/Pokeball:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Campo/btlSueloAbajo/SlotJugador1/Pokeball:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Campo/btlSueloAbajo/SlotJugador1/Pokeball:activo_lanzamiento")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Campo/btlSueloAbajo/SlotJugador1/Pokeball:progreso")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Campo/btlSueloAbajo/SlotJugador1/Pokeball:velocidad_rotacion")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.28, 0.8),
+"transitions": PackedFloat32Array(0.5, 0.5, 1),
+"update": 0,
+"values": [-200.0, -400.0, -1200.0]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.8),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"_iniciar_aparicion_pokemon_jugador"
+}]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Campo/IluminacionCampo:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.8, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Campo/IluminacionCampo:modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.8, 1, 1.1, 1.5),
+"transitions": PackedFloat32Array(0.5, 1, 0.5, 1),
+"update": 0,
+"values": [0.0, 1.0, 1.0, 0.0]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("UI/CuadroPSJugador1:visible")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.8, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("UI/CuadroPSJugador1:position")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(1, 1.4),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [Vector2(246, 74), Vector2(126, 74)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_pkb"]
+_data = {
+&"RESET": SubResource("Animation_pkb_reset"),
+&"cae_pokeball_y_sale_pokemon": SubResource("Animation_8e3tg")
+}
+
+[node name="EscenaBatalla" type="Node2D" unique_id=1483599896]
+script = ExtResource("1_cw3ko")
+
+[node name="Campo" type="Node2D" parent="." unique_id=1676804924]
+
+[node name="btlFondo" type="Sprite2D" parent="Campo" unique_id=50859249]
+texture = ExtResource("1_i21ft")
+centered = false
+
+[node name="btlSueloArriba" type="Sprite2D" parent="Campo" unique_id=1440161131]
+position = Vector2(-128, 48)
+texture = ExtResource("3_ehkre")
+centered = false
+
+[node name="SlotRival1" parent="Campo/btlSueloArriba" unique_id=939435089 instance=ExtResource("18_battle_slot")]
+position = Vector2(32, -26)
+posicion_batalla = 2
+es_jugador = false
+
+[node name="SlotRival2" parent="Campo/btlSueloArriba" unique_id=1717601733 instance=ExtResource("18_battle_slot")]
+visible = false
+position = Vector2(8, -34)
+posicion_batalla = 3
+es_jugador = false
+
+[node name="btlSueloAbajo" type="Sprite2D" parent="Campo" unique_id=1437405510]
+position = Vector2(240, 101)
+texture = ExtResource("3_ehkre")
+centered = false
+
+[node name="SlotJugador1" parent="Campo/btlSueloAbajo" unique_id=1131183220 instance=ExtResource("18_battle_slot")]
+position = Vector2(32, -53)
+
+[node name="Pokeball" parent="Campo/btlSueloAbajo/SlotJugador1"]
+visible = true
+position = Vector2(-10, 20)
+offset = Vector2(0, -2)
+posicion_inicial = Vector2(-10, 20)
+vertice = Vector2(4, 4)
+factor_ancho = 2.0
+velocidad_rotacion = -200.0
+mostrar_guia_editor = true
+
+[node name="SlotJugador2" parent="Campo/btlSueloAbajo" unique_id=1611919980 instance=ExtResource("18_battle_slot")]
+visible = false
+position = Vector2(50, -45)
+posicion_batalla = 1
+
+[node name="IluminacionCampo" type="ColorRect" parent="Campo" unique_id=499212364]
+modulate = Color(1, 1, 1, 0)
+offset_right = 240.0
+offset_bottom = 112.0
+
+[node name="btlRival" type="AnimatedSprite2D" parent="Campo" unique_id=2078882744]
+visible = false
+position = Vector2(-96, 8)
+sprite_frames = ExtResource("4_gv1qv")
+frame = 18
+centered = false
+
+[node name="btlJugador" type="AnimatedSprite2D" parent="Campo" unique_id=2138406249]
+z_index = 1
+position = Vector2(45, 48)
+sprite_frames = ExtResource("8_x7dcs")
+centered = false
+
+[node name="btlDecoFrente" type="Node2D" parent="Campo" unique_id=410624224]
+z_index = 1
+position = Vector2(0, 32)
+
+[node name="UI" type="Node2D" parent="." unique_id=895922633]
+z_index = 1
+
+[node name="CuadroPSRival1" parent="UI" unique_id=443343678 instance=ExtResource("21_ps_rival")]
+position = Vector2(13, 6)
+
+[node name="MarcadorObjetivo1" type="Line2D" parent="UI/CuadroPSRival1" unique_id=965066543]
+visible = false
+points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34, -34, -34)
+width = 1.0
+default_color = Color(1, 0.901961, 0.25098, 1)
+
+[node name="CuadroPSRival2" parent="UI" unique_id=1838338891 instance=ExtResource("21_ps_rival")]
+position = Vector2(101, -36)
+
+[node name="MarcadorObjetivo2" type="Line2D" parent="UI/CuadroPSRival2" unique_id=599926434]
+visible = false
+points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34, -34, -34)
+width = 1.0
+default_color = Color(1, 0.901961, 0.25098, 1)
+
+[node name="CuadroPSJugador1" parent="UI" unique_id=760999197 instance=ExtResource("22_ps_jugador")]
+visible = false
+position = Vector2(246, 74)
+
+[node name="MarcadorObjetivo1" type="Line2D" parent="UI/CuadroPSJugador1" unique_id=1800408141]
+visible = false
+points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34, -34, -34)
+width = 1.0
+default_color = Color(1, 0.901961, 0.25098, 1)
+
+[node name="CuadroPSJugador1Doble" parent="UI" unique_id=1592640117 instance=ExtResource("23_ps_jugador_doble")]
+visible = false
+position = Vector2(127, 63)
+
+[node name="MarcadorObjetivo1" type="Line2D" parent="UI/CuadroPSJugador1Doble" unique_id=1592640118]
+visible = false
+points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34, -34, -34)
+width = 1.0
+default_color = Color(1, 0.901961, 0.25098, 1)
+
+[node name="CuadroPSJugador2" parent="UI" unique_id=287309534 instance=ExtResource("23_ps_jugador_doble")]
+visible = false
+position = Vector2(139, 88)
+
+[node name="MarcadorObjetivo2" type="Line2D" parent="UI/CuadroPSJugador2" unique_id=137423901]
+visible = false
+points = PackedVector2Array(-34, -34, 34, -34, 34, 34, -34, 34, -34, -34)
+width = 1.0
+default_color = Color(1, 0.901961, 0.25098, 1)
+
+[node name="IconosPokeball" type="Node2D" parent="UI" unique_id=29056148]
+visible = false
+
+[node name="icon" type="AnimatedSprite2D" parent="UI/IconosPokeball" unique_id=2110251646]
+position = Vector2(156, 88)
+sprite_frames = ExtResource("15_hnlsi")
+frame = 1
+centered = false
+
+[node name="icon2" type="AnimatedSprite2D" parent="UI/IconosPokeball" unique_id=1428780648]
+position = Vector2(166, 88)
+sprite_frames = ExtResource("15_hnlsi")
+frame = 1
+centered = false
+
+[node name="SoporteBallsArriba" type="Sprite2D" parent="UI" unique_id=1678055450]
+visible = false
+position = Vector2(-56, 40)
+texture = ExtResource("14_hnlsi")
+centered = false
+
+[node name="SoporteBallsAbajo" type="Sprite2D" parent="UI" unique_id=1427793212]
+visible = false
+position = Vector2(136, 96)
+texture = ExtResource("13_x7dcs")
+centered = false
+
+[node name="CajaDialogo" type="Sprite2D" parent="UI" unique_id=963307592]
+position = Vector2(0, 112)
+texture = ExtResource("2_7lklt")
+centered = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/CajaDialogo" unique_id=1149248347]
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 224.0
+offset_bottom = 40.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("11_e7kr3")
+theme_override_font_sizes/normal_font_size = 15
+text = "¡Un RHYDON salvaje!     "
+script = ExtResource("16_xhk8v")
+metadata/_edit_lock_ = true
+
+[node name="Cursor" type="AnimatedSprite2D" parent="UI/CajaDialogo" unique_id=1644705101]
+visible = false
+position = Vector2(224, 30)
+sprite_frames = SubResource("SpriteFrames_4twsw")
+autoplay = "default"
+frame = 1
+frame_progress = 0.6040788
+metadata/_edit_lock_ = true
+
+[node name="CortinaArriba" type="ColorRect" parent="." unique_id=1013317380]
+visible = false
+z_index = 2
+offset_right = 240.0
+offset_bottom = 80.0
+color = Color(0, 0, 0, 1)
+
+[node name="CortinaAbajo" type="ColorRect" parent="." unique_id=1748754179]
+visible = false
+z_index = 2
+offset_top = 80.0
+offset_right = 240.0
+offset_bottom = 159.99968
+color = Color(0, 0, 0, 1)
+
+[node name="AnimIntro" type="AnimationPlayer" parent="." unique_id=1901282292]
+libraries/ = SubResource("AnimationLibrary_batalla")
+
+[node name="PkbAnim" type="AnimationPlayer" parent="." unique_id=1901282293]
+libraries/Pkb = SubResource("AnimationLibrary_pkb")

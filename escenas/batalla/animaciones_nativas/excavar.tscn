@@ -1,0 +1,196 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/excavar.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/dirt_mound_pal_281_32x16_0_8.png" id="2_monticulo"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Dig1.wav" id="3_cavar"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Megakick.wav" id="4_golpe"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/mud_sand_pal_74_8x8_0.png" id="5_terron"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/impact_pal_135_32x32_0.png" id="7_golpe"]
+[ext_resource type="Shader" path="res://escenas/batalla/animaciones_nativas/mezcla_gba.gdshader" id="9_mezcla"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mezcla"]
+shader = ExtResource("9_mezcla")
+
+[sub_resource type="Animation" id="Animation_carga"]
+resource_name = "carga"
+length = 3.816667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.1833, 0.7499, 1.3166, 1.8833, 2.4499, 3.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [180],
+"method": &"poner_monticulo"
+}, {
+"args": [],
+"method": &"hundir_atacante"
+}, {
+"args": [],
+"method": &"lanzar_terrones"
+}, {
+"args": [],
+"method": &"lanzar_terrones"
+}, {
+"args": [],
+"method": &"lanzar_terrones"
+}, {
+"args": [],
+"method": &"lanzar_terrones"
+}, {
+"args": [],
+"method": &"lanzar_terrones"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sonido")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_cavar")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_cavar")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_cavar")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_cavar")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_cavar")
+}],
+"times": PackedFloat32Array(0.1833, 0.7499, 1.3166, 1.8833, 2.4499)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_ataque"]
+resource_name = "ataque"
+length = 1.366667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3499, 0.3666, 0.8166),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [48],
+"method": &"poner_monticulo"
+}, {
+"args": [&"defensor", Vector2(5, 0), 6, 1, true],
+"method": &"sacudir"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [5],
+"method": &"emerger_atacante"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Defensor/Impacto:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.3666, 0.5166),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sonido")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_golpe")
+}],
+"times": PackedFloat32Array(0.3666)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_excavar"]
+_data = {
+&"carga": SubResource("Animation_carga"),
+&"ataque": SubResource("Animation_ataque")
+}
+
+[node name="Excavar" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+animaciones_por_turno = Array[StringName]([&"carga", &"ataque"])
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="Impacto" type="Sprite2D" parent="Defensor"]
+visible = false
+material = SubResource("ShaderMaterial_mezcla")
+position = Vector2(-8, 0)
+scale = Vector2(0.6875, 0.6875)
+texture = ExtResource("7_golpe")
+
+[node name="PlantillaMonticulo" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_monticulo")
+region_enabled = true
+region_rect = Rect2(0, 0, 32, 16)
+
+[node name="PlantillaTerron" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("5_terron")
+
+[node name="Sonido" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_excavar")

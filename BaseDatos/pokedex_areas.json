@@ -1,0 +1,19 @@
+{
+	"fuente": "pokeruby/src/data/region_map/region_map_sections.json: casillas de los marcadores especiales de la Pokédex",
+	"casillas_marcador": {
+		"CUEVA_GRANITO": [1, 13],
+		"BOSQUE_PETALIA": [0, 8],
+		"CASCADA_METEORO": [0, 3],
+		"TUNEL_FERVERGAL": [2, 5],
+		"DESFILADERO": [6, 3],
+		"MONTE_PIRICO": [16, 4],
+		"CUEVA_CARDUMEN": [24, 4],
+		"ZONA_SAFARI": [16, 2],
+		"MALVALANOVA": [8, 7],
+		"NAO_ABANDONADA": [6, 14],
+		"CAVERNA_ABISAL": [24, 9],
+		"CALLE_VICTORIA": [27, 9],
+		"CUEVA_ANCESTRAL": [21, 7],
+		"PILAR_CELESTE": [19, 10]
+	}
+}

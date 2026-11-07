@@ -1,0 +1,94 @@
+[gd_scene format=4 uid="uid://cbl16udc2xm84"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_t80du"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_v8j3w"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_frfau"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_cobd8"]
+
+[node name="Casa" type="Node2D" unique_id=749470543]
+script = ExtResource("1_t80du")
+nombre_interno = "ciudad_algaria_casa5_2"
+seccion = "CIUDAD_ALGARIA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_ALGARIA"
+solo_caminar = true
+musica_mapa = "CIUDAD_FERRICA"
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=991336295]
+tile_map_data = PackedByteArray("AAAAAAAAAAAFAAAAAAAAAAEAAAAFAAEAAAABAAAAAAAFAAAAAAABAAEAAAAFAAEAAAACAAEAAAACAAEAAAADAAAAAAADAAAAAAADAAEAAAADAAEAAAAEAAAAAAAEAAAAAAAEAAEAAAAEAAEAAAAFAAAAAAAFAAAAAAAFAAEAAAAFAAEAAAAGAAAAAAAFAAAAAAAGAAEAAAAFAAEAAAAHAAAAAAAFAAAAAAAHAAEAAAAFAAEAAAAIAAAAAAAFAAAAAAAIAAEAAAAFAAEAAAAJAAAAAAAFAAAAAAAJAAEAAAAFAAEAAAAKAAAAAAAFAAAAAAAKAAEAAAAFAAEAAAACAAIAAAAEAAQAAAAAAAIAAAAAABMAAAABAAIAAAAEAAQAAAAIAAIAAAAEAAQAAAAJAAIAAAAEAAQAAAAHAAIAAAAEAAQAAAAKAAIAAAAAABMAAAAGAAIAAAAEAAQAAAAFAAIAAAAEAAQAAAAEAAIAAAAEAAQAAAADAAIAAAAEAAQAAAAAAAYAAAABAAcAAAAAAAUAAAABAAcAAAAAAAQAAAABAAcAAAAAAAMAAAABAAcAAAABAAMAAAADAAQAAAABAAQAAAADAAQAAAABAAUAAAADAAQAAAABAAYAAAADAAQAAAACAAMAAAADAAQAAAACAAQAAAADAAQAAAACAAUAAAADAAQAAAACAAYAAAADAAQAAAADAAMAAAADAAQAAAADAAQAAAADAAQAAAADAAUAAAADAAQAAAADAAYAAAADAAQAAAAEAAMAAAADAAQAAAAEAAQAAAAFAAYAAAAEAAUAAAAFAAcAAAAEAAYAAAAFAAgAAAAFAAMAAAADAAQAAAAFAAQAAAAGAAYAAAAFAAUAAAAGAAcAAAAFAAYAAAAGAAgAAAAGAAMAAAADAAQAAAAGAAQAAAAHAAYAAAAGAAUAAAAHAAcAAAAGAAYAAAAHAAgAAAAHAAMAAAADAAQAAAAHAAQAAAADAAQAAAAHAAUAAAADAAQAAAAHAAYAAAADAAQAAAAIAAMAAAADAAQAAAAIAAQAAAADAAQAAAAIAAUAAAADAAQAAAAIAAYAAAADAAQAAAAJAAMAAAADAAQAAAAJAAQAAAADAAQAAAAJAAUAAAADAAQAAAAJAAYAAAADAAQAAAAKAAMAAAADAAQAAAAKAAQAAAADAAQAAAAKAAUAAAADAAQAAAAKAAYAAAADAAQAAAACAAAAAAACAAAAAAAAAAgAAAABABMAAAABAAgAAAADAAQAAAACAAgAAAADAAQAAAADAAgAAAADAAQAAAAEAAgAAAADAAQAAAAFAAgAAAADAAQAAAAGAAgAAAADAAQAAAAHAAgAAAADAAQAAAAIAAgAAAADAAQAAAAJAAgAAAADAAQAAAAKAAgAAAACAAUAAAAAAAcAAAABAAcAAAABAAcAAAADAAQAAAACAAcAAAADAAQAAAADAAcAAAADAAQAAAAEAAcAAAADAAQAAAAFAAcAAAADAAQAAAAGAAcAAAADAAQAAAAHAAcAAAADAAQAAAAIAAcAAAADAAQAAAAJAAcAAAADAAQAAAAKAAcAAAADAAQAAAA=")
+tile_set = ExtResource("2_v8j3w")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=450578402]
+tile_map_data = PackedByteArray("AAAAAAEAAAACAAcAAAAKAAEAAAACAAcAAAAAAAcAAAACAAcAAAAKAAcAAAACAAcAAAA=")
+tile_set = ExtResource("2_v8j3w")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=211795028]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1016168764]
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1951418542]
+script = ExtResource("3_frfau")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,2": {
+"flags": 1
+},
+"0,8": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,2": {
+"flags": 1
+},
+"10,8": {
+"flags": 1
+},
+"2,0": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,0": {
+"flags": 1
+},
+"4,0": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=2039454932]
+position = Vector2(56, 22)
+script = ExtResource("4_cobd8")
+ruta_mapa_destino = "ciudad_algaria_casa5"
+posicion_destino = Vector2(3, 1)
+direccion = Vector2(0, 1)
+dar_paso = true

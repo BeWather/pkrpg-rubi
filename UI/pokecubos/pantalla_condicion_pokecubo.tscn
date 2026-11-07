@@ -1,0 +1,171 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/pokecubos/pantalla_condicion_pokecubo.gd" id="1"]
+[ext_resource type="Texture2D" path="res://graficos/pokecubos/condicion_fondo.png" id="2"]
+[ext_resource type="Script" path="res://UI/pokemon_sprite.gd" id="3"]
+[ext_resource type="LabelSettings" path="res://UI/texto_normal_negro.tres" id="4"]
+[ext_resource type="Texture2D" path="res://graficos/pokecubos/condicion_balls.png" id="5"]
+[ext_resource type="Texture2D" path="res://graficos/pokecubos/condicion_salir.png" id="6"]
+[ext_resource type="Texture2D" path="res://graficos/pokecubos/condicion_subio.png" id="7"]
+[ext_resource type="Texture2D" path="res://UI/menu_box_1.png" id="8"]
+[ext_resource type="Script" path="res://scripts/clases/MenuBoxComponent.gd" id="9"]
+[ext_resource type="Script" path="res://UI/selector_simple.gd" id="10"]
+
+[node name="PantallaCondicionPokecubo" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+position = Vector2(0, 0)
+texture = ExtResource("2")
+centered = false
+
+[node name="Pentagono" type="Polygon2D" parent="."]
+color = Color(0, 1, 0, 0.6875)
+polygon = PackedVector2Array(155, 87, 159, 90, 157, 95, 153, 95, 151, 90)
+
+[node name="Pokemon" type="AnimatedSprite2D" parent="."]
+position = Vector2(38, 104)
+script = ExtResource("3")
+
+[node name="Nombre" type="Label" parent="."]
+offset_left = 104.0
+offset_top = 8.0
+offset_right = 232.0
+offset_bottom = 23.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="Balls" type="Node2D" parent="."]
+
+[node name="Ball0" type="Sprite2D" parent="Balls"]
+position = Vector2(226, 8)
+texture = ExtResource("5")
+vframes = 2
+
+[node name="Ball1" type="Sprite2D" parent="Balls"]
+position = Vector2(226, 28)
+texture = ExtResource("5")
+vframes = 2
+
+[node name="Ball2" type="Sprite2D" parent="Balls"]
+position = Vector2(226, 48)
+texture = ExtResource("5")
+vframes = 2
+
+[node name="Ball3" type="Sprite2D" parent="Balls"]
+position = Vector2(226, 68)
+texture = ExtResource("5")
+vframes = 2
+
+[node name="Ball4" type="Sprite2D" parent="Balls"]
+position = Vector2(226, 88)
+texture = ExtResource("5")
+vframes = 2
+
+[node name="Ball5" type="Sprite2D" parent="Balls"]
+position = Vector2(226, 108)
+texture = ExtResource("5")
+vframes = 2
+
+[node name="Salir" type="Sprite2D" parent="."]
+position = Vector2(222, 128)
+texture = ExtResource("6")
+
+[node name="Subio" type="Node2D" parent="."]
+z_index = 5
+
+[node name="Subio0" type="Sprite2D" parent="Subio"]
+position = Vector2(156, 30)
+texture = ExtResource("7")
+visible = false
+
+[node name="Subio1" type="Sprite2D" parent="Subio"]
+position = Vector2(117, 53)
+texture = ExtResource("7")
+visible = false
+
+[node name="Subio2" type="Sprite2D" parent="Subio"]
+position = Vector2(117, 112)
+texture = ExtResource("7")
+visible = false
+
+[node name="Subio3" type="Sprite2D" parent="Subio"]
+position = Vector2(197, 112)
+texture = ExtResource("7")
+visible = false
+
+[node name="Subio4" type="Sprite2D" parent="Subio"]
+position = Vector2(197, 53)
+texture = ExtResource("7")
+visible = false
+
+[node name="Ventana" type="NinePatchRect" parent="."]
+visible = false
+z_index = 10
+offset_left = 0.0
+offset_top = 128.0
+offset_right = 240.0
+offset_bottom = 160.0
+texture = ExtResource("8")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MenuBoxComponent" type="Node" parent="Ventana"]
+script = ExtResource("9")
+
+[node name="Texto" type="Label" parent="Ventana"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 232.0
+offset_bottom = 23.0
+text = ""
+label_settings = ExtResource("4")
+
+[node name="SiNo" type="NinePatchRect" parent="."]
+visible = false
+z_index = 20
+offset_left = 184.0
+offset_top = 80.0
+offset_right = 240.0
+offset_bottom = 128.0
+texture = ExtResource("8")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MenuBoxComponent" type="Node" parent="SiNo"]
+script = ExtResource("9")
+
+[node name="Si" type="Label" parent="SiNo"]
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 23.0
+text = "SÍ"
+label_settings = ExtResource("4")
+
+[node name="No" type="Label" parent="SiNo"]
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 48.0
+offset_bottom = 39.0
+text = "NO"
+label_settings = ExtResource("4")
+
+[node name="Cursor" type="Control" parent="SiNo"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 49.0
+offset_bottom = 24.0
+mouse_filter = 2
+script = ExtResource("10")
+color = Color(0.937255, 0.431373, 0.376471, 1)
+ancho_borde = 1

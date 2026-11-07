@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c05nogd4dukql"
+path="res://.godot/imported/1-28 Team Aqua - Magma Defeated!.mp3-843a80d9e114ce1e757f96c3e704c9b4.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-28 Team Aqua - Magma Defeated!.mp3"
+dest_files=["res://.godot/imported/1-28 Team Aqua - Magma Defeated!.mp3-843a80d9e114ce1e757f96c3e704c9b4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

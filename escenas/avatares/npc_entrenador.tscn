@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://gbm5pvhiq1ej"]
+
+[ext_resource type="Script" uid="uid://bwl78iv5oft3p" path="res://scripts/npc/npc_entrenador.gd" id="1_xa1hj"]
+[ext_resource type="SpriteFrames" uid="uid://bsfxgq2rhmuup" path="res://escenas/avatares/npc_060.tres" id="2_tvtd4"]
+
+[node name="NPCEntrenador" type="Node2D" unique_id=2088723645]
+position = Vector2(8, 14)
+script = ExtResource("1_xa1hj")
+npc_id = "entrenador_pueblo_escaso"
+entrenador_id = 1
+rango_vision = 6
+texto_post_combate = "PE_ENTREN1_POST"
+id_texto = "PE_ENTREN1_INI"
+tipo_movimiento = 9
+rango = Vector2i(2, 0)
+selec_frames = ExtResource("2_tvtd4")
+loggear = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1533735561]
+sprite_frames = ExtResource("2_tvtd4")
+animation = &"camina_izquierda_1"
+centered = false
+offset = Vector2(-8, -20)

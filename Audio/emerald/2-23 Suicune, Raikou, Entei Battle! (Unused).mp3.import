@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7g1uy1f556q3"
+path="res://.godot/imported/2-23 Suicune, Raikou, Entei Battle! (Unused).mp3-6470249e42e5d484c01127d41f158efe.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/2-23 Suicune, Raikou, Entei Battle! (Unused).mp3"
+dest_files=["res://.godot/imported/2-23 Suicune, Raikou, Entei Battle! (Unused).mp3-6470249e42e5d484c01127d41f158efe.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

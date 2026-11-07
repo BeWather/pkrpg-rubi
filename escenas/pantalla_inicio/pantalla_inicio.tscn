@@ -1,0 +1,105 @@
+[gd_scene format=3 uid="uid://drkeswwg0ig2s"]
+
+[ext_resource type="Script" uid="uid://cjowkyr7stoes" path="res://escenas/pantalla_inicio/pantalla_inicio.gd" id="1_script"]
+[ext_resource type="PackedScene" uid="uid://ddw41ostfw48h" path="res://escenas/pantalla_inicio/estanque.tscn" id="3_yc0w5"]
+[ext_resource type="PackedScene" uid="uid://br5yhpgolpafd" path="res://escenas/pantalla_inicio/bicicleteando.tscn" id="4_cvn3p"]
+[ext_resource type="Texture2D" uid="uid://b57aetorkq28y" path="res://escenas/pantalla_inicio/graficos/intro_parte_1.png" id="5_64ciu"]
+[ext_resource type="PackedScene" uid="uid://cxbcntkiab15j" path="res://escenas/pantalla_inicio/menu_inicio.tscn" id="8_x34jk"]
+[ext_resource type="AudioStream" uid="uid://pguksbvxytp" path="res://Audio/emerald/1-02 Double Battle.mp3" id="14_batalla_music"]
+[ext_resource type="AudioStream" uid="uid://cqi7miqqkxvyi" path="res://Audio/emerald/1-01 Departure From the Hoenn Region 2.mp3" id="14_intro_music"]
+[ext_resource type="AudioStream" uid="uid://rnuhuw5duppw" path="res://Audio/emerald/1-03 Title Theme.mp3" id="14_title_music"]
+[ext_resource type="PackedScene" uid="uid://7vudp18bx4px" path="res://escenas/pantalla_inicio/transicion_ball.tscn" id="44_8y54y"]
+[ext_resource type="PackedScene" uid="uid://cnqo1sx035of3" path="res://escenas/pantalla_inicio/anim_batalla.tscn" id="45_ml366"]
+[ext_resource type="PackedScene" uid="uid://df5e66aif0amv" path="res://escenas/pantalla_inicio/title_intro.tscn" id="46_spc8g"]
+
+[node name="IntroMenu" type="Control" unique_id=1288019471]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+saltar_directo_title_intro = true
+
+[node name="LegalSplash" type="Control" parent="." unique_id=1411975720]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IntroParte1" type="Sprite2D" parent="LegalSplash" unique_id=1156227190]
+texture = ExtResource("5_64ciu")
+centered = false
+
+[node name="DeveloperIntro" type="Control" parent="." unique_id=1731207421]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Estanque" parent="DeveloperIntro" unique_id=1261542375 instance=ExtResource("3_yc0w5")]
+
+[node name="Bicicleteando" parent="DeveloperIntro" unique_id=363449782 instance=ExtResource("4_cvn3p")]
+
+[node name="TransicionBall" parent="DeveloperIntro" unique_id=1299894069 instance=ExtResource("44_8y54y")]
+visible = false
+
+[node name="AnimBatalla" parent="DeveloperIntro" unique_id=1126726655 instance=ExtResource("45_ml366")]
+visible = false
+
+[node name="TitleIntro" type="Control" parent="." unique_id=191630270]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleIntro" parent="TitleIntro" unique_id=430748247 instance=ExtResource("46_spc8g")]
+
+[node name="TitleIdle" type="Control" parent="." unique_id=1537858630]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TitleMenu" type="Control" parent="." unique_id=125239778]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MenuInicio" parent="TitleMenu" unique_id=1691788556 instance=ExtResource("8_x34jk")]
+layout_mode = 0
+
+[node name="TransicionColor" type="ColorRect" parent="." unique_id=1509695877]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(1, 1, 1, 0)
+
+[node name="IntroMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=1509695878]
+stream = ExtResource("14_intro_music")
+
+[node name="MusicaBatallaPlayer" type="AudioStreamPlayer" parent="." unique_id=2061080469]
+stream = ExtResource("14_batalla_music")
+
+[node name="TitleMusicPlayer" type="AudioStreamPlayer" parent="." unique_id=2061080470]
+stream = ExtResource("14_title_music")

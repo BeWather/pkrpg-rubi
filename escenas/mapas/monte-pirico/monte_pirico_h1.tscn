@@ -1,0 +1,698 @@
+[gd_scene format=4 uid="uid://byvc5gmfxnt71"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_iutkv"]
+[ext_resource type="TileSet" uid="uid://cihs7q0xi0yev" path="res://escenas/tileset_interior_edificios_2.tres" id="2_eostb"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_6o377"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_5cxxc"]
+[ext_resource type="SpriteFrames" uid="uid://blksta48icop1" path="res://escenas/avatares/npc_018.tres" id="mp_npc_018"]
+[ext_resource type="SpriteFrames" uid="uid://c6lw4imugjphu" path="res://escenas/avatares/npc_047.tres" id="mp_npc_047"]
+[ext_resource type="SpriteFrames" uid="uid://54qs3ihvxxbm" path="res://escenas/avatares/npc_056.tres" id="mp_npc_056"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="mp_npc_base"]
+[ext_resource type="Script" uid="uid://b3r00pidr48xb" path="res://scripts/npc/npc_regalo_objeto.gd" id="mp_regalo"]
+
+[node name="MontePirico" type="Node2D" unique_id=804595119]
+script = ExtResource("1_iutkv")
+nombre_interno = "MONTE_PIRICO_H1"
+seccion = "MONTE_PIRICO"
+esInterior = true
+solo_caminar = true
+mapa_exterior_asociado = "RUTA_122"
+musica_mapa = "MONTE_PIRICO"
+mostrar_nombre_al_entrar = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1891202316]
+tile_map_data = PackedByteArray("AAADAAMAAAAHAB0AAAADAAQAAAAHAB4AAAAEAAMAAAAEABwAAAAEAAQAAAAEAB0AAAAFAAMAAAAHAB0AAAAFAAQAAAAHAB4AAAAGAAMAAAAHAB0AAAAGAAQAAAAHAB4AAAAHAAMAAAAEABwAAAAHAAQAAAAEAB0AAAAIAAMAAAAHACMAAAAIAAQAAAAHACQAAAAJAAAAAAAHAB0AAAAJAAEAAAAHAB4AAAAKAAAAAAADABYAAAAKAAEAAAADABcAAAALAAAAAAAEABYAAAALAAEAAAAEABcAAAAMAAAAAAAFABYAAAAMAAEAAAAFABcAAAAKAAIAAAAAAB0AAAAMAAIAAAABAB0AAAALAAIAAAAHABwAAAAJAAIAAAAHABwAAAAJAAMAAAAHABwAAAAJAAQAAAAHABwAAAAJAAUAAAAHABwAAAAIAAUAAAAHABwAAAAHAAUAAAAHABwAAAAGAAUAAAAHABwAAAAFAAUAAAAHABwAAAAEAAUAAAAHABwAAAADAAUAAAAHABwAAAADAAYAAAAGAAAAAAAEAAYAAAAHAAAAAAARABIAAAAGAAAAAAASABIAAAAHAAAAAAARABEAAAAHABwAAAARABAAAAAHABwAAAARAA8AAAAHABwAAAARAA4AAAAHABwAAAARAA0AAAAHABwAAAASABEAAAAGABwAAAASABAAAAAGABwAAAASAA8AAAAGABwAAAASAA4AAAAGABwAAAASAA0AAAAGABwAAAAUAAwAAAAGAB0AAAAUAAsAAAAGAB0AAAAVAAsAAAAGAB0AAAAVAAwAAAAGAB0AAAAOAAwAAAAGAB0AAAAOAAsAAAAGAB0AAAANAAsAAAAGAB0AAAANAAwAAAAGAB0AAAAMAAoAAAAGAB0AAAAMAAkAAAAGAB0AAAALAAkAAAAGAB0AAAALAAoAAAAGAB0AAAAKAAgAAAAGAB0AAAAKAAcAAAAGAB0AAAAJAAcAAAAGACQAAAAJAAgAAAAGACQAAAAKAAsAAAAGAB0AAAAJAAsAAAAGACQAAAAJAAwAAAAGACQAAAAKAAwAAAAGAB0AAAANAAIAAAAGACQAAAAOAAIAAAAGACQAAAAOAAMAAAAGAB0AAAANAAMAAAAGAB0AAAANAAQAAAAGAB0AAAANAAUAAAAGAB0AAAAOAAUAAAAGAB0AAAAOAAQAAAAGAB0AAAAQAAMAAAAGAB0AAAARAAMAAAAGAB0AAAASAAMAAAAGAB0AAAASAAQAAAAGAB0AAAARAAQAAAAGAB0AAAAQAAQAAAAGAB0AAAAVAAMAAAAGAB0AAAAUAAMAAAAGAB0AAAAUAAQAAAAGAB0AAAAVAAQAAAAGAB0AAAAVAAYAAAAGAB0AAAAUAAYAAAAGAB0AAAAUAAcAAAAGAB0AAAAVAAcAAAAGAB0AAAASAAYAAAAGAB0AAAARAAYAAAAGAB0AAAAQAAYAAAAGAB0AAAAQAAcAAAAGAB0AAAARAAcAAAAGAB0AAAASAAcAAAAGAB0AAAAPAAIAAAAGABwAAAAQAAIAAAAGABwAAAARAAIAAAAGABwAAAASAAIAAAAGABwAAAATAAIAAAAGABwAAAAUAAIAAAAGABwAAAAVAAIAAAAGABwAAAATAAMAAAAGABwAAAATAAQAAAAGABwAAAAVAAUAAAAGABwAAAAUAAUAAAAGABwAAAATAAUAAAAGABwAAAASAAUAAAAGABwAAAARAAUAAAAGABwAAAAQAAUAAAAGABwAAAAPAAUAAAAGABwAAAAPAAMAAAAGABwAAAAPAAQAAAAGABwAAAATAAYAAAAGABwAAAATAAcAAAAGABwAAAATAAwAAAAGABwAAAASAAwAAAAGABwAAAARAAwAAAAGABwAAAAQAAwAAAAGABwAAAAPAAwAAAAGABwAAAAPAAsAAAAGABwAAAAQAAsAAAAGABwAAAARAAsAAAAGABwAAAASAAsAAAAGABwAAAATAAsAAAAGABwAAAAKAAkAAAAGABwAAAAKAAoAAAAGABwAAAALAAsAAAAGABwAAAAMAAsAAAAGABwAAAAMAAwAAAAGABwAAAALAAwAAAAGABwAAAANAAoAAAAGABwAAAAOAAoAAAAGABwAAAAPAAoAAAAGABwAAAAQAAoAAAAGABwAAAARAAoAAAAGABwAAAASAAoAAAAGABwAAAATAAoAAAAGABwAAAAUAAoAAAAGABwAAAAVAAoAAAAGABwAAAAVAAkAAAAGABwAAAAVAAgAAAAGABwAAAAUAAgAAAAGABwAAAATAAgAAAAGABwAAAASAAgAAAAGABwAAAARAAgAAAAGABwAAAAQAAgAAAAGABwAAAAPAAgAAAAGABwAAAAOAAgAAAAGABwAAAANAAgAAAAGABwAAAANAAkAAAAGABwAAAAOAAkAAAAGABwAAAAPAAkAAAAGABwAAAAQAAkAAAAGABwAAAARAAkAAAAGABwAAAASAAkAAAAGABwAAAATAAkAAAAGABwAAAAUAAkAAAAGABwAAAAMAAgAAAAGABwAAAALAAgAAAAGABwAAAALAAcAAAAGABwAAAAMAAcAAAAGABwAAAANAAcAAAAGABwAAAAOAAcAAAAGABwAAAAPAAcAAAAGABwAAAAPAAYAAAAGABwAAAAOAAYAAAAGABwAAAANAAYAAAAGABwAAAAMAAYAAAAGABwAAAALAAYAAAAGABwAAAAKAAYAAAAGABwAAAAKAAUAAAAGABwAAAAKAAQAAAAGABwAAAAKAAMAAAAGABwAAAALAAMAAAAGABwAAAAMAAMAAAAGABwAAAAMAAQAAAAGABwAAAAMAAUAAAAGABwAAAALAAUAAAAGABwAAAALAAQAAAAGABwAAAAJAAYAAAAGABwAAAAIAAYAAAAGABwAAAAHAAYAAAAGABwAAAAGAAYAAAAGABwAAAAFAAYAAAAGABwAAAAJAAkAAAAHABwAAAAJAAoAAAAHABwAAAANAAAAAAAHAB0AAAANAAEAAAAHAB4AAAAOAAAAAAAHAB0AAAAOAAEAAAAHAB4AAAAQAAAAAAAHAB0AAAAQAAEAAAAHAB4AAAARAAAAAAAHAB0AAAARAAEAAAAHAB4AAAATAAAAAAAHAB0AAAATAAEAAAAHAB4AAAAUAAAAAAAHAB0AAAAUAAEAAAAHAB4AAAAVAAAAAAAEABwAAAAVAAEAAAAEAB0AAAASAAAAAAAEABwAAAASAAEAAAAEAB0AAAAPAAAAAAAEABwAAAAPAAEAAAAEAB0AAAA=")
+tile_set = ExtResource("2_eostb")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1998160653]
+z_index = 1
+y_sort_enabled = true
+
+[node name="AbuelaAmuleto" parent="NPCs" unique_id=1220001001 instance=ExtResource("mp_npc_base")]
+editor_description = "pokeruby MtPyre_1F objeto 1 (21,2) OLD_WOMAN_2 FACE_DOWN, MtPyre_1F_EventScript_15D323: lock + faceplayer; la primera vez da el AMULETO (FLAG_RECEIVED_CLEANSE_TAG), despues repite el consejo"
+position = Vector2(344, 46)
+script = ExtResource("mp_regalo")
+objeto = "AMULETO"
+cantidad = 1
+bandera = "monte_pirico_amuleto_recibido"
+id_texto_entregado = "MONTE_PIRICO_H1_ABUELA_DESPUES"
+id_texto = "MONTE_PIRICO_H1_ABUELA_AMULETO"
+tipo_movimiento = 8
+selec_frames = ExtResource("mp_npc_056")
+coord = Vector2i(21, 2)
+
+[node name="Mujer" parent="NPCs" unique_id=1220001002 instance=ExtResource("mp_npc_base")]
+editor_description = "pokeruby MtPyre_1F objeto 2 (17,8) WOMAN_2 FACE_UP, MtPyre_1F_EventScript_15D35C (MSGBOX_NPC)"
+position = Vector2(280, 142)
+id_texto = "MONTE_PIRICO_H1_MUJER"
+tipo_movimiento = 7
+selec_frames = ExtResource("mp_npc_047")
+coord = Vector2i(17, 8)
+
+[node name="Hombre" parent="NPCs" unique_id=1220001003 instance=ExtResource("mp_npc_base")]
+editor_description = "pokeruby MtPyre_1F objeto 3 (13,10) MAN_5 FACE_LEFT, MtPyre_1F_EventScript_15D365 (MSGBOX_NPC)"
+position = Vector2(216, 174)
+id_texto = "MONTE_PIRICO_H1_HOMBRE"
+tipo_movimiento = 9
+selec_frames = ExtResource("mp_npc_018")
+coord = Vector2i(13, 10)
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=513864003]
+position = Vector2(280, 294)
+script = ExtResource("3_6o377")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_122"
+posicion_destino = Vector2(22, 29)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=973943053]
+position = Vector2(296, 294)
+script = ExtResource("3_6o377")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_122"
+posicion_destino = Vector2(22, 29)
+direccion = Vector2(0, 1)
+
+[node name="Warp3" type="Sprite2D" parent="." unique_id=1477297904]
+position = Vector2(56, 102)
+script = ExtResource("3_6o377")
+tipo_warp = 1
+ruta_mapa_destino = "monte_pirico_e1"
+posicion_destino = Vector2(10, 42)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp4" type="Sprite2D" parent="." unique_id=566564889]
+position = Vector2(72, 102)
+script = ExtResource("3_6o377")
+tipo_warp = 1
+ruta_mapa_destino = "monte_pirico_e1"
+posicion_destino = Vector2(10, 42)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp5" type="Sprite2D" parent="." unique_id=684210396]
+position = Vector2(184, 22)
+script = ExtResource("3_6o377")
+ruta_mapa_destino = "monte_pirico_h2"
+posicion_destino = Vector2(2, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=154976561]
+script = ExtResource("4_5cxxc")
+tile_data = {
+"10,0": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,2": {
+"flags": 4294967296
+},
+"10,3": {
+"flags": 4294967296
+},
+"10,4": {
+"flags": 4294967296
+},
+"10,5": {
+"flags": 4294967296
+},
+"10,6": {
+"flags": 4294967296
+},
+"10,7": {
+"flags": 1
+},
+"10,8": {
+"flags": 1
+},
+"10,9": {
+"flags": 1
+},
+"11,0": {
+"flags": 1
+},
+"11,2": {
+"flags": 4294967296
+},
+"11,3": {
+"flags": 4294967296
+},
+"11,4": {
+"flags": 4294967296
+},
+"11,5": {
+"flags": 4294967296
+},
+"11,6": {
+"flags": 4294967296
+},
+"11,7": {
+"flags": 4294967296
+},
+"11,8": {
+"flags": 4294967296
+},
+"11,9": {
+"flags": 1
+},
+"12,0": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,10": {
+"flags": 1
+},
+"12,11": {
+"flags": 1
+},
+"12,2": {
+"flags": 4294967296
+},
+"12,3": {
+"flags": 4294967296
+},
+"12,4": {
+"flags": 4294967296
+},
+"12,5": {
+"flags": 4294967296
+},
+"12,6": {
+"flags": 4294967296
+},
+"12,7": {
+"flags": 4294967296
+},
+"12,8": {
+"flags": 4294967296
+},
+"12,9": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,10": {
+"flags": 4294967296
+},
+"13,11": {
+"flags": 1
+},
+"13,2": {
+"flags": 1
+},
+"13,3": {
+"flags": 1
+},
+"13,4": {
+"flags": 1
+},
+"13,5": {
+"flags": 1
+},
+"13,6": {
+"flags": 4294967296
+},
+"13,7": {
+"flags": 4294967296
+},
+"13,8": {
+"flags": 4294967296
+},
+"13,9": {
+"flags": 4294967296
+},
+"14,1": {
+"flags": 1
+},
+"14,10": {
+"flags": 4294967296
+},
+"14,11": {
+"flags": 1
+},
+"14,12": {
+"flags": 1
+},
+"14,13": {
+"flags": 1
+},
+"14,2": {
+"flags": 1
+},
+"14,3": {
+"flags": 1
+},
+"14,4": {
+"flags": 1
+},
+"14,5": {
+"flags": 1
+},
+"14,6": {
+"flags": 4294967296
+},
+"14,7": {
+"flags": 4294967296
+},
+"14,8": {
+"flags": 4294967296
+},
+"14,9": {
+"flags": 4294967296
+},
+"15,1": {
+"flags": 1
+},
+"15,10": {
+"flags": 4294967296
+},
+"15,11": {
+"flags": 4294967296
+},
+"15,12": {
+"flags": 4294967296
+},
+"15,13": {
+"flags": 1
+},
+"15,2": {
+"flags": 4294967296
+},
+"15,3": {
+"flags": 4294967296
+},
+"15,4": {
+"flags": 4294967296
+},
+"15,5": {
+"flags": 4294967296
+},
+"15,6": {
+"flags": 4294967296
+},
+"15,7": {
+"flags": 4294967296
+},
+"15,8": {
+"flags": 4294967296
+},
+"15,9": {
+"flags": 4294967296
+},
+"16,1": {
+"flags": 1
+},
+"16,10": {
+"flags": 4294967296
+},
+"16,11": {
+"flags": 4294967296
+},
+"16,12": {
+"flags": 4294967296
+},
+"16,13": {
+"flags": 1
+},
+"16,14": {
+"flags": 1
+},
+"16,15": {
+"flags": 1
+},
+"16,16": {
+"flags": 1
+},
+"16,17": {
+"flags": 1
+},
+"16,18": {
+"flags": 1
+},
+"16,2": {
+"flags": 4294967296
+},
+"16,3": {
+"flags": 1
+},
+"16,4": {
+"flags": 1
+},
+"16,5": {
+"flags": 4294967296
+},
+"16,6": {
+"flags": 1
+},
+"16,7": {
+"flags": 1
+},
+"16,8": {
+"flags": 4294967296
+},
+"16,9": {
+"flags": 4294967296
+},
+"17,1": {
+"flags": 1
+},
+"17,10": {
+"flags": 4294967296
+},
+"17,11": {
+"flags": 4294967296
+},
+"17,12": {
+"flags": 4294967296
+},
+"17,13": {
+"flags": 4294967296
+},
+"17,14": {
+"flags": 4294967296
+},
+"17,15": {
+"flags": 4294967296
+},
+"17,16": {
+"flags": 4294967296
+},
+"17,17": {
+"flags": 4294967296
+},
+"17,2": {
+"flags": 4294967296
+},
+"17,3": {
+"flags": 1
+},
+"17,4": {
+"flags": 1
+},
+"17,5": {
+"flags": 4294967296
+},
+"17,6": {
+"flags": 1
+},
+"17,7": {
+"flags": 1
+},
+"17,8": {
+"flags": 4294967296
+},
+"17,9": {
+"flags": 4294967296
+},
+"18,1": {
+"flags": 1
+},
+"18,10": {
+"flags": 4294967296
+},
+"18,11": {
+"flags": 4294967296
+},
+"18,12": {
+"flags": 4294967296
+},
+"18,13": {
+"flags": 4294967296
+},
+"18,14": {
+"flags": 4294967296
+},
+"18,15": {
+"flags": 4294967296
+},
+"18,16": {
+"flags": 4294967296
+},
+"18,17": {
+"flags": 4294967296
+},
+"18,2": {
+"flags": 4294967296
+},
+"18,3": {
+"flags": 1
+},
+"18,4": {
+"flags": 1
+},
+"18,5": {
+"flags": 4294967296
+},
+"18,6": {
+"flags": 1
+},
+"18,7": {
+"flags": 1
+},
+"18,8": {
+"flags": 4294967296
+},
+"18,9": {
+"flags": 4294967296
+},
+"19,1": {
+"flags": 1
+},
+"19,10": {
+"flags": 4294967296
+},
+"19,11": {
+"flags": 4294967296
+},
+"19,12": {
+"flags": 4294967296
+},
+"19,13": {
+"flags": 1
+},
+"19,14": {
+"flags": 1
+},
+"19,15": {
+"flags": 1
+},
+"19,16": {
+"flags": 1
+},
+"19,17": {
+"flags": 1
+},
+"19,18": {
+"flags": 1
+},
+"19,2": {
+"flags": 4294967296
+},
+"19,3": {
+"flags": 4294967296
+},
+"19,4": {
+"flags": 4294967296
+},
+"19,5": {
+"flags": 4294967296
+},
+"19,6": {
+"flags": 4294967296
+},
+"19,7": {
+"flags": 4294967296
+},
+"19,8": {
+"flags": 4294967296
+},
+"19,9": {
+"flags": 4294967296
+},
+"2,4": {
+"flags": 1
+},
+"2,5": {
+"flags": 1
+},
+"2,6": {
+"flags": 1
+},
+"2,7": {
+"flags": 1
+},
+"20,1": {
+"flags": 1
+},
+"20,10": {
+"flags": 4294967296
+},
+"20,11": {
+"flags": 1
+},
+"20,12": {
+"flags": 1
+},
+"20,13": {
+"flags": 1
+},
+"20,2": {
+"flags": 4294967296
+},
+"20,3": {
+"flags": 1
+},
+"20,4": {
+"flags": 1
+},
+"20,5": {
+"flags": 4294967296
+},
+"20,6": {
+"flags": 1
+},
+"20,7": {
+"flags": 1
+},
+"20,8": {
+"flags": 4294967296
+},
+"21,1": {
+"flags": 1
+},
+"21,10": {
+"flags": 4294967296
+},
+"21,11": {
+"flags": 1
+},
+"21,2": {
+"flags": 4294967296
+},
+"21,3": {
+"flags": 1
+},
+"21,4": {
+"flags": 1
+},
+"21,5": {
+"flags": 4294967296
+},
+"21,6": {
+"flags": 1
+},
+"21,7": {
+"flags": 1
+},
+"21,8": {
+"flags": 4294967296
+},
+"21,9": {
+"flags": 4294967296
+},
+"3,4": {
+"flags": 1
+},
+"3,5": {
+"flags": 4294967296
+},
+"3,7": {
+"flags": 1
+},
+"4,4": {
+"flags": 1
+},
+"4,5": {
+"flags": 4294967296
+},
+"4,7": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,5": {
+"flags": 4294967296
+},
+"5,6": {
+"flags": 4294967296
+},
+"5,7": {
+"flags": 1
+},
+"6,4": {
+"flags": 1
+},
+"6,5": {
+"flags": 4294967296
+},
+"6,6": {
+"flags": 4294967296
+},
+"6,7": {
+"flags": 1
+},
+"7,4": {
+"flags": 1
+},
+"7,5": {
+"flags": 4294967296
+},
+"7,6": {
+"flags": 4294967296
+},
+"7,7": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,2": {
+"flags": 1
+},
+"8,3": {
+"flags": 1
+},
+"8,4": {
+"flags": 1
+},
+"8,5": {
+"flags": 4294967296
+},
+"8,6": {
+"flags": 4294967296
+},
+"8,7": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,2": {
+"flags": 4294967296
+},
+"9,3": {
+"flags": 4294967296
+},
+"9,4": {
+"flags": 4294967296
+},
+"9,5": {
+"flags": 4294967296
+},
+"9,6": {
+"flags": 4294967296
+},
+"9,7": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"

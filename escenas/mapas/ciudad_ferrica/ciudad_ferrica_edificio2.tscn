@@ -1,0 +1,369 @@
+[gd_scene format=4 uid="uid://befc4tm6tp1iq"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_08pu0"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_07jq2"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_0ieyy"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_ek82h"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="9_oju7m"]
+[ext_resource type="SpriteFrames" uid="uid://ds1lihygyt1d0" path="res://escenas/avatares/npc_027.tres" id="fi_npc_027"]
+[ext_resource type="SpriteFrames" uid="uid://damgta0thpof0" path="res://escenas/avatares/npc_028.tres" id="fi_npc_028"]
+[ext_resource type="SpriteFrames" uid="uid://c6lw4imugjphu" path="res://escenas/avatares/npc_047.tres" id="fi_npc_047"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="fi_npc_base"]
+
+[node name="Edificio" type="Node2D" unique_id=337747448]
+script = ExtResource("1_08pu0")
+nombre_interno = "ciudad_ferrica_edificio2"
+seccion = "CIUDAD_FERRICA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_FERRICA"
+solo_caminar = true
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1660786405]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAACcAAAAAAAEAAAAAACkAAAABAAAAAAAAACUAAAABAAEAAAAAACYAAAAFAAAAAAAAACcAAAAAAAIAAAAAACoAAAABAAIAAAADACUAAAACAAIAAAADACUAAAADAAIAAAADACUAAAAEAAIAAAADACUAAAAAAAMAAAADACUAAAAAAAQAAAADACUAAAAAAAUAAAADACUAAAAAAAYAAAADACUAAAAAAAcAAAAGACkAAAAEAAcAAAAEACUAAAAEAAYAAAAEACUAAAAEAAUAAAAEACUAAAAEAAQAAAAEACUAAAAEAAMAAAAEACUAAAADAAMAAAAEACUAAAACAAMAAAAEACUAAAABAAMAAAAEACgAAAABAAQAAAAAAC0AAAABAAUAAAAAAC4AAAABAAYAAAAEACUAAAABAAcAAAAHACkAAAACAAcAAAAEACUAAAADAAcAAAAEACUAAAADAAYAAAAEACUAAAADAAUAAAAFACgAAAADAAQAAAAEACUAAAACAAQAAAABAC0AAAACAAUAAAABAC4AAAACAAYAAAAEACUAAAAGAAcAAAAEACkAAAAGAAYAAAAEACUAAAAGAAUAAAAEACUAAAAGAAQAAAAEACUAAAAGAAMAAAAEACUAAAAGAAIAAAADACUAAAAHAAIAAAADACUAAAAIAAIAAAADACUAAAAJAAIAAAADACUAAAAKAAIAAAAAADEAAAAMAAEAAAAHACoAAAAMAAIAAAAHACsAAAANAAEAAAACACgAAAANAAIAAAADACUAAAALAAAAAAAAACcAAAALAAEAAAAGACoAAAALAAIAAAAGACsAAAANAAAAAAACACcAAAAMAAAAAAAAACcAAAAJAAAAAAACACcAAAAHAAAAAAAAACcAAAAGAAAAAAAAACcAAAAKAAAAAAAAAC8AAAAKAAEAAAAAADAAAAAIAAAAAAAAACcAAAAIAAEAAAAAACgAAAAJAAEAAAACACgAAAAHAAEAAAAAACgAAAAGAAEAAAAAACgAAAAFAAYAAAAEACUAAAAFAAcAAAAEACUAAAAFAAEAAAAAACgAAAAFAAIAAAADACUAAAAFAAMAAAAEACUAAAAFAAQAAAAEACUAAAAFAAUAAAAEACUAAAANAAYAAAAFADEAAAANAAcAAAAEACUAAAAMAAYAAAAEADEAAAAMAAcAAAAEACUAAAALAAYAAAAEADEAAAALAAcAAAAEACUAAAAKAAYAAAAEADEAAAAKAAcAAAAEACUAAAAJAAYAAAAEADEAAAAJAAcAAAAEACUAAAAIAAYAAAADADEAAAAIAAcAAAAEACUAAAAHAAcAAAAFACkAAAAHAAYAAAAEACUAAAAHAAUAAAAEACUAAAAHAAQAAAAEACUAAAAHAAMAAAAEACUAAAAIAAMAAAADAC8AAAAJAAMAAAAEAC8AAAAKAAMAAAAEAC8AAAALAAMAAAAEAC8AAAAMAAMAAAAEAC8AAAANAAMAAAAFAC8AAAANAAQAAAAFADAAAAANAAUAAAAFADAAAAAMAAUAAAACABwAAAALAAUAAAABAAoAAAAKAAUAAAAAAAoAAAAJAAUAAAAGAAcAAAAIAAUAAAADADAAAAAIAAQAAAADADAAAAAJAAQAAAABABwAAAAKAAQAAAAAAAkAAAALAAQAAAABAAkAAAAMAAQAAAACABwAAAABAPP/AAAAACUAAAABAPT/AAAAACYAAAABAPX/AAADACUAAAABAPb/AAAEACUAAAABAPf/AAAEACgAAAABAPj/AAAEACUAAAABAPn/AAAEACUAAAABAPr/AAAHACkAAAACAPP/AAABACUAAAACAPT/AAABAAMAAAACAPX/AAADACUAAAACAPb/AAAEACUAAAACAPf/AAAGAC8AAAACAPj/AAAGADAAAAACAPn/AAAEACUAAAACAPr/AAAHACkAAAADAPP/AAACACUAAAADAPT/AAACACYAAAADAPX/AAADACUAAAADAPb/AAAEACUAAAADAPf/AAAHAC8AAAADAPj/AAAHADAAAAADAPn/AAAEACUAAAADAPr/AAAEACUAAAAEAPP/AAACACcAAAAEAPT/AAACACgAAAAEAPX/AAADACUAAAAEAPb/AAAEACUAAAAEAPf/AAAGADEAAAAEAPj/AAAHADEAAAAEAPn/AAAEACUAAAAEAPr/AAAEACUAAAAFAPP/AAAAACcAAAAFAPT/AAAAACgAAAAFAPX/AAADACUAAAAFAPb/AAAEACUAAAAFAPf/AAAFACgAAAAFAPj/AAAFACgAAAAFAPn/AAAEACUAAAAFAPr/AAAEACUAAAAGAPP/AAAAACcAAAAGAPT/AAAAACgAAAAGAPX/AAADACUAAAAGAPb/AAAEACUAAAAGAPf/AAAEACUAAAAGAPj/AAAEACUAAAAGAPn/AAAEACUAAAAGAPr/AAAEACUAAAAHAPP/AAAAACcAAAAHAPT/AAAAACgAAAAHAPX/AAADACUAAAAHAPb/AAAEACUAAAAHAPf/AAAEACUAAAAHAPj/AAAEACUAAAAHAPn/AAAEACUAAAAHAPr/AAAEACUAAAAIAPP/AAACACcAAAAIAPT/AAACACgAAAAIAPX/AAADACUAAAAIAPb/AAADAC8AAAAIAPf/AAADADAAAAAIAPj/AAADADAAAAAIAPn/AAADADEAAAAIAPr/AAAEACUAAAAJAPX/AAAEACsAAAAJAPb/AAAEAC8AAAAJAPf/AAAGAAcAAAAJAPj/AAAGAAcAAAAJAPn/AAAEADEAAAAJAPr/AAAEACUAAAAKAPP/AAAAACcAAAAKAPT/AAAHACYAAAAKAPX/AAAHACcAAAAKAPb/AAAEAC8AAAAKAPf/AAAGAAcAAAAKAPj/AAAGAAcAAAAKAPn/AAAEADEAAAAKAPr/AAAEACUAAAALAPP/AAAAACcAAAALAPT/AAAFACoAAAALAPX/AAAFACsAAAALAPb/AAAEAC8AAAALAPf/AAAGAAcAAAALAPj/AAAGAAcAAAALAPn/AAAEADEAAAALAPr/AAAEACUAAAAMAPP/AAAAACcAAAAMAPT/AAABACkAAAAMAPX/AAABACoAAAAMAPb/AAAFAC8AAAAMAPf/AAAFADAAAAAMAPj/AAAFADAAAAAMAPn/AAAFADEAAAAMAPr/AAAEACUAAAANAPP/AAACACcAAAANAPT/AAACACgAAAANAPX/AAADACUAAAANAPr/AAAEACUAAAAAAPP/AAAAACcAAAAAAPT/AAAAACgAAAAAAPX/AAADACUAAAAAAPb/AAADACUAAAAAAPf/AAADACUAAAAAAPj/AAADACUAAAAAAPn/AAADACUAAAAAAPr/AAADACUAAAACAAAAAAABACUAAAACAAEAAAADAAEAAAADAAAAAAACACUAAAADAAEAAAACACYAAAAEAAAAAAACACcAAAAEAAEAAAACACgAAAANAPb/AAAEACUAAAANAPf/AAAEACUAAAANAPj/AAAEACUAAAANAPn/AAAEACUAAAAJAPP/AAAAACcAAAAJAPT/AAAEACoAAAA=")
+tile_set = ExtResource("2_07jq2")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Suelo2" type="TileMapLayer" parent="." unique_id=463708013]
+tile_map_data = PackedByteArray("AAACAAAAAAAMABsAAAAAAAYAAAACAAcAAAABAAYAAAACAAcAAAACAPP/AAAMABsAAAABAPn/AAACAAcAAAACAPn/AAACAAcAAAA=")
+tile_set = ExtResource("2_07jq2")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=615828127]
+position = Vector2(104, 118)
+script = ExtResource("3_0ieyy")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_ferrica"
+posicion_destino = Vector2(13, 30)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=1450428448]
+position = Vector2(120, 118)
+script = ExtResource("3_0ieyy")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_ferrica"
+posicion_destino = Vector2(13, 30)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=534991545]
+script = ExtResource("4_ek82h")
+tile_data = {
+"0,-12": {
+"flags": 1
+},
+"0,-13": {
+"flags": 1
+},
+"0,-5": {
+"flags": 1
+},
+"0,0": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"1,-12": {
+"flags": 1
+},
+"1,-13": {
+"flags": 1
+},
+"1,-5": {
+"flags": 1
+},
+"1,-6": {
+"flags": 1
+},
+"1,0": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,4": {
+"flags": 1
+},
+"1,5": {
+"flags": 1
+},
+"1,7": {
+"flags": 1
+},
+"10,-12": {
+"flags": 1
+},
+"10,-13": {
+"flags": 1
+},
+"10,-5": {
+"flags": 1
+},
+"10,0": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,4": {
+"flags": 1
+},
+"10,5": {
+"flags": 1
+},
+"11,-12": {
+"flags": 1
+},
+"11,-13": {
+"flags": 1
+},
+"11,-5": {
+"flags": 1
+},
+"11,0": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,4": {
+"flags": 1
+},
+"11,5": {
+"flags": 1
+},
+"12,-12": {
+"flags": 1073741825
+},
+"12,-13": {
+"flags": 1
+},
+"12,-5": {
+"flags": 1
+},
+"12,0": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"13,-12": {
+"flags": 1
+},
+"13,-13": {
+"flags": 1
+},
+"13,-5": {
+"flags": 1
+},
+"13,0": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"2,-13": {
+"flags": 1
+},
+"2,-5": {
+"flags": 1
+},
+"2,-6": {
+"flags": 1
+},
+"2,-8": {
+"flags": 1
+},
+"2,-9": {
+"flags": 1
+},
+"2,0": {
+"flags": 1
+},
+"2,4": {
+"flags": 1
+},
+"2,5": {
+"flags": 1
+},
+"3,-12": {
+"flags": 1
+},
+"3,-13": {
+"flags": 1
+},
+"3,-5": {
+"flags": 1
+},
+"3,-8": {
+"flags": 1
+},
+"3,-9": {
+"flags": 1
+},
+"3,0": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"4,-12": {
+"flags": 1
+},
+"4,-13": {
+"flags": 1
+},
+"4,-5": {
+"flags": 1
+},
+"4,-8": {
+"flags": 1
+},
+"4,-9": {
+"flags": 1
+},
+"4,0": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,-12": {
+"flags": 1
+},
+"5,-13": {
+"flags": 1
+},
+"5,-5": {
+"flags": 1
+},
+"5,0": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"6,-12": {
+"flags": 1
+},
+"6,-13": {
+"flags": 1
+},
+"6,-5": {
+"flags": 1
+},
+"6,0": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,-12": {
+"flags": 1
+},
+"7,-13": {
+"flags": 1
+},
+"7,-5": {
+"flags": 1
+},
+"7,0": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,-12": {
+"flags": 1
+},
+"8,-13": {
+"flags": 1
+},
+"8,-5": {
+"flags": 1
+},
+"8,0": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,-12": {
+"flags": 1
+},
+"9,-13": {
+"flags": 1
+},
+"9,-5": {
+"flags": 1
+},
+"9,0": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=902757812]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Hombre" parent="NPCs" unique_id=1302020001 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_Flat1_1F objeto 1 (9,4) MAN_4 FACE_RIGHT"
+position = Vector2(152, 78)
+id_texto = "FERRICA_EDIFICIO2_HOMBRE"
+tipo_movimiento = 10
+selec_frames = ExtResource("fi_npc_027")
+coord = Vector2i(9, 4)
+
+[node name="Mujer" parent="NPCs" unique_id=1302020002 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_Flat1_1F objeto 2 (12,4) WOMAN_7 FACE_LEFT"
+position = Vector2(200, 78)
+id_texto = "FERRICA_EDIFICIO2_MUJER"
+tipo_movimiento = 9
+selec_frames = ExtResource("fi_npc_028")
+coord = Vector2i(12, 4)
+
+[node name="MujerPiso2" parent="NPCs" unique_id=1302020003 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_Flat1_2F objeto 1 (8,6) → (8,-7) WOMAN_2 WANDER_LEFT_AND_RIGHT (3,1)"
+position = Vector2(136, -98)
+id_texto = "FERRICA_EDIFICIO2_PISO2_MUJER"
+tipo_movimiento = 5
+rango = Vector2i(3, 1)
+selec_frames = ExtResource("fi_npc_047")
+coord = Vector2i(8, -7)
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=22666466]
+position = Vector2(40, 22)
+script = ExtResource("3_0ieyy")
+ruta_mapa_destino = "ciudad_ferrica_edificio2"
+posicion_destino = Vector2(2, -12)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=761636056]
+position = Vector2(40, -186)
+script = ExtResource("3_0ieyy")
+ruta_mapa_destino = "ciudad_ferrica_edificio2"
+posicion_destino = Vector2(2, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1350760360]
+
+[node name="Cartel" type="Sprite2D" parent="Carteles" unique_id=1858600208 groups=["Cartel"]]
+position = Vector2(200, -184)
+script = ExtResource("9_oju7m")
+id_texto = "LIBROS_ILUSTRADOS"
+coord_tile = Vector2i(12, -12)

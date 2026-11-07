@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://cbtabl4t1p0sx9"]
+
+[ext_resource type="Script" path="res://addons/tilemap_inspector/editores/editor_tabla_tipos/editor_tabla_tipos.gd" id="1_etti"]
+
+[node name="EditorTablaTipos" type="Window"]
+script = ExtResource("1_etti")

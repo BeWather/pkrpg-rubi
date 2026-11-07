@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://dr0ca4fu3rxa1"]
+
+[ext_resource type="Script" uid="uid://b5rf0c4ucr0ka" path="res://graficos/roca_fuerza/controlador_roca_fuerza.gd" id="1_roca"]
+[ext_resource type="Texture2D" uid="uid://b76p11q4jvsq0" path="res://graficos/roca-fuerza.png" id="2_roca"]
+
+[node name="RocaFuerza" type="Node2D" unique_id=1604513772]
+script = ExtResource("1_roca")
+
+[node name="SpriteRocaFuerza" type="Sprite2D" parent="." unique_id=1128437650]
+position = Vector2(-8, -14)
+texture = ExtResource("2_roca")
+centered = false

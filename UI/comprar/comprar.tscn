@@ -1,0 +1,545 @@
+[gd_scene format=3 uid="uid://cft7yiuiiqun4"]
+
+[ext_resource type="Texture2D" uid="uid://bcyuw10tpb1l6" path="res://UI/comprar/inventario_compra.png" id="1_blvw7"]
+[ext_resource type="Script" uid="uid://ckyawnfrctgfa" path="res://UI/comprar/comprar.gd" id="2_comprar"]
+[ext_resource type="Texture2D" uid="uid://v6kexaw8rq10" path="res://UI/menu_box_1.png" id="2_t4aeb"]
+[ext_resource type="Texture2D" uid="uid://c7nupk0h03iv0" path="res://UI/comprar/etiqueta_dinero.png" id="3_v1ymv"]
+[ext_resource type="LabelSettings" uid="uid://dloc0dcjbkv2v" path="res://UI/texto_normal_negro.tres" id="4_fxfj2"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="5_x7fss"]
+[ext_resource type="Texture2D" uid="uid://duj63nu2di5my" path="res://UI/mochila/flecha-arriba.png" id="6_mewnn"]
+[ext_resource type="Texture2D" uid="uid://d1e8si86tbxfo" path="res://UI/mochila/flecha-abajo.png" id="7_8gvan"]
+[ext_resource type="Script" uid="uid://d36hq52xgo0y0" path="res://UI/selector_simple.gd" id="8_v7q1m"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8cyde"]
+line_spacing = 1.0
+font = ExtResource("5_x7fss")
+font_size = 15
+font_color = Color(0.165656, 0.165656, 0.165656, 1)
+shadow_size = 0
+shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+shadow_offset = Vector2(1, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_juo12"]
+line_spacing = 1.0
+font = ExtResource("5_x7fss")
+font_size = 15
+font_color = Color(0.165656, 0.165656, 0.165656, 1)
+shadow_size = 0
+shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+shadow_offset = Vector2(1, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ildva"]
+atlas = ExtResource("6_mewnn")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5fx8"]
+atlas = ExtResource("6_mewnn")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shdjs"]
+atlas = ExtResource("6_mewnn")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrdip"]
+atlas = ExtResource("6_mewnn")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvegt"]
+atlas = ExtResource("6_mewnn")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uafyn"]
+atlas = ExtResource("6_mewnn")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a08q6"]
+atlas = ExtResource("6_mewnn")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75kr8"]
+atlas = ExtResource("6_mewnn")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_3f1k7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ildva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5fx8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shdjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrdip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvegt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uafyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a08q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75kr8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 18.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q02f"]
+atlas = ExtResource("7_8gvan")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xv5q"]
+atlas = ExtResource("7_8gvan")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4740"]
+atlas = ExtResource("7_8gvan")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vq875"]
+atlas = ExtResource("7_8gvan")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akoaw"]
+atlas = ExtResource("7_8gvan")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xoao"]
+atlas = ExtResource("7_8gvan")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecbwq"]
+atlas = ExtResource("7_8gvan")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8ljs"]
+atlas = ExtResource("7_8gvan")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0vyt8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5q02f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xv5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4740")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vq875")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akoaw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xoao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecbwq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8ljs")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 18.0
+}]
+
+[node name="Comprar" type="Control" unique_id=182265740]
+z_index = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_comprar")
+metadata/_edit_lock_ = true
+
+[node name="InventarioCompra" type="Sprite2D" parent="." unique_id=1548564830]
+texture = ExtResource("1_blvw7")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Dinero" type="NinePatchRect" parent="." unique_id=1212932563]
+layout_mode = 0
+offset_right = 112.0
+offset_bottom = 32.0
+texture = ExtResource("2_t4aeb")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+metadata/_edit_lock_ = true
+
+[node name="EtiquetaDinero" type="Sprite2D" parent="Dinero" unique_id=81758668]
+position = Vector2(8, 8)
+texture = ExtResource("3_v1ymv")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Label_Dinero" type="Label" parent="Dinero" unique_id=988766291]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 104.0
+offset_bottom = 24.0
+text = "676.883$"
+label_settings = ExtResource("4_fxfj2")
+horizontal_alignment = 2
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="Lista" type="Control" parent="." unique_id=87703624]
+anchors_preset = 0
+offset_left = 112.0
+offset_top = 16.0
+offset_right = 112.0
+offset_bottom = 16.0
+metadata/_edit_lock_ = true
+
+[node name="objeto1" type="RichTextLabel" parent="Lista" unique_id=1294064144]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 16.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("5_x7fss")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "CUERDA HUIDA"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="Lista/objeto1" unique_id=997082299]
+texture_filter = 1
+layout_mode = 0
+offset_left = 82.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "9.995$"
+label_settings = SubResource("LabelSettings_8cyde")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+
+[node name="objeto2" type="RichTextLabel" parent="Lista" unique_id=107659549]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 120.0
+offset_bottom = 32.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("5_x7fss")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "SUPERPOCIÓN"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="Lista/objeto2" unique_id=1126663570]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "995$"
+label_settings = SubResource("LabelSettings_8cyde")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+
+[node name="objeto3" type="RichTextLabel" parent="Lista" unique_id=302314457]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 120.0
+offset_bottom = 48.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("5_x7fss")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[img]res://UI/mochila/txt_mo.png[/img]1 AZUL MARINAR"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="Lista/objeto3" unique_id=649205935]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "x995"
+label_settings = SubResource("LabelSettings_8cyde")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="objeto4" type="RichTextLabel" parent="Lista" unique_id=1227166743]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 120.0
+offset_bottom = 64.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("5_x7fss")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[img]res://UI/mochila/txt_mo.png[/img]1 AZUL MARINAR"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="Lista/objeto4" unique_id=123473617]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "x995"
+label_settings = SubResource("LabelSettings_8cyde")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="objeto5" type="RichTextLabel" parent="Lista" unique_id=175194829]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 120.0
+offset_bottom = 80.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("5_x7fss")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[img]res://UI/mochila/txt_mo.png[/img]1 AZUL MARINAR"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="Lista/objeto5" unique_id=1437890352]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "x995"
+label_settings = SubResource("LabelSettings_8cyde")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="objeto6" type="RichTextLabel" parent="Lista" unique_id=442199689]
+layout_mode = 0
+offset_top = 80.0
+offset_right = 120.0
+offset_bottom = 96.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("5_x7fss")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[img]res://UI/mochila/txt_mo.png[/img]1 AZUL MARINAR"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="Lista/objeto6" unique_id=1130841879]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "x995"
+label_settings = SubResource("LabelSettings_8cyde")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="objeto7" type="RichTextLabel" parent="Lista" unique_id=943697784]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 120.0
+offset_bottom = 112.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("5_x7fss")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[img]res://UI/mochila/txt_mo.png[/img]1 AZUL MARINAR"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="Lista/objeto7" unique_id=1859013753]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "x995"
+label_settings = SubResource("LabelSettings_8cyde")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="objeto8" type="RichTextLabel" parent="Lista" unique_id=1797362254]
+layout_mode = 0
+offset_top = 112.0
+offset_right = 120.0
+offset_bottom = 128.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("5_x7fss")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[img]res://UI/mochila/txt_mo.png[/img]1 AZUL MARINAR"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="Lista/objeto8" unique_id=225921198]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "x995"
+label_settings = SubResource("LabelSettings_8cyde")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="descripcion" type="Label" parent="." unique_id=926034230]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_top = 104.0
+offset_right = 109.0
+offset_bottom = 151.0
+text = "Al llevarla,
+subirá la DEFENSA en un momento de apuro."
+label_settings = SubResource("LabelSettings_juo12")
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="flecha-arriba" type="AnimatedSprite2D" parent="." unique_id=2129656275]
+position = Vector2(164, 0)
+sprite_frames = SubResource("SpriteFrames_3f1k7")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="flecha-abajo" type="AnimatedSprite2D" parent="." unique_id=1374088562]
+position = Vector2(164, 144)
+sprite_frames = SubResource("SpriteFrames_0vyt8")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="cursor" type="Control" parent="." unique_id=2144061941]
+anchors_preset = 0
+offset_left = 111.0
+offset_top = 15.0
+offset_right = 233.0
+offset_bottom = 32.0
+script = ExtResource("8_v7q1m")
+color = Color(0.972549, 0.376471, 0.345098, 1)
+ancho_borde = 1
+metadata/_custom_type_script = "uid://d36hq52xgo0y0"
+metadata/_edit_lock_ = true
+
+[node name="Unidades" type="NinePatchRect" parent="." unique_id=1537669463]
+visible = false
+layout_mode = 0
+offset_top = 80.0
+offset_right = 112.0
+offset_bottom = 112.0
+texture = ExtResource("2_t4aeb")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+metadata/_edit_lock_ = true
+
+[node name="lbUnidades" type="Label" parent="Unidades" unique_id=334201937]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 104.0
+offset_bottom = 24.0
+text = "x999"
+label_settings = ExtResource("4_fxfj2")
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="lbTotal" type="Label" parent="Unidades" unique_id=1607056560]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 104.0
+offset_bottom = 24.0
+text = "676.883$"
+label_settings = ExtResource("4_fxfj2")
+horizontal_alignment = 2
+language = "es_AR"
+metadata/_edit_lock_ = true

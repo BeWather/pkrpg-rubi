@@ -1,0 +1,818 @@
+[gd_scene format=3 uid="uid://dqs7koi36vhan"]
+
+[ext_resource type="Script" uid="uid://bjolha5ln1663" path="res://UI/mochila/mochila.gd" id="1_k0q2q"]
+[ext_resource type="Texture2D" uid="uid://ua524w6p0ath" path="res://UI/ficha-entrenador/fe-fondo.png" id="1_le18y"]
+[ext_resource type="Texture2D" uid="uid://yamfu2cpd8na" path="res://UI/ficha-entrenador/ma-fondo.png" id="2_6y7q2"]
+[ext_resource type="Texture2D" uid="uid://cx5y15npdauu1" path="res://UI/mochila/layaout.png" id="3_b8sws"]
+[ext_resource type="Texture2D" uid="uid://71reh6m386ns" path="res://UI/mochila/mochila-chica.png" id="4_b8sws"]
+[ext_resource type="Texture2D" uid="uid://bmgx2vjnprnpg" path="res://UI/mochila/mochila-chico.png" id="5_7weky"]
+[ext_resource type="Texture2D" uid="uid://daxh60nl17lwe" path="res://UI/mochila/pokeball.png" id="6_3fyjh"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="7_tqerj"]
+[ext_resource type="Texture2D" uid="uid://ks7ce2h2mge8" path="res://UI/mochila/flecha-izquierda.png" id="8_tqerj"]
+[ext_resource type="Texture2D" uid="uid://c5v54ctae63h7" path="res://UI/mochila/flecha-derecha.png" id="9_8lmqk"]
+[ext_resource type="Texture2D" uid="uid://duj63nu2di5my" path="res://UI/mochila/flecha-arriba.png" id="10_k0q2q"]
+[ext_resource type="Texture2D" uid="uid://d1e8si86tbxfo" path="res://UI/mochila/flecha-abajo.png" id="11_6gfwc"]
+[ext_resource type="Script" uid="uid://d36hq52xgo0y0" path="res://UI/selector_simple.gd" id="13_6gfwc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3fyjh"]
+atlas = ExtResource("4_b8sws")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tqerj"]
+atlas = ExtResource("4_b8sws")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8l8i3"]
+atlas = ExtResource("4_b8sws")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o57et"]
+atlas = ExtResource("4_b8sws")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8lmqk"]
+atlas = ExtResource("4_b8sws")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k0q2q"]
+atlas = ExtResource("4_b8sws")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6gfwc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3fyjh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tqerj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8l8i3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o57et")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8lmqk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k0q2q")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b44am"]
+atlas = ExtResource("5_7weky")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mbh2r"]
+atlas = ExtResource("5_7weky")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5aay3"]
+atlas = ExtResource("5_7weky")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fesdc"]
+atlas = ExtResource("5_7weky")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mgll"]
+atlas = ExtResource("5_7weky")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v4s5l"]
+atlas = ExtResource("5_7weky")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7npyh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b44am")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mbh2r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5aay3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fesdc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mgll")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v4s5l")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8l8i3"]
+line_spacing = 1.0
+font = ExtResource("7_tqerj")
+font_size = 15
+font_color = Color(0.165656, 0.165656, 0.165656, 1)
+shadow_size = 0
+shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+shadow_offset = Vector2(1, 0)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3fyjh"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3fyjh"]
+font = ExtResource("7_tqerj")
+font_size = 15
+font_color = Color(0.165656, 0.165656, 0.165656, 1)
+shadow_size = 0
+shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+shadow_offset = Vector2(1, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7npyh"]
+atlas = ExtResource("8_tqerj")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pvbsi"]
+atlas = ExtResource("8_tqerj")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7y8yr"]
+atlas = ExtResource("8_tqerj")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f4wys"]
+atlas = ExtResource("8_tqerj")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c22rw"]
+atlas = ExtResource("8_tqerj")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o1wcc"]
+atlas = ExtResource("8_tqerj")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfd7n"]
+atlas = ExtResource("8_tqerj")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgrjr"]
+atlas = ExtResource("8_tqerj")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_13r8o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7npyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pvbsi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7y8yr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f4wys")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c22rw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o1wcc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfd7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgrjr")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 18.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y1h5q"]
+atlas = ExtResource("9_8lmqk")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8m6ux"]
+atlas = ExtResource("9_8lmqk")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpwng"]
+atlas = ExtResource("9_8lmqk")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2s8q"]
+atlas = ExtResource("9_8lmqk")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvafv"]
+atlas = ExtResource("9_8lmqk")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0u468"]
+atlas = ExtResource("9_8lmqk")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bd8q5"]
+atlas = ExtResource("9_8lmqk")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bw41w"]
+atlas = ExtResource("9_8lmqk")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0tq2e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y1h5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8m6ux")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpwng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2s8q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvafv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0u468")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bd8q5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bw41w")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 18.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ildva"]
+atlas = ExtResource("10_k0q2q")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c5fx8"]
+atlas = ExtResource("10_k0q2q")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_shdjs"]
+atlas = ExtResource("10_k0q2q")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mrdip"]
+atlas = ExtResource("10_k0q2q")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nvegt"]
+atlas = ExtResource("10_k0q2q")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uafyn"]
+atlas = ExtResource("10_k0q2q")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a08q6"]
+atlas = ExtResource("10_k0q2q")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75kr8"]
+atlas = ExtResource("10_k0q2q")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mwkjf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ildva")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c5fx8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_shdjs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mrdip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nvegt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uafyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a08q6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75kr8")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 18.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q02f"]
+atlas = ExtResource("11_6gfwc")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6xv5q"]
+atlas = ExtResource("11_6gfwc")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4740"]
+atlas = ExtResource("11_6gfwc")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vq875"]
+atlas = ExtResource("11_6gfwc")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_akoaw"]
+atlas = ExtResource("11_6gfwc")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7xoao"]
+atlas = ExtResource("11_6gfwc")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ecbwq"]
+atlas = ExtResource("11_6gfwc")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l8ljs"]
+atlas = ExtResource("11_6gfwc")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mmpj1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5q02f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6xv5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4740")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vq875")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_akoaw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7xoao")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ecbwq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l8ljs")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 18.0
+}]
+
+[node name="Mochila" type="Node2D" unique_id=751079971]
+script = ExtResource("1_k0q2q")
+
+[node name="Fe-fondo" type="Sprite2D" parent="." unique_id=2094404189]
+visible = false
+texture_repeat = 2
+scale = Vector2(240, 1)
+texture = ExtResource("1_le18y")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Ma-fondo" type="Sprite2D" parent="." unique_id=1904523632]
+visible = false
+texture_repeat = 2
+scale = Vector2(240, 1)
+texture = ExtResource("2_6y7q2")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Layaout" type="Sprite2D" parent="." unique_id=1265074776]
+texture = ExtResource("3_b8sws")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="mochila-chica" type="AnimatedSprite2D" parent="." unique_id=1171482606]
+visible = false
+position = Vector2(26, 6)
+sprite_frames = SubResource("SpriteFrames_6gfwc")
+frame = 3
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="mochila-chico" type="AnimatedSprite2D" parent="." unique_id=2056330732]
+visible = false
+position = Vector2(26, 6)
+sprite_frames = SubResource("SpriteFrames_7npyh")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="marcador" type="ColorRect" parent="." unique_id=986336285]
+offset_left = 42.0
+offset_top = 75.0
+offset_right = 46.0
+offset_bottom = 79.0
+color = Color(0.972549, 0.721569, 0.690196, 1)
+metadata/_edit_lock_ = true
+
+[node name="Pokeball" type="Sprite2D" parent="." unique_id=1660874662]
+position = Vector2(16, 88)
+texture = ExtResource("6_3fyjh")
+metadata/_edit_lock_ = true
+
+[node name="descripcion" type="Label" parent="." unique_id=1445843873]
+texture_filter = 1
+offset_left = 4.0
+offset_top = 104.0
+offset_right = 109.0
+offset_bottom = 151.0
+text = "Al llevarla, subirá la DEFENSA en un momento de apuro."
+label_settings = SubResource("LabelSettings_8l8i3")
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="clipper" type="Panel" parent="." unique_id=1898986454]
+clip_contents = true
+offset_left = 26.0
+offset_top = 80.0
+offset_right = 102.0
+offset_bottom = 96.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_3fyjh")
+metadata/_edit_lock_ = true
+
+[node name="Bolsillos" type="Node2D" parent="clipper" unique_id=874250213]
+metadata/_edit_lock_ = true
+
+[node name="bolsillo1" type="Label" parent="clipper/Bolsillos" unique_id=1668387525]
+texture_filter = 1
+offset_right = 76.0
+offset_bottom = 15.0
+text = "Objetos"
+label_settings = SubResource("LabelSettings_3fyjh")
+horizontal_alignment = 1
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="bolsillo2" type="Label" parent="clipper/Bolsillos" unique_id=1024521778]
+texture_filter = 1
+offset_left = 76.0
+offset_right = 152.0
+offset_bottom = 15.0
+text = "Poké Balls"
+label_settings = SubResource("LabelSettings_3fyjh")
+horizontal_alignment = 1
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="bolsillo3" type="Label" parent="clipper/Bolsillos" unique_id=1616615883]
+texture_filter = 1
+offset_left = 152.0
+offset_right = 228.0
+offset_bottom = 15.0
+text = "MT / MO"
+label_settings = SubResource("LabelSettings_3fyjh")
+horizontal_alignment = 1
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="bolsillo4" type="Label" parent="clipper/Bolsillos" unique_id=1142071523]
+texture_filter = 1
+offset_left = 228.0
+offset_right = 304.0
+offset_bottom = 15.0
+text = "Bayas"
+label_settings = SubResource("LabelSettings_3fyjh")
+horizontal_alignment = 1
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="bolsillo5" type="Label" parent="clipper/Bolsillos" unique_id=314476440]
+texture_filter = 1
+offset_left = 304.0
+offset_right = 380.0
+offset_bottom = 15.0
+text = "Obj. Clave"
+label_settings = SubResource("LabelSettings_3fyjh")
+horizontal_alignment = 1
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="fondo-lista" type="ColorRect" parent="." unique_id=1589492199]
+offset_left = 112.0
+offset_top = 16.0
+offset_right = 232.0
+offset_bottom = 144.0
+color = Color(0.972549, 0.878431, 0.658824, 1)
+metadata/_edit_lock_ = true
+
+[node name="objeto1" type="RichTextLabel" parent="fondo-lista" unique_id=1084053671]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 16.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("7_tqerj")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[img]res://UI/mochila/txt_mo.png[/img]1 AZUL MARINAR"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="fondo-lista/objeto1" unique_id=1494753503]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "x995"
+label_settings = SubResource("LabelSettings_8l8i3")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+
+[node name="objeto2" type="RichTextLabel" parent="fondo-lista" unique_id=962260531]
+layout_mode = 0
+offset_top = 16.0
+offset_right = 120.0
+offset_bottom = 32.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("7_tqerj")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[img]res://UI/mochila/txt_mo.png[/img]1 AZUL MARINAR"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="fondo-lista/objeto2" unique_id=1309300549]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "x995"
+label_settings = SubResource("LabelSettings_8l8i3")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+
+[node name="objeto3" type="RichTextLabel" parent="fondo-lista" unique_id=813503875]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 120.0
+offset_bottom = 48.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("7_tqerj")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[img]res://UI/mochila/txt_mo.png[/img]1 AZUL MARINAR"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="fondo-lista/objeto3" unique_id=1030699575]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "x995"
+label_settings = SubResource("LabelSettings_8l8i3")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+
+[node name="objeto4" type="RichTextLabel" parent="fondo-lista" unique_id=889771769]
+layout_mode = 0
+offset_top = 48.0
+offset_right = 120.0
+offset_bottom = 64.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("7_tqerj")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[img]res://UI/mochila/txt_mo.png[/img]1 AZUL MARINAR"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="fondo-lista/objeto4" unique_id=744362547]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "x995"
+label_settings = SubResource("LabelSettings_8l8i3")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+
+[node name="objeto5" type="RichTextLabel" parent="fondo-lista" unique_id=2028062723]
+layout_mode = 0
+offset_top = 64.0
+offset_right = 120.0
+offset_bottom = 80.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("7_tqerj")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[img]res://UI/mochila/txt_mo.png[/img]1 AZUL MARINAR"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="fondo-lista/objeto5" unique_id=620038951]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "x995"
+label_settings = SubResource("LabelSettings_8l8i3")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+
+[node name="objeto6" type="RichTextLabel" parent="fondo-lista" unique_id=826075775]
+layout_mode = 0
+offset_top = 80.0
+offset_right = 120.0
+offset_bottom = 96.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("7_tqerj")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[img]res://UI/mochila/txt_mo.png[/img]1 AZUL MARINAR"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="fondo-lista/objeto6" unique_id=595148833]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "x995"
+label_settings = SubResource("LabelSettings_8l8i3")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+
+[node name="objeto7" type="RichTextLabel" parent="fondo-lista" unique_id=603250908]
+layout_mode = 0
+offset_top = 96.0
+offset_right = 120.0
+offset_bottom = 112.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("7_tqerj")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[img]res://UI/mochila/txt_mo.png[/img]1 AZUL MARINAR"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="fondo-lista/objeto7" unique_id=26815317]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "x995"
+label_settings = SubResource("LabelSettings_8l8i3")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+
+[node name="objeto8" type="RichTextLabel" parent="fondo-lista" unique_id=264336000]
+layout_mode = 0
+offset_top = 112.0
+offset_right = 120.0
+offset_bottom = 128.0
+theme_override_colors/default_color = Color(0.164706, 0.164706, 0.164706, 1)
+theme_override_colors/font_shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("7_tqerj")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "[img]res://UI/mochila/txt_mo.png[/img]1 AZUL MARINAR"
+scroll_active = false
+autowrap_mode = 0
+shortcut_keys_enabled = false
+metadata/_edit_lock_ = true
+
+[node name="cantidad" type="Label" parent="fondo-lista/objeto8" unique_id=1675537961]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 120.0
+offset_bottom = 16.0
+text = "x995"
+label_settings = SubResource("LabelSettings_8l8i3")
+horizontal_alignment = 2
+autowrap_mode = 2
+max_lines_visible = 3
+language = "es_AR"
+
+[node name="flecha-izquierda" type="AnimatedSprite2D" parent="." unique_id=1741914510]
+position = Vector2(19, 80)
+sprite_frames = SubResource("SpriteFrames_13r8o")
+frame_progress = 0.740537
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="flecha-derecha" type="AnimatedSprite2D" parent="." unique_id=352352091]
+position = Vector2(93, 80)
+sprite_frames = SubResource("SpriteFrames_0tq2e")
+frame_progress = 0.690059
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="flecha-arriba" type="AnimatedSprite2D" parent="." unique_id=212848104]
+position = Vector2(164, 0)
+sprite_frames = SubResource("SpriteFrames_mwkjf")
+frame_progress = 0.676593
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="flecha-abajo" type="AnimatedSprite2D" parent="." unique_id=380678028]
+position = Vector2(164, 144)
+sprite_frames = SubResource("SpriteFrames_mmpj1")
+frame_progress = 0.838029
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="cursor" type="Control" parent="." unique_id=1971115849]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 111.0
+offset_top = 15.0
+offset_right = 233.0
+offset_bottom = 32.0
+script = ExtResource("13_6gfwc")
+color = Color(0.972549, 0.376471, 0.345098, 1)
+ancho_borde = 1
+metadata/_custom_type_script = "uid://d36hq52xgo0y0"
+metadata/_edit_lock_ = true

@@ -1,0 +1,1440 @@
+[gd_scene format=4 uid="uid://reih4ru1f0ci"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_iq6rm"]
+[ext_resource type="TileSet" uid="uid://cihs7q0xi0yev" path="res://escenas/tileset_interior_edificios_2.tres" id="2_lnsmy"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_o5kpp"]
+[ext_resource type="SpriteFrames" uid="uid://dfpgad0skjl3c" path="res://escenas/avatares/npc_031.tres" id="ag_f_031"]
+[ext_resource type="SpriteFrames" uid="uid://bmiijupbogopu" path="res://escenas/avatares/npc_052.tres" id="ag_f_052"]
+[ext_resource type="SpriteFrames" uid="uid://cyl36dlhko7bi" path="res://escenas/avatares/npc_066.tres" id="ag_f_066"]
+[ext_resource type="SpriteFrames" uid="uid://dvibircwya5sm" path="res://escenas/avatares/npc_105.tres" id="ag_f_105"]
+[ext_resource type="SpriteFrames" uid="uid://cd0fu0lfdudp1" path="res://escenas/avatares/npc_106.tres" id="ag_f_106"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="ag_npc_base"]
+[ext_resource type="PackedScene" uid="uid://gbm5pvhiq1ej" path="res://escenas/avatares/npc_entrenador.tscn" id="ag_npc_entrenador"]
+[ext_resource type="Script" uid="uid://cdyv0uwwmtud2" path="res://escenas/mapas/cartel_condicional.gd" id="ag_s_cartel_cond"]
+[ext_resource type="Script" uid="uid://8uymdhpcd3qe" path="res://scripts/eventos/cartel_evento.gd" id="ag_s_cartel_ev"]
+[ext_resource type="Script" uid="uid://dmy4ir5m1ul04" path="res://scripts/npc/npc_dialogo_condicional.gd" id="ag_s_cond"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="ag_s_evento"]
+[ext_resource type="Script" uid="uid://tretxfa4nu01" path="res://scripts/eventos/ciudad_algaria/evento_gimnasio_algaria.gd" id="ag_s_ev_gim"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="tp_tile_data_map"]
+
+[node name="Gimnasio" type="Node2D" unique_id=1166323007]
+script = ExtResource("1_iq6rm")
+nombre_interno = "ciudad_algaria_gimnasio"
+seccion = "ciudad_algaria"
+esInterior = true
+mapa_exterior_asociado = "ciudad_algaria"
+solo_caminar = true
+musica_mapa = "GIMNASIO"
+escena_batalla = 1
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1664415098]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADwAAAABAAAAAAAAADwAAAACAAAAAAAAADwAAAADAAAAAAAAADwAAAAEAAAAAAAAADwAAAAFAAAAAAAAADwAAAAGAAAAAAAAADwAAAAHAAAAAAAAADwAAAAIAAAAAAAAADwAAAAJAAAAAAAAADwAAAAKAAAAAAAAADwAAAALAAAAAAAAADwAAAAMAAAAAAAAADwAAAANAAAAAAAAADwAAAAOAAAAAAAAADwAAAAPAAAAAAAAADwAAAAQAAAAAAAAADwAAAARAAAAAAAAADwAAAASAAAAAAAAADwAAAATAAAAAAAAADwAAAAAAAEAAAAAAD0AAAABAAEAAAAAAD0AAAACAAEAAAAAAD0AAAADAAEAAAAAAD0AAAAEAAEAAAAAAD0AAAAFAAEAAAAAAD0AAAAGAAEAAAAAAD0AAAAHAAEAAAAAAD0AAAAIAAEAAAAAAD0AAAAJAAEAAAAAAD0AAAAKAAEAAAAAAD0AAAALAAEAAAAAAD0AAAAMAAEAAAAAAD0AAAANAAEAAAAAAD0AAAAOAAEAAAAAAD0AAAAPAAEAAAAAAD0AAAAQAAEAAAAAAD0AAAARAAEAAAAAAD0AAAASAAEAAAAAAD0AAAATAAEAAAAAAD0AAAAAAAIAAAABADYAAAABAAIAAAABADYAAAACAAIAAAABADYAAAADAAIAAAABADYAAAAEAAIAAAABADYAAAAFAAIAAAACADQAAAAGAAIAAAABADUAAAAHAAIAAAABADUAAAAIAAIAAAABADUAAAAJAAIAAAABADUAAAAKAAIAAAABADUAAAALAAIAAAABADUAAAAMAAIAAAABADUAAAANAAIAAAABADUAAAAOAAIAAAAAADgAAAAPAAIAAAABADYAAAAQAAIAAAABADYAAAARAAIAAAABADYAAAASAAIAAAABADYAAAATAAIAAAABADYAAAAAAAMAAAAFADkAAAABAAMAAAAAADYAAAACAAMAAAAAADYAAAADAAMAAAAAADYAAAAEAAMAAAAAADYAAAAFAAMAAAACADQAAAAGAAMAAAAAADYAAAAHAAMAAAADADYAAAAIAAMAAAAGADQAAAAJAAMAAAAHADQAAAAKAAMAAAAEADYAAAALAAMAAAAAADYAAAAMAAMAAAAGADUAAAANAAMAAAACADUAAAAOAAMAAAAAADkAAAAPAAMAAAAAADYAAAAQAAMAAAAAADYAAAARAAMAAAAAADYAAAASAAMAAAAAADYAAAATAAMAAAAAADYAAAAAAAQAAAAFADkAAAABAAQAAAAAADYAAAACAAQAAAAAADYAAAADAAQAAAAAADYAAAAEAAQAAAAAADYAAAAFAAQAAAACADQAAAAGAAQAAAAAADYAAAAHAAQAAAACADYAAAAIAAQAAAACADYAAAAJAAQAAAACADYAAAAKAAQAAAACADYAAAALAAQAAAAAADYAAAAMAAQAAAAAADgAAAANAAQAAAACADUAAAAOAAQAAAAAADkAAAAPAAQAAAAAADYAAAAQAAQAAAAAADYAAAARAAQAAAAAADYAAAASAAQAAAAAADYAAAATAAQAAAAAADYAAAAAAAUAAAAFADkAAAABAAUAAAAAADYAAAACAAUAAAAAADYAAAADAAUAAAAAADYAAAAEAAUAAAAAADYAAAAFAAUAAAAEADUAAAAGAAUAAAABADQAAAAHAAUAAAAFADYAAAAIAAUAAAACADYAAAAJAAUAAAACADYAAAAKAAUAAAAGADYAAAALAAUAAAAAADYAAAAMAAUAAAAAADkAAAANAAUAAAACADUAAAAOAAUAAAAAADkAAAAPAAUAAAAAADYAAAAQAAUAAAAAADYAAAARAAUAAAAAADYAAAASAAUAAAAAADYAAAATAAUAAAAAADYAAAAAAAYAAAAHADYAAAABAAYAAAACADQAAAACAAYAAAAAADcAAAADAAYAAAABADcAAAAEAAYAAAAEADcAAAAFAAYAAAAAADYAAAAGAAYAAAAGADgAAAAHAAYAAAAFADgAAAAIAAYAAAABADcAAAAJAAYAAAABADcAAAAKAAYAAAABADcAAAALAAYAAAABADcAAAAMAAYAAAAGADwAAAANAAYAAAACADkAAAAOAAYAAAAFADwAAAAPAAYAAAAGADgAAAAQAAYAAAAGADgAAAARAAYAAAAGADgAAAASAAYAAAAGADgAAAATAAYAAAAAADYAAAAAAAcAAAAFADkAAAABAAcAAAAAADYAAAACAAcAAAAAADsAAAADAAcAAAAAADYAAAAEAAcAAAAAADkAAAAFAAcAAAAGADkAAAAGAAcAAAACADQAAAAHAAcAAAABADUAAAAIAAcAAAABADUAAAAJAAcAAAABADUAAAAKAAcAAAABADUAAAALAAcAAAABADUAAAAMAAcAAAABADUAAAANAAcAAAABADoAAAAOAAcAAAABADUAAAAPAAcAAAABADUAAAAQAAcAAAABADUAAAARAAcAAAABADUAAAASAAcAAAABADUAAAATAAcAAAAHADkAAAAAAAgAAAAFADkAAAABAAgAAAAAADYAAAACAAgAAAAAADYAAAADAAgAAAAAADYAAAAEAAgAAAAAADkAAAAFAAgAAAAGADkAAAAGAAgAAAADADQAAAAHAAgAAAAFADsAAAAIAAgAAAAHADoAAAAJAAgAAAAFADoAAAAKAAgAAAAFADoAAAALAAgAAAAHADoAAAAMAAgAAAAGADsAAAANAAgAAAACADoAAAAOAAgAAAAGADoAAAAPAAgAAAAHADgAAAAQAAgAAAAHADwAAAARAAgAAAAGADoAAAASAAgAAAADADUAAAATAAgAAAAHADkAAAAAAAkAAAAFADkAAAABAAkAAAAAADYAAAACAAkAAAAAADYAAAADAAkAAAAAADYAAAAEAAkAAAADADgAAAAFAAkAAAAEADcAAAAGAAkAAAADADQAAAAHAAkAAAAEADoAAAAIAAkAAAAHADsAAAAJAAkAAAAEADkAAAAKAAkAAAAEADkAAAALAAkAAAAHADsAAAAMAAkAAAAEADoAAAANAAkAAAACADUAAAAOAAkAAAAEADoAAAAPAAkAAAAEADkAAAAQAAkAAAAHADsAAAARAAkAAAAEADoAAAASAAkAAAADADUAAAATAAkAAAAAADgAAAAAAAoAAAAFADkAAAABAAoAAAAAADYAAAACAAoAAAAAADYAAAADAAoAAAAAADYAAAAEAAoAAAAAADYAAAAFAAoAAAAAADkAAAAGAAoAAAACADQAAAAHAAoAAAAAADkAAAAIAAoAAAAAADsAAAAJAAoAAAAAADYAAAAKAAoAAAAAADYAAAALAAoAAAAAADYAAAAMAAoAAAAAADkAAAANAAoAAAACADUAAAAOAAoAAAAAADkAAAAPAAoAAAAAADYAAAAQAAoAAAAAADYAAAARAAoAAAAAADkAAAASAAoAAAACADUAAAATAAoAAAAAADkAAAAAAAsAAAAFADkAAAABAAsAAAAAADYAAAACAAsAAAAAADYAAAADAAsAAAAAADYAAAAEAAsAAAAAADYAAAAFAAsAAAAAADkAAAAGAAsAAAACADQAAAAHAAsAAAAAADoAAAAIAAsAAAAAADYAAAAJAAsAAAAAADYAAAAKAAsAAAAAADYAAAALAAsAAAAAADYAAAAMAAsAAAAAADkAAAANAAsAAAACADUAAAAOAAsAAAAAADkAAAAPAAsAAAAAADYAAAAQAAsAAAAAADYAAAARAAsAAAAAADkAAAASAAsAAAACADUAAAATAAsAAAAAADkAAAAAAAwAAAAAADcAAAABAAwAAAABADcAAAACAAwAAAACADcAAAADAAwAAAACADQAAAAEAAwAAAACADUAAAAFAAwAAAAAADkAAAAGAAwAAAACADQAAAAHAAwAAAADADcAAAAIAAwAAAABADcAAAAJAAwAAAACADcAAAAKAAwAAAACADQAAAALAAwAAAACADUAAAAMAAwAAAAAADkAAAANAAwAAAACADUAAAAOAAwAAAADADgAAAAPAAwAAAABADcAAAAQAAwAAAABADcAAAARAAwAAAAHADcAAAASAAwAAAACADUAAAATAAwAAAAAADkAAAAAAA0AAAAFADkAAAABAA0AAAAGADgAAAACAA0AAAAGADgAAAADAA0AAAADADkAAAAEAA0AAAACADkAAAAFAA0AAAAFADwAAAAGAA0AAAADADkAAAAHAA0AAAAFADwAAAAIAA0AAAAGADgAAAAJAA0AAAAGADgAAAAKAA0AAAADADkAAAALAA0AAAACADkAAAAMAA0AAAAFADwAAAANAA0AAAACADkAAAAOAA0AAAAGADgAAAAPAA0AAAAGADgAAAAQAA0AAAAAADYAAAARAA0AAAAAADkAAAASAA0AAAACADUAAAATAA0AAAAAADkAAAAAAA4AAAAHAD0AAAABAA4AAAABADQAAAACAA4AAAABADQAAAADAA4AAAABADkAAAAEAA4AAAABADkAAAAFAA4AAAABADQAAAAGAA4AAAABADkAAAAHAA4AAAABADQAAAAIAA4AAAAFADQAAAAJAA4AAAABADQAAAAKAA4AAAABADkAAAALAA4AAAABADkAAAAMAA4AAAABADQAAAANAA4AAAABADkAAAAOAA4AAAABADQAAAAPAA4AAAACADQAAAAQAA4AAAAHADkAAAARAA4AAAAAADoAAAASAA4AAAACADUAAAATAA4AAAAAADkAAAAAAA8AAAAHAD0AAAABAA8AAAADADUAAAACAA8AAAAHADwAAAADAA8AAAADADoAAAAEAA8AAAACADoAAAAFAA8AAAAGADoAAAAGAA8AAAADADoAAAAHAA8AAAAGADoAAAAIAA8AAAADADQAAAAJAA8AAAAHADwAAAAKAA8AAAADADoAAAALAA8AAAACADoAAAAMAA8AAAAGADoAAAANAA8AAAACADoAAAAOAA8AAAAHADwAAAAPAA8AAAADADQAAAAQAA8AAAAHADkAAAARAA8AAAAAADsAAAASAA8AAAACADUAAAATAA8AAAAAADkAAAAAABAAAAAHAD0AAAABABAAAAADADUAAAACABAAAAAHADsAAAADABAAAAACADQAAAAEABAAAAACADUAAAAFABAAAAAEADoAAAAGABAAAAACADQAAAAHABAAAAAEADoAAAAIABAAAAADADQAAAAJABAAAAAHADsAAAAKABAAAAACADQAAAALABAAAAACADUAAAAMABAAAAAEADoAAAANABAAAAACADUAAAAOABAAAAAHADsAAAAPABAAAAADADQAAAAQABAAAAABADQAAAARABAAAAAAADYAAAASABAAAAAAADYAAAATABAAAAAAADkAAAAAABEAAAAAADgAAAABABEAAAACADUAAAACABEAAAAAADgAAAADABEAAAACADQAAAAEABEAAAACADUAAAAFABEAAAAAADkAAAAGABEAAAACADQAAAAHABEAAAAAADkAAAAIABEAAAAAADYAAAAJABEAAAAAADYAAAAKABEAAAACADQAAAALABEAAAACADUAAAAMABEAAAAAADkAAAANABEAAAACADUAAAAOABEAAAABADUAAAAPABEAAAAEADQAAAAQABEAAAABADQAAAARABEAAAAAADYAAAASABEAAAACADUAAAATABEAAAAAADkAAAAAABIAAAAAADkAAAABABIAAAACADUAAAACABIAAAAAADkAAAADABIAAAACADQAAAAEABIAAAACADUAAAAFABIAAAAAADkAAAAGABIAAAACADQAAAAHABIAAAAAADoAAAAIABIAAAAAADYAAAAJABIAAAAAADYAAAAKABIAAAAAADYAAAALABIAAAACADUAAAAMABIAAAADADgAAAANABIAAAABADcAAAAOABIAAAABADcAAAAPABIAAAABADcAAAAQABIAAAACADcAAAARABIAAAAAADYAAAASABIAAAACADUAAAATABIAAAAAADkAAAAAABMAAAAAADkAAAABABMAAAACADUAAAACABMAAAAAADkAAAADABMAAAACADQAAAAEABMAAAACADUAAAAFABMAAAAAADkAAAAGABMAAAAAADYAAAAHABMAAAABADQAAAAIABMAAAAAADYAAAAJABMAAAAAADYAAAAKABMAAAAAADYAAAALABMAAAAAADYAAAAMABMAAAAAADYAAAANABMAAAAAADYAAAAOABMAAAAAADYAAAAPABMAAAAAADYAAAAQABMAAAAAADYAAAARABMAAAAAADgAAAASABMAAAACADUAAAATABMAAAAAADkAAAAAABQAAAAAADkAAAABABQAAAACADUAAAACABQAAAAAADkAAAADABQAAAACADQAAAAEABQAAAACADUAAAAFABQAAAAAADoAAAAGABQAAAACADQAAAAHABQAAAABADQAAAAIABQAAAAAADYAAAAJABQAAAAAADYAAAAKABQAAAAAADYAAAALABQAAAAAADYAAAAMABQAAAAAADYAAAANABQAAAAAADYAAAAOABQAAAAAADYAAAAPABQAAAAAADYAAAAQABQAAAAAADYAAAARABQAAAAAADkAAAASABQAAAACADUAAAATABQAAAAAADkAAAAAABUAAAAAADkAAAABABUAAAACADUAAAACABUAAAAAADoAAAADABUAAAACADQAAAAEABUAAAACADUAAAAFABUAAAABADUAAAAGABUAAAABADUAAAAHABUAAAABADUAAAAIABUAAAAAADYAAAAJABUAAAAAADcAAAAKABUAAAABADcAAAALABUAAAABADcAAAAMABUAAAABADcAAAANABUAAAABADcAAAAOABUAAAABADcAAAAPABUAAAABADcAAAAQABUAAAABADcAAAARABUAAAAHADcAAAASABUAAAACADUAAAATABUAAAAAADkAAAAAABYAAAAAADkAAAABABYAAAACADUAAAACABYAAAAAADYAAAADABYAAAABADQAAAAEABYAAAABADQAAAAFABYAAAABADQAAAAGABYAAAABADQAAAAHABYAAAABADQAAAAIABYAAAABADQAAAAJABYAAAABADQAAAAKABYAAAABADQAAAALABYAAAABADQAAAAMABYAAAABADQAAAANABYAAAABADQAAAAOABYAAAABADQAAAAPABYAAAABADQAAAAQABYAAAACADQAAAARABYAAAAAADkAAAASABYAAAACADUAAAATABYAAAAAADkAAAAAABcAAAAAADkAAAABABcAAAAEADQAAAACABcAAAAAADYAAAADABcAAAABADUAAAAEABcAAAABADUAAAAFABcAAAABADUAAAAGABcAAAABADUAAAAHABcAAAABADUAAAAIABcAAAABADUAAAAJABcAAAABADUAAAAKABcAAAABADUAAAALABcAAAABADUAAAAMABcAAAABADUAAAANABcAAAABADUAAAAOABcAAAABADUAAAAPABcAAAAAADgAAAAQABcAAAACADQAAAARABcAAAAAADkAAAASABcAAAACADUAAAATABcAAAAAADkAAAAAABgAAAAAADkAAAABABgAAAACADUAAAACABgAAAAAADYAAAADABgAAAAAADYAAAAEABgAAAAAADYAAAAFABgAAAAAADsAAAAGABgAAAAAADYAAAAHABgAAAAAADYAAAAIABgAAAAAADYAAAAJABgAAAAAADYAAAAKABgAAAAAADYAAAALABgAAAAAADYAAAAMABgAAAAAADYAAAANABgAAAAAADYAAAAOABgAAAAAADYAAAAPABgAAAAAADkAAAAQABgAAAACADQAAAARABgAAAAAADkAAAASABgAAAACADUAAAATABgAAAAAADkAAAAAABkAAAAAADkAAAABABkAAAACADUAAAACABkAAAAAADgAAAADABkAAAAAADYAAAAEABkAAAAAADYAAAAFABkAAAAAADYAAAAGABkAAAAAADYAAAAHABkAAAAAADYAAAAIABkAAAAAADYAAAAJABkAAAAAADYAAAAKABkAAAAAADYAAAALABkAAAAAADYAAAAMABkAAAAAADYAAAANABkAAAAAADYAAAAOABkAAAAAADYAAAAPABkAAAAAADoAAAAQABkAAAACADQAAAARABkAAAAAADkAAAASABkAAAACADUAAAATABkAAAAAADkAAAAAABoAAAAAADkAAAABABoAAAACADUAAAACABoAAAAAADkAAAADABoAAAAAADYAAAAEABoAAAAAADYAAAAFABoAAAAAADYAAAAGABoAAAAAADYAAAAHABoAAAAAADYAAAAIABoAAAAAADYAAAAJABoAAAAAADYAAAAKABoAAAAAADYAAAALABoAAAAAADYAAAAMABoAAAAAADYAAAANABoAAAAAADYAAAAOABoAAAAAADYAAAAPABoAAAABADUAAAAQABoAAAABADUAAAARABoAAAAAADkAAAASABoAAAACADUAAAATABoAAAAAADkAAAAAABsAAAAAADkAAAABABsAAAACADUAAAACABsAAAADADgAAAADABsAAAABADcAAAAEABsAAAABADcAAAAFABsAAAABADcAAAAGABsAAAACADcAAAAHABsAAAAEADwAAAAIABsAAAAAADYAAAAJABsAAAAAADYAAAAKABsAAAAAADYAAAALABsAAAAEADwAAAAMABsAAAAAADcAAAANABsAAAABADcAAAAOABsAAAABADcAAAAPABsAAAABADcAAAAQABsAAAABADcAAAARABsAAAAEADgAAAASABsAAAACADUAAAATABsAAAAAADkAAAAAABwAAAAAADkAAAABABwAAAACADUAAAACABwAAAABADUAAAADABwAAAABADUAAAAEABwAAAABADUAAAAFABwAAAABADUAAAAGABwAAAABADUAAAAHABwAAAADADsAAAAIABwAAAAAADYAAAAJABwAAAAAADYAAAAKABwAAAAAADYAAAALABwAAAADADsAAAAMABwAAAABADQAAAANABwAAAABADQAAAAOABwAAAABADQAAAAPABwAAAABADQAAAAQABwAAAABADQAAAARABwAAAABADQAAAASABwAAAACADUAAAATABwAAAAAADkAAAAAAB0AAAAAADoAAAABAB0AAAAAADYAAAACAB0AAAAAADYAAAADAB0AAAAAADYAAAAEAB0AAAAAADYAAAAFAB0AAAAAADYAAAAGAB0AAAAAADYAAAAHAB0AAAAAADYAAAAIAB0AAAAAADYAAAAJAB0AAAABADgAAAAKAB0AAAACADgAAAALAB0AAAAAADYAAAAMAB0AAAAAADYAAAANAB0AAAAAADYAAAAOAB0AAAAHADUAAAAPAB0AAAAAADYAAAAQAB0AAAAAADYAAAARAB0AAAAAADYAAAASAB0AAAAAADYAAAATAB0AAAAAADoAAAA=")
+tile_set = ExtResource("2_lnsmy")
+
+[node name="Puente" type="TileMapLayer" parent="." unique_id=1204964066]
+z_index = 10
+tile_map_data = PackedByteArray("AAAHAAcAAAABADUAAAAIAAcAAAABADUAAAAJAAcAAAABADUAAAAKAAcAAAABADUAAAALAAcAAAABADUAAAAMAAcAAAABADUAAAANAAcAAAABADoAAAAOAAcAAAABADUAAAAPAAcAAAABADUAAAAQAAcAAAABADUAAAARAAcAAAABADUAAAACAA4AAAABADQAAAADAA4AAAABADkAAAAEAA4AAAABADkAAAAFAA4AAAABADQAAAAGAA4AAAABADkAAAAHAA4AAAABADQAAAAIAA4AAAAFADQAAAAJAA4AAAABADQAAAAKAA4AAAABADkAAAALAA4AAAABADkAAAAMAA4AAAABADQAAAANAA4AAAABADkAAAAOAA4AAAABADQAAAAQAAgAAAAFAD0AAAALAAgAAAAFAD0AAAAIAAgAAAAFAD0AAAARAAgAAAAEAD0AAAAPAAgAAAAEAD0AAAAOAAgAAAAEAD0AAAANAAgAAAAEAD0AAAAMAAgAAAAEAD0AAAAKAAgAAAAEAD0AAAAJAAgAAAAEAD0AAAAHAAgAAAAEAD0AAAANAA8AAAAEAD0AAAAMAA8AAAAEAD0AAAALAA8AAAAEAD0AAAAKAA8AAAAEAD0AAAAHAA8AAAAEAD0AAAAGAA8AAAAEAD0AAAAFAA8AAAAEAD0AAAAEAA8AAAAEAD0AAAADAA8AAAAEAD0AAAACAA8AAAAFAD0AAAAJAA8AAAAFAD0AAAAOAA8AAAAFAD0AAAALABoAAAAEADsAAAAHABoAAAAEADsAAAAPAA4AAAACADQAAAAGAAcAAAACADQAAAA=")
+tile_set = ExtResource("2_lnsmy")
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=378686642]
+script = ExtResource("tp_tile_data_map")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,12": {
+"flags": 1
+},
+"0,17": {
+"flags": 1
+},
+"0,18": {
+"flags": 1
+},
+"0,19": {
+"flags": 1
+},
+"0,20": {
+"flags": 1
+},
+"0,21": {
+"flags": 1
+},
+"0,22": {
+"flags": 1
+},
+"0,23": {
+"flags": 1
+},
+"0,24": {
+"flags": 1
+},
+"0,25": {
+"flags": 1
+},
+"0,26": {
+"flags": 1
+},
+"0,27": {
+"flags": 1
+},
+"0,28": {
+"flags": 1
+},
+"0,29": {
+"flags": 1
+},
+"0,6": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,12": {
+"flags": 1
+},
+"1,14": {
+"flags": 824633720832
+},
+"1,15": {
+"flags": 584115552384
+},
+"1,16": {
+"flags": 584115552256
+},
+"1,17": {
+"flags": 584115552256
+},
+"1,18": {
+"flags": 584115552256
+},
+"1,19": {
+"flags": 584115552256
+},
+"1,20": {
+"flags": 584115552256
+},
+"1,21": {
+"flags": 584115552256
+},
+"1,22": {
+"flags": 584115552256
+},
+"1,23": {
+"flags": 274877906944
+},
+"1,24": {
+"flags": 584115552256
+},
+"1,25": {
+"flags": 584115552256
+},
+"1,26": {
+"flags": 584115552256
+},
+"1,27": {
+"flags": 584115552256
+},
+"1,28": {
+"flags": 584115552256
+},
+"1,6": {
+"flags": 618475290624
+},
+"10,1": {
+"flags": 1
+},
+"10,12": {
+"flags": 618475290624
+},
+"10,13": {
+"flags": 618475290624
+},
+"10,14": {
+"flags": 17179869184
+},
+"10,15": {
+"flags": 618475290624
+},
+"10,16": {
+"flags": 618475290624
+},
+"10,17": {
+"flags": 618475290624
+},
+"10,2": {
+"flags": 687194767360
+},
+"10,21": {
+"flags": 1
+},
+"10,22": {
+"flags": 824633720832
+},
+"10,23": {
+"flags": 687194767360
+},
+"10,6": {
+"flags": 1
+},
+"10,7": {
+"flags": 687194767360
+},
+"10,8": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,12": {
+"flags": 584115552256
+},
+"11,13": {
+"flags": 584115552256
+},
+"11,14": {
+"flags": 17179869184
+},
+"11,15": {
+"flags": 584115552256
+},
+"11,16": {
+"flags": 584115552256
+},
+"11,17": {
+"flags": 584115552256
+},
+"11,18": {
+"flags": 584115552256
+},
+"11,2": {
+"flags": 687194767360
+},
+"11,21": {
+"flags": 1
+},
+"11,22": {
+"flags": 824633720832
+},
+"11,23": {
+"flags": 687194767360
+},
+"11,27": {
+"flags": 1
+},
+"11,6": {
+"flags": 1
+},
+"11,7": {
+"flags": 687194767360
+},
+"11,8": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,10": {
+"flags": 1
+},
+"12,11": {
+"flags": 1
+},
+"12,12": {
+"flags": 1
+},
+"12,13": {
+"flags": 1
+},
+"12,14": {
+"flags": 824633720832
+},
+"12,15": {
+"flags": 1
+},
+"12,16": {
+"flags": 1
+},
+"12,17": {
+"flags": 1
+},
+"12,18": {
+"flags": 1
+},
+"12,2": {
+"flags": 687194767360
+},
+"12,21": {
+"flags": 1
+},
+"12,22": {
+"flags": 824633720832
+},
+"12,23": {
+"flags": 687194767360
+},
+"12,27": {
+"flags": 1
+},
+"12,28": {
+"flags": 824633720832
+},
+"12,4": {
+"flags": 1
+},
+"12,5": {
+"flags": 1
+},
+"12,6": {
+"flags": 1
+},
+"12,7": {
+"flags": 687194767360
+},
+"12,8": {
+"flags": 1
+},
+"12,9": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,10": {
+"flags": 584115552256
+},
+"13,11": {
+"flags": 584115552256
+},
+"13,12": {
+"flags": 584115552256
+},
+"13,13": {
+"flags": 584115552256
+},
+"13,14": {
+"flags": 17179869184
+},
+"13,15": {
+"flags": 584115552256
+},
+"13,16": {
+"flags": 584115552256
+},
+"13,17": {
+"flags": 584115552256
+},
+"13,18": {
+"flags": 1
+},
+"13,2": {
+"flags": 687194767360
+},
+"13,21": {
+"flags": 1
+},
+"13,22": {
+"flags": 824633720832
+},
+"13,23": {
+"flags": 687194767360
+},
+"13,27": {
+"flags": 1
+},
+"13,28": {
+"flags": 824633720832
+},
+"13,3": {
+"flags": 584115552256
+},
+"13,4": {
+"flags": 584115552256
+},
+"13,5": {
+"flags": 584115552256
+},
+"13,6": {
+"flags": 584115552256
+},
+"13,7": {
+"flags": 17179869184
+},
+"13,8": {
+"flags": 584115552256
+},
+"13,9": {
+"flags": 584115552256
+},
+"14,10": {
+"flags": 1
+},
+"14,11": {
+"flags": 1
+},
+"14,12": {
+"flags": 1
+},
+"14,14": {
+"flags": 824633720832
+},
+"14,15": {
+"flags": 1
+},
+"14,17": {
+"flags": 687194767360
+},
+"14,18": {
+"flags": 1
+},
+"14,2": {
+"flags": 1
+},
+"14,21": {
+"flags": 1
+},
+"14,22": {
+"flags": 824633720832
+},
+"14,23": {
+"flags": 687194767360
+},
+"14,27": {
+"flags": 1
+},
+"14,28": {
+"flags": 824633720832
+},
+"14,3": {
+"flags": 1
+},
+"14,4": {
+"flags": 1
+},
+"14,5": {
+"flags": 1
+},
+"14,6": {
+"flags": 1
+},
+"14,7": {
+"flags": 687194767360
+},
+"14,8": {
+"flags": 1
+},
+"14,9": {
+"flags": 1
+},
+"15,1": {
+"flags": 1
+},
+"15,12": {
+"flags": 1
+},
+"15,14": {
+"flags": 618475290624
+},
+"15,15": {
+"flags": 618475290752
+},
+"15,16": {
+"flags": 618475290624
+},
+"15,17": {
+"flags": 274877906944
+},
+"15,18": {
+"flags": 1
+},
+"15,21": {
+"flags": 1
+},
+"15,22": {
+"flags": 824633720832
+},
+"15,23": {
+"flags": 1
+},
+"15,24": {
+"flags": 1
+},
+"15,25": {
+"flags": 1
+},
+"15,26": {
+"flags": 687194767360
+},
+"15,27": {
+"flags": 1
+},
+"15,28": {
+"flags": 824633720832
+},
+"15,7": {
+"flags": 687194767360
+},
+"16,1": {
+"flags": 1
+},
+"16,12": {
+"flags": 1
+},
+"16,16": {
+"flags": 824633720832
+},
+"16,17": {
+"flags": 824633720832
+},
+"16,18": {
+"flags": 1
+},
+"16,21": {
+"flags": 1
+},
+"16,22": {
+"flags": 618475290624
+},
+"16,23": {
+"flags": 618475290624
+},
+"16,24": {
+"flags": 618475290624
+},
+"16,25": {
+"flags": 618475290624
+},
+"16,26": {
+"flags": 687194767360
+},
+"16,27": {
+"flags": 1
+},
+"16,28": {
+"flags": 824633720832
+},
+"16,7": {
+"flags": 687194767360
+},
+"16,8": {
+"flags": 1
+},
+"17,1": {
+"flags": 1
+},
+"17,10": {
+"flags": 1
+},
+"17,11": {
+"flags": 1
+},
+"17,12": {
+"flags": 1
+},
+"17,13": {
+"flags": 1
+},
+"17,14": {
+"flags": 1
+},
+"17,15": {
+"flags": 1
+},
+"17,19": {
+"flags": 1
+},
+"17,20": {
+"flags": 1
+},
+"17,21": {
+"flags": 1
+},
+"17,22": {
+"flags": 1
+},
+"17,23": {
+"flags": 1
+},
+"17,24": {
+"flags": 1
+},
+"17,25": {
+"flags": 1
+},
+"17,26": {
+"flags": 1
+},
+"17,27": {
+"flags": 1
+},
+"17,28": {
+"flags": 824633720832
+},
+"17,7": {
+"flags": 687194767360
+},
+"17,8": {
+"flags": 1
+},
+"17,9": {
+"flags": 1
+},
+"18,1": {
+"flags": 1
+},
+"18,10": {
+"flags": 584115552256
+},
+"18,11": {
+"flags": 584115552256
+},
+"18,12": {
+"flags": 584115552256
+},
+"18,13": {
+"flags": 584115552256
+},
+"18,14": {
+"flags": 584115552256
+},
+"18,15": {
+"flags": 584115552256
+},
+"18,17": {
+"flags": 584115552256
+},
+"18,18": {
+"flags": 584115552256
+},
+"18,19": {
+"flags": 584115552256
+},
+"18,20": {
+"flags": 584115552256
+},
+"18,21": {
+"flags": 584115552256
+},
+"18,22": {
+"flags": 584115552256
+},
+"18,23": {
+"flags": 584115552256
+},
+"18,24": {
+"flags": 584115552256
+},
+"18,25": {
+"flags": 584115552256
+},
+"18,26": {
+"flags": 584115552256
+},
+"18,27": {
+"flags": 584115552256
+},
+"18,28": {
+"flags": 584115552256
+},
+"18,7": {
+"flags": 687194767360
+},
+"18,8": {
+"flags": 584115552384
+},
+"18,9": {
+"flags": 584115552256
+},
+"19,1": {
+"flags": 1
+},
+"19,10": {
+"flags": 1
+},
+"19,11": {
+"flags": 1
+},
+"19,12": {
+"flags": 1
+},
+"19,13": {
+"flags": 1
+},
+"19,14": {
+"flags": 1
+},
+"19,15": {
+"flags": 1
+},
+"19,16": {
+"flags": 1
+},
+"19,17": {
+"flags": 1
+},
+"19,18": {
+"flags": 1
+},
+"19,19": {
+"flags": 1
+},
+"19,20": {
+"flags": 1
+},
+"19,21": {
+"flags": 1
+},
+"19,22": {
+"flags": 1
+},
+"19,23": {
+"flags": 1
+},
+"19,24": {
+"flags": 1
+},
+"19,25": {
+"flags": 1
+},
+"19,26": {
+"flags": 1
+},
+"19,27": {
+"flags": 1
+},
+"19,28": {
+"flags": 1
+},
+"19,29": {
+"flags": 1
+},
+"19,9": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,12": {
+"flags": 1
+},
+"2,14": {
+"flags": 824633720832
+},
+"2,15": {
+"flags": 1
+},
+"2,17": {
+"flags": 1
+},
+"2,18": {
+"flags": 1
+},
+"2,19": {
+"flags": 1
+},
+"2,20": {
+"flags": 1
+},
+"2,21": {
+"flags": 1
+},
+"2,25": {
+"flags": 1
+},
+"2,26": {
+"flags": 1
+},
+"2,27": {
+"flags": 1
+},
+"2,28": {
+"flags": 687194767360
+},
+"2,6": {
+"flags": 1
+},
+"2,7": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,12": {
+"flags": 618475290624
+},
+"3,13": {
+"flags": 618475290624
+},
+"3,14": {
+"flags": 17179869184
+},
+"3,15": {
+"flags": 618475290624
+},
+"3,16": {
+"flags": 618475290624
+},
+"3,17": {
+"flags": 618475290624
+},
+"3,18": {
+"flags": 618475290624
+},
+"3,19": {
+"flags": 618475290624
+},
+"3,20": {
+"flags": 618475290624
+},
+"3,21": {
+"flags": 618475290624
+},
+"3,22": {
+"flags": 824633720832
+},
+"3,23": {
+"flags": 687194767360
+},
+"3,27": {
+"flags": 1
+},
+"3,28": {
+"flags": 687194767360
+},
+"3,6": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,12": {
+"flags": 584115552256
+},
+"4,13": {
+"flags": 584115552256
+},
+"4,14": {
+"flags": 17179869184
+},
+"4,15": {
+"flags": 584115552256
+},
+"4,16": {
+"flags": 584115552256
+},
+"4,17": {
+"flags": 584115552256
+},
+"4,18": {
+"flags": 584115552256
+},
+"4,19": {
+"flags": 584115552256
+},
+"4,20": {
+"flags": 584115552256
+},
+"4,21": {
+"flags": 584115552256
+},
+"4,22": {
+"flags": 824633720832
+},
+"4,23": {
+"flags": 687194767360
+},
+"4,27": {
+"flags": 1
+},
+"4,28": {
+"flags": 687194767360
+},
+"4,6": {
+"flags": 1
+},
+"4,7": {
+"flags": 1
+},
+"4,8": {
+"flags": 1
+},
+"4,9": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,10": {
+"flags": 1
+},
+"5,11": {
+"flags": 1
+},
+"5,12": {
+"flags": 1
+},
+"5,13": {
+"flags": 1
+},
+"5,14": {
+"flags": 824633720832
+},
+"5,15": {
+"flags": 1
+},
+"5,16": {
+"flags": 1
+},
+"5,17": {
+"flags": 1
+},
+"5,18": {
+"flags": 1
+},
+"5,19": {
+"flags": 1
+},
+"5,2": {
+"flags": 618475290624
+},
+"5,20": {
+"flags": 1
+},
+"5,21": {
+"flags": 687194767360
+},
+"5,22": {
+"flags": 824633720832
+},
+"5,23": {
+"flags": 687194767360
+},
+"5,24": {
+"flags": 1
+},
+"5,27": {
+"flags": 1
+},
+"5,28": {
+"flags": 687194767360
+},
+"5,3": {
+"flags": 618475290624
+},
+"5,4": {
+"flags": 618475290624
+},
+"5,5": {
+"flags": 137438953472
+},
+"5,9": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,10": {
+"flags": 618475290624
+},
+"6,11": {
+"flags": 618475290624
+},
+"6,12": {
+"flags": 618475290624
+},
+"6,13": {
+"flags": 618475290624
+},
+"6,14": {
+"flags": 17179869184
+},
+"6,15": {
+"flags": 618475290624
+},
+"6,16": {
+"flags": 618475290624
+},
+"6,17": {
+"flags": 618475290624
+},
+"6,18": {
+"flags": 618475290624
+},
+"6,2": {
+"flags": 687194767360
+},
+"6,20": {
+"flags": 618475290624
+},
+"6,21": {
+"flags": 687194767360
+},
+"6,22": {
+"flags": 824633720832
+},
+"6,23": {
+"flags": 687194767360
+},
+"6,27": {
+"flags": 1
+},
+"6,28": {
+"flags": 687194767360
+},
+"6,5": {
+"flags": 824633720832
+},
+"6,7": {
+"flags": 618475290624
+},
+"6,8": {
+"flags": 618475290752
+},
+"6,9": {
+"flags": 618475290624
+},
+"7,1": {
+"flags": 1
+},
+"7,10": {
+"flags": 1
+},
+"7,11": {
+"flags": 1
+},
+"7,12": {
+"flags": 1
+},
+"7,13": {
+"flags": 1
+},
+"7,14": {
+"flags": 824633720832
+},
+"7,15": {
+"flags": 1
+},
+"7,16": {
+"flags": 1
+},
+"7,17": {
+"flags": 1
+},
+"7,18": {
+"flags": 1
+},
+"7,19": {
+"flags": 824633720832
+},
+"7,2": {
+"flags": 687194767360
+},
+"7,20": {
+"flags": 824633720832
+},
+"7,21": {
+"flags": 687194767360
+},
+"7,22": {
+"flags": 824633720832
+},
+"7,23": {
+"flags": 687194767360
+},
+"7,27": {
+"flags": 1
+},
+"7,6": {
+"flags": 1
+},
+"7,7": {
+"flags": 687194767360
+},
+"7,8": {
+"flags": 1
+},
+"7,9": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,10": {
+"flags": 1
+},
+"8,12": {
+"flags": 1
+},
+"8,14": {
+"flags": 68719476736
+},
+"8,15": {
+"flags": 618475290752
+},
+"8,16": {
+"flags": 618475290624
+},
+"8,2": {
+"flags": 687194767360
+},
+"8,22": {
+"flags": 824633720832
+},
+"8,23": {
+"flags": 687194767360
+},
+"8,6": {
+"flags": 1
+},
+"8,7": {
+"flags": 687194767360
+},
+"8,8": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,12": {
+"flags": 1
+},
+"9,14": {
+"flags": 824633720832
+},
+"9,15": {
+"flags": 1
+},
+"9,2": {
+"flags": 687194767360
+},
+"9,21": {
+"flags": 1
+},
+"9,22": {
+"flags": 824633720832
+},
+"9,23": {
+"flags": 687194767360
+},
+"9,6": {
+"flags": 1
+},
+"9,7": {
+"flags": 687194767360
+},
+"9,8": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="DataPuente" type="Node2D" parent="." unique_id=547577437]
+script = ExtResource("tp_tile_data_map")
+layer_id = 1
+tile_data = {
+"1,14": {
+"flags": 824633720832
+},
+"1,15": {
+"flags": 584115552256
+},
+"1,16": {
+"flags": 584115552512
+},
+"10,14": {
+"flags": 824633720832
+},
+"10,7": {
+"flags": 687194767360
+},
+"11,14": {
+"flags": 824633720832
+},
+"11,7": {
+"flags": 687194767360
+},
+"12,14": {
+"flags": 824633720832
+},
+"12,7": {
+"flags": 687194767360
+},
+"13,14": {
+"flags": 824633720832
+},
+"13,7": {
+"flags": 687194767360
+},
+"14,14": {
+"flags": 824633720832
+},
+"14,7": {
+"flags": 687194767360
+},
+"15,14": {
+"flags": 618475290624
+},
+"15,15": {
+"flags": 618475290624
+},
+"15,16": {
+"flags": 618475290880
+},
+"15,7": {
+"flags": 687194767360
+},
+"16,7": {
+"flags": 687194767360
+},
+"17,7": {
+"flags": 687194767360
+},
+"18,7": {
+"flags": 687194767360
+},
+"18,8": {
+"flags": 584115552256
+},
+"18,9": {
+"flags": 584115552512
+},
+"2,14": {
+"flags": 824633720832
+},
+"3,14": {
+"flags": 824633720832
+},
+"4,14": {
+"flags": 824633720832
+},
+"5,14": {
+"flags": 824633720832
+},
+"6,14": {
+"flags": 824633720832
+},
+"6,7": {
+"flags": 618475290624
+},
+"6,8": {
+"flags": 618475290624
+},
+"6,9": {
+"flags": 618475290880
+},
+"7,14": {
+"flags": 824633720832
+},
+"7,7": {
+"flags": 687194767360
+},
+"8,14": {
+"flags": 618475290624
+},
+"8,15": {
+"flags": 618475290624
+},
+"8,16": {
+"flags": 618475290880
+},
+"8,7": {
+"flags": 687194767360
+},
+"9,14": {
+"flags": 824633720832
+},
+"9,7": {
+"flags": 687194767360
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=188507344]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Vito" parent="NPCs" unique_id=807695300 instance=ExtResource("ag_npc_base")]
+editor_description = "pokeruby MossdeepCity_Gym objeto 0 (8,3) TATE (VITO) FACE_DOWN: combate DOBLE de LÍDER con LETI (TRAINER_TATE_AND_LIZA 271), MEDALLA MENTE y MT04. Lo dirige Eventos/EventoGimnasioAlgaria"
+position = Vector2(136, 62)
+script = ExtResource("ag_s_evento")
+id_texto = "ALGARIA_GIMNASIO_VITO_INI"
+selec_frames = ExtResource("ag_f_106")
+coord = Vector2i(8, 3)
+
+[node name="Leti" parent="NPCs" unique_id=535083366 instance=ExtResource("ag_npc_base")]
+editor_description = "pokeruby MossdeepCity_Gym objeto 8 (9,3) LIZA (LETI) FACE_DOWN: mismo script que VITO. Lo dirige Eventos/EventoGimnasioAlgaria"
+position = Vector2(152, 62)
+script = ExtResource("ag_s_evento")
+id_texto = "ALGARIA_GIMNASIO_VITO_INI"
+selec_frames = ExtResource("ag_f_105")
+coord = Vector2i(9, 3)
+
+[node name="Patricio" parent="NPCs" unique_id=899610482 instance=ExtResource("ag_npc_entrenador")]
+editor_description = "pokeruby MossdeepCity_Gym PSYCHIC_M (2,24) FACE_UP, TRAINER_TYPE_NORMAL visión 1: TRAINER_PRESTON (Rubí 233)"
+position = Vector2(40, 398)
+npc_id = "ciudad_algaria_gimnasio_patricio"
+entrenador_id = 233
+rango_vision = 1
+texto_post_combate = "ALGARIA_GIMNASIO_PATRICIO_POST"
+id_texto = "ALGARIA_GIMNASIO_PATRICIO_INI"
+tipo_movimiento = 7
+selec_frames = ExtResource("ag_f_031")
+coord = Vector2i(2, 24)
+
+[node name="Virgilio" parent="NPCs" unique_id=1955504671 instance=ExtResource("ag_npc_entrenador")]
+editor_description = "pokeruby MossdeepCity_Gym PSYCHIC_M (0,7) FACE_RIGHT, TRAINER_TYPE_NORMAL visión 1: TRAINER_VIRGIL (Rubí 234)"
+position = Vector2(8, 126)
+npc_id = "ciudad_algaria_gimnasio_virgilio"
+entrenador_id = 234
+rango_vision = 1
+texto_post_combate = "ALGARIA_GIMNASIO_VIRGILIO_POST"
+id_texto = "ALGARIA_GIMNASIO_VIRGILIO_INI"
+tipo_movimiento = 10
+selec_frames = ExtResource("ag_f_031")
+coord = Vector2i(0, 7)
+
+[node name="Fede" parent="NPCs" unique_id=1262293930 instance=ExtResource("ag_npc_entrenador")]
+editor_description = "pokeruby MossdeepCity_Gym PSYCHIC_M (17,18) FACE_UP, TRAINER_TYPE_NORMAL visión 1: TRAINER_FRITZ (Rubí 235)"
+position = Vector2(280, 302)
+npc_id = "ciudad_algaria_gimnasio_fede"
+entrenador_id = 235
+rango_vision = 1
+texto_post_combate = "ALGARIA_GIMNASIO_FEDE_POST"
+id_texto = "ALGARIA_GIMNASIO_FEDE_INI"
+tipo_movimiento = 7
+selec_frames = ExtResource("ag_f_031")
+coord = Vector2i(17, 18)
+
+[node name="Ana" parent="NPCs" unique_id=799555882 instance=ExtResource("ag_npc_entrenador")]
+editor_description = "pokeruby MossdeepCity_Gym LASS (4,3) FACE_DOWN, TRAINER_TYPE_NORMAL visión 2: TRAINER_HANNAH (Rubí 244)"
+position = Vector2(72, 62)
+npc_id = "ciudad_algaria_gimnasio_ana"
+entrenador_id = 244
+rango_vision = 2
+texto_post_combate = "ALGARIA_GIMNASIO_ANA_POST"
+id_texto = "ALGARIA_GIMNASIO_ANA_INI"
+tipo_movimiento = 8
+selec_frames = ExtResource("ag_f_066")
+coord = Vector2i(4, 3)
+
+[node name="Samanta" parent="NPCs" unique_id=41637709 instance=ExtResource("ag_npc_entrenador")]
+editor_description = "pokeruby MossdeepCity_Gym LASS (11,10) FACE_DOWN, TRAINER_TYPE_NORMAL visión 1: TRAINER_SAMANTHA (Rubí 245)"
+position = Vector2(184, 174)
+npc_id = "ciudad_algaria_gimnasio_samanta"
+entrenador_id = 245
+rango_vision = 1
+texto_post_combate = "ALGARIA_GIMNASIO_SAMANTA_POST"
+id_texto = "ALGARIA_GIMNASIO_SAMANTA_INI"
+tipo_movimiento = 8
+selec_frames = ExtResource("ag_f_066")
+coord = Vector2i(11, 10)
+
+[node name="Magda" parent="NPCs" unique_id=1796080851 instance=ExtResource("ag_npc_entrenador")]
+editor_description = "pokeruby MossdeepCity_Gym LASS (9,17) FACE_LEFT, TRAINER_TYPE_NORMAL visión 1: TRAINER_MAURA (Rubí 246)"
+position = Vector2(152, 286)
+npc_id = "ciudad_algaria_gimnasio_magda"
+entrenador_id = 246
+rango_vision = 1
+texto_post_combate = "ALGARIA_GIMNASIO_MAGDA_POST"
+id_texto = "ALGARIA_GIMNASIO_MAGDA_INI"
+selec_frames = ExtResource("ag_f_066")
+coord = Vector2i(9, 17)
+
+[node name="Guia" parent="NPCs" unique_id=1348268580 instance=ExtResource("ag_npc_base")]
+editor_description = "pokeruby MossdeepCity_Gym objeto 7 (8,29) MAN_2 FACE_RIGHT, GymGuide: cambia con FLAG_DEFEATED_MOSSDEEP_GYM"
+position = Vector2(136, 478)
+script = ExtResource("ag_s_cond")
+textos_condicionales = Dictionary[String, String]({
+"MEDALLA_7": "ALGARIA_GIMNASIO_GUIA_VICTORIA"
+})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "ALGARIA_GIMNASIO_GUIA_CONSEJO"
+tipo_movimiento = 10
+selec_frames = ExtResource("ag_f_052")
+coord = Vector2i(8, 29)
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1943709852]
+position = Vector2(152, 470)
+script = ExtResource("3_o5kpp")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_algaria"
+posicion_destino = Vector2(38, 9)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=910951921]
+position = Vector2(168, 470)
+script = ExtResource("3_o5kpp")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_algaria"
+posicion_destino = Vector2(38, 9)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=988614175]
+
+[node name="EstatuaIzquierda" type="Sprite2D" parent="Carteles" unique_id=1394554525 groups=["Cartel"]]
+editor_description = "pokeruby MossdeepCity_Gym bg_event LeftGymStatue (7,27), solo mirando al norte; FLAG_BADGE07_GET -> certificado"
+position = Vector2(120, 440)
+script = ExtResource("ag_s_cartel_cond")
+textos_condicionales = Dictionary[String, String]({
+"MEDALLA_7": "ALGARIA_GIMNASIO_ESTATUA_CERTIFICADA"
+})
+id_texto = "ALGARIA_GIMNASIO_ESTATUA"
+coord_tile = Vector2i(7, 27)
+direccion = 1
+
+[node name="EstatuaDerecha" type="Sprite2D" parent="Carteles" unique_id=430413032 groups=["Cartel"]]
+editor_description = "pokeruby MossdeepCity_Gym bg_event RightGymStatue (11,27), solo mirando al norte; FLAG_BADGE07_GET -> certificado"
+position = Vector2(184, 440)
+script = ExtResource("ag_s_cartel_cond")
+textos_condicionales = Dictionary[String, String]({
+"MEDALLA_7": "ALGARIA_GIMNASIO_ESTATUA_CERTIFICADA"
+})
+id_texto = "ALGARIA_GIMNASIO_ESTATUA"
+coord_tile = Vector2i(11, 27)
+direccion = 1
+
+[node name="Interruptor1" type="Sprite2D" parent="Carteles" unique_id=1376129951 groups=["Cartel"]]
+editor_description = "pokeruby MossdeepCity_Gym bg_event Switch1 (2,7), PLAYER_FACING_ANY: lo resuelve Eventos/EventoGimnasioAlgaria"
+position = Vector2(40, 120)
+script = ExtResource("ag_s_cartel_ev")
+coord_tile = Vector2i(2, 7)
+
+[node name="Interruptor2" type="Sprite2D" parent="Carteles" unique_id=801953233 groups=["Cartel"]]
+editor_description = "pokeruby MossdeepCity_Gym bg_event Switch2 (8,10), PLAYER_FACING_ANY: lo resuelve Eventos/EventoGimnasioAlgaria"
+position = Vector2(136, 168)
+script = ExtResource("ag_s_cartel_ev")
+coord_tile = Vector2i(8, 10)
+
+[node name="Interruptor3" type="Sprite2D" parent="Carteles" unique_id=691253310 groups=["Cartel"]]
+editor_description = "pokeruby MossdeepCity_Gym bg_event Switch3 (17,15), PLAYER_FACING_ANY: lo resuelve Eventos/EventoGimnasioAlgaria"
+position = Vector2(280, 248)
+script = ExtResource("ag_s_cartel_ev")
+coord_tile = Vector2i(17, 15)
+
+[node name="Interruptor4" type="Sprite2D" parent="Carteles" unique_id=1102287166 groups=["Cartel"]]
+editor_description = "pokeruby MossdeepCity_Gym bg_event Switch4 (5,24), PLAYER_FACING_ANY: lo resuelve Eventos/EventoGimnasioAlgaria"
+position = Vector2(88, 392)
+script = ExtResource("ag_s_cartel_ev")
+coord_tile = Vector2i(5, 24)
+
+[node name="Plataforma" type="Sprite2D" parent="." unique_id=534634860]
+editor_description = "pokeruby MossdeepCity_Gym coord_event (12,3) MB_AQUA_HIDEOUT_WARP: warpteleport a la entrada (14,29) del mismo mapa"
+position = Vector2(200, 54)
+script = ExtResource("3_o5kpp")
+ruta_mapa_destino = "ciudad_algaria_gimnasio"
+posicion_destino = Vector2(14, 29)
+modo_direccion = 1
+sonido_salida = &"SE_WARP_IN"
+sonido_llegada = &"SE_WARP_OUT"
+
+[node name="Eventos" type="Node2D" parent="." unique_id=338073220]
+
+[node name="EventoGimnasioAlgaria" type="Node2D" parent="Eventos" unique_id=628157391]
+editor_description = "pokeruby MossdeepCity_Gym/scripts.inc: VITO y LETI (combate doble, MEDALLA MENTE, MT04), los cuatro interruptores y sus flechas del suelo"
+script = ExtResource("ag_s_ev_gim")

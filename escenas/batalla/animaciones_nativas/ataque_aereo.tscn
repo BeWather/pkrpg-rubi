@@ -1,0 +1,1580 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/ataque_aereo.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/i5_candidate_bird_tile0.png" id="2_pajaro"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Stat Up.wav" id="3_subida"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Sky Uppercut1.wav" id="4_pajaro"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Megakick.wav" id="5_golpe"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/bg_18.png" id="6_cielo"]
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/fondo_movimiento.gd" id="8_fondo"]
+
+[sub_resource type="Animation" id="Animation_carga"]
+resource_name = "carga"
+length = 2.5
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fondo:velo")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:tinte_atacante")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 0.6666, 0.6999, 0.7333, 0.7666, 0.7999, 0.8333, 0.8666, 0.8999, 0.9333, 0.9666, 0.9999, 1.0333, 1.0666, 1.0999, 1.1333, 1.1666, 1.1999, 1.2333, 1.2666, 1.2999, 1.3333, 1.3666, 1.3999, 1.4333, 1.4666, 1.4999, 1.5333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.9375, 0.8750, 0.8125, 0.7500, 0.6875, 0.6250, 0.5625, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:color_tinte_atacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6666, 2.0333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"temblar_atacante"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sonido")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}],
+"times": PackedFloat32Array(0.6666, 0.7333, 0.7999, 0.8666, 0.9333, 0.9999, 1.0666, 1.1333)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_ataque"]
+resource_name = "ataque"
+length = 2.8
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fondo:velo")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333, 0.0499, 0.0666, 0.0833, 0.0999, 0.1166, 0.1333, 0.1499, 0.1666, 0.1833, 0.1999, 0.2166, 0.2333, 0.2499, 0.2666, 0.2833, 0.3499, 0.3666, 0.3833, 0.3999, 0.4166, 0.4333, 0.4499, 0.4666, 0.4833, 0.4999, 0.5166, 0.5333, 0.5499, 0.5666, 0.5833, 0.5999, 2.1999, 2.2166, 2.2333, 2.2499, 2.2666, 2.2833, 2.2999, 2.3166, 2.3333, 2.3499, 2.3666, 2.3833, 2.3999, 2.4166, 2.4333, 2.4499, 2.5166, 2.5333, 2.5499, 2.5666, 2.5833, 2.5999, 2.6166, 2.6333, 2.6499, 2.6666, 2.6833, 2.6999, 2.7166, 2.7333, 2.7499, 2.7666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.8125, 0.8750, 0.9375, 1.0000, 0.9375, 0.8750, 0.8125, 0.7500, 0.6875, 0.6250, 0.5625, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.8125, 0.8750, 0.9375, 1.0000, 0.9375, 0.8750, 0.8125, 0.7500, 0.6875, 0.6250, 0.5625, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Fondo:mostrar_imagen")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3499, 2.5166),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:frames_fondo")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.2999, 2.4499, 2.4666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 129.0, 0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:tinte_atacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.6499, 0.6666, 0.6833, 0.6999, 0.7166, 0.7333, 0.7499, 0.7666, 0.7833, 0.7999, 0.8166, 0.8333, 0.8499, 0.8666, 0.8833, 0.8999, 1.6999, 1.7166, 1.7333, 1.7499, 1.7666, 1.7833, 1.7999, 1.8166, 1.8333, 1.8499, 1.8666, 1.8833, 1.8999, 1.9166, 1.9333, 1.9499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.8125, 0.8750, 0.9375, 1.0000, 0.9375, 0.8750, 0.8125, 0.7500, 0.6875, 0.6250, 0.5625, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".:alfa_atacante")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.7333, 0.7499, 0.7666, 0.7833, 0.7999, 0.8166, 0.8333, 0.8499, 0.8666, 0.8833, 0.8999, 0.9166, 0.9333, 0.9499, 0.9666, 0.9833, 1.6333, 1.6666, 1.6999, 1.7333, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333, 2.0666, 2.0999, 2.1333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1.0000, 0.9375, 0.8750, 0.8125, 0.7500, 0.6875, 0.6250, 0.5625, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.8125, 0.8750, 0.9375, 1.0000]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(1.0166, 1.2833, 2.7833),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"lanzar_pajaro"
+}, {
+"args": [&"defensor", Vector2(10, 0), 18],
+"method": &"sacudir_alterna"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(1.2833),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SonidoAtacante")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_pajaro")
+}],
+"times": PackedFloat32Array(1.0166)
+}
+tracks/7/use_blend = true
+tracks/8/type = "audio"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("SonidoDefensor")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_golpe")
+}],
+"times": PackedFloat32Array(1.2833)
+}
+tracks/8/use_blend = true
+
+[sub_resource type="Animation" id="Animation_carga_doble"]
+resource_name = "carga_doble"
+length = 2.5
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fondo:velo")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:tinte_atacante")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 0.6666, 0.6999, 0.7333, 0.7666, 0.7999, 0.8333, 0.8666, 0.8999, 0.9333, 0.9666, 0.9999, 1.0333, 1.0666, 1.0999, 1.1333, 1.1666, 1.1999, 1.2333, 1.2666, 1.2999, 1.3333, 1.3666, 1.3999, 1.4333, 1.4666, 1.4999, 1.5333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.9375, 0.8750, 0.8125, 0.7500, 0.6875, 0.6250, 0.5625, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:color_tinte_atacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6666, 2.0333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"temblar_atacante"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sonido")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}],
+"times": PackedFloat32Array(0.6666, 0.7333, 0.7999, 0.8666, 0.9333, 0.9999, 1.0666, 1.1333)
+}
+tracks/4/use_blend = true
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.5625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.6250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.6875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.7500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_atacante", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.5625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.6250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.6875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.7500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"companero_defensor", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_carga_d02"]
+resource_name = "carga_d02"
+length = 2.5
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fondo:velo")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:tinte_atacante")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 0.6666, 0.6999, 0.7333, 0.7666, 0.7999, 0.8333, 0.8666, 0.8999, 0.9333, 0.9666, 0.9999, 1.0333, 1.0666, 1.0999, 1.1333, 1.1666, 1.1999, 1.2333, 1.2666, 1.2999, 1.3333, 1.3666, 1.3999, 1.4333, 1.4666, 1.4999, 1.5333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.9375, 0.8750, 0.8125, 0.7500, 0.6875, 0.6250, 0.5625, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:color_tinte_atacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6666, 2.0333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"temblar_atacante"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sonido")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}],
+"times": PackedFloat32Array(0.6666, 0.7333, 0.7999, 0.8666, 0.9333, 0.9999, 1.0666, 1.1333)
+}
+tracks/4/use_blend = true
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.5625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.6250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.6875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.7500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.5625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.6250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.6875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.7500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_carga_d20"]
+resource_name = "carga_d20"
+length = 2.5
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fondo:velo")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:tinte_atacante")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 0.6666, 0.6999, 0.7333, 0.7666, 0.7999, 0.8333, 0.8666, 0.8999, 0.9333, 0.9666, 0.9999, 1.0333, 1.0666, 1.0999, 1.1333, 1.1666, 1.1999, 1.2333, 1.2666, 1.2999, 1.3333, 1.3666, 1.3999, 1.4333, 1.4666, 1.4999, 1.5333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.9375, 0.8750, 0.8125, 0.7500, 0.6875, 0.6250, 0.5625, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:color_tinte_atacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6666, 2.0333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"temblar_atacante"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sonido")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}],
+"times": PackedFloat32Array(0.6666, 0.7333, 0.7999, 0.8666, 0.9333, 0.9999, 1.0666, 1.1333)
+}
+tracks/4/use_blend = true
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.5625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.6250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.6875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.7500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_1", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.5625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.6250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.6875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.7500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_3", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_carga_d13"]
+resource_name = "carga_d13"
+length = 2.5
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fondo:velo")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:tinte_atacante")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 0.6666, 0.6999, 0.7333, 0.7666, 0.7999, 0.8333, 0.8666, 0.8999, 0.9333, 0.9666, 0.9999, 1.0333, 1.0666, 1.0999, 1.1333, 1.1666, 1.1999, 1.2333, 1.2666, 1.2999, 1.3333, 1.3666, 1.3999, 1.4333, 1.4666, 1.4999, 1.5333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.9375, 0.8750, 0.8125, 0.7500, 0.6875, 0.6250, 0.5625, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:color_tinte_atacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6666, 2.0333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"temblar_atacante"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sonido")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}],
+"times": PackedFloat32Array(0.6666, 0.7333, 0.7999, 0.8666, 0.9333, 0.9999, 1.0666, 1.1333)
+}
+tracks/4/use_blend = true
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.5625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.6250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.6875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.7500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.5625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.6250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.6875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.7500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}]
+}
+
+[sub_resource type="Animation" id="Animation_carga_d31"]
+resource_name = "carga_d31"
+length = 2.5
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fondo:velo")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:tinte_atacante")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 0.6666, 0.6999, 0.7333, 0.7666, 0.7999, 0.8333, 0.8666, 0.8999, 0.9333, 0.9666, 0.9999, 1.0333, 1.0666, 1.0999, 1.1333, 1.1666, 1.1999, 1.2333, 1.2666, 1.2999, 1.3333, 1.3666, 1.3999, 1.4333, 1.4666, 1.4999, 1.5333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.6875, 0.7500, 0.0000, 0.0625, 0.1250, 0.1875, 0.2500, 0.3125, 0.3750, 0.4375, 0.5000, 0.5625, 0.6250, 0.9375, 0.8750, 0.8125, 0.7500, 0.6875, 0.6250, 0.5625, 0.5000, 0.4375, 0.3750, 0.3125, 0.2500, 0.1875, 0.1250, 0.0625, 0.0000]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:color_tinte_atacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6666),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6666, 2.0333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"temblar_atacante"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sonido")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_subida")
+}],
+"times": PackedFloat32Array(0.6666, 0.7333, 0.7999, 0.8666, 0.9333, 0.9999, 1.0666, 1.1333)
+}
+tracks/4/use_blend = true
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.5625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.6250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.6875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.7500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_0", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.0499, 0.0833, 0.1166, 0.1499, 0.1833, 0.2166, 0.2499, 0.2833, 0.3166, 0.3499, 0.3833, 0.4166, 1.7666, 1.7999, 1.8333, 1.8666, 1.8999, 1.9333, 1.9666, 1.9999, 2.0333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.5625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.6250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.6875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.7500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.5000],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.4375],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.3750],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.3125],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.2500],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.1875],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.1250],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.0625],
+"method": &"fijar_tinte"
+}, {
+"args": [&"posicion_2", Color(0, 0, 0, 1), 0.0000],
+"method": &"fijar_tinte"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ataque_aereo"]
+_data = {
+&"carga": SubResource("Animation_carga"),
+&"ataque": SubResource("Animation_ataque"),
+&"carga_doble": SubResource("Animation_carga_doble"),
+&"carga_doble_rival": SubResource("Animation_carga_doble"),
+&"carga_d02": SubResource("Animation_carga_d02"),
+&"carga_d20": SubResource("Animation_carga_d20"),
+&"carga_d13": SubResource("Animation_carga_d13"),
+&"carga_d31": SubResource("Animation_carga_d31")
+}
+
+[node name="AtaqueAereo" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+animaciones_por_turno = Array[StringName]([&"carga", &"ataque"])
+color_tinte_atacante = Color(1, 1, 1, 1)
+
+[node name="Fondo" type="Node2D" parent="."]
+script = ExtResource("8_fondo")
+
+[node name="Imagen" type="Sprite2D" parent="Fondo"]
+visible = false
+texture_repeat = 2
+texture = ExtResource("6_cielo")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="Velo" type="ColorRect" parent="Fondo"]
+visible = false
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="PlantillaPajaro" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_pajaro")
+
+[node name="Sonido" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoAtacante" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoDefensor" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_ataque_aereo")

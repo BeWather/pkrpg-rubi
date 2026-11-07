@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bka5jb7aos0h4"
+path="res://.godot/imported/PRSFX- Jump Kick1.wav-7dff676a83bf98c6d2b38481aff750aa.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Jump Kick1.wav"
+dest_files=["res://.godot/imported/PRSFX- Jump Kick1.wav-7dff676a83bf98c6d2b38481aff750aa.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

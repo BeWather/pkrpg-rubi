@@ -1,0 +1,51 @@
+[gd_scene format=3 uid="uid://cyo25mfcqx578"]
+
+[ext_resource type="Script" uid="uid://6cojf1ejtvk3" path="res://scripts/administrador_mapa.gd" id="1_07m8w"]
+[ext_resource type="Script" uid="uid://deixkpk6ac1mj" path="res://scripts/camera_2d.gd" id="2_hhjqo"]
+[ext_resource type="AudioStream" uid="uid://dqnt7xctaw6fu" path="res://Audio/SE/Exit Door.wav" id="4_srkdv"]
+[ext_resource type="PackedScene" uid="uid://cqniany7u4wq1" path="res://UI/canvas_layer.tscn" id="5_ldltk"]
+[ext_resource type="AudioStream" uid="uid://bddo3yrjsmmdr" path="res://Audio/2-04 Battle Frontier.mp3" id="6_fdeji"]
+[ext_resource type="Script" uid="uid://cnkym5t7uw6wb" path="res://escenas/audio_stream_player.gd" id="7_8c1m8"]
+[ext_resource type="PackedScene" path="res://escenas/bases_secretas/dialogo_base_secreta.tscn" id="bases_dialogo"]
+[ext_resource type="PackedScene" path="res://escenas/clima/controlador_clima_overworld.tscn" id="clima_overworld_ext"]
+[ext_resource type="PackedScene" uid="uid://drkeswwg0ig2s" path="res://escenas/pantalla_inicio/pantalla_inicio.tscn" id="intro_menu_ext"]
+[ext_resource type="PackedScene" uid="uid://b41csuu6ps3uq" path="res://escenas/ui/touch_gamepad.tscn" id="touch_gamepad_ext"]
+[ext_resource type="Script" uid="uid://rrc60gi7bdsd" path="res://scripts/transitions/transicion_centro.gd" id="transicion_centro"]
+
+[node name="AdministradorMapa" type="Node2D" unique_id=1028665585]
+script = ExtResource("1_07m8w")
+iniciar_debug = true
+guardar_en_partida_debug = true
+tabla_encuentros_alternativa = true
+metadata/Musica = ExtResource("6_fdeji")
+metadata/BucleIni = 5.1
+metadata/BucleFin = 44.473
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=876493871]
+offset = Vector2(8, 3)
+anchor_mode = 0
+script = ExtResource("2_hhjqo")
+
+[node name="ControladorClimaOverworld" parent="." unique_id=437503229 instance=ExtResource("clima_overworld_ext")]
+
+[node name="TransicionCentro" type="Node" parent="." unique_id=1328258756]
+script = ExtResource("transicion_centro")
+
+[node name="ReproductorSFX" type="AudioStreamPlayer" parent="." unique_id=1160344744]
+stream = ExtResource("4_srkdv")
+
+[node name="Menu" parent="." unique_id=1587573518 instance=ExtResource("5_ldltk")]
+layer = 5
+
+[node name="IntroMenu" parent="Menu" unique_id=969474839 instance=ExtResource("intro_menu_ext")]
+
+[node name="DialogoBasesSecretas" parent="Menu" unique_id=568017019 node_paths=PackedStringArray("cuadro") instance=ExtResource("bases_dialogo")]
+layout_mode = 3
+anchors_preset = 0
+cuadro = NodePath("../CuadroDialogo")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1427713541]
+volume_db = -12.834
+script = ExtResource("7_8c1m8")
+
+[node name="TouchGamepad" parent="." unique_id=1028824122 instance=ExtResource("touch_gamepad_ext")]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cddfk44dcpydb"
+path="res://.godot/imported/ruinas desierto.mp3-06ae5822223af0c09c38e23d7ecf1f77.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/ruinas desierto.mp3"
+dest_files=["res://.godot/imported/ruinas desierto.mp3-06ae5822223af0c09c38e23d7ecf1f77.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

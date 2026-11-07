@@ -1,0 +1,132 @@
+[gd_scene format=4 uid="uid://dlyw31r652fje"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_7bkoe"]
+[ext_resource type="TileSet" uid="uid://dqsytml7jpvk8" path="res://escenas/tilesets-interiores01.tres" id="2_lbboq"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_7lii4"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="4_p4tfg"]
+[ext_resource type="SpriteFrames" uid="uid://now553w3ynsm" path="res://escenas/avatares/npc_009.tres" id="5_6grvs"]
+[ext_resource type="SpriteFrames" uid="uid://q6liftwxrkde" path="res://escenas/avatares/npc_048.tres" id="5_7bkoe"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="7_8gu27"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="8_ui8q5"]
+[ext_resource type="Script" uid="uid://crxgjxvfpvm2m" path="res://scripts/npc/npc_artesano_vidrio.gd" id="9_artesano"]
+
+[node name="CasaArtesano" type="Node2D" unique_id=632770675]
+y_sort_enabled = true
+script = ExtResource("1_7bkoe")
+nombre_interno = "ruta_113_casa"
+esInterior = true
+mapa_exterior_asociado = "ruta_113"
+solo_caminar = true
+
+[node name="Ambiente" type="TileMapLayer" parent="." unique_id=1372584138]
+tile_map_data = PackedByteArray("AAAAAAAAAAADAFwAAAAAAAEAAAADAF0AAAAAAAIAAAADAF4AAAABAAAAAAAGAFcAAAABAAEAAAAGAFgAAAABAAIAAAAGAFkAAAACAAAAAAAHAFcAAAACAAEAAAAHAFgAAAACAAIAAAAHAFkAAAADAAEAAAAFAEMAAAAEAAAAAAAHAEIAAAAEAAEAAAAHAEMAAAAFAAAAAAAHAEIAAAAFAAEAAAAHAEMAAAAGAAAAAAAFAEIAAAAGAAEAAAAFAEMAAAAGAAIAAAABAEQAAAAHAAAAAAAFAEIAAAAHAAEAAAAFAEMAAAAHAAIAAAABAEQAAAAIAAEAAAAAAFQAAAAIAAIAAAAAAFUAAAAJAAAAAAAEAFwAAAAJAAEAAAAEAF0AAAAJAAIAAAAEAF4AAAAIAAAAAAAFAEIAAAAFAAIAAAABAEQAAAADAAIAAAADAFYAAAAEAAIAAAADAFYAAAAAAAMAAAABAEQAAAAAAAQAAAABAEQAAAABAAMAAAABAEUAAAACAAMAAAAEAEgAAAAHAAMAAAABAEUAAAAIAAMAAAABAEUAAAAJAAMAAAABAEUAAAAJAAQAAAAEAEgAAAAIAAQAAAAHAEkAAAAHAAQAAAAGAEkAAAACAAQAAAABAEUAAAABAAQAAAABAEUAAAADAAAAAAAFAEIAAAAGAAQAAAABAEUAAAAGAAMAAAABAEUAAAAFAAMAAAABAEUAAAAEAAMAAAABAEUAAAADAAMAAAABAEUAAAADAAQAAAABAEUAAAAEAAQAAAABAEUAAAAFAAQAAAABAEUAAAAAAAYAAAABAEQAAAAAAAcAAAAAAGQAAAABAAYAAAABAEUAAAABAAcAAAAAAGMAAAACAAYAAAABAEUAAAACAAcAAAAAAGMAAAADAAYAAAABAEUAAAADAAcAAAAAAGMAAAAEAAYAAAABAEUAAAAEAAcAAAAAAGMAAAAFAAYAAAABAEUAAAAFAAcAAAAAAGMAAAAGAAcAAAAAAGMAAAAHAAcAAAAAAGMAAAAIAAcAAAAAAGMAAAAJAAcAAAAAAGMAAAAAAAgAAAADAGQAAAABAAgAAAADAGMAAAACAAgAAAADAGMAAAADAAgAAAAAAEIAAAAEAAgAAAABAEIAAAAFAAgAAAADAGMAAAAGAAgAAAADAGMAAAAHAAgAAAADAGMAAAAIAAgAAAADAGMAAAAJAAgAAAADAGMAAAAAAAUAAAABAEQAAAAGAAUAAAAEAEgAAAAHAAUAAAAGAEoAAAAIAAUAAAAHAEoAAAAJAAUAAAAEAEgAAAABAAUAAAABAEUAAAACAAUAAAABAEUAAAADAAUAAAABAEUAAAAEAAUAAAABAEUAAAAFAAUAAAABAEUAAAAGAAYAAAABAEUAAAAHAAYAAAABAEUAAAAIAAYAAAABAEUAAAAJAAYAAAABAEUAAAA=")
+tile_set = ExtResource("2_lbboq")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1699829657]
+script = ExtResource("3_7lii4")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,4": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,4": {
+"flags": 1
+},
+"8,5": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1566989014]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Artesano" parent="NPCs" unique_id=1720771924 instance=ExtResource("4_p4tfg")]
+position = Vector2(40, 62)
+script = ExtResource("9_artesano")
+selec_frames = ExtResource("5_7bkoe")
+coord = Vector2i(2, 3)
+
+[node name="Nino" parent="NPCs" unique_id=275945242 instance=ExtResource("4_p4tfg")]
+position = Vector2(104, 78)
+id_texto = "R113_NIÑO_FLAUTA"
+tipo_movimiento = 2
+rango = Vector2i(4, 3)
+selec_frames = ExtResource("5_6grvs")
+coord = Vector2i(6, 4)
+
+[node name="TileSalida" type="Sprite2D" parent="." unique_id=1146597504]
+position = Vector2(56, 134)
+script = ExtResource("7_8gu27")
+tipo_warp = 1
+estilo_warp = 4
+ruta_mapa_destino = "ruta_113"
+posicion_destino = Vector2(33, 5)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=1198290860]
+position = Vector2(72, 134)
+script = ExtResource("7_8gu27")
+tipo_warp = 1
+estilo_warp = 4
+ruta_mapa_destino = "ruta_113"
+posicion_destino = Vector2(33, 5)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=285582349]
+
+[node name="Jarron" type="Sprite2D" parent="Carteles" unique_id=848060298 groups=["Cartel"]]
+position = Vector2(56, 40)
+script = ExtResource("8_ui8q5")
+id_texto = "JARRON_CARO"
+coord_tile = Vector2i(3, 2)
+
+[node name="Jarron2" type="Sprite2D" parent="Carteles" unique_id=1038783661 groups=["Cartel"]]
+position = Vector2(72, 40)
+script = ExtResource("8_ui8q5")
+id_texto = "JARRON_CARO"
+coord_tile = Vector2i(4, 2)

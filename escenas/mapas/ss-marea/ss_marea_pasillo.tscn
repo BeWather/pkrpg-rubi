@@ -1,0 +1,531 @@
+[gd_scene format=3 uid="uid://shl7bnz8ohb5"]
+
+[ext_resource type="TileSet" uid="uid://bjn3gshwzuo11" path="res://graficos/tilesets/tileset_ss_marea.tres" id="2_tiles"]
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mapa"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_tp"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_warp"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="5_npc_base"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="7_cartel"]
+[ext_resource type="PackedScene" uid="uid://gbm5pvhiq1ej" path="res://escenas/avatares/npc_entrenador.tscn" id="8_entrenador"]
+[ext_resource type="PackedScene" uid="uid://d0782whl40dem" path="res://escenas/ow_item.tscn" id="9_item"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="10_npc_evento"]
+[ext_resource type="Script" uid="uid://cgpmomq3542yj" path="res://scripts/npc/npc_pokemon.gd" id="11_npc_pokemon"]
+[ext_resource type="Script" path="res://scripts/eventos/cartel_evento.gd" id="12_cartel_evento"]
+[ext_resource type="Script" path="res://scripts/eventos/ss_marea/evento_ss_marea.gd" id="13_evento"]
+[ext_resource type="SpriteFrames" uid="uid://buukulhhkfyjc" path="res://escenas/avatares/npc_050.tres" id="f_npc_050"]
+[ext_resource type="SpriteFrames" uid="uid://w5fb8o7aplvp" path="res://escenas/avatares/npc_068.tres" id="f_npc_068"]
+[ext_resource type="SpriteFrames" uid="uid://dbalbpmidq8ir" path="res://escenas/avatares/npc_wingull.tres" id="f_npc_wingull"]
+
+[node name="SSMareaPasillo" type="Node2D"]
+editor_description = "pokeruby SSTidalCorridor (LAYOUT_SS_TIDAL_CORRIDOR, 18x13). Generada por herramientas/importar_ss_marea.py."
+script = ExtResource("1_mapa")
+nombre_interno = "ss_marea_pasillo"
+seccion = "SS_MAREA"
+esInterior = true
+musica_mapa = "NAVEGACION"
+
+[node name="Suelo" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAAAAAAAAAEAAAABAAAAAAAAAAIAAAABAAAAAAAAAAMAAAABAAAAAAAAAAQAAAABAAAAAAAAAAUAAAABAAAAAAAAAAYAAAABAAAAAAAAAAcAAAABAAAAAAAAAAgAAAABAAAAAAAAAAkAAAABAAAAAAAAAAoAAAABAAAAAAAAAAsAAAAEAAEAAAAAAAwAAAAEAAIAAAABAAAAAAABABcAAAABAAEAAAABABgAAAABAAIAAAADABcAAAABAAMAAAAEABcAAAABAAQAAAAEABcAAAABAAUAAAAEABcAAAABAAYAAAAEABcAAAABAAcAAAAEABcAAAABAAgAAAAEABcAAAABAAkAAAAEABcAAAABAAoAAAAEABcAAAABAAsAAAAFABYAAAABAAwAAAABAAAAAAACAAAAAAAAABcAAAACAAEAAAAAABgAAAACAAIAAAADABcAAAACAAMAAAACABcAAAACAAQAAAACABcAAAACAAUAAAACABcAAAACAAYAAAACABcAAAACAAcAAAACABcAAAACAAgAAAACABcAAAACAAkAAAACABcAAAACAAoAAAACABcAAAACAAsAAAACABcAAAACAAwAAAABAAAAAAADAAAAAAABABcAAAADAAEAAAABABgAAAADAAIAAAADABcAAAADAAMAAAACABgAAAADAAQAAAAAAAYAAAADAAUAAAAAAAYAAAADAAYAAAAAAAYAAAADAAcAAAAAAAYAAAADAAgAAAAFAAQAAAADAAkAAAAFAAUAAAADAAoAAAAFABcAAAADAAsAAAACABcAAAADAAwAAAABAAAAAAAEAAAAAAAAABcAAAAEAAEAAAAAABgAAAAEAAIAAAADABcAAAAEAAMAAAAEABgAAAAEAAQAAAABAAYAAAAEAAUAAAABAAYAAAAEAAYAAAABAAYAAAAEAAcAAAABAAYAAAAEAAgAAAADAAQAAAAEAAkAAAADAAUAAAAEAAoAAAAGABcAAAAEAAsAAAACABcAAAAEAAwAAAABAAAAAAAFAAAAAAABABcAAAAFAAEAAAABABgAAAAFAAIAAAADABcAAAAFAAMAAAAFABgAAAAFAAQAAAABAAYAAAAFAAUAAAABAAYAAAAFAAYAAAABAAYAAAAFAAcAAAABAAYAAAAFAAgAAAAEAAQAAAAFAAkAAAADAA8AAAAFAAoAAAAGABcAAAAFAAsAAAACABcAAAAFAAwAAAABAAAAAAAGAAAAAAAAABcAAAAGAAEAAAAAABgAAAAGAAIAAAADABcAAAAGAAMAAAADABgAAAAGAAQAAAABAAYAAAAGAAUAAAABAAYAAAAGAAYAAAABAAYAAAAGAAcAAAABAAYAAAAGAAgAAAACAAQAAAAGAAkAAAACAAUAAAAGAAoAAAAGABcAAAAGAAsAAAACABcAAAAGAAwAAAABAAAAAAAHAAAAAAABABcAAAAHAAEAAAABABgAAAAHAAIAAAADABcAAAAHAAMAAAAEABgAAAAHAAQAAAABAAYAAAAHAAUAAAABAAYAAAAHAAYAAAABAAYAAAAHAAcAAAABAAYAAAAHAAgAAAADAAQAAAAHAAkAAAADAAUAAAAHAAoAAAAGABcAAAAHAAsAAAACABcAAAAHAAwAAAABAAAAAAAIAAAAAAAAABcAAAAIAAEAAAAAABgAAAAIAAIAAAADABcAAAAIAAMAAAAFABgAAAAIAAQAAAABAAYAAAAIAAUAAAABAAYAAAAIAAYAAAABAAYAAAAIAAcAAAABAAYAAAAIAAgAAAAEAAQAAAAIAAkAAAADAA8AAAAIAAoAAAAGABcAAAAIAAsAAAACABcAAAAIAAwAAAABAAAAAAAJAAAAAAABABcAAAAJAAEAAAABABgAAAAJAAIAAAADABcAAAAJAAMAAAADABgAAAAJAAQAAAABAAYAAAAJAAUAAAABAAYAAAAJAAYAAAABAAYAAAAJAAcAAAABAAYAAAAJAAgAAAACAAQAAAAJAAkAAAACAAUAAAAJAAoAAAAGABcAAAAJAAsAAAACABcAAAAJAAwAAAABAAAAAAAKAAAAAAAAABcAAAAKAAEAAAAAABgAAAAKAAIAAAADABcAAAAKAAMAAAAEABgAAAAKAAQAAAABAAYAAAAKAAUAAAABAAYAAAAKAAYAAAABAAYAAAAKAAcAAAABAAYAAAAKAAgAAAADAAQAAAAKAAkAAAADAAUAAAAKAAoAAAAGABcAAAAKAAsAAAACABcAAAAKAAwAAAABAAAAAAALAAAAAAABABcAAAALAAEAAAABABgAAAALAAIAAAADABcAAAALAAMAAAAFABgAAAALAAQAAAABAAYAAAALAAUAAAABAAYAAAALAAYAAAABAAYAAAALAAcAAAABAAYAAAALAAgAAAAEAAQAAAALAAkAAAADAA8AAAALAAoAAAAGABcAAAALAAsAAAACABcAAAALAAwAAAABAAAAAAAMAAAAAAAAABcAAAAMAAEAAAAAABgAAAAMAAIAAAADABcAAAAMAAMAAAADABgAAAAMAAQAAAABAAYAAAAMAAUAAAABAAYAAAAMAAYAAAABAAYAAAAMAAcAAAABAAYAAAAMAAgAAAACAAQAAAAMAAkAAAACAAUAAAAMAAoAAAAGABcAAAAMAAsAAAACABcAAAAMAAwAAAABAAAAAAANAAAAAAABABcAAAANAAEAAAABABgAAAANAAIAAAADABcAAAANAAMAAAAEABgAAAANAAQAAAABAAYAAAANAAUAAAABAAYAAAANAAYAAAABAAYAAAANAAcAAAABAAYAAAANAAgAAAADAAQAAAANAAkAAAADAAUAAAANAAoAAAAGABcAAAANAAsAAAACABcAAAANAAwAAAABAAAAAAAOAAAAAAAAABcAAAAOAAEAAAAAABgAAAAOAAIAAAADABcAAAAOAAMAAAAGABgAAAAOAAQAAAACAAYAAAAOAAUAAAACAAYAAAAOAAYAAAACAAYAAAAOAAcAAAACAAYAAAAOAAgAAAAGAAQAAAAOAAkAAAADAB8AAAAOAAoAAAAGABcAAAAOAAsAAAACABcAAAAOAAwAAAABAAAAAAAPAAAAAAABABcAAAAPAAEAAAABABgAAAAPAAIAAAADABcAAAAPAAMAAAACABcAAAAPAAQAAAAEABcAAAAPAAUAAAAEABcAAAAPAAYAAAAEABcAAAAPAAcAAAAEABcAAAAPAAgAAAAEABcAAAAPAAkAAAAEABcAAAAPAAoAAAAHABcAAAAPAAsAAAACABcAAAAPAAwAAAABAAAAAAAQAAAAAAAAABcAAAAQAAEAAAAAABgAAAAQAAIAAAAEABYAAAAQAAMAAAACABcAAAAQAAQAAAACABcAAAAQAAUAAAACABcAAAAQAAYAAAACABcAAAAQAAcAAAACABcAAAAQAAgAAAACABcAAAAQAAkAAAACABcAAAAQAAoAAAACABcAAAAQAAsAAAACABcAAAAQAAwAAAABAAAAAAARAAAAAAABABcAAAARAAEAAAABABgAAAARAAIAAAADAAEAAAARAAMAAAAHABgAAAARAAQAAAACABcAAAARAAUAAAACABcAAAARAAYAAAACABcAAAARAAcAAAACABcAAAARAAgAAAACABcAAAARAAkAAAACABcAAAARAAoAAAACABcAAAARAAsAAAACABcAAAARAAwAAAABAAAAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Superior" type="TileMapLayer" parent="."]
+z_index = 2
+tile_map_data = PackedByteArray("AAAAAAAAAAAJAAAAAAAAAAEAAAAJAAAAAAAAAAIAAAAJAAAAAAAAAAMAAAAJAAAAAAAAAAQAAAAJAAAAAAAAAAUAAAAJAAAAAAAAAAYAAAAJAAAAAAAAAAcAAAAJAAAAAAAAAAgAAAAJAAAAAAAAAAkAAAAJAAAAAAAAAAoAAAAJAAAAAAABAAwAAAAJAAAAAAACAAwAAAAJAAAAAAADAAMAAAAKABgAAAADAAQAAAAIAAYAAAADAAUAAAAIAAYAAAADAAYAAAAIAAYAAAADAAcAAAAIAAYAAAADAAgAAAANAAQAAAADAAwAAAAJAAAAAAAEAAMAAAAMABgAAAAEAAQAAAAJAAYAAAAEAAUAAAAJAAYAAAAEAAYAAAAJAAYAAAAEAAcAAAAJAAYAAAAEAAwAAAAJAAAAAAAFAAMAAAANABgAAAAFAAQAAAAJAAYAAAAFAAUAAAAJAAYAAAAFAAYAAAAJAAYAAAAFAAcAAAAJAAYAAAAFAAgAAAAMAAQAAAAFAAkAAAALAA8AAAAFAAwAAAAJAAAAAAAGAAMAAAALABgAAAAGAAQAAAAJAAYAAAAGAAUAAAAJAAYAAAAGAAYAAAAJAAYAAAAGAAcAAAAJAAYAAAAGAAgAAAAKAAQAAAAGAAwAAAAJAAAAAAAHAAMAAAAMABgAAAAHAAQAAAAJAAYAAAAHAAUAAAAJAAYAAAAHAAYAAAAJAAYAAAAHAAcAAAAJAAYAAAAHAAwAAAAJAAAAAAAIAAMAAAANABgAAAAIAAQAAAAJAAYAAAAIAAUAAAAJAAYAAAAIAAYAAAAJAAYAAAAIAAcAAAAJAAYAAAAIAAgAAAAMAAQAAAAIAAkAAAALAA8AAAAIAAwAAAAJAAAAAAAJAAMAAAALABgAAAAJAAQAAAAJAAYAAAAJAAUAAAAJAAYAAAAJAAYAAAAJAAYAAAAJAAcAAAAJAAYAAAAJAAgAAAAKAAQAAAAJAAwAAAAJAAAAAAAKAAMAAAAMABgAAAAKAAQAAAAJAAYAAAAKAAUAAAAJAAYAAAAKAAYAAAAJAAYAAAAKAAcAAAAJAAYAAAAKAAwAAAAJAAAAAAALAAMAAAANABgAAAALAAQAAAAJAAYAAAALAAUAAAAJAAYAAAALAAYAAAAJAAYAAAALAAcAAAAJAAYAAAALAAgAAAAMAAQAAAALAAkAAAALAA8AAAALAAwAAAAJAAAAAAAMAAMAAAALABgAAAAMAAQAAAAJAAYAAAAMAAUAAAAJAAYAAAAMAAYAAAAJAAYAAAAMAAcAAAAJAAYAAAAMAAgAAAAKAAQAAAAMAAwAAAAJAAAAAAANAAMAAAAMABgAAAANAAQAAAAJAAYAAAANAAUAAAAJAAYAAAANAAYAAAAJAAYAAAANAAcAAAAJAAYAAAANAAwAAAAJAAAAAAAOAAMAAAAOABgAAAAOAAQAAAAKAAYAAAAOAAUAAAAKAAYAAAAOAAYAAAAKAAYAAAAOAAcAAAAKAAYAAAAOAAgAAAAOAAQAAAAOAAwAAAAJAAAAAAAPAAwAAAAJAAAAAAAQAAwAAAAJAAAAAAARAAwAAAAJAAAAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="."]
+script = ExtResource("3_tp")
+tile_data = {
+"0,10": {
+"flags": 1
+},
+"0,11": {
+"flags": 1
+},
+"0,2": {
+"flags": 1
+},
+"0,3": {
+"flags": 1
+},
+"0,4": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"0,6": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"0,8": {
+"flags": 1
+},
+"0,9": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,12": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,12": {
+"flags": 1
+},
+"10,4": {
+"flags": 1
+},
+"10,9": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,12": {
+"flags": 1
+},
+"11,4": {
+"flags": 1
+},
+"11,9": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,12": {
+"flags": 1
+},
+"12,4": {
+"flags": 1
+},
+"12,9": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,12": {
+"flags": 1
+},
+"13,4": {
+"flags": 1
+},
+"13,9": {
+"flags": 1
+},
+"14,1": {
+"flags": 1
+},
+"14,12": {
+"flags": 1
+},
+"14,4": {
+"flags": 1
+},
+"14,5": {
+"flags": 1
+},
+"14,6": {
+"flags": 1
+},
+"14,7": {
+"flags": 1
+},
+"14,8": {
+"flags": 1
+},
+"14,9": {
+"flags": 1
+},
+"15,1": {
+"flags": 1
+},
+"15,12": {
+"flags": 1
+},
+"16,1": {
+"flags": 1
+},
+"16,12": {
+"flags": 1
+},
+"17,12": {
+"flags": 1
+},
+"17,2": {
+"flags": 1
+},
+"18,10": {
+"flags": 1
+},
+"18,11": {
+"flags": 1
+},
+"18,3": {
+"flags": 1
+},
+"18,4": {
+"flags": 1
+},
+"18,5": {
+"flags": 1
+},
+"18,6": {
+"flags": 1
+},
+"18,7": {
+"flags": 1
+},
+"18,8": {
+"flags": 1
+},
+"18,9": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,12": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,12": {
+"flags": 1
+},
+"3,4": {
+"flags": 1
+},
+"3,5": {
+"flags": 1
+},
+"3,6": {
+"flags": 1
+},
+"3,7": {
+"flags": 1
+},
+"3,8": {
+"flags": 1
+},
+"3,9": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,12": {
+"flags": 1
+},
+"4,4": {
+"flags": 1
+},
+"4,9": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,12": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,9": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,12": {
+"flags": 1
+},
+"6,4": {
+"flags": 1
+},
+"6,9": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,12": {
+"flags": 1
+},
+"7,4": {
+"flags": 1
+},
+"7,9": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,12": {
+"flags": 1
+},
+"8,4": {
+"flags": 1
+},
+"8,9": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,12": {
+"flags": 1
+},
+"9,4": {
+"flags": 1
+},
+"9,9": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+
+[node name="MarineroLlegada" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby SSTidalCorridor objeto 1 (1,11) SAILOR FACE_UP (0,0), SSTidalCorridor_EventScript_15FDD6, 0"
+position = Vector2(24, 190)
+script = ExtResource("10_npc_evento")
+tipo_movimiento = 7
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("f_npc_068")
+coord = Vector2i(1, 11)
+
+[node name="MarineroVisitas" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby SSTidalCorridor objeto 2 (16,7) SAILOR WANDER_UP_AND_DOWN (0,2), SSTidalCorridor_EventScript_15FE60, 0"
+position = Vector2(264, 126)
+script = ExtResource("10_npc_evento")
+tipo_movimiento = 3
+rango = Vector2i(0, 2)
+selec_frames = ExtResource("f_npc_068")
+coord = Vector2i(16, 7)
+
+[node name="Arenque" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby SSTidalCorridor objeto 3 (9,2) OLD_MAN_1 FACE_DOWN (1,1), SSTidalCorridor_EventScript_15FD96, FLAG_HIDE_BRINEY_AND_PEEKO_SS_TIDAL"
+position = Vector2(152, 46)
+id_texto = "SS_MAREA_ARENQUE"
+bandera_mostrar = "SYS_GAME_CLEAR"
+tipo_movimiento = 8
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("f_npc_050")
+coord = Vector2i(9, 2)
+
+[node name="Peeko" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby SSTidalCorridor objeto 4 (7,2) WINGULL LOOK_AROUND (1,1), SSTidalCorridor_EventScript_15FD9F, FLAG_HIDE_BRINEY_AND_PEEKO_SS_TIDAL"
+position = Vector2(120, 46)
+script = ExtResource("11_npc_pokemon")
+numero_nacional = 278
+tamano_sprite = 3
+id_texto = "SS_MAREA_PEEKO"
+bandera_mostrar = "SYS_GAME_CLEAR"
+tipo_movimiento = 1
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("f_npc_wingull")
+coord = Vector2i(7, 2)
+
+[node name="Carteles" type="Node2D" parent="."]
+
+[node name="Ventanilla1" type="Sprite2D" parent="Carteles" groups=["Cartel"]]
+editor_description = "pokeruby SSTidalCorridor bg_event (2,1) SSTidalCorridor_EventScript_15FE3A"
+position = Vector2(40, 24)
+script = ExtResource("12_cartel_evento")
+id_texto = "SS_MAREA_HORIZONTE"
+coord_tile = Vector2i(2, 1)
+
+[node name="Ventanilla2" type="Sprite2D" parent="Carteles" groups=["Cartel"]]
+editor_description = "pokeruby SSTidalCorridor bg_event (4,1) SSTidalCorridor_EventScript_15FE3A"
+position = Vector2(72, 24)
+script = ExtResource("12_cartel_evento")
+id_texto = "SS_MAREA_HORIZONTE"
+coord_tile = Vector2i(4, 1)
+
+[node name="Ventanilla3" type="Sprite2D" parent="Carteles" groups=["Cartel"]]
+editor_description = "pokeruby SSTidalCorridor bg_event (6,1) SSTidalCorridor_EventScript_15FE3A"
+position = Vector2(104, 24)
+script = ExtResource("12_cartel_evento")
+id_texto = "SS_MAREA_HORIZONTE"
+coord_tile = Vector2i(6, 1)
+
+[node name="Ventanilla4" type="Sprite2D" parent="Carteles" groups=["Cartel"]]
+editor_description = "pokeruby SSTidalCorridor bg_event (8,1) SSTidalCorridor_EventScript_15FE3A"
+position = Vector2(136, 24)
+script = ExtResource("12_cartel_evento")
+id_texto = "SS_MAREA_HORIZONTE"
+coord_tile = Vector2i(8, 1)
+
+[node name="Ventanilla5" type="Sprite2D" parent="Carteles" groups=["Cartel"]]
+editor_description = "pokeruby SSTidalCorridor bg_event (10,1) SSTidalCorridor_EventScript_15FE3A"
+position = Vector2(168, 24)
+script = ExtResource("12_cartel_evento")
+id_texto = "SS_MAREA_HORIZONTE"
+coord_tile = Vector2i(10, 1)
+
+[node name="Ventanilla6" type="Sprite2D" parent="Carteles" groups=["Cartel"]]
+editor_description = "pokeruby SSTidalCorridor bg_event (12,1) SSTidalCorridor_EventScript_15FE3A"
+position = Vector2(200, 24)
+script = ExtResource("12_cartel_evento")
+id_texto = "SS_MAREA_HORIZONTE"
+coord_tile = Vector2i(12, 1)
+
+[node name="Ventanilla7" type="Sprite2D" parent="Carteles" groups=["Cartel"]]
+editor_description = "pokeruby SSTidalCorridor bg_event (14,1) SSTidalCorridor_EventScript_15FE3A"
+position = Vector2(232, 24)
+script = ExtResource("12_cartel_evento")
+id_texto = "SS_MAREA_HORIZONTE"
+coord_tile = Vector2i(14, 1)
+
+[node name="Ventanilla8" type="Sprite2D" parent="Carteles" groups=["Cartel"]]
+editor_description = "pokeruby SSTidalCorridor bg_event (16,1) SSTidalCorridor_EventScript_15FE3A"
+position = Vector2(264, 24)
+script = ExtResource("12_cartel_evento")
+id_texto = "SS_MAREA_HORIZONTE"
+coord_tile = Vector2i(16, 1)
+
+[node name="Camarote1" type="Sprite2D" parent="Carteles" groups=["Cartel"]]
+editor_description = "pokeruby SSTidalCorridor bg_event (5,9) SSTidalCorridor_EventScript_15FDB2"
+position = Vector2(88, 152)
+script = ExtResource("7_cartel")
+id_texto = "SS_MAREA_CAMAROTE_1"
+coord_tile = Vector2i(5, 9)
+
+[node name="Camarote2" type="Sprite2D" parent="Carteles" groups=["Cartel"]]
+editor_description = "pokeruby SSTidalCorridor bg_event (8,9) SSTidalCorridor_EventScript_15FDBB"
+position = Vector2(136, 152)
+script = ExtResource("7_cartel")
+id_texto = "SS_MAREA_CAMAROTE_2"
+coord_tile = Vector2i(8, 9)
+
+[node name="Camarote3" type="Sprite2D" parent="Carteles" groups=["Cartel"]]
+editor_description = "pokeruby SSTidalCorridor bg_event (11,9) SSTidalCorridor_EventScript_15FDC4"
+position = Vector2(184, 152)
+script = ExtResource("7_cartel")
+id_texto = "SS_MAREA_CAMAROTE_3"
+coord_tile = Vector2i(11, 9)
+
+[node name="Camarote4" type="Sprite2D" parent="Carteles" groups=["Cartel"]]
+editor_description = "pokeruby SSTidalCorridor bg_event (14,9) SSTidalCorridor_EventScript_15FDCD"
+position = Vector2(232, 152)
+script = ExtResource("7_cartel")
+id_texto = "SS_MAREA_CAMAROTE_4"
+coord_tile = Vector2i(14, 9)
+
+[node name="Warp" type="Sprite2D" parent="."]
+editor_description = "pokeruby SSTidalCorridor warp 0 (4,9) MB 0x69 -> MAP_SS_TIDAL_ROOMS (4,16)"
+position = Vector2(72, 150)
+script = ExtResource("4_warp")
+tipo_warp = 2
+estilo_warp = 4
+ruta_mapa_destino = "ss_marea_camarotes"
+posicion_destino = Vector2(4, 16)
+direccion = Vector2(0, -1)
+
+[node name="Warp2" type="Sprite2D" parent="."]
+editor_description = "pokeruby SSTidalCorridor warp 1 (7,9) MB 0x69 -> MAP_SS_TIDAL_ROOMS (13,16)"
+position = Vector2(120, 150)
+script = ExtResource("4_warp")
+tipo_warp = 2
+estilo_warp = 4
+ruta_mapa_destino = "ss_marea_camarotes"
+posicion_destino = Vector2(13, 16)
+direccion = Vector2(0, -1)
+
+[node name="Warp3" type="Sprite2D" parent="."]
+editor_description = "pokeruby SSTidalCorridor warp 2 (10,9) MB 0x69 -> MAP_SS_TIDAL_ROOMS (22,16)"
+position = Vector2(168, 150)
+script = ExtResource("4_warp")
+tipo_warp = 2
+estilo_warp = 4
+ruta_mapa_destino = "ss_marea_camarotes"
+posicion_destino = Vector2(22, 16)
+direccion = Vector2(0, -1)
+
+[node name="Warp4" type="Sprite2D" parent="."]
+editor_description = "pokeruby SSTidalCorridor warp 3 (13,9) MB 0x69 -> MAP_SS_TIDAL_ROOMS (31,16)"
+position = Vector2(216, 150)
+script = ExtResource("4_warp")
+tipo_warp = 2
+estilo_warp = 4
+ruta_mapa_destino = "ss_marea_camarotes"
+posicion_destino = Vector2(31, 16)
+direccion = Vector2(0, -1)
+
+[node name="Warp5" type="Sprite2D" parent="."]
+editor_description = "pokeruby SSTidalCorridor warp 4 (4,3) MB 0x65 -> MAP_SS_TIDAL_ROOMS (4,1)"
+position = Vector2(72, 54)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "ss_marea_camarotes"
+posicion_destino = Vector2(4, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp6" type="Sprite2D" parent="."]
+editor_description = "pokeruby SSTidalCorridor warp 5 (7,3) MB 0x65 -> MAP_SS_TIDAL_ROOMS (13,1)"
+position = Vector2(120, 54)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "ss_marea_camarotes"
+posicion_destino = Vector2(13, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp7" type="Sprite2D" parent="."]
+editor_description = "pokeruby SSTidalCorridor warp 6 (10,3) MB 0x65 -> MAP_SS_TIDAL_ROOMS (22,1)"
+position = Vector2(168, 54)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "ss_marea_camarotes"
+posicion_destino = Vector2(22, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp8" type="Sprite2D" parent="."]
+editor_description = "pokeruby SSTidalCorridor warp 7 (13,3) MB 0x65 -> MAP_SS_TIDAL_ROOMS (31,1)"
+position = Vector2(216, 54)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "ss_marea_camarotes"
+posicion_destino = Vector2(31, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp9" type="Sprite2D" parent="."]
+editor_description = "pokeruby SSTidalCorridor warp 8 (16,2) MB 0x62 -> MAP_SS_TIDAL_LOWER_DECK (15,2)"
+position = Vector2(264, 38)
+script = ExtResource("4_warp")
+tipo_warp = 1
+modo_direccion = 2
+ruta_mapa_destino = "ss_marea_bodega"
+posicion_destino = Vector2(15, 2)
+direccion = Vector2(1, 0)
+
+[node name="Eventos" type="Node2D" parent="."]
+
+[node name="EventoSSMarea" type="Node2D" parent="Eventos"]
+editor_description = "pokeruby SSTidalCorridor/scripts.inc"
+script = ExtResource("13_evento")
+carteles = NodePath("../../Carteles")
+marinero_llegada = NodePath("../../NPCs/MarineroLlegada")
+marinero_visitas = NodePath("../../NPCs/MarineroVisitas")

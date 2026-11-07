@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b3b4j38lc5ks"
+path="res://.godot/imported/PRSFX- Comet Punch.wav-1902ca159f50b6c578a942e0c359d6bc.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Comet Punch.wav"
+dest_files=["res://.godot/imported/PRSFX- Comet Punch.wav-1902ca159f50b6c578a942e0c359d6bc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

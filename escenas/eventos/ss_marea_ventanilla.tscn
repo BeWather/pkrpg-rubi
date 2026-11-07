@@ -1,0 +1,10 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" uid="uid://e6ulphvtb328" path="res://graficos/object_events/misc/ss_tidal.png" id="1_barco"]
+
+[node name="VentanillaSSMarea" type="Node2D"]
+z_index = 10
+
+[node name="Barco" type="Sprite2D" parent="."]
+position = Vector2(-16, -8)
+texture = ExtResource("1_barco")

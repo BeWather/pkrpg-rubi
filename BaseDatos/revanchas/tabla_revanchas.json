@@ -1,0 +1,618 @@
+[
+	{
+		"nombre": "ROSE",
+		"ids": [
+			37,
+			40,
+			41,
+			42,
+			43
+		],
+		"mapa": "ROUTE118"
+	},
+	{
+		"nombre": "DUSTY",
+		"ids": [
+			44,
+			47,
+			48,
+			49,
+			50
+		],
+		"mapa": "ROUTE111"
+	},
+	{
+		"nombre": "LOLA",
+		"ids": [
+			57,
+			60,
+			61,
+			62,
+			63
+		],
+		"mapa": "ROUTE109"
+	},
+	{
+		"nombre": "RICKY",
+		"ids": [
+			64,
+			67,
+			68,
+			69,
+			70
+		],
+		"mapa": "ROUTE109"
+	},
+	{
+		"nombre": "RITA_AND_SAM",
+		"ids": [
+			687,
+			688,
+			689,
+			690,
+			691
+		],
+		"mapa": "ROUTE124"
+	},
+	{
+		"nombre": "BROOKE",
+		"ids": [
+			94,
+			101,
+			102,
+			103,
+			104
+		],
+		"mapa": "ROUTE111"
+	},
+	{
+		"nombre": "WILTON",
+		"ids": [
+			78,
+			84,
+			85,
+			86,
+			87
+		],
+		"mapa": "ROUTE111"
+	},
+	{
+		"nombre": "VALERIE",
+		"ids": [
+			108,
+			110,
+			111,
+			112,
+			113
+		],
+		"mapa": "MT_PYRE_6F"
+	},
+	{
+		"nombre": "CINDY",
+		"ids": [
+			114,
+			120,
+			121,
+			122,
+			123
+		],
+		"mapa": "ROUTE104"
+	},
+	{
+		"nombre": "JESSICA",
+		"ids": [
+			127,
+			132,
+			133,
+			134,
+			135
+		],
+		"mapa": "ROUTE121"
+	},
+	{
+		"nombre": "WINSTON",
+		"ids": [
+			136,
+			139,
+			140,
+			141,
+			142
+		],
+		"mapa": "ROUTE104"
+	},
+	{
+		"nombre": "STEVE",
+		"ids": [
+			143,
+			147,
+			148,
+			149,
+			150
+		],
+		"mapa": "ROUTE114"
+	},
+	{
+		"nombre": "TONY",
+		"ids": [
+			155,
+			175,
+			176,
+			177,
+			178
+		],
+		"mapa": "ROUTE107"
+	},
+	{
+		"nombre": "NOB",
+		"ids": [
+			183,
+			184,
+			185,
+			186,
+			187
+		],
+		"mapa": "ROUTE115"
+	},
+	{
+		"nombre": "DALTON",
+		"ids": [
+			196,
+			197,
+			198,
+			199,
+			200
+		],
+		"mapa": "ROUTE118"
+	},
+	{
+		"nombre": "BERNIE",
+		"ids": [
+			206,
+			207,
+			208,
+			209,
+			210
+		],
+		"mapa": "ROUTE114"
+	},
+	{
+		"nombre": "ETHAN",
+		"ids": [
+			216,
+			219,
+			220,
+			221,
+			222
+		],
+		"mapa": "JAGGED_PASS"
+	},
+	{
+		"nombre": "JOHN_AND_JAY",
+		"ids": [
+			681,
+			682,
+			683,
+			684,
+			685
+		],
+		"mapa": "METEOR_FALLS_1F_2R"
+	},
+	{
+		"nombre": "BRANDON",
+		"ids": [
+			226,
+			228,
+			229,
+			230,
+			231
+		],
+		"mapa": "ROUTE120"
+	},
+	{
+		"nombre": "CAMERON",
+		"ids": [
+			238,
+			239,
+			240,
+			241,
+			242
+		],
+		"mapa": "ROUTE123"
+	},
+	{
+		"nombre": "JACKI",
+		"ids": [
+			249,
+			250,
+			251,
+			252,
+			253
+		],
+		"mapa": "ROUTE123"
+	},
+	{
+		"nombre": "WALTER",
+		"ids": [
+			254,
+			257,
+			258,
+			259,
+			260
+		],
+		"mapa": "ROUTE121"
+	},
+	{
+		"nombre": "KAREN",
+		"ids": [
+			280,
+			282,
+			283,
+			284,
+			285
+		],
+		"mapa": "ROUTE116"
+	},
+	{
+		"nombre": "JERRY",
+		"ids": [
+			273,
+			276,
+			277,
+			278,
+			279
+		],
+		"mapa": "ROUTE116"
+	},
+	{
+		"nombre": "ANNA_AND_MEG",
+		"ids": [
+			287,
+			288,
+			289,
+			290,
+			291
+		],
+		"mapa": "ROUTE117"
+	},
+	{
+		"nombre": "ISABEL",
+		"ids": [
+			302,
+			303,
+			304,
+			305,
+			306
+		],
+		"mapa": "ROUTE110"
+	},
+	{
+		"nombre": "MIGUEL",
+		"ids": [
+			293,
+			295,
+			296,
+			297,
+			298
+		],
+		"mapa": "ROUTE103"
+	},
+	{
+		"nombre": "TIMOTHY",
+		"ids": [
+			307,
+			308,
+			309,
+			310,
+			311
+		],
+		"mapa": "ROUTE115"
+	},
+	{
+		"nombre": "SHELBY",
+		"ids": [
+			313,
+			314,
+			315,
+			316,
+			317
+		],
+		"mapa": "MT_CHIMNEY"
+	},
+	{
+		"nombre": "CALVIN",
+		"ids": [
+			318,
+			328,
+			329,
+			330,
+			331
+		],
+		"mapa": "ROUTE102"
+	},
+	{
+		"nombre": "ELLIOT",
+		"ids": [
+			339,
+			346,
+			347,
+			348,
+			349
+		],
+		"mapa": "ROUTE106"
+	},
+	{
+		"nombre": "ABIGAIL",
+		"ids": [
+			358,
+			360,
+			361,
+			362,
+			363
+		],
+		"mapa": "ROUTE110"
+	},
+	{
+		"nombre": "BENJAMIN",
+		"ids": [
+			353,
+			354,
+			355,
+			356,
+			357
+		],
+		"mapa": "ROUTE110"
+	},
+	{
+		"nombre": "ISAIAH",
+		"ids": [
+			376,
+			379,
+			380,
+			381,
+			382
+		],
+		"mapa": "ROUTE128"
+	},
+	{
+		"nombre": "KATELYN",
+		"ids": [
+			386,
+			388,
+			389,
+			390,
+			391
+		],
+		"mapa": "ROUTE128"
+	},
+	{
+		"nombre": "MARIA",
+		"ids": [
+			369,
+			370,
+			371,
+			372,
+			373
+		],
+		"mapa": "ROUTE117"
+	},
+	{
+		"nombre": "DYLAN",
+		"ids": [
+			364,
+			365,
+			366,
+			367,
+			368
+		],
+		"mapa": "ROUTE117"
+	},
+	{
+		"nombre": "NICOLAS",
+		"ids": [
+			392,
+			393,
+			394,
+			395,
+			396
+		],
+		"mapa": "METEOR_FALLS_1F_2R"
+	},
+	{
+		"nombre": "ROBERT",
+		"ids": [
+			406,
+			409,
+			410,
+			411,
+			412
+		],
+		"mapa": "ROUTE120"
+	},
+	{
+		"nombre": "LAO",
+		"ids": [
+			419,
+			421,
+			422,
+			423,
+			424
+		],
+		"mapa": "ROUTE113"
+	},
+	{
+		"nombre": "CYNDY",
+		"ids": [
+			427,
+			430,
+			431,
+			432,
+			433
+		],
+		"mapa": "ROUTE115"
+	},
+	{
+		"nombre": "MADELINE",
+		"ids": [
+			434,
+			437,
+			438,
+			439,
+			440
+		],
+		"mapa": "ROUTE113"
+	},
+	{
+		"nombre": "JENNY",
+		"ids": [
+			449,
+			465,
+			466,
+			467,
+			468
+		],
+		"mapa": "ROUTE124"
+	},
+	{
+		"nombre": "DIANA",
+		"ids": [
+			474,
+			477,
+			478,
+			479,
+			480
+		],
+		"mapa": "JAGGED_PASS"
+	},
+	{
+		"nombre": "AMY_AND_LIV",
+		"ids": [
+			481,
+			482,
+			487,
+			488,
+			489
+		],
+		"mapa": "ROUTE103"
+	},
+	{
+		"nombre": "ERNEST",
+		"ids": [
+			492,
+			497,
+			498,
+			499,
+			500
+		],
+		"mapa": "ROUTE125"
+	},
+	{
+		"nombre": "EDWIN",
+		"ids": [
+			512,
+			515,
+			516,
+			517,
+			518
+		],
+		"mapa": "ROUTE110"
+	},
+	{
+		"nombre": "LYDIA",
+		"ids": [
+			545,
+			548,
+			549,
+			550,
+			551
+		],
+		"mapa": "ROUTE117"
+	},
+	{
+		"nombre": "ISAAC",
+		"ids": [
+			538,
+			541,
+			542,
+			543,
+			544
+		],
+		"mapa": "ROUTE117"
+	},
+	{
+		"nombre": "CATHERINE",
+		"ids": [
+			559,
+			562,
+			563,
+			564,
+			565
+		],
+		"mapa": "ROUTE119"
+	},
+	{
+		"nombre": "JACKSON",
+		"ids": [
+			552,
+			555,
+			556,
+			557,
+			558
+		],
+		"mapa": "ROUTE119"
+	},
+	{
+		"nombre": "HALEY",
+		"ids": [
+			604,
+			607,
+			608,
+			609,
+			610
+		],
+		"mapa": "ROUTE104"
+	},
+	{
+		"nombre": "JAMES",
+		"ids": [
+			621,
+			622,
+			623,
+			624,
+			625
+		],
+		"mapa": "PETALBURG_WOODS"
+	},
+	{
+		"nombre": "TRENT",
+		"ids": [
+			627,
+			636,
+			637,
+			638,
+			639
+		],
+		"mapa": "ROUTE112"
+	},
+	{
+		"nombre": "LOIS_AND_HAL",
+		"ids": [
+			642,
+			643,
+			644,
+			645,
+			646
+		],
+		"mapa": "ABANDONED_SHIP_ROOMS2_1F"
+	},
+	{
+		"nombre": "WALLY",
+		"ids": [
+			657,
+			658,
+			659,
+			660,
+			0
+		],
+		"mapa": "VICTORY_ROAD_1F"
+	}
+]

@@ -1,0 +1,715 @@
+[gd_scene format=4 uid="uid://hpkefni74dcr"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_n5oxv"]
+[ext_resource type="TileSet" uid="uid://cihs7q0xi0yev" path="res://escenas/tileset_interior_edificios_2.tres" id="2_8w5n5"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_euqsc"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_euqsc"]
+[ext_resource type="SpriteFrames" uid="uid://bkw3hndn42rqc" path="res://escenas/avatares/npc_001.tres" id="f_npc_001"]
+[ext_resource type="SpriteFrames" uid="uid://blksta48icop1" path="res://escenas/avatares/npc_018.tres" id="f_npc_018"]
+[ext_resource type="SpriteFrames" uid="uid://botaed3oif5tm" path="res://escenas/avatares/npc_061.tres" id="f_npc_061"]
+[ext_resource type="SpriteFrames" uid="uid://8ic0mgm0x0bk" path="res://escenas/avatares/npc_062.tres" id="f_npc_062"]
+[ext_resource type="SpriteFrames" uid="uid://rvhay5tgmegy" path="res://escenas/avatares/npc_065.tres" id="f_npc_065"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="npc_base"]
+[ext_resource type="PackedScene" uid="uid://gbm5pvhiq1ej" path="res://escenas/avatares/npc_entrenador.tscn" id="npc_entrenador"]
+[ext_resource type="Script" uid="uid://8uymdhpcd3qe" path="res://scripts/eventos/cartel_evento.gd" id="s_cartel_evento"]
+[ext_resource type="Script" uid="uid://dmy4ir5m1ul04" path="res://scripts/npc/npc_dialogo_condicional.gd" id="s_cond"]
+[ext_resource type="Script" uid="uid://d2qk6avbtc6kk" path="res://scripts/npc/npc_entrenador_evento.gd" id="s_entrenador_evento"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="s_evento"]
+[ext_resource type="Script" uid="uid://bcdvtkmajcalr" path="res://scripts/eventos/ruta_119/evento_instituto_ruta_119.gd" id="s_evento_inst"]
+[ext_resource type="Script" uid="uid://5qk0h1jawgb5" path="res://scripts/evento_pc_centro.gd" id="s_pc"]
+[ext_resource type="Script" uid="uid://cix41nrfux4xa" path="res://scripts/mapas/tile_alterno.gd" id="s_tile_alterno"]
+
+[node name="Instituto" type="Node2D" unique_id=822834191]
+script = ExtResource("1_n5oxv")
+nombre_interno = "ruta_119_instituto"
+seccion = "RUTA_119"
+esInterior = true
+mapa_exterior_asociado = "RUTA_119"
+solo_caminar = true
+musica_mapa = "CIUDAD_FERRICA"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1276850620]
+tile_map_data = PackedByteArray("AAAAAAAAAAAXACcAAAAAAAEAAAAXACgAAAABAAAAAAAXACcAAAABAAEAAAAXACgAAAACAAAAAAAWACkAAAACAAEAAAAKAAIAAAADAAAAAAATACkAAAADAAEAAAATACkAAAAEAAAAAAAXACcAAAAEAAEAAAAXACgAAAAFAAAAAAAXACcAAAAFAAEAAAAXACgAAAAGAAAAAAAXACcAAAAGAAEAAAAXACgAAAAHAAAAAAATACkAAAAHAAEAAAATACkAAAAIAAAAAAAXACcAAAAIAAEAAAAUACEAAAAJAAAAAAAXACcAAAAJAAEAAAAVACEAAAAKAAAAAAAXACcAAAAKAAEAAAAUACEAAAALAAAAAAAXACcAAAALAAEAAAAVACEAAAAMAAAAAAAXACcAAAAMAAEAAAAXACgAAAANAAAAAAAQAC0AAAANAAEAAAAQAC4AAAAOAAAAAAARAC0AAAAOAAEAAAARAC4AAAAPAAAAAAAXACcAAAAPAAEAAAAXACgAAAAQAAAAAAAUACsAAAAQAAEAAAAUACwAAAARAAAAAAAVACsAAAARAAEAAAAVACwAAAASAAAAAAAWACsAAAASAAEAAAAWACwAAAATAAAAAAAXACcAAAATAAEAAAAXACsAAAAQAAIAAAAUAC0AAAARAAIAAAAVAC0AAAASAAIAAAAWAC0AAAATAAIAAAAXACwAAAAAAAIAAAAUACkAAAAAAAMAAAAUACoAAAABAAIAAAAVACkAAAABAAMAAAAVACoAAAACAAIAAAAWACoAAAAAAAQAAAASACoAAAAAAAUAAAASACoAAAAAAAYAAAASACoAAAAAAAcAAAASACoAAAABAAYAAAARACkAAAABAAcAAAAVACcAAAADAAgAAAAQACoAAAADAAkAAAAQACsAAAADAAoAAAAQACwAAAACAAgAAAAXACcAAAACAAkAAAAXACgAAAABAAgAAAAXACcAAAABAAkAAAAXACgAAAAAAAgAAAAXACcAAAAAAAkAAAAXACgAAAAIAAgAAAAXACcAAAAIAAkAAAAXACgAAAAJAAgAAAAXACcAAAAJAAkAAAAXACgAAAAKAAgAAAAXACcAAAAKAAkAAAAXACgAAAALAAgAAAAXACcAAAALAAkAAAAXACgAAAAMAAgAAAAXACcAAAAMAAkAAAAXACgAAAANAAgAAAAXACcAAAANAAkAAAAXACgAAAAOAAgAAAAXACcAAAAOAAkAAAAXACgAAAAPAAgAAAAXACcAAAAPAAkAAAAXACgAAAAQAAgAAAAXACcAAAAQAAkAAAAXACgAAAARAAgAAAAXACcAAAARAAkAAAAXACgAAAASAAgAAAAXACcAAAASAAkAAAAXACgAAAATAAgAAAAXACcAAAATAAkAAAAXACgAAAAHAAgAAAAQACoAAAAHAAkAAAAQACsAAAAHAAoAAAAQACwAAAAIAAoAAAASACsAAAAJAAoAAAASACsAAAAKAAoAAAASACsAAAALAAoAAAASACsAAAAMAAoAAAASACsAAAANAAoAAAASACsAAAAOAAoAAAASACsAAAAPAAoAAAASACsAAAAQAAoAAAASACsAAAARAAoAAAASACsAAAASAAoAAAASACsAAAATAAoAAAASACsAAAACAAoAAAASACsAAAABAAoAAAASACsAAAAAAAoAAAASACkAAAAAAAsAAAASACoAAAAAAAwAAAASACoAAAABAAsAAAARACkAAAABAAwAAAARACkAAAACAAsAAAARACkAAAACAAwAAAARACkAAAADAAsAAAARACkAAAADAAwAAAARACkAAAAEAAsAAAARACkAAAAEAAwAAAARACkAAAAFAAsAAAARACkAAAAFAAwAAAARACkAAAAGAAsAAAARACkAAAAGAAwAAAARACkAAAAHAAsAAAARACkAAAAHAAwAAAARACkAAAAIAAsAAAARACkAAAAIAAwAAAAVACcAAAAJAAsAAAARACkAAAAJAAwAAAAWABwAAAAKAAsAAAARACkAAAAKAAwAAAAXABwAAAALAAsAAAARACkAAAALAAwAAAAVACcAAAAMAAsAAAARACkAAAAMAAwAAAARACkAAAANAAsAAAARACkAAAANAAwAAAARACkAAAAOAAsAAAARACkAAAAOAAwAAAARACkAAAAPAAsAAAARACkAAAAPAAwAAAARACkAAAAQAAsAAAARACkAAAAQAAwAAAARACkAAAARAAsAAAARACkAAAARAAwAAAARACkAAAASAAsAAAARACkAAAASAAwAAAARACkAAAATAAsAAAARACkAAAATAAwAAAARACkAAAAEAAIAAAASACkAAAAEAAMAAAASACoAAAAEAAQAAAASACoAAAAEAAUAAAASACoAAAAEAAYAAAAXACoAAAAEAAcAAAARACkAAAAEAAgAAAARACkAAAAEAAkAAAARACkAAAAEAAoAAAARACkAAAAFAAIAAAASACsAAAAFAAMAAAARACkAAAAFAAQAAAARACkAAAAFAAUAAAARACkAAAAFAAYAAAARACkAAAAFAAcAAAARACkAAAAFAAgAAAARACkAAAAFAAkAAAARACkAAAAFAAoAAAARACkAAAAGAAIAAAASACsAAAAGAAMAAAARACkAAAAGAAQAAAARACkAAAAGAAUAAAARACkAAAAGAAYAAAARACkAAAAGAAcAAAARACkAAAAGAAgAAAARACkAAAAGAAkAAAARACkAAAAGAAoAAAARACkAAAACAAMAAAARACkAAAACAAQAAAARACkAAAABAAUAAAARACkAAAABAAQAAAARACkAAAACAAUAAAARACkAAAACAAYAAAARACkAAAACAAcAAAARACkAAAADAAcAAAARACkAAAADAAIAAAATACkAAAADAAMAAAATACoAAAAHAAMAAAATACoAAAAHAAIAAAATACkAAAAHAAQAAAAQACoAAAAHAAUAAAAQACsAAAAHAAYAAAAQACwAAAADAAQAAAAQACoAAAADAAUAAAAQACsAAAADAAYAAAAQACwAAAAHAAcAAAARACkAAAAIAAcAAAARACkAAAATAAcAAAAVACcAAAASAAcAAAARACkAAAARAAcAAAARACkAAAAQAAcAAAARACkAAAAPAAcAAAARACkAAAAOAAcAAAARACkAAAANAAcAAAARACkAAAAMAAcAAAARACkAAAALAAcAAAARACkAAAAKAAcAAAARACkAAAAJAAcAAAARACkAAAAIAAUAAAASACoAAAAIAAYAAAAXACoAAAAIAAIAAAAUACIAAAAJAAIAAAAVACIAAAAKAAIAAAAUACIAAAALAAIAAAAVACIAAAANAAIAAAAQAC8AAAAOAAIAAAARAC8AAAAMAAIAAAASACkAAAAPAAIAAAASACsAAAAMAAMAAAAXACoAAAAIAAMAAAASACkAAAALAAMAAAASACsAAAAKAAMAAAASACsAAAAJAAMAAAASACsAAAAIAAQAAAASACoAAAANAAMAAAARACkAAAANAAQAAAARACkAAAANAAUAAAAWACYAAAANAAYAAAARACkAAAAOAAMAAAARACkAAAAOAAQAAAARACkAAAAOAAUAAAARACkAAAAOAAYAAAARACkAAAAPAAMAAAARACkAAAAPAAQAAAARACkAAAAPAAUAAAAWACcAAAAPAAYAAAARACkAAAAQAAMAAAARACkAAAAQAAQAAAAQACgAAAAQAAUAAAATACYAAAAQAAYAAAASAC0AAAARAAMAAAARACkAAAARAAQAAAARACgAAAARAAUAAAAUACYAAAARAAYAAAATAC0AAAASAAMAAAARACkAAAASAAQAAAARACkAAAASAAUAAAAWACYAAAASAAYAAAARACkAAAATAAMAAAARACkAAAATAAQAAAARACkAAAATAAUAAAARACkAAAATAAYAAAARACkAAAAJAAQAAAARACkAAAAJAAUAAAARACkAAAAJAAYAAAARACkAAAAKAAQAAAARACkAAAAKAAUAAAAWACcAAAAKAAYAAAARACkAAAALAAQAAAAQACgAAAALAAUAAAATACYAAAALAAYAAAASAC0AAAAMAAQAAAARACgAAAAMAAUAAAAUACYAAAAMAAYAAAATAC0AAAAAABIAAAAXACcAAAAAABMAAAAXACgAAAABABIAAAAQAC0AAAABABMAAAAQAC4AAAACABIAAAARAC0AAAACABMAAAARAC4AAAADABIAAAAXACcAAAADABMAAAAXACgAAAAEABIAAAATACkAAAAEABMAAAATACkAAAAFABIAAAAXACcAAAAFABMAAAAUACEAAAAGABIAAAAXACcAAAAGABMAAAAVACEAAAAHABIAAAAXACcAAAAHABMAAAAUACEAAAAIABIAAAAXACcAAAAIABMAAAAVACEAAAAJABIAAAAXACcAAAAJABMAAAAUACEAAAAKABIAAAAXACcAAAAKABMAAAAVACEAAAALABIAAAAXACcAAAALABMAAAAUACEAAAAMABIAAAAXACcAAAAMABMAAAAVACEAAAANABIAAAAXACcAAAANABMAAAAUACEAAAAOABIAAAAXACcAAAAOABMAAAAVACEAAAAPABIAAAAXACcAAAAPABMAAAAXACgAAAAQABIAAAAUACsAAAAQABMAAAAUACwAAAARABIAAAAVACsAAAARABMAAAATACwAAAASABIAAAAWACsAAAASABMAAAAWACwAAAATABIAAAAXACcAAAATABMAAAAXACgAAAAQABQAAAAUAC0AAAARABQAAAAVAC0AAAASABQAAAAWAC0AAAAFABQAAAAUACIAAAAGABQAAAAVACIAAAAHABQAAAAUACIAAAAIABQAAAAVACIAAAAJABQAAAAUACIAAAAKABQAAAAVACIAAAALABQAAAAUACIAAAAMABQAAAAVACIAAAANABQAAAAUACIAAAAOABQAAAAVACIAAAAPABQAAAASACkAAAAPABUAAAAXACoAAAANABUAAAAUACgAAAAOABUAAAAVACgAAAAIABUAAAAUACgAAAAJABUAAAAVACgAAAANABYAAAATACYAAAAOABYAAAAUACYAAAAIABYAAAATACYAAAAJABYAAAAUACYAAAANABkAAAAQACgAAAAOABkAAAARACgAAAAIABkAAAAQACgAAAAJABkAAAARACgAAAANABoAAAATACYAAAAOABoAAAAUACYAAAAIABoAAAATACYAAAAJABoAAAAUACYAAAANABsAAAASAC0AAAAOABsAAAATAC0AAAAIABsAAAASAC0AAAAJABsAAAATAC0AAAAPABoAAAAWACYAAAAKABoAAAAWACYAAAAPABYAAAAWACYAAAAKABYAAAAWACYAAAAMABYAAAAWACcAAAAMABoAAAAWACcAAAAHABoAAAAWACcAAAAHABYAAAAWACcAAAAIABcAAAASAC0AAAAJABcAAAATAC0AAAANABcAAAASAC0AAAAOABcAAAATAC0AAAAPABwAAAASACYAAAAEABkAAAARACwAAAAEABoAAAATACkAAAAEABsAAAATACkAAAAEABwAAAATACkAAAAEABYAAAAQACoAAAAEABcAAAAQACsAAAAEABgAAAAQACwAAAAEABQAAAATACkAAAAEABUAAAATACoAAAAFABwAAAASACoAAAAFABsAAAASACoAAAAFABoAAAASACoAAAAFABkAAAASACoAAAAFABgAAAAXACoAAAAFABcAAAASACoAAAAFABYAAAASACoAAAAFABUAAAASACkAAAAGABUAAAASACsAAAAGABYAAAARACkAAAAGABcAAAARACkAAAAGABgAAAARACkAAAAGABkAAAARACkAAAAGABoAAAARACkAAAAGABsAAAARACkAAAAGABwAAAARACkAAAAHABwAAAARACkAAAAHABsAAAARACkAAAAIABwAAAARACkAAAAJABwAAAARACkAAAAKABwAAAARACkAAAAKABsAAAARACkAAAALABsAAAARACkAAAALABoAAAARACkAAAALABkAAAARACkAAAALABgAAAARACkAAAALABcAAAARACkAAAALABYAAAARACkAAAALABUAAAASACsAAAAKABUAAAASACsAAAAMABUAAAASACsAAAAKABcAAAARACkAAAAKABgAAAARACkAAAAJABgAAAARACkAAAAIABgAAAARACkAAAAHABgAAAARACkAAAAHABcAAAARACkAAAAHABkAAAARACkAAAAKABkAAAARACkAAAAMABcAAAARACkAAAAMABgAAAARACkAAAAMABkAAAARACkAAAANABgAAAARACkAAAAOABgAAAARACkAAAAPABgAAAARACkAAAAPABcAAAARACkAAAAQABcAAAARACkAAAAQABYAAAARACkAAAAQABUAAAARACkAAAARABUAAAARACkAAAARABYAAAARACkAAAARABcAAAARACkAAAARABgAAAARACkAAAAQABgAAAARACkAAAAQABkAAAARACkAAAAPABkAAAARACkAAAAQABoAAAARACkAAAAQABsAAAARACkAAAAPABsAAAARACkAAAAQABwAAAARACkAAAAOABwAAAARACkAAAANABwAAAARACkAAAAMABwAAAARACkAAAAMABsAAAARACkAAAALABwAAAARACkAAAARABwAAAARACkAAAARABsAAAARACkAAAARABoAAAARACkAAAARABkAAAARACkAAAASABkAAAARACkAAAASABgAAAARACkAAAASABcAAAARACkAAAASABYAAAARACkAAAASABUAAAARACkAAAATABUAAAARACkAAAATABQAAAASACsAAAATABYAAAARACkAAAATABcAAAARACkAAAATABgAAAARACkAAAATABkAAAARACkAAAATABoAAAARACkAAAASABoAAAARACkAAAASABsAAAARACkAAAASABwAAAARACkAAAATABwAAAARACkAAAATABsAAAARACkAAAAHABUAAAASACsAAAAAABUAAAASACoAAAAAABYAAAAXACYAAAAAABcAAAASACoAAAABABUAAAAQACgAAAABABYAAAAUACYAAAABABcAAAATAC0AAAABABQAAAAQAC8AAAACABQAAAARAC8AAAADABQAAAASACsAAAAAABQAAAASACkAAAAAABgAAAASACoAAAAAABkAAAASACoAAAAAABoAAAASACoAAAACABoAAAARACkAAAACABkAAAARACkAAAACABgAAAARACkAAAACABcAAAARACkAAAACABYAAAARACkAAAACABUAAAARACkAAAADABUAAAARACkAAAADABYAAAARACkAAAADABcAAAARACkAAAADABgAAAARACkAAAADABkAAAARACkAAAADABoAAAARACkAAAADABsAAAARACkAAAACABsAAAARACkAAAACABwAAAARACkAAAADABwAAAARACkAAAABABgAAAARACkAAAABABkAAAARACkAAAABABoAAAAQACgAAAAAABsAAAAXACYAAAAAABwAAAASACoAAAABABsAAAAUACYAAAABABwAAAATAC0AAAA=")
+tile_set = ExtResource("2_8w5n5")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=940335532]
+tile_map_data = PackedByteArray("AAABAAYAAAAVACYAAAADAAcAAAAQACkAAAACAAcAAAASACcAAAABAAcAAAASACcAAAAAAAcAAAASACcAAAAHAAcAAAAQACkAAAAIAAcAAAASACcAAAAJAAcAAAASACcAAAAKAAcAAAASACcAAAALAAcAAAASACcAAAAMAAcAAAASACcAAAANAAcAAAASACcAAAAOAAcAAAASACcAAAAPAAcAAAASACcAAAAQAAcAAAASACcAAAARAAcAAAASACcAAAASAAcAAAASACcAAAATAAcAAAASACcAAAAIAAsAAAAVACYAAAALAAsAAAAVACYAAAATAAYAAAAVACYAAAA=")
+tile_set = ExtResource("2_8w5n5")
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=659263715]
+script = ExtResource("3_euqsc")
+tile_data = {
+"0,13": {
+"flags": 1
+},
+"0,19": {
+"flags": 1
+},
+"0,3": {
+"flags": 1
+},
+"0,8": {
+"flags": 1
+},
+"0,9": {
+"flags": 1
+},
+"1,13": {
+"flags": 1
+},
+"1,19": {
+"flags": 1
+},
+"1,2": {
+"flags": 1
+},
+"1,21": {
+"flags": 1
+},
+"1,22": {
+"flags": 1
+},
+"1,23": {
+"flags": 1
+},
+"1,26": {
+"flags": 1
+},
+"1,27": {
+"flags": 1
+},
+"1,28": {
+"flags": 1
+},
+"1,3": {
+"flags": 1
+},
+"1,7": {
+"flags": 1
+},
+"1,9": {
+"flags": 1
+},
+"10,13": {
+"flags": 1
+},
+"10,2": {
+"flags": 1
+},
+"10,20": {
+"flags": 1
+},
+"10,8": {
+"flags": 1
+},
+"10,9": {
+"flags": 1
+},
+"11,12": {
+"flags": 1
+},
+"11,13": {
+"flags": 1
+},
+"11,2": {
+"flags": 1
+},
+"11,20": {
+"flags": 1
+},
+"11,4": {
+"flags": 1
+},
+"11,5": {
+"flags": 1
+},
+"11,6": {
+"flags": 1
+},
+"11,8": {
+"flags": 1
+},
+"11,9": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,13": {
+"flags": 1
+},
+"12,20": {
+"flags": 1
+},
+"12,4": {
+"flags": 1
+},
+"12,5": {
+"flags": 1
+},
+"12,6": {
+"flags": 1
+},
+"12,8": {
+"flags": 1
+},
+"12,9": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,13": {
+"flags": 1
+},
+"13,21": {
+"flags": 1
+},
+"13,22": {
+"flags": 1
+},
+"13,23": {
+"flags": 1
+},
+"13,25": {
+"flags": 1
+},
+"13,26": {
+"flags": 1
+},
+"13,27": {
+"flags": 1
+},
+"13,8": {
+"flags": 1
+},
+"13,9": {
+"flags": 1
+},
+"14,1": {
+"flags": 1
+},
+"14,13": {
+"flags": 1
+},
+"14,20": {
+"flags": 1
+},
+"14,21": {
+"flags": 1
+},
+"14,22": {
+"flags": 1
+},
+"14,23": {
+"flags": 1
+},
+"14,25": {
+"flags": 1
+},
+"14,26": {
+"flags": 1
+},
+"14,27": {
+"flags": 1
+},
+"14,8": {
+"flags": 1
+},
+"14,9": {
+"flags": 1
+},
+"15,1": {
+"flags": 1
+},
+"15,13": {
+"flags": 1
+},
+"15,19": {
+"flags": 1
+},
+"15,8": {
+"flags": 1
+},
+"15,9": {
+"flags": 1
+},
+"16,1": {
+"flags": 1
+},
+"16,13": {
+"flags": 1
+},
+"16,19": {
+"flags": 1
+},
+"16,4": {
+"flags": 1
+},
+"16,5": {
+"flags": 1
+},
+"16,6": {
+"flags": 1
+},
+"16,8": {
+"flags": 1
+},
+"16,9": {
+"flags": 1
+},
+"17,0": {
+"flags": 1
+},
+"17,13": {
+"flags": 1
+},
+"17,18": {
+"flags": 1
+},
+"17,4": {
+"flags": 1
+},
+"17,5": {
+"flags": 1
+},
+"17,6": {
+"flags": 1
+},
+"17,8": {
+"flags": 1
+},
+"17,9": {
+"flags": 1
+},
+"18,1": {
+"flags": 1
+},
+"18,13": {
+"flags": 1
+},
+"18,19": {
+"flags": 1
+},
+"18,8": {
+"flags": 1
+},
+"18,9": {
+"flags": 1
+},
+"19,13": {
+"flags": 1
+},
+"19,19": {
+"flags": 1
+},
+"19,2": {
+"flags": 1
+},
+"19,7": {
+"flags": 1
+},
+"19,9": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,13": {
+"flags": 1
+},
+"2,19": {
+"flags": 1
+},
+"2,8": {
+"flags": 1
+},
+"2,9": {
+"flags": 1
+},
+"3,13": {
+"flags": 1
+},
+"3,19": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"3,3": {
+"flags": 1
+},
+"3,4": {
+"flags": 1
+},
+"3,5": {
+"flags": 1
+},
+"3,8": {
+"flags": 1
+},
+"3,9": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,13": {
+"flags": 1
+},
+"4,20": {
+"flags": 1
+},
+"4,21": {
+"flags": 1
+},
+"4,22": {
+"flags": 1
+},
+"4,23": {
+"flags": 1
+},
+"4,25": {
+"flags": 1
+},
+"4,26": {
+"flags": 1
+},
+"4,27": {
+"flags": 1
+},
+"4,28": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,13": {
+"flags": 1
+},
+"5,20": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,13": {
+"flags": 1
+},
+"6,20": {
+"flags": 1
+},
+"7,13": {
+"flags": 1
+},
+"7,2": {
+"flags": 1
+},
+"7,20": {
+"flags": 1
+},
+"7,3": {
+"flags": 1
+},
+"7,4": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"7,8": {
+"flags": 1
+},
+"7,9": {
+"flags": 1
+},
+"8,12": {
+"flags": 1
+},
+"8,13": {
+"flags": 1
+},
+"8,2": {
+"flags": 1
+},
+"8,21": {
+"flags": 1
+},
+"8,22": {
+"flags": 1
+},
+"8,23": {
+"flags": 1
+},
+"8,25": {
+"flags": 1
+},
+"8,26": {
+"flags": 1
+},
+"8,27": {
+"flags": 1
+},
+"8,8": {
+"flags": 1
+},
+"8,9": {
+"flags": 1
+},
+"9,13": {
+"flags": 1
+},
+"9,2": {
+"flags": 1
+},
+"9,21": {
+"flags": 1
+},
+"9,22": {
+"flags": 1
+},
+"9,23": {
+"flags": 1
+},
+"9,25": {
+"flags": 1
+},
+"9,26": {
+"flags": 1
+},
+"9,27": {
+"flags": 1
+},
+"9,8": {
+"flags": 1
+},
+"9,9": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1013917012]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Soldado1" parent="NPCs" unique_id=1191900008 instance=ExtResource("npc_entrenador")]
+editor_description = "pokeruby Route119_WeatherInstitute_1F objeto 1 (15,3) OBJ_EVENT_GFX_VAR_1 (MAGMA_MEMBER_M en Rubí) FACE_LEFT, TRAINER_WEATHER_INSTITUTE_GRUNT_1 (TRAINER_GRUNT_43), visión 3, FLAG_HIDE_EVIL_TEAM_WEATHER_INSTITUTE"
+position = Vector2(248, 62)
+npc_id = "ruta_119_instituto_soldado1"
+entrenador_id = 582
+rango_vision = 3
+texto_post_combate = "RUTA119_INSTITUTO_SOLDADO1_POST"
+id_texto = "RUTA119_INSTITUTO_SOLDADO1_INI"
+bandera_ocultar = "ruta_119_instituto_equipo_fuera"
+selec_frames = ExtResource("f_npc_061")
+coord = Vector2i(15, 3)
+
+[node name="Soldada2" parent="NPCs" unique_id=1191900009 instance=ExtResource("npc_entrenador")]
+editor_description = "pokeruby Route119_WeatherInstitute_1F objeto 2 (10,5) OBJ_EVENT_GFX_VAR_2 (MAGMA_MEMBER_F en Rubí) FACE_DOWN, TRAINER_WEATHER_INSTITUTE_GRUNT_2 (TRAINER_GRUNT_52), visión 2, FLAG_HIDE_EVIL_TEAM_WEATHER_INSTITUTE"
+position = Vector2(168, 94)
+npc_id = "ruta_119_instituto_soldado2"
+entrenador_id = 591
+rango_vision = 2
+texto_post_combate = "RUTA119_INSTITUTO_SOLDADO2_POST"
+id_texto = "RUTA119_INSTITUTO_SOLDADO2_INI"
+bandera_ocultar = "ruta_119_instituto_equipo_fuera"
+tipo_movimiento = 8
+selec_frames = ExtResource("f_npc_062")
+coord = Vector2i(10, 5)
+
+[node name="Soldado3" parent="NPCs" unique_id=1191900010 instance=ExtResource("npc_entrenador")]
+editor_description = "pokeruby Route119_WeatherInstitute_2F objeto 1 (15,6) VAR_1 (MAGMA_MEMBER_M) FACE_RIGHT, TRAINER_WEATHER_INSTITUTE_GRUNT_3 (TRAINER_GRUNT_44), visión 4, FLAG_HIDE_EVIL_TEAM_WEATHER_INSTITUTE. La 2F está 18 filas más abajo que en Rubí"
+position = Vector2(248, 398)
+npc_id = "ruta_119_instituto_soldado3"
+entrenador_id = 583
+rango_vision = 4
+texto_post_combate = "RUTA119_INSTITUTO_SOLDADO3_POST"
+id_texto = "RUTA119_INSTITUTO_SOLDADO3_INI"
+bandera_ocultar = "ruta_119_instituto_equipo_fuera"
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_061")
+coord = Vector2i(15, 24)
+
+[node name="Soldado4" parent="NPCs" unique_id=1191900011 instance=ExtResource("npc_entrenador")]
+editor_description = "pokeruby Route119_WeatherInstitute_2F objeto 2 (10,8) VAR_1 (MAGMA_MEMBER_M) FACE_DOWN_AND_UP, TRAINER_WEATHER_INSTITUTE_GRUNT_4 (TRAINER_GRUNT_45), visión 2, FLAG_HIDE_EVIL_TEAM_WEATHER_INSTITUTE. La 2F está 18 filas más abajo que en Rubí"
+position = Vector2(168, 430)
+npc_id = "ruta_119_instituto_soldado4"
+entrenador_id = 584
+rango_vision = 2
+texto_post_combate = "RUTA119_INSTITUTO_SOLDADO4_POST"
+id_texto = "RUTA119_INSTITUTO_SOLDADO4_INI"
+bandera_ocultar = "ruta_119_instituto_equipo_fuera"
+tipo_movimiento = 11
+selec_frames = ExtResource("f_npc_061")
+coord = Vector2i(10, 26)
+
+[node name="Carola" parent="NPCs" unique_id=1191900012 instance=ExtResource("npc_entrenador")]
+editor_description = "pokeruby Route119_WeatherInstitute_2F objeto 3 (4,6) VAR_2 (MAGMA_MEMBER_F) FACE_RIGHT, TRAINER_WEATHER_INSTITUTE_GRUNT_5 (TRAINER_COURTNEY_1), visión 0: el combate y lo que sigue lo dirige Eventos/EventoInstitutoRuta119. La 2F está 18 filas más abajo que en Rubí"
+position = Vector2(72, 398)
+script = ExtResource("s_entrenador_evento")
+npc_id = "ruta_119_instituto_carola"
+entrenador_id = 599
+rango_vision = 0
+id_texto = "RUTA119_INSTITUTO_CAROLA_INI"
+bandera_ocultar = "ruta_119_instituto_equipo_fuera"
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_062")
+coord = Vector2i(4, 24)
+
+[node name="Nino" parent="NPCs" unique_id=1191900013 instance=ExtResource("npc_base")]
+editor_description = "pokeruby Route119_WeatherInstitute_1F objeto 5 (14,11) LITTLE_BOY_1 WANDER_AROUND (1,1): mientras el EQUIPO MAGMA ocupa el edificio, EventoInstitutoRuta119 lo deja quieto en (0,5) mirando a la derecha"
+position = Vector2(232, 190)
+script = ExtResource("s_cond")
+textos_condicionales = Dictionary[String, String]({
+"ruta_119_instituto_equipo_fuera": "RUTA119_INSTITUTO_NINO_FUERTE"
+})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "RUTA119_INSTITUTO_NINO_DORMIDO"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("f_npc_001")
+coord = Vector2i(14, 11)
+
+[node name="Trabajador1F" parent="NPCs" unique_id=1191900014 instance=ExtResource("npc_base")]
+editor_description = "pokeruby Route119_WeatherInstitute_1F objeto 3 (5,4) MAN_5 FACE_DOWN, FLAG_HIDE_WEATHER_INSTITUTE_WORKERS_1F (inversa: ruta_119_instituto_trabajadores_1f)"
+position = Vector2(88, 78)
+id_texto = "RUTA119_INSTITUTO_TRABAJADOR_SALVADOS"
+bandera_mostrar = "ruta_119_instituto_trabajadores_1f"
+selec_frames = ExtResource("f_npc_018")
+coord = Vector2i(5, 4)
+
+[node name="Trabajador1F2" parent="NPCs" unique_id=1191900015 instance=ExtResource("npc_base")]
+editor_description = "pokeruby Route119_WeatherInstitute_1F objeto 4 (2,11) MAN_5 LOOK_AROUND (1,0), FLAG_HIDE_WEATHER_INSTITUTE_WORKERS_1F (inversa: ruta_119_instituto_trabajadores_1f)"
+position = Vector2(40, 190)
+id_texto = "RUTA119_INSTITUTO_TRABAJADOR_LLUVIA"
+bandera_mostrar = "ruta_119_instituto_trabajadores_1f"
+tipo_movimiento = 1
+rango = Vector2i(1, 0)
+selec_frames = ExtResource("f_npc_018")
+coord = Vector2i(2, 11)
+
+[node name="Trabajador2F" parent="NPCs" unique_id=1191900016 instance=ExtResource("npc_base")]
+editor_description = "pokeruby Route119_WeatherInstitute_2F objeto 4 (0,6) MAN_5 FACE_RIGHT, script 0x0 (no habla), FLAG_HIDE_WEATHER_INSTITUTE_WORKERS_2F (ruta_119_instituto_trabajadores_2f_ocultos). La 2F está 18 filas más abajo que en Rubí"
+position = Vector2(8, 398)
+bandera_ocultar = "ruta_119_instituto_trabajadores_2f_ocultos"
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_018")
+coord = Vector2i(0, 24)
+
+[node name="Trabajador2F2" parent="NPCs" unique_id=1191900017 instance=ExtResource("npc_base")]
+editor_description = "pokeruby Route119_WeatherInstitute_2F objeto 6 (1,7) MAN_5 FACE_RIGHT, script 0x0 (no habla), FLAG_HIDE_WEATHER_INSTITUTE_WORKERS_2F (ruta_119_instituto_trabajadores_2f_ocultos). La 2F está 18 filas más abajo que en Rubí"
+position = Vector2(24, 414)
+bandera_ocultar = "ruta_119_instituto_trabajadores_2f_ocultos"
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_018")
+coord = Vector2i(1, 25)
+
+[node name="Cientifico" parent="NPCs" unique_id=1191900018 instance=ExtResource("npc_base")]
+editor_description = "pokeruby Route119_WeatherInstitute_2F objeto 5 (18,6) SCIENTIST_1 LOOK_AROUND (2,1): da el CASTFORM. Con VAR_WEATHER_INSTITUTE_STATE 0 está en (1,6) y con 1 en (4,6) (setobjectxyperm 5), mirando a la derecha. Lo dirige Eventos/EventoInstitutoRuta119. La 2F está 18 filas más abajo que en Rubí"
+position = Vector2(296, 398)
+script = ExtResource("s_evento")
+id_texto = "RUTA119_INSTITUTO_CIENTIFICO_LLUVIA"
+tipo_movimiento = 1
+rango = Vector2i(2, 1)
+selec_frames = ExtResource("f_npc_065")
+coord = Vector2i(18, 24)
+
+[node name="Carteles" type="Node2D" parent="." unique_id=602780106]
+
+[node name="Cama1" type="Sprite2D" parent="Carteles" unique_id=1191900019 groups=["Cartel"]]
+editor_description = "pokeruby Route119_WeatherInstitute_1F bg_event (0,2), cama: cura al equipo (Common_EventScript_OutOfCenterPartyHeal). Lo dirige Eventos/EventoInstitutoRuta119"
+position = Vector2(8, 40)
+script = ExtResource("s_cartel_evento")
+id_texto = "RUTA119_INSTITUTO_CAMA"
+coord_tile = Vector2i(0, 2)
+
+[node name="Cama2" type="Sprite2D" parent="Carteles" unique_id=1191900020 groups=["Cartel"]]
+editor_description = "pokeruby Route119_WeatherInstitute_1F bg_event (1,2), cama: cura al equipo (Common_EventScript_OutOfCenterPartyHeal). Lo dirige Eventos/EventoInstitutoRuta119"
+position = Vector2(24, 40)
+script = ExtResource("s_cartel_evento")
+id_texto = "RUTA119_INSTITUTO_CAMA"
+coord_tile = Vector2i(1, 2)
+
+[node name="Cama3" type="Sprite2D" parent="Carteles" unique_id=1191900021 groups=["Cartel"]]
+editor_description = "pokeruby Route119_WeatherInstitute_1F bg_event (0,3), cama: cura al equipo (Common_EventScript_OutOfCenterPartyHeal). Lo dirige Eventos/EventoInstitutoRuta119"
+position = Vector2(8, 56)
+script = ExtResource("s_cartel_evento")
+id_texto = "RUTA119_INSTITUTO_CAMA"
+coord_tile = Vector2i(0, 3)
+
+[node name="Cama4" type="Sprite2D" parent="Carteles" unique_id=1191900022 groups=["Cartel"]]
+editor_description = "pokeruby Route119_WeatherInstitute_1F bg_event (1,3), cama: cura al equipo (Common_EventScript_OutOfCenterPartyHeal). Lo dirige Eventos/EventoInstitutoRuta119"
+position = Vector2(24, 56)
+script = ExtResource("s_cartel_evento")
+id_texto = "RUTA119_INSTITUTO_CAMA"
+coord_tile = Vector2i(1, 3)
+
+[node name="EventoPC" type="Node2D" parent="Carteles" unique_id=1191900023 groups=["Cartel"]]
+editor_description = "pokeruby Route119_WeatherInstitute_1F MB_PC (2,1)"
+position = Vector2(40, 24)
+script = ExtResource("s_pc")
+coord_tile = Vector2i(2, 1)
+id_texto = "ACCESO_PC"
+pantalla = NodePath("../../TilesAlternos/PantallaPC")
+
+[node name="TilesAlternos" type="Node2D" parent="." unique_id=1191900026]
+
+[node name="PantallaPC" type="Node2D" parent="TilesAlternos" unique_id=1191900027]
+editor_description = "METATILE_Building_PC_On de pokeruby: pantalla encendida del PC (2,1)"
+position = Vector2(40, 24)
+script = ExtResource("s_tile_alterno")
+capa = NodePath("../../Suelo")
+coord_tile = Vector2i(2, 1)
+atlas_alterno = Vector2i(11, 2)
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1191900024]
+
+[node name="EventoInstitutoRuta119" type="Node2D" parent="Eventos" unique_id=1191900025]
+editor_description = "pokeruby Route119_WeatherInstitute_1F/2F scripts.inc: estado del INSTITUTO, CAROLA, el científico (CASTFORM) y las camas"
+script = ExtResource("s_evento_inst")
+carola = NodePath("../../NPCs/Carola")
+cientifico = NodePath("../../NPCs/Cientifico")
+nino = NodePath("../../NPCs/Nino")
+soldados = Array[NodePath]([NodePath("../../NPCs/Soldado1"), NodePath("../../NPCs/Soldada2"), NodePath("../../NPCs/Soldado3"), NodePath("../../NPCs/Soldado4"), NodePath("../../NPCs/Carola")])
+camas = Array[NodePath]([NodePath("../../Carteles/Cama1"), NodePath("../../Carteles/Cama2"), NodePath("../../Carteles/Cama3"), NodePath("../../Carteles/Cama4")])
+trabajadores_1f = Array[NodePath]([NodePath("../../NPCs/Trabajador1F"), NodePath("../../NPCs/Trabajador1F2")])
+trabajadores_2f = Array[NodePath]([NodePath("../../NPCs/Trabajador2F"), NodePath("../../NPCs/Trabajador2F2")])
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=296819412]
+position = Vector2(280, 310)
+script = ExtResource("4_euqsc")
+ruta_mapa_destino = "ruta_119_instituto"
+posicion_destino = Vector2(17, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1272294226]
+position = Vector2(280, 22)
+script = ExtResource("4_euqsc")
+ruta_mapa_destino = "ruta_119_instituto"
+posicion_destino = Vector2(17, 19)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp3" type="Sprite2D" parent="." unique_id=1568125002]
+position = Vector2(152, 198)
+script = ExtResource("4_euqsc")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_119"
+posicion_destino = Vector2(6, 32)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp4" type="Sprite2D" parent="." unique_id=31496176]
+position = Vector2(168, 198)
+script = ExtResource("4_euqsc")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_119"
+posicion_destino = Vector2(6, 32)
+direccion = Vector2(0, 1)
+dar_paso = true

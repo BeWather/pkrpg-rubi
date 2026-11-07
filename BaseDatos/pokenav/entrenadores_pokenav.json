@@ -1,0 +1,1216 @@
+[
+	{
+		"indice": 0,
+		"id": 37,
+		"clase": "SRTA. AROMA",
+		"nombre": "ROSA",
+		"estrategia": "Calmar los deseos de lucha.",
+		"pokemon": "Los fragantes tipo PLANTA.",
+		"presentacion": [
+			"Los aromas balsámicos",
+			"sanan el cuerpo y la mente."
+		],
+		"banderas": [
+			"ruta_118_rose_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 118",
+		"indice_revancha": 0
+	},
+	{
+		"indice": 1,
+		"id": 44,
+		"clase": "RUINAMANÍACO",
+		"nombre": "DACIO",
+		"estrategia": "¡Arrollar con fuerza!",
+		"pokemon": "Los toscos POKéMON ROCA.",
+		"presentacion": [
+			"Viajo por el mundo en busca",
+			"de ruinas ancestrales."
+		],
+		"banderas": [
+			"ruta_111_dusty_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 111",
+		"indice_revancha": 1
+	},
+	{
+		"indice": 2,
+		"id": 57,
+		"clase": "PLAYERA",
+		"nombre": "LOLA",
+		"estrategia": "¡Dar lo mejor de mí misma!",
+		"pokemon": "Los que nadan bien.",
+		"presentacion": [
+			"¡Ojalá pudiese nadar sin",
+			"tener que usar flotador!"
+		],
+		"banderas": [
+			"ruta_109_lola_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 109",
+		"indice_revancha": 2
+	},
+	{
+		"indice": 3,
+		"id": 64,
+		"clase": "PLAYERO",
+		"nombre": "RICHI",
+		"estrategia": "No sé... Me esfuerzo mucho...",
+		"pokemon": "Prefiero los de tipo AGUA.",
+		"presentacion": [
+			"No es que no sepa nadar,",
+			"¡me gusta mi flotador!"
+		],
+		"banderas": [
+			"ruta_109_ricky_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 109",
+		"indice_revancha": 3
+	},
+	{
+		"indice": 4,
+		"id": 687,
+		"clase": "HERMANOS",
+		"nombre": "SAÚL-RITA",
+		"estrategia": "Nos repartimos las tareas.",
+		"pokemon": "Preferimos los cariñosos.",
+		"presentacion": [
+			"Compartimos POKéMON,",
+			"como buenos hermanos."
+		],
+		"banderas": [
+			"ruta_124_rita_sam_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 124",
+		"indice_revancha": 4
+	},
+	{
+		"indice": 5,
+		"id": 94,
+		"clase": "ENTRE. GUAY",
+		"nombre": "BERTA",
+		"estrategia": "Buscar los puntos débiles.",
+		"pokemon": "Un equipo equilibrado.",
+		"presentacion": [
+			"Mi meta es convertirme en",
+			"CAMPEONA POKéMON."
+		],
+		"banderas": [
+			"ruta_111_brooke_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 111",
+		"indice_revancha": 5
+	},
+	{
+		"indice": 6,
+		"id": 78,
+		"clase": "ENTRE. GUAY",
+		"nombre": "VALENTÍN",
+		"estrategia": "Fastidiar al oponente.",
+		"pokemon": "El tipo no importa.",
+		"presentacion": [
+			"Soy de los mejores en la",
+			"ESCUELA de ENTRENADORES."
+		],
+		"banderas": [
+			"ruta_111_wilton_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 111",
+		"indice_revancha": 6
+	},
+	{
+		"indice": 7,
+		"id": 108,
+		"clase": "BRUJITA",
+		"nombre": "VALERIA",
+		"estrategia": "Dañar sin prisa y sin pausa.",
+		"pokemon": "Los nocturnos que asustan.",
+		"presentacion": [
+			"Veo cosas que otros",
+			"no pueden ver..."
+		],
+		"banderas": [
+			"monte_pirico_h6_valeria_combate"
+		],
+		"medalla": -1,
+		"lugar": "MONTE PÍRICO",
+		"indice_revancha": 7
+	},
+	{
+		"indice": 8,
+		"id": 114,
+		"clase": "DAMISELA",
+		"nombre": "CINTIA",
+		"estrategia": "Todo vale para ganar.",
+		"pokemon": "¡Los mejores de todos!",
+		"presentacion": [
+			"En casa tengo un jacuzzi",
+			"sólo para mis POKéMON."
+		],
+		"banderas": [
+			"ruta_104_cindy_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 104",
+		"indice_revancha": 8
+	},
+	{
+		"indice": 9,
+		"id": 127,
+		"clase": "BELLA",
+		"nombre": "GLORIA",
+		"estrategia": "Llevar al rival a mi terreno.",
+		"pokemon": "Adorables, por supuesto.",
+		"presentacion": [
+			"Me gusta la ZONA SAFARI.",
+			"Siempre acabo allí."
+		],
+		"banderas": [
+			"ruta_121_jessica_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 121",
+		"indice_revancha": 9
+	},
+	{
+		"indice": 10,
+		"id": 136,
+		"clase": "NIÑO BIEN",
+		"nombre": "GUSTAVO",
+		"estrategia": "¿Estrategia? ¿Para qué?",
+		"pokemon": "¡Me ha costado un dineral!",
+		"presentacion": [
+			"Yo, como soy rico, duermo en",
+			"una cama POKéMON especial."
+		],
+		"banderas": [
+			"ruta_104_winston_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 104",
+		"indice_revancha": 10
+	},
+	{
+		"indice": 11,
+		"id": 143,
+		"clase": "POKéMANÍACO",
+		"nombre": "ESTEBAN",
+		"estrategia": "Luchar con fuerza.",
+		"pokemon": "Tardé mucho en atraparlos.",
+		"presentacion": [
+			"Los mejores POKéMON son",
+			"los grandes y fuertes."
+		],
+		"banderas": [
+			"ruta_114_steve_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 114",
+		"indice_revancha": 11
+	},
+	{
+		"indice": 12,
+		"id": 155,
+		"clase": "NADADOR",
+		"nombre": "TONI",
+		"estrategia": "Embestir a toda velocidad.",
+		"pokemon": "¡Del pintoresco tipo AGUA!",
+		"presentacion": [
+			"Si no puedo salir a nadar,",
+			"me pongo a levantar pesas."
+		],
+		"banderas": [
+			"ruta_107_tony_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 107",
+		"indice_revancha": 12
+	},
+	{
+		"indice": 13,
+		"id": 183,
+		"clase": "KARATEKA",
+		"nombre": "NOBORU",
+		"estrategia": "¡Hacer 10 llaves seguidas!",
+		"pokemon": "Los del tipo LUCHA.",
+		"presentacion": [
+			"No es por chulear, pero yo",
+			"rompo 10 tejas de una vez."
+		],
+		"banderas": [
+			"ruta_115_nob_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 115",
+		"indice_revancha": 13
+	},
+	{
+		"indice": 14,
+		"id": 196,
+		"clase": "GUITARRISTA",
+		"nombre": "ANTONIO",
+		"estrategia": "¡Electrizarlo todo!",
+		"pokemon": "¡Los del tipo ELÉCTRICO!",
+		"presentacion": [
+			"Quiero que la gente llore",
+			"con mis canciones de amor."
+		],
+		"banderas": [
+			"ruta_118_dalton_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 118",
+		"indice_revancha": 14
+	},
+	{
+		"indice": 15,
+		"id": 206,
+		"clase": "FOGONERO",
+		"nombre": "BERNARDO",
+		"estrategia": "¡Calcinarlo todo!",
+		"pokemon": "Los POKéMON de fuego.",
+		"presentacion": [
+			"Si enciendes una hoguera,",
+			"que haya agua cerca..."
+		],
+		"banderas": [
+			"ruta_114_bernie_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 114",
+		"indice_revancha": 15
+	},
+	{
+		"indice": 16,
+		"id": 216,
+		"clase": "CAMPISTA",
+		"nombre": "EZEQUIEL",
+		"estrategia": "¡Resistir y ser tenaz!",
+		"pokemon": "Entrenaría cualquier tipo.",
+		"presentacion": [
+			"Los POKéMON salvajes",
+			"se vuelven más fuertes."
+		],
+		"banderas": [
+			"desfiladero_ezequiel_combate"
+		],
+		"medalla": -1,
+		"lugar": "DESFILADERO",
+		"indice_revancha": 16
+	},
+	{
+		"indice": 17,
+		"id": 681,
+		"clase": "PAREJA MAYOR",
+		"nombre": "JULI-NELA",
+		"estrategia": "El amor nos ayuda a ganar.",
+		"pokemon": "Llevan años con nosotros.",
+		"presentacion": [
+			"Llevamos 50 años casados y",
+			"dedicados a criar POKéMON."
+		],
+		"banderas": [
+			"cascada_meteoro_r2_juli_nela_combate"
+		],
+		"medalla": -1,
+		"lugar": "CASCADA METEORO",
+		"indice_revancha": 17
+	},
+	{
+		"indice": 18,
+		"id": 226,
+		"clase": "BICHOMANÍACO",
+		"nombre": "BARTOLO",
+		"estrategia": "¡Atacar en oleadas!",
+		"pokemon": "Los POKéMON BICHO molan.",
+		"presentacion": [
+			"Voy al bosque a diario para",
+			"atrapar POKéMON BICHO."
+		],
+		"banderas": [
+			"ruta_120_brandon_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 120",
+		"indice_revancha": 18
+	},
+	{
+		"indice": 19,
+		"id": 238,
+		"clase": "MÉDIUM",
+		"nombre": "SILVIO",
+		"estrategia": "¡Aturdir y confundir!",
+		"pokemon": "Aquellos con poderes raros.",
+		"presentacion": [
+			"¡Puedo saber exactamente",
+			"lo que estás pensando!"
+		],
+		"banderas": [
+			"ruta_123_cameron_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 123",
+		"indice_revancha": 19
+	},
+	{
+		"indice": 20,
+		"id": 249,
+		"clase": "MÉDIUM",
+		"nombre": "JADE",
+		"estrategia": "Luchar a máxima potencia.",
+		"pokemon": "Los POKéMON misteriosos.",
+		"presentacion": [
+			"Cuando hablo, en realidad",
+			"uso la telepatía."
+		],
+		"banderas": [
+			"ruta_123_jacki_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 123",
+		"indice_revancha": 20
+	},
+	{
+		"indice": 21,
+		"id": 254,
+		"clase": "CABALLERO",
+		"nombre": "GABINO",
+		"estrategia": "Tranquilidad y serenidad.",
+		"pokemon": "Los POKéMON distinguidos.",
+		"presentacion": [
+			"Nos gusta tomar el té todos",
+			"los días. Es de importación."
+		],
+		"banderas": [
+			"ruta_121_walter_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 121",
+		"indice_revancha": 21
+	},
+	{
+		"indice": 22,
+		"id": 280,
+		"clase": "ESCOLAR",
+		"nombre": "CORINA",
+		"estrategia": "Usar la cabeza para luchar.",
+		"pokemon": "¡Todos, toditos, todos!",
+		"presentacion": [
+			"Mi padre me da dinero si",
+			"saco buenas notas."
+		],
+		"banderas": [
+			"ruta_116_karen_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 116",
+		"indice_revancha": 22
+	},
+	{
+		"indice": 23,
+		"id": 273,
+		"clase": "ESCOLAR",
+		"nombre": "JERÓNIMO",
+		"estrategia": "¡El saber me guía!",
+		"pokemon": "¡Los POKéMON inteligentes!",
+		"presentacion": [
+			"Quiero ser un investigador",
+			"de POKéMON en el futuro."
+		],
+		"banderas": [
+			"ruta_116_jerry_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 116",
+		"indice_revancha": 23
+	},
+	{
+		"indice": 24,
+		"id": 287,
+		"clase": "ESTUDIANTES",
+		"nombre": "ANI-MATI",
+		"estrategia": "Trazar un buen plan.",
+		"pokemon": "Que nos gusten a ambas.",
+		"presentacion": [
+			"¡Somos alumnas de último y",
+			"primer curso de POKéMON!"
+		],
+		"banderas": [
+			"ruta_117_anna_meg_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 117",
+		"indice_revancha": 24
+	},
+	{
+		"indice": 25,
+		"id": 302,
+		"clase": "POKéFAN",
+		"nombre": "ISABEL",
+		"estrategia": "¡Adelante, pequeños míos!",
+		"pokemon": "Me gustan todos.",
+		"presentacion": [
+			"Cuando salgo a comprar",
+			"para la cena, también lucho."
+		],
+		"banderas": [
+			"ruta_110_isabel_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 110",
+		"indice_revancha": 25
+	},
+	{
+		"indice": 26,
+		"id": 293,
+		"clase": "POKéFAN",
+		"nombre": "MIGUEL",
+		"estrategia": "¡Luchar con amor!",
+		"pokemon": "Los criados con cariño.",
+		"presentacion": [
+			"Es importante que tus",
+			"POKéMON confíen en ti."
+		],
+		"banderas": [
+			"ruta_103_miguel_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 103",
+		"indice_revancha": 26
+	},
+	{
+		"indice": 27,
+		"id": 307,
+		"clase": "POKéABU",
+		"nombre": "TIMOTEO",
+		"estrategia": "Analizar lo que hace el otro.",
+		"pokemon": "La esencia del tipo LUCHA.",
+		"presentacion": [
+			"¡Aún no estoy dispuesto a",
+			"ceder el paso a los jóvenes!"
+		],
+		"banderas": [
+			"ruta_115_timothy_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 115",
+		"indice_revancha": 27
+	},
+	{
+		"indice": 28,
+		"id": 313,
+		"clase": "POKéABU",
+		"nombre": "SERAFINA",
+		"estrategia": "Atacar al defenderme.",
+		"pokemon": "Los del tipo LUCHA.",
+		"presentacion": [
+			"Como soy mayor, tengo mi",
+			"propio estilo de combate."
+		],
+		"banderas": [
+			"monte_cenizo_serafina_combate"
+		],
+		"medalla": -1,
+		"lugar": "MONTE CENIZO",
+		"indice_revancha": 28
+	},
+	{
+		"indice": 29,
+		"id": 318,
+		"clase": "JOVEN",
+		"nombre": "CALIXTO",
+		"estrategia": "Hacer lo que pueda.",
+		"pokemon": "Uso diferentes tipos.",
+		"presentacion": [
+			"Me entrenaré hasta ganar",
+			"a un LÍDER de GIMNASIO."
+		],
+		"banderas": [
+			"ruta_102_calvin_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 102",
+		"indice_revancha": 29
+	},
+	{
+		"indice": 30,
+		"id": 339,
+		"clase": "PESCADOR",
+		"nombre": "ELOY",
+		"estrategia": "Luchar con paciencia.",
+		"pokemon": "¿Para luchar? Los de AGUA.",
+		"presentacion": [
+			"Soy el único que ha pescado",
+			"un POKéMON enorme."
+		],
+		"banderas": [
+			"ruta_106_elliot_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 106",
+		"indice_revancha": 30
+	},
+	{
+		"indice": 31,
+		"id": 358,
+		"clase": "TRIATLETA",
+		"nombre": "ADELA",
+		"estrategia": "La defensa es crucial.",
+		"pokemon": "Mi POKéMON es robusto.",
+		"presentacion": [
+			"Me metí en esto para",
+			"ponerme en forma y ya ves."
+		],
+		"banderas": [
+			"ruta_110_abigail_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 110",
+		"indice_revancha": 31
+	},
+	{
+		"indice": 32,
+		"id": 353,
+		"clase": "TRIATLETA",
+		"nombre": "BENJAMÍN",
+		"estrategia": "¡Atacar una y otra vez!",
+		"pokemon": "Los fuertes de tipo ACERO.",
+		"presentacion": [
+			"Si estás sudando, bebe",
+			"líquido con regularidad."
+		],
+		"banderas": [
+			"ruta_110_benjamin_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 110",
+		"indice_revancha": 32
+	},
+	{
+		"indice": 33,
+		"id": 376,
+		"clase": "TRIATLETA",
+		"nombre": "ISAÍAS",
+		"estrategia": "¡Aprovechar el entorno!",
+		"pokemon": "Los de tipo AGUA.",
+		"presentacion": [
+			"¡A mí no me gana ningún",
+			"NADADOR playero!"
+		],
+		"banderas": [
+			"ruta_128_isaiah_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 128",
+		"indice_revancha": 33
+	},
+	{
+		"indice": 34,
+		"id": 386,
+		"clase": "TRIATLETA",
+		"nombre": "CATALINA",
+		"estrategia": "¡Ofensiva total!",
+		"pokemon": "¡Vivan los POKéMON de AGUA!",
+		"presentacion": [
+			"Debo nadar más de",
+			"10 km cada día."
+		],
+		"banderas": [
+			"ruta_128_katelyn_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 128",
+		"indice_revancha": 34
+	},
+	{
+		"indice": 35,
+		"id": 369,
+		"clase": "TRIATLETA",
+		"nombre": "MIRIAM",
+		"estrategia": "¡La velocidad manda!",
+		"pokemon": "Utilizo POKéMON rápidos.",
+		"presentacion": [
+			"Una maratón es un reto",
+			"contra uno mismo."
+		],
+		"banderas": [
+			"ruta_117_maria_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 117",
+		"indice_revancha": 35
+	},
+	{
+		"indice": 36,
+		"id": 364,
+		"clase": "TRIATLETA",
+		"nombre": "DAN",
+		"estrategia": "¡Atacar en primer lugar!",
+		"pokemon": "¡Utilizo POKéMON veloces!",
+		"presentacion": [
+			"Si corres mucho, acabas",
+			"siendo como el viento."
+		],
+		"banderas": [
+			"ruta_117_dylan_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 117",
+		"indice_revancha": 36
+	},
+	{
+		"indice": 37,
+		"id": 392,
+		"clase": "DOMADRAGÓN",
+		"nombre": "NICOLÁS",
+		"estrategia": "¡Es una cuestión de fuerza!",
+		"pokemon": "¡Los de tipo DRAGÓN!",
+		"presentacion": [
+			"¡Un día pasaré a la historia",
+			"como el más fuerte!"
+		],
+		"banderas": [
+			"cascada_meteoro_r2_nicolas_combate"
+		],
+		"medalla": -1,
+		"lugar": "CASCADA METEORO",
+		"indice_revancha": 37
+	},
+	{
+		"indice": 38,
+		"id": 406,
+		"clase": "ORNITÓLOGO",
+		"nombre": "ROBERTO",
+		"estrategia": "¡Tener una buena técnica!",
+		"pokemon": "Elegantes POKéMON PÁJARO.",
+		"presentacion": [
+			"¡Mi POKéMON PÁJARO lleva",
+			"mi amor a mi chica!"
+		],
+		"banderas": [
+			"ruta_120_robert_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 120",
+		"indice_revancha": 38
+	},
+	{
+		"indice": 39,
+		"id": 419,
+		"clase": "CHICO NINJA",
+		"nombre": "LAO",
+		"estrategia": "¡Hacer sufrir con veneno!",
+		"pokemon": "¡POKéMON venenosos!",
+		"presentacion": [
+			"Me he estado entrenando",
+			"para llegar a ser un ninja."
+		],
+		"banderas": [
+			"ruta_113_lao_combate",
+			"villa_raiz_prueba_oculto_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 113",
+		"indice_revancha": 39
+	},
+	{
+		"indice": 40,
+		"id": 427,
+		"clase": "LUCHADORA",
+		"nombre": "CECILIA",
+		"estrategia": "¡Atacar en primer lugar!",
+		"pokemon": "Los veloces de tipo LUCHA.",
+		"presentacion": [
+			"¡Si mis POKéMON pierden,",
+			"yo sigo luchando!"
+		],
+		"banderas": [
+			"ruta_115_cyndy_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 115",
+		"indice_revancha": 40
+	},
+	{
+		"indice": 41,
+		"id": 434,
+		"clase": "DAMA PARASOL",
+		"nombre": "MIRANDA",
+		"estrategia": "¡Animar a mis POKéMON!",
+		"pokemon": "Entrenaría cualquier tipo.",
+		"presentacion": [
+			"Los rayos UVA dañan la",
+			"piel. ¡Mejor protegerse!"
+		],
+		"banderas": [
+			"ruta_113_madeline_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 113",
+		"indice_revancha": 41
+	},
+	{
+		"indice": 42,
+		"id": 449,
+		"clase": "NADADORA",
+		"nombre": "GENO",
+		"estrategia": "¡No tener piedad!",
+		"pokemon": "Los dulces de tipo AGUA.",
+		"presentacion": [
+			"Tengo muchos fans porque",
+			"me entrevistaron en la tele."
+		],
+		"banderas": [
+			"ruta_124_jenny_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 124",
+		"indice_revancha": 42
+	},
+	{
+		"indice": 43,
+		"id": 474,
+		"clase": "DOMINGUERA",
+		"nombre": "DIANA",
+		"estrategia": "Pensar en cada detalle.",
+		"pokemon": "Me gustan todos los tipos.",
+		"presentacion": [
+			"¿Qué habrá más allá",
+			"de las colinas?"
+		],
+		"banderas": [
+			"desfiladero_diana_combate"
+		],
+		"medalla": -1,
+		"lugar": "DESFILADERO",
+		"indice_revancha": 43
+	},
+	{
+		"indice": 44,
+		"id": 481,
+		"clase": "GEMELAS",
+		"nombre": "ALI-LÍA",
+		"estrategia": "¡Luchar juntas!",
+		"pokemon": "¡Los entrenamos juntas!",
+		"presentacion": [
+			"Nos gustan los mismos {PK}{MN},",
+			"pero no los mismos postres."
+		],
+		"banderas": [
+			"ruta_103_amy_liv_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 103",
+		"indice_revancha": 44
+	},
+	{
+		"indice": 45,
+		"id": 492,
+		"clase": "MARINERO",
+		"nombre": "ERNESTO",
+		"estrategia": "Utilizar la fuerza.",
+		"pokemon": "Los de tipo LUCHA o AGUA.",
+		"presentacion": [
+			"¡Los marineros somos rudos!",
+			"¿Tienes alguna queja?"
+		],
+		"banderas": [
+			"ruta_125_ernest_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 125",
+		"indice_revancha": 45
+	},
+	{
+		"indice": 46,
+		"id": 512,
+		"clase": "POKéCOLECTOR",
+		"nombre": "EDGARDO",
+		"estrategia": "Proteger a los POKéMON.",
+		"pokemon": "Los POKéMON raros.",
+		"presentacion": [
+			"Quiero atrapar todos los",
+			"POKéMON raros del mundo."
+		],
+		"banderas": [
+			"ruta_110_edwin_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 110",
+		"indice_revancha": 46
+	},
+	{
+		"indice": 47,
+		"id": 545,
+		"clase": "CRIAPOKéMON",
+		"nombre": "LIDIA",
+		"estrategia": "Confiar en mi fuerza.",
+		"pokemon": "Todos, son como mis niños.",
+		"presentacion": [
+			"Entrenar POKéMON requiere",
+			"amor y sabiduría."
+		],
+		"banderas": [
+			"ruta_117_lydia_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 117",
+		"indice_revancha": 47
+	},
+	{
+		"indice": 48,
+		"id": 538,
+		"clase": "CRIAPOKéMON",
+		"nombre": "ISAAC",
+		"estrategia": "¡Ofensiva total!",
+		"pokemon": "Entreno lo que sea.",
+		"presentacion": [
+			"Les doy {POKEBLOCK}S para",
+			"ganar en los CONCURSOS."
+		],
+		"banderas": [
+			"ruta_117_isaac_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 117",
+		"indice_revancha": 48
+	},
+	{
+		"indice": 49,
+		"id": 559,
+		"clase": "POKéGUARDA",
+		"nombre": "CRISTINA",
+		"estrategia": "Confiar en mis POKéMON.",
+		"pokemon": "Los que son muy fuertes.",
+		"presentacion": [
+			"Me entreno para tareas de",
+			"rescate con mis POKéMON."
+		],
+		"banderas": [
+			"ruta_119_catherine_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 119",
+		"indice_revancha": 49
+	},
+	{
+		"indice": 50,
+		"id": 552,
+		"clase": "POKéGUARDA",
+		"nombre": "JOAQUÍN",
+		"estrategia": "Atacar en oleadas.",
+		"pokemon": "Diferentes tipos.",
+		"presentacion": [
+			"¡No hay perdón para quien",
+			"destruye la Naturaleza!"
+		],
+		"banderas": [
+			"ruta_119_jackson_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 119",
+		"indice_revancha": 50
+	},
+	{
+		"indice": 51,
+		"id": 604,
+		"clase": "CHICA",
+		"nombre": "HERMINIA",
+		"estrategia": "¡Tener agallas!",
+		"pokemon": "¡Adoro los POKéMON dulces!",
+		"presentacion": [
+			"Después de luchar, siempre",
+			"me baño con mis POKéMON."
+		],
+		"banderas": [
+			"ruta_104_haley_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 104",
+		"indice_revancha": 51
+	},
+	{
+		"indice": 52,
+		"id": 621,
+		"clase": "CAZABICHOS",
+		"nombre": "JAIME",
+		"estrategia": "¡Atacar como el rayo!",
+		"pokemon": "Los de tipo BICHO sin duda.",
+		"presentacion": [
+			"Para atrapar {PK}{MN} BICHO,",
+			"tienes que madrugar."
+		],
+		"banderas": [
+			"bosque_petalia_james_combate"
+		],
+		"medalla": -1,
+		"lugar": "BOSQUE PETALIA",
+		"indice_revancha": 52
+	},
+	{
+		"indice": 53,
+		"id": 627,
+		"clase": "MONTAÑERO",
+		"nombre": "TARSI",
+		"estrategia": "Utilizar la fuerza.",
+		"pokemon": "Los POKéMON fornidos.",
+		"presentacion": [
+			"Llevo un mes planeando",
+			"la excursión de hoy."
+		],
+		"banderas": [
+			"ruta_112_trent_combate"
+		],
+		"medalla": -1,
+		"lugar": "RUTA 112",
+		"indice_revancha": 53
+	},
+	{
+		"indice": 54,
+		"id": 642,
+		"clase": "PAREJA JOVEN",
+		"nombre": "LUCI-FITO",
+		"estrategia": "¡Una estrategia de cariño!",
+		"pokemon": "¡Los POKéMON cariñosos!",
+		"presentacion": [
+			"¡Somos dos tortolitos!",
+			"¡Tortolitos para siempre!"
+		],
+		"banderas": [
+			"nao_abandonada_luci_fito_combate"
+		],
+		"medalla": -1,
+		"lugar": "NAO ABANDONADA",
+		"indice_revancha": 54
+	},
+	{
+		"indice": 55,
+		"id": 657,
+		"clase": "ENTRENADOR",
+		"nombre": "BLASCO",
+		"estrategia": "Tomármelo con calma...",
+		"pokemon": "El primero que atrapé.",
+		"presentacion": [
+			"Los POKéMON y yo nos",
+			"hemos fortalecido juntos."
+		],
+		"banderas": [
+			"calle_victoria_blasco_combate"
+		],
+		"medalla": -1,
+		"lugar": "CALLE VICTORIA",
+		"indice_revancha": 55
+	},
+	{
+		"indice": 56,
+		"id": 265,
+		"clase": "LÍDER",
+		"nombre": "PETRA",
+		"estrategia": "Lanzar ataques tipo ROCA.",
+		"pokemon": "Fuertes, del tipo ROCA.",
+		"presentacion": [
+			"Quiero conocer todo sobre",
+			"los POKéMON luchando."
+		],
+		"banderas": [],
+		"medalla": 0,
+		"lugar": "CIUDAD FÉRRICA"
+	},
+	{
+		"indice": 57,
+		"id": 266,
+		"clase": "LÍDER",
+		"nombre": "MARCIAL",
+		"estrategia": "¡Acción física directa!",
+		"pokemon": "¡Los de LUCHA son geniales!",
+		"presentacion": [
+			"¡El mundo me espera como la",
+			"siguiente gran revelación!"
+		],
+		"banderas": [],
+		"medalla": 1,
+		"lugar": "PUEBLO AZULIZA"
+	},
+	{
+		"indice": 58,
+		"id": 267,
+		"clase": "LÍDER",
+		"nombre": "ERICO",
+		"estrategia": "Dar descargas sin parar.",
+		"pokemon": "¡Rebosan electricidad!",
+		"presentacion": [
+			"¡Ja, ja, ja! Reír es la mejor",
+			"medicina para la salud."
+		],
+		"banderas": [],
+		"medalla": 2,
+		"lugar": "CIUDAD MALVALONA"
+	},
+	{
+		"indice": 59,
+		"id": 268,
+		"clase": "LÍDER",
+		"nombre": "CANDELA",
+		"estrategia": "Luchar agresivamente.",
+		"pokemon": "¡Los míos son apasionados!",
+		"presentacion": [
+			"A diario me baño en aguas",
+			"termales para relajarme."
+		],
+		"banderas": [],
+		"medalla": 3,
+		"lugar": "PUEBLO LAVACALDA"
+	},
+	{
+		"indice": 60,
+		"id": 269,
+		"clase": "LÍDER",
+		"nombre": "NORMAN",
+		"estrategia": "Adaptarse a cada combate.",
+		"pokemon": "Criados con equilibrio.",
+		"presentacion": [
+			"Los POKéMON son mi vida.",
+			"El camino que sigo es duro..."
+		],
+		"banderas": [],
+		"medalla": 4,
+		"lugar": "CIUDAD PETALIA"
+	},
+	{
+		"indice": 61,
+		"id": 270,
+		"clase": "LÍDER",
+		"nombre": "ALANA",
+		"estrategia": "Aprovechar la velocidad.",
+		"pokemon": "Bellos bailarines celestes.",
+		"presentacion": [
+			"Puedo ver el ir y venir",
+			"de los vientos."
+		],
+		"banderas": [],
+		"medalla": 5,
+		"lugar": "CIUDAD ARBORADA"
+	},
+	{
+		"indice": 62,
+		"id": 271,
+		"clase": "LÍDER",
+		"nombre": "VITO-LETI",
+		"estrategia": "Luchamos juntos.",
+		"pokemon": "Son siempre cariñosos.",
+		"presentacion": [
+			"Nos entendemos y",
+			"entendemos a los otros."
+		],
+		"banderas": [],
+		"medalla": 6,
+		"lugar": "CIUDAD ALGARIA"
+	},
+	{
+		"indice": 63,
+		"id": 272,
+		"clase": "LÍDER",
+		"nombre": "PLUBIO",
+		"estrategia": "Tener dignidad y respeto.",
+		"pokemon": "Los que sean elegantes.",
+		"presentacion": [
+			"Mis acrobacias acuáticas",
+			"reflejan mi elegancia."
+		],
+		"banderas": [],
+		"medalla": 7,
+		"lugar": "ARRECÍPOLIS"
+	},
+	{
+		"indice": 64,
+		"id": 261,
+		"clase": "ALTO MANDO",
+		"nombre": "SIXTO",
+		"estrategia": "Atacar más que defenderme.",
+		"pokemon": "Bellezas de tipo SINIESTRO.",
+		"presentacion": [
+			"Digan lo que digan:",
+			"¡la fuerza manda!"
+		],
+		"banderas": [
+			"colosalia_sixto_vencido"
+		],
+		"medalla": -1,
+		"lugar": "CIUDAD COLOSALIA"
+	},
+	{
+		"indice": 65,
+		"id": 262,
+		"clase": "ALTO MANDO",
+		"nombre": "FÁTIMA",
+		"estrategia": "Confundir y perturbar.",
+		"pokemon": "Los míos son etéreos.",
+		"presentacion": [
+			"Me pregunto cómo le irá a mi",
+			"abuela en el MONTE PÍRICO..."
+		],
+		"banderas": [
+			"colosalia_fatima_vencida"
+		],
+		"medalla": -1,
+		"lugar": "CIUDAD COLOSALIA"
+	},
+	{
+		"indice": 66,
+		"id": 263,
+		"clase": "ALTO MANDO",
+		"nombre": "NÍVEA",
+		"estrategia": "Usar objetos como apoyo.",
+		"pokemon": "¡Arden de glacial cólera!",
+		"presentacion": [
+			"Se entrena mejor al tipo",
+			"HIELO en zonas cálidas."
+		],
+		"banderas": [
+			"colosalia_nivea_vencida"
+		],
+		"medalla": -1,
+		"lugar": "CIUDAD COLOSALIA"
+	},
+	{
+		"indice": 67,
+		"id": 264,
+		"clase": "ALTO MANDO",
+		"nombre": "DRACÓN",
+		"estrategia": "Usar la fuerza que tengo.",
+		"pokemon": "¡Del poderoso tipo DRAGÓN!",
+		"presentacion": [
+			"Vivo para luchar a diario y",
+			"para conocer a los POKéMON."
+		],
+		"banderas": [
+			"colosalia_dracon_vencido"
+		],
+		"medalla": -1,
+		"lugar": "CIUDAD COLOSALIA"
+	},
+	{
+		"indice": 68,
+		"id": 335,
+		"clase": "CAMPEÓN",
+		"nombre": "MÁXIMO",
+		"estrategia": "Atacar al punto débil.",
+		"pokemon": "Los grandes de tipo ACERO.",
+		"presentacion": [
+			"En los momentos decisivos,",
+			"sigo siendo el más fuerte."
+		],
+		"banderas": [
+			"SYS_GAME_CLEAR"
+		],
+		"medalla": -1,
+		"lugar": "CIUDAD COLOSALIA"
+	}
+]

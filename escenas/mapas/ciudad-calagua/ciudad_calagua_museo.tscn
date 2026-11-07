@@ -1,0 +1,451 @@
+[gd_scene format=4 uid="uid://ccx7yppfjmsc"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_qapxj"]
+[ext_resource type="TileSet" uid="uid://cihs7q0xi0yev" path="res://escenas/tileset_interior_edificios_2.tres" id="2_r1lck"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_tgoi5"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="cc_npc_base"]
+[ext_resource type="Script" uid="uid://dmy4ir5m1ul04" path="res://scripts/npc/npc_dialogo_condicional.gd" id="cc_dialogo"]
+[ext_resource type="SpriteFrames" uid="uid://dlmqb6ogg84xh" path="res://escenas/avatares/npc_064.tres" id="cc_npc_064"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="cc_evento"]
+[ext_resource type="SpriteFrames" uid="uid://03vwdt8hqw32" path="res://escenas/avatares/npc_067.tres" id="cc_npc_067"]
+[ext_resource type="SpriteFrames" uid="uid://c5umb4imbb1p" path="res://escenas/avatares/npc_032.tres" id="cc_npc_032"]
+[ext_resource type="SpriteFrames" uid="uid://c3em8cga3bach" path="res://escenas/avatares/npc_057.tres" id="cc_npc_057"]
+[ext_resource type="SpriteFrames" uid="uid://bkw3hndn42rqc" path="res://escenas/avatares/npc_001.tres" id="cc_npc_001"]
+[ext_resource type="SpriteFrames" uid="uid://borgo2f2dfmil" path="res://escenas/avatares/npc_055.tres" id="cc_npc_055"]
+[ext_resource type="SpriteFrames" uid="uid://br8ndfy138tgu" path="res://escenas/avatares/npc_049.tres" id="cc_npc_049"]
+[ext_resource type="SpriteFrames" uid="uid://cy2tf0sbgdeui" path="res://escenas/avatares/npc_015.tres" id="cc_npc_015"]
+[ext_resource type="SpriteFrames" uid="uid://dfpgad0skjl3c" path="res://escenas/avatares/npc_031.tres" id="cc_npc_031"]
+[ext_resource type="SpriteFrames" uid="uid://c8eclcahjsyf3" path="res://escenas/avatares/npc_006.tres" id="cc_npc_006"]
+[ext_resource type="SpriteFrames" uid="uid://buukulhhkfyjc" path="res://escenas/avatares/npc_050.tres" id="cc_npc_050"]
+[ext_resource type="SpriteFrames" uid="uid://cfy52d08b3upp" path="res://escenas/avatares/npc_013.tres" id="cc_npc_013"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="cc_signpost"]
+[ext_resource type="Script" uid="uid://cdyv0uwwmtud2" path="res://escenas/mapas/cartel_condicional.gd" id="cc_cartel_condicional"]
+[ext_resource type="Script" path="res://scripts/eventos/ciudad_calagua/evento_museo_calagua.gd" id="cc_ev_EventoMuseoCalagua"]
+
+[node name="Museo" type="Node2D" unique_id=497464543]
+script = ExtResource("1_qapxj")
+nombre_interno = "ciudad_calagua_museo"
+seccion = "CIUDAD_CALAGUA"
+esInterior = true
+solo_caminar = true
+mapa_exterior_asociado = "CIUDAD_CALAGUA"
+musica_mapa = "MUSEO_CALAGUA"
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=956473475]
+tile_map_data = PackedByteArray("AAAAAAAAAAALACwAAAAAAAEAAAALAC0AAAAUAAAAAAAPAC4AAAAUAAEAAAAPAC8AAAATAAAAAAAOAC4AAAATAAEAAAAOAC8AAAASAAAAAAALACwAAAASAAEAAAALAC0AAAARAAAAAAAPACsAAAARAAEAAAAPACwAAAAQAAAAAAAOACsAAAAQAAEAAAAOACwAAAAPAAAAAAANACsAAAAPAAEAAAANACwAAAAOAAAAAAALACwAAAAOAAEAAAALAC0AAAANAAAAAAAJAC0AAAANAAEAAAAJAC0AAAAMAAAAAAALACwAAAAMAAEAAAALAC0AAAALAAAAAAANAC4AAAALAAEAAAANAC8AAAAKAAAAAAALACwAAAAKAAEAAAALAC0AAAAJAAAAAAAMAC4AAAAJAAEAAAAMAC8AAAAIAAAAAAALACwAAAAIAAEAAAALAC0AAAAHAAAAAAALACwAAAAHAAEAAAALAC0AAAAGAAAAAAALAC4AAAAGAAEAAAALAC8AAAAFAAAAAAAKAC4AAAAFAAEAAAAKAC8AAAAEAAAAAAALACwAAAAEAAEAAAALAC0AAAADAAAAAAALACwAAAADAAEAAAALAC0AAAACAAAAAAAJAC4AAAACAAEAAAAJAC8AAAABAAAAAAAIAC4AAAABAAEAAAAIAC8AAAANAAIAAAAMACsAAAANAAMAAAAMACwAAAANAAQAAAAMAC0AAAAAAAUAAAALACwAAAAAAAYAAAALAC0AAAAIAAUAAAALACwAAAAIAAYAAAALAC0AAAAHAAUAAAALACwAAAAHAAYAAAALAC0AAAAGAAUAAAAPADAAAAAGAAYAAAAPADEAAAAFAAUAAAALACwAAAAFAAYAAAALAC0AAAAEAAUAAAALACwAAAAEAAYAAAALAC0AAAADAAUAAAAOADAAAAADAAYAAAAOADEAAAACAAUAAAANADAAAAACAAYAAAANADEAAAABAAUAAAALACwAAAABAAYAAAALAC0AAAAJAAUAAAAKAC0AAAAJAAYAAAAMACsAAAAJAAcAAAAMACwAAAAJAAgAAAAMAC0AAAAKAAUAAAALACsAAAAKAAYAAAALACsAAAAKAAcAAAALACsAAAAKAAgAAAALACsAAAAKAAkAAAALACsAAAAJAAkAAAALACsAAAAIAAcAAAALACsAAAAHAAcAAAALACsAAAAGAAcAAAALACsAAAAFAAcAAAALACsAAAAEAAcAAAALACsAAAADAAcAAAALACsAAAACAAcAAAALACsAAAABAAcAAAALACsAAAAAAAcAAAALACsAAAAAAA0AAAALACsAAAAAAAwAAAALACsAAAAAAAsAAAALACsAAAAAAAoAAAALACsAAAAAAAkAAAALACsAAAAAAAgAAAALACsAAAAJAA0AAAAOAC0AAAAKAA0AAAAPAC0AAAABAA0AAAAKADUAAAACAA0AAAALADUAAAAFAA0AAAALADUAAAAGAA0AAAAMADUAAAAEAA0AAAALADUAAAADAA0AAAALADUAAAAGAAoAAAAJADQAAAABAAoAAAAIADQAAAACAAoAAAALADUAAAADAAoAAAAJADMAAAAEAAoAAAALADUAAAAFAAoAAAAIADMAAAACAAsAAAANADQAAAADAAsAAAAPADIAAAAEAAsAAAAPADIAAAAFAAsAAAAPADIAAAACAAwAAAAPADQAAAADAAwAAAAKACsAAAAEAAwAAAAKACsAAAAFAAwAAAAKACsAAAABAAsAAAAIAC0AAAABAAwAAAAIADIAAAAGAAwAAAAJADIAAAAGAAsAAAAIAC0AAAAHAAsAAAAPADQAAAAHAAwAAAAPADQAAAAHAA0AAAAPADQAAAAHAAoAAAAOADIAAAAPAAwAAAALADEAAAASAAsAAAAMADAAAAAQAAwAAAAOADIAAAAQAA0AAAAOADMAAAATAAsAAAAOADIAAAATAAwAAAAOADMAAAASAAwAAAAPADIAAAAPAA0AAAAPADIAAAAPAAkAAAAKADUAAAAQAAkAAAALADUAAAASAAkAAAALADUAAAATAAkAAAAMADUAAAARAAkAAAALADUAAAAQAAcAAAAIADAAAAAQAAgAAAAIADEAAAARAAcAAAAJADAAAAARAAgAAAAJADEAAAASAAcAAAAKADAAAAASAAgAAAAKADEAAAATAAcAAAAMADMAAAATAAgAAAAMADQAAAAPAAcAAAAKADMAAAAPAAgAAAAKADQAAAAUAAcAAAAPADQAAAAUAAgAAAAPADQAAAAUAAkAAAAPADQAAAAUAAoAAAAOADMAAAATAAoAAAAPADIAAAASAAoAAAAPADIAAAARAAoAAAAPADIAAAAQAAoAAAAPADIAAAAPAAoAAAAPADIAAAAUAAIAAAALACsAAAATAAIAAAALACsAAAASAAIAAAALACsAAAARAAIAAAALACsAAAAQAAIAAAALACsAAAAPAAIAAAALACsAAAAOAAIAAAALACsAAAAOAAMAAAALACsAAAAOAAQAAAALACsAAAAOAAUAAAALACsAAAANAAUAAAALACsAAAAMAAIAAAALACsAAAALAAIAAAALACsAAAAKAAIAAAALACsAAAAJAAIAAAALACsAAAAIAAIAAAALACsAAAAHAAIAAAALACsAAAAGAAIAAAALACsAAAAFAAIAAAALACsAAAAEAAIAAAALACsAAAADAAIAAAALACsAAAACAAIAAAALACsAAAABAAIAAAALACsAAAAAAAIAAAALACsAAAAAAAMAAAALACsAAAAAAAQAAAALACsAAAAMAAkAAAAKACsAAAAMAAgAAAAKACsAAAAMAAcAAAAKACsAAAAMAAYAAAAKACsAAAAMAAUAAAAKACsAAAAMAAQAAAAKACsAAAAMAAMAAAAKACsAAAALAAMAAAAKACsAAAAKAAMAAAAKACsAAAAJAAMAAAAKACsAAAAIAAMAAAAKACsAAAAHAAMAAAAKACsAAAAGAAMAAAAKACsAAAAFAAMAAAAKACsAAAAEAAMAAAAKACsAAAADAAMAAAAKACsAAAACAAMAAAAKACsAAAABAAMAAAAKACsAAAABAAQAAAAKACsAAAACAAQAAAAKACsAAAADAAQAAAAKACsAAAAEAAQAAAAKACsAAAAFAAQAAAAKACsAAAAGAAQAAAAKACsAAAAHAAQAAAAKACsAAAAIAAQAAAAKACsAAAAJAAQAAAAKACsAAAAKAAQAAAAKACsAAAALAAQAAAAKACsAAAALAAUAAAAKACsAAAALAAYAAAAKACsAAAALAAcAAAAKACsAAAALAAgAAAAKACsAAAALAAkAAAAKACsAAAALAAoAAAAKACsAAAAKAAoAAAAKACsAAAAJAAoAAAAKACsAAAAIAAoAAAAKACsAAAAIAAkAAAAKACsAAAAIAAgAAAAKACsAAAAHAAgAAAAKACsAAAAGAAgAAAAKACsAAAAFAAgAAAAKACsAAAAEAAgAAAAKACsAAAADAAgAAAAKACsAAAACAAgAAAAKACsAAAABAAgAAAAKACsAAAABAAkAAAAKACsAAAACAAkAAAAKACsAAAADAAkAAAAKACsAAAAEAAkAAAAKACsAAAAFAAkAAAAKACsAAAAGAAkAAAAKACsAAAAHAAkAAAAKACsAAAAIAAsAAAAKACsAAAAIAAwAAAAKACsAAAAIAA0AAAAKACsAAAAJAAwAAAAKACsAAAAJAAsAAAAKACsAAAAKAAsAAAAKACsAAAAKAAwAAAAKACsAAAALAAwAAAAKACsAAAALAAsAAAAKACsAAAAMAAsAAAAKACsAAAAMAAoAAAAKACsAAAANAAoAAAAKACsAAAANAAkAAAAKACsAAAANAAgAAAAKACsAAAANAAcAAAAKACsAAAANAAYAAAAKACsAAAAOAAYAAAAKACsAAAAOAAcAAAAKACsAAAAOAAgAAAAKACsAAAAOAAkAAAAKACsAAAAOAAoAAAAKACsAAAAOAAsAAAAKACsAAAANAAsAAAAKACsAAAANAAwAAAAKACsAAAAMAAwAAAAKACsAAAAMAA0AAAAKACsAAAALAA0AAAAKACsAAAANAA0AAAAKACsAAAAOAA0AAAAKACsAAAAOAAwAAAAKACsAAAAPAAsAAAAKACsAAAAQAAsAAAAKACsAAAARAAsAAAAKACsAAAARAAwAAAAKACsAAAARAA0AAAAKACsAAAASAA0AAAAKACsAAAATAA0AAAAKACsAAAAUAA0AAAAKACsAAAAUAAwAAAAKACsAAAAUAAsAAAAKACsAAAAPAAYAAAAKACsAAAAPAAUAAAAKACsAAAAPAAQAAAAKACsAAAAPAAMAAAAKACsAAAAQAAMAAAAKACsAAAAQAAQAAAAKACsAAAAQAAUAAAAKACsAAAAQAAYAAAAKACsAAAARAAYAAAAKACsAAAARAAUAAAAKACsAAAARAAQAAAAKACsAAAARAAMAAAAKACsAAAASAAMAAAAKACsAAAASAAQAAAAKACsAAAASAAUAAAAKACsAAAASAAYAAAAKACsAAAATAAYAAAAKACsAAAATAAUAAAAKACsAAAATAAQAAAAKACsAAAATAAMAAAAKACsAAAAUAAMAAAAKACsAAAAUAAQAAAAKACsAAAAUAAUAAAAKACsAAAAUAAYAAAAKACsAAAAAAPr/AAAJADkAAAAAAPn/AAAIADkAAAAAAPf/AAAIADkAAAAAAPj/AAAJADkAAAAAAPX/AAAIADkAAAAAAPb/AAAJADkAAAAAAPP/AAAIADkAAAAAAPT/AAAJADkAAAAAAPH/AAAIADkAAAAAAPL/AAAJADkAAAABAPH/AAAJADkAAAACAPH/AAAIADkAAAADAPH/AAAJADkAAAAEAPH/AAAIADkAAAAEAPD/AAAJADkAAAAFAPD/AAAIADkAAAAGAPD/AAAJADkAAAAHAPD/AAAIADkAAAAIAPD/AAAJADkAAAAJAPD/AAAIADkAAAAKAPD/AAAJADkAAAALAPD/AAAMADwAAAAMAPD/AAAJADkAAAANAPD/AAAIADkAAAAOAPD/AAAJADkAAAAPAPD/AAANADwAAAAQAPD/AAAJADkAAAARAPD/AAAIADkAAAABAPL/AAAIADgAAAACAPL/AAAJADgAAAADAPL/AAAIADgAAAAEAPL/AAAJADgAAAABAPr/AAAIADgAAAACAPr/AAAJADgAAAACAPn/AAAIADgAAAADAPn/AAAJADgAAAADAPr/AAAIADgAAAAEAPr/AAAJADgAAAAEAPn/AAAIADgAAAAFAPn/AAAMADoAAAABAPj/AAAIADgAAAACAPj/AAAJADgAAAACAPf/AAAIADgAAAADAPf/AAAJADgAAAADAPj/AAAIADgAAAAEAPj/AAAJADgAAAAEAPf/AAAIADgAAAAFAPf/AAAOADsAAAABAPP/AAAOADsAAAABAPT/AAAOADwAAAABAPX/AAAMADoAAAACAPP/AAANADgAAAACAPT/AAAIADYAAAACAPX/AAANADoAAAADAPP/AAAOADgAAAADAPT/AAAJADYAAAADAPX/AAAOADoAAAAEAPP/AAAPADgAAAAEAPT/AAAPADkAAAAEAPX/AAAPADoAAAALAO//AAAMADsAAAANAO7/AAALADgAAAANAO//AAALADkAAAAOAO7/AAAMADgAAAAOAO//AAAMADkAAAAMAO7/AAAKADgAAAAMAO//AAAKADkAAAAGAPf/AAANADgAAAAGAPj/AAAIADYAAAAGAPn/AAANADoAAAAHAPf/AAAOADgAAAAHAPj/AAAJADYAAAAHAPn/AAAOADoAAAAIAPf/AAAPADgAAAAIAPj/AAAPADkAAAAIAPn/AAAPADoAAAAKAPP/AAANADgAAAAKAPT/AAAIADYAAAAKAPX/AAANADoAAAALAPP/AAAOADgAAAALAPT/AAAJADYAAAALAPX/AAAOADoAAAAMAPP/AAAPADgAAAAMAPT/AAAPADkAAAAMAPX/AAAPADoAAAAOAPf/AAANADgAAAAOAPj/AAAIADYAAAAOAPn/AAANADoAAAAPAPf/AAAOADgAAAAPAPj/AAAJADYAAAAPAPn/AAAOADoAAAAQAPf/AAAPADgAAAAQAPj/AAAPADkAAAAQAPn/AAAPADoAAAASAPP/AAANADgAAAASAPT/AAAIADYAAAASAPX/AAANADoAAAATAPP/AAAOADgAAAATAPT/AAAJADYAAAATAPX/AAAOADoAAAAUAPP/AAAPADgAAAAUAPT/AAAPADkAAAAUAPX/AAAPADoAAAAFAPj/AAAOADwAAAAJAPP/AAAOADsAAAAJAPT/AAAOADwAAAAJAPX/AAAMADoAAAANAPf/AAAOADsAAAANAPj/AAAOADwAAAANAPn/AAAMADoAAAARAPP/AAAOADsAAAARAPT/AAAOADwAAAARAPX/AAAMADoAAAAPAO//AAANADsAAAACAO7/AAAJADoAAAACAO//AAAJADsAAAACAPD/AAAJADwAAAADAO7/AAAKADoAAAADAO//AAAKADsAAAADAPD/AAAKADwAAAABAO7/AAAJADoAAAABAO//AAAJADsAAAABAPD/AAAJADwAAAAAAO7/AAAJADoAAAAAAO//AAAJADsAAAAAAPD/AAAJADwAAAASAO7/AAAIADoAAAASAO//AAAIADsAAAASAPD/AAAIADwAAAATAO7/AAAJADoAAAATAO//AAAJADsAAAATAPD/AAAJADwAAAAUAO7/AAAJADoAAAAUAO//AAAJADsAAAAUAPD/AAAJADwAAAAVAO7/AAAKADoAAAAVAO//AAAKADsAAAAVAPD/AAAKADwAAAARAO7/AAAJADsAAAARAO//AAAJADwAAAAQAO7/AAAJADsAAAAQAO//AAAJADwAAAAKAO7/AAAJADsAAAAKAO//AAAJADwAAAAJAO7/AAAJADsAAAAJAO//AAAJADwAAAAIAO7/AAAJADsAAAAIAO//AAAJADwAAAAHAO7/AAAJADsAAAAHAO//AAAJADwAAAAGAO7/AAAJADsAAAAGAO//AAAJADwAAAAFAO7/AAAJADsAAAAFAO//AAAJADwAAAAEAO7/AAAJADsAAAAEAO//AAAJADwAAAALAO7/AAAJADsAAAAPAO7/AAAJADsAAAABAPb/AAAIADgAAAACAPb/AAAJADgAAAADAPb/AAAIADgAAAAEAPb/AAAJADgAAAAFAPb/AAAIADgAAAAGAPb/AAAJADgAAAAHAPb/AAAIADgAAAAIAPb/AAAJADgAAAAJAPb/AAAIADgAAAAKAPb/AAAJADgAAAALAPb/AAAIADgAAAAMAPb/AAAJADgAAAANAPb/AAAIADgAAAAOAPb/AAAJADgAAAAPAPb/AAAIADgAAAAQAPb/AAAJADgAAAARAPb/AAAIADgAAAASAPb/AAAJADgAAAATAPb/AAAIADgAAAAUAPb/AAAJADgAAAABAPn/AAAJADgAAAABAPf/AAAJADgAAAAFAPr/AAAIADgAAAAGAPr/AAAJADgAAAAHAPr/AAAIADgAAAAIAPr/AAAJADgAAAAJAPr/AAAIADgAAAAKAPr/AAAJADgAAAALAPr/AAAIADgAAAAMAPr/AAAJADgAAAANAPr/AAAIADgAAAAOAPr/AAAJADgAAAAPAPr/AAAIADgAAAAQAPr/AAAJADgAAAARAPr/AAAIADgAAAASAPr/AAAJADgAAAATAPr/AAAIADgAAAAUAPr/AAAJADgAAAAVAPr/AAAIADgAAAAJAPf/AAALADsAAAAJAPn/AAALADsAAAARAPf/AAALADsAAAARAPn/AAALADsAAAAFAPX/AAALADsAAAAFAPP/AAALADsAAAANAPX/AAALADsAAAANAPP/AAALADsAAAAVAPX/AAALADsAAAAVAPP/AAALADsAAAAFAPT/AAALADoAAAAJAPj/AAALADoAAAANAPT/AAALADoAAAAVAPT/AAALADoAAAARAPj/AAALADoAAAAKAPf/AAAIADgAAAALAPf/AAAJADgAAAAKAPn/AAAIADgAAAALAPn/AAAJADgAAAASAPf/AAAIADgAAAATAPf/AAAJADgAAAAUAPf/AAAIADgAAAAVAPf/AAAJADgAAAASAPn/AAAIADgAAAATAPn/AAAJADgAAAAUAPn/AAAIADgAAAAVAPn/AAAJADgAAAALAPj/AAAIADgAAAAMAPj/AAAJADgAAAATAPj/AAAIADgAAAAUAPj/AAAJADgAAAAVAPj/AAAIADgAAAAKAPj/AAAJADgAAAAMAPf/AAAIADgAAAAMAPn/AAAIADgAAAASAPj/AAAJADgAAAAVAPb/AAAIADgAAAAQAPX/AAAIADgAAAAOAPX/AAAIADgAAAAPAPT/AAAIADgAAAAQAPP/AAAIADgAAAAOAPP/AAAIADgAAAAPAPL/AAAIADgAAAAQAPH/AAAIADgAAAAOAPH/AAAIADgAAAANAPL/AAAIADgAAAALAPL/AAAIADgAAAAJAPL/AAAIADgAAAAHAPL/AAAIADgAAAAFAPL/AAAIADgAAAAMAPH/AAAIADgAAAAKAPH/AAAIADgAAAAIAPH/AAAIADgAAAAGAPH/AAAIADgAAAARAPL/AAAIADgAAAATAPL/AAAIADgAAAAVAPL/AAAIADgAAAASAPH/AAAIADkAAAAUAPH/AAAIADkAAAAVAPH/AAAJADkAAAATAPH/AAAJADkAAAARAPH/AAAJADgAAAAPAPH/AAAJADgAAAANAPH/AAAJADgAAAALAPH/AAAJADgAAAAJAPH/AAAJADgAAAAHAPH/AAAJADgAAAAFAPH/AAAJADgAAAAGAPL/AAAJADgAAAAIAPL/AAAJADgAAAAKAPL/AAAJADgAAAAMAPL/AAAJADgAAAAOAPL/AAAJADgAAAAQAPL/AAAJADgAAAASAPL/AAAJADgAAAAUAPL/AAAJADgAAAAPAPP/AAAJADgAAAAQAPT/AAAJADgAAAAOAPT/AAAJADgAAAAPAPX/AAAJADgAAAAHAPP/AAAJADgAAAAIAPT/AAAJADgAAAAGAPT/AAAJADgAAAAHAPX/AAAJADgAAAAIAPP/AAAIADgAAAAGAPP/AAAIADgAAAAHAPT/AAAIADgAAAAIAPX/AAAIADgAAAAGAPX/AAAIADgAAAA=")
+tile_set = ExtResource("2_r1lck")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=1977601613]
+tile_map_data = PackedByteArray("AAABAAkAAAAKADIAAAACAAkAAAALADIAAAAFAAkAAAALADIAAAAGAAkAAAAMADIAAAAEAAkAAAALADIAAAADAAkAAAALADIAAAACAAwAAAALADIAAAADAAwAAAALADIAAAAEAAwAAAALADIAAAAFAAwAAAALADIAAAAPAAYAAAAKADIAAAAQAAYAAAALADIAAAASAAYAAAALADIAAAATAAYAAAAMADIAAAARAAYAAAALADIAAAAJAAQAAAAJACsAAAAIAAQAAAAIACsAAAAHAAQAAAAIACsAAAAGAAQAAAAIACsAAAAFAAQAAAAIACsAAAAEAAQAAAAIACsAAAADAAQAAAAIACsAAAACAAQAAAAIACsAAAABAAQAAAAIACsAAAAAAAQAAAAIACsAAAAPAAsAAAALADAAAAABAPL/AAAMADcAAAACAPL/AAANADcAAAADAPL/AAAOADcAAAAEAPL/AAAPADcAAAAGAPb/AAANADcAAAAHAPb/AAAOADcAAAAIAPb/AAAPADcAAAAKAPL/AAANADcAAAALAPL/AAAOADcAAAAMAPL/AAAPADcAAAAOAPb/AAANADcAAAAPAPb/AAAOADcAAAAQAPb/AAAPADcAAAASAPL/AAANADcAAAATAPL/AAAOADcAAAAUAPL/AAAPADcAAAAFAPb/AAAMADcAAAAJAPL/AAAMADcAAAANAPb/AAAMADcAAAARAPL/AAAMADcAAAA=")
+tile_set = ExtResource("2_r1lck")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1701147249]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1330800043]
+
+[node name="Fantasia1" type="Sprite2D" parent="Carteles" unique_id=1330800014 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 1 (1,1) = Godot (1,1)"
+position = Vector2(24, 24)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_CUADRO_FANTASIA"
+coord_tile = Vector2i(1, 1)
+
+[node name="Fantasia2" type="Sprite2D" parent="Carteles" unique_id=1330800015 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 2 (2,1) = Godot (2,1)"
+position = Vector2(40, 24)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_CUADRO_FANTASIA"
+coord_tile = Vector2i(2, 1)
+
+[node name="Bayas1" type="Sprite2D" parent="Carteles" unique_id=1330800016 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 3 (5,1) = Godot (5,1)"
+position = Vector2(88, 24)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_CUADRO_BAYAS"
+coord_tile = Vector2i(5, 1)
+
+[node name="Bayas2" type="Sprite2D" parent="Carteles" unique_id=1330800017 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 4 (6,1) = Godot (6,1)"
+position = Vector2(104, 24)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_CUADRO_BAYAS"
+coord_tile = Vector2i(6, 1)
+
+[node name="Antiguo1" type="Sprite2D" parent="Carteles" unique_id=1330800018 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 5 (9,1) = Godot (9,1)"
+position = Vector2(152, 24)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_CUADRO_ANTIGUO"
+coord_tile = Vector2i(9, 1)
+
+[node name="Antiguo2" type="Sprite2D" parent="Carteles" unique_id=1330800019 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 9 (11,1) = Godot (11,1)"
+position = Vector2(184, 24)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_CUADRO_ANTIGUO"
+coord_tile = Vector2i(11, 1)
+
+[node name="Mujer1" type="Sprite2D" parent="Carteles" unique_id=1330800020 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 6 (3,6) = Godot (3,6)"
+position = Vector2(56, 104)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_CUADRO_MUJER"
+coord_tile = Vector2i(3, 6)
+
+[node name="Mujer2" type="Sprite2D" parent="Carteles" unique_id=1330800021 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 7 (2,6) = Godot (2,6)"
+position = Vector2(40, 104)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_CUADRO_MUJER"
+coord_tile = Vector2i(2, 6)
+
+[node name="EsculturaPajaro" type="Sprite2D" parent="Carteles" unique_id=1330800022 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 8 (15,12) = Godot (15,12)"
+position = Vector2(248, 200)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_ESCULTURA_PAJARO"
+coord_tile = Vector2i(15, 12)
+
+[node name="Planta" type="Sprite2D" parent="Carteles" unique_id=1330800023 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 10 (6,6) = Godot (6,6)"
+position = Vector2(104, 104)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_CUADRO_PLANTA"
+coord_tile = Vector2i(6, 6)
+
+[node name="Losa1" type="Sprite2D" parent="Carteles" unique_id=1330800024 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 11 (17,9) = Godot (17,9)"
+position = Vector2(280, 152)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_LOSA"
+coord_tile = Vector2i(17, 9)
+
+[node name="Legendario1" type="Sprite2D" parent="Carteles" unique_id=1330800025 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 12 (19,1) = Godot (19,1)"
+position = Vector2(312, 24)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_CUADRO_LEGENDARIO"
+coord_tile = Vector2i(19, 1)
+
+[node name="Legendario2" type="Sprite2D" parent="Carteles" unique_id=1330800026 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 13 (20,1) = Godot (20,1)"
+position = Vector2(328, 24)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_CUADRO_LEGENDARIO"
+coord_tile = Vector2i(20, 1)
+
+[node name="Losa2" type="Sprite2D" parent="Carteles" unique_id=1330800027 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 14 (18,9) = Godot (18,9)"
+position = Vector2(296, 152)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_LOSA"
+coord_tile = Vector2i(18, 9)
+
+[node name="EsculturaBall" type="Sprite2D" parent="Carteles" unique_id=1330800028 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 15 (18,11) = Godot (18,11)"
+position = Vector2(296, 184)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_ESCULTURA_BALL"
+coord_tile = Vector2i(18, 11)
+
+[node name="Losa3" type="Sprite2D" parent="Carteles" unique_id=1330800029 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F bg_event 16 (16,9) = Godot (16,9)"
+position = Vector2(264, 152)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_LOSA"
+coord_tile = Vector2i(16, 9)
+
+[node name="MarcoRosa1_2F" type="Sprite2D" parent="Carteles" unique_id=1330800030 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F bg_event 1 (14,10) = Godot (14,-8); con calagua_museo_cuadro_dulzura muestra el cuadro"
+position = Vector2(232, -120)
+script = ExtResource("cc_cartel_condicional")
+textos_condicionales = Dictionary[String, String]({
+"calagua_museo_cuadro_dulzura": "CALAGUA_MUSEO_2F_CUADRO"
+})
+id_texto = "CALAGUA_MUSEO_2F_MARCO_ROSA"
+coord_tile = Vector2i(14, -8)
+
+[node name="MarcoRosa2_2F" type="Sprite2D" parent="Carteles" unique_id=1330800031 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F bg_event 2 (15,10) = Godot (15,-8); con calagua_museo_cuadro_dulzura muestra el cuadro"
+position = Vector2(248, -120)
+script = ExtResource("cc_cartel_condicional")
+textos_condicionales = Dictionary[String, String]({
+"calagua_museo_cuadro_dulzura": "CALAGUA_MUSEO_2F_CUADRO"
+})
+id_texto = "CALAGUA_MUSEO_2F_MARCO_ROSA"
+coord_tile = Vector2i(15, -8)
+
+[node name="MarcoAmarillo1_2F" type="Sprite2D" parent="Carteles" unique_id=1330800032 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F bg_event 3 (3,6) = Godot (3,-12); con calagua_museo_cuadro_dureza muestra el cuadro"
+position = Vector2(56, -184)
+script = ExtResource("cc_cartel_condicional")
+textos_condicionales = Dictionary[String, String]({
+"calagua_museo_cuadro_dureza": "CALAGUA_MUSEO_2F_CUADRO"
+})
+id_texto = "CALAGUA_MUSEO_2F_MARCO_AMARILLO"
+coord_tile = Vector2i(3, -12)
+
+[node name="MarcoAmarillo2_2F" type="Sprite2D" parent="Carteles" unique_id=1330800033 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F bg_event 4 (2,6) = Godot (2,-12); con calagua_museo_cuadro_dureza muestra el cuadro"
+position = Vector2(40, -184)
+script = ExtResource("cc_cartel_condicional")
+textos_condicionales = Dictionary[String, String]({
+"calagua_museo_cuadro_dureza": "CALAGUA_MUSEO_2F_CUADRO"
+})
+id_texto = "CALAGUA_MUSEO_2F_MARCO_AMARILLO"
+coord_tile = Vector2i(2, -12)
+
+[node name="MarcoRojo1_2F" type="Sprite2D" parent="Carteles" unique_id=1330800034 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F bg_event 5 (10,6) = Godot (10,-12); con calagua_museo_cuadro_carisma muestra el cuadro"
+position = Vector2(168, -184)
+script = ExtResource("cc_cartel_condicional")
+textos_condicionales = Dictionary[String, String]({
+"calagua_museo_cuadro_carisma": "CALAGUA_MUSEO_2F_CUADRO"
+})
+id_texto = "CALAGUA_MUSEO_2F_MARCO_ROJO"
+coord_tile = Vector2i(10, -12)
+
+[node name="MarcoRojo2_2F" type="Sprite2D" parent="Carteles" unique_id=1330800035 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F bg_event 6 (11,6) = Godot (11,-12); con calagua_museo_cuadro_carisma muestra el cuadro"
+position = Vector2(184, -184)
+script = ExtResource("cc_cartel_condicional")
+textos_condicionales = Dictionary[String, String]({
+"calagua_museo_cuadro_carisma": "CALAGUA_MUSEO_2F_CUADRO"
+})
+id_texto = "CALAGUA_MUSEO_2F_MARCO_ROJO"
+coord_tile = Vector2i(11, -12)
+
+[node name="MarcoAzul1_2F" type="Sprite2D" parent="Carteles" unique_id=1330800036 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F bg_event 7 (19,6) = Godot (19,-12); con calagua_museo_cuadro_belleza muestra el cuadro"
+position = Vector2(312, -184)
+script = ExtResource("cc_cartel_condicional")
+textos_condicionales = Dictionary[String, String]({
+"calagua_museo_cuadro_belleza": "CALAGUA_MUSEO_2F_CUADRO"
+})
+id_texto = "CALAGUA_MUSEO_2F_MARCO_AZUL"
+coord_tile = Vector2i(19, -12)
+
+[node name="MarcoAzul2_2F" type="Sprite2D" parent="Carteles" unique_id=1330800037 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F bg_event 8 (18,6) = Godot (18,-12); con calagua_museo_cuadro_belleza muestra el cuadro"
+position = Vector2(296, -184)
+script = ExtResource("cc_cartel_condicional")
+textos_condicionales = Dictionary[String, String]({
+"calagua_museo_cuadro_belleza": "CALAGUA_MUSEO_2F_CUADRO"
+})
+id_texto = "CALAGUA_MUSEO_2F_MARCO_AZUL"
+coord_tile = Vector2i(18, -12)
+
+[node name="MarcoVerde1_2F" type="Sprite2D" parent="Carteles" unique_id=1330800038 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F bg_event 9 (6,10) = Godot (6,-8); con calagua_museo_cuadro_ingenio muestra el cuadro"
+position = Vector2(104, -120)
+script = ExtResource("cc_cartel_condicional")
+textos_condicionales = Dictionary[String, String]({
+"calagua_museo_cuadro_ingenio": "CALAGUA_MUSEO_2F_CUADRO"
+})
+id_texto = "CALAGUA_MUSEO_2F_MARCO_VERDE"
+coord_tile = Vector2i(6, -8)
+
+[node name="MarcoVerde2_2F" type="Sprite2D" parent="Carteles" unique_id=1330800039 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F bg_event 10 (7,10) = Godot (7,-8); con calagua_museo_cuadro_ingenio muestra el cuadro"
+position = Vector2(120, -120)
+script = ExtResource("cc_cartel_condicional")
+textos_condicionales = Dictionary[String, String]({
+"calagua_museo_cuadro_ingenio": "CALAGUA_MUSEO_2F_CUADRO"
+})
+id_texto = "CALAGUA_MUSEO_2F_MARCO_VERDE"
+coord_tile = Vector2i(7, -8)
+
+[node name="EsculturaPajaro1_2F" type="Sprite2D" parent="Carteles" unique_id=1330800040 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F bg_event 11 (11,2) = Godot (11,-16)"
+position = Vector2(184, -248)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_ESCULTURA_PAJARO"
+coord_tile = Vector2i(11, -16)
+
+[node name="EsculturaPajaro2_2F" type="Sprite2D" parent="Carteles" unique_id=1330800041 groups=["Cartel"]]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F bg_event 12 (15,2) = Godot (15,-16)"
+position = Vector2(248, -248)
+script = ExtResource("cc_signpost")
+id_texto = "CALAGUA_MUSEO_ESCULTURA_PAJARO"
+coord_tile = Vector2i(15, -16)
+
+[node name="Recepcionista" parent="NPCs" unique_id=1330800000 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F objeto 1 (5,12) BEAUTY FACE_RIGHT (Greeter: MSGBOX_SIGN)"
+position = Vector2(88, 206)
+script = ExtResource("cc_dialogo")
+girar_al_hablar = false
+id_texto = "CALAGUA_MUSEO_RECEPCIONISTA"
+tipo_movimiento = 10
+selec_frames = ExtResource("cc_npc_064")
+coord = Vector2i(5, 12)
+
+[node name="Director" parent="NPCs" unique_id=1330800001 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F objeto 2 (16,2) GENTLEMAN FACE_DOWN (Curator: EventoMuseoCalagua); FLAG_HIDE_LILYCOVE_MUSEUM_CURATOR"
+position = Vector2(264, 46)
+script = ExtResource("cc_evento")
+bandera_ocultar = "calagua_museo_director_oculto"
+id_texto = "CALAGUA_MUSEO_DIRECTOR_PRESENTACION"
+tipo_movimiento = 8
+selec_frames = ExtResource("cc_npc_067")
+coord = Vector2i(16, 2)
+
+[node name="Colegial" parent="NPCs" unique_id=1330800002 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F objeto 3 (13,7) SCHOOL_KID_M FACE_RIGHT (MSGBOX_NPC)"
+position = Vector2(216, 126)
+id_texto = "CALAGUA_MUSEO_COLEGIAL"
+tipo_movimiento = 10
+selec_frames = ExtResource("cc_npc_032")
+coord = Vector2i(13, 7)
+
+[node name="Artista1" parent="NPCs" unique_id=1330800003 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F objeto 4 (13,10) ARTIST WANDER_LEFT_AND_RIGHT (2,0) (MSGBOX_NPC)"
+position = Vector2(216, 174)
+id_texto = "CALAGUA_MUSEO_ARTISTA1"
+tipo_movimiento = 5
+rango = Vector2i(2, 0)
+selec_frames = ExtResource("cc_npc_057")
+coord = Vector2i(13, 10)
+
+[node name="Nino" parent="NPCs" unique_id=1330800004 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F objeto 5 (2,8) LITTLE_BOY_1 FACE_UP (MSGBOX_SIGN)"
+position = Vector2(40, 142)
+script = ExtResource("cc_dialogo")
+girar_al_hablar = false
+id_texto = "CALAGUA_MUSEO_NINO"
+tipo_movimiento = 7
+selec_frames = ExtResource("cc_npc_001")
+coord = Vector2i(2, 8)
+
+[node name="Mujer1" parent="NPCs" unique_id=1330800005 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F objeto 6 (3,8) WOMAN_5 FACE_UP (MSGBOX_SIGN)"
+position = Vector2(56, 142)
+script = ExtResource("cc_dialogo")
+girar_al_hablar = false
+id_texto = "CALAGUA_MUSEO_MUJER1"
+tipo_movimiento = 7
+selec_frames = ExtResource("cc_npc_055")
+coord = Vector2i(3, 8)
+
+[node name="Mujer2" parent="NPCs" unique_id=1330800006 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F objeto 7 (11,3) WOMAN_3 WANDER_AROUND (1,1) (MSGBOX_NPC); FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_1"
+position = Vector2(184, 62)
+bandera_mostrar = "calagua_museo_visitante_1"
+id_texto = "CALAGUA_MUSEO_MUJER2"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("cc_npc_049")
+coord = Vector2i(11, 3)
+
+[node name="Artista2" parent="NPCs" unique_id=1330800007 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F objeto 8 (19,3) ARTIST FACE_UP (MSGBOX_NPC + FaceOriginalDirection); FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_4"
+position = Vector2(312, 62)
+script = ExtResource("cc_dialogo")
+volver_direccion_original = true
+bandera_mostrar = "calagua_museo_visitante_4"
+id_texto = "CALAGUA_MUSEO_ARTISTA2"
+tipo_movimiento = 7
+selec_frames = ExtResource("cc_npc_057")
+coord = Vector2i(19, 3)
+
+[node name="Gordo" parent="NPCs" unique_id=1330800008 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F objeto 9 (2,2) FAT_MAN WANDER_AROUND (2,2) (MSGBOX_NPC); FLAG_HIDE_LILYCOVE_MUSEUM_TOURISTS"
+position = Vector2(40, 46)
+bandera_mostrar = "calagua_museo_turistas"
+id_texto = "CALAGUA_MUSEO_GORDO"
+tipo_movimiento = 2
+rango = Vector2i(2, 2)
+selec_frames = ExtResource("cc_npc_015")
+coord = Vector2i(2, 2)
+
+[node name="Psiquico" parent="NPCs" unique_id=1330800009 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F objeto 10 (6,2) PSYCHIC_M WANDER_AROUND (1,1) (MSGBOX_NPC); FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_3"
+position = Vector2(104, 46)
+bandera_mostrar = "calagua_museo_visitante_3"
+id_texto = "CALAGUA_MUSEO_PSIQUICO"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("cc_npc_031")
+coord = Vector2i(6, 2)
+
+[node name="Director2F" parent="NPCs" unique_id=1330800010 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F objeto 1 (10,8) GENTLEMAN FACE_UP (Curator: EventoMuseoCalagua); 2F = Rubí + (0,-18)"
+position = Vector2(168, -146)
+script = ExtResource("cc_evento")
+id_texto = "CALAGUA_MUSEO_2F_DIRECTOR_PIDE"
+tipo_movimiento = 7
+selec_frames = ExtResource("cc_npc_067")
+coord = Vector2i(10, -10)
+
+[node name="Chica2F" parent="NPCs" unique_id=1330800011 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F objeto 2 (19,10) GIRL_2 WANDER_AROUND (1,1) (MSGBOX_NPC); FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_2"
+position = Vector2(312, -114)
+bandera_mostrar = "calagua_museo_visitante_2"
+id_texto = "CALAGUA_MUSEO_2F_CHICA"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("cc_npc_006")
+coord = Vector2i(19, -8)
+
+[node name="Viejo2F" parent="NPCs" unique_id=1330800012 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F objeto 3 (7,3) OLD_MAN_1 WANDER_AROUND (1,1) (MSGBOX_NPC); FLAG_HIDE_LILYCOVE_MUSEUM_TOURISTS"
+position = Vector2(120, -226)
+bandera_mostrar = "calagua_museo_turistas"
+id_texto = "CALAGUA_MUSEO_2F_VIEJO"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("cc_npc_050")
+coord = Vector2i(7, -15)
+
+[node name="Rico2F" parent="NPCs" unique_id=1330800013 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_2F objeto 4 (14,6) BOY_4 WANDER_AROUND (1,1) (MSGBOX_NPC); FLAG_HIDE_LILYCOVE_MUSEUM_TOURISTS"
+position = Vector2(232, -178)
+bandera_mostrar = "calagua_museo_turistas"
+id_texto = "CALAGUA_MUSEO_2F_RICO"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("cc_npc_013")
+coord = Vector2i(14, -12)
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1301143508]
+position = Vector2(216, -266)
+script = ExtResource("3_tgoi5")
+ruta_mapa_destino = "ciudad_calagua_museo"
+posicion_destino = Vector2(16, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=2085409452]
+position = Vector2(264, 22)
+script = ExtResource("3_tgoi5")
+ruta_mapa_destino = "ciudad_calagua_museo"
+posicion_destino = Vector2(13, -17)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp3" type="Sprite2D" parent="." unique_id=1495285283]
+position = Vector2(152, 214)
+script = ExtResource("3_tgoi5")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_calagua"
+posicion_destino = Vector2(11, 5)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp4" type="Sprite2D" parent="." unique_id=1910069636]
+position = Vector2(168, 214)
+script = ExtResource("3_tgoi5")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_calagua"
+posicion_destino = Vector2(12, 5)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1330800044]
+
+[node name="EventoMuseoCalagua" type="Node2D" parent="Eventos" unique_id=1330800042]
+editor_description = "pokeruby LilycoveCity_LilycoveMuseum_1F (Curator) y _2F (OnFrame ShowExhibitHall, Curator)."
+script = ExtResource("cc_ev_EventoMuseoCalagua")
+director_1f = NodePath("../../NPCs/Director")
+director_2f = NodePath("../../NPCs/Director2F")

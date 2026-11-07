@@ -1,0 +1,171 @@
+[gd_scene format=4 uid="uid://bb302d2v0mi0g"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mapa"]
+[ext_resource type="TileSet" uid="uid://digrlsb6y2vg" path="res://graficos/tilesets/tileset_colosalia_alto_mando.tres" id="2_tiles"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_tp"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_warp"]
+
+[node name="Pasillo2" type="Node2D" unique_id=1818145331]
+editor_description = "pokeruby EverGrandeCity_Corridor2 (LAYOUT_EVER_GRANDE_CITY_SHORT_CORRIDOR, 11x13). Generada por herramientas/importar_interiores_colosalia.py."
+script = ExtResource("1_mapa")
+nombre_interno = "ciudad_colosalia_pasillo2"
+seccion = "CIUDAD_COLOSALIA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_COLOSALIA"
+solo_caminar = true
+musica_mapa = "VICTORIA_CAMINO_VICTORIA"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1724714834]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAEAAAAAAAEAAAAIABoAAAAAAAIAAAAIABsAAAAAAAMAAAABABoAAAAAAAQAAAAAABoAAAAAAAUAAAAEABsAAAAAAAYAAAAEABwAAAAAAAcAAAAHABwAAAAAAAgAAAAHABwAAAAAAAkAAAAHABwAAAAAAAoAAAAHABwAAAAAAAsAAAAHABwAAAAAAAwAAAAHABwAAAABAAAAAAAAAAEAAAABAAEAAAAJABoAAAABAAIAAAAJABsAAAABAAMAAAABABoAAAABAAQAAAAAABoAAAABAAUAAAAEABsAAAABAAYAAAAEABwAAAABAAcAAAAHABwAAAABAAgAAAAHABwAAAABAAkAAAAHABwAAAABAAoAAAAHABwAAAABAAsAAAAHABwAAAABAAwAAAAHABwAAAACAAAAAAAAAAEAAAACAAEAAAAIABoAAAACAAIAAAAIABsAAAACAAMAAAABABoAAAACAAQAAAAAABoAAAACAAUAAAAEABsAAAACAAYAAAAEABwAAAACAAcAAAAHABwAAAACAAgAAAAHABwAAAACAAkAAAAHABwAAAACAAoAAAAHABwAAAACAAsAAAAHABwAAAACAAwAAAAHABwAAAADAAAAAAAAAAEAAAADAAEAAAAJABoAAAADAAIAAAAJABsAAAADAAMAAAABABoAAAADAAQAAAAAABoAAAADAAUAAAAAABsAAAADAAYAAAAAABwAAAADAAcAAAAAABwAAAADAAgAAAAAABwAAAADAAkAAAAAABwAAAADAAoAAAAAABwAAAADAAsAAAAAABwAAAADAAwAAAAAABwAAAAEAAAAAAAAAAEAAAAEAAEAAAABAAAAAAAEAAIAAAABAAEAAAAEAAMAAAABABoAAAAEAAQAAAAAABoAAAAEAAUAAAABABsAAAAEAAYAAAABABwAAAAEAAcAAAABABwAAAAEAAgAAAABABwAAAAEAAkAAAABABwAAAAEAAoAAAABABwAAAAEAAsAAAABABwAAAAEAAwAAAABABwAAAAFAAAAAAAAAAEAAAAFAAEAAAAEACgAAAAFAAIAAAAFACgAAAAFAAMAAAABABoAAAAFAAQAAAAAABoAAAAFAAUAAAACABsAAAAFAAYAAAACABwAAAAFAAcAAAACABwAAAAFAAgAAAACABwAAAAFAAkAAAACABwAAAAFAAoAAAACABwAAAAFAAsAAAACABwAAAAFAAwAAAACABwAAAAGAAAAAAAAAAEAAAAGAAEAAAADAAAAAAAGAAIAAAADAAEAAAAGAAMAAAABABoAAAAGAAQAAAAAABoAAAAGAAUAAAACABsAAAAGAAYAAAACABwAAAAGAAcAAAACABwAAAAGAAgAAAACABwAAAAGAAkAAAACABwAAAAGAAoAAAACABwAAAAGAAsAAAACABwAAAAGAAwAAAACABwAAAAHAAAAAAAAAAEAAAAHAAEAAAAIABoAAAAHAAIAAAAIABsAAAAHAAMAAAABABoAAAAHAAQAAAAAABoAAAAHAAUAAAADABsAAAAHAAYAAAADABwAAAAHAAcAAAADABwAAAAHAAgAAAADABwAAAAHAAkAAAADABwAAAAHAAoAAAADABwAAAAHAAsAAAADABwAAAAHAAwAAAADABwAAAAIAAAAAAAAAAEAAAAIAAEAAAAJABoAAAAIAAIAAAAJABsAAAAIAAMAAAABABoAAAAIAAQAAAAAABoAAAAIAAUAAAAEABsAAAAIAAYAAAAEABwAAAAIAAcAAAAHABwAAAAIAAgAAAAHABwAAAAIAAkAAAAHABwAAAAIAAoAAAAHABwAAAAIAAsAAAAHABwAAAAIAAwAAAAHABwAAAAJAAAAAAAAAAEAAAAJAAEAAAAIABoAAAAJAAIAAAAIABsAAAAJAAMAAAABABoAAAAJAAQAAAAAABoAAAAJAAUAAAAEABsAAAAJAAYAAAAEABwAAAAJAAcAAAAHABwAAAAJAAgAAAAHABwAAAAJAAkAAAAHABwAAAAJAAoAAAAHABwAAAAJAAsAAAAHABwAAAAJAAwAAAAHABwAAAAKAAAAAAAAAAEAAAAKAAEAAAAJABoAAAAKAAIAAAAJABsAAAAKAAMAAAABABoAAAAKAAQAAAAAABoAAAAKAAUAAAAEABsAAAAKAAYAAAAEABwAAAAKAAcAAAAHABwAAAAKAAgAAAAHABwAAAAKAAkAAAAHABwAAAAKAAoAAAAHABwAAAAKAAsAAAAHABwAAAAKAAwAAAAHABwAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Superior" type="TileMapLayer" parent="." unique_id=10900029]
+z_index = 2
+tile_map_data = PackedByteArray("AAAAAAAAAAAIAAEAAAABAAAAAAAIAAEAAAACAAAAAAAIAAEAAAADAAAAAAAIAAEAAAAEAAAAAAAIAAEAAAAFAAAAAAAIAAEAAAAGAAAAAAAIAAEAAAAHAAAAAAAIAAEAAAAIAAAAAAAIAAEAAAAJAAAAAAAIAAEAAAAKAAAAAAAIAAEAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=219595266]
+script = ExtResource("3_tp")
+tile_data = {
+"-1,3": {
+"flags": 1
+},
+"-1,4": {
+"flags": 1
+},
+"0,2": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"1,2": {
+"flags": 1
+},
+"1,5": {
+"flags": 1
+},
+"10,2": {
+"flags": 1
+},
+"10,5": {
+"flags": 1
+},
+"11,3": {
+"flags": 1
+},
+"11,4": {
+"flags": 1
+},
+"2,2": {
+"flags": 1
+},
+"2,5": {
+"flags": 1
+},
+"3,10": {
+"flags": 1
+},
+"3,11": {
+"flags": 1
+},
+"3,12": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"3,5": {
+"flags": 1
+},
+"3,6": {
+"flags": 1
+},
+"3,7": {
+"flags": 1
+},
+"3,8": {
+"flags": 1
+},
+"3,9": {
+"flags": 1
+},
+"4,13": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,13": {
+"flags": 1
+},
+"6,13": {
+"flags": 1
+},
+"6,2": {
+"flags": 1
+},
+"7,10": {
+"flags": 1
+},
+"7,11": {
+"flags": 1
+},
+"7,12": {
+"flags": 1
+},
+"7,2": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"7,6": {
+"flags": 1
+},
+"7,7": {
+"flags": 1
+},
+"7,8": {
+"flags": 1
+},
+"7,9": {
+"flags": 1
+},
+"8,2": {
+"flags": 1
+},
+"8,5": {
+"flags": 1
+},
+"9,2": {
+"flags": 1
+},
+"9,5": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1795199275]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=768848295]
+editor_description = "pokeruby EverGrandeCity_Corridor2 warp (5,2) -> MAP_EVER_GRANDE_CITY_GLACIAS_ROOM (6,13)"
+position = Vector2(88, 38)
+script = ExtResource("4_warp")
+tipo_warp = 2
+ruta_mapa_destino = "ciudad_colosalia_sala_nivea"
+posicion_destino = Vector2(6, 13)
+direccion = Vector2(0, -1)

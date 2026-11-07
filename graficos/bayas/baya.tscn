@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bquv6ju4slegu"]
+
+[ext_resource type="Script" uid="uid://c8jx13l8ha11a" path="res://graficos/bayas/controlador_baya.gd" id="1_0c1p1"]
+[ext_resource type="SpriteFrames" uid="uid://dcug7ifqv6tok" path="res://graficos/bayas/BAYA_ALGAMA.tres" id="2_0c1p1"]
+
+[node name="Baya" type="Node2D" unique_id=12506172]
+script = ExtResource("1_0c1p1")
+
+[node name="sprite" type="AnimatedSprite2D" parent="." unique_id=1592350535]
+sprite_frames = ExtResource("2_0c1p1")
+animation = &"5_fruto"
+offset = Vector2(0, -14)

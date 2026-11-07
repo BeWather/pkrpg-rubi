@@ -1,0 +1,23 @@
+# Godot
+.godot/
+*.tmp
+*.log
+
+# Carpetas ocultas (IDE, agentes de IA, configuración MCP), salvo la config del repo
+/.*/
+/.mcp.json
+
+# Partidas locales de desarrollo
+/partida/*
+!/partida/.gitkeep
+
+# Exportación y salidas locales
+/android/
+/exportados/
+/tmp/
+
+# Copias temporales de la GDExtension de SQLite
+addons/godot-sqlite/bin/~*
+
+# Python
+__pycache__/

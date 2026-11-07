@@ -1,0 +1,397 @@
+[gd_scene format=3 uid="uid://c2j881npy02iw"]
+
+[ext_resource type="Script" uid="uid://dvmc6da37l4x0" path="res://UI/ventana_opciones.gd" id="1_fu4xn"]
+[ext_resource type="Texture2D" uid="uid://v6kexaw8rq10" path="res://UI/menu_box_1.png" id="1_mj6on"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="3_wj4r4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_whub1"]
+line_spacing = 0.0
+font = ExtResource("3_wj4r4")
+font_size = 15
+font_color = Color(0.972549, 0.690196, 0.313726, 1)
+shadow_size = 0
+shadow_color = Color(0.752941, 0.470588, 0, 1)
+shadow_offset = Vector2(1, 0)
+
+[node name="VentanaOpciones" type="ColorRect" unique_id=1176710165]
+offset_right = 240.0
+offset_bottom = 160.0
+color = Color(0.533333, 0.564706, 0.972549, 1)
+script = ExtResource("1_fu4xn")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=955741361]
+visible = false
+anchor_mode = 0
+
+[node name="CuadroTitulo" type="NinePatchRect" parent="." unique_id=1165737476]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 32.0
+texture = ExtResource("1_mj6on")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Label_Titulo" type="Label" parent="CuadroTitulo" unique_id=2026293526]
+texture_filter = 1
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 64.0
+offset_bottom = 23.0
+text = "OPCIONES"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="PanelOpciones" type="NinePatchRect" parent="." unique_id=2105410562]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 240.0
+offset_bottom = 160.0
+texture = ExtResource("1_mj6on")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="FondoOpciones" type="ColorRect" parent="PanelOpciones" unique_id=2000938156]
+clip_contents = true
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 232.0
+offset_bottom = 120.0
+color = Color(0.752941, 0.752941, 0.752941, 1)
+
+[node name="CursorSelector" type="ColorRect" parent="PanelOpciones/FondoOpciones" unique_id=525590136]
+layout_mode = 0
+offset_right = 224.0
+offset_bottom = 16.0
+color = Color(0.972549, 0.972549, 0.972549, 1)
+
+[node name="OpcionesVBox" type="VBoxContainer" parent="PanelOpciones/FondoOpciones" unique_id=562727434]
+layout_mode = 0
+offset_left = 8.0
+offset_right = 216.0
+offset_bottom = 129.0
+
+[node name="Linea_Velocidad" type="HBoxContainer" parent="PanelOpciones/FondoOpciones/OpcionesVBox" unique_id=29248760]
+layout_mode = 2
+
+[node name="Label_Velocidad" type="Label" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Velocidad" unique_id=1410963746]
+texture_filter = 1
+custom_minimum_size = Vector2(78, 0)
+layout_mode = 2
+text = "VELOC.TEXTO"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="Choices_Velocidad" type="HBoxContainer" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Velocidad" unique_id=726257387]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Velocidad_Lenta" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Velocidad/Choices_Velocidad" unique_id=918580574]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/default_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.815686, 0.815686, 0.784314, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "LENTA"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Velocidad_Media" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Velocidad/Choices_Velocidad" unique_id=2093982595]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/default_color = Color(0.972549, 0.533333, 0.501961, 1)
+theme_override_colors/font_shadow_color = Color(0.972549, 0.188235, 0.0941176, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "MEDIA"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Velocidad_Rapida" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Velocidad/Choices_Velocidad" unique_id=459783203]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/default_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.815686, 0.815686, 0.784314, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "RÁPIDA"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Linea_Animacion" type="HBoxContainer" parent="PanelOpciones/FondoOpciones/OpcionesVBox" unique_id=1530327663]
+layout_mode = 2
+
+[node name="Label_Animacion" type="Label" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Animacion" unique_id=148971172]
+texture_filter = 1
+custom_minimum_size = Vector2(78, 0)
+layout_mode = 2
+text = "ANIM. COMBATE"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="Choices_Animacion" type="HBoxContainer" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Animacion" unique_id=1520735771]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Animacion_Si" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Animacion/Choices_Animacion" unique_id=2038873197]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/default_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.815686, 0.815686, 0.784314, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "SÍ"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Animacion_No" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Animacion/Choices_Animacion" unique_id=1590769235]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/default_color = Color(0.972549, 0.533333, 0.501961, 1)
+theme_override_colors/font_shadow_color = Color(0.972549, 0.188235, 0.0941176, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "NO"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Linea_TipoCombate" type="HBoxContainer" parent="PanelOpciones/FondoOpciones/OpcionesVBox" unique_id=2095899129]
+layout_mode = 2
+
+[node name="Label_TipoCombate" type="Label" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_TipoCombate" unique_id=2133668076]
+texture_filter = 1
+custom_minimum_size = Vector2(78, 0)
+layout_mode = 2
+text = "TIPO COMBATE"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="Choices_TipoCombate" type="HBoxContainer" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_TipoCombate" unique_id=1236733158]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Tipo_Cambiar" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_TipoCombate/Choices_TipoCombate" unique_id=1567134017]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/default_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.815686, 0.815686, 0.784314, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "CAMBIAR"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Tipo_Mantener" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_TipoCombate/Choices_TipoCombate" unique_id=614631065]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/default_color = Color(0.972549, 0.533333, 0.501961, 1)
+theme_override_colors/font_shadow_color = Color(0.972549, 0.188235, 0.0941176, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "MANTENER"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Linea_Sonido" type="HBoxContainer" parent="PanelOpciones/FondoOpciones/OpcionesVBox" unique_id=371901292]
+layout_mode = 2
+
+[node name="Label_Sonido" type="Label" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Sonido" unique_id=1490468225]
+texture_filter = 1
+custom_minimum_size = Vector2(78, 0)
+layout_mode = 2
+text = "SONIDO"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="Choices_Sonido" type="HBoxContainer" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Sonido" unique_id=999576261]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Sonido_No" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Sonido/Choices_Sonido" unique_id=666723162]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/default_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.815686, 0.815686, 0.784314, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "NO"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sonido_Bajo" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Sonido/Choices_Sonido" unique_id=956189268]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/default_color = Color(0.972549, 0.533333, 0.501961, 1)
+theme_override_colors/font_shadow_color = Color(0.972549, 0.188235, 0.0941176, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "BAJO"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Sonido_Normal" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Sonido/Choices_Sonido" unique_id=898105883]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/default_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.815686, 0.815686, 0.784314, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "NORMAL"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Linea_Controles" type="HBoxContainer" parent="PanelOpciones/FondoOpciones/OpcionesVBox" unique_id=59569802]
+layout_mode = 2
+
+[node name="Label_Controles" type="Label" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Controles" unique_id=1082922485]
+texture_filter = 1
+custom_minimum_size = Vector2(78, 0)
+layout_mode = 2
+text = "CONTROLES"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="Choices_Controles" type="HBoxContainer" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Controles" unique_id=1598401146]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Controles_Normal" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Controles/Choices_Controles" unique_id=138047364]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/default_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.815686, 0.815686, 0.784314, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "NORMAL"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Controles_LR" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Controles/Choices_Controles" unique_id=1821669326]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_colors/default_color = Color(0.972549, 0.533333, 0.501961, 1)
+theme_override_colors/font_shadow_color = Color(0.972549, 0.188235, 0.0941176, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "LR"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Controles_LA" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Controles/Choices_Controles" unique_id=2045542361]
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/default_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.815686, 0.815686, 0.784314, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "L=A"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Linea_Imagen" type="HBoxContainer" parent="PanelOpciones/FondoOpciones/OpcionesVBox" unique_id=632611911]
+layout_mode = 2
+
+[node name="Label_Imagen" type="Label" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Imagen" unique_id=1113914574]
+texture_filter = 1
+custom_minimum_size = Vector2(78, 0)
+layout_mode = 2
+text = "IMAGEN"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="Choices_Imagen" type="HBoxContainer" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Imagen" unique_id=653382134]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Imagen_Tipo" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Imagen/Choices_Imagen" unique_id=1651482827]
+clip_contents = false
+layout_mode = 2
+size_flags_horizontal = 0
+theme_override_colors/default_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0.815686, 0.815686, 0.784314, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "TIPO  "
+fit_content = true
+autowrap_mode = 0
+
+[node name="Imagen_Numero" type="RichTextLabel" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Imagen/Choices_Imagen" unique_id=1906657216]
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/default_color = Color(0.972549, 0.533333, 0.501961, 1)
+theme_override_colors/font_shadow_color = Color(0.972549, 0.188235, 0.0941176, 1)
+theme_override_constants/shadow_outline_size = 0
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("3_wj4r4")
+theme_override_font_sizes/normal_font_size = 15
+text = "19"
+fit_content = true
+autowrap_mode = 0
+
+[node name="Linea_Salir" type="HBoxContainer" parent="PanelOpciones/FondoOpciones/OpcionesVBox" unique_id=1716817988]
+layout_mode = 2
+
+[node name="Label_Salir" type="Label" parent="PanelOpciones/FondoOpciones/OpcionesVBox/Linea_Salir" unique_id=951413630]
+texture_filter = 1
+layout_mode = 2
+text = "SALIR"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"

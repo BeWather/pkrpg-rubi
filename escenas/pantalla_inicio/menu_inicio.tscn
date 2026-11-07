@@ -1,0 +1,230 @@
+[gd_scene format=3 uid="uid://cxbcntkiab15j"]
+
+[ext_resource type="Texture2D" uid="uid://v6kexaw8rq10" path="res://UI/menu_box_1.png" id="1_4ehox"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="2_v5dau"]
+[ext_resource type="Script" uid="uid://cg5pvo5vgmpkt" path="res://escenas/pantalla_inicio/menu_inicio.gd" id="3_script"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_start_menu"]
+font = ExtResource("2_v5dau")
+font_size = 15
+font_color = Color(0.165656, 0.165656, 0.165656, 1)
+shadow_size = 0
+shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+shadow_offset = Vector2(1, 0)
+
+[node name="MenuInicio" type="ColorRect" unique_id=488297525]
+offset_right = 240.0
+offset_bottom = 160.0
+color = Color(0.54901963, 0.5882353, 1, 1)
+script = ExtResource("3_script")
+
+[node name="Sombreado" type="ColorRect" parent="." unique_id=1721454323]
+z_index = 1
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 160.0
+color = Color(0, 0, 0, 0.5)
+
+[node name="SelContinuar" type="NinePatchRect" parent="." unique_id=2015586545]
+z_index = 2
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -80.0
+offset_right = 112.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4ehox")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="LbContinue" type="Label" parent="SelContinuar" unique_id=1638394061]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 216.0
+offset_bottom = 23.0
+text = "CONTINUAR"
+label_settings = SubResource("LabelSettings_start_menu")
+
+[node name="LbJugador" type="Label" parent="SelContinuar" unique_id=862159871]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 64.0
+offset_bottom = 39.0
+text = "JUGADOR"
+label_settings = SubResource("LabelSettings_start_menu")
+
+[node name="LbPokedex" type="Label" parent="SelContinuar" unique_id=2083528896]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 64.0
+offset_bottom = 55.0
+text = "POKéDEX"
+label_settings = SubResource("LabelSettings_start_menu")
+
+[node name="LbTiempoJ" type="Label" parent="SelContinuar" unique_id=1312590463]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 24.0
+offset_right = 168.0
+offset_bottom = 39.0
+text = "TIEMPO J."
+label_settings = SubResource("LabelSettings_start_menu")
+
+[node name="LbMedallas" type="Label" parent="SelContinuar" unique_id=1725314206]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 40.0
+offset_right = 176.0
+offset_bottom = 55.0
+text = "MEDALLAS"
+label_settings = SubResource("LabelSettings_start_menu")
+
+[node name="Nombre" type="Label" parent="SelContinuar" unique_id=1837806386]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 24.0
+offset_right = 120.0
+offset_bottom = 39.0
+text = "RUBÍ"
+label_settings = SubResource("LabelSettings_start_menu")
+
+[node name="NumDex" type="Label" parent="SelContinuar" unique_id=1576416324]
+layout_mode = 0
+offset_left = 64.0
+offset_top = 40.0
+offset_right = 88.0
+offset_bottom = 55.0
+text = "386"
+label_settings = SubResource("LabelSettings_start_menu")
+
+[node name="HorasJ" type="Label" parent="SelContinuar" unique_id=1878938648]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 24.0
+offset_right = 216.0
+offset_bottom = 39.0
+text = "1199:59"
+label_settings = SubResource("LabelSettings_start_menu")
+horizontal_alignment = 2
+
+[node name="NumMed" type="Label" parent="SelContinuar" unique_id=1191872767]
+layout_mode = 0
+offset_left = 192.0
+offset_top = 40.0
+offset_right = 208.0
+offset_bottom = 55.0
+text = "8"
+label_settings = SubResource("LabelSettings_start_menu")
+horizontal_alignment = 2
+
+[node name="SelNueva" type="NinePatchRect" parent="." unique_id=1197031145]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -16.0
+offset_right = 112.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4ehox")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="LbNueva" type="Label" parent="SelNueva" unique_id=1206746695]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 112.0
+offset_bottom = 23.0
+text = "PARTIDA NUEVA"
+label_settings = SubResource("LabelSettings_start_menu")
+
+[node name="SelOpciones" type="NinePatchRect" parent="." unique_id=61350940]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = 16.0
+offset_right = 112.0
+offset_bottom = 48.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4ehox")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="LbOpciones" type="Label" parent="SelOpciones" unique_id=1529606361]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 112.0
+offset_bottom = 23.0
+text = "OPCIONES"
+label_settings = SubResource("LabelSettings_start_menu")
+
+[node name="SelSalir" type="NinePatchRect" parent="." unique_id=760183981]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = 48.0
+offset_right = 112.0
+offset_bottom = 80.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_4ehox")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="LbSalir" type="Label" parent="SelSalir" unique_id=1517376255]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 112.0
+offset_bottom = 23.0
+text = "SALIR"
+label_settings = SubResource("LabelSettings_start_menu")
+
+[node name="ErrorLabel" type="Label" parent="." unique_id=369046142]
+modulate = Color(1, 0, 0, 1)
+layout_mode = 0
+offset_top = 96.0
+offset_right = 240.0
+offset_bottom = 116.0
+label_settings = SubResource("LabelSettings_start_menu")
+horizontal_alignment = 1

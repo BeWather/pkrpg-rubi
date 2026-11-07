@@ -1,0 +1,793 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/efecto_proyectil_nativo.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/i5_candidate_hit_tile0.png" id="2_golpe"]
+[ext_resource type="Shader" path="res://escenas/batalla/animaciones_nativas/mezcla_gba.gdshader" id="3_mezcla"]
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/fondo_movimiento.gd" id="4_fondo"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/rocks_pal_58_32x32_0.png" id="20_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/rocks_pal_58_32x32_16.png" id="21_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/rocks_pal_58_32x32_48.png" id="22_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/rocks_pal_58_32x32_64.png" id="23_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/x_sign_pal_249_64x64_0.png" id="24_tex"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Swagger1.wav" id="10_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Rock Throw1.wav" id="11_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Dragon Rage.wav" id="12_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Selfdestruct1.wav" id="13_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Strength.wav" id="14_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Hyper Beam.wav" id="15_se"]
+
+[sub_resource type="ShaderMaterial" id="Mezcla"]
+shader = ExtResource("3_mezcla")
+
+[sub_resource type="Animation" id="Animation_pedrada"]
+resource_name = "pedrada"
+length = 2.05
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1833, 0.6166, 0.8833),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(24, 0), 4, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("RocaA"), [&"atacante_base", Vector2(16, 0)], [&"defensor", Vector2(0, 0), &"defensor_base"], 25, {"giro_por_frame": 0.122718}],
+"method": &"disparo"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.84375, 10, false, false],
+"method": &"golpe"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Roca2"), [&"defensor", Vector2(0, 0)], [&"defensor", Vector2(20, 24)], 14, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(3, 0), 5, 1, false],
+"method": &"sacudir"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Roca1"), [&"defensor", Vector2(5, 0)], [&"defensor", Vector2(-15, 24)], 14, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.6166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Roca2"), [&"defensor", Vector2(0, 5)], [&"defensor", Vector2(20, -19)], 14, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Roca2"), [&"defensor", Vector2(-5, 0)], [&"defensor", Vector2(-25, -24)], 14, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.6166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SonidoAtacante")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.1833)
+}
+tracks/7/use_blend = true
+tracks/8/type = "audio"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("SonidoDefensor")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}],
+"times": PackedFloat32Array(0.6166)
+}
+tracks/8/use_blend = true
+
+[sub_resource type="Animation" id="Animation_pedrada_rival"]
+resource_name = "pedrada_rival"
+length = 2.05
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.1833, 0.6166, 0.8833),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(24, 0), 4, 2],
+"method": &"embestida"
+}, {
+"args": [NodePath("RocaA"), [&"atacante_base", Vector2(16, 0)], [&"defensor", Vector2(0, 0), &"defensor_base"], 25, {"giro_por_frame": 0.122718}],
+"method": &"disparo"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.84375, 10, false, false],
+"method": &"golpe"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Roca2"), [&"defensor", Vector2(0, 0)], [&"defensor", Vector2(-20, 24)], 14, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(3, 0), 5, 1, false],
+"method": &"sacudir"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Roca1"), [&"defensor", Vector2(5, 0)], [&"defensor", Vector2(25, 24)], 14, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.6166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Roca2"), [&"defensor", Vector2(0, 5)], [&"defensor", Vector2(-20, -19)], 14, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.6166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("Roca2"), [&"defensor", Vector2(-5, 0)], [&"defensor", Vector2(15, -24)], 14, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.6166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/7/type = "audio"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SonidoAtacante")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.1833)
+}
+tracks/7/use_blend = true
+tracks/8/type = "audio"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("SonidoDefensor")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}],
+"times": PackedFloat32Array(0.6166)
+}
+tracks/8/use_blend = true
+
+[sub_resource type="Animation" id="Animation_poder_pasado"]
+resource_name = "poder_pasado"
+length = 2.7
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.2999, 0.4999, 1.1333, 1.1999, 1.2166, 1.3999, 1.5333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [Vector2(0, 4), 1, 10],
+"method": &"temblor_fondo"
+}, {
+"args": [NodePath("RocaB"), [&"atacante_base", Vector2(15, 32)], [&"atacante_base", Vector2(15, -16)], 25, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}, {
+"args": [NodePath("RocaB"), [&"atacante_base", Vector2(0, 32)], [&"atacante_base", Vector2(0, -10)], 25, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}, {
+"args": [&"atacante", Vector2(16, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(3, 0), 6, 1, true],
+"method": &"sacudir_alterna"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"atacante", 7],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0999, 0.2999, 0.4999, 1.2166),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [NodePath("RocaB"), [&"atacante_base", Vector2(20, 32)], [&"atacante_base", Vector2(20, -16)], 50, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}, {
+"args": [NodePath("RocaB"), [&"atacante_base", Vector2(-10, 32)], [&"atacante_base", Vector2(-10, -10)], 30, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}, {
+"args": [NodePath("RocaB"), [&"atacante_base", Vector2(-25, 32)], [&"atacante_base", Vector2(-25, -16)], 30, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0999),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("RocaB"), [&"atacante_base", Vector2(0, 32)], [&"atacante_base", Vector2(0, -6)], 25, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.0999),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("RocaB"), [&"atacante_base", Vector2(32, 32)], [&"atacante_base", Vector2(32, 4)], 40, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}]
+}
+tracks/4/type = "method"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath(".")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.0999),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("RocaB"), [&"atacante_base", Vector2(-20, 32)], [&"atacante_base", Vector2(-20, -16)], 50, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.0999),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("RocaB"), [&"atacante_base", Vector2(20, 32)], [&"atacante_base", Vector2(20, 4)], 60, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.0999),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [NodePath("RocaB"), [&"atacante_base", Vector2(0, 32)], [&"atacante_base", Vector2(0, 4)], 30, {"inmediato": false, "oculto_inicio": 0}],
+"method": &"disparo"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.0999),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"atacante", Vector2(1, 0), 30, 1, false],
+"method": &"sacudir_alterna"
+}]
+}
+tracks/8/type = "audio"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("SonidoAtacante")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}],
+"times": PackedFloat32Array(0.0999)
+}
+tracks/8/use_blend = true
+tracks/9/type = "audio"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("SonidoDefensor")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(1.2166)
+}
+tracks/9/use_blend = true
+
+[sub_resource type="Animation" id="Animation_tumba_rocas"]
+resource_name = "tumba_rocas"
+length = 4.083333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.4499, 0.6166, 0.7833, 0.9499, 1.1166, 1.2833, 1.4499, 1.6166, 2.0499, 2.9166),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [Vector2(2, 0), 10, 1],
+"method": &"vaiven_fondo"
+}, {
+"args": [NodePath("RocaA"), [&"defensor", Vector2(20, 12)], [{"frames": 1, "salto": Vector2(0, -64)}, {"frames": 10, "velocidad": Vector2(0, 3), "aceleracion": Vector2(0, 1), "limite_y": -1, "mover_antes": false}, {"frames": 113}], {"oculto_inicio": 1}],
+"method": &"recorrido"
+}, {
+"args": [Vector2(0, 2), 3, 1],
+"method": &"vaiven_fondo"
+}, {
+"args": [NodePath("RocaA"), [&"defensor", Vector2(-20, 12)], [{"frames": 1, "salto": Vector2(0, -64)}, {"frames": 10, "velocidad": Vector2(0, 3), "aceleracion": Vector2(0, 1), "limite_y": -1, "mover_antes": false}, {"frames": 97}], {"oculto_inicio": 1}],
+"method": &"recorrido"
+}, {
+"args": [Vector2(0, 2), 3, 1],
+"method": &"vaiven_fondo"
+}, {
+"args": [NodePath("RocaA"), [&"defensor", Vector2(3, 6)], [{"frames": 1, "salto": Vector2(0, -64)}, {"frames": 10, "velocidad": Vector2(0, 3), "aceleracion": Vector2(0, 1), "limite_y": -1, "mover_antes": false}, {"frames": 81}], {"oculto_inicio": 1}],
+"method": &"recorrido"
+}, {
+"args": [Vector2(0, 2), 3, 1],
+"method": &"vaiven_fondo"
+}, {
+"args": [NodePath("RocaA"), [&"defensor", Vector2(-3, 13)], [{"frames": 1, "salto": Vector2(0, -64)}, {"frames": 10, "velocidad": Vector2(0, 3), "aceleracion": Vector2(0, 1), "limite_y": -1, "mover_antes": false}, {"frames": 65}], {"oculto_inicio": 1}],
+"method": &"recorrido"
+}, {
+"args": [Vector2(0, 2), 3, 1],
+"method": &"vaiven_fondo"
+}, {
+"args": [NodePath("Aspa"), [&"defensor", Vector2(0, 0)], [], 51, {"conmutar": [42, 43, 44, 45, 46, 47, 48, 49, 50]}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6166, 2.0499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"defensor", Vector2(3, 0), 20, 1, false],
+"method": &"sacudir"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.0499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [Vector2(2, 0), 10, 1],
+"method": &"vaiven_fondo"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}],
+"times": PackedFloat32Array(0.6166, 0.9499, 1.2833, 1.6166, 2.0499)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_tumba_rocas_rival"]
+resource_name = "tumba_rocas_rival"
+length = 4.083333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0999, 0.4499, 0.6166, 0.7833, 0.9499, 1.1166, 1.2833, 1.4499, 1.6166, 2.0499, 2.9166),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [Vector2(2, 0), 10, 1],
+"method": &"vaiven_fondo"
+}, {
+"args": [NodePath("RocaA"), [&"defensor", Vector2(-20, 12)], [{"frames": 1, "salto": Vector2(0, -64)}, {"frames": 10, "velocidad": Vector2(0, 3), "aceleracion": Vector2(0, 1), "limite_y": -1, "mover_antes": false}, {"frames": 113}], {"oculto_inicio": 1}],
+"method": &"recorrido"
+}, {
+"args": [Vector2(0, 2), 3, 1],
+"method": &"vaiven_fondo"
+}, {
+"args": [NodePath("RocaA"), [&"defensor", Vector2(20, 12)], [{"frames": 1, "salto": Vector2(0, -64)}, {"frames": 10, "velocidad": Vector2(0, 3), "aceleracion": Vector2(0, 1), "limite_y": -1, "mover_antes": false}, {"frames": 97}], {"oculto_inicio": 1}],
+"method": &"recorrido"
+}, {
+"args": [Vector2(0, 2), 3, 1],
+"method": &"vaiven_fondo"
+}, {
+"args": [NodePath("RocaA"), [&"defensor", Vector2(-3, 6)], [{"frames": 1, "salto": Vector2(0, -64)}, {"frames": 10, "velocidad": Vector2(0, 3), "aceleracion": Vector2(0, 1), "limite_y": -1, "mover_antes": false}, {"frames": 81}], {"oculto_inicio": 1}],
+"method": &"recorrido"
+}, {
+"args": [Vector2(0, 2), 3, 1],
+"method": &"vaiven_fondo"
+}, {
+"args": [NodePath("RocaA"), [&"defensor", Vector2(3, 13)], [{"frames": 1, "salto": Vector2(0, -64)}, {"frames": 10, "velocidad": Vector2(0, 3), "aceleracion": Vector2(0, 1), "limite_y": -1, "mover_antes": false}, {"frames": 65}], {"oculto_inicio": 1}],
+"method": &"recorrido"
+}, {
+"args": [Vector2(0, 2), 3, 1],
+"method": &"vaiven_fondo"
+}, {
+"args": [NodePath("Aspa"), [&"defensor", Vector2(0, 0)], [], 51, {"conmutar": [42, 43, 44, 45, 46, 47, 48, 49, 50]}],
+"method": &"sprite_efecto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6166, 2.0499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"defensor", Vector2(3, 0), 20, 1, false],
+"method": &"sacudir"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(2.0499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [Vector2(2, 0), 10, 1],
+"method": &"vaiven_fondo"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}],
+"times": PackedFloat32Array(0.6166, 0.9499, 1.2833, 1.6166, 2.0499)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_golpes"]
+_data = {
+&"pedrada": SubResource("Animation_pedrada"),
+&"pedrada_rival": SubResource("Animation_pedrada_rival"),
+&"poder_pasado": SubResource("Animation_poder_pasado"),
+&"tumba_rocas": SubResource("Animation_tumba_rocas"),
+&"tumba_rocas_rival": SubResource("Animation_tumba_rocas_rival")
+}
+
+[node name="Rocas2" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+material_mezcla = SubResource("Mezcla")
+voltear_imagen_con_lado = false
+
+[node name="Fondo" type="Node2D" parent="."]
+script = ExtResource("4_fondo")
+
+[node name="Imagen" type="Sprite2D" parent="Fondo"]
+visible = false
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="Velo" type="ColorRect" parent="Fondo"]
+visible = false
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="Golpe" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+texture = ExtResource("2_golpe")
+
+[node name="GolpeOpaco" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_golpe")
+
+[node name="Estela" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+
+[node name="Roca1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("22_tex")
+
+[node name="Roca2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("23_tex")
+
+[node name="RocaA" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("20_tex")
+
+[node name="RocaB" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("21_tex")
+
+[node name="Aspa" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("24_tex")
+
+[node name="SonidoAtacante" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoDefensor" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoCentro" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_golpes")

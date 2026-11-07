@@ -1,0 +1,787 @@
+[gd_scene format=4 uid="uid://dh4xgawjityt"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mapa"]
+[ext_resource type="TileSet" uid="uid://uymupfcjqlyj" path="res://graficos/tilesets/tileset_nao_abandonada.tres" id="2_tiles"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_tp"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_warp"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="5_npc_base"]
+[ext_resource type="PackedScene" uid="uid://gbm5pvhiq1ej" path="res://escenas/avatares/npc_entrenador.tscn" id="6_entrenador"]
+[ext_resource type="Resource" path="res://recursos/clima/sombra.tres" id="8_clima"]
+[ext_resource type="SpriteFrames" uid="uid://dlgsjg2806wak" path="res://escenas/avatares/npc_029.tres" id="f_npc_029"]
+[ext_resource type="SpriteFrames" uid="uid://d4j0s22gsun2" path="res://escenas/avatares/npc_073.tres" id="f_npc_073"]
+
+[node name="NaoAbandonadaPasillos1F" type="Node2D" unique_id=1353983381]
+editor_description = "pokeruby AbandonedShip_Corridors_1F (LAYOUT_ABANDONED_SHIP_CORRIDORS_1F, 18x12). Generada por herramientas/importar_nao_abandonada.py."
+script = ExtResource("1_mapa")
+nombre_interno = "nao_abandonada_pasillos_1f"
+seccion = "NAO_ABANDONADA"
+poi_mapa_region = "nao_abandonada"
+esInterior = true
+es_cueva = true
+mapa_exterior_asociado = "RUTA_108"
+clima_inicial = ExtResource("8_clima")
+musica_mapa = "BARCO_ABANDONADO"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1202317834]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAIAAAADAAAAAAAAAAMAAAADAAAAAAAAAAQAAAAFABUAAAAAAAUAAAADAAAAAAAAAAYAAAADAAAAAAAAAAcAAAADAAAAAAAAAAgAAAAFABUAAAAAAAkAAAADAAAAAAAAAAoAAAADAAAAAAAAAAsAAAADABMAAAABAAAAAAABAAEAAAABAAEAAAABAAIAAAABAAIAAAADAAAAAAABAAMAAAACAAAAAAABAAQAAAACAAAAAAABAAUAAAACAAAAAAABAAYAAAACAAAAAAABAAcAAAACAAAAAAABAAgAAAACAAAAAAABAAkAAAACAAAAAAABAAoAAAACAAAAAAABAAsAAAAEABMAAAACAAAAAAAAAAEAAAACAAEAAAAAAAIAAAACAAIAAAADAAAAAAACAAMAAAAAAAMAAAACAAQAAAAAAAYAAAACAAUAAAAAAAYAAAACAAYAAAAAAAYAAAACAAcAAAAAAAYAAAACAAgAAAAFAAQAAAACAAkAAAAFAAUAAAACAAoAAAAFAAAAAAACAAsAAAACAAAAAAADAAAAAAAAABUAAAADAAEAAAAAABYAAAADAAIAAAADAAAAAAADAAMAAAACAAMAAAADAAQAAAABAAYAAAADAAUAAAABAAYAAAADAAYAAAABAAYAAAADAAcAAAABAAYAAAADAAgAAAADAAQAAAADAAkAAAADAAUAAAADAAoAAAAGAAAAAAADAAsAAAACAAAAAAAEAAAAAAABABUAAAAEAAEAAAABABYAAAAEAAIAAAADAAAAAAAEAAMAAAAEAAMAAAAEAAQAAAACAAYAAAAEAAUAAAACAAYAAAAEAAYAAAACAAYAAAAEAAcAAAACAAYAAAAEAAgAAAAGAAQAAAAEAAkAAAAGAAUAAAAEAAoAAAAGAAAAAAAEAAsAAAACAAAAAAAFAAAAAAAAABUAAAAFAAEAAAAAABYAAAAFAAIAAAACAAEAAAAFAAMAAAACAAAAAAAFAAQAAAAEAAAAAAAFAAUAAAAEAAAAAAAFAAYAAAAEAAAAAAAFAAcAAAAEAAAAAAAFAAgAAAAEAAAAAAAFAAkAAAAEAAAAAAAFAAoAAAAHAAAAAAAFAAsAAAACAAAAAAAGAAAAAAAAAAEAAAAGAAEAAAAAAAIAAAAGAAIAAAADAAEAAAAGAAMAAAADAAIAAAAGAAQAAAACAAAAAAAGAAUAAAACAAAAAAAGAAYAAAACAAAAAAAGAAcAAAACAAAAAAAGAAgAAAACAAAAAAAGAAkAAAACAAAAAAAGAAoAAAACAAAAAAAGAAsAAAACAAAAAAAHAAAAAAABAAAAAAAHAAEAAAABAAAAAAAHAAIAAAABAAAAAAAHAAMAAAABAAAAAAAHAAQAAAABAAAAAAAHAAUAAAABAAAAAAAHAAYAAAABAAAAAAAHAAcAAAABAAAAAAAHAAgAAAABAAAAAAAHAAkAAAABAAAAAAAHAAoAAAABAAAAAAAHAAsAAAABAAAAAAAIAAAAAAABAAEAAAAIAAEAAAABAAIAAAAIAAIAAAAFABUAAAAIAAMAAAADAAAAAAAIAAQAAAADAAAAAAAIAAUAAAADAAAAAAAIAAYAAAADAAAAAAAIAAcAAAADAAAAAAAIAAgAAAADAAAAAAAIAAkAAAADAAAAAAAIAAoAAAADAAAAAAAIAAsAAAADABMAAAAJAAAAAAAAAAEAAAAJAAEAAAAAAAIAAAAJAAIAAAADAAAAAAAJAAMAAAACAAAAAAAJAAQAAAACAAAAAAAJAAUAAAACAAAAAAAJAAYAAAACAAAAAAAJAAcAAAACAAAAAAAJAAgAAAACAAAAAAAJAAkAAAACAAAAAAAJAAoAAAACAAAAAAAJAAsAAAAEABMAAAAKAAAAAAAAABUAAAAKAAEAAAAAABYAAAAKAAIAAAADAAAAAAAKAAMAAAAAAAMAAAAKAAQAAAAAAAYAAAAKAAUAAAAAAAYAAAAKAAYAAAAAAAYAAAAKAAcAAAAAAAYAAAAKAAgAAAAFAAQAAAAKAAkAAAAFAAUAAAAKAAoAAAAFAAAAAAAKAAsAAAACAAAAAAALAAAAAAABABUAAAALAAEAAAABABYAAAALAAIAAAADAAAAAAALAAMAAAACAAMAAAALAAQAAAABAAYAAAALAAUAAAABAAYAAAALAAYAAAABAAYAAAALAAcAAAABAAYAAAALAAgAAAAGABUAAAALAAkAAAAGABYAAAALAAoAAAAGAAAAAAALAAsAAAACAAAAAAAMAAAAAAABAAEAAAAMAAEAAAABAAIAAAAMAAIAAAADAAAAAAAMAAMAAAADAAMAAAAMAAQAAAABAAYAAAAMAAUAAAABAAYAAAAMAAYAAAABAAYAAAAMAAcAAAABAAYAAAAMAAgAAAAEAAQAAAAMAAkAAAAEAAUAAAAMAAoAAAAGAAAAAAAMAAsAAAACAAAAAAANAAAAAAAAAAEAAAANAAEAAAAAAAIAAAANAAIAAAADAAAAAAANAAMAAAABAAMAAAANAAQAAAABAAYAAAANAAUAAAABAAYAAAANAAYAAAABAAYAAAANAAcAAAABAAYAAAANAAgAAAACAAQAAAANAAkAAAACAAUAAAANAAoAAAAGAAAAAAANAAsAAAACAAAAAAAOAAAAAAAAABUAAAAOAAEAAAAAABYAAAAOAAIAAAADAAAAAAAOAAMAAAACAAMAAAAOAAQAAAABAAYAAAAOAAUAAAABAAYAAAAOAAYAAAABAAYAAAAOAAcAAAABAAYAAAAOAAgAAAADAAQAAAAOAAkAAAADAAUAAAAOAAoAAAAGAAAAAAAOAAsAAAACAAAAAAAPAAAAAAAAAAEAAAAPAAEAAAAAAAIAAAAPAAIAAAADAAAAAAAPAAMAAAAEAAMAAAAPAAQAAAACAAYAAAAPAAUAAAACAAYAAAAPAAYAAAACAAYAAAAPAAcAAAACAAYAAAAPAAgAAAAGAAQAAAAPAAkAAAAGAAUAAAAPAAoAAAAGAAAAAAAPAAsAAAACAAAAAAAQAAAAAAABAAEAAAAQAAEAAAABAAIAAAAQAAIAAAACAAEAAAAQAAMAAAACAAAAAAAQAAQAAAAEAAAAAAAQAAUAAAAEAAAAAAAQAAYAAAAEAAAAAAAQAAcAAAAEAAAAAAAQAAgAAAAEAAAAAAAQAAkAAAAEAAAAAAAQAAoAAAAHAAAAAAAQAAsAAAACAAAAAAARAAAAAAAAAAEAAAARAAEAAAAAAAIAAAARAAIAAAADAAEAAAARAAMAAAADAAIAAAARAAQAAAACAAAAAAARAAUAAAACAAAAAAARAAYAAAACAAAAAAARAAcAAAACAAAAAAARAAgAAAACAAAAAAARAAkAAAAEABUAAAARAAoAAAACAAAAAAARAAsAAAACAAAAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Superior" type="TileMapLayer" parent="." unique_id=1029350172]
+z_index = 2
+tile_map_data = PackedByteArray("AAACAAMAAAAIAAMAAAACAAQAAAAIAAYAAAACAAUAAAAIAAYAAAACAAYAAAAIAAYAAAACAAcAAAAIAAYAAAACAAgAAAANAAQAAAADAAMAAAAKAAMAAAADAAQAAAAJAAYAAAADAAUAAAAJAAYAAAADAAYAAAAJAAYAAAADAAcAAAAJAAYAAAAEAAMAAAAMAAMAAAAEAAQAAAAKAAYAAAAEAAUAAAAKAAYAAAAEAAYAAAAKAAYAAAAEAAcAAAAKAAYAAAAEAAgAAAAOAAQAAAAHAAAAAAAJAAAAAAAHAAEAAAAJAAAAAAAHAAIAAAAJAAAAAAAHAAMAAAAJAAAAAAAHAAQAAAAJAAAAAAAHAAUAAAAJAAAAAAAHAAYAAAAJAAAAAAAHAAcAAAAJAAAAAAAHAAgAAAAJAAAAAAAHAAkAAAAJAAAAAAAHAAoAAAAJAAAAAAAHAAsAAAAJAAAAAAAKAAMAAAAIAAMAAAAKAAQAAAAIAAYAAAAKAAUAAAAIAAYAAAAKAAYAAAAIAAYAAAAKAAcAAAAIAAYAAAAKAAgAAAANAAQAAAALAAMAAAAKAAMAAAALAAQAAAAJAAYAAAALAAUAAAAJAAYAAAALAAYAAAAJAAYAAAALAAcAAAAJAAYAAAAMAAMAAAALAAMAAAAMAAQAAAAJAAYAAAAMAAUAAAAJAAYAAAAMAAYAAAAJAAYAAAAMAAcAAAAJAAYAAAAMAAgAAAAMAAQAAAANAAMAAAAJAAMAAAANAAQAAAAJAAYAAAANAAUAAAAJAAYAAAANAAYAAAAJAAYAAAANAAcAAAAJAAYAAAANAAgAAAAKAAQAAAAOAAMAAAAKAAMAAAAOAAQAAAAJAAYAAAAOAAUAAAAJAAYAAAAOAAYAAAAJAAYAAAAOAAcAAAAJAAYAAAAPAAMAAAAMAAMAAAAPAAQAAAAKAAYAAAAPAAUAAAAKAAYAAAAPAAYAAAAKAAYAAAAPAAcAAAAKAAYAAAAPAAgAAAAOAAQAAAD//wAAAAAJAAAAAAD//wEAAAAJAAAAAAD//wIAAAAJAAAAAAD//wMAAAAJAAAAAAD//wQAAAAJAAAAAAD//wUAAAAJAAAAAAD//wYAAAAJAAAAAAD//wcAAAAJAAAAAAD//wgAAAAJAAAAAAD//wkAAAAJAAAAAAD//woAAAAJAAAAAAD//wsAAAAJAAAAAAD//wwAAAAJAAAAAAAAAAwAAAAJAAAAAAABAAwAAAAJAAAAAAACAAwAAAAJAAAAAAADAAwAAAAJAAAAAAAEAAwAAAAJAAAAAAAFAAwAAAAJAAAAAAAGAAwAAAAJAAAAAAAHAAwAAAAJAAAAAAAIAAwAAAAJAAAAAAAJAAwAAAAJAAAAAAAKAAwAAAAJAAAAAAALAAwAAAAJAAAAAAAMAAwAAAAJAAAAAAANAAwAAAAJAAAAAAAOAAwAAAAJAAAAAAAPAAwAAAAJAAAAAAAQAAwAAAAJAAAAAAARAAwAAAAJAAAAAAASAAwAAAAJAAAAAAASAAsAAAAJAAAAAAASAAoAAAAJAAAAAAASAAkAAAAJAAAAAAASAAgAAAAJAAAAAAASAAcAAAAJAAAAAAASAAYAAAAJAAAAAAASAAUAAAAJAAAAAAASAAQAAAAJAAAAAAASAAMAAAAJAAAAAAASAAIAAAAJAAAAAAASAAEAAAAJAAAAAAASAAAAAAAJAAAAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=962567662]
+script = ExtResource("3_tp")
+tile_data = {
+"-1,10": {
+"flags": 1
+},
+"-1,11": {
+"flags": 1
+},
+"-1,2": {
+"flags": 1
+},
+"-1,3": {
+"flags": 1
+},
+"-1,5": {
+"flags": 1
+},
+"-1,6": {
+"flags": 1
+},
+"-1,7": {
+"flags": 1
+},
+"-1,9": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"0,10": {
+"flags": 4294967296
+},
+"0,12": {
+"flags": 1
+},
+"0,2": {
+"flags": 4294967296
+},
+"0,3": {
+"flags": 4294967296
+},
+"0,4": {
+"flags": 1
+},
+"0,5": {
+"flags": 4294967296
+},
+"0,6": {
+"flags": 4294967296
+},
+"0,7": {
+"flags": 4294967296
+},
+"0,8": {
+"flags": 1
+},
+"0,9": {
+"flags": 4294967296
+},
+"1,1": {
+"flags": 1
+},
+"1,10": {
+"flags": 4294967296
+},
+"1,12": {
+"flags": 1
+},
+"1,2": {
+"flags": 4294967296
+},
+"1,3": {
+"flags": 4294967296
+},
+"1,4": {
+"flags": 4294967296
+},
+"1,5": {
+"flags": 4294967296
+},
+"1,6": {
+"flags": 4294967296
+},
+"1,7": {
+"flags": 4294967296
+},
+"1,8": {
+"flags": 4294967296
+},
+"1,9": {
+"flags": 4294967296
+},
+"10,1": {
+"flags": 1
+},
+"10,10": {
+"flags": 4294967296
+},
+"10,11": {
+"flags": 4294967296
+},
+"10,12": {
+"flags": 1
+},
+"10,2": {
+"flags": 4294967296
+},
+"10,3": {
+"flags": 4294967296
+},
+"10,4": {
+"flags": 1
+},
+"10,5": {
+"flags": 1
+},
+"10,6": {
+"flags": 1
+},
+"10,7": {
+"flags": 1
+},
+"10,8": {
+"flags": 1
+},
+"10,9": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,10": {
+"flags": 4294967296
+},
+"11,11": {
+"flags": 4294967296
+},
+"11,12": {
+"flags": 1
+},
+"11,2": {
+"flags": 4294967296
+},
+"11,4": {
+"flags": 1
+},
+"11,7": {
+"flags": 1
+},
+"11,8": {
+"flags": 4294967296
+},
+"12,1": {
+"flags": 1
+},
+"12,10": {
+"flags": 4294967296
+},
+"12,11": {
+"flags": 4294967296
+},
+"12,12": {
+"flags": 1
+},
+"12,2": {
+"flags": 4294967296
+},
+"12,3": {
+"flags": 4294967296
+},
+"12,4": {
+"flags": 1
+},
+"12,8": {
+"flags": 1
+},
+"12,9": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,10": {
+"flags": 4294967296
+},
+"13,11": {
+"flags": 4294967296
+},
+"13,12": {
+"flags": 1
+},
+"13,2": {
+"flags": 4294967296
+},
+"13,3": {
+"flags": 4294967296
+},
+"13,4": {
+"flags": 1
+},
+"13,9": {
+"flags": 1
+},
+"14,1": {
+"flags": 1
+},
+"14,10": {
+"flags": 4294967296
+},
+"14,11": {
+"flags": 4294967296
+},
+"14,12": {
+"flags": 1
+},
+"14,2": {
+"flags": 4294967296
+},
+"14,4": {
+"flags": 1
+},
+"14,9": {
+"flags": 1
+},
+"15,1": {
+"flags": 1
+},
+"15,10": {
+"flags": 4294967296
+},
+"15,11": {
+"flags": 4294967296
+},
+"15,12": {
+"flags": 1
+},
+"15,2": {
+"flags": 4294967296
+},
+"15,3": {
+"flags": 4294967296
+},
+"15,4": {
+"flags": 1
+},
+"15,5": {
+"flags": 1
+},
+"15,6": {
+"flags": 1
+},
+"15,7": {
+"flags": 1
+},
+"15,8": {
+"flags": 1
+},
+"15,9": {
+"flags": 1
+},
+"16,1": {
+"flags": 1
+},
+"16,10": {
+"flags": 4294967296
+},
+"16,11": {
+"flags": 4294967296
+},
+"16,12": {
+"flags": 1
+},
+"16,3": {
+"flags": 4294967296
+},
+"16,4": {
+"flags": 4294967296
+},
+"16,5": {
+"flags": 4294967296
+},
+"16,6": {
+"flags": 4294967296
+},
+"16,7": {
+"flags": 4294967296
+},
+"16,8": {
+"flags": 4294967296
+},
+"16,9": {
+"flags": 4294967296
+},
+"17,10": {
+"flags": 4294967296
+},
+"17,11": {
+"flags": 4294967296
+},
+"17,12": {
+"flags": 1
+},
+"17,2": {
+"flags": 1
+},
+"17,3": {
+"flags": 512
+},
+"17,4": {
+"flags": 4294967296
+},
+"17,5": {
+"flags": 4294967296
+},
+"17,6": {
+"flags": 4294967296
+},
+"17,7": {
+"flags": 4294967296
+},
+"17,8": {
+"flags": 4294967296
+},
+"17,9": {
+"flags": 1
+},
+"18,10": {
+"flags": 1
+},
+"18,11": {
+"flags": 1
+},
+"18,3": {
+"flags": 1
+},
+"18,4": {
+"flags": 1
+},
+"18,5": {
+"flags": 1
+},
+"18,6": {
+"flags": 1
+},
+"18,7": {
+"flags": 1
+},
+"18,8": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,10": {
+"flags": 4294967296
+},
+"2,11": {
+"flags": 4294967296
+},
+"2,12": {
+"flags": 1
+},
+"2,2": {
+"flags": 4294967296
+},
+"2,3": {
+"flags": 4294967296
+},
+"2,4": {
+"flags": 1
+},
+"2,5": {
+"flags": 1
+},
+"2,6": {
+"flags": 1
+},
+"2,7": {
+"flags": 1
+},
+"2,8": {
+"flags": 1
+},
+"2,9": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,10": {
+"flags": 4294967296
+},
+"3,11": {
+"flags": 4294967296
+},
+"3,12": {
+"flags": 1
+},
+"3,2": {
+"flags": 4294967296
+},
+"3,4": {
+"flags": 1
+},
+"3,9": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,10": {
+"flags": 4294967296
+},
+"4,11": {
+"flags": 4294967296
+},
+"4,12": {
+"flags": 1
+},
+"4,2": {
+"flags": 4294967296
+},
+"4,3": {
+"flags": 4294967296
+},
+"4,4": {
+"flags": 1
+},
+"4,5": {
+"flags": 1
+},
+"4,6": {
+"flags": 1
+},
+"4,7": {
+"flags": 1
+},
+"4,8": {
+"flags": 1
+},
+"4,9": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,10": {
+"flags": 4294967296
+},
+"5,11": {
+"flags": 4294967296
+},
+"5,12": {
+"flags": 1
+},
+"5,3": {
+"flags": 4294967296
+},
+"5,4": {
+"flags": 4294967296
+},
+"5,5": {
+"flags": 4294967296
+},
+"5,6": {
+"flags": 4294967296
+},
+"5,7": {
+"flags": 4294967296
+},
+"5,8": {
+"flags": 4294967296
+},
+"5,9": {
+"flags": 4294967296
+},
+"6,10": {
+"flags": 4294967296
+},
+"6,11": {
+"flags": 4294967296
+},
+"6,12": {
+"flags": 1
+},
+"6,2": {
+"flags": 1
+},
+"6,3": {
+"flags": 512
+},
+"6,4": {
+"flags": 4294967296
+},
+"6,5": {
+"flags": 4294967296
+},
+"6,6": {
+"flags": 4294967296
+},
+"6,7": {
+"flags": 4294967296
+},
+"6,8": {
+"flags": 4294967296
+},
+"6,9": {
+"flags": 4294967296
+},
+"7,10": {
+"flags": 1
+},
+"7,11": {
+"flags": 1
+},
+"7,3": {
+"flags": 1
+},
+"7,4": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"7,6": {
+"flags": 1
+},
+"7,7": {
+"flags": 1
+},
+"7,8": {
+"flags": 1
+},
+"7,9": {
+"flags": 1
+},
+"8,10": {
+"flags": 4294967296
+},
+"8,12": {
+"flags": 1
+},
+"8,2": {
+"flags": 1
+},
+"8,3": {
+"flags": 4294967296
+},
+"8,4": {
+"flags": 4294967296
+},
+"8,5": {
+"flags": 4294967296
+},
+"8,6": {
+"flags": 4294967296
+},
+"8,7": {
+"flags": 4294967296
+},
+"8,8": {
+"flags": 4294967296
+},
+"8,9": {
+"flags": 4294967296
+},
+"9,1": {
+"flags": 1
+},
+"9,10": {
+"flags": 4294967296
+},
+"9,12": {
+"flags": 1
+},
+"9,2": {
+"flags": 4294967296
+},
+"9,3": {
+"flags": 4294967296
+},
+"9,4": {
+"flags": 4294967296
+},
+"9,5": {
+"flags": 4294967296
+},
+"9,6": {
+"flags": 4294967296
+},
+"9,7": {
+"flags": 4294967296
+},
+"9,8": {
+"flags": 4294967296
+},
+"9,9": {
+"flags": 4294967296
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1025305514]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Chico" parent="NPCs" unique_id=1304808999 instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby AbandonedShip_Corridors_1F objeto 1 (17,7) YOUNGSTER WANDER_AROUND (1,1): AbandonedShip_Corridors_1F_EventScript_Youngster"
+position = Vector2(280, 126)
+id_texto = "NAO_ABANDONADA_PASILLOS_1F_CHICO"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("f_npc_029")
+coord = Vector2i(17, 7)
+
+[node name="Carmelo" parent="NPCs" unique_id=307408493 instance=ExtResource("6_entrenador")]
+editor_description = "pokeruby AbandonedShip_Corridors_1F objeto 2 (5,10) TUBER_M WALK_SEQUENCE_UP_LEFT_DOWN_RIGHT (4,7), AbandonedShip_Corridors_1F_EventScript_Charlie (visión 3)"
+position = Vector2(88, 174)
+npc_id = "nao_abandonada_carmelo"
+entrenador_id = 66
+rango_vision = 3
+texto_post_combate = "NAO_ABANDONADA_PASILLOS_1F_CARMELO_POST"
+id_texto = "NAO_ABANDONADA_PASILLOS_1F_CARMELO_INI"
+tipo_movimiento = 49
+rango = Vector2i(4, 7)
+selec_frames = ExtResource("f_npc_073")
+coord = Vector2i(5, 10)
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=2061882595]
+editor_description = "pokeruby AbandonedShip_Corridors_1F warp 0 (9,11) MB 0x65 -> MAP_ABANDONED_SHIP_DECK (13,9)"
+position = Vector2(152, 182)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_cubierta"
+posicion_destino = Vector2(13, 9)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1623000949]
+editor_description = "pokeruby AbandonedShip_Corridors_1F warp 1 (8,11) MB 0x65 -> MAP_ABANDONED_SHIP_DECK (13,9)"
+position = Vector2(136, 182)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_cubierta"
+posicion_destino = Vector2(13, 9)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp3" type="Sprite2D" parent="." unique_id=1515636748]
+editor_description = "pokeruby AbandonedShip_Corridors_1F warp 2 (0,11) MB 0x65 -> MAP_ABANDONED_SHIP_DECK (8,9)"
+position = Vector2(8, 182)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_cubierta"
+posicion_destino = Vector2(8, 9)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp4" type="Sprite2D" parent="." unique_id=1074724374]
+editor_description = "pokeruby AbandonedShip_Corridors_1F warp 3 (1,11) MB 0x65 -> MAP_ABANDONED_SHIP_DECK (8,9)"
+position = Vector2(24, 182)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_cubierta"
+posicion_destino = Vector2(8, 9)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp5" type="Sprite2D" parent="." unique_id=51682144]
+editor_description = "pokeruby AbandonedShip_Corridors_1F warp 4 (11,9) MB 0x60 -> MAP_ABANDONED_SHIP_ROOMS_1F (4,16)"
+position = Vector2(184, 150)
+script = ExtResource("4_warp")
+tipo_warp = 2
+ruta_mapa_destino = "nao_abandonada_camarotes_1f"
+posicion_destino = Vector2(4, 16)
+direccion = Vector2(0, -1)
+
+[node name="Warp6" type="Sprite2D" parent="." unique_id=1549349966]
+editor_description = "pokeruby AbandonedShip_Corridors_1F warp 5 (14,9) MB 0x69 -> MAP_ABANDONED_SHIP_ROOMS_1F (13,16)"
+position = Vector2(232, 150)
+script = ExtResource("4_warp")
+tipo_warp = 2
+estilo_warp = 28
+ruta_mapa_destino = "nao_abandonada_camarotes_1f"
+posicion_destino = Vector2(13, 16)
+direccion = Vector2(0, -1)
+
+[node name="Warp7" type="Sprite2D" parent="." unique_id=389478846]
+editor_description = "pokeruby AbandonedShip_Corridors_1F warp 6 (11,3) MB 0x65 -> MAP_ABANDONED_SHIP_ROOMS_1F (4,1)"
+position = Vector2(184, 54)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_camarotes_1f"
+posicion_destino = Vector2(4, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp8" type="Sprite2D" parent="." unique_id=488315906]
+editor_description = "pokeruby AbandonedShip_Corridors_1F warp 7 (14,3) MB 0x65 -> MAP_ABANDONED_SHIP_ROOMS_1F (13,1)"
+position = Vector2(232, 54)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_camarotes_1f"
+posicion_destino = Vector2(13, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp9" type="Sprite2D" parent="." unique_id=1968217222]
+editor_description = "pokeruby AbandonedShip_Corridors_1F warp 8 (3,9) MB 0x69 -> MAP_ABANDONED_SHIP_ROOMS2_1F (4,16)"
+position = Vector2(56, 150)
+script = ExtResource("4_warp")
+tipo_warp = 2
+estilo_warp = 28
+ruta_mapa_destino = "nao_abandonada_camarotes2_1f"
+posicion_destino = Vector2(4, 16)
+direccion = Vector2(0, -1)
+
+[node name="Warp10" type="Sprite2D" parent="." unique_id=2002759712]
+editor_description = "pokeruby AbandonedShip_Corridors_1F warp 9 (16,2) MB 0x62 -> MAP_ABANDONED_SHIP_CORRIDORS_B1F (8,2)"
+position = Vector2(264, 38)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_pasillos_s1"
+posicion_destino = Vector2(8, 2)
+modo_direccion = 2
+direccion = Vector2(1, 0)
+
+[node name="Warp11" type="Sprite2D" parent="." unique_id=681394455]
+editor_description = "pokeruby AbandonedShip_Corridors_1F warp 10 (5,2) MB 0x62 -> MAP_ABANDONED_SHIP_CORRIDORS_B1F (0,2)"
+position = Vector2(88, 38)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_pasillos_s1"
+posicion_destino = Vector2(0, 2)
+modo_direccion = 2
+direccion = Vector2(1, 0)
+
+[node name="Warp12" type="Sprite2D" parent="." unique_id=1473102553]
+editor_description = "pokeruby AbandonedShip_Corridors_1F warp 11 (3,3) MB 0x65 -> MAP_ABANDONED_SHIP_ROOMS2_1F (4,1)"
+position = Vector2(56, 54)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_camarotes2_1f"
+posicion_destino = Vector2(4, 1)
+direccion = Vector2(0, 1)
+dar_paso = true

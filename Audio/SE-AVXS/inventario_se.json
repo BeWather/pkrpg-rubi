@@ -1,0 +1,2225 @@
+{
+  "1": {
+    "id": 1,
+    "simbolo": "SE_USE_ITEM",
+    "nombre_jp": "SE_KAIFUKU",
+    "archivo": null,
+    "duracion": 0.557,
+    "pico": 8380,
+    "tiene_audio": true
+  },
+  "2": {
+    "id": 2,
+    "simbolo": "SE_PC_LOGIN",
+    "nombre_jp": "SE_PC_LOGIN",
+    "archivo": null,
+    "duracion": 0.629,
+    "pico": 8398,
+    "tiene_audio": true
+  },
+  "3": {
+    "id": 3,
+    "simbolo": "SE_PC_OFF",
+    "nombre_jp": "SE_PC_OFF",
+    "archivo": null,
+    "duracion": 0.422,
+    "pico": 8380,
+    "tiene_audio": true
+  },
+  "4": {
+    "id": 4,
+    "simbolo": "SE_PC_ON",
+    "nombre_jp": "SE_PC_ON",
+    "archivo": "004_SE_PC_ON.wav",
+    "duracion": 1.199,
+    "pico": 7389,
+    "tiene_audio": true
+  },
+  "5": {
+    "id": 5,
+    "simbolo": "SE_SELECT",
+    "nombre_jp": "SE_SELECT",
+    "archivo": null,
+    "duracion": 0.302,
+    "pico": 5371,
+    "tiene_audio": true
+  },
+  "6": {
+    "id": 6,
+    "simbolo": "SE_WIN_OPEN",
+    "nombre_jp": "SE_WIN_OPEN",
+    "archivo": "006_SE_WIN_OPEN.wav",
+    "duracion": 0.344,
+    "pico": 9809,
+    "tiene_audio": true
+  },
+  "7": {
+    "id": 7,
+    "simbolo": "SE_WALL_HIT",
+    "nombre_jp": "SE_WALL_HIT",
+    "archivo": null,
+    "duracion": 0.313,
+    "pico": 7521,
+    "tiene_audio": true
+  },
+  "8": {
+    "id": 8,
+    "simbolo": "SE_DOOR",
+    "nombre_jp": "SE_DOOR",
+    "archivo": null,
+    "duracion": 0.36,
+    "pico": 6449,
+    "tiene_audio": true
+  },
+  "9": {
+    "id": 9,
+    "simbolo": "SE_EXIT",
+    "nombre_jp": "SE_KAIDAN",
+    "archivo": null,
+    "duracion": 0.673,
+    "pico": 9863,
+    "tiene_audio": true
+  },
+  "10": {
+    "id": 10,
+    "simbolo": "SE_LEDGE",
+    "nombre_jp": "SE_DANSA",
+    "archivo": null,
+    "duracion": 0.287,
+    "pico": 4942,
+    "tiene_audio": true
+  },
+  "11": {
+    "id": 11,
+    "simbolo": "SE_BIKE_BELL",
+    "nombre_jp": "SE_JITENSYA",
+    "archivo": null,
+    "duracion": 0.627,
+    "pico": 6422,
+    "tiene_audio": true
+  },
+  "12": {
+    "id": 12,
+    "simbolo": "SE_NOT_EFFECTIVE",
+    "nombre_jp": "SE_KOUKA_L",
+    "archivo": "012_SE_NOT_EFFECTIVE.wav",
+    "duracion": 0.515,
+    "pico": 11834,
+    "tiene_audio": true
+  },
+  "13": {
+    "id": 13,
+    "simbolo": "SE_EFFECTIVE",
+    "nombre_jp": "SE_KOUKA_M",
+    "archivo": "013_SE_EFFECTIVE.wav",
+    "duracion": 0.762,
+    "pico": 13583,
+    "tiene_audio": true
+  },
+  "14": {
+    "id": 14,
+    "simbolo": "SE_SUPER_EFFECTIVE",
+    "nombre_jp": "SE_KOUKA_H",
+    "archivo": "014_SE_SUPER_EFFECTIVE.wav",
+    "duracion": 1.565,
+    "pico": 12665,
+    "tiene_audio": true
+  },
+  "15": {
+    "id": 15,
+    "simbolo": "SE_BALL_OPEN",
+    "nombre_jp": "SE_BOWA2",
+    "archivo": "015_SE_BALL_OPEN.wav",
+    "duracion": 0.621,
+    "pico": 11647,
+    "tiene_audio": true
+  },
+  "16": {
+    "id": 16,
+    "simbolo": "SE_FAINT",
+    "nombre_jp": "SE_POKE_DEAD",
+    "archivo": "016_SE_FAINT.wav",
+    "duracion": 0.844,
+    "pico": 10227,
+    "tiene_audio": true
+  },
+  "17": {
+    "id": 17,
+    "simbolo": "SE_FLEE",
+    "nombre_jp": "SE_NIGERU",
+    "archivo": "017_SE_FLEE.wav",
+    "duracion": 0.685,
+    "pico": 7454,
+    "tiene_audio": true
+  },
+  "18": {
+    "id": 18,
+    "simbolo": "SE_SLIDING_DOOR",
+    "nombre_jp": "SE_JIDO_DOA",
+    "archivo": null,
+    "duracion": 0.551,
+    "pico": 4168,
+    "tiene_audio": true
+  },
+  "19": {
+    "id": 19,
+    "simbolo": "SE_SHIP",
+    "nombre_jp": "SE_NAMINORI",
+    "archivo": null,
+    "duracion": 0.278,
+    "pico": 911,
+    "tiene_audio": true
+  },
+  "20": {
+    "id": 20,
+    "simbolo": "SE_BANG",
+    "nombre_jp": "SE_BAN",
+    "archivo": "020_SE_BANG.wav",
+    "duracion": 0.83,
+    "pico": 13050,
+    "tiene_audio": true
+  },
+  "21": {
+    "id": 21,
+    "simbolo": "SE_PIN",
+    "nombre_jp": "(General \"good\", commonly for \"!\")",
+    "archivo": null,
+    "duracion": 0.384,
+    "pico": 5853,
+    "tiene_audio": true
+  },
+  "22": {
+    "id": 22,
+    "simbolo": "SE_BOO",
+    "nombre_jp": "(General \"bad\")",
+    "archivo": null,
+    "duracion": 0.358,
+    "pico": 10593,
+    "tiene_audio": true
+  },
+  "23": {
+    "id": 23,
+    "simbolo": "SE_BALL",
+    "nombre_jp": "(Giving Poké Ball to nurse, Poké Ball shake, etc)",
+    "archivo": null,
+    "duracion": 0.278,
+    "pico": 6755,
+    "tiene_audio": true
+  },
+  "24": {
+    "id": 24,
+    "simbolo": "SE_CONTEST_PLACE",
+    "nombre_jp": "SE_JYUNI",
+    "archivo": "024_SE_CONTEST_PLACE.wav",
+    "duracion": 0.81,
+    "pico": 12828,
+    "tiene_audio": true
+  },
+  "25": {
+    "id": 25,
+    "simbolo": "SE_A",
+    "nombre_jp": "(Bard sounds)",
+    "archivo": null,
+    "duracion": 1.074,
+    "pico": 8049,
+    "tiene_audio": true
+  },
+  "26": {
+    "id": 26,
+    "simbolo": "SE_I",
+    "nombre_jp": "SE_I",
+    "archivo": null,
+    "duracion": 1.056,
+    "pico": 10247,
+    "tiene_audio": true
+  },
+  "27": {
+    "id": 27,
+    "simbolo": "SE_U",
+    "nombre_jp": "SE_U",
+    "archivo": null,
+    "duracion": 1.038,
+    "pico": 11675,
+    "tiene_audio": true
+  },
+  "28": {
+    "id": 28,
+    "simbolo": "SE_E",
+    "nombre_jp": "SE_E",
+    "archivo": null,
+    "duracion": 1.105,
+    "pico": 9420,
+    "tiene_audio": true
+  },
+  "29": {
+    "id": 29,
+    "simbolo": "SE_O",
+    "nombre_jp": "SE_O",
+    "archivo": null,
+    "duracion": 1.12,
+    "pico": 11411,
+    "tiene_audio": true
+  },
+  "30": {
+    "id": 30,
+    "simbolo": "SE_N",
+    "nombre_jp": "SE_N",
+    "archivo": null,
+    "duracion": 1.053,
+    "pico": 10625,
+    "tiene_audio": true
+  },
+  "31": {
+    "id": 31,
+    "simbolo": "SE_SUCCESS",
+    "nombre_jp": "SE_SEIKAI",
+    "archivo": null,
+    "duracion": 0.369,
+    "pico": 7414,
+    "tiene_audio": true
+  },
+  "32": {
+    "id": 32,
+    "simbolo": "SE_FAILURE",
+    "nombre_jp": "SE_HAZURE",
+    "archivo": null,
+    "duracion": 0.434,
+    "pico": 11291,
+    "tiene_audio": true
+  },
+  "33": {
+    "id": 33,
+    "simbolo": "SE_EXP",
+    "nombre_jp": "SE_EXP",
+    "archivo": null,
+    "duracion": 1.987,
+    "pico": 6198,
+    "tiene_audio": true
+  },
+  "34": {
+    "id": 34,
+    "simbolo": "SE_BIKE_HOP",
+    "nombre_jp": "SE_JITE_PYOKO",
+    "archivo": null,
+    "duracion": 0.278,
+    "pico": 6317,
+    "tiene_audio": true
+  },
+  "35": {
+    "id": 35,
+    "simbolo": "SE_SWITCH",
+    "nombre_jp": "SE_MU_PACHI",
+    "archivo": null,
+    "duracion": 0.278,
+    "pico": 911,
+    "tiene_audio": true
+  },
+  "36": {
+    "id": 36,
+    "simbolo": "SE_CLICK",
+    "nombre_jp": "SE_TK_KASYA",
+    "archivo": null,
+    "duracion": 0.278,
+    "pico": 911,
+    "tiene_audio": true
+  },
+  "37": {
+    "id": 37,
+    "simbolo": "SE_FU_ZAKU",
+    "nombre_jp": "(Unknown purpose, unused)",
+    "archivo": null,
+    "duracion": 0.278,
+    "pico": 911,
+    "tiene_audio": true
+  },
+  "38": {
+    "id": 38,
+    "simbolo": "SE_CONTEST_CONDITION_LOSE",
+    "nombre_jp": "SE_FU_ZAKU2",
+    "archivo": null,
+    "duracion": 0.278,
+    "pico": 911,
+    "tiene_audio": true
+  },
+  "39": {
+    "id": 39,
+    "simbolo": "SE_LAVARIDGE_FALL_WARP",
+    "nombre_jp": "SE_FU_ZUZUZU",
+    "archivo": null,
+    "duracion": 1.155,
+    "pico": 6964,
+    "tiene_audio": true
+  },
+  "40": {
+    "id": 40,
+    "simbolo": "SE_ICE_STAIRS",
+    "nombre_jp": "SE_RU_GASHIN",
+    "archivo": null,
+    "duracion": 0.448,
+    "pico": 6022,
+    "tiene_audio": true
+  },
+  "41": {
+    "id": 41,
+    "simbolo": "SE_ICE_BREAK",
+    "nombre_jp": "SE_RU_GASYAN",
+    "archivo": null,
+    "duracion": 0.585,
+    "pico": 6687,
+    "tiene_audio": true
+  },
+  "42": {
+    "id": 42,
+    "simbolo": "SE_ICE_CRACK",
+    "nombre_jp": "SE_RU_BARI",
+    "archivo": null,
+    "duracion": 0.278,
+    "pico": 6634,
+    "tiene_audio": true
+  },
+  "43": {
+    "id": 43,
+    "simbolo": "SE_FALL",
+    "nombre_jp": "SE_RU_HYUU",
+    "archivo": null,
+    "duracion": 0.829,
+    "pico": 5440,
+    "tiene_audio": true
+  },
+  "44": {
+    "id": 44,
+    "simbolo": "SE_UNLOCK",
+    "nombre_jp": "SE_KI_GASYAN",
+    "archivo": null,
+    "duracion": 0.609,
+    "pico": 8819,
+    "tiene_audio": true
+  },
+  "45": {
+    "id": 45,
+    "simbolo": "SE_WARP_IN",
+    "nombre_jp": "SE_TK_WARPIN",
+    "archivo": null,
+    "duracion": 0.857,
+    "pico": 9126,
+    "tiene_audio": true
+  },
+  "46": {
+    "id": 46,
+    "simbolo": "SE_WARP_OUT",
+    "nombre_jp": "SE_TK_WARPOUT",
+    "archivo": "046_SE_WARP_OUT.wav",
+    "duracion": 1.048,
+    "pico": 8126,
+    "tiene_audio": true
+  },
+  "47": {
+    "id": 47,
+    "simbolo": "SE_REPEL",
+    "nombre_jp": "SE_TU_SAA",
+    "archivo": null,
+    "duracion": 0.278,
+    "pico": 911,
+    "tiene_audio": true
+  },
+  "48": {
+    "id": 48,
+    "simbolo": "SE_ROTATING_GATE",
+    "nombre_jp": "SE_HI_TURUN",
+    "archivo": null,
+    "duracion": 0.563,
+    "pico": 6889,
+    "tiene_audio": true
+  },
+  "49": {
+    "id": 49,
+    "simbolo": "SE_TRUCK_MOVE",
+    "nombre_jp": "SE_TRACK_MOVE",
+    "archivo": "049_SE_TRUCK_MOVE.wav",
+    "duracion": 3.985,
+    "pico": 14468,
+    "tiene_audio": true
+  },
+  "50": {
+    "id": 50,
+    "simbolo": "SE_TRUCK_STOP",
+    "nombre_jp": "SE_TRACK_STOP",
+    "archivo": "050_SE_TRUCK_STOP.wav",
+    "duracion": 2.372,
+    "pico": 12694,
+    "tiene_audio": true
+  },
+  "51": {
+    "id": 51,
+    "simbolo": "SE_TRUCK_UNLOAD",
+    "nombre_jp": "SE_TRACK_HAIKI",
+    "archivo": "051_SE_TRUCK_UNLOAD.wav",
+    "duracion": 0.546,
+    "pico": 1791,
+    "tiene_audio": true
+  },
+  "52": {
+    "id": 52,
+    "simbolo": "SE_TRUCK_DOOR",
+    "nombre_jp": "SE_TRACK_DOOR",
+    "archivo": null,
+    "duracion": 0.482,
+    "pico": 7142,
+    "tiene_audio": true
+  },
+  "53": {
+    "id": 53,
+    "simbolo": "SE_BERRY_BLENDER",
+    "nombre_jp": "SE_MOTER",
+    "archivo": "053_SE_BERRY_BLENDER.wav",
+    "duracion": 3.985,
+    "pico": 4949,
+    "tiene_audio": true
+  },
+  "54": {
+    "id": 54,
+    "simbolo": "SE_CARD",
+    "nombre_jp": "SE_CARD",
+    "archivo": "054_SE_CARD.wav",
+    "duracion": 0.638,
+    "pico": 8613,
+    "tiene_audio": true
+  },
+  "55": {
+    "id": 55,
+    "simbolo": "SE_SAVE",
+    "nombre_jp": "SE_SAVE",
+    "archivo": "055_SE_SAVE.wav",
+    "duracion": 0.778,
+    "pico": 7750,
+    "tiene_audio": true
+  },
+  "56": {
+    "id": 56,
+    "simbolo": "SE_BALL_BOUNCE_1",
+    "nombre_jp": "SE_KON",
+    "archivo": "056_SE_BALL_BOUNCE_1.wav",
+    "duracion": 0.355,
+    "pico": 9654,
+    "tiene_audio": true
+  },
+  "57": {
+    "id": 57,
+    "simbolo": "SE_BALL_BOUNCE_2",
+    "nombre_jp": "SE_KON2",
+    "archivo": "057_SE_BALL_BOUNCE_2.wav",
+    "duracion": 0.347,
+    "pico": 8615,
+    "tiene_audio": true
+  },
+  "58": {
+    "id": 58,
+    "simbolo": "SE_BALL_BOUNCE_3",
+    "nombre_jp": "SE_KON3",
+    "archivo": "058_SE_BALL_BOUNCE_3.wav",
+    "duracion": 0.353,
+    "pico": 7000,
+    "tiene_audio": true
+  },
+  "59": {
+    "id": 59,
+    "simbolo": "SE_BALL_BOUNCE_4",
+    "nombre_jp": "SE_KON4",
+    "archivo": "059_SE_BALL_BOUNCE_4.wav",
+    "duracion": 0.325,
+    "pico": 5961,
+    "tiene_audio": true
+  },
+  "60": {
+    "id": 60,
+    "simbolo": "SE_BALL_TRADE",
+    "nombre_jp": "SE_SUIKOMU",
+    "archivo": "060_SE_BALL_TRADE.wav",
+    "duracion": 0.484,
+    "pico": 5053,
+    "tiene_audio": true
+  },
+  "61": {
+    "id": 61,
+    "simbolo": "SE_BALL_THROW",
+    "nombre_jp": "SE_NAGERU",
+    "archivo": "061_SE_BALL_THROW.wav",
+    "duracion": 0.652,
+    "pico": 9349,
+    "tiene_audio": true
+  },
+  "62": {
+    "id": 62,
+    "simbolo": "SE_NOTE_C",
+    "nombre_jp": "SE_TOY_C",
+    "archivo": "062_SE_NOTE_C.wav",
+    "duracion": 0.565,
+    "pico": 8150,
+    "tiene_audio": true
+  },
+  "63": {
+    "id": 63,
+    "simbolo": "SE_NOTE_D",
+    "nombre_jp": "SE_TOY_D",
+    "archivo": "063_SE_NOTE_D.wav",
+    "duracion": 0.559,
+    "pico": 8121,
+    "tiene_audio": true
+  },
+  "64": {
+    "id": 64,
+    "simbolo": "SE_NOTE_E",
+    "nombre_jp": "SE_TOY_E",
+    "archivo": "064_SE_NOTE_E.wav",
+    "duracion": 0.577,
+    "pico": 7765,
+    "tiene_audio": true
+  },
+  "65": {
+    "id": 65,
+    "simbolo": "SE_NOTE_F",
+    "nombre_jp": "SE_TOY_F",
+    "archivo": "065_SE_NOTE_F.wav",
+    "duracion": 0.566,
+    "pico": 8029,
+    "tiene_audio": true
+  },
+  "66": {
+    "id": 66,
+    "simbolo": "SE_NOTE_G",
+    "nombre_jp": "SE_TOY_G",
+    "archivo": "066_SE_NOTE_G.wav",
+    "duracion": 0.568,
+    "pico": 8727,
+    "tiene_audio": true
+  },
+  "67": {
+    "id": 67,
+    "simbolo": "SE_NOTE_A",
+    "nombre_jp": "SE_TOY_A",
+    "archivo": "067_SE_NOTE_A.wav",
+    "duracion": 0.565,
+    "pico": 7918,
+    "tiene_audio": true
+  },
+  "68": {
+    "id": 68,
+    "simbolo": "SE_NOTE_B",
+    "nombre_jp": "SE_TOY_B",
+    "archivo": "068_SE_NOTE_B.wav",
+    "duracion": 0.56,
+    "pico": 8706,
+    "tiene_audio": true
+  },
+  "69": {
+    "id": 69,
+    "simbolo": "SE_NOTE_C_HIGH",
+    "nombre_jp": "SE_TOY_C1",
+    "archivo": "069_SE_NOTE_C_HIGH.wav",
+    "duracion": 0.559,
+    "pico": 7013,
+    "tiene_audio": true
+  },
+  "70": {
+    "id": 70,
+    "simbolo": "SE_PUDDLE",
+    "nombre_jp": "SE_MIZU",
+    "archivo": null,
+    "duracion": 0.321,
+    "pico": 1802,
+    "tiene_audio": true
+  },
+  "71": {
+    "id": 71,
+    "simbolo": "SE_BRIDGE_WALK",
+    "nombre_jp": "SE_HASHI",
+    "archivo": null,
+    "duracion": 0.391,
+    "pico": 7899,
+    "tiene_audio": true
+  },
+  "72": {
+    "id": 72,
+    "simbolo": "SE_ITEMFINDER",
+    "nombre_jp": "SE_DAUGI",
+    "archivo": null,
+    "duracion": 0.682,
+    "pico": 9162,
+    "tiene_audio": true
+  },
+  "73": {
+    "id": 73,
+    "simbolo": "SE_DING_DONG",
+    "nombre_jp": "SE_PINPON",
+    "archivo": "073_SE_DING_DONG.wav",
+    "duracion": 1.088,
+    "pico": 6559,
+    "tiene_audio": true
+  },
+  "74": {
+    "id": 74,
+    "simbolo": "SE_BALLOON_RED",
+    "nombre_jp": "SE_FUUSEN1",
+    "archivo": "074_SE_BALLOON_RED.wav",
+    "duracion": 0.523,
+    "pico": 7853,
+    "tiene_audio": true
+  },
+  "75": {
+    "id": 75,
+    "simbolo": "SE_BALLOON_BLUE",
+    "nombre_jp": "SE_FUUSEN2",
+    "archivo": "075_SE_BALLOON_BLUE.wav",
+    "duracion": 0.47,
+    "pico": 7400,
+    "tiene_audio": true
+  },
+  "76": {
+    "id": 76,
+    "simbolo": "SE_BALLOON_YELLOW",
+    "nombre_jp": "SE_FUUSEN3",
+    "archivo": "076_SE_BALLOON_YELLOW.wav",
+    "duracion": 0.469,
+    "pico": 7821,
+    "tiene_audio": true
+  },
+  "77": {
+    "id": 77,
+    "simbolo": "SE_BREAKABLE_DOOR",
+    "nombre_jp": "SE_TOY_KABE",
+    "archivo": null,
+    "duracion": 0.528,
+    "pico": 9208,
+    "tiene_audio": true
+  },
+  "78": {
+    "id": 78,
+    "simbolo": "SE_MUD_BALL",
+    "nombre_jp": "SE_TOY_DANGO",
+    "archivo": "078_SE_MUD_BALL.wav",
+    "duracion": 0.386,
+    "pico": 8000,
+    "tiene_audio": true
+  },
+  "79": {
+    "id": 79,
+    "simbolo": "SE_FIELD_POISON",
+    "nombre_jp": "SE_DOKU",
+    "archivo": null,
+    "duracion": 0.44,
+    "pico": 8189,
+    "tiene_audio": true
+  },
+  "80": {
+    "id": 80,
+    "simbolo": "SE_ESCALATOR",
+    "nombre_jp": "SE_ESUKA",
+    "archivo": null,
+    "duracion": 2.133,
+    "pico": 4548,
+    "tiene_audio": true
+  },
+  "81": {
+    "id": 81,
+    "simbolo": "SE_THUNDERSTORM",
+    "nombre_jp": "SE_T_AME",
+    "archivo": null,
+    "duracion": 3.985,
+    "pico": 3459,
+    "tiene_audio": true
+  },
+  "82": {
+    "id": 82,
+    "simbolo": "SE_THUNDERSTORM_STOP",
+    "nombre_jp": "SE_T_AME_E",
+    "archivo": null,
+    "duracion": 0.628,
+    "pico": 3156,
+    "tiene_audio": true
+  },
+  "83": {
+    "id": 83,
+    "simbolo": "SE_DOWNPOUR",
+    "nombre_jp": "SE_T_OOAME",
+    "archivo": "083_SE_DOWNPOUR.wav",
+    "duracion": 3.985,
+    "pico": 4761,
+    "tiene_audio": true
+  },
+  "84": {
+    "id": 84,
+    "simbolo": "SE_DOWNPOUR_STOP",
+    "nombre_jp": "SE_T_OOAME_E",
+    "archivo": "084_SE_DOWNPOUR_STOP.wav",
+    "duracion": 0.641,
+    "pico": 3436,
+    "tiene_audio": true
+  },
+  "85": {
+    "id": 85,
+    "simbolo": "SE_RAIN",
+    "nombre_jp": "SE_T_KOAME",
+    "archivo": null,
+    "duracion": 3.985,
+    "pico": 2725,
+    "tiene_audio": true
+  },
+  "86": {
+    "id": 86,
+    "simbolo": "SE_RAIN_STOP",
+    "nombre_jp": "SE_T_KOAME_E",
+    "archivo": null,
+    "duracion": 0.627,
+    "pico": 2724,
+    "tiene_audio": true
+  },
+  "87": {
+    "id": 87,
+    "simbolo": "SE_THUNDER",
+    "nombre_jp": "SE_T_KAMI",
+    "archivo": null,
+    "duracion": 1.839,
+    "pico": 7847,
+    "tiene_audio": true
+  },
+  "88": {
+    "id": 88,
+    "simbolo": "SE_THUNDER2",
+    "nombre_jp": "SE_T_KAMI2",
+    "archivo": null,
+    "duracion": 1.612,
+    "pico": 8309,
+    "tiene_audio": true
+  },
+  "89": {
+    "id": 89,
+    "simbolo": "SE_ELEVATOR",
+    "nombre_jp": "SE_ELEBETA",
+    "archivo": "089_SE_ELEVATOR.wav",
+    "duracion": 3.86,
+    "pico": 6332,
+    "tiene_audio": true
+  },
+  "90": {
+    "id": 90,
+    "simbolo": "SE_LOW_HEALTH",
+    "nombre_jp": "SE_HINSI",
+    "archivo": "090_SE_LOW_HEALTH.wav",
+    "duracion": 0.603,
+    "pico": 4997,
+    "tiene_audio": true
+  },
+  "91": {
+    "id": 91,
+    "simbolo": "SE_EXP_MAX",
+    "nombre_jp": "SE_EXPMAX",
+    "archivo": "091_SE_EXP_MAX.wav",
+    "duracion": 0.577,
+    "pico": 6557,
+    "tiene_audio": true
+  },
+  "92": {
+    "id": 92,
+    "simbolo": "SE_ROULETTE_BALL",
+    "nombre_jp": "SE_TAMAKORO",
+    "archivo": null,
+    "duracion": 3.985,
+    "pico": 9033,
+    "tiene_audio": true
+  },
+  "93": {
+    "id": 93,
+    "simbolo": "SE_ROULETTE_BALL2",
+    "nombre_jp": "SE_TAMAKORO_E",
+    "archivo": null,
+    "duracion": 1.324,
+    "pico": 8099,
+    "tiene_audio": true
+  },
+  "94": {
+    "id": 94,
+    "simbolo": "SE_TAILLOW_WING_FLAP",
+    "nombre_jp": "SE_BASABASA",
+    "archivo": null,
+    "duracion": 3.985,
+    "pico": 8707,
+    "tiene_audio": true
+  },
+  "95": {
+    "id": 95,
+    "simbolo": "SE_SHOP",
+    "nombre_jp": "SE_REGI",
+    "archivo": null,
+    "duracion": 0.629,
+    "pico": 9178,
+    "tiene_audio": true
+  },
+  "96": {
+    "id": 96,
+    "simbolo": "SE_CONTEST_HEART",
+    "nombre_jp": "SE_C_GAJI",
+    "archivo": "096_SE_CONTEST_HEART.wav",
+    "duracion": 0.478,
+    "pico": 7188,
+    "tiene_audio": true
+  },
+  "97": {
+    "id": 97,
+    "simbolo": "SE_CONTEST_CURTAIN_RISE",
+    "nombre_jp": "SE_C_MAKU_U",
+    "archivo": "097_SE_CONTEST_CURTAIN_RISE.wav",
+    "duracion": 0.382,
+    "pico": 4172,
+    "tiene_audio": true
+  },
+  "98": {
+    "id": 98,
+    "simbolo": "SE_CONTEST_CURTAIN_FALL",
+    "nombre_jp": "SE_C_MAKU_D",
+    "archivo": "098_SE_CONTEST_CURTAIN_FALL.wav",
+    "duracion": 0.387,
+    "pico": 4135,
+    "tiene_audio": true
+  },
+  "99": {
+    "id": 99,
+    "simbolo": "SE_CONTEST_ICON_CHANGE",
+    "nombre_jp": "SE_C_PASI",
+    "archivo": null,
+    "duracion": 0.379,
+    "pico": 7204,
+    "tiene_audio": true
+  },
+  "100": {
+    "id": 100,
+    "simbolo": "SE_CONTEST_ICON_CLEAR",
+    "nombre_jp": "SE_C_SYU",
+    "archivo": null,
+    "duracion": 0.33,
+    "pico": 5229,
+    "tiene_audio": true
+  },
+  "101": {
+    "id": 101,
+    "simbolo": "SE_CONTEST_MONS_TURN",
+    "nombre_jp": "SE_C_PIKON",
+    "archivo": null,
+    "duracion": 0.651,
+    "pico": 7653,
+    "tiene_audio": true
+  },
+  "102": {
+    "id": 102,
+    "simbolo": "SE_SHINY",
+    "nombre_jp": "SE_REAPOKE",
+    "archivo": "102_SE_SHINY.wav",
+    "duracion": 0.827,
+    "pico": 5855,
+    "tiene_audio": true
+  },
+  "103": {
+    "id": 103,
+    "simbolo": "SE_INTRO_BLAST",
+    "nombre_jp": "SE_OP_BASYU",
+    "archivo": null,
+    "duracion": 3.985,
+    "pico": 12320,
+    "tiene_audio": true
+  },
+  "104": {
+    "id": 104,
+    "simbolo": "SE_MUGSHOT",
+    "nombre_jp": "SE_BT_START",
+    "archivo": null,
+    "duracion": 2.592,
+    "pico": 2977,
+    "tiene_audio": true
+  },
+  "105": {
+    "id": 105,
+    "simbolo": "SE_APPLAUSE",
+    "nombre_jp": "SE_DENDOU",
+    "archivo": null,
+    "duracion": 3.985,
+    "pico": 9111,
+    "tiene_audio": true
+  },
+  "106": {
+    "id": 106,
+    "simbolo": "SE_VEND",
+    "nombre_jp": "SE_JIHANKI",
+    "archivo": "106_SE_VEND.wav",
+    "duracion": 0.553,
+    "pico": 8598,
+    "tiene_audio": true
+  },
+  "107": {
+    "id": 107,
+    "simbolo": "SE_ORB",
+    "nombre_jp": "SE_TAMA",
+    "archivo": "107_SE_ORB.wav",
+    "duracion": 3.794,
+    "pico": 7927,
+    "tiene_audio": true
+  },
+  "108": {
+    "id": 108,
+    "simbolo": "SE_DEX_SCROLL",
+    "nombre_jp": "SE_Z_SCROLL",
+    "archivo": null,
+    "duracion": 0.129,
+    "pico": 2820,
+    "tiene_audio": true
+  },
+  "109": {
+    "id": 109,
+    "simbolo": "SE_DEX_PAGE",
+    "nombre_jp": "SE_Z_PAGE",
+    "archivo": null,
+    "duracion": 0.378,
+    "pico": 3583,
+    "tiene_audio": true
+  },
+  "110": {
+    "id": 110,
+    "simbolo": "SE_POKENAV_ON",
+    "nombre_jp": "SE_PN_ON",
+    "archivo": "110_SE_POKENAV_ON.wav",
+    "duracion": 0.492,
+    "pico": 3910,
+    "tiene_audio": true
+  },
+  "111": {
+    "id": 111,
+    "simbolo": "SE_POKENAV_OFF",
+    "nombre_jp": "SE_PN_OFF",
+    "archivo": "111_SE_POKENAV_OFF.wav",
+    "duracion": 0.498,
+    "pico": 4296,
+    "tiene_audio": true
+  },
+  "112": {
+    "id": 112,
+    "simbolo": "SE_DEX_SEARCH",
+    "nombre_jp": "SE_Z_SEARCH",
+    "archivo": null,
+    "duracion": 1.465,
+    "pico": 4309,
+    "tiene_audio": true
+  },
+  "113": {
+    "id": 113,
+    "simbolo": "SE_EGG_HATCH",
+    "nombre_jp": "SE_TAMAGO",
+    "archivo": "113_SE_EGG_HATCH.wav",
+    "duracion": 0.64,
+    "pico": 8332,
+    "tiene_audio": true
+  },
+  "114": {
+    "id": 114,
+    "simbolo": "SE_BALL_TRAY_ENTER",
+    "nombre_jp": "SE_TB_START",
+    "archivo": "114_SE_BALL_TRAY_ENTER.wav",
+    "duracion": 0.307,
+    "pico": 2330,
+    "tiene_audio": true
+  },
+  "115": {
+    "id": 115,
+    "simbolo": "SE_BALL_TRAY_BALL",
+    "nombre_jp": "SE_TB_KON",
+    "archivo": null,
+    "duracion": 0.281,
+    "pico": 4543,
+    "tiene_audio": true
+  },
+  "116": {
+    "id": 116,
+    "simbolo": "SE_BALL_TRAY_EXIT",
+    "nombre_jp": "SE_TB_KARA",
+    "archivo": "116_SE_BALL_TRAY_EXIT.wav",
+    "duracion": 0.125,
+    "pico": 2038,
+    "tiene_audio": true
+  },
+  "117": {
+    "id": 117,
+    "simbolo": "SE_GLASS_FLUTE",
+    "nombre_jp": "SE_BIDORO",
+    "archivo": "117_SE_GLASS_FLUTE.wav",
+    "duracion": 0.569,
+    "pico": 8882,
+    "tiene_audio": true
+  },
+  "118": {
+    "id": 118,
+    "simbolo": "SE_M_THUNDERBOLT",
+    "nombre_jp": "SE_W085",
+    "archivo": null,
+    "duracion": 0.665,
+    "pico": 10391,
+    "tiene_audio": true
+  },
+  "119": {
+    "id": 119,
+    "simbolo": "SE_M_THUNDERBOLT2",
+    "nombre_jp": "SE_W085B",
+    "archivo": null,
+    "duracion": 0.645,
+    "pico": 6284,
+    "tiene_audio": true
+  },
+  "120": {
+    "id": 120,
+    "simbolo": "SE_M_HARDEN",
+    "nombre_jp": "SE_W231",
+    "archivo": null,
+    "duracion": 0.583,
+    "pico": 6934,
+    "tiene_audio": true
+  },
+  "121": {
+    "id": 121,
+    "simbolo": "SE_M_NIGHTMARE",
+    "nombre_jp": "SE_W171",
+    "archivo": null,
+    "duracion": 1.217,
+    "pico": 13324,
+    "tiene_audio": true
+  },
+  "122": {
+    "id": 122,
+    "simbolo": "SE_M_VITAL_THROW",
+    "nombre_jp": "SE_W233",
+    "archivo": null,
+    "duracion": 0.492,
+    "pico": 8730,
+    "tiene_audio": true
+  },
+  "123": {
+    "id": 123,
+    "simbolo": "SE_M_VITAL_THROW2",
+    "nombre_jp": "SE_W233B",
+    "archivo": null,
+    "duracion": 0.547,
+    "pico": 11675,
+    "tiene_audio": true
+  },
+  "124": {
+    "id": 124,
+    "simbolo": "SE_M_BUBBLE",
+    "nombre_jp": "SE_W145",
+    "archivo": null,
+    "duracion": 0.504,
+    "pico": 7648,
+    "tiene_audio": true
+  },
+  "125": {
+    "id": 125,
+    "simbolo": "SE_M_BUBBLE2",
+    "nombre_jp": "SE_W145B",
+    "archivo": null,
+    "duracion": 0.338,
+    "pico": 8135,
+    "tiene_audio": true
+  },
+  "126": {
+    "id": 126,
+    "simbolo": "SE_M_BUBBLE3",
+    "nombre_jp": "SE_W145C",
+    "archivo": null,
+    "duracion": 0.591,
+    "pico": 8955,
+    "tiene_audio": true
+  },
+  "127": {
+    "id": 127,
+    "simbolo": "SE_M_RAIN_DANCE",
+    "nombre_jp": "SE_W240",
+    "archivo": null,
+    "duracion": 2.01,
+    "pico": 5003,
+    "tiene_audio": true
+  },
+  "128": {
+    "id": 128,
+    "simbolo": "SE_M_CUT",
+    "nombre_jp": "SE_W015",
+    "archivo": null,
+    "duracion": 0.787,
+    "pico": 10440,
+    "tiene_audio": true
+  },
+  "129": {
+    "id": 129,
+    "simbolo": "SE_M_STRING_SHOT",
+    "nombre_jp": "SE_W081",
+    "archivo": null,
+    "duracion": 0.665,
+    "pico": 6876,
+    "tiene_audio": true
+  },
+  "130": {
+    "id": 130,
+    "simbolo": "SE_M_STRING_SHOT2",
+    "nombre_jp": "SE_W081B",
+    "archivo": null,
+    "duracion": 1.185,
+    "pico": 11646,
+    "tiene_audio": true
+  },
+  "131": {
+    "id": 131,
+    "simbolo": "SE_M_ROCK_THROW",
+    "nombre_jp": "SE_W088",
+    "archivo": null,
+    "duracion": 0.704,
+    "pico": 8403,
+    "tiene_audio": true
+  },
+  "132": {
+    "id": 132,
+    "simbolo": "SE_M_GUST",
+    "nombre_jp": "SE_W016",
+    "archivo": null,
+    "duracion": 3.985,
+    "pico": 7972,
+    "tiene_audio": true
+  },
+  "133": {
+    "id": 133,
+    "simbolo": "SE_M_GUST2",
+    "nombre_jp": "SE_W016B",
+    "archivo": null,
+    "duracion": 0.552,
+    "pico": 6014,
+    "tiene_audio": true
+  },
+  "134": {
+    "id": 134,
+    "simbolo": "SE_M_DOUBLE_SLAP",
+    "nombre_jp": "SE_W003",
+    "archivo": null,
+    "duracion": 0.468,
+    "pico": 6826,
+    "tiene_audio": true
+  },
+  "135": {
+    "id": 135,
+    "simbolo": "SE_M_DOUBLE_TEAM",
+    "nombre_jp": "SE_W104",
+    "archivo": null,
+    "duracion": 0.487,
+    "pico": 5486,
+    "tiene_audio": true
+  },
+  "136": {
+    "id": 136,
+    "simbolo": "SE_M_RAZOR_WIND",
+    "nombre_jp": "SE_W013",
+    "archivo": null,
+    "duracion": 0.615,
+    "pico": 8228,
+    "tiene_audio": true
+  },
+  "137": {
+    "id": 137,
+    "simbolo": "SE_M_ICY_WIND",
+    "nombre_jp": "SE_W196",
+    "archivo": null,
+    "duracion": 0.511,
+    "pico": 6273,
+    "tiene_audio": true
+  },
+  "138": {
+    "id": 138,
+    "simbolo": "SE_M_THUNDER_WAVE",
+    "nombre_jp": "SE_W086",
+    "archivo": null,
+    "duracion": 0.688,
+    "pico": 8652,
+    "tiene_audio": true
+  },
+  "139": {
+    "id": 139,
+    "simbolo": "SE_M_COMET_PUNCH",
+    "nombre_jp": "SE_W004",
+    "archivo": null,
+    "duracion": 0.412,
+    "pico": 10584,
+    "tiene_audio": true
+  },
+  "140": {
+    "id": 140,
+    "simbolo": "SE_M_MEGA_KICK",
+    "nombre_jp": "SE_W025",
+    "archivo": null,
+    "duracion": 1.339,
+    "pico": 6459,
+    "tiene_audio": true
+  },
+  "141": {
+    "id": 141,
+    "simbolo": "SE_M_MEGA_KICK2",
+    "nombre_jp": "SE_W025B",
+    "archivo": null,
+    "duracion": 0.592,
+    "pico": 12070,
+    "tiene_audio": true
+  },
+  "142": {
+    "id": 142,
+    "simbolo": "SE_M_CRABHAMMER",
+    "nombre_jp": "SE_W152",
+    "archivo": null,
+    "duracion": 0.434,
+    "pico": 7450,
+    "tiene_audio": true
+  },
+  "143": {
+    "id": 143,
+    "simbolo": "SE_M_JUMP_KICK",
+    "nombre_jp": "SE_W026",
+    "archivo": null,
+    "duracion": 0.477,
+    "pico": 5601,
+    "tiene_audio": true
+  },
+  "144": {
+    "id": 144,
+    "simbolo": "SE_M_FLAME_WHEEL",
+    "nombre_jp": "SE_W172",
+    "archivo": null,
+    "duracion": 0.647,
+    "pico": 8406,
+    "tiene_audio": true
+  },
+  "145": {
+    "id": 145,
+    "simbolo": "SE_M_FLAME_WHEEL2",
+    "nombre_jp": "SE_W172B",
+    "archivo": null,
+    "duracion": 0.973,
+    "pico": 10454,
+    "tiene_audio": true
+  },
+  "146": {
+    "id": 146,
+    "simbolo": "SE_M_FLAMETHROWER",
+    "nombre_jp": "SE_W053",
+    "archivo": null,
+    "duracion": 3.359,
+    "pico": 12266,
+    "tiene_audio": true
+  },
+  "147": {
+    "id": 147,
+    "simbolo": "SE_M_FIRE_PUNCH",
+    "nombre_jp": "SE_W007",
+    "archivo": null,
+    "duracion": 1.011,
+    "pico": 11675,
+    "tiene_audio": true
+  },
+  "148": {
+    "id": 148,
+    "simbolo": "SE_M_TOXIC",
+    "nombre_jp": "SE_W092",
+    "archivo": null,
+    "duracion": 0.581,
+    "pico": 8416,
+    "tiene_audio": true
+  },
+  "149": {
+    "id": 149,
+    "simbolo": "SE_M_SACRED_FIRE",
+    "nombre_jp": "SE_W221",
+    "archivo": null,
+    "duracion": 0.599,
+    "pico": 9268,
+    "tiene_audio": true
+  },
+  "150": {
+    "id": 150,
+    "simbolo": "SE_M_SACRED_FIRE2",
+    "nombre_jp": "SE_W221B",
+    "archivo": null,
+    "duracion": 1.801,
+    "pico": 9011,
+    "tiene_audio": true
+  },
+  "151": {
+    "id": 151,
+    "simbolo": "SE_M_EMBER",
+    "nombre_jp": "SE_W052",
+    "archivo": null,
+    "duracion": 0.507,
+    "pico": 7828,
+    "tiene_audio": true
+  },
+  "152": {
+    "id": 152,
+    "simbolo": "SE_M_TAKE_DOWN",
+    "nombre_jp": "SE_W036",
+    "archivo": null,
+    "duracion": 0.912,
+    "pico": 9418,
+    "tiene_audio": true
+  },
+  "153": {
+    "id": 153,
+    "simbolo": "SE_M_BLIZZARD",
+    "nombre_jp": "SE_W059",
+    "archivo": null,
+    "duracion": 3.985,
+    "pico": 7163,
+    "tiene_audio": true
+  },
+  "154": {
+    "id": 154,
+    "simbolo": "SE_M_BLIZZARD2",
+    "nombre_jp": "SE_W059B",
+    "archivo": null,
+    "duracion": 0.545,
+    "pico": 6039,
+    "tiene_audio": true
+  },
+  "155": {
+    "id": 155,
+    "simbolo": "SE_M_SCRATCH",
+    "nombre_jp": "SE_W010",
+    "archivo": null,
+    "duracion": 0.422,
+    "pico": 5877,
+    "tiene_audio": true
+  },
+  "156": {
+    "id": 156,
+    "simbolo": "SE_M_VICEGRIP",
+    "nombre_jp": "SE_W011",
+    "archivo": null,
+    "duracion": 0.536,
+    "pico": 7915,
+    "tiene_audio": true
+  },
+  "157": {
+    "id": 157,
+    "simbolo": "SE_M_WING_ATTACK",
+    "nombre_jp": "SE_W017",
+    "archivo": null,
+    "duracion": 0.575,
+    "pico": 7863,
+    "tiene_audio": true
+  },
+  "158": {
+    "id": 158,
+    "simbolo": "SE_M_FLY",
+    "nombre_jp": "SE_W019",
+    "archivo": null,
+    "duracion": 0.832,
+    "pico": 9683,
+    "tiene_audio": true
+  },
+  "159": {
+    "id": 159,
+    "simbolo": "SE_M_SAND_ATTACK",
+    "nombre_jp": "SE_W028",
+    "archivo": null,
+    "duracion": 0.513,
+    "pico": 7400,
+    "tiene_audio": true
+  },
+  "160": {
+    "id": 160,
+    "simbolo": "SE_M_RAZOR_WIND2",
+    "nombre_jp": "SE_W013B",
+    "archivo": null,
+    "duracion": 0.351,
+    "pico": 4766,
+    "tiene_audio": true
+  },
+  "161": {
+    "id": 161,
+    "simbolo": "SE_M_BITE",
+    "nombre_jp": "SE_W044",
+    "archivo": null,
+    "duracion": 0.543,
+    "pico": 10110,
+    "tiene_audio": true
+  },
+  "162": {
+    "id": 162,
+    "simbolo": "SE_M_HEADBUTT",
+    "nombre_jp": "SE_W029",
+    "archivo": null,
+    "duracion": 0.595,
+    "pico": 8164,
+    "tiene_audio": true
+  },
+  "163": {
+    "id": 163,
+    "simbolo": "SE_M_SURF",
+    "nombre_jp": "SE_W057",
+    "archivo": null,
+    "duracion": 1.699,
+    "pico": 8646,
+    "tiene_audio": true
+  },
+  "164": {
+    "id": 164,
+    "simbolo": "SE_M_HYDRO_PUMP",
+    "nombre_jp": "SE_W056",
+    "archivo": null,
+    "duracion": 2.117,
+    "pico": 10300,
+    "tiene_audio": true
+  },
+  "165": {
+    "id": 165,
+    "simbolo": "SE_M_WHIRLPOOL",
+    "nombre_jp": "SE_W250",
+    "archivo": null,
+    "duracion": 2.116,
+    "pico": 9583,
+    "tiene_audio": true
+  },
+  "166": {
+    "id": 166,
+    "simbolo": "SE_M_HORN_ATTACK",
+    "nombre_jp": "SE_W030",
+    "archivo": null,
+    "duracion": 0.388,
+    "pico": 7747,
+    "tiene_audio": true
+  },
+  "167": {
+    "id": 167,
+    "simbolo": "SE_M_TAIL_WHIP",
+    "nombre_jp": "SE_W039",
+    "archivo": null,
+    "duracion": 0.438,
+    "pico": 6287,
+    "tiene_audio": true
+  },
+  "168": {
+    "id": 168,
+    "simbolo": "SE_M_MIST",
+    "nombre_jp": "SE_W054",
+    "archivo": null,
+    "duracion": 0.443,
+    "pico": 3145,
+    "tiene_audio": true
+  },
+  "169": {
+    "id": 169,
+    "simbolo": "SE_M_POISON_POWDER",
+    "nombre_jp": "SE_W077",
+    "archivo": null,
+    "duracion": 0.365,
+    "pico": 4954,
+    "tiene_audio": true
+  },
+  "170": {
+    "id": 170,
+    "simbolo": "SE_M_BIND",
+    "nombre_jp": "SE_W020",
+    "archivo": null,
+    "duracion": 0.618,
+    "pico": 7177,
+    "tiene_audio": true
+  },
+  "171": {
+    "id": 171,
+    "simbolo": "SE_M_DRAGON_RAGE",
+    "nombre_jp": "SE_W082",
+    "archivo": null,
+    "duracion": 1.481,
+    "pico": 9257,
+    "tiene_audio": true
+  },
+  "172": {
+    "id": 172,
+    "simbolo": "SE_M_SING",
+    "nombre_jp": "SE_W047",
+    "archivo": null,
+    "duracion": 3.985,
+    "pico": 8604,
+    "tiene_audio": true
+  },
+  "173": {
+    "id": 173,
+    "simbolo": "SE_M_PERISH_SONG",
+    "nombre_jp": "SE_W195",
+    "archivo": null,
+    "duracion": 3.273,
+    "pico": 11838,
+    "tiene_audio": true
+  },
+  "174": {
+    "id": 174,
+    "simbolo": "SE_M_PAY_DAY",
+    "nombre_jp": "SE_W006",
+    "archivo": null,
+    "duracion": 0.657,
+    "pico": 8131,
+    "tiene_audio": true
+  },
+  "175": {
+    "id": 175,
+    "simbolo": "SE_M_DIG",
+    "nombre_jp": "SE_W091",
+    "archivo": null,
+    "duracion": 0.502,
+    "pico": 9170,
+    "tiene_audio": true
+  },
+  "176": {
+    "id": 176,
+    "simbolo": "SE_M_DIZZY_PUNCH",
+    "nombre_jp": "SE_W146",
+    "archivo": null,
+    "duracion": 0.434,
+    "pico": 4235,
+    "tiene_audio": true
+  },
+  "177": {
+    "id": 177,
+    "simbolo": "SE_M_SELF_DESTRUCT",
+    "nombre_jp": "SE_W120",
+    "archivo": null,
+    "duracion": 0.667,
+    "pico": 13032,
+    "tiene_audio": true
+  },
+  "178": {
+    "id": 178,
+    "simbolo": "SE_M_EXPLOSION",
+    "nombre_jp": "SE_W153",
+    "archivo": null,
+    "duracion": 1.274,
+    "pico": 11638,
+    "tiene_audio": true
+  },
+  "179": {
+    "id": 179,
+    "simbolo": "SE_M_ABSORB_2",
+    "nombre_jp": "SE_W071B",
+    "archivo": null,
+    "duracion": 1.106,
+    "pico": 7803,
+    "tiene_audio": true
+  },
+  "180": {
+    "id": 180,
+    "simbolo": "SE_M_ABSORB",
+    "nombre_jp": "SE_W071",
+    "archivo": null,
+    "duracion": 0.427,
+    "pico": 7597,
+    "tiene_audio": true
+  },
+  "181": {
+    "id": 181,
+    "simbolo": "SE_M_SCREECH",
+    "nombre_jp": "SE_W103",
+    "archivo": null,
+    "duracion": 0.606,
+    "pico": 8207,
+    "tiene_audio": true
+  },
+  "182": {
+    "id": 182,
+    "simbolo": "SE_M_BUBBLE_BEAM",
+    "nombre_jp": "SE_W062",
+    "archivo": null,
+    "duracion": 1.473,
+    "pico": 5247,
+    "tiene_audio": true
+  },
+  "183": {
+    "id": 183,
+    "simbolo": "SE_M_BUBBLE_BEAM2",
+    "nombre_jp": "SE_W062B",
+    "archivo": null,
+    "duracion": 0.757,
+    "pico": 8216,
+    "tiene_audio": true
+  },
+  "184": {
+    "id": 184,
+    "simbolo": "SE_M_SUPERSONIC",
+    "nombre_jp": "SE_W048",
+    "archivo": null,
+    "duracion": 0.926,
+    "pico": 7097,
+    "tiene_audio": true
+  },
+  "185": {
+    "id": 185,
+    "simbolo": "SE_M_BELLY_DRUM",
+    "nombre_jp": "SE_W187",
+    "archivo": null,
+    "duracion": 0.588,
+    "pico": 8443,
+    "tiene_audio": true
+  },
+  "186": {
+    "id": 186,
+    "simbolo": "SE_M_METRONOME",
+    "nombre_jp": "SE_W118",
+    "archivo": null,
+    "duracion": 0.495,
+    "pico": 8647,
+    "tiene_audio": true
+  },
+  "187": {
+    "id": 187,
+    "simbolo": "SE_M_BONEMERANG",
+    "nombre_jp": "SE_W155",
+    "archivo": null,
+    "duracion": 0.507,
+    "pico": 9448,
+    "tiene_audio": true
+  },
+  "188": {
+    "id": 188,
+    "simbolo": "SE_M_LICK",
+    "nombre_jp": "SE_W122",
+    "archivo": null,
+    "duracion": 0.772,
+    "pico": 8118,
+    "tiene_audio": true
+  },
+  "189": {
+    "id": 189,
+    "simbolo": "SE_M_PSYBEAM",
+    "nombre_jp": "SE_W060",
+    "archivo": null,
+    "duracion": 0.838,
+    "pico": 10673,
+    "tiene_audio": true
+  },
+  "190": {
+    "id": 190,
+    "simbolo": "SE_M_FAINT_ATTACK",
+    "nombre_jp": "SE_W185",
+    "archivo": null,
+    "duracion": 0.755,
+    "pico": 7527,
+    "tiene_audio": true
+  },
+  "191": {
+    "id": 191,
+    "simbolo": "SE_M_SWORDS_DANCE",
+    "nombre_jp": "SE_W014",
+    "archivo": null,
+    "duracion": 1.183,
+    "pico": 6563,
+    "tiene_audio": true
+  },
+  "192": {
+    "id": 192,
+    "simbolo": "SE_M_LEER",
+    "nombre_jp": "SE_W043",
+    "archivo": null,
+    "duracion": 1.155,
+    "pico": 8093,
+    "tiene_audio": true
+  },
+  "193": {
+    "id": 193,
+    "simbolo": "SE_M_SWAGGER",
+    "nombre_jp": "SE_W207",
+    "archivo": null,
+    "duracion": 0.488,
+    "pico": 8170,
+    "tiene_audio": true
+  },
+  "194": {
+    "id": 194,
+    "simbolo": "SE_M_SWAGGER2",
+    "nombre_jp": "SE_W207B",
+    "archivo": null,
+    "duracion": 0.429,
+    "pico": 5316,
+    "tiene_audio": true
+  },
+  "195": {
+    "id": 195,
+    "simbolo": "SE_M_HEAL_BELL",
+    "nombre_jp": "SE_W215",
+    "archivo": null,
+    "duracion": 0.525,
+    "pico": 5678,
+    "tiene_audio": true
+  },
+  "196": {
+    "id": 196,
+    "simbolo": "SE_M_CONFUSE_RAY",
+    "nombre_jp": "SE_W109",
+    "archivo": null,
+    "duracion": 0.782,
+    "pico": 7027,
+    "tiene_audio": true
+  },
+  "197": {
+    "id": 197,
+    "simbolo": "SE_M_SNORE",
+    "nombre_jp": "SE_W173",
+    "archivo": null,
+    "duracion": 0.664,
+    "pico": 9638,
+    "tiene_audio": true
+  },
+  "198": {
+    "id": 198,
+    "simbolo": "SE_M_BRICK_BREAK",
+    "nombre_jp": "SE_W280",
+    "archivo": null,
+    "duracion": 0.673,
+    "pico": 11045,
+    "tiene_audio": true
+  },
+  "199": {
+    "id": 199,
+    "simbolo": "SE_M_GIGA_DRAIN",
+    "nombre_jp": "SE_W202",
+    "archivo": null,
+    "duracion": 0.654,
+    "pico": 8746,
+    "tiene_audio": true
+  },
+  "200": {
+    "id": 200,
+    "simbolo": "SE_M_PSYBEAM2",
+    "nombre_jp": "SE_W060B",
+    "archivo": null,
+    "duracion": 0.929,
+    "pico": 8397,
+    "tiene_audio": true
+  },
+  "201": {
+    "id": 201,
+    "simbolo": "SE_M_SOLAR_BEAM",
+    "nombre_jp": "SE_W076",
+    "archivo": null,
+    "duracion": 3.311,
+    "pico": 7575,
+    "tiene_audio": true
+  },
+  "202": {
+    "id": 202,
+    "simbolo": "SE_M_PETAL_DANCE",
+    "nombre_jp": "SE_W080",
+    "archivo": null,
+    "duracion": 2.517,
+    "pico": 5611,
+    "tiene_audio": true
+  },
+  "203": {
+    "id": 203,
+    "simbolo": "SE_M_TELEPORT",
+    "nombre_jp": "SE_W100",
+    "archivo": null,
+    "duracion": 1.055,
+    "pico": 9185,
+    "tiene_audio": true
+  },
+  "204": {
+    "id": 204,
+    "simbolo": "SE_M_MINIMIZE",
+    "nombre_jp": "SE_W107",
+    "archivo": null,
+    "duracion": 1.053,
+    "pico": 9341,
+    "tiene_audio": true
+  },
+  "205": {
+    "id": 205,
+    "simbolo": "SE_M_SKETCH",
+    "nombre_jp": "SE_W166",
+    "archivo": null,
+    "duracion": 0.385,
+    "pico": 7990,
+    "tiene_audio": true
+  },
+  "206": {
+    "id": 206,
+    "simbolo": "SE_M_SWIFT",
+    "nombre_jp": "SE_W129",
+    "archivo": null,
+    "duracion": 0.498,
+    "pico": 6609,
+    "tiene_audio": true
+  },
+  "207": {
+    "id": 207,
+    "simbolo": "SE_M_REFLECT",
+    "nombre_jp": "SE_W115",
+    "archivo": null,
+    "duracion": 0.996,
+    "pico": 7124,
+    "tiene_audio": true
+  },
+  "208": {
+    "id": 208,
+    "simbolo": "SE_M_BARRIER",
+    "nombre_jp": "SE_W112",
+    "archivo": null,
+    "duracion": 0.975,
+    "pico": 7350,
+    "tiene_audio": true
+  },
+  "209": {
+    "id": 209,
+    "simbolo": "SE_M_DETECT",
+    "nombre_jp": "SE_W197",
+    "archivo": "209_SE_M_DETECT.wav",
+    "duracion": 0.731,
+    "pico": 6892,
+    "tiene_audio": true
+  },
+  "210": {
+    "id": 210,
+    "simbolo": "SE_M_LOCK_ON",
+    "nombre_jp": "SE_W199",
+    "archivo": null,
+    "duracion": 0.464,
+    "pico": 5275,
+    "tiene_audio": true
+  },
+  "211": {
+    "id": 211,
+    "simbolo": "SE_M_MOONLIGHT",
+    "nombre_jp": "SE_W236",
+    "archivo": null,
+    "duracion": 3.985,
+    "pico": 6605,
+    "tiene_audio": true
+  },
+  "212": {
+    "id": 212,
+    "simbolo": "SE_M_CHARM",
+    "nombre_jp": "SE_W204",
+    "archivo": null,
+    "duracion": 0.491,
+    "pico": 5743,
+    "tiene_audio": true
+  },
+  "213": {
+    "id": 213,
+    "simbolo": "SE_M_CHARGE",
+    "nombre_jp": "SE_W268",
+    "archivo": null,
+    "duracion": 1.268,
+    "pico": 6945,
+    "tiene_audio": true
+  },
+  "214": {
+    "id": 214,
+    "simbolo": "SE_M_STRENGTH",
+    "nombre_jp": "SE_W070",
+    "archivo": null,
+    "duracion": 0.703,
+    "pico": 10475,
+    "tiene_audio": true
+  },
+  "215": {
+    "id": 215,
+    "simbolo": "SE_M_HYPER_BEAM",
+    "nombre_jp": "SE_W063",
+    "archivo": null,
+    "duracion": 0.619,
+    "pico": 9003,
+    "tiene_audio": true
+  },
+  "216": {
+    "id": 216,
+    "simbolo": "SE_M_WATERFALL",
+    "nombre_jp": "SE_W127",
+    "archivo": null,
+    "duracion": 1.188,
+    "pico": 10519,
+    "tiene_audio": true
+  },
+  "217": {
+    "id": 217,
+    "simbolo": "SE_M_REVERSAL",
+    "nombre_jp": "SE_W179",
+    "archivo": null,
+    "duracion": 1.21,
+    "pico": 6652,
+    "tiene_audio": true
+  },
+  "218": {
+    "id": 218,
+    "simbolo": "SE_M_ACID_ARMOR",
+    "nombre_jp": "SE_W151",
+    "archivo": null,
+    "duracion": 1.39,
+    "pico": 9855,
+    "tiene_audio": true
+  },
+  "219": {
+    "id": 219,
+    "simbolo": "SE_M_SANDSTORM",
+    "nombre_jp": "SE_W201",
+    "archivo": null,
+    "duracion": 2.575,
+    "pico": 4225,
+    "tiene_audio": true
+  },
+  "220": {
+    "id": 220,
+    "simbolo": "SE_M_TRI_ATTACK",
+    "nombre_jp": "SE_W161",
+    "archivo": null,
+    "duracion": 0.486,
+    "pico": 7949,
+    "tiene_audio": true
+  },
+  "221": {
+    "id": 221,
+    "simbolo": "SE_M_TRI_ATTACK2",
+    "nombre_jp": "SE_W161B",
+    "archivo": null,
+    "duracion": 1.312,
+    "pico": 10341,
+    "tiene_audio": true
+  },
+  "222": {
+    "id": 222,
+    "simbolo": "SE_M_ENCORE",
+    "nombre_jp": "SE_W227",
+    "archivo": null,
+    "duracion": 0.406,
+    "pico": 8366,
+    "tiene_audio": true
+  },
+  "223": {
+    "id": 223,
+    "simbolo": "SE_M_ENCORE2",
+    "nombre_jp": "SE_W227B",
+    "archivo": null,
+    "duracion": 2.612,
+    "pico": 8281,
+    "tiene_audio": true
+  },
+  "224": {
+    "id": 224,
+    "simbolo": "SE_M_BATON_PASS",
+    "nombre_jp": "SE_W226",
+    "archivo": null,
+    "duracion": 0.938,
+    "pico": 6645,
+    "tiene_audio": true
+  },
+  "225": {
+    "id": 225,
+    "simbolo": "SE_M_MILK_DRINK",
+    "nombre_jp": "SE_W208",
+    "archivo": null,
+    "duracion": 0.555,
+    "pico": 6563,
+    "tiene_audio": true
+  },
+  "226": {
+    "id": 226,
+    "simbolo": "SE_M_ATTRACT",
+    "nombre_jp": "SE_W213",
+    "archivo": null,
+    "duracion": 0.971,
+    "pico": 5734,
+    "tiene_audio": true
+  },
+  "227": {
+    "id": 227,
+    "simbolo": "SE_M_ATTRACT2",
+    "nombre_jp": "SE_W213B",
+    "archivo": null,
+    "duracion": 3.749,
+    "pico": 6075,
+    "tiene_audio": true
+  },
+  "228": {
+    "id": 228,
+    "simbolo": "SE_M_MORNING_SUN",
+    "nombre_jp": "SE_W234",
+    "archivo": null,
+    "duracion": 1.489,
+    "pico": 5601,
+    "tiene_audio": true
+  },
+  "229": {
+    "id": 229,
+    "simbolo": "SE_M_FLATTER",
+    "nombre_jp": "SE_W260",
+    "archivo": null,
+    "duracion": 0.49,
+    "pico": 10913,
+    "tiene_audio": true
+  },
+  "230": {
+    "id": 230,
+    "simbolo": "SE_M_SAND_TOMB",
+    "nombre_jp": "SE_W328",
+    "archivo": null,
+    "duracion": 1.798,
+    "pico": 9776,
+    "tiene_audio": true
+  },
+  "231": {
+    "id": 231,
+    "simbolo": "SE_M_GRASSWHISTLE",
+    "nombre_jp": "SE_W320",
+    "archivo": null,
+    "duracion": 3.302,
+    "pico": 7039,
+    "tiene_audio": true
+  },
+  "232": {
+    "id": 232,
+    "simbolo": "SE_M_SPIT_UP",
+    "nombre_jp": "SE_W255",
+    "archivo": null,
+    "duracion": 0.548,
+    "pico": 9517,
+    "tiene_audio": true
+  },
+  "233": {
+    "id": 233,
+    "simbolo": "SE_M_DIVE",
+    "nombre_jp": "SE_W291",
+    "archivo": null,
+    "duracion": 0.954,
+    "pico": 9773,
+    "tiene_audio": true
+  },
+  "234": {
+    "id": 234,
+    "simbolo": "SE_M_EARTHQUAKE",
+    "nombre_jp": "SE_W089",
+    "archivo": null,
+    "duracion": 3.604,
+    "pico": 13017,
+    "tiene_audio": true
+  },
+  "235": {
+    "id": 235,
+    "simbolo": "SE_M_TWISTER",
+    "nombre_jp": "SE_W239",
+    "archivo": null,
+    "duracion": 2.993,
+    "pico": 9618,
+    "tiene_audio": true
+  },
+  "236": {
+    "id": 236,
+    "simbolo": "SE_M_SWEET_SCENT",
+    "nombre_jp": "SE_W230",
+    "archivo": "236_SE_M_SWEET_SCENT.wav",
+    "duracion": 2.991,
+    "pico": 10246,
+    "tiene_audio": true
+  },
+  "237": {
+    "id": 237,
+    "simbolo": "SE_M_YAWN",
+    "nombre_jp": "SE_W281",
+    "archivo": null,
+    "duracion": 1.006,
+    "pico": 7103,
+    "tiene_audio": true
+  },
+  "238": {
+    "id": 238,
+    "simbolo": "SE_M_SKY_UPPERCUT",
+    "nombre_jp": "SE_W327",
+    "archivo": null,
+    "duracion": 0.618,
+    "pico": 9146,
+    "tiene_audio": true
+  },
+  "239": {
+    "id": 239,
+    "simbolo": "SE_M_STAT_INCREASE",
+    "nombre_jp": "SE_W287",
+    "archivo": "239_SE_M_STAT_INCREASE.wav",
+    "duracion": 1.339,
+    "pico": 5074,
+    "tiene_audio": true
+  },
+  "240": {
+    "id": 240,
+    "simbolo": "SE_M_HEAT_WAVE",
+    "nombre_jp": "SE_W257",
+    "archivo": null,
+    "duracion": 2.424,
+    "pico": 10423,
+    "tiene_audio": true
+  },
+  "241": {
+    "id": 241,
+    "simbolo": "SE_M_UPROAR",
+    "nombre_jp": "SE_W253",
+    "archivo": null,
+    "duracion": 0.629,
+    "pico": 8281,
+    "tiene_audio": true
+  },
+  "242": {
+    "id": 242,
+    "simbolo": "SE_M_HAIL",
+    "nombre_jp": "SE_W258",
+    "archivo": null,
+    "duracion": 0.704,
+    "pico": 6742,
+    "tiene_audio": true
+  },
+  "243": {
+    "id": 243,
+    "simbolo": "SE_M_COSMIC_POWER",
+    "nombre_jp": "SE_W322",
+    "archivo": null,
+    "duracion": 3.455,
+    "pico": 6496,
+    "tiene_audio": true
+  },
+  "244": {
+    "id": 244,
+    "simbolo": "SE_M_TEETER_DANCE",
+    "nombre_jp": "SE_W298",
+    "archivo": null,
+    "duracion": 1.065,
+    "pico": 7131,
+    "tiene_audio": true
+  },
+  "245": {
+    "id": 245,
+    "simbolo": "SE_M_STAT_DECREASE",
+    "nombre_jp": "SE_W287B",
+    "archivo": "245_SE_M_STAT_DECREASE.wav",
+    "duracion": 1.354,
+    "pico": 5205,
+    "tiene_audio": true
+  },
+  "246": {
+    "id": 246,
+    "simbolo": "SE_M_HAZE",
+    "nombre_jp": "SE_W114",
+    "archivo": null,
+    "duracion": 2.914,
+    "pico": 8419,
+    "tiene_audio": true
+  },
+  "247": {
+    "id": 247,
+    "simbolo": "SE_M_HYPER_BEAM2",
+    "nombre_jp": "SE_W063B",
+    "archivo": null,
+    "duracion": 0.575,
+    "pico": 7557,
+    "tiene_audio": true
+  }
+}

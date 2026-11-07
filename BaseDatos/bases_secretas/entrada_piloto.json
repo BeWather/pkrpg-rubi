@@ -1,0 +1,154 @@
+{
+	"version": 1,
+	"entrada_id": 13,
+	"mapa": "ruta_111",
+	"celda_godot": [
+		35,
+		1
+	],
+	"capa_datos_godot": 0,
+	"celda_original": [
+		35,
+		1
+	],
+	"elevacion_original": 0,
+	"capa_visual": "Rocas",
+	"source_original_godot": 0,
+	"atlas_original_godot": [
+		7,
+		9
+	],
+	"metatile_cerrado": 416,
+	"metatile_abierto": 417,
+	"palabra_layout_original": 1440,
+	"dimensiones_originales": [
+		40,
+		140
+	],
+	"conversion_paleta_exterior": "RGB5 << 3, igual al atlas existente de Ruta111",
+	"sha1_rom": "ae35f6fd52a9258b794d7d3f4c784b8ee3fcde5c",
+	"sha256_rom": "2fd6f3cb65c85880aaadea429af67a7a401b34443bae06125fa787018fcda9a3",
+	"fuentes_decomp": {
+		"charmap.txt": "8c1db143d4f5f8186a6853d076b8b5dbd5d505b64e3c04ed79fe75afa54b7e9c",
+		"data/field_move_scripts.inc": "49e92b4b5808abdbda54e7c84ee1913a383ba82d53fb6a4e3a116a3e8ac66d8a",
+		"data/layouts/Route111/map.bin": "ae1df9fa5a452d8fb2eea971a7c213793df82ae65a4f4b901b14fb7a0ad78dee",
+		"data/layouts/layouts.json": "8dc80f71ba8b99be430040ee2454607951364a0ab45f410361a538b1219e8cd8",
+		"data/maps/SecretBase_RedCave1/text.inc": "20f5df78c8e736db22b2b1ac832e009db58fe2d0a04f321708f1653a3255f8db",
+		"data/scripts/secret_base.inc": "fb4f340dab5a196693dd23a4dae3188ac71357ba6fd28dffc1041ad304f25984",
+		"data/scripts/shared_secret_base.inc": "4b872ba0c897acb779165989be18f5e889ca6c4f467fd04f34111b40b66fd32f",
+		"data/text/secret_base.inc": "2e1b58d88b998b1beaf4fa0c8c5f4103b21e08cde174e5bf1f86bcf348e34a81",
+		"data/text/secret_base_trainers.inc": "73b753ca84783f1e70f3fa7371873437ee08236708de5d1067a0177d416db0c3",
+		"data/tilesets/primary/general/metatile_attributes.bin": "06c9548a6c70d133b6d47638090f5d36f3fec92aace3d90deca758a4404cfa9b",
+		"data/tilesets/primary/general/metatiles.bin": "07a79bc27b75495daa2e97522d500e789605cd3ab43175be98665b52b93e18d4",
+		"data/tilesets/primary/general/palettes/00.pal": "e7fec32eef41a79d6d45e7f5af9dc74717a1d40ce07aa7cef37eeb7edd47f579",
+		"data/tilesets/primary/general/palettes/01.pal": "c17687ece4bb432d345b43b4e806ebba741553b1ed83b0f46207ce537db5d25c",
+		"data/tilesets/primary/general/palettes/02.pal": "6a2609b1c79e8489ed11182eb075edf0e25d80b5b3b7912c0de20dc5da594eb9",
+		"data/tilesets/primary/general/palettes/03.pal": "1556f735bbb61b32d99e9feba63441c83cfc25ea11d5aaa7c99ac3be92cc7a19",
+		"data/tilesets/primary/general/palettes/04.pal": "36f8de115ed9a96bab2035f4d3d10988ac2365e4fc2b530feb7ea2ef09772f68",
+		"data/tilesets/primary/general/palettes/05.pal": "8356b54b4d39ed880b83f39c82b61699dd720e28eb2ebc2d80a4bd360d8720e2",
+		"data/tilesets/primary/general/tiles.png": "c90ac9f65bdb61ed5ba69afb37ec0d78ee062b7500903e6b9abd073bc0035a02",
+		"graphics/field_effect_objects/palettes/07.pal": "3a13a7af0274072dfc33662895c6c13e60bbbcf830ac111b20d09c1a12ccae2b",
+		"graphics/unknown_sprites/83D259C/0.png": "21e1227d62df0dd42c6388cba81814c06bb8c51753fde1bc8088dbaf439c6554",
+		"graphics/unknown_sprites/83D259C/1.png": "2359748ec676b2bc07305e6efcb62a5c05d880110340339e532f4b28df8f0c82",
+		"graphics/unknown_sprites/83D259C/2.png": "817079eed1c714e60cbec690ad2a1c7eb6b4512e2b106e0a7f2dae078587a382",
+		"graphics/unknown_sprites/83D259C/3.png": "695fff15ff8614f52dbb1638f5bdb3f62b155d2409d03cb0fc107cd4285d1204",
+		"graphics/unknown_sprites/83D259C/4.png": "4604519c0eb71c85a85a4a7561f7f1eb0933300e7aff11483b86bafe26f3937d",
+		"src/fldeff_secretpower.c": "808a91eb7b8efaf234c5b0b00d72ce09f9fee6c3e0e5c73f4a38e2a8510edfb1",
+		"src/secret_base.c": "0b546bd9f70f91ea09ad12456e22c4f447ac0948b0bb7e93367d634300b3cd46",
+		"src/strings.c": "3eebccce0d00efa373f36fea6e823c23d1553dc3a3e2ba2cc22778c129c16100",
+		"tools/gbagfx/convert_png.c": "c542d1cffe83516d8b644ec04be507d3fa376231083f03f2001be15152da2965",
+		"tools/gbagfx/main.c": "26bdcb720a06b10b7ec198a8e1688f9d945640ec280693a43babbf030f1a1b80"
+	},
+	"textos": [
+		{
+			"clave": "BASES_CUEVA_DESCRIPCION",
+			"direccion": "0x0819BD7B",
+			"raw_hex": "C2D5ED00E9E2D500E1E9D9E7D7D500D9E200E0D500E6E3D7D5ADFF",
+			"texto_es": "Hay una muesca en la roca."
+		},
+		{
+			"clave": "BASES_CUEVA_USAR",
+			"direccion": "0x0819BD96",
+			"raw_hex": "C2D5ED00E9E2D500E1E9D9E7D7D500D9E200E0D500E6E3D7D5ADFB51CFE7D5E700BEBB14C900CDBFBDCCBFCEC9ACFF",
+			"texto_es": "Hay una muesca en la roca.\\p¿Usas DAÑO SECRETO?"
+		},
+		{
+			"clave": "BASES_CUEVA_DESCUBIERTA",
+			"direccion": "0x0819BDC5",
+			"raw_hex": "52C2D5E700D8D9E7D7E9D6DDD9E6E8E300E9E2D500E4D9E5E9D929D500D7D5EAD9E6E2D5ABFF",
+			"texto_es": "¡Has descubierto una pequeña caverna!"
+		},
+		{
+			"clave": "BASES_ESTABLECER",
+			"direccion": "0x0819BDEB",
+			"raw_hex": "51BFE7E8D5D6E0D9D7D9E700D5E5E96F00E8E900BCBBCDBF00CDBFBDCCBFCEBBACFF",
+			"texto_es": "¿Estableces aquí tu BASE SECRETA?"
+		},
+		{
+			"clave": "BASES_MOVIMIENTO_USADO",
+			"direccion": "0x081B47E2",
+			"raw_hex": "FD0200E9E72300FD03ADFF",
+			"texto_es": "{nombre} usó {movimiento}."
+		},
+		{
+			"clave": "BASES_NOMBRE_PROPIETARIO",
+			"direccion": "0x08413030",
+			"raw_hex": "BCBBCDBF00D8D900FD01FF",
+			"texto_es": "BASE de {nombre}"
+		},
+		{
+			"clave": "BASES_ARBOL_DESCRIPCION",
+			"direccion": "0x081A4CF5",
+			"raw_hex": "CDDD00D7D5D900E9E2D500E0DDD5E2D5B800E5E9D9E6E61700D8D9D7DDE600E5E9D9FEE7D900E4E9D9D8D900E8E6D9E4D5E600D500D9E7E8D90017E6D6E3E0ADFF",
+			"texto_es": "Si cae una liana, querrá decir que\\nse puede trepar a este árbol."
+		},
+		{
+			"clave": "BASES_ARBOL_USAR",
+			"direccion": "0x081A4D36",
+			"raw_hex": "CDDD00D7D5D900E9E2D500E0DDD5E2D5B800E5E9D9E6E61700D8D9D7DDE600E5E9D9FEE7D900E4E9D9D8D900E8E6D9E4D5E600D500D9E7E8D90017E6D6E3E0ADFB51CFE7D5E700BEBB14C900CDBFBDCCBFCEC9ACFF",
+			"texto_es": "Si cae una liana, querrá decir que\\nse puede trepar a este árbol.\\p¿Usas DAÑO SECRETO?"
+		},
+		{
+			"clave": "BASES_ARBOL_DESCUBIERTA",
+			"direccion": "0x081A4D8B",
+			"raw_hex": "52C2D500D7D56FD8E300E9E2D500E0DDD5E2D500E1E9ED00DBE6E9D9E7D5ABFF",
+			"texto_es": "¡Ha caído una liana muy gruesa!"
+		},
+		{
+			"clave": "BASES_ARBUSTO_DESCRIPCION",
+			"direccion": "0x081A4DCD",
+			"raw_hex": "CDDD00E7D900E4E9D9D8D900E1E3EAD9E600D9E7E8D900E1E3E2E823E200D8D9FEDCDDD9E6D6D5B800D9E700E4E3E6E5E9D900E7D900E4E9D9D8D900D9E2E8E6D5E6ADFF",
+			"texto_es": "Si se puede mover este montón de\\nhierba, es porque se puede entrar."
+		},
+		{
+			"clave": "BASES_ARBUSTO_USAR",
+			"direccion": "0x081A4E11",
+			"raw_hex": "CDDD00E7D900E4E9D9D8D900E1E3EAD9E600D9E7E8D900E1E3E2E823E200D8D9FEDCDDD9E6D6D5B800D9E700E4E3E6E5E9D900E7D900E4E9D9D8D900D9E2E8E6D5E6ADFB51CFE7D5E700BEBB14C900CDBFBDCCBFCEC9ACFF",
+			"texto_es": "Si se puede mover este montón de\\nhierba, es porque se puede entrar.\\p¿Usas DAÑO SECRETO?"
+		},
+		{
+			"clave": "BASES_ARBUSTO_DESCUBIERTA",
+			"direccion": "0x081A4E69",
+			"raw_hex": "52C2D5E700D8D9E7D7E9D6DDD9E6E8E300E9E2D500E4D9E5E9D929D500D5D6D9E6E8E9E6D5ABFF",
+			"texto_es": "¡Has descubierto una pequeña abertura!"
+		},
+		{
+			"clave": "BASES_MUDAR_PREGUNTA",
+			"direccion": "0x081A6FEE",
+			"raw_hex": "CD23E0E300E4E9D9D8D9E700DCD5D7D9E600E9E2D500BCBBCDBF00CDBFBDCCBFCEBBADFB51CBE9DDD9E6D9E700E1E9D8D5E6E8D900D8D900E8E900BCBBCDBF00CDBFBDCCBFCEBBB8FEE7DDE8E9D5D8D500D9E200E0D500FD02ACFF",
+			"texto_es": "Sólo puedes hacer una BASE SECRETA.\\p¿Quieres mudarte de tu BASE SECRETA,\\nsituada en la {lugar}?"
+		},
+		{
+			"clave": "BASES_RECOGER_CONFIRMAR",
+			"direccion": "0x081A6C4E",
+			"raw_hex": "CEE3D8E3E700E0E3E700E1E9D9D6E0D9E700ED00D9E0D9E1D9E2E8E3E700D8D9FED8D9D7E3E6D5D7DD23E200D8D900E8E900BCBBCDBF00CDBFBDCCBFCEBBFAEAE3E0EAD9E617E200D500E8E900CABDADFB51BFE7E817E700D8D900D5D7E9D9E6D8E3ACFF",
+			"texto_es": "Todos los muebles y elementos de\\ndecoración de tu BASE SECRETA\\w\\nvolverán a tu PC.\\p¿Estás de acuerdo?"
+		},
+		{
+			"clave": "BASES_MUDANZA_TERMINADA",
+			"direccion": "0x081A7049",
+			"raw_hex": "D3D500DCD500E8D9E6E1DDE2D5D8E300E0D500E1E9D8D5E2EED5ADFB51CBE9DDD9E6D9E700E9E7D5E600BEBB14C900CDBFBDCCBFCEC9ACFF",
+			"texto_es": "Ya ha terminado la mudanza.\\p¿Quieres usar DAÑO SECRETO?"
+		}
+	]
+}

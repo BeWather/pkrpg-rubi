@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://3ykwgcdxm3gk"]
+
+[ext_resource type="Texture2D" uid="uid://0fqqiwdqgrvp" path="res://graficos/jump_landing_dust.png" id="1_je3u2"]
+[ext_resource type="Script" uid="uid://cyaw0r352svae" path="res://escenas/mapas/animaciones/polvo_salto.gd" id="2_50ys1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmiut"]
+atlas = ExtResource("1_je3u2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4i3dr"]
+atlas = ExtResource("1_je3u2")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ulu02"]
+atlas = ExtResource("1_je3u2")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ww16c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmiut")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4i3dr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ulu02")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=103284104]
+sprite_frames = SubResource("SpriteFrames_ww16c")
+autoplay = "default"
+script = ExtResource("2_50ys1")
+
+[connection signal="animation_finished" from="." to="." method="_on_animation_finished"]

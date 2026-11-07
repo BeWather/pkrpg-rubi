@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DefinicionClima" format=3]
+
+[ext_resource type="Script" uid="uid://bnon731m8jgyp" path="res://scripts/clima/definicion_clima.gd" id="1"]
+[ext_resource type="PackedScene" path="res://escenas/clima/efectos/niebla.tscn" id="2"]
+
+[resource]
+script = ExtResource("1")
+id = &"NIEBLA"
+nombre_editor = "Niebla"
+escena_efecto = ExtResource("2")
+requiere_copia_pantalla = true
+tinte = Color(0, 0, 0, 0)
+intensidad_base = 1.0
+permite_destellos = false

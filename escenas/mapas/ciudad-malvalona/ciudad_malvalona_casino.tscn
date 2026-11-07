@@ -1,0 +1,566 @@
+[gd_scene format=4 uid="uid://ctc8figl3mg6w"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_vfwmw"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_t7q0k"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_2fkt6"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_tplsp"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="5_6ko4d"]
+[ext_resource type="SpriteFrames" uid="uid://c8eclcahjsyf3" path="res://escenas/avatares/npc_006.tres" id="f_npc_006"]
+[ext_resource type="SpriteFrames" uid="uid://c4v7i5xgf87q7" path="res://escenas/avatares/npc_008.tres" id="f_npc_008"]
+[ext_resource type="SpriteFrames" uid="uid://ds1lihygyt1d0" path="res://escenas/avatares/npc_027.tres" id="f_npc_027"]
+[ext_resource type="SpriteFrames" uid="uid://damgta0thpof0" path="res://escenas/avatares/npc_028.tres" id="f_npc_028"]
+[ext_resource type="SpriteFrames" uid="uid://br8ndfy138tgu" path="res://escenas/avatares/npc_049.tres" id="f_npc_049"]
+[ext_resource type="SpriteFrames" uid="uid://ct3gr3wlu1nb" path="res://escenas/avatares/npc_054.tres" id="f_npc_054"]
+[ext_resource type="SpriteFrames" uid="uid://dlmqb6ogg84xh" path="res://escenas/avatares/npc_064.tres" id="f_npc_064"]
+[ext_resource type="SpriteFrames" uid="uid://03vwdt8hqw32" path="res://escenas/avatares/npc_067.tres" id="f_npc_067"]
+[ext_resource type="SpriteFrames" uid="uid://c7c2ncm1paxc" path="res://escenas/avatares/npc_092.tres" id="f_npc_092"]
+[ext_resource type="SpriteFrames" uid="uid://lolua5p1pqu5" path="res://escenas/avatares/npc_093.tres" id="f_npc_093"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="npc_base"]
+[ext_resource type="Script" uid="uid://8uymdhpcd3qe" path="res://scripts/eventos/cartel_evento.gd" id="s_cartel"]
+[ext_resource type="Script" uid="uid://clyue4dhdwk62" path="res://scripts/eventos/ciudad_malvalona/evento_casino_malvalona.gd" id="s_casino"]
+[ext_resource type="Script" uid="uid://dmy4ir5m1ul04" path="res://scripts/npc/npc_dialogo_condicional.gd" id="s_cond"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="s_evento"]
+
+[node name="Casino" type="Node2D" unique_id=354341773]
+script = ExtResource("1_vfwmw")
+nombre_interno = "ciudad_malvalona_casino"
+seccion = "CIUDAD_MALVALONA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_MALVALONA"
+solo_caminar = true
+musica_mapa = "SALA_JUEGOS"
+metadata/esInterior = true
+
+[node name="Salon" type="TileMapLayer" parent="." unique_id=57828633]
+tile_map_data = PackedByteArray("AAACAAAAAAAdADkAAAADAAAAAAAdADkAAAADAAEAAAAaADUAAAADAAIAAAAcADIAAAADAAMAAAAaADIAAAADAAQAAAAaADIAAAADAAUAAAAdADYAAAADAAYAAAAdADcAAAADAAcAAAAdADcAAAADAAgAAAAdADcAAAAEAAAAAAAdADkAAAAEAAEAAAAaADUAAAAEAAIAAAAcADIAAAAEAAMAAAAaADIAAAAEAAQAAAAaADIAAAAEAAUAAAAaADIAAAAEAAYAAAAfADYAAAAEAAcAAAAfADYAAAAFAAAAAAAdADkAAAAFAAEAAAAfADcAAAAFAAIAAAAfADgAAAAFAAMAAAAaADIAAAAFAAQAAAAaADIAAAAFAAUAAAAaADIAAAAFAAYAAAAaADIAAAAFAAcAAAAaADIAAAAGAAAAAAAdADkAAAAGAAEAAAAfADcAAAAGAAIAAAAfADgAAAAGAAMAAAAaADIAAAAGAAQAAAAaADIAAAAGAAUAAAAaADIAAAAGAAYAAAAeADYAAAAGAAcAAAAbADkAAAAGAAgAAAAbADkAAAAHAAAAAAAdADkAAAARAAoAAAAaADIAAAAAAAAAAAAdADkAAAAAAAEAAAAeADMAAAAAAAIAAAAeADQAAAAAAAMAAAAbADIAAAAAAAQAAAAbADIAAAAAAAUAAAAbADIAAAAAAAYAAAAbADIAAAAAAAcAAAAbADIAAAAAAAgAAAAbADIAAAAAAAkAAAAbADIAAAAAAAoAAAAbADIAAAABAAAAAAAdADkAAAABAAEAAAAfADMAAAABAAIAAAAfADQAAAABAAMAAAAcADIAAAABAAQAAAAaADIAAAABAAUAAAAaADIAAAABAAYAAAAeADYAAAABAAcAAAAbADkAAAABAAgAAAAbADkAAAABAAkAAAAbADkAAAABAAoAAAAaADIAAAACAAEAAAAaADUAAAACAAIAAAAeADcAAAACAAMAAAAdADQAAAACAAQAAAAaADIAAAACAAUAAAAcADYAAAACAAYAAAAcADcAAAACAAcAAAAcADcAAAACAAgAAAAcADcAAAACAAkAAAAcADgAAAACAAoAAAAcADQAAAADAAkAAAAdADgAAAADAAoAAAAcADIAAAAEAAgAAAAfADYAAAAEAAkAAAAfADYAAAAEAAoAAAAdADQAAAAFAAgAAAAaADIAAAAFAAkAAAAaADIAAAAFAAoAAAAaADIAAAAGAAkAAAAbADkAAAAGAAoAAAAaADIAAAAHAAEAAAAfADcAAAAHAAIAAAAfADgAAAAHAAMAAAAaADIAAAAHAAQAAAAaADIAAAAHAAUAAAAcADYAAAAHAAYAAAAcADcAAAAHAAcAAAAcADcAAAAHAAgAAAAcADcAAAAHAAkAAAAcADgAAAAHAAoAAAAcADQAAAAIAAAAAAAdADkAAAAIAAEAAAAaADUAAAAIAAIAAAAcADIAAAAIAAMAAAAaADIAAAAIAAQAAAAaADIAAAAIAAUAAAAdADYAAAAIAAYAAAAdADcAAAAIAAcAAAAdADcAAAAIAAgAAAAdADcAAAAIAAkAAAAdADgAAAAIAAoAAAAcADIAAAAJAAAAAAAcADkAAAAJAAEAAAAcADoAAAAJAAIAAAAcADsAAAAJAAMAAAAcADwAAAAJAAQAAAAcAD0AAAAJAAUAAAAaADIAAAAJAAYAAAAfADYAAAAJAAcAAAAfADYAAAAJAAgAAAAfADYAAAAJAAkAAAAfADYAAAAJAAoAAAAdADQAAAAKAAAAAAAdADkAAAAKAAEAAAAdADoAAAAKAAIAAAAdADIAAAAKAAMAAAAeADwAAAAKAAQAAAAdAD0AAAAKAAUAAAAaADIAAAAKAAYAAAAaADIAAAAKAAcAAAAaADIAAAAKAAgAAAAaADIAAAAKAAkAAAAaADIAAAAKAAoAAAAaADIAAAALAAAAAAAdADkAAAALAAEAAAAdADoAAAALAAIAAAAcADIAAAALAAMAAAAdADwAAAALAAQAAAAeAD0AAAALAAUAAAAaADIAAAALAAYAAAAaADIAAAALAAcAAAAaADIAAAALAAgAAAAaADIAAAALAAkAAAAaADIAAAALAAoAAAAeADIAAAAMAAAAAAAdADkAAAAMAAEAAAAeADoAAAAMAAIAAAAcADIAAAAMAAMAAAAeADwAAAAMAAQAAAAeAD0AAAAMAAUAAAAaADIAAAAMAAYAAAAaADIAAAAMAAcAAAAaADIAAAAMAAgAAAAaADIAAAAMAAkAAAAaADIAAAAMAAoAAAAfADIAAAANAAAAAAAdADkAAAANAAEAAAAdADoAAAANAAIAAAAcADIAAAANAAMAAAAdADwAAAANAAQAAAAeAD0AAAANAAUAAAAaADIAAAANAAYAAAAaADIAAAANAAcAAAAaADIAAAANAAgAAAAaADIAAAANAAkAAAAaADIAAAANAAoAAAAaADIAAAAOAAAAAAAdADkAAAAOAAEAAAAeADoAAAAOAAIAAAAcADIAAAAOAAMAAAAdADwAAAAOAAQAAAAeAD0AAAAOAAUAAAAaADIAAAAOAAYAAAAaADYAAAAOAAcAAAAaADcAAAAOAAgAAAAaADgAAAAOAAkAAAAcADQAAAAOAAoAAAAaADIAAAAPAAAAAAAfADkAAAAPAAEAAAAfADoAAAAPAAIAAAAfADsAAAAPAAMAAAAfADwAAAAPAAQAAAAfAD0AAAAPAAUAAAAaADIAAAAPAAYAAAAbADYAAAAPAAcAAAAbADcAAAAPAAgAAAAbADgAAAAPAAkAAAAcADIAAAAPAAoAAAAaADIAAAAQAAAAAAAaADQAAAAQAAEAAAAaADUAAAAQAAIAAAAdADIAAAAQAAMAAAAcADMAAAAQAAQAAAAcADMAAAAQAAUAAAAaADIAAAAQAAYAAAAdADMAAAAQAAcAAAAcADMAAAAQAAgAAAAcADMAAAAQAAkAAAAdADQAAAAQAAoAAAAaADIAAAARAAAAAAAaADQAAAARAAEAAAAaADUAAAARAAIAAAAcADIAAAARAAMAAAAaADIAAAARAAQAAAAaADIAAAARAAUAAAAaADIAAAARAAYAAAAaADIAAAARAAcAAAAaADIAAAARAAgAAAAaADIAAAARAAkAAAAaADIAAAASAAAAAAAZADMAAAASAAEAAAAZADQAAAASAAIAAAAZADUAAAASAAMAAAAeADUAAAASAAQAAAAcADQAAAASAAUAAAAaADIAAAASAAYAAAAaADYAAAASAAcAAAAaADcAAAASAAgAAAAaADgAAAASAAkAAAAcADQAAAASAAoAAAAaADIAAAATAAAAAAAaADMAAAATAAEAAAAaADQAAAATAAIAAAAaADUAAAATAAMAAAAfADUAAAATAAQAAAAcADIAAAATAAUAAAAaADIAAAATAAYAAAAbADYAAAATAAcAAAAbADcAAAATAAgAAAAbADgAAAATAAkAAAAcADIAAAATAAoAAAAaADIAAAAUAAAAAAAaADMAAAAUAAEAAAAaADQAAAAUAAIAAAAaADUAAAAUAAMAAAAeADUAAAAUAAQAAAAcADIAAAAUAAUAAAAaADIAAAAUAAYAAAAdADMAAAAUAAcAAAAcADMAAAAUAAgAAAAcADMAAAAUAAkAAAAdADQAAAAUAAoAAAAaADIAAAAVAAAAAAAbADMAAAAVAAEAAAAbADQAAAAVAAIAAAAbADUAAAAVAAMAAAAfADUAAAAVAAQAAAAeADgAAAAVAAUAAAAaADIAAAAVAAYAAAAaADIAAAAVAAcAAAAaADIAAAAVAAgAAAAaADIAAAAVAAkAAAAaADIAAAAVAAoAAAAaADIAAAA=")
+tile_set = ExtResource("2_t7q0k")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=1294792859]
+tile_map_data = PackedByteArray("AAAKAAIAAAAeADsAAAALAAIAAAAdADsAAAAMAAIAAAAeADsAAAANAAIAAAAdADsAAAAOAAIAAAAdADsAAAACAAUAAAAeAD4AAAADAAUAAAAfAD4AAAAHAAUAAAAeAD4AAAAIAAUAAAAfAD4AAAA=")
+tile_set = ExtResource("2_t7q0k")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=2141994963]
+position = Vector2(184, 166)
+script = ExtResource("3_2fkt6")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_malvalona"
+posicion_destino = Vector2(8, 13)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=131441377]
+position = Vector2(200, 166)
+script = ExtResource("3_2fkt6")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_malvalona"
+posicion_destino = Vector2(8, 13)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=500566910]
+visible = false
+
+[node name="Tragaperras0" type="Sprite2D" parent="Carteles" unique_id=466496985 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (2,6) SlotMachine0: pendiente (minijuego sin implementar)"
+position = Vector2(40, 104)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_TRAGAPERRAS_PENDIENTE"
+coord_tile = Vector2i(2, 6)
+
+[node name="Tragaperras1" type="Sprite2D" parent="Carteles" unique_id=834930068 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (2,8) SlotMachine1: pendiente (minijuego sin implementar)"
+position = Vector2(40, 136)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_TRAGAPERRAS_PENDIENTE"
+coord_tile = Vector2i(2, 8)
+
+[node name="Tragaperras2" type="Sprite2D" parent="Carteles" unique_id=2089427640 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (2,9) SlotMachine2: pendiente (minijuego sin implementar)"
+position = Vector2(40, 152)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_TRAGAPERRAS_PENDIENTE"
+coord_tile = Vector2i(2, 9)
+
+[node name="Tragaperras3" type="Sprite2D" parent="Carteles" unique_id=221679734 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (3,7) SlotMachine3: pendiente (minijuego sin implementar)"
+position = Vector2(56, 120)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_TRAGAPERRAS_PENDIENTE"
+coord_tile = Vector2i(3, 7)
+
+[node name="Tragaperras4" type="Sprite2D" parent="Carteles" unique_id=73334648 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (3,8) SlotMachine4: pendiente (minijuego sin implementar)"
+position = Vector2(56, 136)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_TRAGAPERRAS_PENDIENTE"
+coord_tile = Vector2i(3, 8)
+
+[node name="Tragaperras5" type="Sprite2D" parent="Carteles" unique_id=1097525950 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (3,9) SlotMachine5: pendiente (minijuego sin implementar)"
+position = Vector2(56, 152)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_TRAGAPERRAS_PENDIENTE"
+coord_tile = Vector2i(3, 9)
+
+[node name="Tragaperras6" type="Sprite2D" parent="Carteles" unique_id=922789099 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (7,6) SlotMachine6: pendiente (minijuego sin implementar)"
+position = Vector2(120, 104)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_TRAGAPERRAS_PENDIENTE"
+coord_tile = Vector2i(7, 6)
+
+[node name="Tragaperras7" type="Sprite2D" parent="Carteles" unique_id=980760447 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (7,7) SlotMachine7: pendiente (minijuego sin implementar)"
+position = Vector2(120, 120)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_TRAGAPERRAS_PENDIENTE"
+coord_tile = Vector2i(7, 7)
+
+[node name="Tragaperras8" type="Sprite2D" parent="Carteles" unique_id=1388475420 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (7,9) SlotMachine8: pendiente (minijuego sin implementar)"
+position = Vector2(120, 152)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_TRAGAPERRAS_PENDIENTE"
+coord_tile = Vector2i(7, 9)
+
+[node name="Tragaperras9" type="Sprite2D" parent="Carteles" unique_id=1361293814 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (8,6) SlotMachine9: pendiente (minijuego sin implementar)"
+position = Vector2(136, 104)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_TRAGAPERRAS_PENDIENTE"
+coord_tile = Vector2i(8, 6)
+
+[node name="Tragaperras10" type="Sprite2D" parent="Carteles" unique_id=773619252 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (8,7) SlotMachine10: pendiente (minijuego sin implementar)"
+position = Vector2(136, 120)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_TRAGAPERRAS_PENDIENTE"
+coord_tile = Vector2i(8, 7)
+
+[node name="Tragaperras11" type="Sprite2D" parent="Carteles" unique_id=634933143 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (8,9) SlotMachine11: pendiente (minijuego sin implementar)"
+position = Vector2(136, 152)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_TRAGAPERRAS_PENDIENTE"
+coord_tile = Vector2i(8, 9)
+
+[node name="Ruleta1_14_6" type="Sprite2D" parent="Carteles" unique_id=1450526874 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (14,6) mesa de RULETA 1: pendiente (minijuego sin implementar)"
+position = Vector2(232, 104)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_RULETA_PENDIENTE"
+coord_tile = Vector2i(14, 6)
+
+[node name="Ruleta1_15_6" type="Sprite2D" parent="Carteles" unique_id=846761149 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (15,6) mesa de RULETA 1: pendiente (minijuego sin implementar)"
+position = Vector2(248, 104)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_RULETA_PENDIENTE"
+coord_tile = Vector2i(15, 6)
+
+[node name="Ruleta1_14_7" type="Sprite2D" parent="Carteles" unique_id=580081634 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (14,7) mesa de RULETA 1: pendiente (minijuego sin implementar)"
+position = Vector2(232, 120)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_RULETA_PENDIENTE"
+coord_tile = Vector2i(14, 7)
+
+[node name="Ruleta1_15_7" type="Sprite2D" parent="Carteles" unique_id=1628543649 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (15,7) mesa de RULETA 1: pendiente (minijuego sin implementar)"
+position = Vector2(248, 120)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_RULETA_PENDIENTE"
+coord_tile = Vector2i(15, 7)
+
+[node name="Ruleta1_14_8" type="Sprite2D" parent="Carteles" unique_id=1541235855 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (14,8) mesa de RULETA 1: pendiente (minijuego sin implementar)"
+position = Vector2(232, 136)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_RULETA_PENDIENTE"
+coord_tile = Vector2i(14, 8)
+
+[node name="Ruleta1_15_8" type="Sprite2D" parent="Carteles" unique_id=2079772094 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (15,8) mesa de RULETA 1: pendiente (minijuego sin implementar)"
+position = Vector2(248, 136)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_RULETA_PENDIENTE"
+coord_tile = Vector2i(15, 8)
+
+[node name="Ruleta2_18_6" type="Sprite2D" parent="Carteles" unique_id=1424560208 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (18,6) mesa de RULETA 2: pendiente (minijuego sin implementar)"
+position = Vector2(296, 104)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_RULETA_PENDIENTE"
+coord_tile = Vector2i(18, 6)
+
+[node name="Ruleta2_19_6" type="Sprite2D" parent="Carteles" unique_id=292420114 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (19,6) mesa de RULETA 2: pendiente (minijuego sin implementar)"
+position = Vector2(312, 104)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_RULETA_PENDIENTE"
+coord_tile = Vector2i(19, 6)
+
+[node name="Ruleta2_18_7" type="Sprite2D" parent="Carteles" unique_id=697864046 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (18,7) mesa de RULETA 2: pendiente (minijuego sin implementar)"
+position = Vector2(296, 120)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_RULETA_PENDIENTE"
+coord_tile = Vector2i(18, 7)
+
+[node name="Ruleta2_19_7" type="Sprite2D" parent="Carteles" unique_id=1129024966 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (19,7) mesa de RULETA 2: pendiente (minijuego sin implementar)"
+position = Vector2(312, 120)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_RULETA_PENDIENTE"
+coord_tile = Vector2i(19, 7)
+
+[node name="Ruleta2_18_8" type="Sprite2D" parent="Carteles" unique_id=2121359177 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (18,8) mesa de RULETA 2: pendiente (minijuego sin implementar)"
+position = Vector2(296, 136)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_RULETA_PENDIENTE"
+coord_tile = Vector2i(18, 8)
+
+[node name="Ruleta2_19_8" type="Sprite2D" parent="Carteles" unique_id=846730835 groups=["Cartel"]]
+editor_description = "pokeruby MauvilleCity_GameCorner bg_event (19,8) mesa de RULETA 2: pendiente (minijuego sin implementar)"
+position = Vector2(312, 136)
+script = ExtResource("s_cartel")
+id_texto = "CIUDAD_MALVALONA_CASINO_RULETA_PENDIENTE"
+coord_tile = Vector2i(19, 8)
+
+[node name="Cartel" type="Sprite2D" parent="Carteles" unique_id=1609137416 groups=["Cartel"]]
+position = Vector2(344, 72)
+script = ExtResource("5_6ko4d")
+id_texto = "BASURERO_VACIO"
+coord_tile = Vector2i(21, 4)
+
+[node name="Cartel2" type="Sprite2D" parent="Carteles" unique_id=1012185560 groups=["Cartel"]]
+position = Vector2(40, 40)
+script = ExtResource("5_6ko4d")
+id_texto = "BASURERO_VACIO"
+coord_tile = Vector2i(2, 2)
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1279193827]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Mujer2" parent="NPCs" unique_id=1272797799 instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_GameCorner objeto 1 (12,7) WOMAN_3 FACE_DOWN Woman2"
+position = Vector2(200, 126)
+id_texto = "CIUDAD_MALVALONA_CASINO_MUJER2_FICHAS"
+selec_frames = ExtResource("f_npc_049")
+coord = Vector2i(12, 7)
+
+[node name="Caballero" parent="NPCs" unique_id=1258732549 instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_GameCorner objeto 2 (16,5) GENTLEMAN FACE_DOWN Gentleman"
+position = Vector2(264, 94)
+id_texto = "CIUDAD_MALVALONA_CASINO_CABALLERO_RULETA"
+selec_frames = ExtResource("f_npc_067")
+coord = Vector2i(16, 5)
+
+[node name="Cajero" parent="NPCs" unique_id=1131836203 instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_GameCorner objeto 3 (11,2) BEAUTY FACE_DOWN CoinsClerk. Lo dirige Eventos/EventoCasinoMalvalona"
+position = Vector2(184, 46)
+script = ExtResource("s_evento")
+id_texto = "CIUDAD_MALVALONA_CASINO_CAJERO_BIENVENIDA"
+selec_frames = ExtResource("f_npc_064")
+coord = Vector2i(11, 2)
+
+[node name="PremiosMunecos" parent="NPCs" unique_id=909385464 instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_GameCorner objeto 4 (14,2) BEAUTY FACE_DOWN PrizeCornerDolls. Lo dirige Eventos/EventoCasinoMalvalona"
+position = Vector2(232, 46)
+script = ExtResource("s_evento")
+id_texto = "CIUDAD_MALVALONA_CASINO_PREMIOS_SALUDO"
+selec_frames = ExtResource("f_npc_064")
+coord = Vector2i(14, 2)
+
+[node name="Chica" parent="NPCs" unique_id=905577153 instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_GameCorner objeto 5 (7,3) GIRL_2 FACE_DOWN Girl. Lo dirige Eventos/EventoCasinoMalvalona"
+position = Vector2(120, 62)
+script = ExtResource("s_evento")
+id_texto = "CIUDAD_MALVALONA_CASINO_CHICA_MUNECO_OFRECE"
+selec_frames = ExtResource("f_npc_006")
+coord = Vector2i(7, 3)
+
+[node name="Aficionado" parent="NPCs" unique_id=539902259 instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_GameCorner objeto 6 (19,4) MAN_3 FACE_DOWN PokefanM. Lo dirige Eventos/EventoCasinoMalvalona"
+position = Vector2(312, 78)
+script = ExtResource("s_evento")
+id_texto = "CIUDAD_MALVALONA_CASINO_FAN_SUERTE"
+selec_frames = ExtResource("f_npc_054")
+coord = Vector2i(19, 4)
+
+[node name="Anciano" parent="NPCs" unique_id=1322906275 instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_GameCorner objeto 7 (20,8) OLD_MAN_2 FACE_LEFT OldMan"
+position = Vector2(328, 142)
+script = ExtResource("s_cond")
+textos_condicionales = Dictionary[String, String]({})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = true
+girar_al_hablar = true
+id_texto = "CIUDAD_MALVALONA_CASINO_ANCIANO_MESAS"
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_093")
+coord = Vector2i(20, 8)
+
+[node name="Cocinero" parent="NPCs" unique_id=81886541 instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_GameCorner objeto 8 (6,8) COOK FACE_RIGHT Cook"
+position = Vector2(104, 142)
+script = ExtResource("s_cond")
+textos_condicionales = Dictionary[String, String]({})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = true
+girar_al_hablar = true
+id_texto = "CIUDAD_MALVALONA_CASINO_COCINERO_TIEMPO"
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_092")
+coord = Vector2i(6, 8)
+
+[node name="PremiosMT" parent="NPCs" unique_id=654992507 instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_GameCorner objeto 9 (13,2) BEAUTY FACE_DOWN PrizeCornerTMs. Lo dirige Eventos/EventoCasinoMalvalona"
+position = Vector2(216, 46)
+script = ExtResource("s_evento")
+id_texto = "CIUDAD_MALVALONA_CASINO_PREMIOS_SALUDO"
+selec_frames = ExtResource("f_npc_064")
+coord = Vector2i(13, 2)
+
+[node name="Hombre" parent="NPCs" unique_id=2017341593 instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_GameCorner objeto 10 (1,7) MAN_4 FACE_RIGHT Man"
+position = Vector2(24, 126)
+script = ExtResource("s_cond")
+textos_condicionales = Dictionary[String, String]({})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = true
+girar_al_hablar = true
+id_texto = "CIUDAD_MALVALONA_CASINO_HOMBRE_TRES_FICHAS"
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_027")
+coord = Vector2i(1, 7)
+
+[node name="Maniaco" parent="NPCs" unique_id=1984508340 instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_GameCorner objeto 11 (9,8) MANIAC FACE_LEFT Maniac"
+position = Vector2(152, 142)
+script = ExtResource("s_cond")
+textos_condicionales = Dictionary[String, String]({})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = true
+girar_al_hablar = true
+id_texto = "CIUDAD_MALVALONA_CASINO_MANIACO_SIETE"
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_008")
+coord = Vector2i(9, 8)
+
+[node name="Mujer" parent="NPCs" unique_id=2001111469 instance=ExtResource("npc_base")]
+editor_description = "pokeruby MauvilleCity_GameCorner objeto 12 (4,6) WOMAN_7 FACE_LEFT Woman"
+position = Vector2(72, 110)
+script = ExtResource("s_cond")
+textos_condicionales = Dictionary[String, String]({})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = true
+girar_al_hablar = true
+id_texto = "CIUDAD_MALVALONA_CASINO_MUJER_TRAGAPERRAS"
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_028")
+coord = Vector2i(4, 6)
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=860194251]
+script = ExtResource("4_tplsp")
+tile_data = {
+"0,2": {
+"flags": 1
+},
+"1,2": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,3": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,3": {
+"flags": 1073741825
+},
+"12,1": {
+"flags": 1
+},
+"12,3": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,3": {
+"flags": 1073741825
+},
+"14,1": {
+"flags": 1
+},
+"14,3": {
+"flags": 1073741825
+},
+"14,6": {
+"flags": 1
+},
+"14,7": {
+"flags": 1
+},
+"14,8": {
+"flags": 1
+},
+"15,2": {
+"flags": 1
+},
+"15,3": {
+"flags": 1
+},
+"15,6": {
+"flags": 1
+},
+"15,7": {
+"flags": 1
+},
+"15,8": {
+"flags": 1
+},
+"16,1": {
+"flags": 1
+},
+"17,1": {
+"flags": 1
+},
+"18,2": {
+"flags": 1
+},
+"18,6": {
+"flags": 1
+},
+"18,7": {
+"flags": 1
+},
+"18,8": {
+"flags": 1
+},
+"19,2": {
+"flags": 1
+},
+"19,6": {
+"flags": 1
+},
+"19,7": {
+"flags": 1
+},
+"19,8": {
+"flags": 1
+},
+"2,2": {
+"flags": 1
+},
+"2,6": {
+"flags": 1
+},
+"2,7": {
+"flags": 1
+},
+"2,8": {
+"flags": 1
+},
+"2,9": {
+"flags": 1
+},
+"20,2": {
+"flags": 1
+},
+"21,2": {
+"flags": 1
+},
+"21,4": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,6": {
+"flags": 1
+},
+"3,7": {
+"flags": 1
+},
+"3,8": {
+"flags": 1
+},
+"3,9": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,2": {
+"flags": 1
+},
+"6,2": {
+"flags": 1
+},
+"7,2": {
+"flags": 1
+},
+"7,6": {
+"flags": 1
+},
+"7,7": {
+"flags": 1
+},
+"7,8": {
+"flags": 1
+},
+"7,9": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,6": {
+"flags": 1
+},
+"8,7": {
+"flags": 1
+},
+"8,8": {
+"flags": 1
+},
+"8,9": {
+"flags": 1
+},
+"9,2": {
+"flags": 1
+},
+"9,3": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Eventos" type="Node2D" parent="." unique_id=2052378433]
+
+[node name="EventoCasinoMalvalona" type="Node2D" parent="Eventos" unique_id=685951610]
+editor_description = "pokeruby MauvilleCity_GameCorner/scripts.inc: cajero, premios, regalos y maquinas"
+script = ExtResource("s_casino")
+cajero = NodePath("../../NPCs/Cajero")
+premios_munecos = NodePath("../../NPCs/PremiosMunecos")
+premios_mt = NodePath("../../NPCs/PremiosMT")
+chica = NodePath("../../NPCs/Chica")
+aficionado = NodePath("../../NPCs/Aficionado")

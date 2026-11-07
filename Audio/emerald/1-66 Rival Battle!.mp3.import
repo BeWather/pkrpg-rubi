@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b0eu3q62gjwte"
+path="res://.godot/imported/1-66 Rival Battle!.mp3-db908fa8d5e187483947e932b93f51cd.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-66 Rival Battle!.mp3"
+dest_files=["res://.godot/imported/1-66 Rival Battle!.mp3-db908fa8d5e187483947e932b93f51cd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

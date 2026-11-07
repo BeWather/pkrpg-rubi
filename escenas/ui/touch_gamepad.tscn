@@ -1,0 +1,7 @@
+[gd_scene format=3 load_steps=2 uid="uid://btouchgamepad0001"]
+
+[ext_resource type="Script" path="res://escenas/ui/touch_gamepad.gd" id="1_tgpad"]
+
+[node name="TouchGamepad" type="CanvasLayer"]
+layer = 20
+script = ExtResource("1_tgpad")

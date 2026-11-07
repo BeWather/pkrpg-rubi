@@ -1,0 +1,135 @@
+[gd_scene format=3 uid="uid://cijdf6knh88ju"]
+
+[ext_resource type="Texture2D" uid="uid://bk2ic4ynwge81" path="res://UI/equipo/pantalla-equipo.png" id="1_w1mbe"]
+[ext_resource type="Script" uid="uid://ccg1orkliop7c" path="res://UI/equipo/pantalla_equipo_controlador.gd" id="2_controlador"]
+[ext_resource type="PackedScene" uid="uid://c4brcutburugy" path="res://UI/equipo/pantalla-equipo-caja-primera.tscn" id="2_es58n"]
+[ext_resource type="PackedScene" uid="uid://diocxridalgwk" path="res://UI/equipo/pantalla-equipo-caja-larga.tscn" id="3_fambj"]
+[ext_resource type="Texture2D" uid="uid://v6kexaw8rq10" path="res://UI/menu_box_1.png" id="4_r7dlg"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="5_j0u1a"]
+[ext_resource type="Texture2D" uid="uid://hkf50bdlcdcl" path="res://UI/equipo/pe_boton_salir.png" id="6_bkhsp"]
+[ext_resource type="Texture2D" uid="uid://cwf4ytjn4xd2a" path="res://UI/puntero_texto.png" id="7_k2k34"]
+[ext_resource type="Script" uid="uid://sj0eac78to3k" path="res://escenas/batalla/caja_texto_batalla.gd" id="8_caja_texto"]
+[ext_resource type="Texture2D" path="res://UI/equipo/pe_boton_vale.png" id="9_vale"]
+[ext_resource type="Texture2D" path="res://UI/equipo/pe_boton_vale_cursor.png" id="10_vale_cursor"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tthuk"]
+atlas = ExtResource("7_k2k34")
+region = Rect2(0, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88ik7"]
+atlas = ExtResource("7_k2k34")
+region = Rect2(8, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bueie"]
+atlas = ExtResource("7_k2k34")
+region = Rect2(16, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2owf"]
+atlas = ExtResource("7_k2k34")
+region = Rect2(24, 0, 8, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m3ltw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tthuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88ik7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bueie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2owf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="Node2D" type="Node2D" unique_id=1211339006]
+script = ExtResource("2_controlador")
+
+[node name="pantalla-equipo" type="Sprite2D" parent="." unique_id=253711328]
+texture = ExtResource("1_w1mbe")
+centered = false
+
+[node name="caja1" parent="." unique_id=1378554699 instance=ExtResource("2_es58n")]
+position = Vector2(0, 30)
+frame = 1
+icono_actual = 0
+
+[node name="caja2" parent="." unique_id=492868536 instance=ExtResource("3_fambj")]
+position = Vector2(88, 11)
+
+[node name="caja3" parent="." unique_id=9554099 instance=ExtResource("3_fambj")]
+position = Vector2(88, 35)
+icono_actual = 6
+
+[node name="caja4" parent="." unique_id=956712434 instance=ExtResource("3_fambj")]
+position = Vector2(88, 59)
+icono_actual = 6
+
+[node name="caja5" parent="." unique_id=1683923531 instance=ExtResource("3_fambj")]
+position = Vector2(88, 83)
+icono_actual = 9
+
+[node name="caja6" parent="." unique_id=2104244071 instance=ExtResource("3_fambj")]
+position = Vector2(88, 107)
+icono_actual = 13
+
+[node name="boton-vale" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(192, 128)
+texture = ExtResource("9_vale")
+centered = false
+
+[node name="boton-vale-cursor" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(192, 128)
+texture = ExtResource("10_vale_cursor")
+centered = false
+
+[node name="NinePatchRect" type="NinePatchRect" parent="." unique_id=1138218755]
+z_index = 1
+offset_top = 128.0
+offset_right = 192.0
+offset_bottom = 160.0
+texture = ExtResource("4_r7dlg")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="CajaTexto" type="RichTextLabel" parent="NinePatchRect" unique_id=311806221]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 184.0
+offset_bottom = 24.0
+theme_override_colors/default_color = Color(0.282353, 0.282353, 0.282353, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.25098)
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("5_j0u1a")
+theme_override_font_sizes/normal_font_size = 15
+bbcode_enabled = true
+text = "Elige un POKéMON"
+fit_content = true
+scroll_active = false
+script = ExtResource("8_caja_texto")
+
+[node name="Cursor" type="AnimatedSprite2D" parent="NinePatchRect" unique_id=792014266]
+visible = false
+position = Vector2(224, 30)
+sprite_frames = SubResource("SpriteFrames_m3ltw")
+autoplay = "default"
+metadata/_edit_lock_ = true
+
+[node name="boton-salir" type="Sprite2D" parent="." unique_id=1585820967]
+visible = false
+position = Vector2(216, 152)
+texture = ExtResource("6_bkhsp")

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dt075qriiemp7"
+path="res://.godot/imported/PRSFX- Reflect.wav-19e60863496e1bbb66d314e8f4f92815.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Reflect.wav"
+dest_files=["res://.godot/imported/PRSFX- Reflect.wav-19e60863496e1bbb66d314e8f4f92815.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

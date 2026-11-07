@@ -1,0 +1,917 @@
+[gd_scene format=3 uid="uid://b828vk0wg4o8g"]
+
+[ext_resource type="Script" uid="uid://c2uk6suq3xjx0" path="res://addons/tilemap_inspector/editor_entrenadores.gd" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="1"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.0745098, 0.0901961, 0.117647, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.176471, 0.219608, 0.290196, 1)
+corner_radius_top_left = 14
+corner_radius_top_right = 14
+corner_radius_bottom_right = 14
+corner_radius_bottom_left = 14
+
+[sub_resource type="StyleBoxFlat" id="2"]
+content_margin_left = 6.0
+content_margin_top = 6.0
+content_margin_right = 6.0
+content_margin_bottom = 6.0
+bg_color = Color(0.105882, 0.12549, 0.160784, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.223529, 0.266667, 0.341176, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="StyleBoxFlat" id="3"]
+content_margin_left = 8.0
+content_margin_top = 8.0
+content_margin_right = 8.0
+content_margin_bottom = 8.0
+bg_color = Color(0.129412, 0.156863, 0.2, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.294118, 0.360784, 0.454902, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="EditorEntrenadoresRoot" type="Control" unique_id=42960073]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1")
+
+[node name="MarginOuter" type="MarginContainer" parent="." unique_id=1707639679]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="PanelBox" type="PanelContainer" parent="MarginOuter" unique_id=1296531851]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("1")
+
+[node name="HSplit" type="HSplitContainer" parent="MarginOuter/PanelBox" unique_id=1735568167]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+split_offsets = PackedInt32Array(360)
+dragger_visibility = 2
+split_offset = 360
+
+[node name="PanelLista" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit" unique_id=1356479314]
+custom_minimum_size = Vector2(340, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("2")
+
+[node name="MarginLista" type="MarginContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista" unique_id=734623648]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxLista" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista" unique_id=2074636893]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="CabeceraLista" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista" unique_id=1272518947]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TituloLista" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/CabeceraLista" unique_id=1840492310]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Editor de Entrenadores"
+
+[node name="SubtituloLista" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/CabeceraLista" unique_id=1932772108]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Filtra por clase, nombre o Pokémon y selecciona una ficha para editarla."
+autowrap_mode = 2
+
+[node name="PanelFiltros" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista" unique_id=888283339]
+layout_mode = 2
+theme_override_styles/panel = SubResource("3")
+
+[node name="MarginFiltros" type="MarginContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/PanelFiltros" unique_id=276660242]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="VBoxFiltros" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/PanelFiltros/MarginFiltros" unique_id=47700213]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBoxBuscar" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/PanelFiltros/MarginFiltros/VBoxFiltros" unique_id=1515699121]
+layout_mode = 2
+
+[node name="FiltroClase" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/PanelFiltros/MarginFiltros/VBoxFiltros/HBoxBuscar" unique_id=856781684]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Clase de entrenador"
+
+[node name="BtnLimpiarFiltroClase" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/PanelFiltros/MarginFiltros/VBoxFiltros/HBoxBuscar" unique_id=369808594]
+layout_mode = 2
+text = "X"
+
+[node name="HBoxBuscar2" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/PanelFiltros/MarginFiltros/VBoxFiltros" unique_id=1393009621]
+layout_mode = 2
+
+[node name="FiltroNombre" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/PanelFiltros/MarginFiltros/VBoxFiltros/HBoxBuscar2" unique_id=700110746]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Nombre del entrenador"
+
+[node name="BtnLimpiarFiltro" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/PanelFiltros/MarginFiltros/VBoxFiltros/HBoxBuscar2" unique_id=591388500]
+layout_mode = 2
+text = "X"
+
+[node name="HBoxBuscar3" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/PanelFiltros/MarginFiltros/VBoxFiltros" unique_id=1824766862]
+layout_mode = 2
+
+[node name="FiltroPokemon" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/PanelFiltros/MarginFiltros/VBoxFiltros/HBoxBuscar3" unique_id=956445179]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Pokémon del equipo"
+
+[node name="BtnLimpiarFiltroPokemon" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/PanelFiltros/MarginFiltros/VBoxFiltros/HBoxBuscar3" unique_id=374415752]
+layout_mode = 2
+text = "X"
+
+[node name="ScrollLista" type="ScrollContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista" unique_id=1875582851]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+focus_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="VBoxCards" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista" unique_id=15059985]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 10
+
+[node name="CardTemplate" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards" unique_id=2113296275]
+visible = false
+custom_minimum_size = Vector2(0, 104)
+layout_mode = 2
+theme_override_styles/panel = SubResource("3")
+
+[node name="HMain" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate" unique_id=964698348]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 10
+
+[node name="SpriteTrainer" type="TextureRect" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain" unique_id=1303319907]
+custom_maximum_size = Vector2(64, 64)
+custom_minimum_size = Vector2(64, 64)
+texture_filter = 1
+layout_mode = 2
+tooltip_text = "Sprite del entrenador"
+stretch_mode = 5
+
+[node name="VInfo" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain" unique_id=1545673701]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="LblClaseNombre" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo" unique_id=1257641868]
+layout_mode = 2
+theme_override_font_sizes/font_size = 15
+text = "LIDER_GIMNASIO | NORMAN"
+
+[node name="HMeta" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LblMeta" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo/HMeta"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.66, 0.72, 0.8, 1)
+theme_override_font_sizes/font_size = 12
+text = "ID 0 · Nv 1–1"
+
+[node name="LblAviso" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo/HMeta"]
+visible = false
+layout_mode = 2
+mouse_filter = 1
+theme_override_colors/font_color = Color(1, 0.72, 0.3, 1)
+theme_override_font_sizes/font_size = 12
+text = "⚠ 0"
+
+[node name="HPokemon" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo" unique_id=329709300]
+texture_filter = 1
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Slot1" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo/HPokemon" unique_id=1810326994]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo/HPokemon/Slot1" unique_id=296397062]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+stretch_mode = 2
+
+[node name="Slot2" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo/HPokemon" unique_id=704636530]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo/HPokemon/Slot2" unique_id=993842399]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+stretch_mode = 2
+
+[node name="Slot3" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo/HPokemon" unique_id=1845265269]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo/HPokemon/Slot3" unique_id=1602664315]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+stretch_mode = 2
+
+[node name="Slot4" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo/HPokemon" unique_id=1780242623]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo/HPokemon/Slot4" unique_id=2095993812]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+stretch_mode = 2
+
+[node name="Slot5" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo/HPokemon" unique_id=739879610]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo/HPokemon/Slot5" unique_id=515189609]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+stretch_mode = 2
+
+[node name="Slot6" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo/HPokemon" unique_id=307180241]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/ScrollLista/VBoxCards/CardTemplate/HMain/VInfo/HPokemon/Slot6" unique_id=1776399937]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+stretch_mode = 2
+
+[node name="HBoxListaBtns" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista" unique_id=93130092]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BtnNuevo" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/HBoxListaBtns" unique_id=1008935544]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Nuevo"
+
+[node name="BtnDuplicar" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/HBoxListaBtns" unique_id=1951756006]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Duplicar"
+
+[node name="BtnBorrar" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/HBoxListaBtns" unique_id=1062335840]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Eliminar"
+
+[node name="BtnTestBatalla" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelLista/MarginLista/VBoxLista/HBoxListaBtns" unique_id=784843945]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Abre la interfaz declarativa para configurar una batalla"
+text = "Debug batalla"
+
+[node name="PanelDetalle" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit" unique_id=1152104715]
+custom_minimum_size = Vector2(540, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("2")
+
+[node name="MarginDetalle" type="MarginContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle" unique_id=1875206618]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="VBoxDetalle" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle" unique_id=837237186]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 12
+
+[node name="CabeceraDetalle" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle" unique_id=1654747120]
+layout_mode = 2
+theme_override_constants/separation = 2
+
+[node name="TituloDetalle" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/CabeceraDetalle" unique_id=1710129265]
+layout_mode = 2
+theme_override_font_sizes/font_size = 20
+text = "Ficha del Entrenador"
+
+[node name="SubtituloDetalle" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/CabeceraDetalle" unique_id=1025956743]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Edita el perfil, los objetos y el equipo desde los paneles."
+autowrap_mode = 2
+
+[node name="Scroll" type="ScrollContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle" unique_id=1010185260]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="Form" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll" unique_id=315886234]
+custom_minimum_size = Vector2(0, 680)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="PanelPerfil" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form" unique_id=247724129]
+layout_mode = 2
+theme_override_styles/panel = SubResource("3")
+
+[node name="MarginPerfil" type="MarginContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil" unique_id=1918189780]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="VBoxPerfil" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil" unique_id=1543355644]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="LblSeccionPerfil" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil" unique_id=796427978]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Perfil y presentación"
+
+[node name="HBoxTop" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil" unique_id=672122643]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 8
+
+[node name="GridTopLeft" type="GridContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop" unique_id=1331167501]
+layout_mode = 2
+columns = 2
+
+[node name="LblId" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft" unique_id=1861825909]
+layout_mode = 2
+text = "ID"
+
+[node name="Id" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft" unique_id=1659021889]
+layout_mode = 2
+placeholder_text = "(auto)"
+editable = false
+
+[node name="LblNombre" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft" unique_id=354203860]
+layout_mode = 2
+text = "Nombre"
+
+[node name="Nombre" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft" unique_id=222188113]
+layout_mode = 2
+placeholder_text = "NOMBRE"
+
+[node name="LblFraseDerrota" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft"]
+layout_mode = 2
+text = "Frase derrota"
+
+[node name="FraseDerrota" type="TextEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft"]
+custom_minimum_size = Vector2(260, 58)
+layout_mode = 2
+placeholder_text = "..."
+tooltip_text = "Frase del entrenador al perder. Saltos de línea: Intro, \\n, \\l o \\p."
+
+[node name="LblPreviewFrase" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft"]
+layout_mode = 2
+text = "Vista previa"
+
+[node name="PreviewFrase" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft"]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="LblClase" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft" unique_id=1986659809]
+layout_mode = 2
+text = "Clase"
+
+[node name="HBoxClase" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft" unique_id=296562675]
+layout_mode = 2
+
+[node name="Clase" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft/HBoxClase" unique_id=174730906]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "ENTRENADOR"
+
+[node name="BtnClaseConfig" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft/HBoxClase" unique_id=903859586]
+layout_mode = 2
+text = "Buscar"
+
+[node name="LblSexo" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft" unique_id=1105580008]
+layout_mode = 2
+text = "Sexo"
+
+[node name="Sexo" type="OptionButton" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft" unique_id=351987701]
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "M"
+popup/item_0/id = 0
+popup/item_1/text = "F"
+popup/item_1/id = 1
+
+[node name="LblTipoBatalla" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft" unique_id=1488854220]
+layout_mode = 2
+text = "Tipo de batalla"
+
+[node name="TipoBatalla" type="OptionButton" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft" unique_id=1755091407]
+layout_mode = 2
+selected = 0
+item_count = 2
+popup/item_0/text = "Batalla simple"
+popup/item_0/id = 0
+popup/item_1/text = "Batalla doble"
+popup/item_1/id = 1
+
+[node name="LblRatio" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft" unique_id=1461424530]
+layout_mode = 2
+text = "Ratio dinero"
+
+[node name="RatioDinero" type="SpinBox" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft" unique_id=1667165578]
+layout_mode = 2
+min_value = 1.0
+max_value = 999.0
+value = 5.0
+
+[node name="LblMusica" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft" unique_id=274503567]
+layout_mode = 2
+text = "Jingle de encuentro"
+
+[node name="HBoxMusica" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft" unique_id=415971759]
+layout_mode = 2
+
+[node name="MusicaOption" type="OptionButton" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft/HBoxMusica" unique_id=1096406200]
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 16
+popup/item_0/text = "(ninguna)"
+popup/item_0/id = 0
+popup/item_1/text = "BATALLA_ENTRENADOR_1"
+popup/item_1/id = 1
+popup/item_2/text = "BATALLA_SALVAJE_1"
+popup/item_2/id = 2
+popup/item_3/text = "CENTRO_POKEMON"
+popup/item_3/id = 3
+popup/item_4/text = "CIUDAD_ARBORADA"
+popup/item_4/id = 4
+popup/item_5/text = "CIUDAD_PETALIA"
+popup/item_5/id = 5
+popup/item_6/text = "ENTRENADORES_1"
+popup/item_6/id = 6
+popup/item_7/text = "PUEBLO_ESCASO"
+popup/item_7/id = 7
+popup/item_8/text = "PUEBLO_OROMAR"
+popup/item_8/id = 8
+popup/item_9/text = "RUTA_101"
+popup/item_9/id = 9
+popup/item_10/text = "RUTA_102"
+popup/item_10/id = 10
+popup/item_11/text = "RUTA_103"
+popup/item_11/id = 11
+popup/item_12/text = "RUTA_104"
+popup/item_12/id = 12
+popup/item_13/text = "RUTA_120_132"
+popup/item_13/id = 13
+popup/item_14/text = "TIENDA_POKEMON"
+popup/item_14/id = 14
+popup/item_15/text = "VILLA_RAIZ"
+popup/item_15/id = 15
+
+[node name="BtnPlayMusica" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft/HBoxMusica" unique_id=744949946]
+layout_mode = 2
+text = "Reproducir"
+
+[node name="BtnConfigMusica" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft/HBoxMusica" unique_id=900515046]
+layout_mode = 2
+text = "Configurar"
+
+[node name="LblMusicaBatalla" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft"]
+layout_mode = 2
+text = "Música de batalla"
+
+[node name="HBoxMusicaBatalla" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft"]
+layout_mode = 2
+
+[node name="MusicaBatallaOption" type="OptionButton" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft/HBoxMusicaBatalla"]
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 1
+popup/item_0/text = "(automática)"
+popup/item_0/id = 0
+
+[node name="BtnPlayMusicaBatalla" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft/HBoxMusicaBatalla"]
+layout_mode = 2
+text = "Reproducir"
+
+[node name="BtnConfigMusicaBatalla" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/GridTopLeft/HBoxMusicaBatalla"]
+layout_mode = 2
+text = "Configurar"
+
+[node name="PanelSprite" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop" unique_id=1908233332]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+
+[node name="MarginSprite" type="MarginContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/PanelSprite" unique_id=1356747120]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxSprite" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/PanelSprite/MarginSprite" unique_id=1729423470]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="PreviewTrainer" type="TextureRect" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/PanelSprite/MarginSprite/VBoxSprite" unique_id=2004036429]
+custom_minimum_size = Vector2(128, 128)
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+tooltip_text = "Preview del sprite del entrenador"
+stretch_mode = 5
+
+[node name="LblSprite" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/PanelSprite/MarginSprite/VBoxSprite" unique_id=1911545023]
+layout_mode = 2
+text = "Num sprite"
+
+[node name="HBoxNumSprite" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/PanelSprite/MarginSprite/VBoxSprite" unique_id=1346487221]
+layout_mode = 2
+
+[node name="NumSprite" type="SpinBox" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/PanelSprite/MarginSprite/VBoxSprite/HBoxNumSprite" unique_id=1104997150]
+layout_mode = 2
+size_flags_horizontal = 3
+max_value = 999.0
+value = 1.0
+
+[node name="BtnSpriteConfig" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelPerfil/MarginPerfil/VBoxPerfil/HBoxTop/PanelSprite/MarginSprite/VBoxSprite/HBoxNumSprite" unique_id=1879337139]
+layout_mode = 2
+text = "Buscar"
+
+[node name="PanelEquipo" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("3")
+
+[node name="MarginEquipo" type="MarginContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelEquipo"]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="VBoxEquipo" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelEquipo/MarginEquipo"]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LblSeccionPokemon" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelEquipo/MarginEquipo/VBoxEquipo" unique_id=18826243]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Equipo Pokémon"
+
+[node name="VBoxPokemonLista" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelEquipo/MarginEquipo/VBoxEquipo" unique_id=509280945]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="HBoxPokemonBtns" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelEquipo/MarginEquipo/VBoxEquipo/VBoxPokemonLista" unique_id=1236218368]
+layout_mode = 2
+
+[node name="BtnAddPokemon" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelEquipo/MarginEquipo/VBoxEquipo/VBoxPokemonLista/HBoxPokemonBtns" unique_id=818368335]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Añadir Pokémon"
+
+[node name="EquipoSlots" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/PanelEquipo/MarginEquipo/VBoxEquipo/VBoxPokemonLista"]
+texture_filter = 1
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="FilaSecundaria" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form" unique_id=1778228977]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 12
+
+[node name="PanelObjetos" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria" unique_id=2012009689]
+custom_minimum_size = Vector2(260, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("3")
+
+[node name="MarginObjetos" type="MarginContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos" unique_id=379920838]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="VBoxObjetos" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos" unique_id=386209562]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="LblSeccionObjetos" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos" unique_id=2099747924]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Objetos del entrenador"
+
+[node name="AyudaObjetos" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos" unique_id=321037012]
+layout_mode = 2
+theme_override_font_sizes/font_size = 11
+text = "Reserva hasta 6 slots. Los campos vacíos no se guardan."
+autowrap_mode = 2
+
+[node name="ObjetosGrid" type="GridContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos" unique_id=462967689]
+layout_mode = 2
+columns = 2
+
+[node name="LblObjeto1" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos/ObjetosGrid" unique_id=150834876]
+layout_mode = 2
+text = "#1"
+
+[node name="Objeto1" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos/ObjetosGrid" unique_id=321568540]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Nombre objeto 1"
+
+[node name="LblObjeto2" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos/ObjetosGrid" unique_id=742471663]
+layout_mode = 2
+text = "#2"
+
+[node name="Objeto2" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos/ObjetosGrid" unique_id=1813660813]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Nombre objeto 2"
+
+[node name="LblObjeto3" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos/ObjetosGrid" unique_id=55592969]
+layout_mode = 2
+text = "#3"
+
+[node name="Objeto3" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos/ObjetosGrid" unique_id=292854908]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Nombre objeto 3"
+
+[node name="LblObjeto4" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos/ObjetosGrid" unique_id=1198025776]
+layout_mode = 2
+text = "#4"
+
+[node name="Objeto4" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos/ObjetosGrid" unique_id=599442409]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Nombre objeto 4"
+
+[node name="LblObjeto5" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos/ObjetosGrid" unique_id=1667460130]
+layout_mode = 2
+text = "#5"
+
+[node name="Objeto5" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos/ObjetosGrid" unique_id=1280538975]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Nombre objeto 5"
+
+[node name="LblObjeto6" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos/ObjetosGrid" unique_id=283175124]
+layout_mode = 2
+text = "#6"
+
+[node name="Objeto6" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelObjetos/MarginObjetos/VBoxObjetos/ObjetosGrid" unique_id=87413165]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Nombre objeto 6"
+
+[node name="PanelPokemonDetalle" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria" unique_id=540525841]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("1")
+
+[node name="MarginPokemonDetalle" type="MarginContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle" unique_id=776181050]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="VBoxPokemonDetalle" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle" unique_id=1415553047]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="LblPokemonDetalle" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle" unique_id=356890806]
+layout_mode = 2
+theme_override_font_sizes/font_size = 14
+text = "Detalle del Pokémon seleccionado"
+
+[node name="PokemonDetalle" type="GridContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle" unique_id=1956757456]
+layout_mode = 2
+columns = 2
+
+[node name="LblPNombre" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/PokemonDetalle" unique_id=452474257]
+layout_mode = 2
+text = "Especie"
+
+[node name="PNombre" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/PokemonDetalle" unique_id=1954949806]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "TREECKO"
+
+[node name="LblPNivel" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/PokemonDetalle" unique_id=604325885]
+layout_mode = 2
+text = "Nivel"
+
+[node name="PNivel" type="SpinBox" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/PokemonDetalle" unique_id=775711847]
+layout_mode = 2
+min_value = 1.0
+value = 1.0
+
+[node name="LblPObjeto" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/PokemonDetalle" unique_id=1766384998]
+layout_mode = 2
+text = "Objeto"
+
+[node name="PObjeto" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/PokemonDetalle" unique_id=833283721]
+layout_mode = 2
+placeholder_text = "BAYA_SITRUS"
+
+[node name="LblPMovimiento" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/PokemonDetalle" unique_id=1265040431]
+layout_mode = 2
+tooltip_text = "Se aplican después de los movimientos por nivel: cada uno saca al más viejo."
+mouse_filter = 1
+text = "Movs. fijos"
+
+[node name="PMovs" type="GridContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/PokemonDetalle"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="PMov1" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/PokemonDetalle/PMovs"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "(nivel)"
+
+[node name="PMov2" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/PokemonDetalle/PMovs"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "(nivel)"
+
+[node name="PMov3" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/PokemonDetalle/PMovs"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "(nivel)"
+
+[node name="PMov4" type="LineEdit" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/PokemonDetalle/PMovs"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "(nivel)"
+
+[node name="LblEnCombate" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/PokemonDetalle"]
+layout_mode = 2
+tooltip_text = "Movimientos con los que entra en combate: los de nivel (gris) empujados por los fijos (color)."
+mouse_filter = 1
+text = "En combate"
+
+[node name="EnCombate" type="GridContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/PokemonDetalle"]
+layout_mode = 2
+size_flags_horizontal = 3
+columns = 2
+
+[node name="HBoxPokemonAcciones" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle" unique_id=725237778]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BtnEliminarPokemon" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelPokemonDetalle/MarginPokemonDetalle/VBoxPokemonDetalle/HBoxPokemonAcciones" unique_id=1401142125]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Eliminar"
+
+[node name="PanelInfo" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("3")
+
+[node name="MarginInfo" type="MarginContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelInfo"]
+layout_mode = 2
+theme_override_constants/margin_left = 6
+theme_override_constants/margin_top = 6
+theme_override_constants/margin_right = 6
+theme_override_constants/margin_bottom = 6
+
+[node name="VBoxInfo" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelInfo/MarginInfo"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LblSeccionInfo" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelInfo/MarginInfo/VBoxInfo"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 16
+text = "Revancha, uso y avisos"
+
+[node name="HBoxRevancha" type="VBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelInfo/MarginInfo/VBoxInfo"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="LblRevancha" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelInfo/MarginInfo/VBoxInfo/HBoxRevancha"]
+layout_mode = 2
+text = "Sin revancha"
+
+[node name="TiersRevancha" type="HFlowContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelInfo/MarginInfo/VBoxInfo/HBoxRevancha"]
+layout_mode = 2
+theme_override_constants/h_separation = 4
+theme_override_constants/v_separation = 4
+
+[node name="LblUsadoEn" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelInfo/MarginInfo/VBoxInfo"]
+layout_mode = 2
+autowrap_mode = 3
+text = "Usado en: —"
+
+[node name="LblPremio" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelInfo/MarginInfo/VBoxInfo"]
+layout_mode = 2
+text = "Premio: —"
+
+[node name="LblNombreOficial" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelInfo/MarginInfo/VBoxInfo"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.8, 1, 1)
+text = "Nombre oficial: —"
+
+[node name="LblAvisos" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/Scroll/Form/FilaSecundaria/PanelInfo/MarginInfo/VBoxInfo"]
+visible = false
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 0.72, 0.3, 1)
+autowrap_mode = 3
+text = ""
+
+[node name="FooterDetalle" type="PanelContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle" unique_id=1693225383]
+layout_mode = 2
+theme_override_styles/panel = SubResource("3")
+
+[node name="MarginFooter" type="MarginContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/FooterDetalle" unique_id=1219223809]
+layout_mode = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="HBoxAcciones" type="HBoxContainer" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/FooterDetalle/MarginFooter" unique_id=308341433]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="BtnGuardar" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/FooterDetalle/MarginFooter/HBoxAcciones" unique_id=1100596175]
+layout_mode = 2
+text = "Guardar cambios"
+
+[node name="BtnRevertir" type="Button" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/FooterDetalle/MarginFooter/HBoxAcciones" unique_id=76202855]
+layout_mode = 2
+text = "Revertir"
+
+[node name="SeparadorFooter" type="Control" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/FooterDetalle/MarginFooter/HBoxAcciones" unique_id=145256288]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Estado" type="Label" parent="MarginOuter/PanelBox/HSplit/PanelDetalle/MarginDetalle/VBoxDetalle/FooterDetalle/MarginFooter/HBoxAcciones" unique_id=1868449809]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Editor listo"

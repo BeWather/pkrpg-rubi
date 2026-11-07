@@ -1,0 +1,11 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://4geiuwa4qd2p"]
+
+[ext_resource type="FontFile" uid="uid://buqx8cwqlfbej" path="res://fuentes/pkmnems.ttf" id="1_2t3te"]
+
+[resource]
+line_spacing = -2.0
+font = ExtResource("1_2t3te")
+font_size = 11
+font_color = Color(0.972549, 0.972549, 0.972549, 1)
+shadow_color = Color(0, 0, 0, 0.501961)
+shadow_offset = Vector2(1, 0)

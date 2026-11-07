@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://iwdet8tp4w5e"
+path="res://.godot/imported/1-38 Obtained a TM!.mp3-6de4e7c0bc863d64d58cbc7afee52dc0.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-38 Obtained a TM!.mp3"
+dest_files=["res://.godot/imported/1-38 Obtained a TM!.mp3-6de4e7c0bc863d64d58cbc7afee52dc0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

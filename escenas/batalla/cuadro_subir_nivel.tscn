@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://wpgfl01ftx8u"]
+
+[ext_resource type="Texture2D" uid="uid://v6kexaw8rq10" path="res://UI/menu_box_1.png" id="1_0br17"]
+[ext_resource type="Script" path="res://escenas/batalla/cuadro_subir_nivel.gd" id="2_rj233"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="3_kwve1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hlp3a"]
+font = ExtResource("3_kwve1")
+font_size = 15
+font_color = Color(0.2901961, 0.2901961, 0.2901961, 1)
+shadow_size = 0
+shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+shadow_offset = Vector2(1, 0)
+
+[node name="CuadroSubeNivel" type="NinePatchRect" unique_id=1240045839]
+offset_left = 88.0
+offset_right = 240.0
+offset_bottom = 64.0
+texture = ExtResource("1_0br17")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_rj233")
+
+[node name="lb_ps" type="Label" parent="." unique_id=253771450]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 50.0
+offset_bottom = 23.0
+text = "PS"
+label_settings = SubResource("LabelSettings_hlp3a")
+language = "es_AR"
+
+[node name="lb_ataque" type="Label" parent="." unique_id=222307739]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 50.0
+offset_bottom = 39.0
+text = "ATAQUE"
+label_settings = SubResource("LabelSettings_hlp3a")
+language = "es_AR"
+
+[node name="lb_defensa" type="Label" parent="." unique_id=1934355797]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 50.0
+offset_bottom = 55.0
+text = "DEFENSA"
+label_settings = SubResource("LabelSettings_hlp3a")
+language = "es_AR"
+
+[node name="lb_at_esp" type="Label" parent="." unique_id=1038281972]
+texture_filter = 1
+layout_mode = 0
+offset_left = 80.0
+offset_top = 8.0
+offset_right = 122.0
+offset_bottom = 23.0
+text = "AT. ESP."
+label_settings = SubResource("LabelSettings_hlp3a")
+language = "es_AR"
+
+[node name="lb_df_esp" type="Label" parent="." unique_id=415441979]
+texture_filter = 1
+layout_mode = 0
+offset_left = 80.0
+offset_top = 24.0
+offset_right = 122.0
+offset_bottom = 39.0
+text = "DF. ESP."
+label_settings = SubResource("LabelSettings_hlp3a")
+language = "es_AR"
+
+[node name="lb_veloc" type="Label" parent="." unique_id=1204823403]
+texture_filter = 1
+layout_mode = 0
+offset_left = 80.0
+offset_top = 40.0
+offset_right = 122.0
+offset_bottom = 55.0
+text = "VELOC."
+label_settings = SubResource("LabelSettings_hlp3a")
+language = "es_AR"
+
+[node name="ps" type="Label" parent="." unique_id=1585302889]
+texture_filter = 1
+layout_mode = 0
+offset_left = 48.0
+offset_top = 8.0
+offset_right = 72.0
+offset_bottom = 23.0
+text = "+99"
+label_settings = SubResource("LabelSettings_hlp3a")
+horizontal_alignment = 2
+language = "es_AR"
+
+[node name="ataque" type="Label" parent="." unique_id=801351051]
+texture_filter = 1
+layout_mode = 0
+offset_left = 48.0
+offset_top = 24.0
+offset_right = 72.0
+offset_bottom = 39.0
+text = "+99"
+label_settings = SubResource("LabelSettings_hlp3a")
+horizontal_alignment = 2
+language = "es_AR"
+
+[node name="defensa" type="Label" parent="." unique_id=440310696]
+texture_filter = 1
+layout_mode = 0
+offset_left = 48.0
+offset_top = 40.0
+offset_right = 72.0
+offset_bottom = 55.0
+text = "+99"
+label_settings = SubResource("LabelSettings_hlp3a")
+horizontal_alignment = 2
+language = "es_AR"
+
+[node name="at_esp" type="Label" parent="." unique_id=883454835]
+texture_filter = 1
+layout_mode = 0
+offset_left = 120.0
+offset_top = 8.0
+offset_right = 144.0
+offset_bottom = 23.0
+text = "+99"
+label_settings = SubResource("LabelSettings_hlp3a")
+horizontal_alignment = 2
+language = "es_AR"
+
+[node name="df_esp" type="Label" parent="." unique_id=338027696]
+texture_filter = 1
+layout_mode = 0
+offset_left = 120.0
+offset_top = 24.0
+offset_right = 144.0
+offset_bottom = 39.0
+text = "+99"
+label_settings = SubResource("LabelSettings_hlp3a")
+horizontal_alignment = 2
+language = "es_AR"
+
+[node name="veloc" type="Label" parent="." unique_id=723253752]
+texture_filter = 1
+layout_mode = 0
+offset_left = 120.0
+offset_top = 40.0
+offset_right = 144.0
+offset_bottom = 55.0
+text = "+99"
+label_settings = SubResource("LabelSettings_hlp3a")
+horizontal_alignment = 2
+language = "es_AR"

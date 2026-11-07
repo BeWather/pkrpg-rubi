@@ -1,0 +1,158 @@
+[gd_scene format=4 uid="uid://djvg2m0c8bma5"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_6smg8"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_07t3g"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_0ndkl"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="11_hk1b2"]
+[ext_resource type="SpriteFrames" uid="uid://bvhd4qu3is3pt" path="res://escenas/avatares/npc_010.tres" id="or_f_010"]
+[ext_resource type="SpriteFrames" uid="uid://br8ndfy138tgu" path="res://escenas/avatares/npc_049.tres" id="or_f_049"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="or_npc_base"]
+[ext_resource type="Script" uid="uid://bfswo0jihmri4" path="res://scripts/eventos/pueblo_oromar/evento_casas_oromar.gd" id="or_s_evento_casas"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="or_s_npc_evento"]
+[ext_resource type="Script" uid="uid://bpvica3x73mj" path="res://scripts/mapas/television.gd" id="tv_television"]
+[ext_resource type="Script" uid="uid://cix41nrfux4xa" path="res://scripts/mapas/tile_alterno.gd" id="tv_tile_alterno"]
+
+[node name="Casa" type="Node2D" unique_id=2013019301]
+script = ExtResource("1_6smg8")
+nombre_interno = "pueblo_oromar_casa1"
+seccion = "PUEBLO_OROMAR"
+esInterior = true
+mapa_exterior_asociado = "PUEBLO_OROMAR"
+solo_caminar = true
+musica_mapa = "CIUDAD_OROMAR"
+metadata/esInterior = true
+
+[node name="NPCs" type="Node2D" parent="." unique_id=674171378]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Mujer" parent="NPCs" unique_id=1565935779 instance=ExtResource("or_npc_base")]
+editor_description = "pokeruby PacifidlogTown_House4 objeto 1 (3,4) WOMAN_3 FACE_DOWN (MSGBOX_NPC)"
+position = Vector2(56, 78)
+id_texto = "OROMAR_CASA1_MUJER"
+selec_frames = ExtResource("or_f_049")
+coord = Vector2i(3, 4)
+
+[node name="Nina" parent="NPCs" unique_id=72152278 instance=ExtResource("or_npc_base")]
+editor_description = "pokeruby PacifidlogTown_House4 objeto 2 (7,5) LITTLE_GIRL_2 WANDER_AROUND (1,1) (MSGBOX_NPC)"
+position = Vector2(120, 94)
+id_texto = "OROMAR_CASA1_NINA"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("or_f_010")
+coord = Vector2i(7, 5)
+
+[node name="Chico" parent="NPCs" unique_id=539987144 instance=ExtResource("or_npc_base")]
+editor_description = "pokeruby PacifidlogTown_House4 objeto 3 (7,4) BOY_1 WANDER_AROUND (1,1): «¿De dónde vienes?» SÍ/NO. Lo dirige Eventos/EventoCasas"
+position = Vector2(120, 78)
+script = ExtResource("or_s_npc_evento")
+id_texto = "OROMAR_CASA1_CHICO_PREGUNTA"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+coord = Vector2i(7, 4)
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1587394027]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADIAAAAAAAEAAAAAADMAAAAAAAIAAAAAADQAAAAJAAAAAAACADIAAAAJAAEAAAACADMAAAAJAAIAAAACADQAAAAIAAAAAAABADIAAAAHAAAAAAADADIAAAAGAAAAAAABADIAAAAFAAAAAAABADIAAAAEAAAAAAAFADYAAAADAAAAAAAEADYAAAACAAAAAAADADcAAAABAAAAAAACADcAAAADAAEAAAAEADcAAAADAAIAAAAEADgAAAAEAAEAAAAFADcAAAAEAAIAAAAFADgAAAAFAAEAAAABADMAAAAFAAIAAAABADQAAAAGAAEAAAABADMAAAAGAAIAAAABADQAAAAHAAEAAAAGAAMAAAAHAAIAAAADADMAAAAIAAEAAAABADUAAAAIAAIAAAABADYAAAABAAIAAAACADgAAAACAAIAAAADADgAAAABAAEAAAAGAC0AAAACAAEAAAAHAC0AAAABAAMAAAAEADIAAAABAAQAAAAEADMAAAACAAMAAAAFADIAAAACAAQAAAAFADMAAAAHAAMAAAAFADIAAAAHAAQAAAAFADMAAAAIAAMAAAAGADIAAAAIAAQAAAAGADMAAAABAAUAAAAEADMAAAABAAYAAAAEADQAAAACAAUAAAAFADMAAAACAAYAAAAFADQAAAAHAAUAAAAFADMAAAAHAAYAAAAFADQAAAAIAAUAAAAGADMAAAAIAAYAAAAGADQAAAAGAAMAAAAFADIAAAAGAAQAAAAHADUAAAAFAAMAAAAFADIAAAAFAAQAAAADADUAAAAEAAMAAAAFADIAAAAEAAQAAAACADUAAAADAAMAAAAFADIAAAADAAQAAAAFADMAAAAGAAUAAAAFADMAAAAGAAYAAAAFADQAAAAFAAUAAAADADYAAAAFAAYAAAAFADQAAAAEAAUAAAACADYAAAAEAAYAAAAFADQAAAADAAUAAAAGADUAAAADAAYAAAAFADQAAAAAAAMAAAAHADYAAAAAAAQAAAAHADYAAAAAAAUAAAABADQAAAAAAAYAAAABADQAAAAAAAcAAAABADQAAAAAAAgAAAABADQAAAAJAAQAAAADADQAAAAJAAMAAAADADQAAAAJAAUAAAADADQAAAAJAAYAAAADADQAAAAJAAcAAAADADQAAAAJAAgAAAADADQAAAAEAAgAAAAEADUAAAAFAAgAAAAFADUAAAAIAAgAAAADADQAAAAHAAgAAAADADQAAAAGAAgAAAADADQAAAAIAAcAAAADADQAAAAHAAcAAAADADQAAAAGAAcAAAADADQAAAAFAAcAAAADADQAAAAEAAcAAAADADQAAAADAAcAAAADADQAAAACAAcAAAADADQAAAABAAcAAAADADQAAAABAAgAAAADADQAAAACAAgAAAADADQAAAADAAgAAAADADQAAAA=")
+tile_set = ExtResource("2_07t3g")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=158774947]
+tile_map_data = PackedByteArray("AAAJAAgAAAAJADcAAAAAAAgAAAAIADcAAAA=")
+tile_set = ExtResource("2_07t3g")
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1390907238]
+position = Vector2(72, 134)
+script = ExtResource("3_0ndkl")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_oromar"
+posicion_destino = Vector2(2, 12)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1224134487]
+position = Vector2(88, 134)
+script = ExtResource("3_0ndkl")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_oromar"
+posicion_destino = Vector2(2, 12)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1126918587]
+
+[node name="EventoCasas" type="Node2D" parent="Eventos" unique_id=1730629485]
+editor_description = "pokeruby PacifidlogTown_House4/scripts.inc: el chico de «¿De dónde vienes?»"
+script = ExtResource("or_s_evento_casas")
+chico = NodePath("../../NPCs/Chico")
+
+[node name="Carteles" type="Node2D" parent="." unique_id=915655399]
+
+[node name="Television" type="Sprite2D" parent="Carteles" unique_id=537068900]
+editor_description = "MB_TELEVISION de pokeruby: Event_TV (ProgramacionTV)."
+position = Vector2(120, 24)
+script = ExtResource("tv_television")
+pantalla = NodePath("../../TilesAlternos/PantallaTele")
+coord_tile = Vector2i(7, 1)
+direccion = 1
+
+[node name="TilesAlternos" type="Node2D" parent="." unique_id=1578545721]
+
+[node name="PantallaTele" type="Node2D" parent="TilesAlternos" unique_id=531415097]
+position = Vector2(120, 24)
+script = ExtResource("tv_tile_alterno")
+capa = NodePath("../../Suelo")
+coord_tile = Vector2i(7, 1)
+atlas_alterno = Vector2i(0, 5)
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1915466289]
+script = ExtResource("11_hk1b2")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,3": {
+"flags": 1
+},
+"0,4": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,4": {
+"flags": 1
+},
+"4,5": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"

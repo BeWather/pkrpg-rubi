@@ -1,0 +1,787 @@
+{
+	"version": 1,
+	"sha256_catalogo": "a3094e371726883488d3120cbd1e655aaa949977d963d807aa48234bc9feec33",
+	"fuentes_decomp": {
+		"graphics/object_events/palettes/00.pal": "0599afcc1e0957bceed1c24a84e17af5dbc61e244060b3bed78129a0f7b39bec",
+		"graphics/object_events/palettes/01.pal": "b47f2d2f26fbd42f1dc7375f56714765305c854b994f8046fb35d699220e1f9f",
+		"graphics/object_events/palettes/02.pal": "04419ac012eb1819202520bb910f9c04451f3e144210bd4bfb5c2f2c4f378767",
+		"graphics/object_events/palettes/03.pal": "8a32a165b3cded4f5a928e7cec7684b80a91bc9d53be71fe6e4aa49674225ffa",
+		"graphics/object_events/pics/cushions/ball_cushion.png": "4d8ef7e051be5e4dee93f4a3a276247928dcf0dc3bcbd1db1906931c26b857eb",
+		"graphics/object_events/pics/cushions/diamond_cushion.png": "37e0667d3ae668782404f28c396eb4158f5d64394f2df066bfa2eb8ef9f95987",
+		"graphics/object_events/pics/cushions/fire_cushion.png": "c176c46babd578fce59bb84ab37b52ea05de2569071cbfe1ce1a2eb6f772a33c",
+		"graphics/object_events/pics/cushions/grass_cushion.png": "bc4cfa8031b691beed0b7fe0210596103fa07c505f04a23760df78d931e9ee75",
+		"graphics/object_events/pics/cushions/kiss_cushion.png": "83cf34489d78238ee195031320ef1b90ebc7590baaafffe0e7ea7a43fb46836e",
+		"graphics/object_events/pics/cushions/pika_cushion.png": "61d1e8aee85bd73d7a8aaf60fac1fa64e4e74b7ce427c11a65a4404e5c9e5ae2",
+		"graphics/object_events/pics/cushions/round_cushion.png": "af39ec3103e618ad4ae542b3fd6782a7ce23dbaf44c4ff0b58b4a83ebb419fe4",
+		"graphics/object_events/pics/cushions/spin_cushion.png": "e56494036e0f48856b74c5c641b06eb9da1c0d96c3b36b702352973de2be7182",
+		"graphics/object_events/pics/cushions/water_cushion.png": "ac1681b318a95462731a674144943370fb873060726580bb096deeb6cd81816a",
+		"graphics/object_events/pics/cushions/zigzag_cushion.png": "bb51f613b2d1bd229acc40fc5517652171f837c84537ba2ee9bc666765e00d14",
+		"graphics/object_events/pics/dolls/azurill_doll.png": "ac5750a23d59a02ac5d7092f23088d6c7c22308724205828a2d08bb0c34d70ec",
+		"graphics/object_events/pics/dolls/baltoy_doll.png": "eb1d3c5ca1f2615087c463b2f7ca187bdb6efa952c1b0d8365b0ee04bfc69056",
+		"graphics/object_events/pics/dolls/big_blastoise_doll.png": "e4049f18c28f8ae21b55f073c8ee995d2d323bf266701213eae23d8c6609b9db",
+		"graphics/object_events/pics/dolls/big_charizard_doll.png": "43e2dd101d458d501f78a6791d6e0db94db9019c55bad33a1e6f1b68baf6c2ca",
+		"graphics/object_events/pics/dolls/big_lapras_doll.png": "cbf892ef6dadf5b14d2b130ca9f1122ea297ef6fde00f14ed516222d0174cc88",
+		"graphics/object_events/pics/dolls/big_regice_doll.png": "1b5301076edf14d3412811625501f339faf08d548a70ef5cb7ec1ec968169808",
+		"graphics/object_events/pics/dolls/big_regirock_doll.png": "62e5ce84ae8f1e5aaaa11db66875e6f319f73c95df1874b8ed554ee891974ddb",
+		"graphics/object_events/pics/dolls/big_registeel_doll.png": "a226d841fc2cec46cbe8ba4958fd433f088c1825a4b8324a957590557e1e5d70",
+		"graphics/object_events/pics/dolls/big_rhydon_doll.png": "005d0ee5823cb9b4edc63e9e1a49650a2a4fe97acdbc45df44b26285ecfe1bb2",
+		"graphics/object_events/pics/dolls/big_snorlax_doll.png": "934525f0e4768140a882f48567e5dc896555cb01895b7b58f631014a96b47688",
+		"graphics/object_events/pics/dolls/big_venusaur_doll.png": "a36fee90615e6dab8d9b6a3875575d6a8d09fe8327e4f4386bdba0db70a8a87d",
+		"graphics/object_events/pics/dolls/big_wailmer_doll.png": "fefb678feb93e58d60b09becfbee4ed84d3fbcd09c170e01f7166929c89d2698",
+		"graphics/object_events/pics/dolls/chikorita_doll.png": "a3701a5d7bf1c9bb13e89f7b8e6ad17408f67fc1e63adbe2fa626ec0bba2563f",
+		"graphics/object_events/pics/dolls/clefairy_doll.png": "255b2e046f400476eaad676d10b373a669461140d36f3c1dd7e92483dfe4b734",
+		"graphics/object_events/pics/dolls/cyndaquil_doll.png": "7f0aa34274c5b35af9dcee30039cd7fac82e4ac14e37a5bce7a28ac6fbdbdf92",
+		"graphics/object_events/pics/dolls/ditto_doll.png": "859990bb28abc6fb876723d2c718ea086a380efd0ffcc98578e99aaebe947036",
+		"graphics/object_events/pics/dolls/duskull_doll.png": "c9115655d17a0db299c05a080063bd596f2f6f52c987448a52e61bfd2787bdb0",
+		"graphics/object_events/pics/dolls/gulpin_doll.png": "b04719979f9a7511becca21c23b671d89c8e55ca4c48ad3a8f6c4f9ccd646038",
+		"graphics/object_events/pics/dolls/jigglypuff_doll.png": "df82c08a551328a1146e31b8906d55f469e6acc1913b9d3634adcab063046490",
+		"graphics/object_events/pics/dolls/kecleon_doll.png": "d9d2db32171aecc6554077a86a87048c10f858ab879d419ea40900e5111a16b1",
+		"graphics/object_events/pics/dolls/lotad_doll.png": "5f2c38b54820585b8fdde2a5b13736a781f0ceb901d299e906e5cf40e1a541be",
+		"graphics/object_events/pics/dolls/marill_doll.png": "7b30e71b67d1bffd26e8dcd8d3bef20ebefc6d23aa28d6c3856c940a008abfd6",
+		"graphics/object_events/pics/dolls/meowth_doll.png": "6f91658a7f3eca6ba221d1ac3c6df2a4025fb89c695f00665ff4342c22d86be8",
+		"graphics/object_events/pics/dolls/mudkip_doll.png": "812e45654f9428ecf4c1ff4873edfb8e7430565a45f659972f3646ea18e043e8",
+		"graphics/object_events/pics/dolls/pichu_doll.png": "2e22a44eeb4207269f2740d0a1900ad589d6415537588810e96f17a7819248c2",
+		"graphics/object_events/pics/dolls/pikachu_doll.png": "04bce44dbeb317a79aa6240bf74497f3ee208c0f490f0d5823c2a42f8a2d17a3",
+		"graphics/object_events/pics/dolls/seedot_doll.png": "2cc0ffe408390212e18313a1006fd2de06669bedd4fc45f1c23f90c5390b0010",
+		"graphics/object_events/pics/dolls/skitty_doll.png": "86b783339a95ae44cc9a7571397fc5b5ba71a45806203571ee9c2ba3a13e1c41",
+		"graphics/object_events/pics/dolls/smoochum_doll.png": "4e843648ff551f34d6e6d2cdf126217633b2bb7735bed9071737cdf6dabd4988",
+		"graphics/object_events/pics/dolls/swablu_doll.png": "a6c6a974dd53ae467442e5a94946a22373656e223bd2d1351d7c52af7002124c",
+		"graphics/object_events/pics/dolls/togepi_doll.png": "42fe6f016250441067477b81c765c433d8e144d7469213f5f5be2f0645a03cde",
+		"graphics/object_events/pics/dolls/torchic_doll.png": "6ec693a90a8f934282f61616bca6b04e2cc3e6f84eab2e239ee8c89d83236c1f",
+		"graphics/object_events/pics/dolls/totodile_doll.png": "b547dfcf8e4d42d7a72ac2e2665b5e8f55934218d104594f99994867a1a5032f",
+		"graphics/object_events/pics/dolls/treecko_doll.png": "8ddf47d193b1b7b47b4c5ce6950b6fc2cd71935466e124cdac287b68bd6de1ab",
+		"graphics/object_events/pics/dolls/wynaut_doll.png": "36a721c6a2d7a692a53bfbf23e5eed5d53f7e5f36227774d515ee9530eebc8da",
+		"include/constants/event_objects.h": "9d430cb184052c9fb77aa76485d5b17627315bdf223bb8ba7fb44e9ea0829f30",
+		"src/data/object_events/object_event_graphics.h": "7a590b3d3ee715675d3c0c5209a3b384b00f74aae1498de7cf6063bf8030ed11",
+		"src/data/object_events/object_event_graphics_info.h": "5a98bb140d9535af1ae4b33efcfeedcbc156ec8cfac74b38976aeeb75d9397ed",
+		"src/data/object_events/object_event_graphics_info_pointers.h": "dd739494e0778023c195f1d3a8131151dee68876d4c62acb8d9c8a98003aa07d",
+		"src/data/object_events/object_event_pic_tables.h": "0cdb97c5e6a9b1d943426b4f0e6dbe8f75aaccd109f7c3937fd6f4484a3ae43e",
+		"src/decoration.c": "8c5e0c816fd041844dfb73805d1a844657a6f755db26b6e467dbf6e14ab7cbfa",
+		"src/event_object_movement.c": "7b62a56bd07edbe8c5ba90bb5cef2f013a03eabf3fdb2047ef87dddef4588ec9"
+	},
+	"decoraciones": [
+		{
+			"id": 1,
+			"elevaciones": []
+		},
+		{
+			"id": 2,
+			"elevaciones": []
+		},
+		{
+			"id": 3,
+			"elevaciones": []
+		},
+		{
+			"id": 4,
+			"elevaciones": []
+		},
+		{
+			"id": 5,
+			"elevaciones": []
+		},
+		{
+			"id": 6,
+			"elevaciones": []
+		},
+		{
+			"id": 7,
+			"elevaciones": []
+		},
+		{
+			"id": 8,
+			"elevaciones": []
+		},
+		{
+			"id": 9,
+			"elevaciones": []
+		},
+		{
+			"id": 10,
+			"elevaciones": []
+		},
+		{
+			"id": 11,
+			"elevaciones": []
+		},
+		{
+			"id": 12,
+			"elevaciones": []
+		},
+		{
+			"id": 13,
+			"elevaciones": []
+		},
+		{
+			"id": 14,
+			"elevaciones": []
+		},
+		{
+			"id": 15,
+			"elevaciones": []
+		},
+		{
+			"id": 16,
+			"elevaciones": []
+		},
+		{
+			"id": 17,
+			"elevaciones": []
+		},
+		{
+			"id": 18,
+			"elevaciones": []
+		},
+		{
+			"id": 19,
+			"elevaciones": []
+		},
+		{
+			"id": 20,
+			"elevaciones": []
+		},
+		{
+			"id": 21,
+			"elevaciones": []
+		},
+		{
+			"id": 22,
+			"elevaciones": []
+		},
+		{
+			"id": 23,
+			"elevaciones": []
+		},
+		{
+			"id": 24,
+			"elevaciones": []
+		},
+		{
+			"id": 25,
+			"elevaciones": []
+		},
+		{
+			"id": 26,
+			"elevaciones": []
+		},
+		{
+			"id": 27,
+			"elevaciones": []
+		},
+		{
+			"id": 28,
+			"elevaciones": []
+		},
+		{
+			"id": 29,
+			"elevaciones": []
+		},
+		{
+			"id": 30,
+			"elevaciones": []
+		},
+		{
+			"id": 31,
+			"elevaciones": []
+		},
+		{
+			"id": 32,
+			"elevaciones": []
+		},
+		{
+			"id": 33,
+			"elevaciones": []
+		},
+		{
+			"id": 34,
+			"elevaciones": [
+				4,
+				4,
+				4,
+				4,
+				0,
+				4,
+				3,
+				0
+			]
+		},
+		{
+			"id": 35,
+			"elevaciones": []
+		},
+		{
+			"id": 36,
+			"elevaciones": []
+		},
+		{
+			"id": 37,
+			"elevaciones": []
+		},
+		{
+			"id": 38,
+			"elevaciones": [
+				4,
+				4,
+				4,
+				4,
+				0,
+				3,
+				3,
+				0
+			]
+		},
+		{
+			"id": 39,
+			"elevaciones": []
+		},
+		{
+			"id": 40,
+			"elevaciones": []
+		},
+		{
+			"id": 41,
+			"elevaciones": []
+		},
+		{
+			"id": 42,
+			"elevaciones": []
+		},
+		{
+			"id": 43,
+			"elevaciones": []
+		},
+		{
+			"id": 44,
+			"elevaciones": []
+		},
+		{
+			"id": 45,
+			"elevaciones": []
+		},
+		{
+			"id": 46,
+			"elevaciones": []
+		},
+		{
+			"id": 47,
+			"elevaciones": []
+		},
+		{
+			"id": 48,
+			"elevaciones": []
+		},
+		{
+			"id": 49,
+			"elevaciones": []
+		},
+		{
+			"id": 50,
+			"elevaciones": []
+		},
+		{
+			"id": 51,
+			"elevaciones": []
+		},
+		{
+			"id": 52,
+			"elevaciones": []
+		},
+		{
+			"id": 53,
+			"elevaciones": []
+		},
+		{
+			"id": 54,
+			"elevaciones": []
+		},
+		{
+			"id": 55,
+			"elevaciones": []
+		},
+		{
+			"id": 56,
+			"elevaciones": []
+		},
+		{
+			"id": 57,
+			"elevaciones": []
+		},
+		{
+			"id": 58,
+			"elevaciones": []
+		},
+		{
+			"id": 59,
+			"elevaciones": []
+		},
+		{
+			"id": 60,
+			"elevaciones": []
+		},
+		{
+			"id": 61,
+			"elevaciones": []
+		},
+		{
+			"id": 62,
+			"elevaciones": []
+		},
+		{
+			"id": 63,
+			"elevaciones": []
+		},
+		{
+			"id": 64,
+			"elevaciones": []
+		},
+		{
+			"id": 65,
+			"elevaciones": []
+		},
+		{
+			"id": 66,
+			"elevaciones": []
+		},
+		{
+			"id": 67,
+			"elevaciones": []
+		},
+		{
+			"id": 68,
+			"elevaciones": []
+		},
+		{
+			"id": 69,
+			"elevaciones": []
+		},
+		{
+			"id": 70,
+			"elevaciones": []
+		},
+		{
+			"id": 71,
+			"elevaciones": []
+		},
+		{
+			"id": 72,
+			"elevaciones": []
+		},
+		{
+			"id": 73,
+			"elevaciones": []
+		},
+		{
+			"id": 74,
+			"elevaciones": []
+		},
+		{
+			"id": 75,
+			"elevaciones": []
+		},
+		{
+			"id": 76,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/pichu_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/pichu_doll.png",
+			"paleta_original": "graphics/object_events/palettes/01.pal"
+		},
+		{
+			"id": 77,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/pikachu_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/pikachu_doll.png",
+			"paleta_original": "graphics/object_events/palettes/01.pal"
+		},
+		{
+			"id": 78,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/marill_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/marill_doll.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 79,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/togepi_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/togepi_doll.png",
+			"paleta_original": "graphics/object_events/palettes/02.pal"
+		},
+		{
+			"id": 80,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/cyndaquil_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/cyndaquil_doll.png",
+			"paleta_original": "graphics/object_events/palettes/03.pal"
+		},
+		{
+			"id": 81,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/chikorita_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/chikorita_doll.png",
+			"paleta_original": "graphics/object_events/palettes/02.pal"
+		},
+		{
+			"id": 82,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/totodile_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/totodile_doll.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 83,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/jigglypuff_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/jigglypuff_doll.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 84,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/meowth_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/meowth_doll.png",
+			"paleta_original": "graphics/object_events/palettes/01.pal"
+		},
+		{
+			"id": 85,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/clefairy_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/clefairy_doll.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 86,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/ditto_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/ditto_doll.png",
+			"paleta_original": "graphics/object_events/palettes/03.pal"
+		},
+		{
+			"id": 87,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/smoochum_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/smoochum_doll.png",
+			"paleta_original": "graphics/object_events/palettes/03.pal"
+		},
+		{
+			"id": 88,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/treecko_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/treecko_doll.png",
+			"paleta_original": "graphics/object_events/palettes/02.pal"
+		},
+		{
+			"id": 89,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/torchic_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/torchic_doll.png",
+			"paleta_original": "graphics/object_events/palettes/01.pal"
+		},
+		{
+			"id": 90,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/mudkip_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/mudkip_doll.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 91,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/duskull_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/duskull_doll.png",
+			"paleta_original": "graphics/object_events/palettes/03.pal"
+		},
+		{
+			"id": 92,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/wynaut_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/wynaut_doll.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 93,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/baltoy_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/baltoy_doll.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 94,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/kecleon_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/kecleon_doll.png",
+			"paleta_original": "graphics/object_events/palettes/02.pal"
+		},
+		{
+			"id": 95,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/azurill_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/azurill_doll.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 96,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/skitty_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/skitty_doll.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 97,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/swablu_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/swablu_doll.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 98,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/gulpin_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/gulpin_doll.png",
+			"paleta_original": "graphics/object_events/palettes/02.pal"
+		},
+		{
+			"id": 99,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/lotad_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/lotad_doll.png",
+			"paleta_original": "graphics/object_events/palettes/02.pal"
+		},
+		{
+			"id": 100,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/seedot_doll.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/dolls/seedot_doll.png",
+			"paleta_original": "graphics/object_events/palettes/02.pal"
+		},
+		{
+			"id": 101,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/pika_cushion.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/cushions/pika_cushion.png",
+			"paleta_original": "graphics/object_events/palettes/01.pal"
+		},
+		{
+			"id": 102,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/round_cushion.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/cushions/round_cushion.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 103,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/kiss_cushion.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/cushions/kiss_cushion.png",
+			"paleta_original": "graphics/object_events/palettes/03.pal"
+		},
+		{
+			"id": 104,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/zigzag_cushion.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/cushions/zigzag_cushion.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 105,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/spin_cushion.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/cushions/spin_cushion.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 106,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/diamond_cushion.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/cushions/diamond_cushion.png",
+			"paleta_original": "graphics/object_events/palettes/03.pal"
+		},
+		{
+			"id": 107,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/ball_cushion.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/cushions/ball_cushion.png",
+			"paleta_original": "graphics/object_events/palettes/02.pal"
+		},
+		{
+			"id": 108,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/grass_cushion.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/cushions/grass_cushion.png",
+			"paleta_original": "graphics/object_events/palettes/02.pal"
+		},
+		{
+			"id": 109,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/fire_cushion.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/cushions/fire_cushion.png",
+			"paleta_original": "graphics/object_events/palettes/01.pal"
+		},
+		{
+			"id": 110,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/water_cushion.tscn",
+			"ancho_px": 16,
+			"alto_px": 16,
+			"grafico_original": "graphics/object_events/pics/cushions/water_cushion.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 111,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/snorlax_doll.tscn",
+			"ancho_px": 32,
+			"alto_px": 32,
+			"grafico_original": "graphics/object_events/pics/dolls/big_snorlax_doll.png",
+			"paleta_original": "graphics/object_events/palettes/03.pal"
+		},
+		{
+			"id": 112,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/rhydon_doll.tscn",
+			"ancho_px": 32,
+			"alto_px": 32,
+			"grafico_original": "graphics/object_events/pics/dolls/big_rhydon_doll.png",
+			"paleta_original": "graphics/object_events/palettes/03.pal"
+		},
+		{
+			"id": 113,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/lapras_doll.tscn",
+			"ancho_px": 32,
+			"alto_px": 32,
+			"grafico_original": "graphics/object_events/pics/dolls/big_lapras_doll.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 114,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/venusaur_doll.tscn",
+			"ancho_px": 32,
+			"alto_px": 32,
+			"grafico_original": "graphics/object_events/pics/dolls/big_venusaur_doll.png",
+			"paleta_original": "graphics/object_events/palettes/02.pal"
+		},
+		{
+			"id": 115,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/charizard_doll.tscn",
+			"ancho_px": 32,
+			"alto_px": 32,
+			"grafico_original": "graphics/object_events/pics/dolls/big_charizard_doll.png",
+			"paleta_original": "graphics/object_events/palettes/01.pal"
+		},
+		{
+			"id": 116,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/blastoise_doll.tscn",
+			"ancho_px": 32,
+			"alto_px": 32,
+			"grafico_original": "graphics/object_events/pics/dolls/big_blastoise_doll.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 117,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/wailmer_doll.tscn",
+			"ancho_px": 32,
+			"alto_px": 32,
+			"grafico_original": "graphics/object_events/pics/dolls/big_wailmer_doll.png",
+			"paleta_original": "graphics/object_events/palettes/03.pal"
+		},
+		{
+			"id": 118,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/regirock_doll.tscn",
+			"ancho_px": 32,
+			"alto_px": 32,
+			"grafico_original": "graphics/object_events/pics/dolls/big_regirock_doll.png",
+			"paleta_original": "graphics/object_events/palettes/00.pal"
+		},
+		{
+			"id": 119,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/regice_doll.tscn",
+			"ancho_px": 32,
+			"alto_px": 32,
+			"grafico_original": "graphics/object_events/pics/dolls/big_regice_doll.png",
+			"paleta_original": "graphics/object_events/palettes/02.pal"
+		},
+		{
+			"id": 120,
+			"elevaciones": [],
+			"escena": "res://escenas/bases_secretas/decoraciones/registeel_doll.tscn",
+			"ancho_px": 32,
+			"alto_px": 32,
+			"grafico_original": "graphics/object_events/pics/dolls/big_registeel_doll.png",
+			"paleta_original": "graphics/object_events/palettes/03.pal"
+		}
+	]
+}

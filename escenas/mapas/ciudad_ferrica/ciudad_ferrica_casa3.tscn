@@ -1,0 +1,183 @@
+[gd_scene format=4 uid="uid://b6veah1ytspt0"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_gfgf7"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_84e20"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_ebyj1"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_6doew"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="8_lv2ex"]
+[ext_resource type="SpriteFrames" uid="uid://bkw3hndn42rqc" path="res://escenas/avatares/npc_001.tres" id="fi_npc_001"]
+[ext_resource type="SpriteFrames" uid="uid://cmspnib5vfpfm" path="res://escenas/avatares/npc_074.tres" id="fi_npc_074"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="fi_npc_base"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="fi_s_evento"]
+[ext_resource type="Script" path="res://scripts/npc/intercambio_npc.gd" id="fi_s_intercambio"]
+[ext_resource type="Script" path="res://scripts/mapas/television.gd" id="tv_television"]
+[ext_resource type="Script" uid="uid://cix41nrfux4xa" path="res://scripts/mapas/tile_alterno.gd" id="tv_tile_alterno"]
+
+[node name="Casa" type="Node2D" unique_id=337747448]
+script = ExtResource("1_gfgf7")
+nombre_interno = "ciudad_ferrica_casa3"
+seccion = "CIUDAD_FERRICA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_FERRICA"
+solo_caminar = true
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1660786405]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAACcAAAAAAAEAAAADACgAAAAAAAIAAAAGACkAAAABAAAAAAAAACcAAAABAAEAAAACACkAAAABAAIAAAACACoAAAACAAAAAAAAACcAAAADAAAAAAABACYAAAADAAEAAAAGAAMAAAACAAEAAAADACkAAAACAAIAAAADACoAAAAEAAAAAAAAACcAAAAEAAEAAAAAACgAAAAAAAMAAAADACUAAAAAAAQAAAADACUAAAAAAAUAAAADACUAAAAAAAYAAAADACUAAAABAAMAAAAEACUAAAABAAQAAAAEACUAAAABAAUAAAAEACUAAAABAAYAAAAEACUAAAACAAMAAAAEACUAAAACAAQAAAAEACgAAAACAAUAAAAEACgAAAACAAYAAAAEACUAAAADAAMAAAAEACUAAAADAAQAAAAGAC8AAAADAAUAAAAGADAAAAADAAYAAAAEACUAAAAEAAMAAAAEACUAAAAEAAQAAAAHAC8AAAAEAAUAAAAHADAAAAAEAAYAAAAEACUAAAADAAIAAAAGACYAAAAEAAIAAAADACUAAAAGAAAAAAACACcAAAAGAAEAAAACACgAAAAGAAIAAAADACUAAAAGAAMAAAAEACUAAAAGAAQAAAAFACgAAAAGAAUAAAAEACUAAAAGAAYAAAAEACUAAAAHAAAAAAACACcAAAAHAAEAAAACACgAAAAHAAIAAAADACUAAAAHAAMAAAAEACUAAAAHAAQAAAAEACUAAAAHAAUAAAAEACUAAAAHAAYAAAAEACUAAAAIAAAAAAAAACcAAAAIAAEAAAAAACgAAAAIAAIAAAADACUAAAAIAAMAAAADAC8AAAAIAAQAAAADADAAAAAIAAUAAAADADEAAAAIAAYAAAAEACUAAAAJAAAAAAAAACcAAAAJAAEAAAAEACoAAAAJAAIAAAAEACsAAAAJAAMAAAAEAC8AAAAJAAQAAAAGAAcAAAAJAAUAAAAEADEAAAAJAAYAAAAEACUAAAAKAAAAAAAAACcAAAAKAAEAAAAFACoAAAAKAAIAAAAFACsAAAAKAAMAAAAEAC8AAAAKAAQAAAAGAAcAAAAKAAUAAAAEADEAAAAKAAYAAAAEACUAAAALAAAAAAAAACcAAAALAAEAAAABACkAAAALAAIAAAABACoAAAALAAMAAAAFAC8AAAALAAQAAAAFADAAAAALAAUAAAAFADEAAAALAAYAAAAEACUAAAAMAAAAAAAAACcAAAAMAAEAAAADACgAAAAMAAIAAAAGACkAAAAMAAMAAAAEACUAAAAMAAQAAAAEACUAAAAMAAUAAAAEACUAAAAMAAYAAAAEACUAAAAFAAAAAAAAACcAAAAFAAEAAAAAACgAAAAFAAIAAAADACUAAAAFAAMAAAAEACUAAAAFAAQAAAAGADEAAAAFAAUAAAAHADEAAAAFAAYAAAAEACUAAAAAAAcAAAAGACkAAAABAAcAAAAEACUAAAACAAcAAAAEACUAAAADAAcAAAAEACUAAAAEAAcAAAAEACUAAAAFAAcAAAAEACkAAAAIAAcAAAAEACUAAAAJAAcAAAAEACUAAAAKAAcAAAAEACUAAAALAAcAAAAEACUAAAAMAAcAAAAHACkAAAAGAAcAAAAFACkAAAAHAAcAAAAEACUAAAA=")
+tile_set = ExtResource("2_84e20")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Suelo2" type="TileMapLayer" parent="." unique_id=463708013]
+tile_map_data = PackedByteArray("AAAMAAYAAAACAAcAAAAAAAYAAAACAAcAAAA=")
+tile_set = ExtResource("2_84e20")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=615828127]
+position = Vector2(88, 118)
+script = ExtResource("3_ebyj1")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_ferrica"
+posicion_destino = Vector2(33, 19)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=1450428448]
+position = Vector2(104, 118)
+script = ExtResource("3_ebyj1")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_ferrica"
+posicion_destino = Vector2(33, 19)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=534991545]
+script = ExtResource("4_6doew")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,2": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,2": {
+"flags": 1
+},
+"12,7": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,4": {
+"flags": 1
+},
+"3,5": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,4": {
+"flags": 1
+},
+"4,5": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=902757812]
+z_index = 1
+y_sort_enabled = true
+
+[node name="ChicoIntercambio" parent="NPCs" unique_id=1302013001 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_House1 objeto 1 (6,4) LITTLE_BOY_1 FACE_LEFT, EventScript_Trader: lo dirige Eventos/Intercambio (IntercambioNpc, tabla FERRICA de intercambios_npc.json: SLAKOTH por MAKUHITA «MAKIT»); id_texto es el de después del intercambio (FLAG_RUSTBORO_NPC_TRADE_COMPLETED)"
+position = Vector2(104, 78)
+script = ExtResource("fi_s_evento")
+id_texto = "FERRICA_CASA_INTERCAMBIO_CURIOSO"
+tipo_movimiento = 9
+selec_frames = ExtResource("fi_npc_001")
+coord = Vector2i(6, 4)
+
+[node name="Montanero" parent="NPCs" unique_id=1302013002 instance=ExtResource("fi_npc_base")]
+editor_description = "pokeruby RustboroCity_House1 objeto 2 (9,2) HIKER FACE_DOWN"
+position = Vector2(152, 46)
+id_texto = "FERRICA_CASA_MONTANERO"
+selec_frames = ExtResource("fi_npc_074")
+coord = Vector2i(9, 2)
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1985929628]
+
+[node name="Cartel" type="Sprite2D" parent="Carteles" unique_id=934691777 groups=["Cartel"]]
+position = Vector2(184, 24)
+script = ExtResource("8_lv2ex")
+id_texto = "LIBROS_ILUSTRADOS"
+coord_tile = Vector2i(11, 1)
+
+[node name="Eventos" type="Node2D" parent="."]
+
+[node name="Intercambio" type="Node2D" parent="Eventos"]
+editor_description = "pokeruby RustboroCity_House1/scripts.inc: EventScript_Trader (intercambio con NPC, entrada 0 de gIngameTrades)"
+script = ExtResource("fi_s_intercambio")
+npc = NodePath("../../NPCs/ChicoIntercambio")
+id_intercambio = "FERRICA"
+
+[node name="TilesAlternos" type="Node2D" parent="." unique_id=781836223]
+
+[node name="PantallaTele" type="Node2D" parent="TilesAlternos" unique_id=1224473142]
+position = Vector2(56, 24)
+script = ExtResource("tv_tile_alterno")
+capa = NodePath("../../Suelo")
+coord_tile = Vector2i(3, 1)
+atlas_alterno = Vector2i(0, 5)
+
+[node name="Television" type="Sprite2D" parent="Carteles" unique_id=1687542000]
+editor_description = "MB_TELEVISION de pokeruby: Event_TV (ProgramacionTV)."
+position = Vector2(56, 24)
+script = ExtResource("tv_television")
+coord_tile = Vector2i(3, 1)
+direccion = 1
+pantalla = NodePath("../../TilesAlternos/PantallaTele")

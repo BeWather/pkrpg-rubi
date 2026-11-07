@@ -1,0 +1,1206 @@
+[gd_scene format=3 uid="uid://me5udnvvkrhp"]
+
+[ext_resource type="Script" uid="uid://brji1xyoice7p" path="res://addons/tilemap_inspector/ventana_debug_batalla.gd" id="1_vent"]
+[ext_resource type="PackedScene" path="res://escenas/batalla/debug/poke_slot_horizontal.tscn" id="2_slot"]
+[ext_resource type="PackedScene" path="res://escenas/batalla/debug/selector_pokemon.tscn" id="3_sel"]
+[ext_resource type="Texture2D" uid="uid://crj5shlj2h2ea" path="res://graficos/batalla/temas/batalla_fondo_02.png" id="3_vg1qb"]
+[ext_resource type="Texture2D" uid="uid://drpghsnhsuwsb" path="res://graficos/batalla/temas/batalla_suelo_02.png" id="4_abs6c"]
+[ext_resource type="Texture2D" uid="uid://cfdugn57eswfv" path="res://graficos/pokemon/front/WURMPLE.png" id="5_rwwnc"]
+[ext_resource type="Texture2D" uid="uid://dramj6aq2xi3p" path="res://graficos/batalla/batalla_bruno_4.png" id="6_abs6c"]
+[ext_resource type="Texture2D" uid="uid://v6kexaw8rq10" path="res://UI/menu_box_1.png" id="7_abs6c"]
+
+[sub_resource type="StyleBoxFlat" id="StyleFondo"]
+bg_color = Color(0.025, 0.035, 0.06, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleCabecera"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.055, 0.09, 0.17, 1)
+border_width_bottom = 1
+border_color = Color(0.2, 0.42, 0.62, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleJugador"]
+bg_color = Color(0.045, 0.12, 0.08, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.16, 0.42, 0.28, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleConfig"]
+bg_color = Color(0.045, 0.06, 0.1, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.2, 0.3, 0.48, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="ButtonGroup" id="GrupoEncuentro"]
+
+[sub_resource type="ButtonGroup" id="GrupoFormato"]
+
+[sub_resource type="StyleBoxFlat" id="StyleInterior"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+bg_color = Color(0.025, 0.035, 0.06, 0.65)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.38, 0.5, 0.7)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trsnl"]
+atlas = ExtResource("6_abs6c")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="StyleBoxFlat" id="StyleRival"]
+bg_color = Color(0.14, 0.055, 0.075, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.48, 0.2, 0.26, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[node name="DebugBatalla" type="Control" unique_id=1428360144]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vent")
+
+[node name="Fondo" type="Panel" parent="." unique_id=216511246]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleFondo")
+
+[node name="MainLayout" type="VBoxContainer" parent="." unique_id=1156497157]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = -8.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 6
+
+[node name="Header" type="PanelContainer" parent="MainLayout" unique_id=971348164]
+custom_minimum_size = Vector2(0, 46)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleCabecera")
+
+[node name="Contenido" type="HBoxContainer" parent="MainLayout/Header" unique_id=641663213]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Titulo" type="Label" parent="MainLayout/Header/Contenido" unique_id=1538154353]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.9, 1, 1)
+theme_override_font_sizes/font_size = 17
+text = "PROBADOR DE BATALLA"
+
+[node name="Subtitulo" type="Label" parent="MainLayout/Header/Contenido" unique_id=1669743884]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.55, 0.65, 0.78, 1)
+text = "Editor declarativo de equipos, formato y ruleset"
+vertical_alignment = 1
+
+[node name="Estado" type="Label" parent="MainLayout/Header/Contenido" unique_id=2022714899]
+custom_minimum_size = Vector2(220, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.55, 0.9, 0.68, 1)
+text = "Interfaz lista."
+horizontal_alignment = 2
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Cerrar" type="Button" parent="MainLayout/Header/Contenido" unique_id=1346492730]
+custom_minimum_size = Vector2(72, 28)
+layout_mode = 2
+text = "Cerrar"
+
+[node name="Contenido" type="HBoxContainer" parent="MainLayout" unique_id=1980584260]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 6
+
+[node name="PanelJugador" type="PanelContainer" parent="MainLayout/Contenido" unique_id=812572798]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleJugador")
+
+[node name="Margen" type="MarginContainer" parent="MainLayout/Contenido/PanelJugador" unique_id=725335200]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Equipo" type="VBoxContainer" parent="MainLayout/Contenido/PanelJugador/Margen" unique_id=1040648858]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Titulo" type="Label" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo" unique_id=1152619753]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 1, 0.68, 1)
+theme_override_font_sizes/font_size = 13
+text = "EQUIPO JUGADOR"
+
+[node name="Descripcion" type="Label" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo" unique_id=1451887914]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.5, 0.7, 0.58, 1)
+theme_override_font_sizes/font_size = 9
+text = "Equipo A = copia de la partida (editable en memoria). Equipo B = prueba (se guarda en el Resource)."
+autowrap_mode = 3
+
+[node name="Separador" type="HSeparator" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo" unique_id=1204798067]
+layout_mode = 2
+
+[node name="Jugador" type="HBoxContainer" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo" unique_id=1321001522]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Etiqueta" type="Label" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Jugador" unique_id=218726812]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "JUGADOR"
+vertical_alignment = 1
+
+[node name="NombreJugador" type="LineEdit" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Jugador" unique_id=1104639421]
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Nombre del jugador SOLO para esta prueba; la partida no se modifica"
+text = "AURA"
+placeholder_text = "Nombre (de la partida)"
+
+[node name="SexoJugador" type="OptionButton" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Jugador" unique_id=247988250]
+custom_minimum_size = Vector2(64, 26)
+layout_mode = 2
+tooltip_text = "Sexo del jugador (sprite de espalda) SOLO para esta prueba"
+selected = 0
+item_count = 2
+popup/item_0/text = "M"
+popup/item_0/id = 0
+popup/item_1/text = "F"
+popup/item_1/id = 1
+
+[node name="Origenes" type="TabContainer" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo" unique_id=1847907125]
+layout_mode = 2
+size_flags_vertical = 3
+current_tab = 0
+tab_0/title = "Equipo Partida"
+tab_1/title = "Equipo Debug"
+
+[node name="TabPartida" type="GridContainer" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes" unique_id=788003423]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+metadata/_tab_index = 0
+metadata/_tab_name = "Equipo Partida"
+
+[node name="Slot1" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes/TabPartida" unique_id=94305748 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot2" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes/TabPartida" unique_id=1615898969 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot3" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes/TabPartida" unique_id=193361277 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot4" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes/TabPartida" unique_id=396681449 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot5" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes/TabPartida" unique_id=698515049 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot6" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes/TabPartida" unique_id=885382293 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="TabPrueba" type="GridContainer" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes" unique_id=1345449277]
+visible = false
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 8
+metadata/_tab_index = 1
+metadata/_tab_name = "Equipo Debug"
+
+[node name="Slot1" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes/TabPrueba" unique_id=1950978030 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot2" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes/TabPrueba" unique_id=1324871336 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot3" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes/TabPrueba" unique_id=1088933769 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot4" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes/TabPrueba" unique_id=2031567213 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot5" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes/TabPrueba" unique_id=799545784 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot6" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes/TabPrueba" unique_id=1220268841 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Acciones" type="HBoxContainer" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo" unique_id=793445701]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Cargar" type="Button" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Acciones" unique_id=657287735]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 10
+text = "Restaurar partida"
+
+[node name="GuardarPrueba" type="Button" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Acciones" unique_id=605128006]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Guarda el equipo B (y la configuracion) en el Resource de memoria de prueba"
+theme_override_font_sizes/font_size = 10
+text = "Guardar prueba"
+
+[node name="Creador" type="Button" parent="MainLayout/Contenido/PanelJugador/Margen/Equipo/Acciones" unique_id=1662218157]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Abre el Editor de Instancia de Pokemon; su boton Seleccionar envia el snapshot completo al primer slot libre del equipo activo"
+theme_override_font_sizes/font_size = 10
+text = "Editor de instancias"
+
+[node name="PanelConfiguracion" type="PanelContainer" parent="MainLayout/Contenido" unique_id=219456776]
+custom_minimum_size = Vector2(280, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleConfig")
+
+[node name="Margen" type="MarginContainer" parent="MainLayout/Contenido/PanelConfiguracion" unique_id=191780763]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Configuracion" type="VBoxContainer" parent="MainLayout/Contenido/PanelConfiguracion/Margen" unique_id=768753962]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Titulo" type="Label" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion" unique_id=378971213]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.82, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "CONFIGURACION DE BATALLA"
+
+[node name="Ayuda" type="Label" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion" unique_id=1215365619]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.65, 0.78, 1)
+theme_override_font_sizes/font_size = 9
+text = "Define primero el encuentro, despues el formato y las reglas."
+autowrap_mode = 3
+
+[node name="EncuentroTitulo" type="Label" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion" unique_id=332351982]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.82, 0.95, 1)
+text = "ENCUENTRO"
+
+[node name="Encuentro" type="HBoxContainer" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion" unique_id=516378963]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Salvaje" type="Button" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/Encuentro" unique_id=1875193164]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("GrupoEncuentro")
+text = "SALVAJE"
+
+[node name="Entrenador" type="Button" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/Encuentro" unique_id=953621631]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("GrupoEncuentro")
+text = "ENTRENADOR"
+
+[node name="FormatoTitulo" type="Label" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion" unique_id=1145732329]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.82, 0.95, 1)
+text = "FORMATO"
+
+[node name="Formato" type="HBoxContainer" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion" unique_id=949347655]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Simple" type="Button" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/Formato" unique_id=439411050]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+button_pressed = true
+button_group = SubResource("GrupoFormato")
+text = "SIMPLE  /  1v1"
+
+[node name="Doble" type="Button" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/Formato" unique_id=1626737258]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+size_flags_horizontal = 3
+toggle_mode = true
+button_group = SubResource("GrupoFormato")
+text = "DOBLE  /  2v2"
+
+[node name="Estilo" type="HBoxContainer" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion" unique_id=624732499]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Etiqueta" type="Label" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/Estilo" unique_id=2050511736]
+layout_mode = 2
+text = "RULESET"
+
+[node name="Valor" type="OptionButton" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/Estilo" unique_id=1403561592]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 2
+popup/item_0/text = "NORMAL"
+popup/item_0/id = 0
+popup/item_1/text = "ZONA SALVAJE"
+popup/item_1/id = 1
+
+[node name="Clima" type="HBoxContainer" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion" unique_id=941700384]
+layout_mode = 2
+
+[node name="Etiqueta" type="Label" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/Clima" unique_id=155831638]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "CLIMA"
+vertical_alignment = 1
+
+[node name="Valor" type="OptionButton" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/Clima" unique_id=763809903]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Clima impuesto al iniciar la batalla (pendiente de implementar en el sistema de batalla)"
+selected = 0
+item_count = 5
+popup/item_0/text = "NINGUNO"
+popup/item_0/id = 0
+popup/item_1/text = "SOLEADO"
+popup/item_1/id = 1
+popup/item_2/text = "LLUVIA"
+popup/item_2/id = 2
+popup/item_3/text = "TORMENTA DE ARENA"
+popup/item_3/id = 3
+popup/item_4/text = "GRANIZO"
+popup/item_4/id = 4
+
+[node name="OpcionesTitulo" type="Label" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion" unique_id=1959111566]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.55, 0.65, 0.78, 1)
+theme_override_font_sizes/font_size = 11
+text = "OPCIONES DE LA PARTIDA (solo para la prueba)"
+
+[node name="OpcionesGrid" type="GridContainer" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion" unique_id=2041296044]
+layout_mode = 2
+theme_override_constants/h_separation = 8
+theme_override_constants/v_separation = 4
+columns = 2
+
+[node name="EtiquetaTexto" type="Label" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/OpcionesGrid" unique_id=27945375]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "TEXTO"
+
+[node name="OpVelTexto" type="OptionButton" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/OpcionesGrid" unique_id=2047555683]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 1
+item_count = 3
+popup/item_0/text = "LENTA"
+popup/item_0/id = 1
+popup/item_1/text = "MEDIA"
+popup/item_1/id = 2
+popup/item_2/text = "RAPIDA"
+popup/item_2/id = 3
+
+[node name="EtiquetaBorde" type="Label" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/OpcionesGrid" unique_id=1572529621]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "BORDE MENUS"
+
+[node name="OpBorde" type="SpinBox" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/OpcionesGrid" unique_id=1118087262]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 20.0
+value = 1.0
+rounded = true
+
+[node name="EtiquetaCombate" type="Label" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/OpcionesGrid" unique_id=98765646]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "COMBATE"
+
+[node name="OpTipoCombate" type="OptionButton" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/OpcionesGrid" unique_id=1123364113]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 2
+popup/item_0/text = "CAMBIAR"
+popup/item_0/id = 0
+popup/item_1/text = "MANTENER"
+popup/item_1/id = 1
+
+[node name="EtiquetaAnims" type="Label" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/OpcionesGrid" unique_id=2086134178]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "ANIMACIONES"
+
+[node name="OpAnimaciones" type="CheckButton" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/OpcionesGrid" unique_id=1293975946]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+button_pressed = true
+
+[node name="EtiquetaAudio" type="Label" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/OpcionesGrid" unique_id=1141652837]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "AUDIO"
+
+[node name="OpAudio" type="OptionButton" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/OpcionesGrid" unique_id=634941325]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 1
+item_count = 3
+popup/item_0/text = "NO"
+popup/item_0/id = 0
+popup/item_1/text = "BAJO"
+popup/item_1/id = 1
+popup/item_2/text = "NORMAL"
+popup/item_2/id = 2
+
+[node name="EtiquetaControles" type="Label" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/OpcionesGrid" unique_id=339685037]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "CONTROLES"
+
+[node name="OpControles" type="OptionButton" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/OpcionesGrid" unique_id=840717274]
+custom_minimum_size = Vector2(0, 24)
+layout_mode = 2
+size_flags_horizontal = 3
+selected = 0
+item_count = 3
+popup/item_0/text = "NORMAL"
+popup/item_0/id = 0
+popup/item_1/text = "LR"
+popup/item_1/id = 1
+popup/item_2/text = "L=A"
+popup/item_2/id = 2
+
+[node name="Resumen" type="PanelContainer" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion" unique_id=2128814760]
+custom_minimum_size = Vector2(0, 82)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleInterior")
+
+[node name="Texto" type="Label" parent="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/Resumen" unique_id=1696969119]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.82, 0.94, 1)
+text = "SALVAJE / SIMPLE / NORMAL | Rival: WURMPLE Nv.5 (RUTA_101) | Escenario: hierba_alta / Terreno: AUTO
+Jugador: equipo editable (pendiente)
+Rival: slot salvaje"
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="PanelPresentacion" type="PanelContainer" parent="MainLayout/Contenido" unique_id=1454581382]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleConfig")
+
+[node name="Margen" type="MarginContainer" parent="MainLayout/Contenido/PanelPresentacion" unique_id=720302128]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Caja" type="VBoxContainer" parent="MainLayout/Contenido/PanelPresentacion/Margen" unique_id=484095270]
+layout_mode = 2
+theme_override_constants/separation = 5
+
+[node name="Titulo" type="Label" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja" unique_id=15378075]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.82, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "PRESENTACION"
+
+[node name="EtiquetaEscenario" type="Label" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja" unique_id=2092445965]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.82, 0.95, 1)
+text = "ESCENARIO (FONDO / SUELO / ENTRADA)"
+
+[node name="Escenario" type="OptionButton" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja" unique_id=1388875912]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+
+[node name="EtiquetaTerreno" type="Label" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja" unique_id=1028905115]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.82, 0.95, 1)
+text = "TERRENO (ANIMACION DE ENTRADA)"
+
+[node name="Terreno" type="OptionButton" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja" unique_id=750145071]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+
+[node name="EtiquetaMusica" type="Label" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja" unique_id=696894657]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.82, 0.95, 1)
+text = "MUSICA"
+
+[node name="Musica" type="OptionButton" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja" unique_id=1708815897]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+selected = 0
+item_count = 97
+popup/item_0/text = "(AUTOMATICA SEGUN RIVAL)"
+popup/item_0/id = 0
+popup/item_1/text = "BATALLA_ENTRENADOR_1"
+popup/item_1/id = 1
+popup/item_2/text = "BATALLA_SALVAJE_1"
+popup/item_2/id = 2
+popup/item_3/text = "BICICLETA"
+popup/item_3/id = 3
+popup/item_4/text = "CENTRO_POKEMON"
+popup/item_4/id = 4
+popup/item_5/text = "CIUDAD_ARBORADA"
+popup/item_5/id = 5
+popup/item_6/text = "CIUDAD_PETALIA"
+popup/item_6/id = 6
+popup/item_7/text = "ENTRENADORES_1"
+popup/item_7/id = 7
+popup/item_8/text = "PUEBLO_ESCASO"
+popup/item_8/id = 8
+popup/item_9/text = "PUEBLO_OROMAR"
+popup/item_9/id = 9
+popup/item_10/text = "RUTA_101"
+popup/item_10/id = 10
+popup/item_11/text = "RUTA_102"
+popup/item_11/id = 11
+popup/item_12/text = "RUTA_103"
+popup/item_12/id = 12
+popup/item_13/text = "RUTA_104A109"
+popup/item_13/id = 13
+popup/item_14/text = "RUTA_120_132"
+popup/item_14/id = 14
+popup/item_15/text = "TIENDA_POKEMON"
+popup/item_15/id = 15
+popup/item_16/text = "VILLA_RAIZ"
+popup/item_16/id = 16
+popup/item_17/text = "BATALLA_ENTRENADOR_1"
+popup/item_17/id = 17
+popup/item_18/text = "BATALLA_SALVAJE_1"
+popup/item_18/id = 18
+popup/item_19/text = "BICICLETA"
+popup/item_19/id = 19
+popup/item_20/text = "CENTRO_POKEMON"
+popup/item_20/id = 20
+popup/item_21/text = "CIUDAD_ARBORADA"
+popup/item_21/id = 21
+popup/item_22/text = "CIUDAD_PETALIA"
+popup/item_22/id = 22
+popup/item_23/text = "ENTRENADORES_1"
+popup/item_23/id = 23
+popup/item_24/text = "PUEBLO_ESCASO"
+popup/item_24/id = 24
+popup/item_25/text = "PUEBLO_OROMAR"
+popup/item_25/id = 25
+popup/item_26/text = "RUTA_101"
+popup/item_26/id = 26
+popup/item_27/text = "RUTA_102"
+popup/item_27/id = 27
+popup/item_28/text = "RUTA_103"
+popup/item_28/id = 28
+popup/item_29/text = "RUTA_104A109"
+popup/item_29/id = 29
+popup/item_30/text = "RUTA_120_132"
+popup/item_30/id = 30
+popup/item_31/text = "TIENDA_POKEMON"
+popup/item_31/id = 31
+popup/item_32/text = "VILLA_RAIZ"
+popup/item_32/id = 32
+popup/item_33/text = "BATALLA_ENTRENADOR_1"
+popup/item_33/id = 33
+popup/item_34/text = "BATALLA_SALVAJE_1"
+popup/item_34/id = 34
+popup/item_35/text = "BICICLETA"
+popup/item_35/id = 35
+popup/item_36/text = "CENTRO_POKEMON"
+popup/item_36/id = 36
+popup/item_37/text = "CIUDAD_ARBORADA"
+popup/item_37/id = 37
+popup/item_38/text = "CIUDAD_PETALIA"
+popup/item_38/id = 38
+popup/item_39/text = "ENTRENADORES_1"
+popup/item_39/id = 39
+popup/item_40/text = "PUEBLO_ESCASO"
+popup/item_40/id = 40
+popup/item_41/text = "PUEBLO_OROMAR"
+popup/item_41/id = 41
+popup/item_42/text = "RUTA_101"
+popup/item_42/id = 42
+popup/item_43/text = "RUTA_102"
+popup/item_43/id = 43
+popup/item_44/text = "RUTA_103"
+popup/item_44/id = 44
+popup/item_45/text = "RUTA_104A109"
+popup/item_45/id = 45
+popup/item_46/text = "RUTA_120_132"
+popup/item_46/id = 46
+popup/item_47/text = "TIENDA_POKEMON"
+popup/item_47/id = 47
+popup/item_48/text = "VILLA_RAIZ"
+popup/item_48/id = 48
+popup/item_49/text = "BATALLA_ENTRENADOR_1"
+popup/item_49/id = 49
+popup/item_50/text = "BATALLA_SALVAJE_1"
+popup/item_50/id = 50
+popup/item_51/text = "BICICLETA"
+popup/item_51/id = 51
+popup/item_52/text = "CENTRO_POKEMON"
+popup/item_52/id = 52
+popup/item_53/text = "CIUDAD_ARBORADA"
+popup/item_53/id = 53
+popup/item_54/text = "CIUDAD_PETALIA"
+popup/item_54/id = 54
+popup/item_55/text = "ENTRENADORES_1"
+popup/item_55/id = 55
+popup/item_56/text = "PUEBLO_ESCASO"
+popup/item_56/id = 56
+popup/item_57/text = "PUEBLO_OROMAR"
+popup/item_57/id = 57
+popup/item_58/text = "RUTA_101"
+popup/item_58/id = 58
+popup/item_59/text = "RUTA_102"
+popup/item_59/id = 59
+popup/item_60/text = "RUTA_103"
+popup/item_60/id = 60
+popup/item_61/text = "RUTA_104A109"
+popup/item_61/id = 61
+popup/item_62/text = "RUTA_120_132"
+popup/item_62/id = 62
+popup/item_63/text = "TIENDA_POKEMON"
+popup/item_63/id = 63
+popup/item_64/text = "VILLA_RAIZ"
+popup/item_64/id = 64
+popup/item_65/text = "BATALLA_ENTRENADOR_1"
+popup/item_65/id = 65
+popup/item_66/text = "BATALLA_SALVAJE_1"
+popup/item_66/id = 66
+popup/item_67/text = "BICICLETA"
+popup/item_67/id = 67
+popup/item_68/text = "CENTRO_POKEMON"
+popup/item_68/id = 68
+popup/item_69/text = "CIUDAD_ARBORADA"
+popup/item_69/id = 69
+popup/item_70/text = "CIUDAD_PETALIA"
+popup/item_70/id = 70
+popup/item_71/text = "ENTRENADORES_1"
+popup/item_71/id = 71
+popup/item_72/text = "PUEBLO_ESCASO"
+popup/item_72/id = 72
+popup/item_73/text = "PUEBLO_OROMAR"
+popup/item_73/id = 73
+popup/item_74/text = "RUTA_101"
+popup/item_74/id = 74
+popup/item_75/text = "RUTA_102"
+popup/item_75/id = 75
+popup/item_76/text = "RUTA_103"
+popup/item_76/id = 76
+popup/item_77/text = "RUTA_104A109"
+popup/item_77/id = 77
+popup/item_78/text = "RUTA_120_132"
+popup/item_78/id = 78
+popup/item_79/text = "TIENDA_POKEMON"
+popup/item_79/id = 79
+popup/item_80/text = "VILLA_RAIZ"
+popup/item_80/id = 80
+popup/item_81/text = "BATALLA_ENTRENADOR_1"
+popup/item_81/id = 81
+popup/item_82/text = "BATALLA_SALVAJE_1"
+popup/item_82/id = 82
+popup/item_83/text = "BICICLETA"
+popup/item_83/id = 83
+popup/item_84/text = "CENTRO_POKEMON"
+popup/item_84/id = 84
+popup/item_85/text = "CIUDAD_ARBORADA"
+popup/item_85/id = 85
+popup/item_86/text = "CIUDAD_PETALIA"
+popup/item_86/id = 86
+popup/item_87/text = "ENTRENADORES_1"
+popup/item_87/id = 87
+popup/item_88/text = "PUEBLO_ESCASO"
+popup/item_88/id = 88
+popup/item_89/text = "PUEBLO_OROMAR"
+popup/item_89/id = 89
+popup/item_90/text = "RUTA_101"
+popup/item_90/id = 90
+popup/item_91/text = "RUTA_102"
+popup/item_91/id = 91
+popup/item_92/text = "RUTA_103"
+popup/item_92/id = 92
+popup/item_93/text = "RUTA_104A109"
+popup/item_93/id = 93
+popup/item_94/text = "RUTA_120_132"
+popup/item_94/id = 94
+popup/item_95/text = "TIENDA_POKEMON"
+popup/item_95/id = 95
+popup/item_96/text = "VILLA_RAIZ"
+popup/item_96/id = 96
+
+[node name="Nota" type="Label" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja" unique_id=895439125]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.72, 0.55, 0.58, 1)
+theme_override_font_sizes/font_size = 10
+text = "Musica: claves de temas_musicales.json. Auto: salvaje=BATALLA_SALVAJE_1, entrenador=su musica_id."
+autowrap_mode = 3
+
+[node name="PanelPreview" type="PanelContainer" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja" unique_id=2026383940]
+custom_minimum_size = Vector2(240, 0)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleConfig")
+
+[node name="Margen" type="MarginContainer" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja/PanelPreview" unique_id=1337770170]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="Caja" type="VBoxContainer" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja/PanelPreview/Margen" unique_id=250836656]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Titulo" type="Label" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja/PanelPreview/Margen/Caja" unique_id=1596392117]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.65, 0.82, 1, 1)
+theme_override_font_sizes/font_size = 13
+text = "PREVIEW DE BATALLA"
+
+[node name="Marco" type="PanelContainer" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja/PanelPreview/Margen/Caja" unique_id=166054520]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleInterior")
+
+[node name="Escena" type="Control" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja/PanelPreview/Margen/Caja/Marco" unique_id=243948073]
+custom_minimum_size = Vector2(240, 160)
+layout_mode = 2
+
+[node name="Fondo" type="TextureRect" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja/PanelPreview/Margen/Caja/Marco/Escena" unique_id=1297538382]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_vg1qb")
+
+[node name="SueloArriba" type="TextureRect" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja/PanelPreview/Margen/Caja/Marco/Escena" unique_id=1308016456]
+layout_mode = 0
+offset_left = 112.0
+offset_top = 48.0
+offset_right = 240.0
+offset_bottom = 112.0
+texture = ExtResource("4_abs6c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SueloAbajo" type="TextureRect" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja/PanelPreview/Margen/Caja/Marco/Escena" unique_id=1603851635]
+layout_mode = 0
+offset_top = 101.0
+offset_right = 240.0
+offset_bottom = 165.0
+texture = ExtResource("4_abs6c")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TrainerRival" type="TextureRect" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja/PanelPreview/Margen/Caja/Marco/Escena" unique_id=1436537659]
+visible = false
+layout_mode = 0
+offset_left = 150.0
+offset_top = 4.0
+offset_right = 214.0
+offset_bottom = 68.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PokeRival" type="TextureRect" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja/PanelPreview/Margen/Caja/Marco/Escena" unique_id=1082760514]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 48.0
+offset_right = 214.0
+offset_bottom = 112.0
+texture = ExtResource("5_rwwnc")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TrainerJugador" type="TextureRect" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja/PanelPreview/Margen/Caja/Marco/Escena" unique_id=73626836]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 44.0
+offset_right = 68.0
+offset_bottom = 108.0
+texture = SubResource("AtlasTexture_trsnl")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="PokeJugador" type="TextureRect" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja/PanelPreview/Margen/Caja/Marco/Escena" unique_id=1696370584]
+visible = false
+layout_mode = 0
+offset_left = 48.0
+offset_top = 52.0
+offset_right = 112.0
+offset_bottom = 116.0
+expand_mode = 1
+stretch_mode = 5
+
+[node name="BordeMenu" type="NinePatchRect" parent="MainLayout/Contenido/PanelPresentacion/Margen/Caja/PanelPreview/Margen/Caja" unique_id=2099296155]
+custom_minimum_size = Vector2(240, 44)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("7_abs6c")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="PanelRival" type="PanelContainer" parent="MainLayout/Contenido" unique_id=1645093032]
+custom_minimum_size = Vector2(290, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/panel = SubResource("StyleRival")
+
+[node name="Margen" type="MarginContainer" parent="MainLayout/Contenido/PanelRival" unique_id=1508575368]
+layout_mode = 2
+theme_override_constants/margin_left = 10
+theme_override_constants/margin_top = 10
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 10
+
+[node name="Desplazamiento" type="ScrollContainer" parent="MainLayout/Contenido/PanelRival/Margen" unique_id=1894793218]
+layout_mode = 2
+horizontal_scroll_mode = 0
+
+[node name="Contenido" type="VBoxContainer" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento" unique_id=1059189712]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 6
+
+[node name="Titulo" type="Label" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido" unique_id=1731729439]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.62, 0.62, 1)
+theme_override_font_sizes/font_size = 13
+text = "RIVAL  /  SLOT ACTIVO"
+
+[node name="Descripcion" type="Label" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido" unique_id=227122439]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 0.6, 0.62, 1)
+theme_override_font_sizes/font_size = 9
+text = "El panel cambia segun el tipo de encuentro."
+autowrap_mode = 3
+
+[node name="PanelSalvaje" type="PanelContainer" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido" unique_id=1594051494]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleInterior")
+
+[node name="Editor" type="VBoxContainer" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelSalvaje" unique_id=996369422]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Titulo" type="Label" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelSalvaje/Editor" unique_id=1599872368]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.62, 0.62, 1)
+theme_override_font_sizes/font_size = 13
+text = "SLOT SALVAJE 01"
+
+[node name="SlotSalvaje" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelSalvaje/Editor" unique_id=303491749 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Ubicacion" type="HBoxContainer" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelSalvaje/Editor" unique_id=2002636511]
+layout_mode = 2
+
+[node name="Etiqueta" type="Label" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelSalvaje/Editor/Ubicacion" unique_id=1991918242]
+custom_minimum_size = Vector2(74, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "UBICACION"
+vertical_alignment = 1
+
+[node name="Valor" type="LineEdit" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelSalvaje/Editor/Ubicacion" unique_id=280495733]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "RUTA_101"
+
+[node name="PanelEntrenador" type="PanelContainer" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido" unique_id=2062729383]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleInterior")
+
+[node name="Editor" type="VBoxContainer" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador" unique_id=2035047856]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="Titulo" type="Label" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor" unique_id=1379764628]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.96, 0.62, 0.62, 1)
+theme_override_font_sizes/font_size = 13
+text = "ENTRENADOR RIVAL"
+
+[node name="EntrenadorSeleccionado" type="Label" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor" unique_id=1431745739]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Selecciona un entrenador de la lista."
+autowrap_mode = 3
+
+[node name="EtiquetaLista" type="Label" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor" unique_id=372676622]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.62, 0.62, 1)
+theme_override_font_sizes/font_size = 10
+text = "LISTA (lista_entrenadores.json)"
+
+[node name="AccionesEntrenador" type="HBoxContainer" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor" unique_id=19918550]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="AbrirEditor" type="Button" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/AccionesEntrenador" unique_id=1322891008]
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Abre el Editor de Entrenadores para crear o modificar registros del JSON"
+theme_override_font_sizes/font_size = 10
+text = "Editor de entrenadores"
+
+[node name="Releer" type="Button" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/AccionesEntrenador" unique_id=1446373044]
+custom_minimum_size = Vector2(0, 26)
+layout_mode = 2
+tooltip_text = "Vuelve a leer lista_entrenadores.json (tras guardar en el editor)"
+theme_override_font_sizes/font_size = 10
+text = "Releer"
+
+[node name="Lista" type="ItemList" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor" unique_id=1852342204]
+custom_minimum_size = Vector2(0, 170)
+layout_mode = 2
+size_flags_vertical = 3
+allow_reselect = true
+item_count = 7
+item_0/text = "RICKY  |  CAZABICHOS  |  6 POKEMON"
+item_1/text = "BRENDAN  |  ENTRENADOR  |  1 POKEMON"
+item_2/text = "NUEVO  |  DAMISELA  |  3 POKEMON"
+item_3/text = "NUEVO_COPY  |  ENTRENADOR  |  6 POKEMON"
+item_4/text = "SOLDADO  |  EQUIPO AQUA  |  1 POKEMON"
+item_5/text = "NUEVO_COPY_COPY  |  ENTRENADOR  |  3 POKEMON"
+item_6/text = "RICKY_COPY  |  LÍDER  |  2 POKEMON"
+
+[node name="EtiquetaDatos" type="Label" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor" unique_id=1570867501]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.62, 0.62, 1)
+theme_override_font_sizes/font_size = 10
+text = "DATOS EDITABLES (copia en memoria)"
+
+[node name="Nombre" type="HBoxContainer" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor" unique_id=973133919]
+layout_mode = 2
+
+[node name="Etiqueta" type="Label" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/Nombre" unique_id=1568085501]
+custom_minimum_size = Vector2(74, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "NOMBRE"
+vertical_alignment = 1
+
+[node name="Valor" type="LineEdit" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/Nombre" unique_id=257889005]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Clase" type="HBoxContainer" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor" unique_id=1100795864]
+layout_mode = 2
+
+[node name="Etiqueta" type="Label" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/Clase" unique_id=2077327046]
+custom_minimum_size = Vector2(74, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "CLASE"
+vertical_alignment = 1
+
+[node name="Valor" type="LineEdit" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/Clase" unique_id=1870966313]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Sprite" type="HBoxContainer" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor" unique_id=1620383920]
+layout_mode = 2
+
+[node name="Etiqueta" type="Label" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/Sprite" unique_id=837672044]
+custom_minimum_size = Vector2(74, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "SPRITE"
+vertical_alignment = 1
+
+[node name="Valor" type="SpinBox" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/Sprite" unique_id=1471241546]
+layout_mode = 2
+size_flags_horizontal = 3
+min_value = 1.0
+max_value = 300.0
+value = 1.0
+rounded = true
+
+[node name="Musica" type="HBoxContainer" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor" unique_id=680071278]
+layout_mode = 2
+
+[node name="Etiqueta" type="Label" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/Musica" unique_id=1543282104]
+custom_minimum_size = Vector2(74, 0)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "MUSICA"
+vertical_alignment = 1
+
+[node name="Valor" type="LineEdit" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/Musica" unique_id=729789432]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RestaurarLista" type="Button" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor" unique_id=683316]
+custom_minimum_size = Vector2(0, 28)
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Restaurar desde la lista"
+
+[node name="EtiquetaEquipo" type="Label" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor" unique_id=795555263]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.62, 0.62, 1)
+theme_override_font_sizes/font_size = 10
+text = "EQUIPO DEL ENTRENADOR"
+
+[node name="EquipoEntrenador" type="GridContainer" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor" unique_id=1647694746]
+layout_mode = 2
+
+[node name="Slot1" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/EquipoEntrenador" unique_id=2069486551 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot2" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/EquipoEntrenador" unique_id=1986744891 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot3" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/EquipoEntrenador" unique_id=353435601 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot4" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/EquipoEntrenador" unique_id=1157924493 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot5" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/EquipoEntrenador" unique_id=502226341 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Slot6" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/EquipoEntrenador" unique_id=1907706923 instance=ExtResource("2_slot")]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Nota" type="Label" parent="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor" unique_id=633400923]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.6, 0.52, 0.54, 1)
+theme_override_font_sizes/font_size = 10
+text = "La definicion resumida se expande a instancia completa en el boot, reutilizando el mismo camino de los pokes del equipo del jugador."
+autowrap_mode = 3
+
+[node name="FilaInferior" type="HBoxContainer" parent="MainLayout" unique_id=999237116]
+layout_mode = 2
+
+[node name="ColumnaDerecha" type="VBoxContainer" parent="MainLayout/FilaInferior" unique_id=1528225817]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 8
+
+[node name="Pie" type="HBoxContainer" parent="MainLayout/FilaInferior/ColumnaDerecha" unique_id=844728952]
+layout_mode = 2
+theme_override_constants/separation = 8
+
+[node name="Preparar" type="Button" parent="MainLayout/FilaInferior/ColumnaDerecha/Pie" unique_id=554068011]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Guarda ConfiguracionDebugBatalla y lanza lanzador_debug_batalla.tscn"
+text = "Iniciar batalla  (guarda el Resource y lanza el juego)"
+
+[node name="SelectorPokemon" parent="." unique_id=1979671734 instance=ExtResource("3_sel")]
+visible = false
+
+[connection signal="pressed" from="MainLayout/Header/Contenido/Cerrar" to="." method="_on_cerrar_presionado"]
+[connection signal="tab_changed" from="MainLayout/Contenido/PanelJugador/Margen/Equipo/Origenes" to="." method="_on_origenes_tab_cambiado"]
+[connection signal="pressed" from="MainLayout/Contenido/PanelJugador/Margen/Equipo/Acciones/Cargar" to="." method="_on_restaurar_partida_presionado"]
+[connection signal="pressed" from="MainLayout/Contenido/PanelJugador/Margen/Equipo/Acciones/GuardarPrueba" to="." method="_on_guardar_prueba_presionado"]
+[connection signal="pressed" from="MainLayout/Contenido/PanelJugador/Margen/Equipo/Acciones/Creador" to="." method="_on_abrir_creador_presionado"]
+[connection signal="pressed" from="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/Encuentro/Salvaje" to="." method="_actualizar_modo_encuentro"]
+[connection signal="pressed" from="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/Encuentro/Entrenador" to="." method="_actualizar_modo_encuentro"]
+[connection signal="pressed" from="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/Formato/Simple" to="." method="_actualizar_resumen"]
+[connection signal="pressed" from="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/Formato/Doble" to="." method="_actualizar_resumen"]
+[connection signal="item_selected" from="MainLayout/Contenido/PanelConfiguracion/Margen/Configuracion/Estilo/Valor" to="." method="_actualizar_resumen"]
+[connection signal="item_selected" from="MainLayout/Contenido/PanelPresentacion/Margen/Caja/Escenario" to="." method="_actualizar_resumen"]
+[connection signal="item_selected" from="MainLayout/Contenido/PanelPresentacion/Margen/Caja/Terreno" to="." method="_actualizar_resumen"]
+[connection signal="item_selected" from="MainLayout/Contenido/PanelPresentacion/Margen/Caja/Musica" to="." method="_actualizar_resumen"]
+[connection signal="item_selected" from="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/Lista" to="." method="_al_seleccionar_entrenador"]
+[connection signal="text_changed" from="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/Nombre/Valor" to="." method="_on_entrenador_campo_cambiado"]
+[connection signal="text_changed" from="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/Clase/Valor" to="." method="_on_entrenador_campo_cambiado"]
+[connection signal="value_changed" from="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/Sprite/Valor" to="." method="_on_entrenador_campo_cambiado"]
+[connection signal="text_changed" from="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/Musica/Valor" to="." method="_on_entrenador_campo_cambiado"]
+[connection signal="pressed" from="MainLayout/Contenido/PanelRival/Margen/Desplazamiento/Contenido/PanelEntrenador/Editor/RestaurarLista" to="." method="_on_entrenador_restaurar_presionado"]
+[connection signal="pressed" from="MainLayout/FilaInferior/ColumnaDerecha/Pie/Preparar" to="." method="_preparar_batalla"]
+[connection signal="pokemon_elegido" from="SelectorPokemon" to="." method="_on_pokemon_elegido"]

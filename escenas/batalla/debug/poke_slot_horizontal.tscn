@@ -1,0 +1,118 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/debug/poke_slot_horizontal.gd" id="1_horizontal"]
+
+[sub_resource type="StyleBoxFlat" id="StyleSlotHorizontal"]
+bg_color = Color(0.065, 0.17, 0.11, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.22, 0.55, 0.35, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+content_margin_left = 5.0
+content_margin_top = 3.0
+content_margin_right = 5.0
+content_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxFlat" id="StyleSprite"]
+bg_color = Color(0.035, 0.09, 0.07, 1)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[node name="PokeSlotHorizontal" type="PanelContainer"]
+custom_minimum_size = Vector2(280, 70)
+focus_mode = 2
+offset_right = 280.0
+offset_bottom = 70.0
+theme_override_styles/panel = SubResource("StyleSlotHorizontal")
+script = ExtResource("1_horizontal")
+
+[node name="Contenido" type="HBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 7
+
+[node name="MarcoSprite" type="PanelContainer" parent="Contenido"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleSprite")
+
+[node name="SpritePokemon" type="TextureRect" parent="Contenido/MarcoSprite"]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+mouse_filter = 2
+
+[node name="Informacion" type="VBoxContainer" parent="Contenido"]
+custom_minimum_size = Vector2(126, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="Nombre" type="Label" parent="Contenido/Informacion"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.75, 1, 0.82, 1)
+theme_override_font_sizes/font_size = 12
+text = "VACÍO"
+text_overrun_behavior = 3
+
+[node name="Nivel" type="Label" parent="Contenido/Informacion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Nv. —"
+
+[node name="PS" type="Label" parent="Contenido/Informacion"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "PS —/—"
+
+[node name="Estado" type="Label" parent="Contenido/Informacion"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.62, 0.8, 0.68, 1)
+theme_override_font_sizes/font_size = 9
+text = "ESTADO —"
+text_overrun_behavior = 3
+
+[node name="Acciones" type="GridContainer" parent="Contenido"]
+custom_minimum_size = Vector2(60, 64)
+layout_mode = 2
+theme_override_constants/h_separation = 2
+theme_override_constants/v_separation = 2
+columns = 2
+
+[node name="Arriba" type="Button" parent="Contenido/Acciones"]
+custom_minimum_size = Vector2(29, 31)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+tooltip_text = "Mover Pokémon hacia arriba"
+text = "▲"
+
+[node name="Abajo" type="Button" parent="Contenido/Acciones"]
+custom_minimum_size = Vector2(29, 31)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+tooltip_text = "Mover Pokémon hacia abajo"
+text = "▼"
+
+[node name="Agregar" type="Button" parent="Contenido/Acciones"]
+custom_minimum_size = Vector2(29, 31)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+text = "+"
+
+[node name="Quitar" type="Button" parent="Contenido/Acciones"]
+custom_minimum_size = Vector2(29, 31)
+layout_mode = 2
+theme_override_font_sizes/font_size = 13
+tooltip_text = "Quitar Pokémon"
+text = "−"
+
+[node name="ConfirmacionQuitar" type="ConfirmationDialog" parent="."]
+title = "Confirmar eliminación"
+dialog_text = "¿Quitar este Pokémon del slot?"

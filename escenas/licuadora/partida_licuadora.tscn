@@ -1,0 +1,500 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/licuadora/controlador_licuadora.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://escenas/licuadora/licuadora.tscn" id="2_licuadora"]
+[ext_resource type="Texture2D" uid="uid://v6kexaw8rq10" path="res://UI/menu_box_1.png" id="3_caja"]
+[ext_resource type="LabelSettings" uid="uid://dloc0dcjbkv2v" path="res://UI/texto_normal_negro.tres" id="4_texto"]
+[ext_resource type="Texture2D" uid="uid://dkpvejnts7uep" path="res://graficos/licuadora/marubatsu.png" id="5_marcas"]
+
+[node name="PartidaLicuadora" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="Licuadora" parent="." instance=ExtResource("2_licuadora")]
+unique_name_in_owner = true
+
+[node name="VentanaRanking" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+visible = false
+editor_description = "Blender_PrintBlendingRanking: Menu_DrawStdWindowFrame(4, 2, 25, 17); iconos de sScoreIcon en (140,52), (164,52), (188,52); filas en el tile 8 + i * gUnknown_082165F3[N]."
+layout_mode = 0
+offset_left = 32.0
+offset_top = 16.0
+offset_right = 208.0
+offset_bottom = 144.0
+mouse_filter = 2
+texture = ExtResource("3_caja")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Titulo" type="Label" parent="VentanaRanking"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 168.0
+offset_bottom = 24.0
+text = "LICUADORA_CLASIFICACION"
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 1
+
+[node name="IconoPerfecto" type="Sprite2D" parent="VentanaRanking"]
+position = Vector2(108, 36)
+texture = ExtResource("5_marcas")
+vframes = 4
+frame = 2
+
+[node name="IconoBueno" type="Sprite2D" parent="VentanaRanking"]
+position = Vector2(132, 36)
+texture = ExtResource("5_marcas")
+vframes = 4
+
+[node name="IconoFallo" type="Sprite2D" parent="VentanaRanking"]
+position = Vector2(156, 36)
+texture = ExtResource("5_marcas")
+flip_h = true
+vframes = 4
+frame = 1
+
+[node name="Filas" type="Control" parent="VentanaRanking"]
+layout_mode = 0
+mouse_filter = 2
+
+[node name="Fila0" type="Control" parent="VentanaRanking/Filas"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 48.0
+offset_right = 168.0
+offset_bottom = 64.0
+mouse_filter = 2
+
+[node name="Puesto" type="Label" parent="VentanaRanking/Filas/Fila0"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_right = 20.0
+offset_bottom = 16.0
+text = "1."
+label_settings = ExtResource("4_texto")
+
+[node name="Nombre" type="Label" parent="VentanaRanking/Filas/Fila0"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 20.0
+offset_right = 84.0
+offset_bottom = 16.0
+label_settings = ExtResource("4_texto")
+
+[node name="Perfectos" type="Label" parent="VentanaRanking/Filas/Fila0"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 84.0
+offset_right = 108.0
+offset_bottom = 16.0
+text = "0"
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 2
+
+[node name="Buenos" type="Label" parent="VentanaRanking/Filas/Fila0"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 108.0
+offset_right = 132.0
+offset_bottom = 16.0
+text = "0"
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 2
+
+[node name="Fallos" type="Label" parent="VentanaRanking/Filas/Fila0"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 132.0
+offset_right = 156.0
+offset_bottom = 16.0
+text = "0"
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 2
+
+[node name="Fila1" type="Control" parent="VentanaRanking/Filas"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 168.0
+offset_bottom = 88.0
+mouse_filter = 2
+
+[node name="Puesto" type="Label" parent="VentanaRanking/Filas/Fila1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_right = 20.0
+offset_bottom = 16.0
+text = "2."
+label_settings = ExtResource("4_texto")
+
+[node name="Nombre" type="Label" parent="VentanaRanking/Filas/Fila1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 20.0
+offset_right = 84.0
+offset_bottom = 16.0
+label_settings = ExtResource("4_texto")
+
+[node name="Perfectos" type="Label" parent="VentanaRanking/Filas/Fila1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 84.0
+offset_right = 108.0
+offset_bottom = 16.0
+text = "0"
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 2
+
+[node name="Buenos" type="Label" parent="VentanaRanking/Filas/Fila1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 108.0
+offset_right = 132.0
+offset_bottom = 16.0
+text = "0"
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 2
+
+[node name="Fallos" type="Label" parent="VentanaRanking/Filas/Fila1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 132.0
+offset_right = 156.0
+offset_bottom = 16.0
+text = "0"
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 2
+
+[node name="Fila2" type="Control" parent="VentanaRanking/Filas"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 96.0
+offset_right = 168.0
+offset_bottom = 112.0
+mouse_filter = 2
+
+[node name="Puesto" type="Label" parent="VentanaRanking/Filas/Fila2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_right = 20.0
+offset_bottom = 16.0
+text = "3."
+label_settings = ExtResource("4_texto")
+
+[node name="Nombre" type="Label" parent="VentanaRanking/Filas/Fila2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 20.0
+offset_right = 84.0
+offset_bottom = 16.0
+label_settings = ExtResource("4_texto")
+
+[node name="Perfectos" type="Label" parent="VentanaRanking/Filas/Fila2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 84.0
+offset_right = 108.0
+offset_bottom = 16.0
+text = "0"
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 2
+
+[node name="Buenos" type="Label" parent="VentanaRanking/Filas/Fila2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 108.0
+offset_right = 132.0
+offset_bottom = 16.0
+text = "0"
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 2
+
+[node name="Fallos" type="Label" parent="VentanaRanking/Filas/Fila2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 132.0
+offset_right = 156.0
+offset_bottom = 16.0
+text = "0"
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 2
+
+[node name="Fila3" type="Control" parent="VentanaRanking/Filas"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 96.0
+offset_right = 168.0
+offset_bottom = 112.0
+mouse_filter = 2
+
+[node name="Puesto" type="Label" parent="VentanaRanking/Filas/Fila3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 4.0
+offset_right = 20.0
+offset_bottom = 16.0
+text = "4."
+label_settings = ExtResource("4_texto")
+
+[node name="Nombre" type="Label" parent="VentanaRanking/Filas/Fila3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 20.0
+offset_right = 84.0
+offset_bottom = 16.0
+label_settings = ExtResource("4_texto")
+
+[node name="Perfectos" type="Label" parent="VentanaRanking/Filas/Fila3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 84.0
+offset_right = 108.0
+offset_bottom = 16.0
+text = "0"
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 2
+
+[node name="Buenos" type="Label" parent="VentanaRanking/Filas/Fila3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 108.0
+offset_right = 132.0
+offset_bottom = 16.0
+text = "0"
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 2
+
+[node name="Fallos" type="Label" parent="VentanaRanking/Filas/Fila3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 132.0
+offset_right = 156.0
+offset_bottom = 16.0
+text = "0"
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 2
+
+[node name="VentanaResultados" type="NinePatchRect" parent="."]
+unique_name_in_owner = true
+visible = false
+editor_description = "Blender_PrintBlendingResults: Menu_DrawStdWindowFrame(4, 2, 25, 17); filas en el tile gUnknown_082165E9[N] + i * gUnknown_082165EE[N]; la baya en x = 88, VELOC. MÁXIMA en el tile 13 y TIEMPO TOTAL en el 15."
+layout_mode = 0
+offset_left = 32.0
+offset_top = 16.0
+offset_right = 208.0
+offset_bottom = 144.0
+mouse_filter = 2
+texture = ExtResource("3_caja")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Titulo" type="Label" parent="VentanaResultados"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 168.0
+offset_bottom = 24.0
+text = "LICUADORA_RESULTADOS"
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 1
+
+[node name="Filas" type="Control" parent="VentanaResultados"]
+layout_mode = 0
+mouse_filter = 2
+
+[node name="Fila0" type="Control" parent="VentanaResultados/Filas"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 32.0
+offset_right = 168.0
+offset_bottom = 48.0
+mouse_filter = 2
+
+[node name="Puesto" type="Label" parent="VentanaResultados/Filas/Fila0"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+text = "1."
+label_settings = ExtResource("4_texto")
+
+[node name="Nombre" type="Label" parent="VentanaResultados/Filas/Fila0"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 16.0
+offset_right = 88.0
+offset_bottom = 16.0
+label_settings = ExtResource("4_texto")
+
+[node name="Baya" type="Label" parent="VentanaResultados/Filas/Fila0"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 160.0
+offset_bottom = 16.0
+label_settings = ExtResource("4_texto")
+
+[node name="Fila1" type="Control" parent="VentanaResultados/Filas"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 168.0
+offset_bottom = 72.0
+mouse_filter = 2
+
+[node name="Puesto" type="Label" parent="VentanaResultados/Filas/Fila1"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+text = "2."
+label_settings = ExtResource("4_texto")
+
+[node name="Nombre" type="Label" parent="VentanaResultados/Filas/Fila1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 16.0
+offset_right = 88.0
+offset_bottom = 16.0
+label_settings = ExtResource("4_texto")
+
+[node name="Baya" type="Label" parent="VentanaResultados/Filas/Fila1"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 160.0
+offset_bottom = 16.0
+label_settings = ExtResource("4_texto")
+
+[node name="Fila2" type="Control" parent="VentanaResultados/Filas"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 64.0
+offset_right = 168.0
+offset_bottom = 80.0
+mouse_filter = 2
+
+[node name="Puesto" type="Label" parent="VentanaResultados/Filas/Fila2"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+text = "3."
+label_settings = ExtResource("4_texto")
+
+[node name="Nombre" type="Label" parent="VentanaResultados/Filas/Fila2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 16.0
+offset_right = 88.0
+offset_bottom = 16.0
+label_settings = ExtResource("4_texto")
+
+[node name="Baya" type="Label" parent="VentanaResultados/Filas/Fila2"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 160.0
+offset_bottom = 16.0
+label_settings = ExtResource("4_texto")
+
+[node name="Fila3" type="Control" parent="VentanaResultados/Filas"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 168.0
+offset_bottom = 88.0
+mouse_filter = 2
+
+[node name="Puesto" type="Label" parent="VentanaResultados/Filas/Fila3"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 16.0
+offset_bottom = 16.0
+text = "4."
+label_settings = ExtResource("4_texto")
+
+[node name="Nombre" type="Label" parent="VentanaResultados/Filas/Fila3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 16.0
+offset_right = 88.0
+offset_bottom = 16.0
+label_settings = ExtResource("4_texto")
+
+[node name="Baya" type="Label" parent="VentanaResultados/Filas/Fila3"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 88.0
+offset_right = 160.0
+offset_bottom = 16.0
+label_settings = ExtResource("4_texto")
+
+[node name="VelocidadMaxima" type="Control" parent="VentanaResultados"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 88.0
+offset_right = 168.0
+offset_bottom = 104.0
+mouse_filter = 2
+
+[node name="Etiqueta" type="Label" parent="VentanaResultados/VelocidadMaxima"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 16.0
+text = "LICUADORA_VELOCIDAD_MAXIMA"
+label_settings = ExtResource("4_texto")
+
+[node name="Valor" type="Label" parent="VentanaResultados/VelocidadMaxima"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 96.0
+offset_right = 160.0
+offset_bottom = 16.0
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 2
+
+[node name="Tiempo" type="Control" parent="VentanaResultados"]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 104.0
+offset_right = 168.0
+offset_bottom = 120.0
+mouse_filter = 2
+
+[node name="Etiqueta" type="Label" parent="VentanaResultados/Tiempo"]
+texture_filter = 1
+layout_mode = 0
+offset_right = 96.0
+offset_bottom = 16.0
+text = "LICUADORA_TIEMPO_TOTAL"
+label_settings = ExtResource("4_texto")
+
+[node name="Valor" type="Label" parent="VentanaResultados/Tiempo"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 80.0
+offset_right = 160.0
+offset_bottom = 16.0
+label_settings = ExtResource("4_texto")
+horizontal_alignment = 2

@@ -1,0 +1,315 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/hall_fama/pantalla_hall_fama.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://ua524w6p0ath" path="res://UI/ficha-entrenador/fe-fondo.png" id="2_fe"]
+[ext_resource type="Texture2D" uid="uid://yamfu2cpd8na" path="res://UI/ficha-entrenador/ma-fondo.png" id="3_ma"]
+[ext_resource type="Texture2D" path="res://graficos/trainers64/001.png" id="4_chico"]
+[ext_resource type="Texture2D" uid="uid://dujistm2nndj8" path="res://graficos/trainers64/002.png" id="5_chica"]
+[ext_resource type="Texture2D" path="res://UI/hall_fama/confeti.png" id="6_confeti"]
+[ext_resource type="Texture2D" uid="uid://v6kexaw8rq10" path="res://UI/menu_box_1.png" id="7_caja"]
+[ext_resource type="LabelSettings" uid="uid://dloc0dcjbkv2v" path="res://UI/texto_normal_negro.tres" id="8_negro"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="9_fuente"]
+[ext_resource type="Texture2D" path="res://graficos/Icons/iconEgg.png" id="11_huevo"]
+[ext_resource type="AudioStream" path="res://Audio/SE/Applause.ogg" id="10_aplausos"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_blanco"]
+font = ExtResource("9_fuente")
+font_size = 15
+font_color = Color(1, 1, 1, 1)
+shadow_size = 0
+shadow_color = Color(0.25, 0.25, 0.25, 1)
+shadow_offset = Vector2(1, 1)
+
+[node name="PantallaHallFama" type="Node2D"]
+script = ExtResource("1_script")
+textura_chico = ExtResource("4_chico")
+textura_chica = ExtResource("5_chica")
+textura_huevo = ExtResource("11_huevo")
+
+[node name="FondoChica" type="Sprite2D" parent="."]
+texture_repeat = 2
+scale = Vector2(240, 1)
+texture = ExtResource("2_fe")
+centered = false
+
+[node name="FondoChico" type="Sprite2D" parent="."]
+visible = false
+texture_repeat = 2
+scale = Vector2(240, 1)
+texture = ExtResource("3_ma")
+centered = false
+
+[node name="Pokes" type="Node2D" parent="."]
+
+[node name="Slot0" type="Sprite2D" parent="Pokes"]
+visible = false
+position = Vector2(120, 40)
+
+[node name="Slot1" type="Sprite2D" parent="Pokes"]
+visible = false
+position = Vector2(56, 40)
+
+[node name="Slot2" type="Sprite2D" parent="Pokes"]
+visible = false
+position = Vector2(184, 40)
+
+[node name="Slot3" type="Sprite2D" parent="Pokes"]
+visible = false
+position = Vector2(120, 88)
+
+[node name="Slot4" type="Sprite2D" parent="Pokes"]
+visible = false
+position = Vector2(200, 88)
+
+[node name="Slot5" type="Sprite2D" parent="Pokes"]
+visible = false
+position = Vector2(40, 88)
+
+[node name="Jugador" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(120, 72)
+texture = ExtResource("5_chica")
+
+[node name="Banda" type="ColorRect" parent="."]
+offset_top = 112.0
+offset_right = 240.0
+offset_bottom = 160.0
+color = Color(0.2, 0.17, 0.18, 0.78)
+
+[node name="Bienvenida" type="Label" parent="Banda"]
+visible = false
+texture_filter = 1
+layout_mode = 0
+offset_top = 8.0
+offset_right = 240.0
+offset_bottom = 23.0
+text = "¡Hola! ¡Éste es el HALL de la FAMA!"
+label_settings = SubResource("LabelSettings_blanco")
+horizontal_alignment = 1
+language = "es_AR"
+
+[node name="DatosPoke" type="Control" parent="Banda"]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 48.0
+
+[node name="Numero" type="Label" parent="Banda/DatosPoke"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 66.0
+offset_bottom = 23.0
+text = "N.º 175"
+label_settings = SubResource("LabelSettings_blanco")
+language = "es_AR"
+
+[node name="Nombre" type="Label" parent="Banda/DatosPoke"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 68.0
+offset_top = 8.0
+offset_right = 136.0
+offset_bottom = 23.0
+text = "WALREIN"
+label_settings = SubResource("LabelSettings_blanco")
+language = "es_AR"
+
+[node name="Especie" type="Label" parent="Banda/DatosPoke"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 136.0
+offset_top = 8.0
+offset_right = 232.0
+offset_bottom = 23.0
+text = "/WALREIN ♀"
+label_settings = SubResource("LabelSettings_blanco")
+language = "es_AR"
+
+[node name="Nivel" type="Label" parent="Banda/DatosPoke"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 56.0
+offset_top = 24.0
+offset_right = 100.0
+offset_bottom = 39.0
+text = "Nv. 64"
+label_settings = SubResource("LabelSettings_blanco")
+language = "es_AR"
+
+[node name="Id" type="Label" parent="Banda/DatosPoke"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 104.0
+offset_top = 24.0
+offset_right = 200.0
+offset_bottom = 39.0
+text = "N.º ID./40931"
+label_settings = SubResource("LabelSettings_blanco")
+language = "es_AR"
+
+[node name="CuadroJugador" type="NinePatchRect" parent="."]
+visible = false
+offset_left = 8.0
+offset_top = 16.0
+offset_right = 128.0
+offset_bottom = 80.0
+texture = ExtResource("7_caja")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="EtiquetaNombre" type="Label" parent="CuadroJugador"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 64.0
+offset_bottom = 23.0
+text = "NOMBRE /"
+label_settings = ExtResource("8_negro")
+language = "es_AR"
+
+[node name="ValorNombre" type="Label" parent="CuadroJugador"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 56.0
+offset_top = 8.0
+offset_right = 112.0
+offset_bottom = 23.0
+text = "AURA"
+label_settings = ExtResource("8_negro")
+horizontal_alignment = 2
+language = "es_AR"
+
+[node name="EtiquetaId" type="Label" parent="CuadroJugador"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 64.0
+offset_bottom = 39.0
+text = "N.º ID. /"
+label_settings = ExtResource("8_negro")
+language = "es_AR"
+
+[node name="ValorId" type="Label" parent="CuadroJugador"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 56.0
+offset_top = 24.0
+offset_right = 112.0
+offset_bottom = 39.0
+text = "40931"
+label_settings = ExtResource("8_negro")
+horizontal_alignment = 2
+language = "es_AR"
+
+[node name="EtiquetaTiempo" type="Label" parent="CuadroJugador"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 64.0
+offset_bottom = 55.0
+text = "TIEMPO"
+label_settings = ExtResource("8_negro")
+language = "es_AR"
+
+[node name="ValorTiempo" type="Label" parent="CuadroJugador"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 56.0
+offset_top = 40.0
+offset_right = 112.0
+offset_bottom = 55.0
+text = "12 : 34"
+label_settings = ExtResource("8_negro")
+horizontal_alignment = 2
+language = "es_AR"
+
+[node name="CuadroFelicidades" type="NinePatchRect" parent="."]
+visible = false
+offset_left = 16.0
+offset_top = 112.0
+offset_right = 224.0
+offset_bottom = 160.0
+texture = ExtResource("7_caja")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Texto" type="Label" parent="CuadroFelicidades"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 200.0
+offset_bottom = 40.0
+text = "¡CAMPEÓN DE LA LIGA!
+¡FELICIDADES!"
+label_settings = ExtResource("8_negro")
+language = "es_AR"
+
+[node name="CuadroGuardando" type="NinePatchRect" parent="."]
+visible = false
+offset_left = 16.0
+offset_top = 112.0
+offset_right = 224.0
+offset_bottom = 160.0
+texture = ExtResource("7_caja")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Texto" type="Label" parent="CuadroGuardando"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 200.0
+offset_bottom = 40.0
+text = "GUARDANDO...
+NO APAGUES LA CONSOLA."
+label_settings = ExtResource("8_negro")
+language = "es_AR"
+
+[node name="BandaSuperior" type="ColorRect" parent="."]
+visible = false
+offset_right = 240.0
+offset_bottom = 16.0
+color = Color(0.2, 0.17, 0.18, 0.78)
+
+[node name="Numero" type="Label" parent="BandaSuperior"]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_right = 232.0
+offset_bottom = 15.0
+text = "N.º del HALL de la FAMA 1"
+label_settings = SubResource("LabelSettings_blanco")
+language = "es_AR"
+
+[node name="Confeti" type="Node2D" parent="."]
+
+[node name="Plantilla" type="Sprite2D" parent="Confeti"]
+visible = false
+texture = ExtResource("6_confeti")
+region_enabled = true
+region_rect = Rect2(0, 0, 8, 8)
+
+[node name="Grito" type="AudioStreamPlayer" parent="."]
+
+[node name="Aplausos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_aplausos")

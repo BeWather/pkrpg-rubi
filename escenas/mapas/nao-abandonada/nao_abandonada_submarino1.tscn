@@ -1,0 +1,218 @@
+[gd_scene format=4 uid="uid://b7grpppfa6vid"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mapa"]
+[ext_resource type="TileSet" uid="uid://uymupfcjqlyj" path="res://graficos/tilesets/tileset_nao_abandonada.tres" id="2_tiles"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_tp"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_warp"]
+[ext_resource type="Resource" path="res://recursos/clima/burbujas.tres" id="8_clima"]
+
+[node name="NaoAbandonadaSubmarino1" type="Node2D" unique_id=1892415414]
+editor_description = "pokeruby AbandonedShip_Underwater1 (LAYOUT_ABANDONED_SHIP_UNDERWATER1, 8x8). Generada por herramientas/importar_nao_abandonada.py."
+script = ExtResource("1_mapa")
+nombre_interno = "nao_abandonada_submarino1"
+seccion = "NAO_ABANDONADA"
+poi_mapa_region = "nao_abandonada"
+esInterior = true
+mapa_exterior_asociado = "RUTA_108"
+mapa_submarino = true
+mapa_emersion = "nao_abandonada_pasillos_ocultos"
+celda_emersion_fija = Vector2i(0, 10)
+clima_inicial = ExtResource("8_clima")
+musica_mapa = "BAJO_AGUA"
+tipo_mapa_batalla = 4
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=24708437]
+tile_map_data = PackedByteArray("AAAAAAAAAAAFABkAAAAAAAEAAAAFABoAAAAAAAIAAAAHABkAAAAAAAMAAAAHABkAAAAAAAQAAAAAAB8AAAAAAAUAAAAAAB8AAAAAAAYAAAACAB8AAAAAAAcAAAAHAB4AAAABAAAAAAAGABkAAAABAAEAAAAHABoAAAABAAIAAAAHABkAAAABAAMAAAAAAB8AAAABAAQAAAABABkAAAABAAUAAAABABkAAAABAAYAAAABABkAAAABAAcAAAAHAB0AAAACAAAAAAAEABkAAAACAAEAAAAEABoAAAACAAIAAAAHABkAAAACAAMAAAACABoAAAACAAQAAAABABkAAAACAAUAAAABABkAAAACAAYAAAABABkAAAACAAcAAAABABkAAAADAAAAAAAGABkAAAADAAEAAAAGABoAAAADAAIAAAAHABkAAAADAAMAAAADABoAAAADAAQAAAABABkAAAADAAUAAAABABkAAAADAAYAAAABABkAAAADAAcAAAACABkAAAAEAAAAAAAEABkAAAAEAAEAAAAEABoAAAAEAAIAAAAHABkAAAAEAAMAAAABABkAAAAEAAQAAAABABkAAAAEAAUAAAACABoAAAAEAAYAAAABABkAAAAEAAcAAAADABkAAAAFAAAAAAAGABkAAAAFAAEAAAAGABoAAAAFAAIAAAAHABkAAAAFAAMAAAABABkAAAAFAAQAAAABABkAAAAFAAUAAAADABoAAAAFAAYAAAABABkAAAAFAAcAAAABABkAAAAGAAAAAAAFABkAAAAGAAEAAAAFABoAAAAGAAIAAAAAABoAAAAGAAMAAAAHABkAAAAGAAQAAAABABkAAAAGAAUAAAABABkAAAAGAAYAAAABABkAAAAGAAcAAAABAB8AAAAHAAAAAAAGABkAAAAHAAEAAAAGABoAAAAHAAIAAAABABoAAAAHAAMAAAAHABkAAAAHAAQAAAAHABkAAAAHAAUAAAAHABkAAAAHAAYAAAAAABoAAAAHAAcAAAAHABkAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Superior" type="TileMapLayer" parent="." unique_id=1403568562]
+z_index = 2
+tile_map_data = PackedByteArray("AAD//wAAAAAJAAAAAAD//wEAAAAJAAAAAAD//wIAAAAJAAAAAAD//wMAAAAJAAAAAAD//wQAAAAJAAAAAAD//wUAAAAJAAAAAAD//wYAAAAJAAAAAAD//wcAAAAJAAAAAAD//wgAAAAJAAAAAAAAAAgAAAAJAAAAAAABAAgAAAAJAAAAAAACAAgAAAAJAAAAAAADAAgAAAAJAAAAAAAEAAgAAAAJAAAAAAAFAAgAAAAJAAAAAAAGAAgAAAAJAAAAAAAHAAgAAAAJAAAAAAAIAAgAAAAJAAAAAAAIAAcAAAAJAAAAAAAIAAYAAAAJAAAAAAAIAAUAAAAJAAAAAAAIAAQAAAAJAAAAAAAIAAMAAAAJAAAAAAAIAAIAAAAJAAAAAAAIAAEAAAAJAAAAAAAIAAAAAAAJAAAAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1018890291]
+script = ExtResource("3_tp")
+tile_data = {
+"-1,2": {
+"flags": 1
+},
+"-1,3": {
+"flags": 1
+},
+"-1,4": {
+"flags": 1
+},
+"-1,5": {
+"flags": 1
+},
+"-1,6": {
+"flags": 1
+},
+"-1,7": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"0,2": {
+"flags": 70368744177664
+},
+"0,3": {
+"flags": 70368744177664
+},
+"0,4": {
+"flags": 70368744177664
+},
+"0,5": {
+"flags": 70368744177664
+},
+"0,6": {
+"flags": 70368744177664
+},
+"0,7": {
+"flags": 70368744177664
+},
+"0,8": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,2": {
+"flags": 70368744177664
+},
+"1,3": {
+"flags": 70368744177664
+},
+"1,7": {
+"flags": 70368744177664
+},
+"1,8": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,2": {
+"flags": 70368744177664
+},
+"2,8": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,2": {
+"flags": 70368744177664
+},
+"3,8": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,2": {
+"flags": 70368744177664
+},
+"4,8": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,2": {
+"flags": 70368744177664
+},
+"5,8": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,2": {
+"flags": 70368744177664
+},
+"6,3": {
+"flags": 70368744177664
+},
+"6,7": {
+"flags": 70368744177664
+},
+"6,8": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,2": {
+"flags": 70368744177664
+},
+"7,3": {
+"flags": 70368744177664
+},
+"7,4": {
+"flags": 70368744177664
+},
+"7,5": {
+"flags": 70368744177664
+},
+"7,6": {
+"flags": 70368744177664
+},
+"7,7": {
+"flags": 70368744177664
+},
+"7,8": {
+"flags": 1
+},
+"8,2": {
+"flags": 1
+},
+"8,3": {
+"flags": 1
+},
+"8,4": {
+"flags": 1
+},
+"8,5": {
+"flags": 1
+},
+"8,6": {
+"flags": 1
+},
+"8,7": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1907982664]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1789360268]
+editor_description = "pokeruby AbandonedShip_Underwater1 warp 0 (3,7) MB 0x6D -> MAP_ABANDONED_SHIP_UNDERWATER2 (3,1)"
+position = Vector2(56, 118)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_submarino2"
+posicion_destino = Vector2(3, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1810807342]
+editor_description = "pokeruby AbandonedShip_Underwater1 warp 1 (4,7) MB 0x6D -> MAP_ABANDONED_SHIP_UNDERWATER2 (3,1)"
+position = Vector2(72, 118)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_submarino2"
+posicion_destino = Vector2(3, 1)
+direccion = Vector2(0, 1)
+dar_paso = true

@@ -1,0 +1,116 @@
+[gd_scene format=4 uid="uid://bs7gs1q6ikn0f"]
+
+[ext_resource type="TileSet" uid="uid://2ivupwfkq3he" path="res://escenas/interior-pueblo-escaso.tres" id="1_kii26"]
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_x7wqt"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="2_q0luc"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_xvao0"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="pe_npc_base"]
+[ext_resource type="SpriteFrames" uid="uid://br8ndfy138tgu" path="res://escenas/avatares/npc_049.tres" id="pe_npc_049"]
+
+
+[node name="Node2D" type="Node2D" unique_id=337747448]
+script = ExtResource("1_x7wqt")
+esInterior = true
+solo_caminar = true
+mapa_exterior_asociado = "pueblo_escaso"
+seccion = "PUEBLO_ESCASO"
+metadata/esInterior = true
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1660786405]
+collision_enabled = false
+occlusion_enabled = false
+navigation_enabled = false
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAIAAAAAAAIAAAAAAAMAAAAAAAMAAAAAAAQAAAAAAAQAAAAAAAUAAAAAAAUAAAAAAAYAAAAAAAYAAAAAAAcAAAAAAAcAAAAAAAgAAAAAAAgAAAABAAAAAAABAAAAAAABAAEAAAABAAEAAAABAAIAAAABAAIAAAABAAMAAAABAAMAAAABAAQAAAABAAQAAAABAAUAAAABAAUAAAABAAYAAAABAAYAAAABAAcAAAABAAcAAAABAAgAAAABAAgAAAACAAAAAAACAAAAAAACAAEAAAACAAEAAAACAAIAAAACAAIAAAACAAMAAAACAAMAAAACAAQAAAACAAQAAAACAAUAAAACAAUAAAACAAYAAAACAAYAAAACAAcAAAACAAcAAAACAAgAAAACAAgAAAADAAAAAAADAAAAAAADAAEAAAADAAEAAAADAAIAAAADAAIAAAADAAMAAAADAAMAAAADAAQAAAADAAQAAAADAAUAAAADAAUAAAADAAYAAAADAAYAAAADAAcAAAADAAcAAAADAAgAAAADAAgAAAAEAAAAAAAEAAAAAAAEAAEAAAAEAAEAAAAEAAIAAAAEAAIAAAAEAAMAAAAEAAMAAAAEAAQAAAAEAAQAAAAEAAUAAAAEAAUAAAAEAAYAAAAEAAYAAAAEAAcAAAAEAAcAAAAEAAgAAAAEAAgAAAAFAAAAAAAFAAAAAAAFAAEAAAAFAAEAAAAFAAIAAAAFAAIAAAAFAAMAAAAFAAMAAAAFAAQAAAAFAAQAAAAFAAUAAAAFAAUAAAAFAAYAAAAFAAYAAAAFAAcAAAAFAAcAAAAFAAgAAAAFAAgAAAAGAAAAAAAGAAAAAAAGAAEAAAAGAAEAAAAGAAIAAAAGAAIAAAAGAAMAAAAGAAMAAAAGAAQAAAAGAAQAAAAGAAUAAAAGAAUAAAAGAAYAAAAGAAYAAAAGAAcAAAAGAAcAAAAGAAgAAAAGAAgAAAAHAAAAAAAHAAAAAAAHAAEAAAAHAAEAAAAHAAIAAAAHAAIAAAAHAAMAAAAHAAMAAAAHAAQAAAAHAAQAAAAHAAUAAAAHAAUAAAAHAAYAAAAHAAYAAAAHAAcAAAAHAAcAAAAHAAgAAAAHAAgAAAAIAAAAAAAIAAAAAAAIAAEAAAAIAAEAAAAIAAIAAAAIAAIAAAAIAAMAAAAIAAMAAAAIAAQAAAAIAAQAAAAIAAUAAAAIAAUAAAAIAAYAAAAIAAYAAAAIAAcAAAAIAAcAAAAIAAgAAAAIAAgAAAAJAAAAAAAJAAAAAAAJAAEAAAAJAAEAAAAJAAIAAAAJAAIAAAAJAAMAAAAJAAMAAAAJAAQAAAAJAAQAAAAJAAUAAAAJAAUAAAAJAAYAAAAJAAYAAAAJAAcAAAAJAAcAAAAJAAgAAAAJAAgAAAA=")
+tile_set = ExtResource("1_kii26")
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=353086452]
+z_index = 2
+collision_enabled = false
+occlusion_enabled = false
+navigation_enabled = false
+tile_map_data = PackedByteArray("AAAJAAcAAAAJABIAAAA=")
+tile_set = ExtResource("1_kii26")
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=615828127]
+position = Vector2(56, 134)
+script = ExtResource("2_q0luc")
+tipo_warp = 1
+estilo_warp = 4
+ruta_mapa_destino = "pueblo_escaso"
+posicion_destino = Vector2(5, 7)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=1450428448]
+position = Vector2(72, 134)
+script = ExtResource("2_q0luc")
+tipo_warp = 1
+estilo_warp = 4
+ruta_mapa_destino = "pueblo_escaso"
+posicion_destino = Vector2(5, 7)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=534991545]
+script = ExtResource("4_xvao0")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,4": {
+"flags": 1
+},
+"2,5": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,4": {
+"flags": 1
+},
+"3,5": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,2": {
+"flags": 1
+},
+"9,2": {
+"flags": 1
+},
+"9,8": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Mujer" parent="NPCs" unique_id=1302000101 instance=ExtResource("pe_npc_base")]
+editor_description = "pokeruby OldaleTown_House1 objeto 1 (6,4) WOMAN_3 WANDER_AROUND (1,1), OldaleTown_House1_EventScript_Woman."
+position = Vector2(104, 78)
+id_texto = "PUEBLO_ESCASO_CASA1_MUJER"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("pe_npc_049")
+coord = Vector2i(6, 4)

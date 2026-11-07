@@ -1,0 +1,160 @@
+[gd_scene format=4 uid="uid://dmjv8jswea3lf"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_xr6xx"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_hj7sp"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_tweei"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_dmloy"]
+[ext_resource type="SpriteFrames" uid="uid://ct3gr3wlu1nb" path="res://escenas/avatares/npc_054.tres" id="ar_f_054"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="ar_npc_base"]
+[ext_resource type="SpriteFrames" uid="uid://dr1hww5bqlubq" path="res://escenas/avatares/npc_012.tres" id="ar_f_012"]
+[ext_resource type="SpriteFrames" uid="uid://c6rr70f3rkwdf" path="res://escenas/avatares/npc_023.tres" id="ar_f_023"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="ar_s_evento"]
+[ext_resource type="Script" uid="uid://da7h2f5uh6v2a" path="res://scripts/npc/tienda_decoracion_npc.gd" id="ar_s_tienda"]
+
+[node name="Casa" type="Node2D" unique_id=1201946613]
+script = ExtResource("1_xr6xx")
+nombre_interno = "ciudad_arborada_casa6"
+seccion = "CIUDAD_ARBORADA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_ARBORADA"
+solo_caminar = true
+musica_mapa = "CIUDAD_ARBORADA"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=997252449]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADkAAAABAAAAAAABADkAAAACAAAAAAABADkAAAADAAAAAAAGADcAAAAEAAAAAAAHADcAAAAGAAAAAAABADkAAAAHAAAAAAACADkAAAAFAAAAAAABADkAAAADAAEAAAAGADcAAAAEAAEAAAAHADcAAAADAAIAAAAGADcAAAAEAAIAAAAHADcAAAADAAMAAAAGADgAAAAEAAMAAAAHADgAAAAHAAEAAAACADoAAAAHAAIAAAAHAD0AAAAAAAEAAAAAADoAAAAAAAIAAAAFAD0AAAAGAAEAAAABADoAAAAGAAIAAAAGAD0AAAAFAAEAAAABADoAAAAFAAIAAAAGADkAAAACAAIAAAAHADkAAAACAAMAAAAHADoAAAACAAEAAAABADoAAAABAAEAAAABADoAAAABAAIAAAAGAD0AAAACAAUAAAABADsAAAACAAQAAAABADsAAAADAAQAAAABADsAAAAEAAQAAAABADsAAAAFAAQAAAABADsAAAAFAAUAAAABADsAAAAFAAMAAAAGADoAAAAHAAMAAAAHAD4AAAAGAAMAAAAGAD4AAAAGAAQAAAABADsAAAAHAAQAAAABADsAAAAGAAUAAAABADsAAAABAAUAAAABADsAAAABAAQAAAABADsAAAAAAAQAAAABADsAAAAAAAMAAAAFAD4AAAABAAMAAAAGAD4AAAAAAAUAAAABADsAAAAHAAUAAAABADsAAAADAAUAAAAEADoAAAAEAAUAAAAFADoAAAA=")
+tile_set = ExtResource("2_hj7sp")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=863292143]
+tile_map_data = PackedByteArray("AAAAAAUAAAAIADcAAAAHAAUAAAAJADcAAAA=")
+tile_set = ExtResource("2_hj7sp")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=575270243]
+z_index = 1
+y_sort_enabled = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=248948740]
+script = ExtResource("3_tweei")
+tile_data = {
+"0,2": {
+"flags": 1
+},
+"0,3": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,3": {
+"flags": 1073741825
+},
+"2,1": {
+"flags": 1
+},
+"2,3": {
+"flags": 1073741825
+},
+"3,2": {
+"flags": 1
+},
+"3,3": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"4,3": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,3": {
+"flags": 1073741825
+},
+"6,1": {
+"flags": 1
+},
+"6,3": {
+"flags": 1073741825
+},
+"7,2": {
+"flags": 1
+},
+"7,3": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1543604165]
+position = Vector2(56, 86)
+script = ExtResource("4_dmloy")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_arborada"
+posicion_destino = Vector2(37, 13)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1119012595]
+position = Vector2(72, 86)
+script = ExtResource("4_dmloy")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_arborada"
+posicion_destino = Vector2(37, 13)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Hombre" parent="NPCs" unique_id=737881482 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_DecorationShop objeto 1 (6,5) MAN_3 LOOK_AROUND (1,1)"
+position = Vector2(104, 94)
+id_texto = "ARBORADA_DECORACION_HOMBRE"
+tipo_movimiento = 1
+selec_frames = ExtResource("ar_f_054")
+coord = Vector2i(6, 5)
+
+[node name="Chica" parent="NPCs" unique_id=1035428965 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_DecorationShop objeto 2 (0,4) GIRL_3 FACE_LEFT"
+position = Vector2(8, 78)
+id_texto = "ARBORADA_DECORACION_CHICA"
+tipo_movimiento = 9
+selec_frames = ExtResource("ar_f_012")
+coord = Vector2i(0, 4)
+
+[node name="DependienteMesas" parent="NPCs" unique_id=1994915214 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_DecorationShop objeto 3 (1,2) MART_EMPLOYEE FACE_DOWN: pokemartdecoration MESAS (ClerkDesks). Lo dirige Eventos/TiendaMesas (TiendaDecoracionNpc, tienda ARBORADA_MESAS de tiendas_decoracion.json); id_texto es el de reserva"
+position = Vector2(24, 46)
+script = ExtResource("ar_s_evento")
+id_texto = "ARBORADA_DECORACION_DEPENDIENTA"
+tipo_movimiento = 8
+selec_frames = ExtResource("ar_f_023")
+coord = Vector2i(1, 2)
+
+[node name="DependienteSillas" parent="NPCs" unique_id=1639674831 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_DecorationShop objeto 4 (6,2) MART_EMPLOYEE FACE_DOWN: pokemartdecoration SILLAS (ClerkChairs). Lo dirige Eventos/TiendaSillas (TiendaDecoracionNpc, tienda ARBORADA_SILLAS de tiendas_decoracion.json); id_texto es el de reserva"
+position = Vector2(104, 46)
+script = ExtResource("ar_s_evento")
+id_texto = "ARBORADA_DECORACION_DEPENDIENTA"
+tipo_movimiento = 8
+selec_frames = ExtResource("ar_f_023")
+coord = Vector2i(6, 2)
+
+[node name="Eventos" type="Node2D" parent="."]
+
+[node name="TiendaMesas" type="Node2D" parent="Eventos"]
+editor_description = "pokeruby FortreeCity_DecorationShop/scripts.inc: EventScript_ClerkDesks (pokemartdecoration, lista Desks)"
+script = ExtResource("ar_s_tienda")
+npc = NodePath("../../NPCs/DependienteMesas")
+id_tienda = "ARBORADA_MESAS"
+
+[node name="TiendaSillas" type="Node2D" parent="Eventos"]
+editor_description = "pokeruby FortreeCity_DecorationShop/scripts.inc: EventScript_ClerkChairs (pokemartdecoration, lista Chairs)"
+script = ExtResource("ar_s_tienda")
+npc = NodePath("../../NPCs/DependienteSillas")
+id_tienda = "ARBORADA_SILLAS"

@@ -1,0 +1,119 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/licuadora/elemento_licuadora.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/licuadora/cuenta_numeros.png" id="2_tex"]
+[ext_resource type="Texture2D" path="res://graficos/licuadora/inicio.png" id="3_tex"]
+
+[sub_resource type="Animation" id="Animation_cuenta_atras"]
+resource_name = "cuenta_atras"
+length = 3.7833
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Numero:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1833, 0.55, 0.9167, 0.9333, 1.15, 1.5167, 1.8833, 1.9, 2.1167, 2.4833, 2.8667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-16, 72, 72, 160, -32, 72, 72, 160, -32, 72, 72, 164]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Numero:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9333, 1.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [2, 1, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Numero:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.8667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Inicio:position:y")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.8667, 3.05, 3.0667, 3.4167, 3.7667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [-20, 68, 72, 72, 156]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Inicio:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.8667, 3.7833),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [false, true, false]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.2, 1.1667, 2.1333, 3.0667, 3.7833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"values": [{
+"args": ["SE_BALL_BOUNCE_1"],
+"method": &"emitir_sonido"
+}, {
+"args": ["SE_BALL_BOUNCE_1"],
+"method": &"emitir_sonido"
+}, {
+"args": ["SE_BALL_BOUNCE_1"],
+"method": &"emitir_sonido"
+}, {
+"args": ["SE_PIN"],
+"method": &"emitir_sonido"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1"]
+_data = {&"cuenta_atras": SubResource("Animation_cuenta_atras")}
+
+[node name="CuentaAtras" type="Node2D"]
+script = ExtResource("1_script")
+liberar_al_terminar = false
+
+[node name="Numero" type="Sprite2D" parent="."]
+position = Vector2(120, -16)
+texture = ExtResource("2_tex")
+vframes = 3
+frame = 2
+
+[node name="Inicio" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(120, -20)
+texture = ExtResource("3_tex")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_1")
+}

@@ -1,0 +1,2746 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/efecto_golpe_nativo.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/i5_candidate_hit_tile0.png" id="2_golpe"]
+[ext_resource type="Shader" path="res://escenas/batalla/animaciones_nativas/mezcla_gba.gdshader" id="3_mezcla"]
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/fondo_movimiento.gd" id="4_fondo"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Double Slap.wav" id="10_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Headbutt1.wav" id="11_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Vital Throw2.wav" id="12_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Take Down1.wav" id="13_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Megakick.wav" id="14_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Swift1.wav" id="15_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Swagger1.wav" id="16_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Horn Attack.wav" id="17_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Double Team.wav" id="18_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Comet Punch.wav" id="19_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Jump Kick1.wav" id="20_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Vital Throw1.wav" id="21_se"]
+
+[sub_resource type="ShaderMaterial" id="Mezcla"]
+shader = ExtResource("3_mezcla")
+
+[sub_resource type="Animation" id="Animation_destructor"]
+resource_name = "destructor"
+length = 1.4
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333, 0.0499, 0.2333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"defensor", Vector2(3, 0), 6, 1, true],
+"method": &"sacudir"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.6875, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoDefensor")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_golpe_cabeza"]
+resource_name = "golpe_cabeza"
+length = 1.85
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666, 0.1833, 0.3499, 0.4499, 0.4666, 0.5999, 0.6833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(-12, 0), 6],
+"method": &"deslizar"
+}, {
+"args": [&"atacante", 0.0, 0.294524, 4, false, true, false],
+"method": &"girar"
+}, {
+"args": [&"atacante", 4],
+"method": &"volver"
+}, {
+"args": [&"defensor", Vector2(5, 0), 6, 1, false],
+"method": &"sacudir"
+}, {
+"args": [&"atacante", Vector2(2, 0), 4, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"atacante", 0.294524, 0.0, 3, false, true, true],
+"method": &"girar"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.4499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(0, 0), 0.84375, 13, true, false],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.4499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}],
+"times": PackedFloat32Array(0.4499)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_golpe_cuerpo"]
+resource_name = "golpe_cuerpo"
+length = 2.8
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.5333, 0.6666, 0.7166, 0.8166, 1.3999, 1.5166, 1.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(0, 6), 6, 2],
+"method": &"embestida"
+}, {
+"args": [&"atacante", Vector2(26, 0), 5],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(-10, 0), 1, 9, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(28, 0), 3],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"atacante", 6],
+"method": &"volver"
+}, {
+"args": [&"defensor", 6],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.6666, 0.8499)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_derribo"]
+resource_name = "derribo"
+length = 2.65
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666, 0.6666, 0.7166, 0.8166, 1.2666, 1.3499, 1.4833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", -24, 8, 23, 10, 40, 10],
+"method": &"carrerilla"
+}, {
+"args": [[&"fondo", &"atacante", &"defensor"], Color(0, 0, 0, 1), 0.625, 4, 1, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"defensor", Vector2(16, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"atacante", 5],
+"method": &"volver"
+}, {
+"args": [&"defensor", 7],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(-10, 0), 1, 9, false, true],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.6666)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_doble_filo"]
+resource_name = "doble_filo"
+length = 3.483333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.5166, 1.0333, 1.1499, 1.3166, 1.3333, 1.9833, 2.0999, 2.1833, 2.3166),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [[&"atacante"], Color(1, 1, 1, 1), 0.625, 5, 2, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"atacante", Vector2(18, 6), 2, 16, true],
+"method": &"elipse"
+}, {
+"args": [&"fondo", Color(1, 1, 1, 1), 1, 1, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [&"defensor", Vector2(-10, 0), 1, 9, false, false],
+"method": &"golpe"
+}, {
+"args": [&"fondo", Color(1, 1, 1, 1), 1, 0, 0.125, 4],
+"method": &"tinte"
+}, {
+"args": [&"atacante", -0.0, -0.19635, 8, false, true, false],
+"method": &"girar"
+}, {
+"args": [&"atacante", -0.19635, -0.392699, 8, false, true, true],
+"method": &"girar"
+}, {
+"args": [&"atacante", 5],
+"method": &"volver"
+}, {
+"args": [&"defensor", 7],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.0333, 1.1499, 1.3333, 1.9833),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(20, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(32, 0), 3],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", -0.0, 0.19635, 8, false, false, false],
+"method": &"girar"
+}, {
+"args": [&"defensor", 0.19635, 0.392699, 8, false, false, true],
+"method": &"girar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1499, 1.3333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"atacante", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.3333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoAtacante")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.5166, 0.6499)
+}
+tracks/4/use_blend = true
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SonidoDefensor")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(1.1499)
+}
+tracks/5/use_blend = true
+
+[sub_resource type="Animation" id="Animation_doble_filo_rival"]
+resource_name = "doble_filo_rival"
+length = 3.483333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.5166, 1.0333, 1.1499, 1.3166, 1.3333, 1.9833, 2.0999, 2.1833, 2.3166),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [[&"atacante"], Color(1, 1, 1, 1), 0.625, 5, 2, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"atacante", Vector2(18, 6), 2, 16, true],
+"method": &"elipse"
+}, {
+"args": [&"fondo", Color(1, 1, 1, 1), 1, 1, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [&"defensor", Vector2(-10, 0), 1, 9, false, false],
+"method": &"golpe"
+}, {
+"args": [&"fondo", Color(1, 1, 1, 1), 1, 0, 0.125, 4],
+"method": &"tinte"
+}, {
+"args": [&"atacante", -0.0, -0.19635, 8, false, false, false],
+"method": &"girar"
+}, {
+"args": [&"atacante", -0.19635, -0.392699, 8, false, false, true],
+"method": &"girar"
+}, {
+"args": [&"atacante", 5],
+"method": &"volver"
+}, {
+"args": [&"defensor", 7],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.0333, 1.1499, 1.3333, 1.9833),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(20, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(32, 0), 3],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", -0.0, 0.19635, 8, false, true, false],
+"method": &"girar"
+}, {
+"args": [&"defensor", 0.19635, 0.392699, 8, false, true, true],
+"method": &"girar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1499, 1.3333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"atacante", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.3333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoAtacante")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.5166, 0.6499)
+}
+tracks/4/use_blend = true
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SonidoDefensor")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(1.1499)
+}
+tracks/5/use_blend = true
+
+[sub_resource type="Animation" id="Animation_picotazo"]
+resource_name = "picotazo"
+length = 1.45
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.0666, 0.2833),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"defensor", Vector2(-12, 0), 0.5, 13, true, false],
+"method": &"golpe"
+}, {
+"args": [&"defensor", 0.0, 0.220893, 3, true, true, true],
+"method": &"girar"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoDefensor")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_sumision"]
+resource_name = "sumision"
+length = 2.8
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333, 0.0499, 0.2166, 0.3833, 0.5499, 0.7166, 0.8833, 1.0499, 1.2166, 1.3833, 1.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"defensor", Vector2(18, 6), 6, 16, false],
+"method": &"elipse"
+}, {
+"args": [&"atacante", Vector2(-18, 6), 6, 16, false],
+"method": &"elipse"
+}, {
+"args": [&"defensor", Vector2(-12, 8), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(12, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(0, -12), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(-12, 8), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(12, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(0, -12), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(-12, 8), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(12, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(0, -12), 0.84375, 10, false, true],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.3833, 0.7166, 1.0499, 1.3833)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}],
+"times": PackedFloat32Array(0.2166, 0.5499, 0.8833, 1.2166, 1.5499)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_fuerza"]
+resource_name = "fuerza"
+length = 2.666667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.7166, 0.7333, 0.8333, 0.9333, 1.0333, 1.2333, 1.4999),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", 2, 1, 0.375, 30],
+"method": &"hundir"
+}, {
+"args": [&"defensor", Vector2(18, 6), 2, 16, true],
+"method": &"elipse"
+}, {
+"args": [&"atacante", 4],
+"method": &"volver"
+}, {
+"args": [&"defensor", Vector2(16, 12), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(-16, -12), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(3, 4), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(2, 0), 8, 1, true],
+"method": &"sacudir_alterna"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.8333, 0.9333, 1.0333)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_ataque_rapido"]
+resource_name = "ataque_rapido"
+length = 1.533333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333, 0.0499, 0.1499, 0.3666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(24, 6), 1, 8, true],
+"method": &"elipse"
+}, {
+"args": [3, 5, 8],
+"method": &"estela"
+}, {
+"args": [&"defensor", Vector2(5, 0), 6, 1, false],
+"method": &"sacudir"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(0, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.1499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("20_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}],
+"times": PackedFloat32Array(0.1499)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_azote"]
+resource_name = "azote"
+length = 2.933333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666, 0.7666, 1.7666),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"atacante", 2048, 512, 9, 64, 16, 32],
+"method": &"balanceo"
+}, {
+"args": [&"defensor_base", Vector2(-8, 7), 0.5, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.7666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", 3, 2, 2, 30, false, true],
+"method": &"vaiven"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.7666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.1999)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.7666)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_tiro_vital"]
+resource_name = "tiro_vital"
+length = 3
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 1.0999, 1.1666, 1.2166, 1.4333, 1.6499, 1.8333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(12, 4), 1, 64, true],
+"method": &"elipse"
+}, {
+"args": [&"atacante", Vector2(20, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(24, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"atacante", 7],
+"method": &"volver"
+}, {
+"args": [&"defensor", 10],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.1666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("21_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}],
+"times": PackedFloat32Array(1.1666)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_golpe_cuerpo_d02"]
+resource_name = "golpe_cuerpo_d02"
+length = 2.8
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.5333, 0.6666, 0.7166, 0.8166, 1.3999, 1.5166, 1.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(0, 6), 6, 2],
+"method": &"embestida"
+}, {
+"args": [&"atacante", Vector2(26, 0), 5],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(-10, 0), 1, 9, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(-28, 0), 3],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"atacante", 6],
+"method": &"volver"
+}, {
+"args": [&"defensor", 6],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.6666, 0.8499)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_golpe_cuerpo_d20"]
+resource_name = "golpe_cuerpo_d20"
+length = 2.8
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.5333, 0.6666, 0.7166, 0.8166, 1.3999, 1.5166, 1.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(0, 6), 6, 2],
+"method": &"embestida"
+}, {
+"args": [&"atacante", Vector2(26, 0), 5],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(10, 0), 1, 9, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(-28, 0), 3],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"atacante", 6],
+"method": &"volver"
+}, {
+"args": [&"defensor", 6],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.6666, 0.8499)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_derribo_doble"]
+resource_name = "derribo_doble"
+length = 2.65
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666, 0.6666, 0.7166, 0.8166, 1.2666, 1.3499, 1.4833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", -24, 8, 23, 10, 40, 10],
+"method": &"carrerilla"
+}, {
+"args": [[&"fondo", &"atacante", &"defensor", &"companero_atacante", &"companero_defensor"], Color(0, 0, 0, 1), 0.625, 4, 1, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"defensor", Vector2(16, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"atacante", 5],
+"method": &"volver"
+}, {
+"args": [&"defensor", 7],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(-10, 0), 1, 9, false, true],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.6666)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_derribo_d02"]
+resource_name = "derribo_d02"
+length = 2.65
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666, 0.6666, 0.7166, 0.8166, 1.2666, 1.3499, 1.4833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", -24, 8, 23, 10, 40, 10],
+"method": &"carrerilla"
+}, {
+"args": [[&"fondo", &"atacante", &"defensor"], Color(0, 0, 0, 1), 0.625, 4, 1, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"defensor", Vector2(-16, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"atacante", 5],
+"method": &"volver"
+}, {
+"args": [&"defensor", 7],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(-10, 0), 1, 9, false, true],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.6666)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_derribo_d20"]
+resource_name = "derribo_d20"
+length = 2.65
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666, 0.6666, 0.7166, 0.8166, 1.2666, 1.3499, 1.4833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", -24, 8, 23, 10, 40, 10],
+"method": &"carrerilla"
+}, {
+"args": [[&"fondo", &"atacante", &"defensor"], Color(0, 0, 0, 1), 0.625, 4, 1, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"defensor", Vector2(-16, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"atacante", 5],
+"method": &"volver"
+}, {
+"args": [&"defensor", 7],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(10, 0), 1, 9, false, true],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.6666)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_derribo_d00"]
+resource_name = "derribo_d00"
+length = 2.65
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0666, 0.6666, 0.7166, 0.8166, 1.2666, 1.3499, 1.4833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", -24, 8, 23, 10, 40, 10],
+"method": &"carrerilla"
+}, {
+"args": [[&"fondo", &"atacante", &"defensor", &"companero_atacante"], Color(0, 0, 0, 1), 0.625, 4, 1, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"defensor", Vector2(16, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [&"atacante", 5],
+"method": &"volver"
+}, {
+"args": [&"defensor", 7],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(-10, 0), 1, 9, false, true],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.6666)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_doble_filo_d02"]
+resource_name = "doble_filo_d02"
+length = 3.483333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.5166, 1.0333, 1.1499, 1.3166, 1.3333, 1.9833, 2.0999, 2.1833, 2.3166),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [[&"atacante"], Color(1, 1, 1, 1), 0.625, 5, 2, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"atacante", Vector2(18, 6), 2, 16, true],
+"method": &"elipse"
+}, {
+"args": [&"fondo", Color(1, 1, 1, 1), 1, 1, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [&"defensor", Vector2(-10, 0), 1, 9, false, false],
+"method": &"golpe"
+}, {
+"args": [&"fondo", Color(1, 1, 1, 1), 1, 0, 0.125, 4],
+"method": &"tinte"
+}, {
+"args": [&"atacante", -0.0, -0.19635, 8, false, true, false],
+"method": &"girar"
+}, {
+"args": [&"atacante", -0.19635, -0.392699, 8, false, true, true],
+"method": &"girar"
+}, {
+"args": [&"atacante", 5],
+"method": &"volver"
+}, {
+"args": [&"defensor", 7],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.0333, 1.1499, 1.3333, 1.9833),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(20, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(-32, 0), 3],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", -0.0, 0.19635, 8, false, false, false],
+"method": &"girar"
+}, {
+"args": [&"defensor", 0.19635, 0.392699, 8, false, false, true],
+"method": &"girar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1499, 1.3333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"atacante", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.3333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoAtacante")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.5166, 0.6499)
+}
+tracks/4/use_blend = true
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SonidoDefensor")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(1.1499)
+}
+tracks/5/use_blend = true
+
+[sub_resource type="Animation" id="Animation_doble_filo_d20"]
+resource_name = "doble_filo_d20"
+length = 3.483333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.5166, 1.0333, 1.1499, 1.3166, 1.3333, 1.9833, 2.0999, 2.1833, 2.3166),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [[&"atacante"], Color(1, 1, 1, 1), 0.625, 5, 2, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"atacante", Vector2(18, 6), 2, 16, true],
+"method": &"elipse"
+}, {
+"args": [&"fondo", Color(1, 1, 1, 1), 1, 1, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [&"defensor", Vector2(10, 0), 1, 9, false, false],
+"method": &"golpe"
+}, {
+"args": [&"fondo", Color(1, 1, 1, 1), 1, 0, 0.125, 4],
+"method": &"tinte"
+}, {
+"args": [&"atacante", -0.0, -0.19635, 8, false, true, false],
+"method": &"girar"
+}, {
+"args": [&"atacante", -0.19635, -0.392699, 8, false, true, true],
+"method": &"girar"
+}, {
+"args": [&"atacante", 5],
+"method": &"volver"
+}, {
+"args": [&"defensor", 7],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.0333, 1.1499, 1.3333, 1.9833),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(20, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(-32, 0), 3],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", -0.0, 0.19635, 8, false, false, false],
+"method": &"girar"
+}, {
+"args": [&"defensor", 0.19635, 0.392699, 8, false, false, true],
+"method": &"girar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1499, 1.3333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"atacante", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.3333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoAtacante")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.5166, 0.6499)
+}
+tracks/4/use_blend = true
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SonidoDefensor")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(1.1499)
+}
+tracks/5/use_blend = true
+
+[sub_resource type="Animation" id="Animation_doble_filo_d13"]
+resource_name = "doble_filo_d13"
+length = 3.483333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.5166, 1.0333, 1.1499, 1.3166, 1.3333, 1.9833, 2.0999, 2.1833, 2.3166),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [[&"atacante"], Color(1, 1, 1, 1), 0.625, 5, 2, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"atacante", Vector2(18, 6), 2, 16, true],
+"method": &"elipse"
+}, {
+"args": [&"fondo", Color(1, 1, 1, 1), 1, 1, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [&"defensor", Vector2(-10, 0), 1, 9, false, false],
+"method": &"golpe"
+}, {
+"args": [&"fondo", Color(1, 1, 1, 1), 1, 0, 0.125, 4],
+"method": &"tinte"
+}, {
+"args": [&"atacante", -0.0, -0.19635, 8, false, false, false],
+"method": &"girar"
+}, {
+"args": [&"atacante", -0.19635, -0.392699, 8, false, false, true],
+"method": &"girar"
+}, {
+"args": [&"atacante", 5],
+"method": &"volver"
+}, {
+"args": [&"defensor", 7],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.0333, 1.1499, 1.3333, 1.9833),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(20, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(-32, 0), 3],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", -0.0, 0.19635, 8, false, true, false],
+"method": &"girar"
+}, {
+"args": [&"defensor", 0.19635, 0.392699, 8, false, true, true],
+"method": &"girar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1499, 1.3333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"atacante", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.3333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoAtacante")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.5166, 0.6499)
+}
+tracks/4/use_blend = true
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SonidoDefensor")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(1.1499)
+}
+tracks/5/use_blend = true
+
+[sub_resource type="Animation" id="Animation_doble_filo_d31"]
+resource_name = "doble_filo_d31"
+length = 3.483333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.5166, 1.0333, 1.1499, 1.3166, 1.3333, 1.9833, 2.0999, 2.1833, 2.3166),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [[&"atacante"], Color(1, 1, 1, 1), 0.625, 5, 2, Color(0, 0, 0, 1), 0],
+"method": &"destello"
+}, {
+"args": [&"atacante", Vector2(18, 6), 2, 16, true],
+"method": &"elipse"
+}, {
+"args": [&"fondo", Color(1, 1, 1, 1), 1, 1, 0.125, 2],
+"method": &"tinte"
+}, {
+"args": [&"defensor", Vector2(10, 0), 1, 9, false, false],
+"method": &"golpe"
+}, {
+"args": [&"fondo", Color(1, 1, 1, 1), 1, 0, 0.125, 4],
+"method": &"tinte"
+}, {
+"args": [&"atacante", -0.0, -0.19635, 8, false, false, false],
+"method": &"girar"
+}, {
+"args": [&"atacante", -0.19635, -0.392699, 8, false, false, true],
+"method": &"girar"
+}, {
+"args": [&"atacante", 5],
+"method": &"volver"
+}, {
+"args": [&"defensor", 7],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.0333, 1.1499, 1.3333, 1.9833),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(20, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(-32, 0), 3],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", -0.0, 0.19635, 8, false, true, false],
+"method": &"girar"
+}, {
+"args": [&"defensor", 0.19635, 0.392699, 8, false, true, true],
+"method": &"girar"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.1499, 1.3333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [&"atacante", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.3333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(4, 0), 12, 1],
+"method": &"sacudir_en_sitio"
+}]
+}
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoAtacante")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("15_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("16_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.5166, 0.6499)
+}
+tracks/4/use_blend = true
+tracks/5/type = "audio"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SonidoDefensor")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(1.1499)
+}
+tracks/5/use_blend = true
+
+[sub_resource type="Animation" id="Animation_picotazo_d20"]
+resource_name = "picotazo_d20"
+length = 1.45
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.0666, 0.2833),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [&"defensor", Vector2(12, 0), 0.5, 13, true, false],
+"method": &"golpe"
+}, {
+"args": [&"defensor", 0.0, 0.220893, 3, true, true, true],
+"method": &"girar"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoDefensor")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("17_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_sumision_d20"]
+resource_name = "sumision_d20"
+length = 2.8
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0333, 0.0499, 0.2166, 0.3833, 0.5499, 0.7166, 0.8833, 1.0499, 1.2166, 1.3833, 1.6333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"defensor", Vector2(18, 6), 6, 16, false],
+"method": &"elipse"
+}, {
+"args": [&"atacante", Vector2(-18, 6), 6, 16, false],
+"method": &"elipse"
+}, {
+"args": [&"defensor", Vector2(12, 8), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(-12, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(0, -12), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(12, 8), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(-12, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(0, -12), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(12, 8), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(-12, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(0, -12), 0.84375, 10, false, true],
+"method": &"golpe"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.0499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAtacante")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("18_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.3833, 0.7166, 1.0499, 1.3833)
+}
+tracks/3/use_blend = true
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SonidoDefensor")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("19_se")
+}],
+"times": PackedFloat32Array(0.2166, 0.5499, 0.8833, 1.2166, 1.5499)
+}
+tracks/4/use_blend = true
+
+[sub_resource type="Animation" id="Animation_fuerza_d20"]
+resource_name = "fuerza_d20"
+length = 2.666667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.7166, 0.7333, 0.8333, 0.9333, 1.0333, 1.2333, 1.4999),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", 2, 1, 0.375, 30],
+"method": &"hundir"
+}, {
+"args": [&"defensor", Vector2(18, 6), 2, 16, true],
+"method": &"elipse"
+}, {
+"args": [&"atacante", 4],
+"method": &"volver"
+}, {
+"args": [&"defensor", Vector2(-16, 12), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(16, -12), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(-3, 4), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(2, 0), 8, 1, true],
+"method": &"sacudir_alterna"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.8333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("14_se")
+}],
+"times": PackedFloat32Array(0.8333, 0.9333, 1.0333)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_tiro_vital_d02"]
+resource_name = "tiro_vital_d02"
+length = 3
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 1.0999, 1.1666, 1.2166, 1.4333, 1.6499, 1.8333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(12, 4), 1, 64, true],
+"method": &"elipse"
+}, {
+"args": [&"atacante", Vector2(20, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"defensor", Vector2(0, 0), 0.84375, 10, false, true],
+"method": &"golpe"
+}, {
+"args": [&"defensor", Vector2(-24, 0), 4],
+"method": &"deslizar"
+}, {
+"args": [&"atacante", 7],
+"method": &"volver"
+}, {
+"args": [&"defensor", 10],
+"method": &"volver"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1.1666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("21_se")
+}],
+"times": PackedFloat32Array(0.0499)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("12_se")
+}],
+"times": PackedFloat32Array(1.1666)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_golpes"]
+_data = {
+&"destructor": SubResource("Animation_destructor"),
+&"golpe_cabeza": SubResource("Animation_golpe_cabeza"),
+&"golpe_cuerpo": SubResource("Animation_golpe_cuerpo"),
+&"derribo": SubResource("Animation_derribo"),
+&"doble_filo": SubResource("Animation_doble_filo"),
+&"doble_filo_rival": SubResource("Animation_doble_filo_rival"),
+&"picotazo": SubResource("Animation_picotazo"),
+&"sumision": SubResource("Animation_sumision"),
+&"fuerza": SubResource("Animation_fuerza"),
+&"ataque_rapido": SubResource("Animation_ataque_rapido"),
+&"azote": SubResource("Animation_azote"),
+&"tiro_vital": SubResource("Animation_tiro_vital"),
+&"golpe_cuerpo_d02": SubResource("Animation_golpe_cuerpo_d02"),
+&"golpe_cuerpo_d20": SubResource("Animation_golpe_cuerpo_d20"),
+&"golpe_cuerpo_d13": SubResource("Animation_golpe_cuerpo_d02"),
+&"golpe_cuerpo_d31": SubResource("Animation_golpe_cuerpo_d20"),
+&"derribo_doble": SubResource("Animation_derribo_doble"),
+&"derribo_doble_rival": SubResource("Animation_derribo_doble"),
+&"derribo_d02": SubResource("Animation_derribo_d02"),
+&"derribo_d20": SubResource("Animation_derribo_d20"),
+&"derribo_d13": SubResource("Animation_derribo_d02"),
+&"derribo_d31": SubResource("Animation_derribo_d20"),
+&"derribo_d00": SubResource("Animation_derribo_d00"),
+&"derribo_d22": SubResource("Animation_derribo_d00"),
+&"derribo_d11": SubResource("Animation_derribo_d00"),
+&"derribo_d33": SubResource("Animation_derribo_d00"),
+&"doble_filo_d02": SubResource("Animation_doble_filo_d02"),
+&"doble_filo_d20": SubResource("Animation_doble_filo_d20"),
+&"doble_filo_d13": SubResource("Animation_doble_filo_d13"),
+&"doble_filo_d31": SubResource("Animation_doble_filo_d31"),
+&"picotazo_d20": SubResource("Animation_picotazo_d20"),
+&"picotazo_d31": SubResource("Animation_picotazo_d20"),
+&"sumision_d20": SubResource("Animation_sumision_d20"),
+&"sumision_d31": SubResource("Animation_sumision_d20"),
+&"fuerza_d20": SubResource("Animation_fuerza_d20"),
+&"fuerza_d31": SubResource("Animation_fuerza_d20"),
+&"tiro_vital_d02": SubResource("Animation_tiro_vital_d02"),
+&"tiro_vital_d20": SubResource("Animation_tiro_vital_d02"),
+&"tiro_vital_d13": SubResource("Animation_tiro_vital_d02"),
+&"tiro_vital_d31": SubResource("Animation_tiro_vital_d02")
+}
+
+[node name="GolpesContacto" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+material_mezcla = SubResource("Mezcla")
+
+[node name="Fondo" type="Node2D" parent="."]
+script = ExtResource("4_fondo")
+
+[node name="Imagen" type="Sprite2D" parent="Fondo"]
+visible = false
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="Velo" type="ColorRect" parent="Fondo"]
+visible = false
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="Golpe" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+texture = ExtResource("2_golpe")
+
+[node name="GolpeOpaco" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_golpe")
+
+[node name="Estela" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+
+[node name="SonidoAtacante" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoDefensor" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoCentro" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_golpes")

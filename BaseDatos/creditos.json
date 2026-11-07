@@ -1,0 +1,1172 @@
+{
+	"paginas": [
+		[
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "POKéMON RUBY VERSION",
+				"categoria": true
+			},
+			{
+				"texto": "Credits",
+				"categoria": true
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "Director",
+				"categoria": true
+			},
+			{
+				"texto": "Junichi Masuda",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "Art Director",
+				"categoria": true
+			},
+			{
+				"texto": "Ken Sugimori",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "Battle Director",
+				"categoria": true
+			},
+			{
+				"texto": "Shigeki Morimoto",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "Main Programmer",
+				"categoria": true
+			},
+			{
+				"texto": "Tetsuya Watanabe",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Battle System Programmer",
+				"categoria": true
+			},
+			{
+				"texto": "Hisashi Sogabe",
+				"categoria": false
+			},
+			{
+				"texto": "Field System Programmer",
+				"categoria": true
+			},
+			{
+				"texto": "Sousuke Tamada",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Programmers",
+				"categoria": true
+			},
+			{
+				"texto": "Akito Mori",
+				"categoria": false
+			},
+			{
+				"texto": "Keita Kagaya",
+				"categoria": false
+			},
+			{
+				"texto": "Yoshinori Matsuda",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Programmers",
+				"categoria": true
+			},
+			{
+				"texto": "Hiroyuki Nakamura",
+				"categoria": false
+			},
+			{
+				"texto": "Masao Taya",
+				"categoria": false
+			},
+			{
+				"texto": "Satoshi Nohara",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Programmers",
+				"categoria": true
+			},
+			{
+				"texto": "Tomomichi Ohta",
+				"categoria": false
+			},
+			{
+				"texto": "Miyuki Iwasawa",
+				"categoria": false
+			},
+			{
+				"texto": "Takenori Ohta",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "Main Graphic Designer",
+				"categoria": true
+			},
+			{
+				"texto": "Hironobu Yoshida",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "POKéMON & Graphic Designers",
+				"categoria": true
+			},
+			{
+				"texto": "Ken Sugimori",
+				"categoria": false
+			},
+			{
+				"texto": "Hironobu Yoshida",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "POKéMON & Graphic Designers",
+				"categoria": true
+			},
+			{
+				"texto": "Motofumi Fujiwara",
+				"categoria": false
+			},
+			{
+				"texto": "Satoshi Ohta",
+				"categoria": false
+			},
+			{
+				"texto": "Asuka Iwashita",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "POKéMON & Graphic Designers",
+				"categoria": true
+			},
+			{
+				"texto": "Aimi Tomita",
+				"categoria": false
+			},
+			{
+				"texto": "Takao Unno",
+				"categoria": false
+			},
+			{
+				"texto": "Kanako Eo",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "POKéMON Designers",
+				"categoria": true
+			},
+			{
+				"texto": "Shigeki Morimoto",
+				"categoria": false
+			},
+			{
+				"texto": "Jun Okutani",
+				"categoria": false
+			},
+			{
+				"texto": "Atsuko Nishida",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "POKéMON Designers",
+				"categoria": true
+			},
+			{
+				"texto": "Muneo Saito",
+				"categoria": false
+			},
+			{
+				"texto": "Rena Yoshikawa",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Music Composition",
+				"categoria": true
+			},
+			{
+				"texto": "Go Ichinose",
+				"categoria": false
+			},
+			{
+				"texto": "Morikazu Aoki",
+				"categoria": false
+			},
+			{
+				"texto": "Junichi Masuda",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "Sound Effects & POKéMON Voices",
+				"categoria": true
+			},
+			{
+				"texto": "Morikazu Aoki",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Game Designers",
+				"categoria": true
+			},
+			{
+				"texto": "Junichi Masuda",
+				"categoria": false
+			},
+			{
+				"texto": "Shigeki Morimoto",
+				"categoria": false
+			},
+			{
+				"texto": "Koji Nishino",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Game Designers",
+				"categoria": true
+			},
+			{
+				"texto": "Kenji Matsushima",
+				"categoria": false
+			},
+			{
+				"texto": "Tetsuji Ohta",
+				"categoria": false
+			},
+			{
+				"texto": "Hitomi Sato",
+				"categoria": false
+			},
+			{
+				"texto": "Takeshi Kawachimaru",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Game Designers",
+				"categoria": true
+			},
+			{
+				"texto": "Teruyuki Shimoyamada",
+				"categoria": false
+			},
+			{
+				"texto": "Shigeru Ohmori",
+				"categoria": false
+			},
+			{
+				"texto": "Tadashi Takahashi",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Plot Scenario",
+				"categoria": true
+			},
+			{
+				"texto": "Junichi Masuda",
+				"categoria": false
+			},
+			{
+				"texto": "Akihito Tomisawa",
+				"categoria": false
+			},
+			{
+				"texto": "Koji Nishino",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Game Scenario",
+				"categoria": true
+			},
+			{
+				"texto": "Toshinobu Matsumiya",
+				"categoria": false
+			},
+			{
+				"texto": "Akihito Tomisawa",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Script Designers",
+				"categoria": true
+			},
+			{
+				"texto": "Satoshi Nohara",
+				"categoria": false
+			},
+			{
+				"texto": "Tetsuji Ohta",
+				"categoria": false
+			},
+			{
+				"texto": "Tomomichi Ohta",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Map Designers",
+				"categoria": true
+			},
+			{
+				"texto": "Shigeru Ohmori",
+				"categoria": false
+			},
+			{
+				"texto": "Tetsuji Ohta",
+				"categoria": false
+			},
+			{
+				"texto": "Koji Nishino",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Map Data Designers",
+				"categoria": true
+			},
+			{
+				"texto": "Tetsuji Ohta",
+				"categoria": false
+			},
+			{
+				"texto": "Tadashi Takahashi",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Parametric Designers",
+				"categoria": true
+			},
+			{
+				"texto": "Koji Nishino",
+				"categoria": false
+			},
+			{
+				"texto": "Shigeki Morimoto",
+				"categoria": false
+			},
+			{
+				"texto": "Tetsuji Ohta",
+				"categoria": false
+			},
+			{
+				"texto": "Teruyuki Shimoyamada",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "POKéDEX Text",
+				"categoria": true
+			},
+			{
+				"texto": "Kenji Matsushima",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Environment & Tool Programmers",
+				"categoria": true
+			},
+			{
+				"texto": "Hisashi Sogabe",
+				"categoria": false
+			},
+			{
+				"texto": "Sousuke Tamada",
+				"categoria": false
+			},
+			{
+				"texto": "Hiroyuki Nakamura",
+				"categoria": false
+			},
+			{
+				"texto": "Akito Mori",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Product Testing",
+				"categoria": true
+			},
+			{
+				"texto": "NCL Super Mario Club",
+				"categoria": false
+			},
+			{
+				"texto": "Atsushi Tada",
+				"categoria": false
+			},
+			{
+				"texto": "Takahiro Ohnishi",
+				"categoria": false
+			},
+			{
+				"texto": "Norihide Okamura",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Special Thanks",
+				"categoria": true
+			},
+			{
+				"texto": "Kenji Tominaga",
+				"categoria": false
+			},
+			{
+				"texto": "Yoshio Tajiri",
+				"categoria": false
+			},
+			{
+				"texto": "Teiko Sasaki",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Special Thanks",
+				"categoria": true
+			},
+			{
+				"texto": "Sachiko Hamano",
+				"categoria": false
+			},
+			{
+				"texto": "Chie Matsumiya",
+				"categoria": false
+			},
+			{
+				"texto": "Akiko Shinozaki",
+				"categoria": false
+			},
+			{
+				"texto": "Atsuko Fujii",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Special Thanks",
+				"categoria": true
+			},
+			{
+				"texto": "Kazuya Suyama",
+				"categoria": false
+			},
+			{
+				"texto": "Satoshi Mitsuhara",
+				"categoria": false
+			},
+			{
+				"texto": "Tomotaka Komura",
+				"categoria": false
+			},
+			{
+				"texto": "Mikiko Ohashi",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Special Thanks",
+				"categoria": true
+			},
+			{
+				"texto": "Michiko Takizawa",
+				"categoria": false
+			},
+			{
+				"texto": "Makiko Takada",
+				"categoria": false
+			},
+			{
+				"texto": "Takanao Kondo",
+				"categoria": false
+			},
+			{
+				"texto": "Ai Mashima",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Information Supervisors",
+				"categoria": true
+			},
+			{
+				"texto": "Hiroki Enomoto",
+				"categoria": false
+			},
+			{
+				"texto": "Kazuyuki Terada",
+				"categoria": false
+			},
+			{
+				"texto": "Yuri Sakurai",
+				"categoria": false
+			},
+			{
+				"texto": "Hiromi Sagawa",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Coordinators",
+				"categoria": true
+			},
+			{
+				"texto": "Kyoko Watanabe",
+				"categoria": false
+			},
+			{
+				"texto": "Takao Nakano",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Task Managers",
+				"categoria": true
+			},
+			{
+				"texto": "Hitoshi Yamagami",
+				"categoria": false
+			},
+			{
+				"texto": "Gakuji Nomoto",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Producers",
+				"categoria": true
+			},
+			{
+				"texto": "Hiroyuki Jinnai",
+				"categoria": false
+			},
+			{
+				"texto": "Takehiro Izushi",
+				"categoria": false
+			},
+			{
+				"texto": "Hiroaki Tsuru",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "Executive Director",
+				"categoria": true
+			},
+			{
+				"texto": "Satoshi Tajiri",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "Executive Producers",
+				"categoria": true
+			},
+			{
+				"texto": "Satoru Iwata",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "Executive Producers",
+				"categoria": true
+			},
+			{
+				"texto": "Tsunekaz Ishihara",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "English Version Coordinators",
+				"categoria": true
+			},
+			{
+				"texto": "Hiro Nakamura",
+				"categoria": false
+			},
+			{
+				"texto": "Seth McMahill",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "Translator",
+				"categoria": true
+			},
+			{
+				"texto": "Nob Ogasawara",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Programmers",
+				"categoria": true
+			},
+			{
+				"texto": "Teruki Murakawa",
+				"categoria": false
+			},
+			{
+				"texto": "Souichi Yamamoto",
+				"categoria": false
+			},
+			{
+				"texto": "Masanori Funakoshi",
+				"categoria": false
+			},
+			{
+				"texto": "Akira Kinashi",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Graphic Designers",
+				"categoria": true
+			},
+			{
+				"texto": "Souichi Yamamoto",
+				"categoria": false
+			},
+			{
+				"texto": "Akira Kinashi",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Product Support",
+				"categoria": true
+			},
+			{
+				"texto": "Kimiko Nakamichi",
+				"categoria": false
+			},
+			{
+				"texto": "Daisuke Hara",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "Artwork",
+				"categoria": true
+			},
+			{
+				"texto": "Atsushi Okada",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "Text Editor",
+				"categoria": true
+			},
+			{
+				"texto": "Teresa Lillygren",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "NOA Product Testing",
+				"categoria": true
+			},
+			{
+				"texto": "Thomas Hertzog",
+				"categoria": false
+			},
+			{
+				"texto": "Ed Ridgeway",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Braille Code Check",
+				"categoria": true
+			},
+			{
+				"texto": "National Federation of the Blind",
+				"categoria": false
+			},
+			{
+				"texto": "Patricia A. Maurer",
+				"categoria": false
+			},
+			{
+				"texto": "Japan Braille Library",
+				"categoria": false
+			},
+			{
+				"texto": "European Blind Union",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Braille Code Check",
+				"categoria": true
+			},
+			{
+				"texto": "Australian Braille Authority",
+				"categoria": false
+			},
+			{
+				"texto": "Royal New Zealand Federation for the Blind",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Special Thanks",
+				"categoria": true
+			},
+			{
+				"texto": "Sayoko Blodgett-Ford",
+				"categoria": false
+			},
+			{
+				"texto": "Nicola Pratt-Barlow",
+				"categoria": false
+			},
+			{
+				"texto": "Hiroyuki Uesugi",
+				"categoria": false
+			},
+			{
+				"texto": "Koji Uyama",
+				"categoria": false
+			}
+		],
+		[
+			{
+				"texto": "Special Thanks",
+				"categoria": true
+			},
+			{
+				"texto": "Anthony Howitt",
+				"categoria": false
+			},
+			{
+				"texto": "Gail Tilden",
+				"categoria": false
+			},
+			{
+				"texto": "Kazuhiro Fujihara",
+				"categoria": false
+			},
+			{
+				"texto": "",
+				"categoria": false
+			}
+		]
+	],
+	"fondos": [
+		{
+			"pagina": 0,
+			"fondo": "oceano_dia"
+		},
+		{
+			"pagina": 12,
+			"fondo": "oceano_atardecer"
+		},
+		{
+			"pagina": 24,
+			"fondo": "bosque_atardecer"
+		},
+		{
+			"pagina": 35,
+			"fondo": "bosque_atardecer",
+			"rival": true
+		},
+		{
+			"pagina": 46,
+			"fondo": "noche",
+			"pareja": true
+		}
+	]
+}

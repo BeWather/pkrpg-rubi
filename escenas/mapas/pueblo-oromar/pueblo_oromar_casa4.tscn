@@ -1,0 +1,132 @@
+[gd_scene format=4 uid="uid://dxuj8rj4d24ud"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_864y1"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_etpbi"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_qyda6"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="9_bxl0e"]
+[ext_resource type="SpriteFrames" uid="uid://buukulhhkfyjc" path="res://escenas/avatares/npc_050.tres" id="or_f_050"]
+[ext_resource type="SpriteFrames" uid="uid://03vwdt8hqw32" path="res://escenas/avatares/npc_067.tres" id="or_f_067"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="or_npc_base"]
+[ext_resource type="Script" uid="uid://bfswo0jihmri4" path="res://scripts/eventos/pueblo_oromar/evento_casas_oromar.gd" id="or_s_evento_casas"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="or_s_npc_evento"]
+
+[node name="Casa" type="Node2D" unique_id=2013019304]
+script = ExtResource("1_864y1")
+nombre_interno = "pueblo_oromar_casa4"
+seccion = "PUEBLO_OROMAR"
+esInterior = true
+mapa_exterior_asociado = "PUEBLO_OROMAR"
+solo_caminar = true
+musica_mapa = "CIUDAD_OROMAR"
+metadata/esInterior = true
+
+[node name="NPCs" type="Node2D" parent="." unique_id=674171378]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Vigia" parent="NPCs" unique_id=1805276969 instance=ExtResource("or_npc_base")]
+editor_description = "pokeruby PacifidlogTown_House5 objeto 1 (9,4) OLD_MAN_1 FACE_RIGHT: vigía de la ISLA ESPEJISMO (IsMirageIslandPresent). Lo dirige Eventos/EventoCasas"
+position = Vector2(152, 78)
+script = ExtResource("or_s_npc_evento")
+id_texto = "OROMAR_CASA4_VIGIA_NO"
+tipo_movimiento = 10
+selec_frames = ExtResource("or_f_050")
+coord = Vector2i(9, 4)
+
+[node name="Caballero" parent="NPCs" unique_id=2112593431 instance=ExtResource("or_npc_base")]
+editor_description = "pokeruby PacifidlogTown_House5 objeto 2 (3,4) GENTLEMAN FACE_RIGHT (MSGBOX_NPC)"
+position = Vector2(56, 78)
+id_texto = "OROMAR_CASA4_CABALLERO"
+tipo_movimiento = 10
+selec_frames = ExtResource("or_f_067")
+coord = Vector2i(3, 4)
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1587394027]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADIAAAAAAAEAAAAAADMAAAAAAAIAAAAAADQAAAAJAAAAAAACADIAAAAJAAEAAAACADMAAAAJAAIAAAACADQAAAAIAAAAAAAHADIAAAAHAAAAAAABADIAAAAGAAAAAAABADIAAAAFAAAAAAABADIAAAAEAAAAAAABADIAAAADAAAAAAAFADYAAAACAAAAAAAEADYAAAABAAAAAAABADIAAAADAAEAAAAFADcAAAADAAIAAAAFADgAAAAEAAEAAAABADMAAAAEAAIAAAABADQAAAAFAAEAAAABADMAAAAFAAIAAAAHADYAAAAGAAEAAAAAADcAAAAGAAIAAAAAADgAAAAHAAEAAAABADcAAAAHAAIAAAABADgAAAAIAAEAAAAHADMAAAAIAAIAAAAHADQAAAABAAIAAAAAADYAAAACAAIAAAAEADgAAAABAAEAAAAAADUAAAACAAEAAAAEADcAAAABAAMAAAAEADIAAAABAAQAAAAEADMAAAACAAMAAAAFADIAAAACAAQAAAAFADMAAAAHAAMAAAAFADIAAAAHAAQAAAAFADMAAAAIAAMAAAAGADIAAAAIAAQAAAAGADMAAAABAAUAAAAEADMAAAABAAYAAAAEADQAAAACAAUAAAAFADMAAAACAAYAAAAFADQAAAAHAAUAAAAFADMAAAAHAAYAAAAFADQAAAAIAAUAAAAGADMAAAAIAAYAAAAGADQAAAAGAAMAAAAFADIAAAAGAAQAAAAHADUAAAAFAAMAAAAFADIAAAAFAAQAAAADADUAAAAEAAMAAAAFADIAAAAEAAQAAAACADUAAAADAAMAAAAFADIAAAADAAQAAAAGADUAAAAGAAUAAAAHADUAAAAGAAYAAAAFADQAAAAFAAUAAAADADYAAAAFAAYAAAAFADQAAAAEAAUAAAACADYAAAAEAAYAAAAFADQAAAADAAUAAAAGADUAAAADAAYAAAAFADQAAAAAAAMAAAABADQAAAAAAAQAAAABADQAAAAAAAUAAAAHADYAAAAAAAYAAAABADQAAAAAAAcAAAAHADYAAAAAAAgAAAABADQAAAAJAAQAAAADADQAAAAJAAMAAAADADQAAAAJAAUAAAADADQAAAAJAAYAAAADADQAAAAJAAcAAAADADQAAAAJAAgAAAADADQAAAAEAAgAAAAEADUAAAAFAAgAAAAFADUAAAAIAAgAAAADADQAAAAHAAgAAAADADQAAAAGAAgAAAADADQAAAAIAAcAAAADADQAAAAHAAcAAAADADQAAAAGAAcAAAADADQAAAAFAAcAAAADADQAAAAEAAcAAAADADQAAAADAAcAAAADADQAAAACAAcAAAADADQAAAABAAcAAAADADQAAAABAAgAAAADADQAAAACAAgAAAADADQAAAADAAgAAAADADQAAAA=")
+tile_set = ExtResource("2_etpbi")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=158774947]
+tile_map_data = PackedByteArray("AAAJAAgAAAAJADcAAAAAAAgAAAAIADcAAAA=")
+tile_set = ExtResource("2_etpbi")
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1390907238]
+position = Vector2(72, 134)
+script = ExtResource("3_qyda6")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_oromar"
+posicion_destino = Vector2(17, 21)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1224134487]
+position = Vector2(88, 134)
+script = ExtResource("3_qyda6")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_oromar"
+posicion_destino = Vector2(17, 21)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1960550691]
+
+[node name="EventoCasas" type="Node2D" parent="Eventos" unique_id=213995748]
+editor_description = "pokeruby PacifidlogTown_House5/scripts.inc: vigía de la ISLA ESPEJISMO"
+script = ExtResource("or_s_evento_casas")
+vigia = NodePath("../../NPCs/Vigia")
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1740530847]
+script = ExtResource("9_bxl0e")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,4": {
+"flags": 1
+},
+"4,5": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,2": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"

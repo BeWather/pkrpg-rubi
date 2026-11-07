@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bg1eg32ghpcw7"
+path="res://.godot/imported/2-08 Battle Arena.mp3-69c43f1569d92cde681ebcc55b0f205a.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/2-08 Battle Arena.mp3"
+dest_files=["res://.godot/imported/2-08 Battle Arena.mp3-69c43f1569d92cde681ebcc55b0f205a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

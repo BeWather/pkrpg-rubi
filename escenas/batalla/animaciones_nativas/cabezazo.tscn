@@ -1,0 +1,291 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/cabezazo.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/impact_pal_135_32x32_0.png" id="2_impacto"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Take Down1.wav" id="3_carga"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Explosion.wav" id="4_golpe"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Megakick.wav" id="5_patada"]
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/fondo_movimiento.gd" id="8_fondo"]
+
+[sub_resource type="Animation" id="Animation_carga"]
+resource_name = "carga"
+length = 2.333333
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:avance_atacante")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0, 0.0166, 0.0333, 0.0499, 0.0666, 0.0833, 0.0999, 0.1166, 0.1333, 0.1499, 0.7333, 0.7499, 0.7666, 0.7833, 0.7999, 0.8166, 0.8333, 0.8499, 0.8666, 0.8833, 0.8999, 0.9166, 0.9333, 0.9499, 0.9666, 0.9833, 0.9999, 1.0166, 1.0333, 1.0499, 1.0666, 1.0833, 1.6666, 1.6833, 1.6999, 1.7166, 1.7333, 1.7499, 1.7666, 1.7833, 1.7999, 1.8166, 1.8333, 1.8499),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, -3.0, -5.0, -8.0, -10.0, -12.0, -15.0, -17.0, -20.0, -22.0, -24.0, -22.0, -20.0, -17.0, -15.0, -13.0, -10.0, -8.0, -5.0, -3.0, -1.0, -1.0, 0.0, -3.0, -5.0, -8.0, -10.0, -12.0, -15.0, -17.0, -20.0, -22.0, -24.0, -22.0, -20.0, -17.0, -15.0, -13.0, -10.0, -8.0, -5.0, -3.0, -1.0, -1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:giro_carga")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1999, 0.2166, 0.2333, 0.2499, 0.2666, 0.2833, 0.2999, 0.3166, 0.3333, 0.3499, 0.3666, 0.3833, 0.3999, 0.4166, 0.4333, 0.4499, 0.4666, 0.4833, 0.4999, 0.5166, 0.5333, 0.5499, 0.5666, 0.5833, 0.5999, 0.6166, 0.6333, 0.6499, 0.6666, 0.6833, 0.6999, 0.7166, 0.7333, 1.1333, 1.1499, 1.1666, 1.1833, 1.1999, 1.2166, 1.2333, 1.2499, 1.2666, 1.2833, 1.2999, 1.3166, 1.3333, 1.3499, 1.3666, 1.3833, 1.3999, 1.4166, 1.4333, 1.4499, 1.4666, 1.4833, 1.4999, 1.5166, 1.5333, 1.5499, 1.5666, 1.5833, 1.5999, 1.6166, 1.6333, 1.6499, 1.6666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 96, 192, 288, 384, 480, 576, 672, 768, 864, 960, 1056, 1152, 1248, 1344, 1440, 1536, 1440, 1344, 1248, 1152, 1056, 960, 864, 768, 672, 576, 480, 384, 288, 192, 96, 0, 0, 96, 192, 288, 384, 480, 576, 672, 768, 864, 960, 1056, 1152, 1248, 1344, 1440, 1536, 1440, 1344, 1248, 1152, 1056, 960, 864, 768, 672, 576, 480, 384, 288, 192, 96, 0, 0]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.8666),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sonido")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_carga")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_carga")
+}],
+"times": PackedFloat32Array(0, 0.9333)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_ataque"]
+resource_name = "ataque"
+length = 2.366667
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:avance_atacante")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0166, 0.0333, 0.0499, 0.0666, 0.0833, 0.0999, 0.1166, 0.3166, 0.3333, 0.3499, 0.3666, 0.3833, 0.3999, 0.4166, 0.4333, 0.4499, 0.4666, 0.4833, 0.4999, 0.5166, 0.5333, 0.5499, 0.5666, 0.7999, 0.8166, 0.8333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [-3.0, -6.0, -9.0, -12.0, -15.0, -18.0, -21.0, -24.0, -26.0, -26.0, -22.0, -22.0, -26.0, -26.0, -22.0, -22.0, -26.0, -26.0, -22.0, -22.0, -26.0, -26.0, -22.0, -24.0, -16.0, -8.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:giro_ataque")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1666, 0.1833, 0.1999, 0.2166, 0.2333, 0.2499, 0.2666, 0.2833, 2.1666, 2.1833, 2.1999, 2.2166, 2.2333, 2.2499, 2.2666, 2.2833),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 192, 384, 576, 768, 960, 1152, 1344, 1536, 1344, 1152, 960, 768, 576, 384, 192, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fondo:color_velo")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.8999),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Fondo:velo")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.8499, 0.9833),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [0.0, 0.875, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Defensor/Impacto:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.8499, 0.8666, 0.8833, 0.8999, 0.9166, 0.9333, 0.9499, 0.9666, 0.9833, 0.9999, 1.0166, 1.0333, 1.0499, 1.0666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [false, true, false, true, false, true, false, true, false, true, false, true, false, true, false]
+}
+tracks/5/type = "method"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath(".")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.8499, 2.2833),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [&"atacante", Vector2(2, 0), 40],
+"method": &"sacudir_en_sitio"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/6/type = "method"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath(".")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.8499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [&"defensor", Vector2(10, 0), 40],
+"method": &"sacudir_en_sitio"
+}]
+}
+tracks/7/type = "method"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath(".")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.8499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/8/type = "audio"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Sonido")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_carga")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/8/use_blend = true
+tracks/9/type = "audio"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("SonidoGolpe")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_golpe")
+}],
+"times": PackedFloat32Array(0.8499)
+}
+tracks/9/use_blend = true
+tracks/10/type = "audio"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("SonidoDefensor")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_patada")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_patada")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_patada")
+}],
+"times": PackedFloat32Array(0.8499, 0.9833, 1.1166)
+}
+tracks/10/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cabezazo"]
+_data = {
+&"carga": SubResource("Animation_carga"),
+&"ataque": SubResource("Animation_ataque")
+}
+
+[node name="Cabezazo" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+animaciones_por_turno = Array[StringName]([&"carga", &"ataque"])
+
+[node name="Fondo" type="Node2D" parent="."]
+script = ExtResource("8_fondo")
+
+[node name="Imagen" type="Sprite2D" parent="Fondo"]
+visible = false
+texture_repeat = 2
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="Velo" type="ColorRect" parent="Fondo"]
+visible = false
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="Impacto" type="Sprite2D" parent="Defensor"]
+visible = false
+texture = ExtResource("2_impacto")
+
+[node name="Sonido" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoGolpe" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoDefensor" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_cabezazo")

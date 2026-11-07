@@ -1,0 +1,321 @@
+[gd_scene format=4 uid="uid://bekqktub82a7a"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mapa"]
+[ext_resource type="TileSet" uid="uid://b5160rattgye8" path="res://graficos/tilesets/tileset_torre_batalla_interior.tres" id="2_tiles"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_tp"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_warp"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="5_npc_base"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="6_npc_evento"]
+[ext_resource type="Script" uid="uid://bhj36sekubkrd" path="res://scripts/eventos/torre_batalla/evento_vestibulo_torre.gd" id="7_evento"]
+[ext_resource type="Script" uid="uid://8uymdhpcd3qe" path="res://scripts/eventos/cartel_evento.gd" id="8_cartel"]
+[ext_resource type="Script" uid="uid://5qk0h1jawgb5" path="res://scripts/evento_pc_centro.gd" id="9_pc"]
+[ext_resource type="Script" uid="uid://cix41nrfux4xa" path="res://scripts/mapas/tile_alterno.gd" id="10_tile_alterno"]
+[ext_resource type="SpriteFrames" uid="uid://blksta48icop1" path="res://escenas/avatares/npc_018.tres" id="f_npc_018"]
+[ext_resource type="SpriteFrames" uid="uid://biydhpw1shdox" path="res://escenas/avatares/npc_021.tres" id="f_npc_021"]
+[ext_resource type="SpriteFrames" uid="uid://damgta0thpof0" path="res://escenas/avatares/npc_028.tres" id="f_npc_028"]
+[ext_resource type="SpriteFrames" uid="uid://bmiijupbogopu" path="res://escenas/avatares/npc_052.tres" id="f_npc_052"]
+[ext_resource type="SpriteFrames" uid="uid://d11jsjkars31b" path="res://graficos/transiciones_centro/teala.tres" id="f_teala"]
+
+[node name="TorreBatallaVestibulo" type="Node2D" unique_id=693590651]
+editor_description = "pokeruby BattleTower_Lobby (LAYOUT_BATTLE_TOWER_LOBBY, 14x9). Generada por herramientas/importar_interiores_torre_batalla.py."
+script = ExtResource("1_mapa")
+nombre_interno = "torre_batalla_vestibulo"
+seccion = "TORRE_BATALLA"
+poi_mapa_region = "frente_batalla"
+esInterior = true
+mapa_exterior_asociado = "torre_batalla_exterior"
+musica_mapa = "TORRE_BATALLA"
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1521026468]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAEAAAAAAAEAAAABAAIAAAAAAAIAAAAEAAAAAAAAAAMAAAAFAAEAAAAAAAQAAAAFAAEAAAAAAAUAAAAFAAEAAAAAAAYAAAAFAAEAAAAAAAcAAAAGAA0AAAAAAAgAAAAGAA4AAAABAAAAAAABAAEAAAABAAEAAAABAAIAAAABAAIAAAADAAAAAAABAAMAAAABAAUAAAABAAQAAAABAAUAAAABAAUAAAABAAUAAAABAAYAAAABAAUAAAABAAcAAAAHAAsAAAABAAgAAAAHAAwAAAACAAAAAAABAAEAAAACAAEAAAABAAIAAAACAAIAAAADAAAAAAACAAMAAAAAAAAAAAACAAQAAAAAAAAAAAACAAUAAAAAAAAAAAACAAYAAAAAAAAAAAACAAcAAAAAAAAAAAACAAgAAAAAAAAAAAADAAAAAAABAAEAAAADAAEAAAAAAAEAAAADAAIAAAAAAAIAAAADAAMAAAAAAAIAAAADAAQAAAAAAAMAAAADAAUAAAAAAAQAAAADAAYAAAACAAAAAAADAAcAAAAAAAAAAAADAAgAAAAAAAAAAAAEAAAAAAABAAEAAAAEAAEAAAABAAIAAAAEAAIAAAAEAAAAAAAEAAMAAAAFAAEAAAAEAAQAAAACABAAAAAEAAUAAAADAAIAAAAEAAYAAAADAAAAAAAEAAcAAAAAAAAAAAAEAAgAAAAAAAAAAAAFAAAAAAAGAAMAAAAFAAEAAAAGAAQAAAAFAAIAAAAHAA4AAAAFAAMAAAAAAAAAAAAFAAQAAAAEAAEAAAAFAAUAAAAEAAIAAAAFAAYAAAADAAAAAAAFAAcAAAAAAAAAAAAFAAgAAAAAAAAAAAAGAAAAAAAGAAAAAAAGAAEAAAAGAAEAAAAGAAIAAAADAAAAAAAGAAMAAAAAAAAAAAAGAAQAAAAAAAAAAAAGAAUAAAAAAAAAAAAGAAYAAAAAAAAAAAAGAAcAAAAAAAAAAAAGAAgAAAAGAAIAAAAHAAAAAAAHAAMAAAAHAAEAAAAHAAQAAAAHAAIAAAAHAA4AAAAHAAMAAAAAAAAAAAAHAAQAAAACAAEAAAAHAAUAAAACAAIAAAAHAAYAAAACAAAAAAAHAAcAAAAAAAAAAAAHAAgAAAAHAAIAAAAIAAAAAAABAAEAAAAIAAEAAAABAAIAAAAIAAIAAAADAAAAAAAIAAMAAAAAAAAAAAAIAAQAAAADAAEAAAAIAAUAAAADAAIAAAAIAAYAAAADAAAAAAAIAAcAAAAAAAAAAAAIAAgAAAAAAAAAAAAJAAAAAAABAAEAAAAJAAEAAAAAAAEAAAAJAAIAAAAAAAIAAAAJAAMAAAAAAAIAAAAJAAQAAAABAAMAAAAJAAUAAAABAAQAAAAJAAYAAAADAAAAAAAJAAcAAAAAAAAAAAAJAAgAAAAAAAAAAAAKAAAAAAABAAEAAAAKAAEAAAABAAIAAAAKAAIAAAAEAAAAAAAKAAMAAAAFAAEAAAAKAAQAAAAFAAEAAAAKAAUAAAAFAAEAAAAKAAYAAAAFAAAAAAAKAAcAAAAAAAAAAAAKAAgAAAAAAAAAAAALAAAAAAAAABAAAAALAAEAAAAAABEAAAALAAIAAAABABAAAAALAAMAAAABAAUAAAALAAQAAAABAAUAAAALAAUAAAABAAUAAAALAAYAAAABAAUAAAALAAcAAAAAAAAAAAALAAgAAAAAAAAAAAAMAAAAAAABAAEAAAAMAAEAAAABAAIAAAAMAAIAAAADAAAAAAAMAAMAAAAAAAAAAAAMAAQAAAAAAAAAAAAMAAUAAAAAAAAAAAAMAAYAAAAAAAAAAAAMAAcAAAAHAAsAAAAMAAgAAAAHAAwAAAANAAAAAAABAAEAAAANAAEAAAABAAIAAAANAAIAAAADAAAAAAANAAMAAAAAAAAAAAANAAQAAAAAAAUAAAANAAUAAAAAAAYAAAANAAYAAAAAAAcAAAANAAcAAAAHAAsAAAANAAgAAAAHAAwAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Superior" type="TileMapLayer" parent="." unique_id=137783613]
+z_index = 2
+tile_map_data = PackedByteArray("AAAAAAcAAAAOAA0AAAABAAcAAAAPAAsAAAAEAAQAAAAKABAAAAAFAAQAAAAMAAEAAAAHAAQAAAAKAAEAAAAIAAQAAAALAAEAAAAMAAcAAAAPAAsAAAANAAcAAAAPAAsAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1751510397]
+script = ExtResource("3_tp")
+tile_data = {
+"-1,2": {
+"flags": 1
+},
+"-1,3": {
+"flags": 1
+},
+"-1,4": {
+"flags": 1
+},
+"-1,5": {
+"flags": 1
+},
+"-1,6": {
+"flags": 1
+},
+"-1,7": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"0,8": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,8": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,9": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,9": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,8": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,8": {
+"flags": 1
+},
+"14,2": {
+"flags": 1
+},
+"14,3": {
+"flags": 1
+},
+"14,4": {
+"flags": 1
+},
+"14,5": {
+"flags": 1
+},
+"14,6": {
+"flags": 1
+},
+"14,7": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,9": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"3,3": {
+"flags": 1
+},
+"3,4": {
+"flags": 1
+},
+"3,5": {
+"flags": 1
+},
+"3,9": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,5": {
+"flags": 1
+},
+"4,9": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"5,9": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,9": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"7,9": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,5": {
+"flags": 1
+},
+"8,9": {
+"flags": 1
+},
+"9,2": {
+"flags": 1
+},
+"9,3": {
+"flags": 1
+},
+"9,4": {
+"flags": 1
+},
+"9,5": {
+"flags": 1
+},
+"9,9": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=688284876]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Recepcionista" parent="NPCs" unique_id=2131440347 instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby BattleTower_Lobby objeto 1 (6,5) TEALA FACE_DOWN, BattleTower_Lobby_EventScript_16049E"
+position = Vector2(104, 94)
+script = ExtResource("6_npc_evento")
+selec_frames = ExtResource("f_teala")
+coord = Vector2i(6, 5)
+
+[node name="Hombre" parent="NPCs" unique_id=1292982828 instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby BattleTower_Lobby objeto 2 (12,3) MAN_5 FACE_DOWN, BattleTower_Lobby_EventScript_1606A5"
+position = Vector2(200, 62)
+script = ExtResource("6_npc_evento")
+selec_frames = ExtResource("f_npc_018")
+coord = Vector2i(12, 3)
+
+[node name="Mujer" parent="NPCs" unique_id=636626283 instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby BattleTower_Lobby objeto 3 (10,8) WOMAN_7 WANDER_AROUND, BattleTower_Lobby_EventScript_160715"
+position = Vector2(168, 142)
+id_texto = "TORRE_BATALLA_VESTIBULO_MUJER"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("f_npc_028")
+coord = Vector2i(10, 8)
+
+[node name="Chico" parent="NPCs" unique_id=60153827 instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby BattleTower_Lobby objeto 4 (1,2) BOY_1 WANDER_AROUND, BattleTower_Lobby_EventScript_16071E"
+position = Vector2(24, 46)
+id_texto = "TORRE_BATALLA_VESTIBULO_CHICO"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+coord = Vector2i(1, 2)
+
+[node name="Reportera" parent="NPCs" unique_id=1729639200 instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby BattleTower_Lobby objeto 5 (4,7) REPORTER_F LOOK_AROUND, BattleTower_Lobby_EventScript_1AE1FF"
+visible = false
+position = Vector2(72, 126)
+script = ExtResource("6_npc_evento")
+tipo_movimiento = 1
+selec_frames = ExtResource("f_npc_021")
+coord = Vector2i(4, 7)
+
+[node name="Dueno" parent="NPCs" unique_id=418729139 instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby BattleTower_Lobby objeto 6 (7,6) MAN_2 FACE_LEFT, BattleTower_Lobby_EventScript_160733"
+visible = false
+position = Vector2(120, 110)
+script = ExtResource("6_npc_evento")
+tipo_movimiento = 9
+selec_frames = ExtResource("f_npc_052")
+coord = Vector2i(7, 6)
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=2138496877]
+editor_description = "pokeruby BattleTower_Lobby warp 0 (6,8) MB 0x65 -> MAP_BATTLE_TOWER_OUTSIDE (14,8)"
+position = Vector2(104, 134)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "torre_batalla_exterior"
+posicion_destino = Vector2(14, 8)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1852013494]
+editor_description = "pokeruby BattleTower_Lobby warp 1 (7,8) MB 0x65 -> MAP_BATTLE_TOWER_OUTSIDE (14,8)"
+position = Vector2(120, 134)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "torre_batalla_exterior"
+posicion_destino = Vector2(14, 8)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp3" type="Sprite2D" parent="." unique_id=2118278131]
+editor_description = "pokeruby BattleTower_Lobby warp 2 (6,1) MB 0x69 -> MAP_BATTLE_TOWER_BATTLE_ROOM (5,8)"
+position = Vector2(104, 22)
+script = ExtResource("4_warp")
+tipo_warp = 2
+estilo_warp = 33
+ruta_mapa_destino = "torre_batalla_sala"
+posicion_destino = Vector2(5, 8)
+direccion = Vector2(0, -1)
+con_llave = true
+
+[node name="Eventos" type="Node2D" parent="." unique_id=911143122]
+
+[node name="Evento" type="Node2D" parent="Eventos" unique_id=908605809]
+script = ExtResource("7_evento")
+recepcionista = NodePath("../../NPCs/Recepcionista")
+dueno = NodePath("../../NPCs/Dueno")
+hombre = NodePath("../../NPCs/Hombre")
+reportera = NodePath("../../NPCs/Reportera")
+cartel_records = NodePath("../../Carteles/Records")
+puerta_ascensor = NodePath("../../Warp3")
+
+[node name="Carteles" type="Node2D" parent="." unique_id=772067710]
+
+[node name="Records" type="Sprite2D" parent="Carteles" unique_id=1112147742 groups=["Cartel"]]
+editor_description = "pokeruby BattleTower_Lobby bg_event (3,5) BattleTower_Lobby_EventScript_160727"
+position = Vector2(56, 88)
+script = ExtResource("8_cartel")
+id_texto = "TORRE_BATALLA_RESULTADOS"
+coord_tile = Vector2i(3, 5)
+
+[node name="EventoPC" type="Node2D" parent="Carteles" unique_id=1601157830 groups=["Cartel"]]
+editor_description = "pokeruby BattleTower_Lobby metatile PC (11,1) MB_PC 0x83"
+position = Vector2(184, 24)
+script = ExtResource("9_pc")
+coord_tile = Vector2i(11, 1)
+id_texto = "ACCESO_PC"
+pantalla = NodePath("../../TilesAlternos/PantallaPC")
+
+[node name="TilesAlternos" type="Node2D" parent="." unique_id=1191901010]
+
+[node name="PantallaPC" type="Node2D" parent="TilesAlternos" unique_id=1191901011]
+editor_description = "METATILE_Building_PC_On de pokeruby: pantalla encendida del PC"
+position = Vector2(184, 24)
+script = ExtResource("10_tile_alterno")
+capa = NodePath("../../Suelo")
+coord_tile = Vector2i(11, 1)
+fuente_atlas = 1
+atlas_alterno = Vector2i(23, 8)

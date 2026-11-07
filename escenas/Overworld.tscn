@@ -1,0 +1,225 @@
+[gd_scene format=3 uid="uid://dcfu7ud1y4ux1"]
+
+[ext_resource type="PackedScene" uid="uid://cx6hr6u4302t0" path="res://escenas/mapas/ruta_101.tscn" id="1_n1n7x"]
+[ext_resource type="PackedScene" uid="uid://dsh1d25m4digp" path="res://escenas/mapas/Villa Raíz/villa_raiz.tscn" id="2_y0c6u"]
+[ext_resource type="PackedScene" uid="uid://diixosrbk1ah0" path="res://escenas/mapas/Pueblo Escaso/pueblo_escaso.tscn" id="3_os6aj"]
+[ext_resource type="PackedScene" uid="uid://dx0kv0c2hx7hw" path="res://escenas/mapas/ruta_102.tscn" id="4_lgfwi"]
+[ext_resource type="PackedScene" uid="uid://dx3swt6p7d2i" path="res://escenas/mapas/ruta_103.tscn" id="5_k642t"]
+[ext_resource type="PackedScene" uid="uid://5t4f2n404bmk" path="res://escenas/mapas/ciudad-petalia/ciudad_petalia.tscn" id="6_uno4m"]
+[ext_resource type="PackedScene" uid="uid://5x56lwnq67ge" path="res://escenas/mapas/ruta_104.tscn" id="7_y0c6u"]
+[ext_resource type="PackedScene" uid="uid://qae0clcb4gvp" path="res://escenas/mapas/ruta_105.tscn" id="8_os6aj"]
+[ext_resource type="PackedScene" uid="uid://b3frhkifxr1hd" path="res://escenas/mapas/ruta_106.tscn" id="9_k642t"]
+[ext_resource type="PackedScene" uid="uid://dvce6do4ckkf" path="res://escenas/mapas/pueblo-azuliza/pueblo_azuliza.tscn" id="10_uno4m"]
+[ext_resource type="PackedScene" uid="uid://b5qk33coil0pp" path="res://escenas/mapas/ruta_107.tscn" id="11_uno4m"]
+[ext_resource type="PackedScene" uid="uid://cvhhxgqosubj7" path="res://escenas/mapas/ruta_108.tscn" id="12_vqc37"]
+[ext_resource type="PackedScene" uid="uid://bqht1klbqwk5s" path="res://escenas/mapas/ruta_109.tscn" id="13_x4vdo"]
+[ext_resource type="PackedScene" uid="uid://qk4ebk6vwylm" path="res://escenas/mapas/ciudad-portual/ciudad_portual.tscn" id="14_482ev"]
+[ext_resource type="PackedScene" uid="uid://bnjsw6i22h6c" path="res://escenas/mapas/ruta_110.tscn" id="15_ek3wr"]
+[ext_resource type="PackedScene" uid="uid://c5wx7j7ujchw2" path="res://escenas/mapas/ciudad-malvalona/ciudad_malvalona.tscn" id="16_qdt62"]
+[ext_resource type="PackedScene" uid="uid://cix0qs8q4c5do" path="res://escenas/mapas/ruta_117.tscn" id="17_tek4f"]
+[ext_resource type="PackedScene" uid="uid://bcudn3hf2gg7m" path="res://escenas/mapas/pueblo_verdegal/pueblo_verdegal.tscn" id="18_qenbl"]
+[ext_resource type="PackedScene" uid="uid://b1lgo88o26beo" path="res://escenas/mapas/ruta_116.tscn" id="19_4ocj5"]
+[ext_resource type="PackedScene" uid="uid://fmuwkg0smna3" path="res://escenas/mapas/ciudad_ferrica/ciudad_ferrica.tscn" id="20_c7etu"]
+[ext_resource type="PackedScene" uid="uid://wmhtsd1wrfcx" path="res://escenas/mapas/ruta_115.tscn" id="21_hm4aw"]
+[ext_resource type="PackedScene" uid="uid://bxkmvx6p4g25q" path="res://escenas/mapas/ruta_114.tscn" id="22_87k0r"]
+[ext_resource type="PackedScene" uid="uid://ci6uir6uthuix" path="res://escenas/mapas/ruta_113.tscn" id="23_ip6es"]
+[ext_resource type="PackedScene" uid="uid://bohk4ahm5e7rd" path="res://escenas/mapas/pueblo-lavacalda/pueblo_lavacalda.tscn" id="24_gqs4t"]
+[ext_resource type="PackedScene" uid="uid://cslyqk25qgsor" path="res://escenas/mapas/ruta_111.tscn" id="25_cehl1"]
+[ext_resource type="PackedScene" uid="uid://uj82n6qumxdt" path="res://escenas/mapas/ruta_112.tscn" id="26_1jsg2"]
+[ext_resource type="PackedScene" uid="uid://20eifhnw1x4s" path="res://escenas/mapas/pueblo-pardal/pueblo_pardal.tscn" id="26_cehl1"]
+[ext_resource type="PackedScene" uid="uid://cnsxdkix8rtdp" path="res://escenas/mapas/ruta_118.tscn" id="28_x5y1m"]
+[ext_resource type="PackedScene" uid="uid://ckblstnqpu0i7" path="res://escenas/mapas/ruta_119.tscn" id="29_rynqa"]
+[ext_resource type="PackedScene" uid="uid://kfmv66j7rohs" path="res://escenas/mapas/ciudad-arborada/ciudad_arborada.tscn" id="30_rynqa"]
+[ext_resource type="PackedScene" uid="uid://bi7hpnx6k8pw3" path="res://escenas/mapas/ruta_120.tscn" id="31_3hfey"]
+[ext_resource type="PackedScene" uid="uid://deqgq6d4rnf8e" path="res://escenas/mapas/ruta_121.tscn" id="32_bi372"]
+[ext_resource type="PackedScene" uid="uid://dgvrfyny2ud3r" path="res://escenas/mapas/ruta_122.tscn" id="33_n42on"]
+[ext_resource type="PackedScene" uid="uid://cdqat12yqoyyp" path="res://escenas/mapas/ruta_123.tscn" id="34_fgige"]
+[ext_resource type="PackedScene" uid="uid://gd5m7wfr1i4k" path="res://escenas/mapas/ciudad-calagua/ciudad_calagua.tscn" id="35_uwg1m"]
+[ext_resource type="PackedScene" uid="uid://2kkpxmyi5q01" path="res://escenas/mapas/ruta_124.tscn" id="36_vbrc4"]
+[ext_resource type="PackedScene" uid="uid://ccws3r8vit3as" path="res://escenas/mapas/ruta_125.tscn" id="37_r88pr"]
+[ext_resource type="PackedScene" uid="uid://b6rcvw7d7dlmw" path="res://escenas/mapas/ruta_126.tscn" id="38_sulee"]
+[ext_resource type="PackedScene" uid="uid://d1no3qe4ha7s3" path="res://escenas/mapas/ruta_127.tscn" id="39_cipfa"]
+[ext_resource type="PackedScene" uid="uid://du13c6anurvb6" path="res://escenas/mapas/ruta_128.tscn" id="40_glp8w"]
+[ext_resource type="PackedScene" uid="uid://c2fq2gpxj85hm" path="res://escenas/mapas/ruta_129.tscn" id="41_5ki4c"]
+[ext_resource type="PackedScene" uid="uid://chekkxlxgabyr" path="res://escenas/mapas/ruta_130.tscn" id="42_0gk3n"]
+[ext_resource type="PackedScene" uid="uid://ber81f1rmf1qo" path="res://escenas/mapas/ruta_131.tscn" id="43_ipngn"]
+[ext_resource type="PackedScene" uid="uid://c35vmv5d8uhe5" path="res://escenas/mapas/pueblo-oromar/pueblo_oromar.tscn" id="44_brytf"]
+[ext_resource type="PackedScene" uid="uid://b8vbc655we42" path="res://escenas/mapas/ruta_132.tscn" id="45_act7r"]
+[ext_resource type="PackedScene" uid="uid://bwythcrvx0rxx" path="res://escenas/mapas/ruta_133.tscn" id="46_d4apa"]
+[ext_resource type="PackedScene" uid="uid://byg7o4qekh53d" path="res://escenas/mapas/ruta_134.tscn" id="47_4yy5i"]
+[ext_resource type="PackedScene" uid="uid://bqq637jcyddu" path="res://escenas/mapas/ciudad-algaria/ciudad_algaria.tscn" id="48_act7r"]
+[ext_resource type="PackedScene" uid="uid://8hgkubvo08tf" path="res://escenas/mapas/ciudad-colosalia/ciudad_colosalia.tscn" id="49_d4apa"]
+[ext_resource type="PackedScene" uid="uid://bjdok5bqmglbr" path="res://escenas/mapas/inventados/ciudad_brumaria.tscn" id="60_inv0"]
+[ext_resource type="PackedScene" uid="uid://e6inpi3qjdfd" path="res://escenas/mapas/inventados/ruta_201.tscn" id="61_inv1"]
+[ext_resource type="PackedScene" uid="uid://hu2wua512an2" path="res://escenas/mapas/inventados/ruta_202.tscn" id="62_inv2"]
+[ext_resource type="PackedScene" uid="uid://qd862j68teeh" path="res://escenas/mapas/inventados/pueblo_liquen.tscn" id="63_inv3"]
+
+[node name="Overworld" type="Node2D" unique_id=625047092]
+
+[node name="Ruta101" parent="." unique_id=144801492 instance=ExtResource("1_n1n7x")]
+position = Vector2(0, -320)
+
+[node name="VillaRaiz" parent="." unique_id=546849924 instance=ExtResource("2_y0c6u")]
+
+[node name="PuebloEscaso" parent="." unique_id=1667082051 instance=ExtResource("3_os6aj")]
+position = Vector2(128, -640)
+
+[node name="Ruta 102" parent="." unique_id=171568320 instance=ExtResource("4_lgfwi")]
+position = Vector2(-672, -704)
+
+[node name="Ruta 103" parent="." unique_id=912338508 instance=ExtResource("5_k642t")]
+position = Vector2(32, -1024)
+
+[node name="CiudadPetalia" parent="." unique_id=1460724899 instance=ExtResource("6_uno4m")]
+position = Vector2(-1152, -832)
+
+[node name="Ruta104" parent="." unique_id=1356793521 instance=ExtResource("7_y0c6u")]
+position = Vector2(-1824, -1600)
+
+[node name="Ruta105" parent="." unique_id=1347515712 instance=ExtResource("8_os6aj")]
+position = Vector2(-1824, -320)
+
+[node name="Ruta106" parent="." unique_id=477078107 instance=ExtResource("9_k642t")]
+position = Vector2(-1792, 960)
+
+[node name="PuebloAzuliza" parent="." unique_id=2112005613 instance=ExtResource("10_uno4m")]
+position = Vector2(-928, 1280)
+
+[node name="Ruta107" parent="." unique_id=4287046 instance=ExtResource("11_uno4m")]
+position = Vector2(-512, 1280)
+
+[node name="Ruta108" parent="." unique_id=2133175404 instance=ExtResource("12_vqc37")]
+position = Vector2(448, 1280)
+
+[node name="Ruta109" parent="." unique_id=77146815 instance=ExtResource("13_x4vdo")]
+position = Vector2(1376, 640)
+
+[node name="CiudadPortual" parent="." unique_id=1338050379 instance=ExtResource("14_482ev")]
+position = Vector2(1408, -320)
+
+[node name="Ruta110" parent="." unique_id=720716573 instance=ExtResource("15_ek3wr")]
+position = Vector2(1408, -1920)
+
+[node name="CiudadMalvalona" parent="." unique_id=2049802216 instance=ExtResource("16_qdt62")]
+position = Vector2(1408, -2240)
+
+[node name="Ruta117" parent="." unique_id=1166019598 instance=ExtResource("17_tek4f")]
+position = Vector2(448, -2240)
+
+[node name="PuebloVerdegal" parent="." unique_id=1372715821 instance=ExtResource("18_qenbl")]
+position = Vector2(128, -2240)
+
+[node name="Ruta116" parent="." unique_id=1101026835 instance=ExtResource("19_4ocj5")]
+position = Vector2(-1152, -2592)
+
+[node name="CiudadFerrica" parent="." unique_id=1943593369 instance=ExtResource("20_c7etu")]
+position = Vector2(-1792, -2560)
+
+[node name="Ruta115" parent="." unique_id=371735921 instance=ExtResource("21_hm4aw")]
+position = Vector2(-1456, -3296)
+
+[node name="Ruta114" parent="." unique_id=1399880030 instance=ExtResource("22_87k0r")]
+position = Vector2(-1152, -4480)
+
+[node name="Ruta113" parent="." unique_id=2070097334 instance=ExtResource("23_ip6es")]
+position = Vector2(-192, -4480)
+
+[node name="Ruta111" parent="." unique_id=913221232 instance=ExtResource("25_cehl1")]
+position = Vector2(1408, -4480)
+
+[node name="Ruta112" parent="." unique_id=126320368 instance=ExtResource("26_1jsg2")]
+position = Vector2(768, -4160)
+
+[node name="PuebloPardal" parent="." unique_id=1403402791 instance=ExtResource("26_cehl1")]
+position = Vector2(-512, -4480)
+
+[node name="PuebloLavacalda" parent="." unique_id=1326241202 instance=ExtResource("24_gqs4t")]
+position = Vector2(448, -3520)
+
+[node name="Ruta118" parent="." unique_id=1122500374 instance=ExtResource("28_x5y1m")]
+position = Vector2(2048, -2240)
+
+[node name="Ruta119" parent="." unique_id=388551393 instance=ExtResource("29_rynqa")]
+position = Vector2(2688, -4480)
+
+[node name="CiudadArborada" parent="." unique_id=1029074204 instance=ExtResource("30_rynqa")]
+position = Vector2(3328, -4480)
+
+[node name="Ruta120" parent="." unique_id=97670590 instance=ExtResource("31_3hfey")]
+position = Vector2(3968, -4480)
+
+[node name="Ruta121" parent="." unique_id=1140912159 instance=ExtResource("32_bi372")]
+position = Vector2(4608, -3200)
+
+[node name="Ruta122" parent="." unique_id=1542035380 instance=ExtResource("33_n42on")]
+position = Vector2(4928, -2880)
+
+[node name="Ruta123" parent="." unique_id=1164933878 instance=ExtResource("34_fgige")]
+position = Vector2(3328, -2240)
+
+[node name="CiudadCalagua" parent="." unique_id=2067694621 instance=ExtResource("35_uwg1m")]
+position = Vector2(5888, -3360)
+poi_mapa_region = ""
+casilla_mapa_region = Vector2i(-1, -1)
+
+[node name="Ruta124" parent="." unique_id=441185224 instance=ExtResource("36_vbrc4")]
+position = Vector2(7168, -3520)
+
+[node name="Ruta125" parent="." unique_id=484108848 instance=ExtResource("37_r88pr")]
+position = Vector2(8448, -3520)
+
+[node name="Ruta126" parent="." unique_id=1740290092 instance=ExtResource("38_sulee")]
+position = Vector2(7168, -2240)
+
+[node name="Ruta127" parent="." unique_id=823314637 instance=ExtResource("39_cipfa")]
+position = Vector2(8448, -2240)
+
+[node name="Ruta128" parent="." unique_id=789300317 instance=ExtResource("40_glp8w")]
+position = Vector2(8448, -960)
+
+[node name="Ruta129" parent="." unique_id=1554585612 instance=ExtResource("41_5ki4c")]
+position = Vector2(8448, -320)
+
+[node name="Ruta130" parent="." unique_id=1236430807 instance=ExtResource("42_0gk3n")]
+position = Vector2(7168, -320)
+
+[node name="Ruta131" parent="." unique_id=631430771 instance=ExtResource("43_ipngn")]
+position = Vector2(6208, -320)
+
+[node name="PuebloOromar" parent="." unique_id=1743308293 instance=ExtResource("44_brytf")]
+position = Vector2(5888, -320)
+
+[node name="Ruta132" parent="." unique_id=6287902 instance=ExtResource("45_act7r")]
+position = Vector2(4608, -320)
+
+[node name="Ruta133" parent="." unique_id=1110667172 instance=ExtResource("46_d4apa")]
+position = Vector2(3328, -320)
+
+[node name="Ruta134" parent="." unique_id=1182077729 instance=ExtResource("47_4yy5i")]
+position = Vector2(2048, -320)
+
+[node name="CiudadAlgaria" parent="." unique_id=105839778 instance=ExtResource("48_act7r")]
+position = Vector2(8448, -2880)
+
+[node name="CiudadColosalia" parent="." unique_id=2123813984 instance=ExtResource("49_d4apa")]
+position = Vector2(10368, -1600)
+
+[node name="CiudadBrumaria" parent="." unique_id=1999445746 instance=ExtResource("60_inv0")]
+position = Vector2(0, 6400)
+
+[node name="Ruta201" parent="." unique_id=329421843 instance=ExtResource("61_inv1")]
+position = Vector2(128, 6912)
+
+[node name="Ruta202" parent="." unique_id=1577633447 instance=ExtResource("62_inv2")]
+position = Vector2(640, 6496)
+
+[node name="PuebloLiquen" parent="." unique_id=1232203923 instance=ExtResource("63_inv3")]
+position = Vector2(1536, 6496)
+
+[node name="ZonaSafari" parent="." unique_id=43704657 instance_placeholder="res://escenas/regiones/region_zona_safari.tscn"]
+visible = false
+position = Vector2(4864, -4752)
+
+[node name="BajoElAgua" parent="." unique_id=2021795877 instance_placeholder="res://escenas/regiones/region_bajo_agua.tscn"]
+visible = false
+position = Vector2(7168, -3520)

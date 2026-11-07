@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://c2bypamxpcum1"]
+
+[ext_resource type="Texture2D" uid="uid://ce7nwxakx4ee0" path="res://escenas/pantalla_inicio/graficos/energia3.png" id="1_mir5c"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_mir5c")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]

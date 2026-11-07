@@ -1,0 +1,238 @@
+{
+	"version": 1,
+	"sha1_rom": "ae35f6fd52a9258b794d7d3f4c784b8ee3fcde5c",
+	"sha256_rom": "2fd6f3cb65c85880aaadea429af67a7a401b34443bae06125fa787018fcda9a3",
+	"fuentes_decomp": {
+		"charmap.txt": "8c1db143d4f5f8186a6853d076b8b5dbd5d505b64e3c04ed79fe75afa54b7e9c",
+		"data/scripts/shared_secret_base.inc": "4b872ba0c897acb779165989be18f5e889ca6c4f467fd04f34111b40b66fd32f",
+		"data/text/secret_base.inc": "2e1b58d88b998b1beaf4fa0c8c5f4103b21e08cde174e5bf1f86bcf348e34a81",
+		"src/decoration.c": "8c5e0c816fd041844dfb73805d1a844657a6f755db26b6e467dbf6e14ab7cbfa",
+		"src/fldeff_secret_base_pc.c": "0de66ae9f77f770f1f8b52691a474c87c216cd3da59fd376f524996f3f2ae965",
+		"src/script_menu.c": "4181140ca38ad92b7e18b72c37b1f225e7ef57fdc9d28863202e8248d3032674",
+		"src/strings.c": "3eebccce0d00efa373f36fea6e823c23d1553dc3a3e2ba2cc22778c129c16100"
+	},
+	"textos": [
+		{
+			"clave": "BASES_PC_INICIO",
+			"direccion": "0x081A6DE6",
+			"raw_hex": "FD0100D9E2D7D9E2D8DD2300D9E000CABDADFF",
+			"texto_es": "{nombre} encendió el PC."
+		},
+		{
+			"clave": "BASES_PC_PREGUNTA",
+			"direccion": "0x081A6DF9",
+			"raw_hex": "51CBE91B00E5E9DDD9E6D9E700DCD5D7D9E6ACFF",
+			"texto_es": "¿Qué quieres hacer?"
+		},
+		{
+			"clave": "BASES_PC_DECORACION",
+			"direccion": "0x0841395B",
+			"raw_hex": "BEBFBDC9CCBBBDC30EC8FF",
+			"texto_es": "DECORACIÓN"
+		},
+		{
+			"clave": "BASES_PC_RECOGER",
+			"direccion": "0x08413966",
+			"raw_hex": "CCBFBDC9C1BFCCFF",
+			"texto_es": "RECOGER"
+		},
+		{
+			"clave": "BASES_PC_SALIR",
+			"direccion": "0x08411D03",
+			"raw_hex": "CDBBC6C3CCFF",
+			"texto_es": "SALIR"
+		},
+		{
+			"clave": "BASES_PC_DECORAR",
+			"direccion": "0x084130A9",
+			"raw_hex": "BEBFBDC9CCBBCCFF",
+			"texto_es": "DECORAR"
+		},
+		{
+			"clave": "BASES_PC_GUARDAR",
+			"direccion": "0x084130B1",
+			"raw_hex": "C1CFBBCCBEBBCCFF",
+			"texto_es": "GUARDAR"
+		},
+		{
+			"clave": "BASES_PC_TIRAR",
+			"direccion": "0x084130B9",
+			"raw_hex": "CEC3CCBBCCFF",
+			"texto_es": "TIRAR"
+		},
+		{
+			"clave": "BASES_PC_SALIR_DECORACION",
+			"direccion": "0x08411CFD",
+			"raw_hex": "CDBBC6C3CCFF",
+			"texto_es": "SALIR"
+		},
+		{
+			"clave": "BASES_PC_AYUDA_DECORAR",
+			"direccion": "0x084130BF",
+			"raw_hex": "BFE7D7E3DBD9E600E9E200E3D6DED9E8E300E4D5E6D500D8D9D7E3E6D5E6ADFF",
+			"texto_es": "Escoger un objeto para decorar."
+		},
+		{
+			"clave": "BASES_PC_AYUDA_GUARDAR",
+			"direccion": "0x084130DF",
+			"raw_hex": "C1E9D5E6D8D5E600D9E000D5D8E3E6E2E300D9E7D7E3DBDDD8E300D9E200D9E000CABDADFF",
+			"texto_es": "Guardar el adorno escogido en el PC."
+		},
+		{
+			"clave": "BASES_PC_AYUDA_TIRAR",
+			"direccion": "0x08413104",
+			"raw_hex": "BFE0DDE1DDE2D5E600E0E3E700D5D8E3E6E2E3E700E2E300D8D9E7D9D5D8E3E7ADFF",
+			"texto_es": "Eliminar los adornos no deseados."
+		},
+		{
+			"clave": "BASES_PC_AYUDA_SALIR",
+			"direccion": "0x08411D5A",
+			"raw_hex": "D0E3E0EAD9E600D5E000E1D9E227FED5E2E8D9E6DDE3E6ADFF",
+			"texto_es": "Volver al menú\nanterior."
+		},
+		{
+			"clave": "BASES_EDITOR_VACIO",
+			"direccion": "0x08413126",
+			"raw_hex": "C8E300DCD5ED00E3D6DED9E8E3E700E4D5E6D500D8D9D7E3E6D5E6ADFC09FF",
+			"texto_es": "No hay objetos para decorar."
+		},
+		{
+			"clave": "BASES_CAT_MESAS",
+			"direccion": "0x08413145",
+			"raw_hex": "C7BFCDBBFF",
+			"texto_es": "MESA"
+		},
+		{
+			"clave": "BASES_CAT_SILLAS",
+			"direccion": "0x0841314A",
+			"raw_hex": "CDC3C6C6BBFF",
+			"texto_es": "SILLA"
+		},
+		{
+			"clave": "BASES_CAT_PLANTAS",
+			"direccion": "0x08413150",
+			"raw_hex": "CAC6BBC8CEBBFF",
+			"texto_es": "PLANTA"
+		},
+		{
+			"clave": "BASES_CAT_ADORNOS",
+			"direccion": "0x08413157",
+			"raw_hex": "BBBEC9CCC8C9FF",
+			"texto_es": "ADORNO"
+		},
+		{
+			"clave": "BASES_CAT_ALFOMBRAS",
+			"direccion": "0x0841315E",
+			"raw_hex": "CEBBCABFCEBFFF",
+			"texto_es": "TAPETE"
+		},
+		{
+			"clave": "BASES_CAT_POSTERES",
+			"direccion": "0x08413165",
+			"raw_hex": "CA0ECDCEBFCCFF",
+			"texto_es": "PÓSTER"
+		},
+		{
+			"clave": "BASES_CAT_MUNECOS",
+			"direccion": "0x0841316C",
+			"raw_hex": "C7CF14BFBDC9FF",
+			"texto_es": "MUÑECO"
+		},
+		{
+			"clave": "BASES_CAT_COJINES",
+			"direccion": "0x08413173",
+			"raw_hex": "BDC9C45AC8FF",
+			"texto_es": "COJÍN"
+		},
+		{
+			"clave": "BASES_EDITOR_COLOCAR",
+			"direccion": "0x08413183",
+			"raw_hex": "51C6E300D7E3E0E3D7D5E700D5E5E96FACFF",
+			"texto_es": "¿Lo colocas aquí?"
+		},
+		{
+			"clave": "BASES_EDITOR_INVALIDO",
+			"direccion": "0x08413195",
+			"raw_hex": "BBE5E96F00E2E300E7D900E4E9D9D8D900D7E3E0E3D7D5E6ADFF",
+			"texto_es": "Aquí no se puede colocar."
+		},
+		{
+			"clave": "BASES_EDITOR_CANCELAR",
+			"direccion": "0x084131AF",
+			"raw_hex": "51CBE9DDD9E6D9E700D8D9DED5E600D8D900D8D9D7E3E6D5E6ACFF",
+			"texto_es": "¿Quieres dejar de decorar?"
+		},
+		{
+			"clave": "BASES_EDITOR_EN_USO",
+			"direccion": "0x084131CA",
+			"raw_hex": "D3D500E7D900D9E7E81700E9E8DDE0DDEED5E2D8E3ADFF",
+			"texto_es": "Ya se está utilizando."
+		},
+		{
+			"clave": "BASES_EDITOR_LIMITE",
+			"direccion": "0x084131E1",
+			"raw_hex": "C8E300E7D900E4E9D9D8D9E200D7E3E0E3D7D5E600E117E700D5D8E3E6E2E3E7ADFEC6D500D7D5E2E8DDD8D5D800E117ECDDE1D500E4D9E6E1DDE8DDD8D500D9E700FD02ADFF",
+			"texto_es": "No se pueden colocar más adornos.\nLa cantidad máxima permitida es {cantidad}."
+		},
+		{
+			"clave": "BASES_EDITOR_APOYO",
+			"direccion": "0x0841326D",
+			"raw_hex": "BBE5E96F00E2E300E7D900E4E9D9D8D900D7E3E0E3D7D5E600D9E7E8E3ADFECDD900D8D9D6D900D7E3E0E3D7D5E600E7E3D6E6D900E9E2D500C7BFCDBBB800D9E8D7ADFF",
+			"texto_es": "Aquí no se puede colocar esto.\nSe debe colocar sobre una MESA, etc."
+		},
+		{
+			"clave": "BASES_EDITOR_HABITACION",
+			"direccion": "0x084132B1",
+			"raw_hex": "BFE7E8D900D5D8E3E6E2E300E2E300E7D900E4E9D9D8D900D7E3E0E3D7D5E6FED9E200E8E900DCD5D6DDE8D5D7DD23E2ADFF",
+			"texto_es": "Este adorno no se puede colocar\nen tu habitación."
+		},
+		{
+			"clave": "BASES_TIRAR_EN_USO",
+			"direccion": "0x084132E3",
+			"raw_hex": "BFE7E8D900D5D8E3E6E2E300E7D900D9E7E81700E9E7D5E2D8E3ADFEC8E300E7D900E4E9D9D8D900E8DDE6D5E6ADFF",
+			"texto_es": "Este adorno se está usando.\nNo se puede tirar."
+		},
+		{
+			"clave": "BASES_TIRAR_CONFIRMAR",
+			"direccion": "0x08413312",
+			"raw_hex": "51CDD9DBE9E6E300E5E9D900E5E9DDD9E6D9E700FEE8DDE6D5E600FD02ACFF",
+			"texto_es": "¿Seguro que quieres \ntirar {cantidad}?"
+		},
+		{
+			"clave": "BASES_TIRAR_FIN",
+			"direccion": "0x08413331",
+			"raw_hex": "C2D5E700E8DDE6D5D8E300D9E000D5D8E3E6E2E3ADFF",
+			"texto_es": "Has tirado el adorno."
+		},
+		{
+			"clave": "BASES_GUARDAR_CANCELAR",
+			"direccion": "0x08413347",
+			"raw_hex": "51CBE9DDD9E6D9E700D8D9DED5E600D8D900DBE9D5E6D8D5E600D5D8E3E6E2E3E7ACFF",
+			"texto_es": "¿Quieres dejar de guardar adornos?"
+		},
+		{
+			"clave": "BASES_GUARDAR_NADA",
+			"direccion": "0x0841336A",
+			"raw_hex": "BBE5E96F00E2E300DCD5ED00D5D8E3E6E2E3E7ADFF",
+			"texto_es": "Aquí no hay adornos."
+		},
+		{
+			"clave": "BASES_GUARDAR_CONFIRMAR",
+			"direccion": "0x0841337F",
+			"raw_hex": "51D0E9D9E0EAD9E700D500DBE9D5E6D8D5E6E0E300D9E200D9E000CABDACFF",
+			"texto_es": "¿Vuelves a guardarlo en el PC?"
+		},
+		{
+			"clave": "BASES_GUARDAR_FIN",
+			"direccion": "0x0841339E",
+			"raw_hex": "CDD900DCD500D8D9EAE9D9E0E8E300D9E000D5D8E3E6E2E300D5E000CABDADFF",
+			"texto_es": "Se ha devuelto el adorno al PC."
+		},
+		{
+			"clave": "BASES_GUARDAR_VACIO",
+			"direccion": "0x084133BE",
+			"raw_hex": "C8E300E7D900D9E7E817E200E9E7D5E2D8E300D5D8E3E6E2E3E7ADFC09FF",
+			"texto_es": "No se están usando adornos."
+		}
+	]
+}

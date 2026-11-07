@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cptois384l3xx"
+path="res://.godot/imported/PRSFX- Ember.wav-dbf0afd9d549d19b5cdc13b5c6dd2318.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Ember.wav"
+dest_files=["res://.godot/imported/PRSFX- Ember.wav-dbf0afd9d549d19b5cdc13b5c6dd2318.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

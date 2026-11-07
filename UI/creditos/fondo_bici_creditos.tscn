@@ -1,0 +1,330 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/creditos/fondo_bici_creditos.gd" id="raiz"]
+[ext_resource type="Script" path="res://UI/creditos/capa_fondo_creditos.gd" id="capa"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/oceano_dia_fondo.png" id="t0"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/oceano_dia_objetos_0100.png" id="t1"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/oceano_dia_objetos_0400.png" id="t2"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/oceano_dia_objetos_0800.png" id="t3"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/oceano_dia_objetos_0c00.png" id="t4"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/oceano_dia_medio.png" id="t5"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/cesped_dia.png" id="t6"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/oceano_atardecer_fondo.png" id="t7"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/oceano_atardecer_objetos_0100.png" id="t8"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/oceano_atardecer_objetos_0400.png" id="t9"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/oceano_atardecer_objetos_0800.png" id="t10"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/oceano_atardecer_objetos_0c00.png" id="t11"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/oceano_atardecer_medio.png" id="t12"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/cesped_tarde.png" id="t13"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/bosque_atardecer_fondo.png" id="t14"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/bosque_atardecer_objetos_0800.png" id="t15"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/bosque_atardecer_objetos_1000.png" id="t16"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/bosque_atardecer_objetos_2000.png" id="t17"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/bosque_atardecer_medio.png" id="t18"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/noche_fondo.png" id="t19"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/noche_objetos_1000.png" id="t20"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/noche_medio.png" id="t21"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fondos/cesped_noche.png" id="t22"]
+
+[node name="FondoBiciCreditos" type="Node2D"]
+script = ExtResource("raiz")
+
+[node name="oceano_dia" type="Node2D" parent="."]
+visible = false
+
+[node name="Fondo" type="Sprite2D" parent="oceano_dia"]
+texture_repeat = 2
+texture = ExtResource("t0")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.001953125
+usa_bob = false
+ancho = 256
+cuadros = 2
+
+[node name="Objetos0100" type="Sprite2D" parent="oceano_dia"]
+texture_repeat = 2
+texture = ExtResource("t1")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.00390625
+usa_bob = false
+ancho = 288
+cuadros = 1
+
+[node name="Objetos0400" type="Sprite2D" parent="oceano_dia"]
+texture_repeat = 2
+texture = ExtResource("t2")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.015625
+usa_bob = false
+ancho = 288
+cuadros = 1
+
+[node name="Objetos0800" type="Sprite2D" parent="oceano_dia"]
+texture_repeat = 2
+texture = ExtResource("t3")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.03125
+usa_bob = false
+ancho = 288
+cuadros = 1
+
+[node name="Objetos0c00" type="Sprite2D" parent="oceano_dia"]
+texture_repeat = 2
+texture = ExtResource("t4")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.046875
+usa_bob = false
+ancho = 288
+cuadros = 1
+
+[node name="Medio" type="Sprite2D" parent="oceano_dia"]
+texture_repeat = 2
+texture = ExtResource("t5")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.0078125
+usa_bob = false
+ancho = 256
+cuadros = 2
+
+[node name="Cesped" type="Sprite2D" parent="oceano_dia"]
+texture_repeat = 2
+texture = ExtResource("t6")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 2.0
+usa_bob = true
+ancho = 256
+cuadros = 1
+
+[node name="oceano_atardecer" type="Node2D" parent="."]
+visible = false
+
+[node name="Fondo" type="Sprite2D" parent="oceano_atardecer"]
+texture_repeat = 2
+texture = ExtResource("t7")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.001953125
+usa_bob = false
+ancho = 256
+cuadros = 2
+
+[node name="Objetos0100" type="Sprite2D" parent="oceano_atardecer"]
+texture_repeat = 2
+texture = ExtResource("t8")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.00390625
+usa_bob = false
+ancho = 288
+cuadros = 1
+
+[node name="Objetos0400" type="Sprite2D" parent="oceano_atardecer"]
+texture_repeat = 2
+texture = ExtResource("t9")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.015625
+usa_bob = false
+ancho = 288
+cuadros = 1
+
+[node name="Objetos0800" type="Sprite2D" parent="oceano_atardecer"]
+texture_repeat = 2
+texture = ExtResource("t10")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.03125
+usa_bob = false
+ancho = 288
+cuadros = 1
+
+[node name="Objetos0c00" type="Sprite2D" parent="oceano_atardecer"]
+texture_repeat = 2
+texture = ExtResource("t11")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.046875
+usa_bob = false
+ancho = 288
+cuadros = 1
+
+[node name="Medio" type="Sprite2D" parent="oceano_atardecer"]
+texture_repeat = 2
+texture = ExtResource("t12")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.0078125
+usa_bob = false
+ancho = 256
+cuadros = 2
+
+[node name="Cesped" type="Sprite2D" parent="oceano_atardecer"]
+texture_repeat = 2
+texture = ExtResource("t13")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 2.0
+usa_bob = true
+ancho = 256
+cuadros = 1
+
+[node name="bosque_atardecer" type="Node2D" parent="."]
+visible = false
+
+[node name="Fondo" type="Sprite2D" parent="bosque_atardecer"]
+texture_repeat = 2
+texture = ExtResource("t14")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.001953125
+usa_bob = false
+ancho = 256
+cuadros = 1
+
+[node name="Objetos0800" type="Sprite2D" parent="bosque_atardecer"]
+texture_repeat = 2
+texture = ExtResource("t15")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.03125
+usa_bob = true
+ancho = 288
+cuadros = 1
+
+[node name="Objetos1000" type="Sprite2D" parent="bosque_atardecer"]
+texture_repeat = 2
+texture = ExtResource("t16")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.0625
+usa_bob = true
+ancho = 288
+cuadros = 1
+
+[node name="Objetos2000" type="Sprite2D" parent="bosque_atardecer"]
+texture_repeat = 2
+texture = ExtResource("t17")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.125
+usa_bob = true
+ancho = 288
+cuadros = 1
+
+[node name="Medio" type="Sprite2D" parent="bosque_atardecer"]
+texture_repeat = 2
+texture = ExtResource("t18")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.125
+usa_bob = true
+ancho = 256
+cuadros = 1
+
+[node name="Cesped" type="Sprite2D" parent="bosque_atardecer"]
+texture_repeat = 2
+texture = ExtResource("t13")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 2.0
+usa_bob = true
+ancho = 256
+cuadros = 1
+
+[node name="noche" type="Node2D" parent="."]
+visible = false
+
+[node name="Fondo" type="Sprite2D" parent="noche"]
+texture_repeat = 2
+texture = ExtResource("t19")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.001953125
+usa_bob = false
+ancho = 256
+cuadros = 2
+
+[node name="Objetos1000" type="Sprite2D" parent="noche"]
+texture_repeat = 2
+texture = ExtResource("t20")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.0625
+usa_bob = true
+ancho = 288
+cuadros = 1
+
+[node name="Medio" type="Sprite2D" parent="noche"]
+texture_repeat = 2
+texture = ExtResource("t21")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 0.125
+usa_bob = true
+ancho = 256
+cuadros = 2
+
+[node name="Cesped" type="Sprite2D" parent="noche"]
+texture_repeat = 2
+texture = ExtResource("t22")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 256)
+script = ExtResource("capa")
+velocidad = 2.0
+usa_bob = true
+ancho = 256
+cuadros = 1

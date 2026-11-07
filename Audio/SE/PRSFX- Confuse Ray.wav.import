@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bqdhaxng4f6pd"
+path="res://.godot/imported/PRSFX- Confuse Ray.wav-24d4803c769adbb24eaa62d03cb83f6a.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Confuse Ray.wav"
+dest_files=["res://.godot/imported/PRSFX- Confuse Ray.wav-24d4803c769adbb24eaa62d03cb83f6a.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

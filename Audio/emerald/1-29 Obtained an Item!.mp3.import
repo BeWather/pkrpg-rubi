@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bq8gyra46wxuy"
+path="res://.godot/imported/1-29 Obtained an Item!.mp3-a6033a876e7aeb94e3a6438905aa1b08.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-29 Obtained an Item!.mp3"
+dest_files=["res://.godot/imported/1-29 Obtained an Item!.mp3-a6033a876e7aeb94e3a6438905aa1b08.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

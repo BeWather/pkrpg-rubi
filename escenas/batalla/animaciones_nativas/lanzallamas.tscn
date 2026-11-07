@@ -1,0 +1,195 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/lanzallamas.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/small_ember_pal_29_32x32_16_32_48.png" id="2_ascua"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Flamethrower.wav" id="3_sonido"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ascua0"]
+atlas = ExtResource("2_ascua")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ascua1"]
+atlas = ExtResource("2_ascua")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ascua2"]
+atlas = ExtResource("2_ascua")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ascua"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ascua0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ascua1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ascua2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 30.0
+}]
+
+[sub_resource type="Animation" id="Animation_movimiento"]
+resource_name = "movimiento"
+length = 2.066667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1333, 0.1999, 0.2666, 0.3333, 0.3999, 0.4666, 0.5333, 0.5999, 0.6666, 0.7333, 0.7999, 0.8666, 0.9333, 0.9999, 1.0666, 1.1333, 1.1999, 1.2666, 1.3333, 1.3999, 1.4666, 1.5333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [0],
+"method": &"emitir_ascua"
+}, {
+"args": [1],
+"method": &"emitir_ascua"
+}, {
+"args": [2],
+"method": &"emitir_ascua"
+}, {
+"args": [3],
+"method": &"emitir_ascua"
+}, {
+"args": [4],
+"method": &"emitir_ascua"
+}, {
+"args": [5],
+"method": &"emitir_ascua"
+}, {
+"args": [6],
+"method": &"emitir_ascua"
+}, {
+"args": [7],
+"method": &"emitir_ascua"
+}, {
+"args": [8],
+"method": &"emitir_ascua"
+}, {
+"args": [9],
+"method": &"emitir_ascua"
+}, {
+"args": [10],
+"method": &"emitir_ascua"
+}, {
+"args": [11],
+"method": &"emitir_ascua"
+}, {
+"args": [12],
+"method": &"emitir_ascua"
+}, {
+"args": [13],
+"method": &"emitir_ascua"
+}, {
+"args": [14],
+"method": &"emitir_ascua"
+}, {
+"args": [15],
+"method": &"emitir_ascua"
+}, {
+"args": [16],
+"method": &"emitir_ascua"
+}, {
+"args": [17],
+"method": &"emitir_ascua"
+}, {
+"args": [18],
+"method": &"emitir_ascua"
+}, {
+"args": [19],
+"method": &"emitir_ascua"
+}, {
+"args": [20],
+"method": &"emitir_ascua"
+}, {
+"args": [21],
+"method": &"emitir_ascua"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5166, 0.6333, 2.0666),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [&"atacante", Vector2(0, 2), 46],
+"method": &"sacudir"
+}, {
+"args": [&"defensor", Vector2(3, 0), 43, 1, true],
+"method": &"sacudir"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:paneo")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1333, 1.1999),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [-1.0, -1.0, 1.0]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sonido")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_sonido")
+}],
+"times": PackedFloat32Array(0.1333)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lanzallamas"]
+_data = {
+&"movimiento": SubResource("Animation_movimiento")
+}
+
+[node name="Lanzallamas" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="PlantillaAscua" type="AnimatedSprite2D" parent="."]
+visible = false
+sprite_frames = SubResource("SpriteFrames_ascua")
+
+[node name="Sonido" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_lanzallamas")

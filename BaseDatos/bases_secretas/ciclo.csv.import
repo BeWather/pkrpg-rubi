@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://82sah6p7h3s0"
+
+[deps]
+
+files=["res://BaseDatos/bases_secretas/ciclo.es.translation", "res://BaseDatos/bases_secretas/ciclo.en.translation"]
+
+source_file="res://BaseDatos/bases_secretas/ciclo.csv"
+dest_files=["res://BaseDatos/bases_secretas/ciclo.es.translation", "res://BaseDatos/bases_secretas/ciclo.en.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

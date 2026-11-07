@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://bjypbxa2tdbnt"]
+
+[ext_resource type="Texture2D" uid="uid://b167p281afcl" path="res://graficos/batalla/batalla_cuadro_ps_jugador.png" id="1_7x23m"]
+[ext_resource type="Script" uid="uid://c2lxtbi1ctg0o" path="res://escenas/batalla/cuadro_ps_jugador.gd" id="1_lr76t"]
+[ext_resource type="LabelSettings" uid="uid://e3utr22k73we" path="res://escenas/batalla/label_batalla_cuadro_ps.tres" id="2_wosyx"]
+[ext_resource type="FontFile" uid="uid://buqx8cwqlfbej" path="res://fuentes/pkmnems.ttf" id="3_k0dqw"]
+[ext_resource type="Texture2D" uid="uid://cj24v7dtwrsko" path="res://graficos/batalla/batalla_estados.png" id="4_0qhcj"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wug8s"]
+font = ExtResource("3_k0dqw")
+font_size = 11
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ud7um"]
+atlas = ExtResource("4_0qhcj")
+region = Rect2(0, 0, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vaepx"]
+atlas = ExtResource("4_0qhcj")
+region = Rect2(0, 8, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emkbd"]
+atlas = ExtResource("4_0qhcj")
+region = Rect2(0, 16, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pcfbu"]
+atlas = ExtResource("4_0qhcj")
+region = Rect2(0, 24, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ktyiq"]
+atlas = ExtResource("4_0qhcj")
+region = Rect2(0, 32, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otbxp"]
+atlas = ExtResource("4_0qhcj")
+region = Rect2(0, 40, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ymfbk"]
+atlas = ExtResource("4_0qhcj")
+region = Rect2(0, 48, 24, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ttqiw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ud7um")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vaepx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emkbd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pcfbu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ktyiq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otbxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ymfbk")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CuadroPSJugador" type="Node2D" unique_id=446183747]
+texture_filter = 1
+script = ExtResource("1_lr76t")
+metadata/_edit_lock_ = true
+
+[node name="BatallaCuadroPsJugador" type="Sprite2D" parent="." unique_id=1448862535]
+texture = ExtResource("1_7x23m")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1526465849]
+offset_left = 15.0
+offset_top = 6.0
+offset_right = 97.0
+offset_bottom = 16.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 0
+metadata/_edit_lock_ = true
+
+[node name="LNombre" type="Label" parent="HBoxContainer" unique_id=1739298752]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "FLETCHINDER"
+label_settings = ExtResource("2_wosyx")
+metadata/_edit_lock_ = true
+
+[node name="LSexo" type="Label" parent="HBoxContainer" unique_id=848739696]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "♀"
+label_settings = SubResource("LabelSettings_wug8s")
+metadata/_edit_lock_ = true
+
+[node name="LNivel" type="Label" parent="." unique_id=1926775497]
+offset_left = 84.0
+offset_top = 6.0
+offset_right = 100.0
+offset_bottom = 16.0
+text = "100"
+label_settings = ExtResource("2_wosyx")
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=166620068]
+position = Vector2(12, 22)
+sprite_frames = SubResource("SpriteFrames_ttqiw")
+frame = 1
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="BarraSalud1" type="ColorRect" parent="." unique_id=754998667]
+offset_left = 48.0
+offset_top = 17.0
+offset_right = 96.0
+offset_bottom = 18.0
+color = Color(0.345098, 0.815686, 0.501961, 1)
+metadata/_edit_lock_ = true
+
+[node name="BarraSalud2" type="ColorRect" parent="." unique_id=1184558090]
+offset_left = 48.0
+offset_top = 18.0
+offset_right = 96.0
+offset_bottom = 19.0
+color = Color(0.439216, 0.972549, 0.658824, 1)
+metadata/_edit_lock_ = true
+
+[node name="LPSActual" type="Label" parent="." unique_id=1115385926]
+offset_left = 60.0
+offset_top = 22.0
+offset_right = 75.0
+offset_bottom = 32.0
+text = "20"
+label_settings = ExtResource("2_wosyx")
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="LPSTotal" type="Label" parent="." unique_id=182929085]
+offset_left = 80.0
+offset_top = 22.0
+offset_right = 95.0
+offset_bottom = 32.0
+text = "20"
+label_settings = ExtResource("2_wosyx")
+horizontal_alignment = 2
+metadata/_edit_lock_ = true
+
+[node name="BarraExperiencia" type="ColorRect" parent="." unique_id=1078970208]
+offset_left = 32.0
+offset_top = 33.0
+offset_right = 96.0
+offset_bottom = 35.0
+color = Color(0.25098, 0.784314, 0.972549, 1)
+metadata/_edit_lock_ = true
+
+[connection signal="resized" from="BarraSalud1" to="." method="_on_barra_salud_1_resized"]

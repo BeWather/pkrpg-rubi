@@ -1,0 +1,59 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/concurso/fila_resultado_concurso.gd" id="1_fila"]
+[ext_resource type="Texture2D" path="res://graficos/Icons/icon025.png" id="2_icono"]
+[ext_resource type="Texture2D" path="res://graficos/concurso/resultados_puestos.png" id="3_puestos"]
+[ext_resource type="FontFile" path="res://fuentes/pokemon-rs.ttf" id="4_fuente"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_nombre"]
+font = ExtResource("4_fuente")
+font_size = 15
+font_color = Color(0.25098, 0.25098, 0.25098, 1)
+shadow_color = Color(0.835294, 0.835294, 0.835294, 1)
+shadow_offset = Vector2(1, 1)
+
+[node name="FilaResultadoConcurso" type="Node2D"]
+script = ExtResource("1_fila")
+
+[node name="Resalte" type="ColorRect" parent="."]
+offset_left = 4.0
+offset_right = 236.0
+offset_bottom = 24.0
+mouse_filter = 2
+color = Color(1, 0.94, 0.55, 0)
+
+[node name="Icono" type="Sprite2D" parent="."]
+position = Vector2(24, 0)
+texture = ExtResource("2_icono")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 8, 32, 24)
+
+[node name="Mote" type="Label" parent="."]
+offset_left = 56.0
+offset_top = -2.0
+offset_right = 106.0
+offset_bottom = 14.0
+text = "MOTE"
+label_settings = SubResource("LabelSettings_nombre")
+
+[node name="Entrenador" type="Label" parent="."]
+offset_left = 106.0
+offset_top = -2.0
+offset_right = 160.0
+offset_bottom = 14.0
+text = "/ENTRENADOR"
+label_settings = SubResource("LabelSettings_nombre")
+
+[node name="Puesto" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(8, 8)
+texture = ExtResource("3_puestos")
+centered = false
+hframes = 4
+
+[node name="Marcas" type="Node2D" parent="."]
+position = Vector2(152, 8)
+
+[node name="Barra" type="Node2D" parent="."]
+position = Vector2(56, 16)

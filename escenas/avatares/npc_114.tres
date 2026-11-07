@@ -1,0 +1,170 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dun3leiij6rol"]
+
+[ext_resource type="Texture2D" uid="uid://cmoul3h33xvqk" path="res://graficos/npc/npc_114.png" id="1_tuber"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t00"]
+atlas = ExtResource("1_tuber")
+region = Rect2(0, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t01"]
+atlas = ExtResource("1_tuber")
+region = Rect2(16, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t02"]
+atlas = ExtResource("1_tuber")
+region = Rect2(32, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t03"]
+atlas = ExtResource("1_tuber")
+region = Rect2(48, 0, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t04"]
+atlas = ExtResource("1_tuber")
+region = Rect2(0, 44, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t05"]
+atlas = ExtResource("1_tuber")
+region = Rect2(16, 44, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t06"]
+atlas = ExtResource("1_tuber")
+region = Rect2(32, 44, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t07"]
+atlas = ExtResource("1_tuber")
+region = Rect2(48, 44, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t08"]
+atlas = ExtResource("1_tuber")
+region = Rect2(0, 22, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t09"]
+atlas = ExtResource("1_tuber")
+region = Rect2(16, 22, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t10"]
+atlas = ExtResource("1_tuber")
+region = Rect2(32, 22, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t11"]
+atlas = ExtResource("1_tuber")
+region = Rect2(48, 22, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t12"]
+atlas = ExtResource("1_tuber")
+region = Rect2(0, 66, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t13"]
+atlas = ExtResource("1_tuber")
+region = Rect2(16, 66, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t14"]
+atlas = ExtResource("1_tuber")
+region = Rect2(32, 66, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t15"]
+atlas = ExtResource("1_tuber")
+region = Rect2(48, 66, 16, 22)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t16"]
+atlas = ExtResource("1_tuber")
+region = Rect2(0, 0, 16, 22)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("AtlasTexture_t00")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t01")
+}],
+"loop": 0,
+"name": &"camina_abajo_1",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("AtlasTexture_t02")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t03")
+}],
+"loop": 0,
+"name": &"camina_abajo_2",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("AtlasTexture_t04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t05")
+}],
+"loop": 0,
+"name": &"camina_arriba_1",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("AtlasTexture_t06")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t07")
+}],
+"loop": 0,
+"name": &"camina_arriba_2",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("AtlasTexture_t08")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t09")
+}],
+"loop": 0,
+"name": &"camina_derecha_1",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("AtlasTexture_t10")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t11")
+}],
+"loop": 0,
+"name": &"camina_derecha_2",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("AtlasTexture_t12")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t13")
+}],
+"loop": 0,
+"name": &"camina_izquierda_1",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("AtlasTexture_t14")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t15")
+}],
+"loop": 0,
+"name": &"camina_izquierda_2",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("AtlasTexture_t16")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 4.0
+}]

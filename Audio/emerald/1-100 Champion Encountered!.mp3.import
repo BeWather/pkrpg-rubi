@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dyy3u5if2ji57"
+path="res://.godot/imported/1-100 Champion Encountered!.mp3-8ba79d7f8ace927a087de06facad307e.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-100 Champion Encountered!.mp3"
+dest_files=["res://.godot/imported/1-100 Champion Encountered!.mp3-8ba79d7f8ace927a087de06facad307e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

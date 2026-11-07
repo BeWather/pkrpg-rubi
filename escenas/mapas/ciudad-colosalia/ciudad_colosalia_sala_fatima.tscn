@@ -1,0 +1,239 @@
+[gd_scene format=4 uid="uid://b7bap5j236pm3"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mapa"]
+[ext_resource type="TileSet" uid="uid://digrlsb6y2vg" path="res://graficos/tilesets/tileset_colosalia_alto_mando.tres" id="2_tiles"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_tp"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_warp"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="5_npc_base"]
+[ext_resource type="SpriteFrames" uid="uid://bsgb4n6t8kvme" path="res://escenas/avatares/ruby_fatima.tres" id="f_ruby_fatima"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="s_evento"]
+[ext_resource type="Script" uid="uid://c78stkyhbjhl8" path="res://scripts/eventos/ciudad_colosalia/evento_sala_alto_mando.gd" id="s_sala"]
+
+[node name="SalaFatima" type="Node2D" unique_id=293596069]
+editor_description = "pokeruby EverGrandeCity_PhoebesRoom (LAYOUT_EVER_GRANDE_CITY_PHOEBES_ROOM, 13x14). Generada por herramientas/importar_interiores_colosalia.py."
+script = ExtResource("1_mapa")
+nombre_interno = "ciudad_colosalia_sala_fatima"
+seccion = "CIUDAD_COLOSALIA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_COLOSALIA"
+solo_caminar = true
+musica_mapa = "VICTORIA_CAMINO_VICTORIA"
+escena_batalla = 5
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1576573113]
+tile_map_data = PackedByteArray("AAAAAAAAAAAHAAEAAAAAAAEAAAAJABoAAAAAAAIAAAAJABwAAAAAAAMAAAACAAgAAAAAAAQAAAAFAAgAAAAAAAUAAAAFAAkAAAAAAAYAAAAFAAoAAAAAAAcAAAAFAAsAAAAAAAgAAAAFAAwAAAAAAAkAAAAFAA0AAAAAAAoAAAACAA0AAAAAAAsAAAAHAAAAAAAAAAwAAAAIABoAAAAAAA0AAAAIABsAAAABAAAAAAAHAAAAAAABAAEAAAAIABoAAAABAAIAAAAIABwAAAABAAMAAAACAAgAAAABAAQAAAAGAAgAAAABAAUAAAAGAAkAAAABAAYAAAAGAAoAAAABAAcAAAAGAAsAAAABAAgAAAAGAAwAAAABAAkAAAAGAA0AAAABAAoAAAABAA0AAAABAAsAAAAHAAEAAAABAAwAAAAJABoAAAABAA0AAAAJABsAAAACAAAAAAAHAAEAAAACAAEAAAAJABoAAAACAAIAAAAJABwAAAACAAMAAAACAAgAAAACAAQAAAAEAAsAAAACAAUAAAAEAAsAAAACAAYAAAAEAAsAAAACAAcAAAAEAAsAAAACAAgAAAAEAAsAAAACAAkAAAAEAAsAAAACAAoAAAABAA0AAAACAAsAAAAHAAAAAAACAAwAAAAIABoAAAACAA0AAAAIABsAAAADAAAAAAAHAAAAAAADAAEAAAAIABoAAAADAAIAAAAIABwAAAADAAMAAAACAAgAAAADAAQAAAAEAAsAAAADAAUAAAAEAAsAAAADAAYAAAAEAAsAAAADAAcAAAAEAAsAAAADAAgAAAAEAAsAAAADAAkAAAAEAAsAAAADAAoAAAABAA0AAAADAAsAAAAHAAEAAAADAAwAAAAJABoAAAADAA0AAAAJABsAAAAEAAAAAAAHAAEAAAAEAAEAAAAJABoAAAAEAAIAAAAJABwAAAAEAAMAAAACAAgAAAAEAAQAAAAAAAgAAAAEAAUAAAAAAAkAAAAEAAYAAAAAAAoAAAAEAAcAAAAAAAkAAAAEAAgAAAAAAAkAAAAEAAkAAAAAAA0AAAAEAAoAAAABAA0AAAAEAAsAAAAAAAEAAAAEAAwAAAAFABwAAAAEAA0AAAAGABwAAAAFAAAAAAAAAAEAAAAFAAEAAAABAAAAAAAFAAIAAAABAAEAAAAFAAMAAAAAAAsAAAAFAAQAAAADAAgAAAAFAAUAAAABAAkAAAAFAAYAAAABAAoAAAAFAAcAAAABAAsAAAAFAAgAAAABAAwAAAAFAAkAAAADAA0AAAAFAAoAAAABAA0AAAAFAAsAAAAAAAEAAAAFAAwAAAAEAAsAAAAFAA0AAAAEAAwAAAAGAAAAAAAAAAEAAAAGAAEAAAAEACgAAAAGAAIAAAAFACgAAAAGAAMAAAAAAAsAAAAGAAQAAAADAAgAAAAGAAUAAAACAAkAAAAGAAYAAAACAAoAAAAGAAcAAAACAAsAAAAGAAgAAAACAAwAAAAGAAkAAAADAA0AAAAGAAoAAAABAA0AAAAGAAsAAAAAAAEAAAAGAAwAAAAEAAsAAAAGAA0AAAAEAAwAAAAHAAAAAAAAAAEAAAAHAAEAAAADAAAAAAAHAAIAAAADAAEAAAAHAAMAAAAAAAsAAAAHAAQAAAADAAgAAAAHAAUAAAADAAkAAAAHAAYAAAADAAoAAAAHAAcAAAADAAsAAAAHAAgAAAADAAwAAAAHAAkAAAADAA0AAAAHAAoAAAABAA0AAAAHAAsAAAAAAAEAAAAHAAwAAAAEAAsAAAAHAA0AAAAEAAwAAAAIAAAAAAAHAAAAAAAIAAEAAAAIABoAAAAIAAIAAAAIABwAAAAIAAMAAAACAAgAAAAIAAQAAAAEAAgAAAAIAAUAAAAEAAkAAAAIAAYAAAAEAAoAAAAIAAcAAAAEAAkAAAAIAAgAAAAEAAkAAAAIAAkAAAAEAA0AAAAIAAoAAAABAA0AAAAIAAsAAAAAAAEAAAAIAAwAAAAHABoAAAAIAA0AAAAHABsAAAAJAAAAAAAHAAEAAAAJAAEAAAAJABoAAAAJAAIAAAAJABwAAAAJAAMAAAACAAgAAAAJAAQAAAAEAAsAAAAJAAUAAAAEAAsAAAAJAAYAAAAEAAsAAAAJAAcAAAAEAAsAAAAJAAgAAAAEAAsAAAAJAAkAAAAEAAsAAAAJAAoAAAABAA0AAAAJAAsAAAAHAAAAAAAJAAwAAAAIABoAAAAJAA0AAAAIABsAAAAKAAAAAAAHAAAAAAAKAAEAAAAIABoAAAAKAAIAAAAIABwAAAAKAAMAAAACAAgAAAAKAAQAAAAEAAsAAAAKAAUAAAAEAAsAAAAKAAYAAAAEAAsAAAAKAAcAAAAEAAsAAAAKAAgAAAAEAAsAAAAKAAkAAAAEAAsAAAAKAAoAAAABAA0AAAAKAAsAAAAHAAEAAAAKAAwAAAAJABoAAAAKAA0AAAAJABsAAAALAAAAAAAHAAEAAAALAAEAAAAJABoAAAALAAIAAAAJABwAAAALAAMAAAACAAgAAAALAAQAAAAHAAgAAAALAAUAAAAHAAkAAAALAAYAAAAHAAoAAAALAAcAAAAHAAoAAAALAAgAAAAHAAwAAAALAAkAAAAHAA0AAAALAAoAAAABAA0AAAALAAsAAAAHAAAAAAALAAwAAAAIABoAAAALAA0AAAAIABsAAAAMAAAAAAAHAAAAAAAMAAEAAAAIABoAAAAMAAIAAAAIABwAAAAMAAMAAAACAAgAAAAMAAQAAAABAAgAAAAMAAUAAAAAACgAAAAMAAYAAAABACgAAAAMAAcAAAACACgAAAAMAAgAAAADACgAAAAMAAkAAAAAAAwAAAAMAAoAAAABAA0AAAAMAAsAAAAHAAEAAAAMAAwAAAAJABoAAAAMAA0AAAAJABsAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="SigCerrado" type="TileMapLayer" parent="." unique_id=1021103857]
+tile_map_data = PackedByteArray("AAAGAAEAAAACAAAAAAAGAAIAAAACAAEAAAAIAAIAAAABACoAAAAJAAIAAAABACoAAAAKAAIAAAABACoAAAALAAIAAAABACoAAAAMAAIAAAABACoAAAAEAAIAAAABACoAAAADAAIAAAABACoAAAACAAIAAAABACoAAAABAAIAAAABACoAAAAAAAIAAAABACoAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+
+[node name="Superior" type="TileMapLayer" parent="." unique_id=1931902207]
+z_index = 2
+tile_map_data = PackedByteArray("AAAAAAAAAAAPAAEAAAAAAAoAAAAKAA0AAAAAAAsAAAAPAAAAAAABAAAAAAAPAAAAAAABAAoAAAAJAA0AAAABAAsAAAAPAAEAAAACAAAAAAAPAAEAAAACAAoAAAAJAA0AAAACAAsAAAAPAAAAAAADAAAAAAAPAAAAAAADAAoAAAAJAA0AAAADAAsAAAAPAAEAAAAEAAAAAAAPAAEAAAAEAAoAAAAJAA0AAAAEAAsAAAAIAAEAAAAFAAAAAAAIAAEAAAAFAAoAAAAJAA0AAAAFAAsAAAAIAAEAAAAGAAAAAAAIAAEAAAAGAAoAAAAJAA0AAAAGAAsAAAAIAAEAAAAHAAAAAAAIAAEAAAAHAAoAAAAJAA0AAAAHAAsAAAAIAAEAAAAIAAAAAAAPAAAAAAAIAAoAAAAJAA0AAAAIAAsAAAAIAAEAAAAJAAAAAAAPAAEAAAAJAAoAAAAJAA0AAAAJAAsAAAAPAAAAAAAKAAAAAAAPAAAAAAAKAAoAAAAJAA0AAAAKAAsAAAAPAAEAAAALAAAAAAAPAAEAAAALAAoAAAAJAA0AAAALAAsAAAAPAAAAAAAMAAAAAAAPAAAAAAAMAAoAAAAJAA0AAAAMAAsAAAAPAAEAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=294496611]
+script = ExtResource("3_tp")
+tile_data = {
+"-1,10": {
+"flags": 1
+},
+"-1,11": {
+"flags": 1
+},
+"-1,3": {
+"flags": 1
+},
+"-1,9": {
+"flags": 1
+},
+"0,12": {
+"flags": 1
+},
+"0,2": {
+"flags": 1
+},
+"0,4": {
+"flags": 1
+},
+"0,8": {
+"flags": 1
+},
+"1,12": {
+"flags": 1
+},
+"1,2": {
+"flags": 1
+},
+"1,4": {
+"flags": 1
+},
+"1,5": {
+"flags": 1
+},
+"1,6": {
+"flags": 1
+},
+"1,7": {
+"flags": 1
+},
+"1,8": {
+"flags": 1
+},
+"10,12": {
+"flags": 1
+},
+"10,2": {
+"flags": 1
+},
+"11,12": {
+"flags": 1
+},
+"11,2": {
+"flags": 1
+},
+"11,4": {
+"flags": 1
+},
+"11,5": {
+"flags": 1
+},
+"11,6": {
+"flags": 1
+},
+"11,7": {
+"flags": 1
+},
+"11,8": {
+"flags": 1
+},
+"12,12": {
+"flags": 1
+},
+"12,2": {
+"flags": 1
+},
+"12,4": {
+"flags": 1
+},
+"12,8": {
+"flags": 1
+},
+"13,10": {
+"flags": 1
+},
+"13,11": {
+"flags": 1
+},
+"13,3": {
+"flags": 1
+},
+"13,9": {
+"flags": 1
+},
+"2,12": {
+"flags": 1
+},
+"2,2": {
+"flags": 1
+},
+"3,12": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"4,12": {
+"flags": 1
+},
+"4,13": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"5,14": {
+"flags": 1
+},
+"5,2": {
+"flags": 1
+},
+"6,14": {
+"flags": 1
+},
+"6,2": {
+"flags": 1
+},
+"7,14": {
+"flags": 1
+},
+"7,2": {
+"flags": 1
+},
+"8,12": {
+"flags": 1
+},
+"8,13": {
+"flags": 1
+},
+"8,2": {
+"flags": 1
+},
+"9,12": {
+"flags": 1
+},
+"9,2": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1027948900]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Fatima" parent="NPCs" unique_id=1740433863 instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby EverGrandeCity_PhoebesRoom objeto 1 (6,5) PHOEBE FACE_DOWN: EverGrandeCity_PhoebesRoom_EventScript_Phoebe. Lo dirige Eventos/EventoSala"
+position = Vector2(104, 94)
+script = ExtResource("s_evento")
+id_texto = "COLOSALIA_FATIMA_INI"
+selec_frames = ExtResource("f_ruby_fatima")
+tamano_sprite = 1
+coord = Vector2i(6, 5)
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1040095765]
+
+[node name="EventoSala" type="Node2D" parent="Eventos" unique_id=431913974]
+editor_description = "pokeruby EverGrandeCity_PhoebesRoom/scripts.inc + data/scripts/elite_four.inc"
+script = ExtResource("s_sala")
+miembro = NodePath("../../NPCs/Fatima")
+entrenador_id = 262
+bandera_vencido = "colosalia_fatima_vencida"
+estado_entrada = 1
+texto_intro = "COLOSALIA_FATIMA_INI"
+texto_post = "COLOSALIA_FATIMA_POST"
+suelo = NodePath("../../Suelo")
+superior = NodePath("../../Superior")
+siguiente_cerrado = NodePath("../../SigCerrado")
+datos_tiles = NodePath("../../TPTileDataMap")
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=2101331836]
+editor_description = "pokeruby EverGrandeCity_PhoebesRoom warp (6,2) -> MAP_EVER_GRANDE_CITY_CORRIDOR2 (5,12)"
+position = Vector2(104, 38)
+script = ExtResource("4_warp")
+tipo_warp = 2
+ruta_mapa_destino = "ciudad_colosalia_pasillo2"
+posicion_destino = Vector2(5, 12)
+direccion = Vector2(0, -1)

@@ -1,0 +1,23 @@
+{
+  "rom_sha256": "86a4cd2a287490805679e74768e2b0d28441bc66c5535271e474f303972cf749",
+  "tabla": "0x4554a0",
+  "renderer": "GBA Mus Riper + FluidSynth, original SF2; no emulaci\u00f3n bit exacta",
+  "sonidos": [
+    {
+      "id": 18,
+      "nombre": "SE_SLIDING_DOOR",
+      "direccion": "0x6563b4",
+      "banco": "0x451fa4",
+      "midi_sha256": "9c41b58b85e08570cfa2c0685435230cb21cacb494547c3514c6d52d9040ac1a",
+      "wav_sha256": "c729753fddef0096a7154716c4f1c12c3b67a6ff425a358d6b04d49b5fd31581"
+    },
+    {
+      "id": 80,
+      "nombre": "SE_ESCALATOR",
+      "direccion": "0x657334",
+      "banco": "0x451fa4",
+      "midi_sha256": "70b079a83a8da068bb2272a212843b2e55f852ae728deca36b4af6cd0bba7ee1",
+      "wav_sha256": "9b1e422bfc7b3851c1927820a340a8f333b158cd3a6142c5dabba7b7cdea2b9d"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://dtrbl3cut4bl3" path="res://graficos/arbol_cortable/arbol_cortable.tscn" id="1_cortable"]
+
+[node name="ArbolCortable" instance=ExtResource("1_cortable")]

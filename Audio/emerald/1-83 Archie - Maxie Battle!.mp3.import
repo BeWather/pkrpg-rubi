@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bsicfaa8q54nl"
+path="res://.godot/imported/1-83 Archie - Maxie Battle!.mp3-5e3e58696fb7146d0643c3a86c051d14.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-83 Archie - Maxie Battle!.mp3"
+dest_files=["res://.godot/imported/1-83 Archie - Maxie Battle!.mp3-5e3e58696fb7146d0643c3a86c051d14.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

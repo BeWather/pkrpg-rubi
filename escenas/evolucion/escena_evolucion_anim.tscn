@@ -1,0 +1,682 @@
+[gd_scene format=3 uid="uid://b4qcl4m32ha86"]
+
+[ext_resource type="Script" uid="uid://t7n5i6wggl0j" path="res://escenas/evolucion/escena_evolucion_anim.gd" id="1_anim"]
+[ext_resource type="Texture2D" uid="uid://ofcba32xne1h" path="res://graficos/batalla/fondo_hierba2.png" id="2_3hejj"]
+[ext_resource type="Shader" uid="uid://dn46t40giekgd" path="res://escenas/evolucion/pokemon_blanco.gdshader" id="2_blanco"]
+[ext_resource type="Texture2D" uid="uid://djjpj55ctvdlf" path="res://graficos/pokemon/front/SILCOON.png" id="4_f2v62"]
+[ext_resource type="Texture2D" uid="uid://bk1k3vy3r7330" path="res://graficos/pokemon/front/BEAUTIFLY.png" id="5_rr3co"]
+[ext_resource type="Texture2D" uid="uid://rk6lytt2gta8" path="res://graficos/batalla/caja_dialogo.png" id="6_45ag2"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="7_5kwlw"]
+[ext_resource type="Script" uid="uid://sj0eac78to3k" path="res://escenas/batalla/caja_texto_batalla.gd" id="8_1hcut"]
+[ext_resource type="Texture2D" uid="uid://cwf4ytjn4xd2a" path="res://UI/puntero_texto.png" id="9_psc2m"]
+[ext_resource type="PackedScene" uid="uid://b5hnfxmt2lefx" path="res://escenas/evolucion/particulas_remolino_curvo.tscn" id="10_remolino"]
+[ext_resource type="PackedScene" uid="uid://c1644tajan3ho" path="res://escenas/evolucion/particulas_jaula.tscn" id="11_jaula"]
+[ext_resource type="PackedScene" uid="uid://lfy6xld4acpg" path="res://escenas/evolucion/particulas_circulo.tscn" id="12_circulo"]
+[ext_resource type="PackedScene" uid="uid://brlagr14dj5al" path="res://escenas/evolucion/particulas_fuente.tscn" id="13_fuente"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_previo"]
+resource_local_to_scene = true
+shader = ExtResource("2_blanco")
+shader_parameter/blanco = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nuevo"]
+resource_local_to_scene = true
+shader = ExtResource("2_blanco")
+shader_parameter/blanco = 0.0
+
+[sub_resource type="Animation" id="Animation_reset"]
+resource_name = "RESET"
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpritePrevio:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteNuevo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Destello:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Negro:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpritePrevio:material:shader_parameter/blanco")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SpriteNuevo:material:shader_parameter/blanco")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SpritePrevio:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(1, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("SpriteNuevo:scale")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Fondo:modulate")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("ParticulasRemolinoCurvo:emitiendo")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/10/type = "value"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("ParticulasJaula:emitiendo")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/11/type = "value"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("ParticulasCirculo:emitiendo")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/12/type = "value"
+tracks/12/imported = false
+tracks/12/enabled = true
+tracks/12/path = NodePath("ParticulasFuente:emitiendo")
+tracks/12/interp = 1
+tracks/12/loop_wrap = true
+tracks/12/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_alternancia"]
+resource_name = "alternancia"
+length = 5.933333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpritePrevio:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteNuevo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpritePrevio:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.666667, 1.266667, 1.8, 2.266667, 2.666667, 3.033333, 3.366667, 3.666667, 3.933333, 4.166667, 4.366667, 4.566667, 4.733333, 4.9, 5.033333, 5.166667, 5.266667, 5.366667, 5.466667, 5.533333, 5.6, 5.666667, 5.733333, 5.8, 5.833333, 5.866667, 5.9, 5.933333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteNuevo:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.666667, 1.266667, 1.8, 2.266667, 2.666667, 3.033333, 3.366667, 3.666667, 3.933333, 4.166667, 4.366667, 4.566667, 4.733333, 4.9, 5.033333, 5.166667, 5.266667, 5.366667, 5.466667, 5.533333, 5.6, 5.666667, 5.733333, 5.8, 5.833333, 5.866667, 5.9, 5.933333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_blanco_previo"]
+resource_name = "blanco_previo"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpritePrevio:material:shader_parameter/blanco")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_cancelar"]
+resource_name = "cancelar"
+length = 0.266667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpritePrevio:material:shader_parameter/blanco")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteNuevo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpritePrevio:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteNuevo:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Fondo:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_destello_color"]
+resource_name = "destello_color"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Destello:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteNuevo:material:shader_parameter/blanco")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.333333, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_dos_circulos"]
+resource_name = "dos_circulos"
+length = 2.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ParticulasCirculo:emitiendo")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.15),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_fuente_y_destello"]
+resource_name = "fuente_y_destello"
+length = 1.85
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ParticulasFuente:emitiendo")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Destello:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.45, 0.85, 1.25, 1.85),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Fondo:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1.25, 1.85),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(1, 1, 1, 1)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteNuevo:material:shader_parameter/blanco")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 1.25, 1.85),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [1.0, 1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_intercambio"]
+resource_name = "intercambio"
+length = 8.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpritePrevio:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.949721, 1.80447, 2.564246, 3.229051, 3.798883, 4.321228, 4.79609, 5.223464, 5.603351, 5.935754, 6.220671, 6.505587, 6.743016, 6.980447, 7.17039, 7.360335, 7.502793, 7.645251, 7.78771, 7.882681, 7.977653, 8.072626, 8.167597, 8.262569, 8.310055, 8.357542, 8.405027, 8.452513, 8.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteNuevo:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.949721, 1.80447, 2.564246, 3.229051, 3.798883, 4.321228, 4.79609, 5.223464, 5.603351, 5.935754, 6.220671, 6.505587, 6.743016, 6.980447, 7.17039, 7.360335, 7.502793, 7.645251, 7.78771, 7.882681, 7.977653, 8.072626, 8.167597, 8.262569, 8.310055, 8.357542, 8.405027, 8.452513, 8.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1), Vector2(0, 0), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_intro"]
+resource_name = "intro"
+length = 0.266667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Negro:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_jaula_particulas"]
+resource_name = "jaula_particulas"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ParticulasJaula:emitiendo")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_oscurecer"]
+resource_name = "oscurecer"
+length = 0.266667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Negro:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_oscurecer_campo"]
+resource_name = "oscurecer_campo"
+length = 0.65
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Fondo:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.65),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_remolino_curvo"]
+resource_name = "remolino_curvo"
+length = 2.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpritePrevio:material:shader_parameter/blanco")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.55),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ParticulasRemolinoCurvo:emitiendo")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.95),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+
+[sub_resource type="Animation" id="Animation_salida"]
+resource_name = "salida"
+length = 0.266667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Negro:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.266667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_evolucion"]
+_data = {
+&"RESET": SubResource("Animation_reset"),
+&"alternancia": SubResource("Animation_alternancia"),
+&"blanco_previo": SubResource("Animation_blanco_previo"),
+&"cancelar": SubResource("Animation_cancelar"),
+&"destello_color": SubResource("Animation_destello_color"),
+&"dos_circulos": SubResource("Animation_dos_circulos"),
+&"fuente_y_destello": SubResource("Animation_fuente_y_destello"),
+&"intercambio": SubResource("Animation_intercambio"),
+&"intro": SubResource("Animation_intro"),
+&"jaula_particulas": SubResource("Animation_jaula_particulas"),
+&"oscurecer": SubResource("Animation_oscurecer"),
+&"oscurecer_campo": SubResource("Animation_oscurecer_campo"),
+&"remolino_curvo": SubResource("Animation_remolino_curvo"),
+&"salida": SubResource("Animation_salida")
+}
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tthuk"]
+atlas = ExtResource("9_psc2m")
+region = Rect2(0, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_88ik7"]
+atlas = ExtResource("9_psc2m")
+region = Rect2(8, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bueie"]
+atlas = ExtResource("9_psc2m")
+region = Rect2(16, 0, 8, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2owf"]
+atlas = ExtResource("9_psc2m")
+region = Rect2(24, 0, 8, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ra0g0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tthuk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_88ik7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bueie")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2owf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="EscenaEvolucionAnim" type="CanvasLayer" unique_id=1524121165]
+layer = 20
+script = ExtResource("1_anim")
+
+[node name="Fondo" type="Sprite2D" parent="." unique_id=1559299635]
+unique_name_in_owner = true
+z_index = -5
+texture = ExtResource("2_3hejj")
+centered = false
+
+[node name="SpritePrevio" type="Sprite2D" parent="." unique_id=1289971525]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_previo")
+position = Vector2(120, 64)
+texture = ExtResource("4_f2v62")
+
+[node name="SpriteNuevo" type="Sprite2D" parent="." unique_id=368637221]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_nuevo")
+position = Vector2(120, 64)
+scale = Vector2(1e-05, 1e-05)
+texture = ExtResource("5_rr3co")
+
+[node name="ParticulasRemolinoCurvo" parent="." unique_id=288978626 instance=ExtResource("10_remolino")]
+
+[node name="ParticulasJaula" parent="." unique_id=108813839 instance=ExtResource("11_jaula")]
+
+[node name="ParticulasCirculo" parent="." unique_id=1624382711 instance=ExtResource("12_circulo")]
+
+[node name="ParticulasFuente" parent="." unique_id=1864653001 instance=ExtResource("13_fuente")]
+
+[node name="Destello" type="ColorRect" parent="." unique_id=549626129]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+z_index = 6
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+
+[node name="Negro" type="ColorRect" parent="." unique_id=1456456819]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+z_index = 20
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Animacion" type="AnimationPlayer" parent="." unique_id=232826954]
+unique_name_in_owner = true
+libraries/ = SubResource("AnimationLibrary_evolucion")
+
+[node name="CajaDialogo" type="Sprite2D" parent="." unique_id=2092155094]
+unique_name_in_owner = true
+z_index = 10
+position = Vector2(0, 112)
+texture = ExtResource("6_45ag2")
+centered = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CajaDialogo" unique_id=1747374017]
+unique_name_in_owner = true
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 224.0
+offset_bottom = 40.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("7_5kwlw")
+theme_override_font_sizes/normal_font_size = 15
+script = ExtResource("8_1hcut")
+metadata/_edit_lock_ = true
+
+[node name="Cursor" type="AnimatedSprite2D" parent="CajaDialogo" unique_id=1213118893]
+unique_name_in_owner = true
+visible = false
+position = Vector2(224, 30)
+sprite_frames = SubResource("SpriteFrames_ra0g0")
+autoplay = "default"
+metadata/_edit_lock_ = true

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://ddjbrtt85fo88"
+path="res://.godot/imported/PRSFX- Psybeam.wav-dc3cae3c6dce9a0b129b91fdaf3a7a6e.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Psybeam.wav"
+dest_files=["res://.godot/imported/PRSFX- Psybeam.wav-dc3cae3c6dce9a0b129b91fdaf3a7a6e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

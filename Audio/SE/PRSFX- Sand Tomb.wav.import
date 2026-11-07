@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://kdbo60rr3iy5"
+path="res://.godot/imported/PRSFX- Sand Tomb.wav-f01befda52deaa85c97216db4b8ec362.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Sand Tomb.wav"
+dest_files=["res://.godot/imported/PRSFX- Sand Tomb.wav-f01befda52deaa85c97216db4b8ec362.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://cbwart0mnk562"]
+
+[ext_resource type="Texture2D" uid="uid://bnnqhsstfknsg" path="res://UI/menu_box_7.png" id="1_ltdur"]
+[ext_resource type="Script" uid="uid://b7omshc4r8sgq" path="res://UI/cajas_pc/menu_pc_controller.gd" id="1_qc7jm"]
+[ext_resource type="LabelSettings" uid="uid://dloc0dcjbkv2v" path="res://UI/texto_normal_negro.tres" id="2_qc7jm"]
+[ext_resource type="Script" uid="uid://d36hq52xgo0y0" path="res://UI/selector_simple.gd" id="4_xb0gs"]
+
+[node name="MenuPC" type="Control" unique_id=1382289383]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qc7jm")
+
+[node name="CuMensaje" type="NinePatchRect" parent="." unique_id=62507960]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 128.0
+offset_right = 240.0
+offset_bottom = 160.0
+texture = ExtResource("1_ltdur")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="mensaje" type="Label" parent="CuMensaje" unique_id=1789732840]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 152.0
+offset_bottom = 24.0
+text = "Selecciona un POKéMON."
+label_settings = ExtResource("2_qc7jm")
+
+[node name="CuOpciones" type="NinePatchRect" parent="." unique_id=1662200528]
+layout_mode = 0
+offset_left = 176.0
+offset_top = 16.0
+offset_right = 240.0
+offset_bottom = 128.0
+texture = ExtResource("1_ltdur")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="opc1" type="Label" parent="CuOpciones" unique_id=1953938835]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 24.0
+text = "SÍ"
+label_settings = ExtResource("2_qc7jm")
+
+[node name="opc2" type="Label" parent="CuOpciones" unique_id=1381852116]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 56.0
+offset_bottom = 40.0
+text = "SÍ"
+label_settings = ExtResource("2_qc7jm")
+
+[node name="opc3" type="Label" parent="CuOpciones" unique_id=108801986]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 56.0
+offset_bottom = 56.0
+text = "SÍ"
+label_settings = ExtResource("2_qc7jm")
+
+[node name="opc4" type="Label" parent="CuOpciones" unique_id=925682609]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 56.0
+offset_bottom = 72.0
+text = "SÍ"
+label_settings = ExtResource("2_qc7jm")
+
+[node name="opc5" type="Label" parent="CuOpciones" unique_id=727393227]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 56.0
+offset_bottom = 88.0
+text = "SÍ"
+label_settings = ExtResource("2_qc7jm")
+
+[node name="opc6" type="Label" parent="CuOpciones" unique_id=1247491684]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 88.0
+offset_right = 56.0
+offset_bottom = 104.0
+text = "SÍ"
+label_settings = ExtResource("2_qc7jm")
+
+[node name="cursor1" type="Control" parent="CuOpciones" unique_id=120871336]
+anchors_preset = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 57.0
+offset_bottom = 24.0
+script = ExtResource("4_xb0gs")
+color = Color(1, 0.388235, 0.352941, 1)
+ancho_borde = 1
+metadata/_custom_type_script = "uid://d36hq52xgo0y0"
+
+[node name="CuSiNo" type="NinePatchRect" parent="." unique_id=218230540]
+visible = false
+layout_mode = 0
+offset_left = 184.0
+offset_top = 80.0
+offset_right = 240.0
+offset_bottom = 128.0
+texture = ExtResource("1_ltdur")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="Si" type="Label" parent="CuSiNo" unique_id=1890768739]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 48.0
+offset_bottom = 24.0
+text = "SÍ"
+label_settings = ExtResource("2_qc7jm")
+
+[node name="No" type="Label" parent="CuSiNo" unique_id=114621825]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 48.0
+offset_bottom = 40.0
+text = "NO"
+label_settings = ExtResource("2_qc7jm")
+
+[node name="cursor2" type="Control" parent="CuSiNo" unique_id=2137568515]
+anchors_preset = 0
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 49.0
+offset_bottom = 24.0
+script = ExtResource("4_xb0gs")
+color = Color(1, 0.388235, 0.352941, 1)
+ancho_borde = 1
+metadata/_custom_type_script = "uid://d36hq52xgo0y0"

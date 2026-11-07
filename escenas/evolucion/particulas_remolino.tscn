@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://b64l5txu3o6xd"]
+
+[ext_resource type="Script" uid="uid://cm5g7dw7akgiy" path="res://scripts/evolucion/emisor_particulas_evolucion.gd" id="1_emisor"]
+[ext_resource type="Texture2D" uid="uid://byecr8ci2qd1o" path="res://escenas/evolucion/ball-particle.png" id="2_bola"]
+
+[node name="ParticulasRemolino" type="Node2D" unique_id=1892158439]
+position = Vector2(120, 64)
+script = ExtResource("1_emisor")
+textura = ExtResource("2_bola")
+intervalo_emision = 0.16
+duracion_particula = 1.25
+z_detras = -4
+z_delante = 4

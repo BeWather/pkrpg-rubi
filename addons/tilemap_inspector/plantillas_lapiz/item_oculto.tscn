@@ -1,0 +1,7 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://d0782whl40dem" path="res://escenas/ow_item.tscn" id="1_item"]
+
+[node name="ObjetoOculto" instance=ExtResource("1_item")]
+objeto_a_entregar = "POCION"
+oculto = true

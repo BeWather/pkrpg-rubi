@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c6lx22u3q30vb"
+path="res://.godot/imported/1-63 The Interviewers.mp3-a58810c6626c76bb41cbeb3a551d92c8.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-63 The Interviewers.mp3"
+dest_files=["res://.godot/imported/1-63 The Interviewers.mp3-a58810c6626c76bb41cbeb3a551d92c8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c8a4kkgj6e2c3"
+path="res://.godot/imported/1-45 Game Corner.mp3-4334af6ef108670a1ea23682220f6922.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-45 Game Corner.mp3"
+dest_files=["res://.godot/imported/1-45 Game Corner.mp3-4334af6ef108670a1ea23682220f6922.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

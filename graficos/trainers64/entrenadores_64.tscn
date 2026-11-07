@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cf8jdkl387eud"]
+
+[ext_resource type="SpriteFrames" uid="uid://dmh6gv83ubier" path="res://graficos/trainers64/entrenadores_64.tres" id="1_mp86l"]
+
+[node name="entrenadores64" type="AnimatedSprite2D" unique_id=519926499]
+sprite_frames = ExtResource("1_mp86l")
+centered = false

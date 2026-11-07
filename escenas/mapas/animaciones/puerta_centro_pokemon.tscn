@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://cge6fbegiwidd"]
+
+[ext_resource type="SpriteFrames" uid="uid://bl7w3tokmjji" path="res://graficos/transiciones_centro/puerta_exterior.tres" id="1"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=113717552]
+texture_filter = 1
+sprite_frames = ExtResource("1")
+animation = &"abierta"

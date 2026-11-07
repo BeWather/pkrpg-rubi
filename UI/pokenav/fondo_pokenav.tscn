@@ -1,0 +1,86 @@
+[gd_scene format=3]
+
+[ext_resource type="Texture2D" path="res://graficos/pokenav/fondo_tesela.png" id="e1"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/fondo_contorno.png" id="e2"]
+
+[sub_resource type="Animation" id="Anim_2"]
+resource_name = "scroll_fondo"
+length = 0.26667
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tesela:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.03333, 0.06667, 0.10000, 0.13333, 0.16667, 0.20000, 0.23333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(0, 0, 240, 160), Rect2(1, 0, 240, 160), Rect2(2, 0, 240, 160), Rect2(3, 0, 240, 160), Rect2(4, 0, 240, 160), Rect2(5, 0, 240, 160), Rect2(6, 0, 240, 160), Rect2(7, 0, 240, 160)]
+}
+
+[sub_resource type="AnimationLibrary" id="Lib_3"]
+_data = {
+&"scroll_fondo": SubResource("Anim_2")
+}
+
+[sub_resource type="Animation" id="Anim_5"]
+resource_name = "a_lavanda"
+length = 0.25000
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tesela:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.25000),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.93, 0.9, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Anim_6"]
+resource_name = "a_blanco"
+length = 0.25000
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Tesela:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.25000),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.93, 0.9, 1, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="Lib_7"]
+_data = {
+&"a_lavanda": SubResource("Anim_5"),
+&"a_blanco": SubResource("Anim_6")
+}
+
+[node name="FondoPokenav" type="Node2D"]
+
+[node name="Tesela" type="Sprite2D" parent="."]
+texture = ExtResource("e1")
+position = Vector2(0, 0)
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+texture_repeat = 2
+
+[node name="Contorno" type="Sprite2D" parent="."]
+texture = ExtResource("e2")
+position = Vector2(0, 0)
+centered = false
+
+[node name="Scroll" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("Lib_3")
+autoplay = &"scroll_fondo"
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("Lib_7")

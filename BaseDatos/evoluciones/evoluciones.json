@@ -1,0 +1,530 @@
+{
+ "BULBASAUR": [
+  {"metodo": "EVO_LEVEL", "parametro": 16, "destino": "IVYSAUR"}
+ ],
+ "IVYSAUR": [
+  {"metodo": "EVO_LEVEL", "parametro": 32, "destino": "VENUSAUR"}
+ ],
+ "CHARMANDER": [
+  {"metodo": "EVO_LEVEL", "parametro": 16, "destino": "CHARMELEON"}
+ ],
+ "CHARMELEON": [
+  {"metodo": "EVO_LEVEL", "parametro": 36, "destino": "CHARIZARD"}
+ ],
+ "SQUIRTLE": [
+  {"metodo": "EVO_LEVEL", "parametro": 16, "destino": "WARTORTLE"}
+ ],
+ "WARTORTLE": [
+  {"metodo": "EVO_LEVEL", "parametro": 36, "destino": "BLASTOISE"}
+ ],
+ "CATERPIE": [
+  {"metodo": "EVO_LEVEL", "parametro": 7, "destino": "METAPOD"}
+ ],
+ "METAPOD": [
+  {"metodo": "EVO_LEVEL", "parametro": 10, "destino": "BUTTERFREE"}
+ ],
+ "WEEDLE": [
+  {"metodo": "EVO_LEVEL", "parametro": 7, "destino": "KAKUNA"}
+ ],
+ "KAKUNA": [
+  {"metodo": "EVO_LEVEL", "parametro": 10, "destino": "BEEDRILL"}
+ ],
+ "PIDGEY": [
+  {"metodo": "EVO_LEVEL", "parametro": 18, "destino": "PIDGEOTTO"}
+ ],
+ "PIDGEOTTO": [
+  {"metodo": "EVO_LEVEL", "parametro": 36, "destino": "PIDGEOT"}
+ ],
+ "RATTATA": [
+  {"metodo": "EVO_LEVEL", "parametro": 20, "destino": "RATICATE"}
+ ],
+ "SPEAROW": [
+  {"metodo": "EVO_LEVEL", "parametro": 20, "destino": "FEAROW"}
+ ],
+ "EKANS": [
+  {"metodo": "EVO_LEVEL", "parametro": 22, "destino": "ARBOK"}
+ ],
+ "PIKACHU": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRATRUENO", "destino": "RAICHU"}
+ ],
+ "SANDSHREW": [
+  {"metodo": "EVO_LEVEL", "parametro": 22, "destino": "SANDSLASH"}
+ ],
+ "NIDORAN_F": [
+  {"metodo": "EVO_LEVEL", "parametro": 16, "destino": "NIDORINA"}
+ ],
+ "NIDORINA": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRALUNAR", "destino": "NIDOQUEEN"}
+ ],
+ "NIDORAN_M": [
+  {"metodo": "EVO_LEVEL", "parametro": 16, "destino": "NIDORINO"}
+ ],
+ "NIDORINO": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRALUNAR", "destino": "NIDOKING"}
+ ],
+ "CLEFAIRY": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRALUNAR", "destino": "CLEFABLE"}
+ ],
+ "VULPIX": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRAFUEGO", "destino": "NINETALES"}
+ ],
+ "JIGGLYPUFF": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRALUNAR", "destino": "WIGGLYTUFF"}
+ ],
+ "ZUBAT": [
+  {"metodo": "EVO_LEVEL", "parametro": 22, "destino": "GOLBAT"}
+ ],
+ "GOLBAT": [
+  {"metodo": "EVO_FRIENDSHIP", "parametro": 0, "destino": "CROBAT"}
+ ],
+ "ODDISH": [
+  {"metodo": "EVO_LEVEL", "parametro": 21, "destino": "GLOOM"}
+ ],
+ "GLOOM": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRAHOJA", "destino": "VILEPLUME"},
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRASOLAR", "destino": "BELLOSSOM"}
+ ],
+ "PARAS": [
+  {"metodo": "EVO_LEVEL", "parametro": 24, "destino": "PARASECT"}
+ ],
+ "VENONAT": [
+  {"metodo": "EVO_LEVEL", "parametro": 31, "destino": "VENOMOTH"}
+ ],
+ "DIGLETT": [
+  {"metodo": "EVO_LEVEL", "parametro": 26, "destino": "DUGTRIO"}
+ ],
+ "MEOWTH": [
+  {"metodo": "EVO_LEVEL", "parametro": 28, "destino": "PERSIAN"}
+ ],
+ "PSYDUCK": [
+  {"metodo": "EVO_LEVEL", "parametro": 33, "destino": "GOLDUCK"}
+ ],
+ "MANKEY": [
+  {"metodo": "EVO_LEVEL", "parametro": 28, "destino": "PRIMEAPE"}
+ ],
+ "GROWLITHE": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRAFUEGO", "destino": "ARCANINE"}
+ ],
+ "POLIWAG": [
+  {"metodo": "EVO_LEVEL", "parametro": 25, "destino": "POLIWHIRL"}
+ ],
+ "POLIWHIRL": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRAAGUA", "destino": "POLIWRATH"},
+  {"metodo": "EVO_TRADE_ITEM", "parametro": "ROCADELREY", "destino": "POLITOED"}
+ ],
+ "ABRA": [
+  {"metodo": "EVO_LEVEL", "parametro": 16, "destino": "KADABRA"}
+ ],
+ "KADABRA": [
+  {"metodo": "EVO_TRADE", "parametro": 0, "destino": "ALAKAZAM"}
+ ],
+ "MACHOP": [
+  {"metodo": "EVO_LEVEL", "parametro": 28, "destino": "MACHOKE"}
+ ],
+ "MACHOKE": [
+  {"metodo": "EVO_TRADE", "parametro": 0, "destino": "MACHAMP"}
+ ],
+ "BELLSPROUT": [
+  {"metodo": "EVO_LEVEL", "parametro": 21, "destino": "WEEPINBELL"}
+ ],
+ "WEEPINBELL": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRAHOJA", "destino": "VICTREEBEL"}
+ ],
+ "TENTACOOL": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "TENTACRUEL"}
+ ],
+ "GEODUDE": [
+  {"metodo": "EVO_LEVEL", "parametro": 25, "destino": "GRAVELER"}
+ ],
+ "GRAVELER": [
+  {"metodo": "EVO_TRADE", "parametro": 0, "destino": "GOLEM"}
+ ],
+ "PONYTA": [
+  {"metodo": "EVO_LEVEL", "parametro": 40, "destino": "RAPIDASH"}
+ ],
+ "SLOWPOKE": [
+  {"metodo": "EVO_LEVEL", "parametro": 37, "destino": "SLOWBRO"},
+  {"metodo": "EVO_TRADE_ITEM", "parametro": "ROCADELREY", "destino": "SLOWKING"}
+ ],
+ "MAGNEMITE": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "MAGNETON"}
+ ],
+ "DODUO": [
+  {"metodo": "EVO_LEVEL", "parametro": 31, "destino": "DODRIO"}
+ ],
+ "SEEL": [
+  {"metodo": "EVO_LEVEL", "parametro": 34, "destino": "DEWGONG"}
+ ],
+ "GRIMER": [
+  {"metodo": "EVO_LEVEL", "parametro": 38, "destino": "MUK"}
+ ],
+ "SHELLDER": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRAAGUA", "destino": "CLOYSTER"}
+ ],
+ "GASTLY": [
+  {"metodo": "EVO_LEVEL", "parametro": 25, "destino": "HAUNTER"}
+ ],
+ "HAUNTER": [
+  {"metodo": "EVO_TRADE", "parametro": 0, "destino": "GENGAR"}
+ ],
+ "ONIX": [
+  {"metodo": "EVO_TRADE_ITEM", "parametro": "REVESTMETALICO", "destino": "STEELIX"}
+ ],
+ "DROWZEE": [
+  {"metodo": "EVO_LEVEL", "parametro": 26, "destino": "HYPNO"}
+ ],
+ "KRABBY": [
+  {"metodo": "EVO_LEVEL", "parametro": 28, "destino": "KINGLER"}
+ ],
+ "VOLTORB": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "ELECTRODE"}
+ ],
+ "EXEGGCUTE": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRAHOJA", "destino": "EXEGGUTOR"}
+ ],
+ "CUBONE": [
+  {"metodo": "EVO_LEVEL", "parametro": 28, "destino": "MAROWAK"}
+ ],
+ "KOFFING": [
+  {"metodo": "EVO_LEVEL", "parametro": 35, "destino": "WEEZING"}
+ ],
+ "RHYHORN": [
+  {"metodo": "EVO_LEVEL", "parametro": 42, "destino": "RHYDON"}
+ ],
+ "CHANSEY": [
+  {"metodo": "EVO_FRIENDSHIP", "parametro": 0, "destino": "BLISSEY"}
+ ],
+ "HORSEA": [
+  {"metodo": "EVO_LEVEL", "parametro": 32, "destino": "SEADRA"}
+ ],
+ "SEADRA": [
+  {"metodo": "EVO_TRADE_ITEM", "parametro": "ESCAMADRAGON", "destino": "KINGDRA"}
+ ],
+ "GOLDEEN": [
+  {"metodo": "EVO_LEVEL", "parametro": 33, "destino": "SEAKING"}
+ ],
+ "STARYU": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRAAGUA", "destino": "STARMIE"}
+ ],
+ "SCYTHER": [
+  {"metodo": "EVO_TRADE_ITEM", "parametro": "REVESTMETALICO", "destino": "SCIZOR"}
+ ],
+ "MAGIKARP": [
+  {"metodo": "EVO_LEVEL", "parametro": 20, "destino": "GYARADOS"}
+ ],
+ "EEVEE": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRATRUENO", "destino": "JOLTEON"},
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRAAGUA", "destino": "VAPOREON"},
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRAFUEGO", "destino": "FLAREON"},
+  {"metodo": "EVO_FRIENDSHIP_DAY", "parametro": 0, "destino": "ESPEON"},
+  {"metodo": "EVO_FRIENDSHIP_NIGHT", "parametro": 0, "destino": "UMBREON"}
+ ],
+ "PORYGON": [
+  {"metodo": "EVO_TRADE_ITEM", "parametro": "MEJORA", "destino": "PORYGON2"}
+ ],
+ "OMANYTE": [
+  {"metodo": "EVO_LEVEL", "parametro": 40, "destino": "OMASTAR"}
+ ],
+ "KABUTO": [
+  {"metodo": "EVO_LEVEL", "parametro": 40, "destino": "KABUTOPS"}
+ ],
+ "DRATINI": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "DRAGONAIR"}
+ ],
+ "DRAGONAIR": [
+  {"metodo": "EVO_LEVEL", "parametro": 55, "destino": "DRAGONITE"}
+ ],
+ "CHIKORITA": [
+  {"metodo": "EVO_LEVEL", "parametro": 16, "destino": "BAYLEEF"}
+ ],
+ "BAYLEEF": [
+  {"metodo": "EVO_LEVEL", "parametro": 32, "destino": "MEGANIUM"}
+ ],
+ "CYNDAQUIL": [
+  {"metodo": "EVO_LEVEL", "parametro": 14, "destino": "QUILAVA"}
+ ],
+ "QUILAVA": [
+  {"metodo": "EVO_LEVEL", "parametro": 36, "destino": "TYPHLOSION"}
+ ],
+ "TOTODILE": [
+  {"metodo": "EVO_LEVEL", "parametro": 18, "destino": "CROCONAW"}
+ ],
+ "CROCONAW": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "FERALIGATR"}
+ ],
+ "SENTRET": [
+  {"metodo": "EVO_LEVEL", "parametro": 15, "destino": "FURRET"}
+ ],
+ "HOOTHOOT": [
+  {"metodo": "EVO_LEVEL", "parametro": 20, "destino": "NOCTOWL"}
+ ],
+ "LEDYBA": [
+  {"metodo": "EVO_LEVEL", "parametro": 18, "destino": "LEDIAN"}
+ ],
+ "SPINARAK": [
+  {"metodo": "EVO_LEVEL", "parametro": 22, "destino": "ARIADOS"}
+ ],
+ "CHINCHOU": [
+  {"metodo": "EVO_LEVEL", "parametro": 27, "destino": "LANTURN"}
+ ],
+ "PICHU": [
+  {"metodo": "EVO_FRIENDSHIP", "parametro": 0, "destino": "PIKACHU"}
+ ],
+ "CLEFFA": [
+  {"metodo": "EVO_FRIENDSHIP", "parametro": 0, "destino": "CLEFAIRY"}
+ ],
+ "IGGLYBUFF": [
+  {"metodo": "EVO_FRIENDSHIP", "parametro": 0, "destino": "JIGGLYPUFF"}
+ ],
+ "TOGEPI": [
+  {"metodo": "EVO_FRIENDSHIP", "parametro": 0, "destino": "TOGETIC"}
+ ],
+ "NATU": [
+  {"metodo": "EVO_LEVEL", "parametro": 25, "destino": "XATU"}
+ ],
+ "MAREEP": [
+  {"metodo": "EVO_LEVEL", "parametro": 15, "destino": "FLAAFFY"}
+ ],
+ "FLAAFFY": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "AMPHAROS"}
+ ],
+ "MARILL": [
+  {"metodo": "EVO_LEVEL", "parametro": 18, "destino": "AZUMARILL"}
+ ],
+ "HOPPIP": [
+  {"metodo": "EVO_LEVEL", "parametro": 18, "destino": "SKIPLOOM"}
+ ],
+ "SKIPLOOM": [
+  {"metodo": "EVO_LEVEL", "parametro": 27, "destino": "JUMPLUFF"}
+ ],
+ "SUNKERN": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRASOLAR", "destino": "SUNFLORA"}
+ ],
+ "WOOPER": [
+  {"metodo": "EVO_LEVEL", "parametro": 20, "destino": "QUAGSIRE"}
+ ],
+ "PINECO": [
+  {"metodo": "EVO_LEVEL", "parametro": 31, "destino": "FORRETRESS"}
+ ],
+ "SNUBBULL": [
+  {"metodo": "EVO_LEVEL", "parametro": 23, "destino": "GRANBULL"}
+ ],
+ "TEDDIURSA": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "URSARING"}
+ ],
+ "SLUGMA": [
+  {"metodo": "EVO_LEVEL", "parametro": 38, "destino": "MAGCARGO"}
+ ],
+ "SWINUB": [
+  {"metodo": "EVO_LEVEL", "parametro": 33, "destino": "PILOSWINE"}
+ ],
+ "REMORAID": [
+  {"metodo": "EVO_LEVEL", "parametro": 25, "destino": "OCTILLERY"}
+ ],
+ "HOUNDOUR": [
+  {"metodo": "EVO_LEVEL", "parametro": 24, "destino": "HOUNDOOM"}
+ ],
+ "PHANPY": [
+  {"metodo": "EVO_LEVEL", "parametro": 25, "destino": "DONPHAN"}
+ ],
+ "TYROGUE": [
+  {"metodo": "EVO_LEVEL_ATK_LT_DEF", "parametro": 20, "destino": "HITMONCHAN"},
+  {"metodo": "EVO_LEVEL_ATK_GT_DEF", "parametro": 20, "destino": "HITMONLEE"},
+  {"metodo": "EVO_LEVEL_ATK_EQ_DEF", "parametro": 20, "destino": "HITMONTOP"}
+ ],
+ "SMOOCHUM": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "JYNX"}
+ ],
+ "ELEKID": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "ELECTABUZZ"}
+ ],
+ "MAGBY": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "MAGMAR"}
+ ],
+ "LARVITAR": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "PUPITAR"}
+ ],
+ "PUPITAR": [
+  {"metodo": "EVO_LEVEL", "parametro": 55, "destino": "TYRANITAR"}
+ ],
+ "TREECKO": [
+  {"metodo": "EVO_LEVEL", "parametro": 16, "destino": "GROVYLE"}
+ ],
+ "GROVYLE": [
+  {"metodo": "EVO_LEVEL", "parametro": 36, "destino": "SCEPTILE"}
+ ],
+ "TORCHIC": [
+  {"metodo": "EVO_LEVEL", "parametro": 16, "destino": "COMBUSKEN"}
+ ],
+ "COMBUSKEN": [
+  {"metodo": "EVO_LEVEL", "parametro": 36, "destino": "BLAZIKEN"}
+ ],
+ "MUDKIP": [
+  {"metodo": "EVO_LEVEL", "parametro": 16, "destino": "MARSHTOMP"}
+ ],
+ "MARSHTOMP": [
+  {"metodo": "EVO_LEVEL", "parametro": 36, "destino": "SWAMPERT"}
+ ],
+ "POOCHYENA": [
+  {"metodo": "EVO_LEVEL", "parametro": 18, "destino": "MIGHTYENA"}
+ ],
+ "ZIGZAGOON": [
+  {"metodo": "EVO_LEVEL", "parametro": 20, "destino": "LINOONE"}
+ ],
+ "WURMPLE": [
+  {"metodo": "EVO_LEVEL_SILCOON", "parametro": 7, "destino": "SILCOON"},
+  {"metodo": "EVO_LEVEL_CASCOON", "parametro": 7, "destino": "CASCOON"}
+ ],
+ "SILCOON": [
+  {"metodo": "EVO_LEVEL", "parametro": 10, "destino": "BEAUTIFLY"}
+ ],
+ "CASCOON": [
+  {"metodo": "EVO_LEVEL", "parametro": 10, "destino": "DUSTOX"}
+ ],
+ "LOTAD": [
+  {"metodo": "EVO_LEVEL", "parametro": 14, "destino": "LOMBRE"}
+ ],
+ "LOMBRE": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRAAGUA", "destino": "LUDICOLO"}
+ ],
+ "SEEDOT": [
+  {"metodo": "EVO_LEVEL", "parametro": 14, "destino": "NUZLEAF"}
+ ],
+ "NUZLEAF": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRAHOJA", "destino": "SHIFTRY"}
+ ],
+ "NINCADA": [
+  {"metodo": "EVO_LEVEL_NINJASK", "parametro": 20, "destino": "NINJASK"},
+  {"metodo": "EVO_LEVEL_SHEDINJA", "parametro": 20, "destino": "SHEDINJA"}
+ ],
+ "TAILLOW": [
+  {"metodo": "EVO_LEVEL", "parametro": 22, "destino": "SWELLOW"}
+ ],
+ "SHROOMISH": [
+  {"metodo": "EVO_LEVEL", "parametro": 23, "destino": "BRELOOM"}
+ ],
+ "WINGULL": [
+  {"metodo": "EVO_LEVEL", "parametro": 25, "destino": "PELIPPER"}
+ ],
+ "SURSKIT": [
+  {"metodo": "EVO_LEVEL", "parametro": 22, "destino": "MASQUERAIN"}
+ ],
+ "WAILMER": [
+  {"metodo": "EVO_LEVEL", "parametro": 40, "destino": "WAILORD"}
+ ],
+ "SKITTY": [
+  {"metodo": "EVO_ITEM", "parametro": "PIEDRALUNAR", "destino": "DELCATTY"}
+ ],
+ "BALTOY": [
+  {"metodo": "EVO_LEVEL", "parametro": 36, "destino": "CLAYDOL"}
+ ],
+ "BARBOACH": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "WHISCASH"}
+ ],
+ "CORPHISH": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "CRAWDAUNT"}
+ ],
+ "FEEBAS": [
+  {"metodo": "EVO_BEAUTY", "parametro": 170, "destino": "MILOTIC"}
+ ],
+ "CARVANHA": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "SHARPEDO"}
+ ],
+ "TRAPINCH": [
+  {"metodo": "EVO_LEVEL", "parametro": 35, "destino": "VIBRAVA"}
+ ],
+ "VIBRAVA": [
+  {"metodo": "EVO_LEVEL", "parametro": 45, "destino": "FLYGON"}
+ ],
+ "MAKUHITA": [
+  {"metodo": "EVO_LEVEL", "parametro": 24, "destino": "HARIYAMA"}
+ ],
+ "ELECTRIKE": [
+  {"metodo": "EVO_LEVEL", "parametro": 26, "destino": "MANECTRIC"}
+ ],
+ "NUMEL": [
+  {"metodo": "EVO_LEVEL", "parametro": 33, "destino": "CAMERUPT"}
+ ],
+ "SPHEAL": [
+  {"metodo": "EVO_LEVEL", "parametro": 32, "destino": "SEALEO"}
+ ],
+ "SEALEO": [
+  {"metodo": "EVO_LEVEL", "parametro": 44, "destino": "WALREIN"}
+ ],
+ "CACNEA": [
+  {"metodo": "EVO_LEVEL", "parametro": 32, "destino": "CACTURNE"}
+ ],
+ "SNORUNT": [
+  {"metodo": "EVO_LEVEL", "parametro": 42, "destino": "GLALIE"}
+ ],
+ "AZURILL": [
+  {"metodo": "EVO_FRIENDSHIP", "parametro": 0, "destino": "MARILL"}
+ ],
+ "SPOINK": [
+  {"metodo": "EVO_LEVEL", "parametro": 32, "destino": "GRUMPIG"}
+ ],
+ "MEDITITE": [
+  {"metodo": "EVO_LEVEL", "parametro": 37, "destino": "MEDICHAM"}
+ ],
+ "SWABLU": [
+  {"metodo": "EVO_LEVEL", "parametro": 35, "destino": "ALTARIA"}
+ ],
+ "WYNAUT": [
+  {"metodo": "EVO_LEVEL", "parametro": 15, "destino": "WOBBUFFET"}
+ ],
+ "DUSKULL": [
+  {"metodo": "EVO_LEVEL", "parametro": 37, "destino": "DUSCLOPS"}
+ ],
+ "SLAKOTH": [
+  {"metodo": "EVO_LEVEL", "parametro": 18, "destino": "VIGOROTH"}
+ ],
+ "VIGOROTH": [
+  {"metodo": "EVO_LEVEL", "parametro": 36, "destino": "SLAKING"}
+ ],
+ "GULPIN": [
+  {"metodo": "EVO_LEVEL", "parametro": 26, "destino": "SWALOT"}
+ ],
+ "WHISMUR": [
+  {"metodo": "EVO_LEVEL", "parametro": 20, "destino": "LOUDRED"}
+ ],
+ "LOUDRED": [
+  {"metodo": "EVO_LEVEL", "parametro": 40, "destino": "EXPLOUD"}
+ ],
+ "CLAMPERL": [
+  {"metodo": "EVO_TRADE_ITEM", "parametro": "DIENTEMARINO", "destino": "HUNTAIL"},
+  {"metodo": "EVO_TRADE_ITEM", "parametro": "ESCAMAMARINA", "destino": "GOREBYSS"}
+ ],
+ "SHUPPET": [
+  {"metodo": "EVO_LEVEL", "parametro": 37, "destino": "BANETTE"}
+ ],
+ "ARON": [
+  {"metodo": "EVO_LEVEL", "parametro": 32, "destino": "LAIRON"}
+ ],
+ "LAIRON": [
+  {"metodo": "EVO_LEVEL", "parametro": 42, "destino": "AGGRON"}
+ ],
+ "LILEEP": [
+  {"metodo": "EVO_LEVEL", "parametro": 40, "destino": "CRADILY"}
+ ],
+ "ANORITH": [
+  {"metodo": "EVO_LEVEL", "parametro": 40, "destino": "ARMALDO"}
+ ],
+ "RALTS": [
+  {"metodo": "EVO_LEVEL", "parametro": 20, "destino": "KIRLIA"}
+ ],
+ "KIRLIA": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "GARDEVOIR"}
+ ],
+ "BAGON": [
+  {"metodo": "EVO_LEVEL", "parametro": 30, "destino": "SHELGON"}
+ ],
+ "SHELGON": [
+  {"metodo": "EVO_LEVEL", "parametro": 50, "destino": "SALAMENCE"}
+ ],
+ "BELDUM": [
+  {"metodo": "EVO_LEVEL", "parametro": 20, "destino": "METANG"}
+ ],
+ "METANG": [
+  {"metodo": "EVO_LEVEL", "parametro": 45, "destino": "METAGROSS"}
+ ]
+}

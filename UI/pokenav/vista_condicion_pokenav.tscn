@@ -1,0 +1,338 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/pokenav/vista_condicion_pokenav.gd" id="e1"]
+[ext_resource type="Texture2D" path="res://graficos/pokecubos/condicion_fondo.png" id="e2"]
+[ext_resource type="Script" path="res://UI/pokemon_sprite.gd" id="e3"]
+[ext_resource type="LabelSettings" path="res://UI/texto_normal_negro.tres" id="e4"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/destello.png" id="e5"]
+[ext_resource type="Texture2D" path="res://graficos/pokecubos/condicion_balls.png" id="e6"]
+[ext_resource type="Texture2D" path="res://graficos/pokecubos/condicion_salir.png" id="e7"]
+
+[sub_resource type="Animation" id="Anim_2"]
+resource_name = "destellos"
+length = 0.83333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Destello0:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.08333, 0.16667, 0.25000, 0.33333, 0.41667, 0.50000, 0.58333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 6]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Destello1:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.08333, 0.16667, 0.25000, 0.33333, 0.41667, 0.50000, 0.58333, 0.66667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 6]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Destello2:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.16667, 0.25000, 0.33333, 0.41667, 0.50000, 0.58333, 0.66667, 0.75000),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 6]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Destello3:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.00000, 0.25000, 0.33333, 0.41667, 0.50000, 0.58333, 0.66667, 0.75000),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 0, 1, 2, 3, 4, 5, 6]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Destello4:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.00000, 0.08333, 0.33333, 0.41667, 0.50000, 0.58333, 0.66667, 0.75000),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 6, 0, 1, 2, 3, 4, 5]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Destello5:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0.00000, 0.08333, 0.16667, 0.41667, 0.50000, 0.58333, 0.66667, 0.75000),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 6, 0, 1, 2, 3, 4]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Destello6:frame")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0.00000, 0.08333, 0.16667, 0.25000, 0.50000, 0.58333, 0.66667, 0.75000),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 6, 0, 1, 2, 3]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Destello7:frame")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.00000, 0.08333, 0.16667, 0.25000, 0.33333, 0.58333, 0.66667, 0.75000),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [3, 4, 5, 6, 6, 0, 1, 2]
+}
+tracks/8/type = "value"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("Destello8:frame")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.00000, 0.08333, 0.16667, 0.25000, 0.33333, 0.41667, 0.66667, 0.75000),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [2, 3, 4, 5, 6, 6, 0, 1]
+}
+tracks/9/type = "value"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("Destello9:frame")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(0.00000, 0.08333, 0.16667, 0.25000, 0.33333, 0.41667, 0.50000, 0.75000),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5, 6, 6, 0]
+}
+
+[sub_resource type="AnimationLibrary" id="Lib_3"]
+_data = {
+&"destellos": SubResource("Anim_2")
+}
+
+[sub_resource type="Animation" id="Anim_5"]
+resource_name = "panel_entrada"
+length = 0.08333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.08333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-80, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Anim_6"]
+resource_name = "panel_salida"
+length = 0.08333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Panel:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.08333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-80, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="Lib_7"]
+_data = {
+&"panel_entrada": SubResource("Anim_5"),
+&"panel_salida": SubResource("Anim_6")
+}
+
+[node name="VistaCondicionPokenav" type="Node2D"]
+script = ExtResource("e1")
+
+[node name="Fondo" type="Sprite2D" parent="."]
+texture = ExtResource("e2")
+centered = false
+
+[node name="Pentagono" type="Polygon2D" parent="."]
+color = Color(0, 1, 0, 0.6875)
+polygon = PackedVector2Array(155, 87, 159, 90, 157, 95, 153, 95, 151, 90)
+
+[node name="Panel" type="Node2D" parent="."]
+position = Vector2(-80, 0)
+
+[node name="Pokemon" type="AnimatedSprite2D" parent="Panel"]
+position = Vector2(38, 104)
+script = ExtResource("e3")
+
+[node name="Naturaleza" type="Label" parent="Panel"]
+layout_mode = 0
+offset_left = 1
+offset_top = 140
+offset_right = 95
+offset_bottom = 155
+text = ""
+label_settings = ExtResource("e4")
+
+[node name="Destellos" type="Node2D" parent="Panel"]
+position = Vector2(38, 104)
+
+[node name="Destello0" type="Sprite2D" parent="Panel/Destellos"]
+texture = ExtResource("e5")
+position = Vector2(0, -35)
+centered = true
+vframes = 7
+frame = 6
+
+[node name="Destello1" type="Sprite2D" parent="Panel/Destellos"]
+texture = ExtResource("e5")
+position = Vector2(20, -28)
+centered = true
+vframes = 7
+frame = 6
+
+[node name="Destello2" type="Sprite2D" parent="Panel/Destellos"]
+texture = ExtResource("e5")
+position = Vector2(33, -10)
+centered = true
+vframes = 7
+frame = 6
+
+[node name="Destello3" type="Sprite2D" parent="Panel/Destellos"]
+texture = ExtResource("e5")
+position = Vector2(33, 10)
+centered = true
+vframes = 7
+frame = 6
+
+[node name="Destello4" type="Sprite2D" parent="Panel/Destellos"]
+texture = ExtResource("e5")
+position = Vector2(20, 28)
+centered = true
+vframes = 7
+frame = 6
+
+[node name="Destello5" type="Sprite2D" parent="Panel/Destellos"]
+texture = ExtResource("e5")
+position = Vector2(0, 35)
+centered = true
+vframes = 7
+frame = 6
+
+[node name="Destello6" type="Sprite2D" parent="Panel/Destellos"]
+texture = ExtResource("e5")
+position = Vector2(-20, 28)
+centered = true
+vframes = 7
+frame = 6
+
+[node name="Destello7" type="Sprite2D" parent="Panel/Destellos"]
+texture = ExtResource("e5")
+position = Vector2(-33, 10)
+centered = true
+vframes = 7
+frame = 6
+
+[node name="Destello8" type="Sprite2D" parent="Panel/Destellos"]
+texture = ExtResource("e5")
+position = Vector2(-33, -10)
+centered = true
+vframes = 7
+frame = 6
+
+[node name="Destello9" type="Sprite2D" parent="Panel/Destellos"]
+texture = ExtResource("e5")
+position = Vector2(-20, -28)
+centered = true
+vframes = 7
+frame = 6
+
+[node name="Anim" type="AnimationPlayer" parent="Panel/Destellos"]
+libraries/ = SubResource("Lib_3")
+autoplay = &"destellos"
+
+[node name="Nombre" type="Label" parent="."]
+layout_mode = 0
+offset_left = 104
+offset_top = 8
+offset_right = 232
+offset_bottom = 23
+text = ""
+label_settings = ExtResource("e4")
+
+[node name="Lugar" type="Label" parent="."]
+layout_mode = 0
+offset_left = 104
+offset_top = 24
+offset_right = 232
+offset_bottom = 39
+text = ""
+label_settings = ExtResource("e4")
+
+[node name="Balls" type="Node2D" parent="."]
+
+[node name="Ball0" type="Sprite2D" parent="Balls"]
+position = Vector2(226, 8)
+texture = ExtResource("e6")
+vframes = 2
+
+[node name="Ball1" type="Sprite2D" parent="Balls"]
+position = Vector2(226, 28)
+texture = ExtResource("e6")
+vframes = 2
+
+[node name="Ball2" type="Sprite2D" parent="Balls"]
+position = Vector2(226, 48)
+texture = ExtResource("e6")
+vframes = 2
+
+[node name="Ball3" type="Sprite2D" parent="Balls"]
+position = Vector2(226, 68)
+texture = ExtResource("e6")
+vframes = 2
+
+[node name="Ball4" type="Sprite2D" parent="Balls"]
+position = Vector2(226, 88)
+texture = ExtResource("e6")
+vframes = 2
+
+[node name="Ball5" type="Sprite2D" parent="Balls"]
+position = Vector2(226, 108)
+texture = ExtResource("e6")
+vframes = 2
+
+[node name="Salir" type="Sprite2D" parent="."]
+position = Vector2(222, 128)
+texture = ExtResource("e7")
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("Lib_7")

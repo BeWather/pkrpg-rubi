@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lcnufe3fxdip"
+path="res://.godot/imported/1-92 Abandoned Ship.mp3-0277f69e641c9bbc0494082ec6ba09d5.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-92 Abandoned Ship.mp3"
+dest_files=["res://.godot/imported/1-92 Abandoned Ship.mp3-0277f69e641c9bbc0494082ec6ba09d5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

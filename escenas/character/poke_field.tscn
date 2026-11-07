@@ -1,0 +1,74 @@
+[gd_scene format=3 uid="uid://ymtl6mr33wfd"]
+
+[ext_resource type="Texture2D" uid="uid://cj7f6y1g4vyst" path="res://graficos/character/poke_field_move.png" id="1_wmcwd"]
+[ext_resource type="Script" path="res://escenas/character/poke_field.gd" id="2_pfscr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wowjg"]
+atlas = ExtResource("1_wmcwd")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pgpdf"]
+atlas = ExtResource("1_wmcwd")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38hhl"]
+atlas = ExtResource("1_wmcwd")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13ina"]
+atlas = ExtResource("1_wmcwd")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l6grc"]
+atlas = ExtResource("1_wmcwd")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ra8y7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wowjg")
+}],
+"loop": 1,
+"name": &"fly",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pgpdf")
+}],
+"loop": 1,
+"name": &"surf_abajo",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_38hhl")
+}],
+"loop": 1,
+"name": &"surf_arriba",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13ina")
+}],
+"loop": 1,
+"name": &"surf_derecha",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l6grc")
+}],
+"loop": 1,
+"name": &"surf_izquierda",
+"speed": 5.0
+}]
+
+[node name="PokeField" type="AnimatedSprite2D" unique_id=1896653768]
+z_index = 0
+script = ExtResource("2_pfscr")
+sprite_frames = SubResource("SpriteFrames_ra8y7")
+animation = &"surf_izquierda"
+offset = Vector2(0, -6)

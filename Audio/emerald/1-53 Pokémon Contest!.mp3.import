@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bjh6rayalnuej"
+path="res://.godot/imported/1-53 Pokémon Contest!.mp3-25e8d2ef0dcdeb1f6fb2748963a9b6a0.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-53 Pokémon Contest!.mp3"
+dest_files=["res://.godot/imported/1-53 Pokémon Contest!.mp3-25e8d2ef0dcdeb1f6fb2748963a9b6a0.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Texture2D" path="res://graficos/bases_secretas/entradas/efecto_arbol_0.png" id="1"]
+[ext_resource type="Texture2D" path="res://graficos/bases_secretas/entradas/efecto_arbol_1.png" id="2"]
+[ext_resource type="Texture2D" path="res://graficos/bases_secretas/entradas/efecto_arbol_2.png" id="3"]
+[ext_resource type="Texture2D" path="res://graficos/bases_secretas/entradas/efecto_arbol_3.png" id="4"]
+[ext_resource type="Texture2D" path="res://graficos/bases_secretas/entradas/efecto_arbol_4.png" id="5"]
+
+[sub_resource type="SpriteFrames" id="Frames"]
+animations = [{
+"frames": [
+{"duration": 1.0, "texture": ExtResource("1")},
+{"duration": 1.0, "texture": ExtResource("2")},
+{"duration": 1.0, "texture": ExtResource("3")},
+{"duration": 1.0, "texture": ExtResource("4")},
+{"duration": 1.0, "texture": ExtResource("5")},
+], "loop": false, "name": &"abrir", "speed": 7.5
+}]
+
+[node name="AperturaArbol" type="AnimatedSprite2D"]
+visible = false
+texture_filter = 1
+sprite_frames = SubResource("Frames")
+animation = &"abrir"

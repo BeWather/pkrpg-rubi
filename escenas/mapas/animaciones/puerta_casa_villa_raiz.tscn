@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://cqjvgcfofla0k"]
+
+[ext_resource type="Texture2D" uid="uid://ccu7ovn2wn3rt" path="res://graficos/puerta_casa_villa_raiz.png" id="1_l64fm"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2jwrw"]
+atlas = ExtResource("1_l64fm")
+region = Rect2(0, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0tufj"]
+atlas = ExtResource("1_l64fm")
+region = Rect2(16, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6pqk5"]
+atlas = ExtResource("1_l64fm")
+region = Rect2(32, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg3b3"]
+atlas = ExtResource("1_l64fm")
+region = Rect2(32, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_03bue"]
+atlas = ExtResource("1_l64fm")
+region = Rect2(16, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gst6h"]
+atlas = ExtResource("1_l64fm")
+region = Rect2(0, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cerrada"]
+atlas = ExtResource("1_l64fm")
+region = Rect2(64, 0, 16, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kjjuc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2jwrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0tufj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6pqk5")
+}],
+"loop": 0,
+"name": &"abrir_puerta",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lg3b3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_03bue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gst6h")
+}],
+"loop": 0,
+"name": &"cerrar_puerta",
+"speed": 6.0
+}, {
+"frames": [{"duration": 1.0, "texture": SubResource("AtlasTexture_6pqk5")}],
+"loop": false,
+"name": &"abierta",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cerrada")
+}],
+"loop": false,
+"name": &"cerrada",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=2039186462]
+sprite_frames = SubResource("SpriteFrames_kjjuc")

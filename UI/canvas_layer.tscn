@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cqniany7u4wq1"]
+
+[ext_resource type="PackedScene" uid="uid://bvbnk1m8623dv" path="res://UI/menu_pausa.tscn" id="1_lqjqh"]
+[ext_resource type="PackedScene" uid="uid://cwkksjoacpjr" path="res://UI/cuadro_dialogo.tscn" id="2_m8hda"]
+[ext_resource type="Script" uid="uid://cmu8ht1ob6aiw" path="res://scripts/telon.gd" id="3_fm1o1"]
+[ext_resource type="Script" uid="uid://dxixfrxl35san" path="res://UI/InputBlocker.gd" id="4_petb7"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1478259441]
+
+[node name="MenuPausa" parent="." unique_id=1136738562 instance=ExtResource("1_lqjqh")]
+
+[node name="CuadroDialogo" parent="." unique_id=1823827860 instance=ExtResource("2_m8hda")]
+z_index = 1
+
+[node name="Telon" type="ColorRect" parent="." unique_id=783460421]
+visible = false
+z_index = 10
+offset_right = 240.0
+offset_bottom = 160.0
+color = Color(0, 0, 0, 1)
+script = ExtResource("3_fm1o1")
+
+[node name="InputBlocker" type="Control" parent="Telon" unique_id=664454367]
+visible = false
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 160.0
+script = ExtResource("4_petb7")

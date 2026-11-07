@@ -1,0 +1,223 @@
+[gd_scene format=3 uid="uid://d0rbcten5kwix"]
+
+[ext_resource type="Script" uid="uid://bidesdlxcuxeg" path="res://UI/ficha-entrenador/ficha_entrenador.gd" id="1_862v4"]
+[ext_resource type="Texture2D" uid="uid://ua524w6p0ath" path="res://UI/ficha-entrenador/fe-fondo.png" id="2_ru7pl"]
+[ext_resource type="Texture2D" uid="uid://yamfu2cpd8na" path="res://UI/ficha-entrenador/ma-fondo.png" id="3_x0off"]
+[ext_resource type="Texture2D" uid="uid://du28afhqh5uur" path="res://UI/ficha-entrenador/ficha-frente.png" id="4_x0off"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="5_17vl6"]
+[ext_resource type="Texture2D" uid="uid://dujistm2nndj8" path="res://graficos/trainers64/002.png" id="5_oks2x"]
+[ext_resource type="Texture2D" uid="uid://dk772ao6ktrkf" path="res://graficos/medallas.png" id="7_kn7ya"]
+[ext_resource type="Texture2D" uid="uid://des1mr5b6axxa" path="res://UI/ficha-entrenador/ficha-reverso.png" id="7_oks2x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x0off"]
+font = ExtResource("5_17vl6")
+font_size = 15
+font_color = Color(0.165656, 0.165656, 0.165656, 1)
+shadow_size = 0
+shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+shadow_offset = Vector2(1, 0)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83ix6"]
+atlas = ExtResource("7_kn7ya")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7oddg"]
+atlas = ExtResource("7_kn7ya")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i271s"]
+atlas = ExtResource("7_kn7ya")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgcp4"]
+atlas = ExtResource("7_kn7ya")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fhu35"]
+atlas = ExtResource("7_kn7ya")
+region = Rect2(64, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_denwh"]
+atlas = ExtResource("7_kn7ya")
+region = Rect2(80, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5qfr"]
+atlas = ExtResource("7_kn7ya")
+region = Rect2(96, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tba06"]
+atlas = ExtResource("7_kn7ya")
+region = Rect2(112, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6guvp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83ix6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7oddg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i271s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgcp4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fhu35")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_denwh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g5qfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tba06")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ficha-entrenador" type="Node2D" unique_id=1177280152]
+script = ExtResource("1_862v4")
+animacion_vertical = true
+
+[node name="Fe-fondo" type="Sprite2D" parent="." unique_id=1589750399]
+texture_repeat = 2
+scale = Vector2(240, 1)
+texture = ExtResource("2_ru7pl")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Ma-fondo" type="Sprite2D" parent="." unique_id=1004331196]
+visible = false
+texture_repeat = 2
+scale = Vector2(240, 1)
+texture = ExtResource("3_x0off")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="ficha-frente" type="Sprite2D" parent="." unique_id=1553455636]
+position = Vector2(120, 80)
+texture = ExtResource("4_x0off")
+metadata/_edit_lock_ = true
+
+[node name="id" type="Label" parent="ficha-frente" unique_id=1338286979]
+texture_filter = 1
+offset_left = 63.0
+offset_top = -60.0
+offset_right = 93.0
+offset_bottom = -45.0
+text = "43388"
+label_settings = SubResource("LabelSettings_x0off")
+horizontal_alignment = 2
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="nombre" type="Label" parent="ficha-frente" unique_id=1173086415]
+texture_filter = 1
+offset_left = -48.0
+offset_top = -36.0
+offset_right = 38.0
+offset_bottom = -21.0
+text = "VIRoooo"
+label_settings = SubResource("LabelSettings_x0off")
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="dinero" type="Label" parent="ficha-frente" unique_id=13121946]
+texture_filter = 1
+offset_left = -48.0
+offset_top = -12.0
+offset_right = 8.0
+offset_bottom = 3.0
+text = "123456$"
+label_settings = SubResource("LabelSettings_x0off")
+horizontal_alignment = 2
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="num-poke" type="Label" parent="ficha-frente" unique_id=1857580238]
+texture_filter = 1
+offset_left = -48.0
+offset_top = 4.0
+offset_right = 8.0
+offset_bottom = 19.0
+text = "1999"
+label_settings = SubResource("LabelSettings_x0off")
+horizontal_alignment = 2
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="tiempo" type="Label" parent="ficha-frente" unique_id=1213840172]
+texture_filter = 1
+offset_left = -48.0
+offset_top = 20.0
+offset_right = 8.0
+offset_bottom = 35.0
+text = "999:99"
+label_settings = SubResource("LabelSettings_x0off")
+horizontal_alignment = 2
+language = "es_AR"
+metadata/_edit_lock_ = true
+
+[node name="medalla0" type="AnimatedSprite2D" parent="ficha-frente" unique_id=1326821977]
+position = Vector2(-80, 52)
+sprite_frames = SubResource("SpriteFrames_6guvp")
+metadata/_edit_lock_ = true
+
+[node name="medalla1" type="AnimatedSprite2D" parent="ficha-frente" unique_id=1207248948]
+position = Vector2(-56, 52)
+sprite_frames = SubResource("SpriteFrames_6guvp")
+frame = 1
+metadata/_edit_lock_ = true
+
+[node name="medalla2" type="AnimatedSprite2D" parent="ficha-frente" unique_id=1520413060]
+position = Vector2(-32, 52)
+sprite_frames = SubResource("SpriteFrames_6guvp")
+frame = 2
+metadata/_edit_lock_ = true
+
+[node name="medalla3" type="AnimatedSprite2D" parent="ficha-frente" unique_id=75062631]
+position = Vector2(-8, 52)
+sprite_frames = SubResource("SpriteFrames_6guvp")
+frame = 3
+metadata/_edit_lock_ = true
+
+[node name="medalla4" type="AnimatedSprite2D" parent="ficha-frente" unique_id=383915879]
+position = Vector2(16, 52)
+sprite_frames = SubResource("SpriteFrames_6guvp")
+frame = 4
+metadata/_edit_lock_ = true
+
+[node name="medalla5" type="AnimatedSprite2D" parent="ficha-frente" unique_id=1412347326]
+position = Vector2(40, 52)
+sprite_frames = SubResource("SpriteFrames_6guvp")
+frame = 5
+metadata/_edit_lock_ = true
+
+[node name="medalla6" type="AnimatedSprite2D" parent="ficha-frente" unique_id=1283545401]
+position = Vector2(64, 52)
+sprite_frames = SubResource("SpriteFrames_6guvp")
+frame = 6
+metadata/_edit_lock_ = true
+
+[node name="medalla7" type="AnimatedSprite2D" parent="ficha-frente" unique_id=2013808744]
+position = Vector2(88, 52)
+sprite_frames = SubResource("SpriteFrames_6guvp")
+frame = 7
+metadata/_edit_lock_ = true
+
+[node name="avatar" type="Sprite2D" parent="ficha-frente" unique_id=569629282]
+position = Vector2(64, -5)
+texture = ExtResource("5_oks2x")
+metadata/_edit_lock_ = true
+
+[node name="ficha-reverso" type="Sprite2D" parent="." unique_id=754398379]
+visible = false
+position = Vector2(120, 80)
+texture = ExtResource("7_oks2x")
+metadata/_edit_lock_ = true

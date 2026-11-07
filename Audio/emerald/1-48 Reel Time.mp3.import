@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vu4kavrhub5m"
+path="res://.godot/imported/1-48 Reel Time.mp3-c69a7d5667d6e51d2fdad6fb4a7d910d.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-48 Reel Time.mp3"
+dest_files=["res://.godot/imported/1-48 Reel Time.mp3-c69a7d5667d6e51d2fdad6fb4a7d910d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

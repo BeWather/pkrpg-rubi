@@ -1,0 +1,186 @@
+{
+	"version": 1,
+	"sha1_rom": "ae35f6fd52a9258b794d7d3f4c784b8ee3fcde5c",
+	"sha256_rom": "2fd6f3cb65c85880aaadea429af67a7a401b34443bae06125fa787018fcda9a3",
+	"fuentes_decomp": {
+		"charmap.txt": "8c1db143d4f5f8186a6853d076b8b5dbd5d505b64e3c04ed79fe75afa54b7e9c",
+		"src/strings.c": "3eebccce0d00efa373f36fea6e823c23d1553dc3a3e2ba2cc22778c129c16100",
+		"src/item_use.c": "5a9586086bf39e793ff2f46f90eca23c649cfe7af52c2ef45c6c3c7555c2a238",
+		"src/party_menu.c": "8be258d3490e99c3d9f39d584839ac75f5efabd61e893704d3f48807030ce266",
+		"src/pokemon_3.c": "1b8fdb12b2d586ab9b48383f467b65fa34a2808ce76d05c3fcedf54f0aeab181",
+		"src/data/pokemon/tmhm_learnsets.h": "bb707cd85455cc1e5efd0f5959d8a1790a3c57cef253be2b5035d1a1dff6a96f"
+	},
+	"textos": [
+		{
+			"clave": "MAQUINA_MT_ACTIVADA",
+			"direccion": "0x084120A0",
+			"raw_hex": "C7CE00D5D7E8DDEAD5D8D5ADFF",
+			"texto_es": "MT activada.",
+			"controles": []
+		},
+		{
+			"clave": "MAQUINA_MO_ACTIVADA",
+			"direccion": "0x084120AD",
+			"raw_hex": "C7C900D5D7E8DDEAD5D8D5ADFF",
+			"texto_es": "MO activada.",
+			"controles": []
+		},
+		{
+			"clave": "MAQUINA_CONTIENE",
+			"direccion": "0x084120BA",
+			"raw_hex": "06E7E8D500D7E3E2E8DDD9E2D9FEFD02ADFB51BFE2E7D929D5E700FD02FED500E9E200CAC9C51BC7C9C8ACFF",
+			"texto_es": "Ésta contiene\\n{mov}.\\p¿Enseñas {mov}\\na un POKéMON?",
+			"controles": []
+		},
+		{
+			"clave": "MAQUINA_ELEGIR_POKEMON",
+			"direccion": "0x08412CE2",
+			"raw_hex": "51BFE2E7D929D5E600D500E5E91B00CAC9C51BC7C9C8ACFF",
+			"texto_es": "¿Enseñar a qué POKéMON?",
+			"controles": []
+		},
+		{
+			"clave": "MAQUINA_APRENDIDO",
+			"direccion": "0x084129E9",
+			"raw_hex": "52FD0200D5E4E6D9E2D8DD23FEFD03ABFF",
+			"texto_es": "¡{mon} aprendió\\n{mov}!",
+			"controles": []
+		},
+		{
+			"clave": "MAQUINA_INCOMPATIBLE",
+			"direccion": "0x084129FA",
+			"raw_hex": "FD0200ED00FD03FEE7E3E200DDE2D7E3E1E4D5E8DDD6E0D9E7ADFBC8E300E4E9D9D8D900D5E4E6D9E2D8D9E6FEFD03ADFC09FF",
+			"texto_es": "{mon} y {mov}\\nson incompatibles.\\pNo puede aprender\\n{mov}.",
+			"controles": [
+				{
+					"control": 9,
+					"argumentos": [],
+					"indice_texto": 60
+				}
+			]
+		},
+		{
+			"clave": "MAQUINA_QUIERE",
+			"direccion": "0x08412A2D",
+			"raw_hex": "FD0200E5E9DDD9E6D900D5E4E6D9E2D8D9E600D9E0FEE1E3EADDE1DDD9E2E8E300FD03ADFBCAD9E6E300FD0200EDD500D7E3E2E3D7D9FED7E9D5E8E6E300E1E3EADDE1DDD9E2E8E3E7ADFB51CBE9DDD9E6D9E700E7E9E7E8DDE8E9DDE600E9E2E300D8D900D9E7E3E7FEE1E3EADDE1DDD9E2E8E3E700E4E3E600FD03ACFF",
+			"texto_es": "{mon} quiere aprender el\\nmovimiento {mov}.\\pPero {mon} ya conoce\\ncuatro movimientos.\\p¿Quieres sustituir uno de esos\\nmovimientos por {mov}?",
+			"controles": []
+		},
+		{
+			"clave": "MAQUINA_DEJAR",
+			"direccion": "0x08412AAB",
+			"raw_hex": "51BED9DED500D8D900D5E4E6D9E2D8D9E6FEFD03ACFF",
+			"texto_es": "¿Deja de aprender\\n{mov}?",
+			"controles": []
+		},
+		{
+			"clave": "MAQUINA_NO_APRENDIO",
+			"direccion": "0x08412AC1",
+			"raw_hex": "FD0200E2E300D5E4E6D9E2D8DD2300FEFD03ADFC09FF",
+			"texto_es": "{mon} no aprendió \\n{mov}.",
+			"controles": [
+				{
+					"control": 9,
+					"argumentos": [],
+					"indice_texto": 26
+				}
+			]
+		},
+		{
+			"clave": "MAQUINA_ELEGIR_MOVIMIENTO",
+			"direccion": "0x08412AD7",
+			"raw_hex": "51CBE91B00E1E3EADDE1DDD9E2E8E300D8D9D6D900E3E0EADDD8D5E6ACFC09FF",
+			"texto_es": "¿Qué movimiento debe olvidar?",
+			"controles": [
+				{
+					"control": 9,
+					"argumentos": [],
+					"indice_texto": 29
+				}
+			]
+		},
+		{
+			"clave": "MAQUINA_OLVIDO",
+			"direccion": "0x08412AF7",
+			"raw_hex": "FC0820A2B800FC080FA300EDFC080FADADAD00FC080FADADAD00FC080FADADAD00FC080FFC10380052E4E9DAABFBFD0200E3E0EADDD82300D723E1E300FEE9E8DDE0DDEED5E600FD03ADFBD3ADADADFC09FF",
+			"texto_es": "1, 2 y... ... ... ¡puf!\\p{mon} olvidó cómo \\nutilizar {mov}.\\pY...",
+			"controles": [
+				{
+					"control": 8,
+					"argumentos": [
+						32
+					],
+					"indice_texto": 0
+				},
+				{
+					"control": 8,
+					"argumentos": [
+						15
+					],
+					"indice_texto": 3
+				},
+				{
+					"control": 8,
+					"argumentos": [
+						15
+					],
+					"indice_texto": 6
+				},
+				{
+					"control": 8,
+					"argumentos": [
+						15
+					],
+					"indice_texto": 10
+				},
+				{
+					"control": 8,
+					"argumentos": [
+						15
+					],
+					"indice_texto": 14
+				},
+				{
+					"control": 8,
+					"argumentos": [
+						15
+					],
+					"indice_texto": 18
+				},
+				{
+					"control": 16,
+					"argumentos": [
+						56,
+						0
+					],
+					"indice_texto": 18
+				},
+				{
+					"control": 9,
+					"argumentos": [],
+					"indice_texto": 66
+				}
+			]
+		},
+		{
+			"clave": "MAQUINA_YA_CONOCE",
+			"direccion": "0x08412B49",
+			"raw_hex": "FD0200EDD500D7E3E2E3D7D9FEFD03ADFC09FF",
+			"texto_es": "{mon} ya conoce\\n{mov}.",
+			"controles": [
+				{
+					"control": 9,
+					"argumentos": [],
+					"indice_texto": 23
+				}
+			]
+		},
+		{
+			"clave": "MAQUINA_NO_OLVIDAR_MO",
+			"direccion": "0x08413002",
+			"raw_hex": "C6E3E700E1E3EADDE1DDD9E2E8E3E700C7C900E2E300FEE7D900E4E9D9D8D9E200E3E0EADDD8D5E600D5E76FADFF",
+			"texto_es": "Los movimientos MO no \\nse pueden olvidar así.",
+			"controles": []
+		}
+	]
+}

@@ -1,0 +1,144 @@
+[gd_scene format=3 uid="uid://qni5pcid557d"]
+
+[ext_resource type="Script" uid="uid://c8k4qxnloxd26" path="res://escenas/batalla/cuadro_ps_rival.gd" id="1_6k1aw"]
+[ext_resource type="Texture2D" uid="uid://b2wnro03vu352" path="res://graficos/batalla/batalla_cuadro_ps_rival.png" id="1_76qc5"]
+[ext_resource type="FontFile" uid="uid://buqx8cwqlfbej" path="res://fuentes/pkmnems.ttf" id="3_48hvr"]
+[ext_resource type="LabelSettings" uid="uid://e3utr22k73we" path="res://escenas/batalla/label_batalla_cuadro_ps.tres" id="3_ahd3e"]
+[ext_resource type="Texture2D" uid="uid://cj24v7dtwrsko" path="res://graficos/batalla/batalla_estados.png" id="4_w7gu7"]
+[ext_resource type="Texture2D" uid="uid://brct6n3ok1tbo" path="res://graficos/batalla/indicador_capturado.png" id="5_capt1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_wug8s"]
+font = ExtResource("3_48hvr")
+font_size = 11
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nlom"]
+atlas = ExtResource("4_w7gu7")
+region = Rect2(0, 0, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xswot"]
+atlas = ExtResource("4_w7gu7")
+region = Rect2(0, 8, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_367fd"]
+atlas = ExtResource("4_w7gu7")
+region = Rect2(0, 16, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y714i"]
+atlas = ExtResource("4_w7gu7")
+region = Rect2(0, 24, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_av1w0"]
+atlas = ExtResource("4_w7gu7")
+region = Rect2(0, 32, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_171wn"]
+atlas = ExtResource("4_w7gu7")
+region = Rect2(0, 40, 24, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k5y85"]
+atlas = ExtResource("4_w7gu7")
+region = Rect2(0, 48, 24, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ttqiw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nlom")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xswot")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_367fd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y714i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_av1w0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_171wn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k5y85")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CuadroPSRival" type="Node2D" unique_id=1643566526]
+script = ExtResource("1_6k1aw")
+metadata/_edit_lock_ = true
+
+[node name="BatallaCuadroPsRival" type="Sprite2D" parent="." unique_id=128589327]
+texture = ExtResource("1_76qc5")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1777983147]
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 88.0
+offset_bottom = 16.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_constants/separation = 0
+metadata/_edit_lock_ = true
+
+[node name="LNombre" type="Label" parent="HBoxContainer" unique_id=1663211732]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "FLETCHINDER"
+label_settings = ExtResource("3_ahd3e")
+metadata/_edit_lock_ = true
+
+[node name="LSexo" type="Label" parent="HBoxContainer" unique_id=1843450131]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "♀"
+label_settings = SubResource("LabelSettings_wug8s")
+metadata/_edit_lock_ = true
+
+[node name="LNivel" type="Label" parent="." unique_id=520804157]
+offset_left = 75.0
+offset_top = 6.0
+offset_right = 91.0
+offset_bottom = 16.0
+text = "100"
+label_settings = ExtResource("3_ahd3e")
+metadata/_edit_lock_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=816502775]
+position = Vector2(1, 14)
+sprite_frames = SubResource("SpriteFrames_ttqiw")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="IconoCapturado" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(7, 14)
+texture = ExtResource("5_capt1")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="BarraSalud1" type="ColorRect" parent="." unique_id=1565270273]
+offset_left = 39.0
+offset_top = 17.0
+offset_right = 87.0
+offset_bottom = 18.0
+color = Color(0.345098, 0.815686, 0.501961, 1)
+metadata/_edit_lock_ = true
+
+[node name="BarraSalud2" type="ColorRect" parent="." unique_id=1101888660]
+offset_left = 39.0
+offset_top = 18.0
+offset_right = 87.0
+offset_bottom = 19.0
+color = Color(0.439216, 0.972549, 0.658824, 1)
+metadata/_edit_lock_ = true
+
+[connection signal="resized" from="BarraSalud1" to="." method="_on_barra_salud_1_resized"]

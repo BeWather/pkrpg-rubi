@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="DefinicionClima" load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/clima/definicion_clima.gd" id="1"]
+[ext_resource type="PackedScene" path="res://escenas/clima/efectos/tormenta.tscn" id="2"]
+
+[resource]
+script = ExtResource("1")
+id = &"TORMENTA"
+nombre_editor = "Tormenta"
+escena_efecto = ExtResource("2")
+tinte = Color(0.8125, 0.8125, 0.8125, 1)
+modo_tinte = 1
+intensidad_base = 1.0
+permite_destellos = true

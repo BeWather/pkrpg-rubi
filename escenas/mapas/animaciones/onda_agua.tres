@@ -1,0 +1,46 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dtoobumb20x4b"]
+
+[ext_resource type="Texture2D" uid="uid://dxa8u7pt4md6u" path="res://escenas/mapas/animaciones/onda_agua.png" id="1_0npgl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1fuc"]
+atlas = ExtResource("1_0npgl")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdbls"]
+atlas = ExtResource("1_0npgl")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0anl2"]
+atlas = ExtResource("1_0npgl")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qg3o5"]
+atlas = ExtResource("1_0npgl")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tvc0m"]
+atlas = ExtResource("1_0npgl")
+region = Rect2(64, 0, 16, 16)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1fuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdbls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0anl2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qg3o5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tvc0m")
+}],
+"loop": 0,
+"name": &"onda",
+"speed": 8.0
+}]

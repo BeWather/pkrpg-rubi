@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="DefinicionClimaCiclo" load_steps=6 format=3]
+
+[ext_resource type="Script" path="res://scripts/clima/definicion_clima_ciclo.gd" id="1"]
+[ext_resource type="Script" uid="uid://bnon731m8jgyp" path="res://scripts/clima/definicion_clima.gd" id="5_base"]
+[ext_resource type="Resource" path="res://recursos/clima/ninguno.tres" id="2_sol"]
+[ext_resource type="Resource" path="res://recursos/clima/lluvia.tres" id="3_lluvia"]
+[ext_resource type="Resource" path="res://recursos/clima/tormenta.tres" id="4_tormenta"]
+
+[resource]
+script = ExtResource("1")
+etapas = Array[ExtResource("5_base")]([ExtResource("2_sol"), ExtResource("3_lluvia"), ExtResource("4_tormenta"), ExtResource("3_lluvia")])
+id = &"CICLO_RUTA_119"
+nombre_editor = "Ciclo de la Ruta 119 (sol, lluvia, tormenta, lluvia)"

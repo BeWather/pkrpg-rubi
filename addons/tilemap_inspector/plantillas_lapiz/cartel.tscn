@@ -1,0 +1,6 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="1_cartel"]
+
+[node name="Cartel" type="Sprite2D" groups=["Cartel"]]
+script = ExtResource("1_cartel")

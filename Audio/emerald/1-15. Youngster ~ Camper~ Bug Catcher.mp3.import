@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c1nbqqi61gplg"
+path="res://.godot/imported/1-15. Youngster ~ Camper~ Bug Catcher.mp3-7c43f8588184a489007563f9169859fd.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-15. Youngster ~ Camper~ Bug Catcher.mp3"
+dest_files=["res://.godot/imported/1-15. Youngster ~ Camper~ Bug Catcher.mp3-7c43f8588184a489007563f9169859fd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

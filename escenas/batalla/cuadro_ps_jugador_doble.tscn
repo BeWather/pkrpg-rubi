@@ -1,0 +1,37 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://bjypbxa2tdbnt" path="res://escenas/batalla/cuadro_ps_jugador.tscn" id="1_base"]
+[ext_resource type="Texture2D" uid="uid://c5ygeg3gehtyy" path="res://graficos/batalla/batalla_cuadro_ps_jugador_doble.png" id="2_doble"]
+
+[node name="CuadroPSJugadorDoble" instance=ExtResource("1_base")]
+
+[node name="BatallaCuadroPsJugador" parent="."]
+texture = ExtResource("2_doble")
+
+[node name="HBoxContainer" parent="."]
+offset_left = 14.0
+offset_right = 96.0
+
+[node name="LNivel" parent="."]
+offset_left = 83.0
+offset_right = 99.0
+
+[node name="AnimatedSprite2D" parent="."]
+position = Vector2(9, 14)
+
+[node name="BarraSalud1" parent="."]
+offset_left = 47.0
+offset_right = 95.0
+
+[node name="BarraSalud2" parent="."]
+offset_left = 47.0
+offset_right = 95.0
+
+[node name="LPSActual" parent="."]
+visible = false
+
+[node name="LPSTotal" parent="."]
+visible = false
+
+[node name="BarraExperiencia" parent="."]
+visible = false

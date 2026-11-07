@@ -1,0 +1,260 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/licuadora/licuadora.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/licuadora/marco.png" id="2_marco"]
+[ext_resource type="Texture2D" path="res://graficos/licuadora/disco.png" id="3_disco"]
+[ext_resource type="Texture2D" path="res://graficos/licuadora/barra_llena.png" id="4_barra"]
+[ext_resource type="Texture2D" path="res://graficos/licuadora/digitos.png" id="5_digitos"]
+[ext_resource type="PackedScene" path="res://escenas/licuadora/cuenta_atras.tscn" id="6_cuenta"]
+[ext_resource type="PackedScene" path="res://escenas/licuadora/flecha_sincronia.tscn" id="7_flecha"]
+[ext_resource type="LabelSettings" path="res://UI/texto_normal_negro.tres" id="9_negro"]
+
+[sub_resource type="Animation" id="Animation_entrada"]
+resource_name = "entrada"
+length = 0.7333
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mundo/Entrada:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0167, 0.0333, 0.05, 0.0667, 0.0833, 0.1, 0.1167, 0.1333, 0.15, 0.1667, 0.1833, 0.2, 0.2167, 0.2333, 0.25, 0.2667, 0.2833, 0.3, 0.3167, 0.3333, 0.35, 0.3667, 0.3833, 0.4, 0.4167, 0.4333, 0.45, 0.4667, 0.4833, 0.5, 0.5167, 0.5333, 0.55, 0.5667, 0.5833, 0.6, 0.6167, 0.6333, 0.65, 0.6667, 0.6833, 0.7, 0.7167, 0.7333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(3.2, 3.2), Vector2(3.0476, 3.0476), Vector2(2.9091, 2.9091), Vector2(2.7826, 2.7826), Vector2(2.6667, 2.6667), Vector2(2.56, 2.56), Vector2(2.4615, 2.4615), Vector2(2.3704, 2.3704), Vector2(2.2857, 2.2857), Vector2(2.2069, 2.2069), Vector2(2.1333, 2.1333), Vector2(2.0645, 2.0645), Vector2(2, 2), Vector2(1.9394, 1.9394), Vector2(1.8824, 1.8824), Vector2(1.8286, 1.8286), Vector2(1.7778, 1.7778), Vector2(1.7297, 1.7297), Vector2(1.6842, 1.6842), Vector2(1.641, 1.641), Vector2(1.6, 1.6), Vector2(1.561, 1.561), Vector2(1.5238, 1.5238), Vector2(1.4884, 1.4884), Vector2(1.4545, 1.4545), Vector2(1.4222, 1.4222), Vector2(1.3913, 1.3913), Vector2(1.3617, 1.3617), Vector2(1.3333, 1.3333), Vector2(1.3061, 1.3061), Vector2(1.28, 1.28), Vector2(1.2549, 1.2549), Vector2(1.2308, 1.2308), Vector2(1.2075, 1.2075), Vector2(1.1852, 1.1852), Vector2(1.1636, 1.1636), Vector2(1.1429, 1.1429), Vector2(1.1228, 1.1228), Vector2(1.1034, 1.1034), Vector2(1.0847, 1.0847), Vector2(1.0667, 1.0667), Vector2(1.0492, 1.0492), Vector2(1.0323, 1.0323), Vector2(1.0159, 1.0159), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Mundo/Entrada:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.0167, 0.0333, 0.05, 0.0667, 0.0833, 0.1, 0.1167, 0.1333, 0.15, 0.1667, 0.1833, 0.2, 0.2167, 0.2333, 0.25, 0.2667, 0.2833, 0.3, 0.3167, 0.3333, 0.35, 0.3667, 0.3833, 0.4, 0.4167, 0.4333, 0.45, 0.4667, 0.4833, 0.5, 0.5167, 0.5333, 0.55, 0.5667, 0.5833, 0.6, 0.6167, 0.6333, 0.65, 0.6667, 0.6833, 0.7, 0.7167, 0.7333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [2.1598, 2.1108, 2.0617, 2.0126, 1.9635, 1.9144, 1.8653, 1.8162, 1.7671, 1.7181, 1.669, 1.6199, 1.5708, 1.5217, 1.4726, 1.4235, 1.3744, 1.3254, 1.2763, 1.2272, 1.1781, 1.129, 1.0799, 1.0308, 0.9818, 0.9327, 0.8836, 0.8345, 0.7854, 0.7363, 0.6872, 0.6381, 0.589, 0.54, 0.4909, 0.4418, 0.3927, 0.3436, 0.2945, 0.2454, 0.1963, 0.1473, 0.0982, 0.0491, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Mundo/Entrada:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.7333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [1, -1]
+}
+
+[sub_resource type="Animation" id="Animation_temblor_inicio"]
+resource_name = "temblor_inicio"
+length = 0.3333
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Mundo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0167, 0.0333, 0.05, 0.0667, 0.0833, 0.1, 0.1167, 0.1333, 0.15, 0.1667, 0.1833, 0.2, 0.2167, 0.2333, 0.25, 0.2667, 0.2833, 0.3, 0.3167, 0.3333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(5, -3), Vector2(4, -2), Vector2(3, -1), Vector2(2, 0), Vector2(1, -6), Vector2(0, -5), Vector2(0, -4), Vector2(2, -3), Vector2(1, -2), Vector2(0, -1), Vector2(4, 0), Vector2(3, 0), Vector2(2, -3), Vector2(1, -2), Vector2(0, -1), Vector2(1, 0), Vector2(0, 1), Vector2(0, 0), Vector2(2, 3), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fundido_entrada"]
+resource_name = "fundido_entrada"
+length = 0.2667
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Negro:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1, 0]
+}
+
+[sub_resource type="Animation" id="Animation_fundido_salida"]
+resource_name = "fundido_salida"
+length = 0.2667
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Negro:color:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1"]
+_data = {&"entrada": SubResource("Animation_entrada"), &"temblor_inicio": SubResource("Animation_temblor_inicio"), &"fundido_entrada": SubResource("Animation_fundido_entrada"), &"fundido_salida": SubResource("Animation_fundido_salida")}
+
+[node name="Licuadora" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+script = ExtResource("1_script")
+
+[node name="Fondo" type="ColorRect" parent="."]
+layout_mode = 0
+z_index = -2
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Mundo" type="Node2D" parent="."]
+
+[node name="Entrada" type="Node2D" parent="Mundo"]
+unique_name_in_owner = true
+z_index = -1
+position = Vector2(120, 80)
+
+[node name="Disco" type="Sprite2D" parent="Mundo/Entrada"]
+unique_name_in_owner = true
+centered = false
+offset = Vector2(-120, -80)
+texture = ExtResource("3_disco")
+
+[node name="Marco" type="Sprite2D" parent="Mundo"]
+centered = false
+texture = ExtResource("2_marco")
+
+[node name="Progreso" type="TextureProgressBar" parent="Mundo"]
+unique_name_in_owner = true
+offset_left = 88.0
+offset_right = 152.0
+offset_bottom = 16.0
+max_value = 1000.0
+texture_progress = ExtResource("4_barra")
+
+[node name="Digitos" type="Node2D" parent="Mundo"]
+unique_name_in_owner = true
+
+[node name="Cifra4" type="Sprite2D" parent="Mundo/Digitos"]
+position = Vector2(96, 136)
+centered = false
+texture = ExtResource("5_digitos")
+hframes = 11
+frame = 0
+
+[node name="Cifra3" type="Sprite2D" parent="Mundo/Digitos"]
+position = Vector2(104, 136)
+centered = false
+texture = ExtResource("5_digitos")
+hframes = 11
+frame = 0
+
+[node name="Cifra2" type="Sprite2D" parent="Mundo/Digitos"]
+position = Vector2(112, 136)
+centered = false
+texture = ExtResource("5_digitos")
+hframes = 11
+frame = 0
+
+[node name="Punto" type="Sprite2D" parent="Mundo/Digitos"]
+position = Vector2(120, 136)
+centered = false
+texture = ExtResource("5_digitos")
+hframes = 11
+frame = 10
+
+[node name="Cifra1" type="Sprite2D" parent="Mundo/Digitos"]
+position = Vector2(128, 136)
+centered = false
+texture = ExtResource("5_digitos")
+hframes = 11
+frame = 0
+
+[node name="Cifra0" type="Sprite2D" parent="Mundo/Digitos"]
+position = Vector2(136, 136)
+centered = false
+texture = ExtResource("5_digitos")
+hframes = 11
+frame = 0
+
+[node name="Nombres" type="Node2D" parent="Mundo"]
+unique_name_in_owner = true
+
+[node name="Nombre0" type="Label" parent="Mundo/Nombres"]
+offset_left = 17.0
+offset_top = 47.0
+offset_right = 65.0
+offset_bottom = 63.0
+label_settings = ExtResource("9_negro")
+
+[node name="Nombre1" type="Label" parent="Mundo/Nombres"]
+offset_left = 185.0
+offset_top = 47.0
+offset_right = 233.0
+offset_bottom = 63.0
+label_settings = ExtResource("9_negro")
+
+[node name="Nombre2" type="Label" parent="Mundo/Nombres"]
+offset_left = 17.0
+offset_top = 95.0
+offset_right = 65.0
+offset_bottom = 111.0
+label_settings = ExtResource("9_negro")
+
+[node name="Nombre3" type="Label" parent="Mundo/Nombres"]
+offset_left = 185.0
+offset_top = 95.0
+offset_right = 233.0
+offset_bottom = 111.0
+label_settings = ExtResource("9_negro")
+
+[node name="Flechas" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="Flecha0" parent="Flechas" instance=ExtResource("7_flecha")]
+position = Vector2(72, 32)
+flip_h = true
+flip_v = true
+
+[node name="Flecha1" parent="Flechas" instance=ExtResource("7_flecha")]
+position = Vector2(168, 32)
+flip_v = true
+
+[node name="Flecha2" parent="Flechas" instance=ExtResource("7_flecha")]
+position = Vector2(72, 128)
+flip_h = true
+
+[node name="Flecha3" parent="Flechas" instance=ExtResource("7_flecha")]
+position = Vector2(168, 128)
+
+[node name="Efectos" type="Node2D" parent="."]
+unique_name_in_owner = true
+
+[node name="CuentaAtras" parent="." instance=ExtResource("6_cuenta")]
+unique_name_in_owner = true
+
+[node name="Negro" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_1")
+}

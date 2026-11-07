@@ -1,0 +1,250 @@
+[gd_scene format=4 uid="uid://ctqav4y5gxc84"]
+
+[ext_resource type="TileSet" uid="uid://b81wvbqq0atw4" path="res://escenas/interior-villa-raiz.tres" id="1_i06t8"]
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mcfg"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="2_25vgm"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="5_7adq8"]
+[ext_resource type="SpriteFrames" uid="uid://56jm4c32kybq" path="res://escenas/avatares/npc_044.tres" id="7_0tnvn"]
+[ext_resource type="PackedScene" path="res://escenas/eventos/disparador_evento_por_tiles.tscn" id="vr_disparador"]
+[ext_resource type="Script" uid="uid://dl4ok1fxtihxj" path="res://scripts/eventos/villa_raiz/evento_casa_villa_raiz.gd" id="vr_evento_casa"]
+[ext_resource type="SpriteFrames" uid="uid://s6t0vp18y66v" path="res://escenas/avatares/npc_machoke_caja.tres" id="vr_machoke_caja"]
+[ext_resource type="SpriteFrames" uid="uid://dqhcf0wo2y4w8" path="res://escenas/avatares/npc_machoke_espalda.tres" id="vr_machoke_espalda"]
+[ext_resource type="SpriteFrames" uid="uid://borgo2f2dfmil" path="res://escenas/avatares/npc_055.tres" id="vr_npc_055"]
+[ext_resource type="SpriteFrames" uid="uid://ciqxabi7dld0v" path="res://escenas/avatares/npc_036.tres" id="vr_npc_036"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="vr_npc_base"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="vr_npc_evento"]
+[ext_resource type="Script" uid="uid://cix41nrfux4xa" path="res://scripts/mapas/tile_alterno.gd" id="vr_tile_alterno"]
+[ext_resource type="Script" path="res://scripts/mapas/television.gd" id="tv_television"]
+
+[node name="NodoCasa1Piso1" type="Node2D" unique_id=632770675]
+y_sort_enabled = true
+script = ExtResource("1_mcfg")
+nombre_interno = "vr_casa1_p1"
+esInterior = true
+solo_caminar = true
+mapa_exterior_asociado = "villa_raiz"
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1372584138]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAAgAAAAAAAEAAAAAAAkAAAAAAAIAAAAAAAoAAAAAAAMAAAAAAAsAAAAAAAQAAAAAAAwAAAAAAAUAAAAAAA0AAAAAAAYAAAAAAA4AAAAAAAcAAAAAAA8AAAAAAAgAAAAAABAAAAABAAAAAAABAAgAAAABAAEAAAABAAkAAAABAAIAAAABAAoAAAABAAMAAAABAAsAAAABAAQAAAABAAwAAAABAAUAAAABAA0AAAABAAYAAAABAA4AAAABAAcAAAABAA8AAAABAAgAAAABABAAAAACAAAAAAACAAgAAAACAAEAAAACAAkAAAACAAIAAAACAAoAAAACAAMAAAACAAsAAAACAAQAAAACAAwAAAACAAUAAAACAA0AAAACAAYAAAACAA4AAAACAAcAAAACAA8AAAACAAgAAAACABAAAAADAAAAAAADAAgAAAADAAEAAAADAAkAAAADAAIAAAADAAoAAAADAAMAAAADAAsAAAADAAQAAAADAAwAAAADAAUAAAADAA0AAAADAAYAAAADAA4AAAADAAcAAAADAA8AAAADAAgAAAADABAAAAAEAAAAAAAEAAgAAAAEAAEAAAAEAAkAAAAEAAIAAAAEAAoAAAAEAAMAAAAEAAsAAAAEAAQAAAAEAAwAAAAEAAUAAAAEAA0AAAAEAAYAAAAEAA4AAAAEAAcAAAAEAA8AAAAEAAgAAAAEABAAAAAFAAAAAAAFAAgAAAAFAAEAAAAFAAkAAAAFAAIAAAAFAAoAAAAFAAMAAAAFAAsAAAAFAAQAAAAFAAwAAAAFAAUAAAAFAA0AAAAFAAYAAAAFAA4AAAAFAAcAAAAFAA8AAAAFAAgAAAAFABAAAAAGAAAAAAAGAAgAAAAGAAEAAAAGAAkAAAAGAAIAAAAGAAoAAAAGAAMAAAAGAAsAAAAGAAQAAAAGAAwAAAAGAAUAAAAGAA0AAAAGAAYAAAAGAA4AAAAGAAcAAAAGAA8AAAAGAAgAAAAGABAAAAAHAAAAAAAHAAgAAAAHAAEAAAAHAAkAAAAHAAIAAAAHAAoAAAAHAAMAAAAHAAsAAAAHAAQAAAAHAAwAAAAHAAUAAAAHAA0AAAAHAAYAAAAHAA4AAAAHAAcAAAAHAA8AAAAHAAgAAAAHABAAAAAIAAAAAAAIAAgAAAAIAAEAAAAIAAkAAAAIAAIAAAAIAAoAAAAIAAMAAAAIAAsAAAAIAAQAAAAIAAwAAAAIAAUAAAAIAA0AAAAIAAYAAAAIAA4AAAAIAAcAAAAIAA8AAAAIAAgAAAAIABAAAAAJAAAAAAAJAAgAAAAJAAEAAAAJAAkAAAAJAAIAAAAJAAoAAAAJAAMAAAAJAAsAAAAJAAQAAAAJAAwAAAAJAAUAAAAJAA0AAAAJAAYAAAAJAA4AAAAJAAcAAAAJAA8AAAAJAAgAAAAJABAAAAAKAAAAAAAKAAgAAAAKAAEAAAAKAAkAAAAKAAIAAAAKAAoAAAAKAAMAAAAKAAsAAAAKAAQAAAAKAAwAAAAKAAUAAAAKAA0AAAAKAAYAAAAKAA4AAAAKAAcAAAAKAA8AAAAKAAgAAAAKABAAAAA=")
+tile_set = ExtResource("1_i06t8")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=1174043391]
+tile_map_data = PackedByteArray("AAAIAAEAAAAJAAAAAAAEAAMAAAAKAAAAAAA=")
+tile_set = ExtResource("1_i06t8")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileEscalera" type="Sprite2D" parent="." unique_id=1955464521]
+position = Vector2(136, 38)
+script = ExtResource("2_25vgm")
+estilo_warp = 5
+ruta_mapa_destino = "nodo_casa_1_piso_2"
+posicion_destino = Vector2(7, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=1323514140]
+position = Vector2(136, 134)
+script = ExtResource("2_25vgm")
+tipo_warp = 1
+ruta_mapa_destino = "villa_raiz"
+posicion_destino = Vector2(13, 8)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=1536890186]
+position = Vector2(152, 134)
+script = ExtResource("2_25vgm")
+tipo_warp = 1
+ruta_mapa_destino = "villa_raiz"
+posicion_destino = Vector2(13, 8)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1699829657]
+script = ExtResource("5_7adq8")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,2": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,2": {
+"flags": 1
+},
+"10,2": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,2": {
+"flags": 1
+},
+"2,4": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"3,4": {
+"flags": 1
+},
+"3,6": {
+"flags": 1
+},
+"3,7": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"4,4": {
+"flags": 1
+},
+"4,6": {
+"flags": 1
+},
+"4,7": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,2": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,2": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="TilesAlternos" type="Node2D" parent="." unique_id=1300001201]
+
+[node name="CajaCerrada" type="Node2D" parent="TilesAlternos" unique_id=1300001202]
+position = Vector2(88, 40)
+script = ExtResource("vr_tile_alterno")
+capa = NodePath("../../Encima")
+coord_tile = Vector2i(5, 2)
+atlas_alterno = Vector2i(10, 2)
+bloquea = true
+datos_tiles = NodePath("../../TPTileDataMap")
+
+[node name="CajaSemiabierta" type="Node2D" parent="TilesAlternos" unique_id=1300001203]
+position = Vector2(88, 72)
+script = ExtResource("vr_tile_alterno")
+capa = NodePath("../../Encima")
+coord_tile = Vector2i(5, 4)
+atlas_alterno = Vector2i(9, 2)
+bloquea = true
+datos_tiles = NodePath("../../TPTileDataMap")
+
+[node name="Tele" type="Node2D" parent="TilesAlternos" unique_id=1300001204]
+position = Vector2(72, 72)
+script = ExtResource("vr_tile_alterno")
+capa = NodePath("../../Suelo")
+coord_tile = Vector2i(4, 4)
+atlas_alterno = Vector2i(10, 1)
+
+[node name="NPCs" type="Node2D" parent="." unique_id=2082117410]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Mama" parent="NPCs" unique_id=1300001001 instance=ExtResource("vr_npc_base")]
+editor_description = "pokeruby objeto MOM (2,6): MAMÁ si es la casa del jugador. Lo dirige Eventos/EventoCasa."
+position = Vector2(40, 110)
+script = ExtResource("vr_npc_evento")
+tipo_movimiento = 10
+selec_frames = ExtResource("7_0tnvn")
+coord = Vector2i(2, 6)
+
+[node name="MadreRival" parent="NPCs" unique_id=1300001002 instance=ExtResource("vr_npc_base")]
+editor_description = "pokeruby objeto WOMAN_5 (2,7), RivalsHouse_1F_EventScript_RivalMom: madre de BRUNO (BRENDAN) si es la casa del rival."
+position = Vector2(40, 126)
+script = ExtResource("vr_npc_evento")
+tipo_movimiento = 10
+selec_frames = ExtResource("vr_npc_055")
+coord = Vector2i(2, 7)
+
+[node name="MachokeEspalda" parent="NPCs" unique_id=1300001006 instance=ExtResource("vr_npc_base")]
+editor_description = "pokeruby objeto MACHOKE_FACING_AWAY (4,5) WALK_IN_PLACE_UP, FLAG_HIDE_MACHOKE_MOVER_1. Lo dirige Eventos/EventoCasa."
+position = Vector2(72, 94)
+script = ExtResource("vr_npc_evento")
+tamano_sprite = 2
+tipo_movimiento = 7
+selec_frames = ExtResource("vr_machoke_espalda")
+coord = Vector2i(4, 5)
+
+[node name="MachokeCaja" parent="NPCs" unique_id=1300001007 instance=ExtResource("vr_npc_base")]
+editor_description = "pokeruby objeto MACHOKE_CARRYING_BOX (1,3) WALK_RIGHT_AND_LEFT rango 3, FLAG_HIDE_MACHOKE_MOVER_2. Lo dirige Eventos/EventoCasa."
+position = Vector2(24, 62)
+script = ExtResource("vr_npc_evento")
+tamano_sprite = 2
+tipo_movimiento = 22
+rango = Vector2i(3, 0)
+selec_frames = ExtResource("vr_machoke_caja")
+coord = Vector2i(1, 3)
+
+[node name="Papa" parent="NPCs" unique_id=1300001008 instance=ExtResource("vr_npc_base")]
+editor_description = "pokeruby objeto NORMAN (5,6) FACE_LEFT, FLAG_HIDE_NORMAN_LITTLEROOT: entrega el TICKET BARCO. Lo dirige Eventos/EventoCasa."
+visible = false
+position = Vector2(88, 110)
+script = ExtResource("vr_npc_evento")
+tipo_movimiento = 10
+selec_frames = ExtResource("vr_npc_036")
+coord = Vector2i(5, 6)
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1300001003]
+
+[node name="EventoCasa" type="Node2D" parent="Eventos" unique_id=1300001004]
+editor_description = "data/scripts/players_house.inc y LittlerootTown_BrendansHouse_1F: planta baja de la casa de BRUNO (BRENDAN)."
+script = ExtResource("vr_evento_casa")
+mama = NodePath("../../NPCs/Mama")
+papa = NodePath("../../NPCs/Papa")
+madre_rival = NodePath("../../NPCs/MadreRival")
+machoke_espalda = NodePath("../../NPCs/MachokeEspalda")
+machoke_caja = NodePath("../../NPCs/MachokeCaja")
+cajas = Array[NodePath]([NodePath("../../TilesAlternos/CajaCerrada"), NodePath("../../TilesAlternos/CajaSemiabierta")])
+tele = NodePath("../../TilesAlternos/Tele")
+
+[node name="VerCuarto" parent="Eventos/EventoCasa" unique_id=1300001005 instance=ExtResource("vr_disparador")]
+editor_description = "coord_event (8,8) de Rubí, VAR_LITTLEROOT_INTRO_STATE = 4: GoSeeRoom."
+id_evento = &"ver_cuarto"
+zonas_tiles = Array[Rect2i]([Rect2i(8, 8, 1, 1)])
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1799788999]
+
+[node name="Television" type="Sprite2D" parent="Carteles" unique_id=1770358855]
+editor_description = "MB_TELEVISION de pokeruby: Event_TV (ProgramacionTV)."
+position = Vector2(72, 72)
+script = ExtResource("tv_television")
+coord_tile = Vector2i(4, 4)
+direccion = 1
+pantalla = NodePath("../../TilesAlternos/Tele")

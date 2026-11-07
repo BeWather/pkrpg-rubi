@@ -1,0 +1,94 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b0r7er1imf0ig"]
+
+[ext_resource type="Texture2D" uid="uid://dwpxsjtap34dh" path="res://graficos/bayas/berry-trees.png" id="1_rtvfe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqovt"]
+atlas = ExtResource("1_rtvfe")
+region = Rect2(288, 224, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfpr8"]
+atlas = ExtResource("1_rtvfe")
+region = Rect2(304, 224, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bnhel"]
+atlas = ExtResource("1_rtvfe")
+region = Rect2(320, 224, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wc8xp"]
+atlas = ExtResource("1_rtvfe")
+region = Rect2(384, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0kxy"]
+atlas = ExtResource("1_rtvfe")
+region = Rect2(400, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lap8v"]
+atlas = ExtResource("1_rtvfe")
+region = Rect2(416, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hfe7f"]
+atlas = ExtResource("1_rtvfe")
+region = Rect2(432, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wi0h0"]
+atlas = ExtResource("1_rtvfe")
+region = Rect2(448, 160, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gyoht"]
+atlas = ExtResource("1_rtvfe")
+region = Rect2(464, 160, 16, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqovt")
+}],
+"loop": 0,
+"name": &"1_plantada",
+"speed": 1.8
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfpr8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bnhel")
+}],
+"loop": 1,
+"name": &"2_brote",
+"speed": 1.8
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wc8xp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0kxy")
+}],
+"loop": 1,
+"name": &"3_tallo",
+"speed": 1.8
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lap8v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hfe7f")
+}],
+"loop": 1,
+"name": &"4_flor",
+"speed": 1.8
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wi0h0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gyoht")
+}],
+"loop": 1,
+"name": &"5_fruto",
+"speed": 1.8
+}]

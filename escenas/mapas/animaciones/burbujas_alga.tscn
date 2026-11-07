@@ -1,0 +1,75 @@
+[gd_scene load_steps=12 format=3]
+
+[ext_resource type="Script" path="res://escenas/mapas/animaciones/burbujas_alga.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/efectos_campo/burbujas_alga.png" id="2_hoja"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0"]
+atlas = ExtResource("2_hoja")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1"]
+atlas = ExtResource("2_hoja")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2"]
+atlas = ExtResource("2_hoja")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3"]
+atlas = ExtResource("2_hoja")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4"]
+atlas = ExtResource("2_hoja")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5"]
+atlas = ExtResource("2_hoja")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6"]
+atlas = ExtResource("2_hoja")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7"]
+atlas = ExtResource("2_hoja")
+region = Rect2(112, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_burbujas"]
+animations = [{
+"frames": [{
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_0")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_1")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_2")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_3")
+}, {
+"duration": 6.0,
+"texture": SubResource("AtlasTexture_4")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_5")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_6")
+}, {
+"duration": 4.0,
+"texture": SubResource("AtlasTexture_7")
+}],
+"loop": false,
+"name": &"default",
+"speed": 60.0
+}]
+
+[node name="BurbujasAlga" type="Node2D"]
+z_index = 1
+script = ExtResource("1_script")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_burbujas")

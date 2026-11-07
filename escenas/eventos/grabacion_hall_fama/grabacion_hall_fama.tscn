@@ -1,0 +1,70 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/eventos/grabacion_hall_fama/grabacion_hall_fama.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dr0ocw0c0bt8y" path="res://graficos/cp_cura_balls.png" id="2_balls"]
+[ext_resource type="Texture2D" path="res://escenas/eventos/grabacion_hall_fama/monitor_grande.png" id="3_grande"]
+[ext_resource type="Texture2D" path="res://escenas/eventos/grabacion_hall_fama/monitor_pequeno.png" id="4_pequeno"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ball"]
+atlas = ExtResource("2_balls")
+region = Rect2(0, 0, 6, 6)
+
+[node name="GrabacionHallFama" type="Node2D"]
+z_index = 1
+script = ExtResource("1_script")
+
+[node name="Balls" type="Node2D" parent="."]
+position = Vector2(117, 60)
+
+[node name="Ball0" type="Sprite2D" parent="Balls"]
+visible = false
+texture = SubResource("AtlasTexture_ball")
+
+[node name="Ball1" type="Sprite2D" parent="Balls"]
+visible = false
+position = Vector2(6, 0)
+texture = SubResource("AtlasTexture_ball")
+
+[node name="Ball2" type="Sprite2D" parent="Balls"]
+visible = false
+position = Vector2(0, 4)
+texture = SubResource("AtlasTexture_ball")
+
+[node name="Ball3" type="Sprite2D" parent="Balls"]
+visible = false
+position = Vector2(6, 4)
+texture = SubResource("AtlasTexture_ball")
+
+[node name="Ball4" type="Sprite2D" parent="Balls"]
+visible = false
+position = Vector2(0, 8)
+texture = SubResource("AtlasTexture_ball")
+
+[node name="Ball5" type="Sprite2D" parent="Balls"]
+visible = false
+position = Vector2(6, 8)
+texture = SubResource("AtlasTexture_ball")
+
+[node name="Monitores" type="Node2D" parent="."]
+visible = false
+position = Vector2(0, 8)
+
+[node name="Grande" type="Sprite2D" parent="Monitores"]
+position = Vector2(120, 24)
+texture = ExtResource("3_grande")
+
+[node name="Pequeno0" type="Sprite2D" parent="Monitores"]
+position = Vector2(40, 8)
+texture = ExtResource("4_pequeno")
+
+[node name="Pequeno1" type="Sprite2D" parent="Monitores"]
+position = Vector2(72, 8)
+texture = ExtResource("4_pequeno")
+
+[node name="Pequeno2" type="Sprite2D" parent="Monitores"]
+position = Vector2(168, 8)
+texture = ExtResource("4_pequeno")
+
+[node name="Pequeno3" type="Sprite2D" parent="Monitores"]
+position = Vector2(200, 8)
+texture = ExtResource("4_pequeno")

@@ -1,0 +1,173 @@
+[gd_scene format=4 uid="uid://no82nbd1o2o8"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_gtauf"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_ie8kb"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_3mif8"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_dnyuc"]
+[ext_resource type="Script" uid="uid://dmy4ir5m1ul04" path="res://scripts/npc/npc_dialogo_condicional.gd" id="cc_condicional"]
+[ext_resource type="SpriteFrames" uid="uid://ct3gr3wlu1nb" path="res://escenas/avatares/npc_054.tres" id="cc_npc_054"]
+[ext_resource type="SpriteFrames" uid="uid://borgo2f2dfmil" path="res://escenas/avatares/npc_055.tres" id="cc_npc_055"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="cc_npc_base"]
+[ext_resource type="Script" uid="uid://b3r00pidr48xb" path="res://scripts/npc/npc_regalo_objeto.gd" id="cc_regalo"]
+[ext_resource type="Script" path="res://scripts/mapas/television.gd" id="tv_television"]
+[ext_resource type="Script" uid="uid://cix41nrfux4xa" path="res://scripts/mapas/tile_alterno.gd" id="tv_tile_alterno"]
+
+[node name="Casa" type="Node2D" unique_id=337747448]
+script = ExtResource("1_gtauf")
+seccion = "CIUDAD_PETALIA"
+esInterior = true
+solo_caminar = true
+mapa_exterior_asociado = "CIUDAD_PETALIA"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1660786405]
+tile_map_data = PackedByteArray("AAAAAAAAAAAGABAAAAAAAAEAAAAGABEAAAAAAAIAAAAGABIAAAABAAAAAAAHABAAAAABAAEAAAAHABEAAAABAAIAAAAHABIAAAACAAAAAAAAAAYAAAACAAEAAAAGAAMAAAACAAIAAAAAAAcAAAADAAAAAAAFAAAAAAADAAEAAAAFAAEAAAADAAIAAAAEAAQAAAAFAAAAAAAGAAAAAAAFAAEAAAAGAAEAAAAFAAIAAAAEAAQAAAAEAAIAAAAEAAQAAAABAAMAAAADAAQAAAABAAQAAAADAAQAAAACAAMAAAADAAQAAAACAAQAAAADAAQAAAABAAUAAAADAAQAAAABAAYAAAADAAQAAAACAAUAAAADAAQAAAACAAYAAAADAAQAAAAFAAUAAAACAAoAAAAFAAYAAAADAAQAAAAEAAUAAAADAAUAAAAEAAYAAAADAAQAAAADAAUAAAADAAQAAAADAAYAAAADAAQAAAAFAAMAAAADAAQAAAAFAAQAAAACAAkAAAAEAAMAAAADAAQAAAAEAAQAAAADAAUAAAADAAMAAAADAAQAAAADAAQAAAADAAQAAAAAAAMAAAABAAcAAAAAAAQAAAABAAcAAAAAAAUAAAABAAcAAAAAAAYAAAABAAcAAAAAAAcAAAABABMAAAABAAcAAAADAAQAAAACAAcAAAADAAQAAAADAAcAAAAAAAEAAAAEAAcAAAABAAEAAAAFAAcAAAADAAQAAAAEAAAAAAAFAAAAAAAEAAEAAAAFAAEAAAAHAAAAAAAFAAAAAAAHAAEAAAAAAA0AAAAHAAIAAAAAAA4AAAAHAAMAAAADAAQAAAAHAAQAAAAEAAUAAAAHAAUAAAAEAAUAAAAHAAYAAAADAAQAAAAHAAcAAAADAAQAAAAIAAAAAAAFAAAAAAAIAAEAAAAEAA0AAAAIAAIAAAAEAA4AAAAIAAMAAAADAAQAAAAIAAQAAAADAAQAAAAIAAUAAAADAAQAAAAIAAYAAAADAAQAAAAIAAcAAAADAAQAAAAJAAAAAAAFAAAAAAAJAAEAAAAFAA0AAAAJAAIAAAAFAA4AAAAJAAMAAAADAAQAAAAJAAQAAAADAAQAAAAJAAUAAAADAAQAAAAJAAYAAAADAAQAAAAJAAcAAAADAAQAAAAKAAAAAAAAAA8AAAAKAAEAAAAAABAAAAAKAAIAAAAAABEAAAAKAAMAAAADAAQAAAAKAAQAAAADAAQAAAAKAAUAAAADAAQAAAAKAAYAAAADAAQAAAAKAAcAAAACAAUAAAAGAAAAAAAFAAAAAAAGAAEAAAAFAAEAAAAGAAIAAAAEAAQAAAAGAAMAAAADAAQAAAAGAAQAAAADAAkAAAAGAAUAAAADAAoAAAAGAAYAAAADAAQAAAAGAAcAAAADAAQAAAA=")
+tile_set = ExtResource("2_ie8kb")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Suelo2" type="TileMapLayer" parent="." unique_id=456262778]
+tile_map_data = PackedByteArray("AAAKAAYAAAACAAcAAAAAAAYAAAACAAcAAAA=")
+tile_set = ExtResource("2_ie8kb")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=615828127]
+position = Vector2(56, 118)
+script = ExtResource("3_3mif8")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia"
+posicion_destino = Vector2(7, 7)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=1450428448]
+position = Vector2(72, 118)
+script = ExtResource("3_3mif8")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia"
+posicion_destino = Vector2(7, 7)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=534991545]
+script = ExtResource("4_dnyuc")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,7": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,4": {
+"flags": 1
+},
+"6,5": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=902757812]
+z_index = 1
+y_sort_enabled = true
+
+[node name="PadreBlasco" parent="NPCs" unique_id=1302010305 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby PetalburgCity_WallysHouse objeto 1 (3,4) MAN_3 FACE_RIGHT. FLAG_DEFEATED_PETALBURG_GYM = MEDALLA_5"
+position = Vector2(56, 78)
+script = ExtResource("cc_regalo")
+objeto = "MO03"
+cantidad = 1
+bandera = "petalia_mo03_recibida"
+id_texto_entregado = "PETALIA_CASA_BLASCO_PADRE_VUELVE_PRONTO"
+texto_tras_entregar = "PETALIA_CASA_BLASCO_PADRE_SURF"
+condicion_regalo = "MEDALLA_5"
+id_texto_sin_condicion = "PETALIA_CASA_BLASCO_PADRE_COMO_ESTARA"
+textos_entregado = Dictionary[String, String]({
+"calle_victoria_blasco_vencido": "PETALIA_CASA_BLASCO_PADRE_COLOSALIA"
+})
+medalla_requerida = 0
+volver_direccion_original = false
+id_texto = "PETALIA_CASA_BLASCO_PADRE_REGALO"
+id_texto_primera_vez = "PETALIA_CASA_BLASCO_PADRE_GRACIAS"
+bandera_primera_vez = "petalia_padre_blasco_agradecido"
+tipo_movimiento = 10
+selec_frames = ExtResource("cc_npc_054")
+coord = Vector2i(3, 4)
+
+[node name="MadreBlasco" parent="NPCs" unique_id=1302010306 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby PetalburgCity_WallysHouse objeto 2 (7,5) WOMAN_5 FACE_LEFT"
+position = Vector2(120, 94)
+script = ExtResource("cc_condicional")
+textos_condicionales = Dictionary[String, String]({
+"1:petalia_mo03_recibida": "PETALIA_CASA_BLASCO_MADRE_SECRETO",
+"2:MEDALLA_5": "PETALIA_CASA_BLASCO_MADRE_REGALO"
+})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "PETALIA_CASA_BLASCO_MADRE_CONTENTO"
+tipo_movimiento = 9
+selec_frames = ExtResource("cc_npc_055")
+coord = Vector2i(7, 5)
+
+[node name="Carteles" type="Node2D" parent="." unique_id=100672638]
+
+[node name="TilesAlternos" type="Node2D" parent="." unique_id=1347433265]
+
+[node name="PantallaTele" type="Node2D" parent="TilesAlternos" unique_id=1748285987]
+position = Vector2(40, 24)
+script = ExtResource("tv_tile_alterno")
+capa = NodePath("../../Suelo")
+coord_tile = Vector2i(2, 1)
+atlas_alterno = Vector2i(0, 5)
+
+[node name="Television" type="Sprite2D" parent="Carteles" unique_id=1730987820]
+editor_description = "MB_TELEVISION de pokeruby: Event_TV (ProgramacionTV)."
+position = Vector2(40, 24)
+script = ExtResource("tv_television")
+coord_tile = Vector2i(2, 1)
+direccion = 1
+pantalla = NodePath("../../TilesAlternos/PantallaTele")

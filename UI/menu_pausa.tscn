@@ -1,0 +1,127 @@
+[gd_scene format=3 uid="uid://bvbnk1m8623dv"]
+
+[ext_resource type="Texture2D" uid="uid://v6kexaw8rq10" path="res://UI/menu_box_1.png" id="1_svo7v"]
+[ext_resource type="Script" uid="uid://dan2yiho5svkl" path="res://UI/menu_pausa.gd" id="2_je455"]
+[ext_resource type="Texture2D" uid="uid://cwf4asxvm4okb" path="res://UI/cursor-menu.png" id="3_hwg44"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="3_xloo4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_whub1"]
+font = ExtResource("3_xloo4")
+font_size = 15
+font_color = Color(0.165656, 0.165656, 0.165656, 1)
+shadow_size = 0
+shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+shadow_offset = Vector2(1, 0)
+
+[node name="MenuPausa" type="NinePatchRect" unique_id=225020597]
+offset_right = 64.0
+offset_bottom = 144.0
+texture = ExtResource("1_svo7v")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_je455")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2141050569]
+visible = false
+anchor_mode = 0
+zoom = Vector2(4, 4)
+
+[node name="pokedex" type="Label" parent="." unique_id=429040917]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 50.0
+offset_bottom = 23.0
+text = "POKéDEX"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="pokemon" type="Label" parent="." unique_id=1970839685]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 50.0
+offset_bottom = 39.0
+text = "POKéMON"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="mochila" type="Label" parent="." unique_id=1336145220]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 50.0
+offset_bottom = 55.0
+text = "MOCHILA"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="pokenav" type="Label" parent="." unique_id=393492465]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 50.0
+offset_bottom = 71.0
+text = "POKéNAV"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="jugador" type="Label" parent="." unique_id=2007245220]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 50.0
+offset_bottom = 87.0
+text = "MA7AS"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="guardar" type="Label" parent="." unique_id=267320346]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 88.0
+offset_right = 50.0
+offset_bottom = 103.0
+text = "GUARDAR"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="opciones" type="Label" parent="." unique_id=1061507825]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 104.0
+offset_right = 56.0
+offset_bottom = 119.0
+text = "OPCIONES"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="salir" type="Label" parent="." unique_id=355247426]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 120.0
+offset_right = 50.0
+offset_bottom = 135.0
+text = "SALIR"
+label_settings = SubResource("LabelSettings_whub1")
+language = "es_AR"
+
+[node name="cursor" type="TextureRect" parent="." unique_id=676686683]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 87.0
+offset_right = 58.0
+offset_bottom = 105.0
+texture = ExtResource("3_hwg44")

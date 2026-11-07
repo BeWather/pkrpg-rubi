@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://UI/taller_vidrio/menu_canje.gd" id="1"]
+[ext_resource type="Texture2D" path="res://UI/caja_dialogo_1.png" id="2"]
+[ext_resource type="LabelSettings" path="res://UI/texto_normal_negro.tres" id="3"]
+[ext_resource type="Script" path="res://UI/selector_simple.gd" id="4"]
+
+[node name="MenuCanjeVidrio" type="Control" node_paths=PackedStringArray("filas", "cursor", "arriba", "abajo")]
+visible = false
+mouse_filter = 2
+script = ExtResource("1")
+filas = Array[NodePath]([NodePath("Marco/Fila1"), NodePath("Marco/Fila2"), NodePath("Marco/Fila3"), NodePath("Marco/Fila4"), NodePath("Marco/Fila5")])
+cursor = NodePath("Marco/Cursor")
+arriba = NodePath("Marco/Arriba")
+abajo = NodePath("Marco/Abajo")
+
+[node name="Marco" type="NinePatchRect" parent="."]
+offset_right = 120.0
+offset_bottom = 96.0
+texture = ExtResource("2")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+
+[node name="Fila1" type="Label" parent="Marco"]
+offset_left = 8.0
+offset_top = 8.0
+label_settings = ExtResource("3")
+
+[node name="Fila2" type="Label" parent="Marco"]
+offset_left = 8.0
+offset_top = 24.0
+label_settings = ExtResource("3")
+
+[node name="Fila3" type="Label" parent="Marco"]
+offset_left = 8.0
+offset_top = 40.0
+label_settings = ExtResource("3")
+
+[node name="Fila4" type="Label" parent="Marco"]
+offset_left = 8.0
+offset_top = 56.0
+label_settings = ExtResource("3")
+
+[node name="Fila5" type="Label" parent="Marco"]
+offset_left = 8.0
+offset_top = 72.0
+label_settings = ExtResource("3")
+
+[node name="Cursor" type="Control" parent="Marco"]
+offset_left = 7.0
+offset_top = 7.0
+offset_right = 113.0
+offset_bottom = 24.0
+script = ExtResource("4")
+color = Color(0.937255, 0.431373, 0.376471, 1)
+ancho_borde = 1
+parpadeo = false
+
+[node name="Arriba" type="Label" parent="Marco"]
+offset_left = 54.0
+offset_top = -3.0
+text = "▲"
+label_settings = ExtResource("3")
+
+[node name="Abajo" type="Label" parent="Marco"]
+offset_left = 54.0
+offset_top = 83.0
+text = "▼"
+label_settings = ExtResource("3")

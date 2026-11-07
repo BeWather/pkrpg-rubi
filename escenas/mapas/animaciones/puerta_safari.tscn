@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://dax4tn6bq3lre"]
+
+[ext_resource type="Texture2D" uid="uid://bkc82n66imjnk" path="res://graficos/puerta_safari.png" id="1_dodps"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ysex"]
+atlas = ExtResource("1_dodps")
+region = Rect2(32, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kat8u"]
+atlas = ExtResource("1_dodps")
+region = Rect2(0, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3slo"]
+atlas = ExtResource("1_dodps")
+region = Rect2(16, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cerrada"]
+atlas = ExtResource("1_dodps")
+region = Rect2(64, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqa1i"]
+atlas = ExtResource("1_dodps")
+region = Rect2(32, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f0754"]
+atlas = ExtResource("1_dodps")
+region = Rect2(16, 0, 16, 20)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1koc7"]
+atlas = ExtResource("1_dodps")
+region = Rect2(0, 0, 16, 20)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kjjuc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ysex")
+}],
+"loop": 0,
+"name": &"abierta",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kat8u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3slo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ysex")
+}],
+"loop": 0,
+"name": &"abrir_puerta",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cerrada")
+}],
+"loop": 0,
+"name": &"cerrada",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqa1i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f0754")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1koc7")
+}],
+"loop": 0,
+"name": &"cerrar_puerta",
+"speed": 6.0
+}, {
+"frames": [],
+"loop": 0,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" unique_id=1925731846]
+sprite_frames = SubResource("SpriteFrames_kjjuc")
+animation = &"abrir_puerta"

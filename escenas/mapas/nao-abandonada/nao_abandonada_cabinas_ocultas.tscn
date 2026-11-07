@@ -1,0 +1,1981 @@
+[gd_scene format=4 uid="uid://bpawt5reikcli"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mapa"]
+[ext_resource type="TileSet" uid="uid://uymupfcjqlyj" path="res://graficos/tilesets/tileset_nao_abandonada.tres" id="2_tiles"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_tp"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_warp"]
+[ext_resource type="PackedScene" uid="uid://d0782whl40dem" path="res://escenas/ow_item.tscn" id="7_item"]
+[ext_resource type="Resource" path="res://recursos/clima/sombra.tres" id="8_clima"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="s_cartel"]
+[ext_resource type="Script" uid="uid://bmomlqc7t28iv" path="res://scripts/eventos/nao_abandonada/evento_nao_abandonada.gd" id="s_nao"]
+
+[node name="NaoAbandonadaCabinasOcultas" type="Node2D" unique_id=932421011]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms (LAYOUT_ABANDONED_SHIP_HIDDEN_FLOOR_ROOMS, 44x15). Generada por herramientas/importar_nao_abandonada.py."
+script = ExtResource("1_mapa")
+nombre_interno = "nao_abandonada_cabinas_ocultas"
+seccion = "NAO_ABANDONADA"
+poi_mapa_region = "nao_abandonada"
+esInterior = true
+es_cueva = true
+mapa_exterior_asociado = "RUTA_108"
+clima_inicial = ExtResource("8_clima")
+musica_mapa = "BARCO_ABANDONADO"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=849213843]
+tile_map_data = PackedByteArray("AAAAAAAAAAAGAAYAAAAAAAEAAAAGAAcAAAAAAAIAAAAGAAcAAAAAAAMAAAAGAAcAAAAAAAQAAAAGAAcAAAAAAAUAAAAGAAcAAAAAAAYAAAAGAAcAAAAAAAcAAAABAAAAAAAAAAgAAAAGAAYAAAAAAAkAAAAGAAcAAAAAAAoAAAAGAAcAAAAAAAsAAAAGAAcAAAAAAAwAAAAGAAcAAAAAAA0AAAAGAAcAAAAAAA4AAAAGAAcAAAABAAAAAAAHAAQAAAABAAEAAAAHAAUAAAABAAIAAAAAAA0AAAABAAMAAAAFAAcAAAABAAQAAAAFAAcAAAABAAUAAAADABUAAAABAAYAAAAFAAcAAAABAAcAAAABAAAAAAABAAgAAAAHAAQAAAABAAkAAAAHAAUAAAABAAoAAAACAAcAAAABAAsAAAAFAAcAAAABAAwAAAAFAAcAAAABAA0AAAADABUAAAABAA4AAAAFAAcAAAACAAAAAAAHAAQAAAACAAEAAAAHAAUAAAACAAIAAAADAAcAAAACAAMAAAAAAAcAAAACAAQAAAAAAAcAAAACAAUAAAAAAAcAAAACAAYAAAAAAAcAAAACAAcAAAABAAAAAAACAAgAAAAHAAQAAAACAAkAAAAHAAUAAAACAAoAAAAHAAwAAAACAAsAAAAAAAcAAAACAAwAAAAAAAcAAAACAA0AAAAAAAcAAAACAA4AAAAAAAcAAAADAAAAAAAHAAQAAAADAAEAAAAHAAUAAAADAAIAAAADAAcAAAADAAMAAAAAAAcAAAADAAQAAAAGAAoAAAADAAUAAAAGAAsAAAADAAYAAAAAAAcAAAADAAcAAAABAAAAAAADAAgAAAAHAAQAAAADAAkAAAAHAAUAAAADAAoAAAADAAcAAAADAAsAAAAAAAcAAAADAAwAAAAAAAcAAAADAA0AAAAAAAwAAAADAA4AAAAAAAcAAAAEAAAAAAAHAAQAAAAEAAEAAAAHAAUAAAAEAAIAAAADAAcAAAAEAAMAAAAAAAcAAAAEAAQAAAAHAAoAAAAEAAUAAAAHAAsAAAAEAAYAAAAAAAcAAAAEAAcAAAABAAAAAAAEAAgAAAAHAAQAAAAEAAkAAAAHAAUAAAAEAAoAAAADAAcAAAAEAAsAAAAAAAcAAAAEAAwAAAAAAAcAAAAEAA0AAAAAAAcAAAAEAA4AAAAAAAcAAAAFAAAAAAAFABIAAAAFAAEAAAAFABMAAAAFAAIAAAADAAcAAAAFAAMAAAAAAAcAAAAFAAQAAAAAAAcAAAAFAAUAAAAAAAcAAAAFAAYAAAAAAAcAAAAFAAcAAAABAAAAAAAFAAgAAAAHAAQAAAAFAAkAAAAHAAUAAAAFAAoAAAADAAcAAAAFAAsAAAAAAAcAAAAFAAwAAAAAAAcAAAAFAA0AAAAAAAcAAAAFAA4AAAAAAAcAAAAGAAAAAAADAAwAAAAGAAEAAAAHABIAAAAGAAIAAAADAAcAAAAGAAMAAAAAAAcAAAAGAAQAAAAAAAcAAAAGAAUAAAAAAAcAAAAGAAYAAAAAAAcAAAAGAAcAAAABAAAAAAAGAAgAAAAHAAQAAAAGAAkAAAAHAAUAAAAGAAoAAAADAAcAAAAGAAsAAAABAAwAAAAGAAwAAAAAAAcAAAAGAA0AAAAAAAcAAAAGAA4AAAAEAAwAAAAHAAAAAAAGABIAAAAHAAEAAAAGABMAAAAHAAIAAAADAAcAAAAHAAMAAAABAAwAAAAHAAQAAAAAAAcAAAAHAAUAAAAAAAcAAAAHAAYAAAAAAAcAAAAHAAcAAAABAAAAAAAHAAgAAAAHAAQAAAAHAAkAAAAHAAUAAAAHAAoAAAAFAAYAAAAHAAsAAAAAAAcAAAAHAAwAAAAAAAcAAAAHAA0AAAAAAAcAAAAHAA4AAAAFAAwAAAAIAAAAAAAHAAQAAAAIAAEAAAAHAAUAAAAIAAIAAAADAAcAAAAIAAMAAAAAAAcAAAAIAAQAAAAAAAcAAAAIAAUAAAAAAAcAAAAIAAYAAAAAAAcAAAAIAAcAAAABAAAAAAAIAAgAAAAHAAQAAAAIAAkAAAAHAAUAAAAIAAoAAAADAAcAAAAIAAsAAAAAAAcAAAAIAAwAAAAAAAcAAAAIAA0AAAAAAAcAAAAIAA4AAAAAAAcAAAAJAAAAAAAHAAQAAAAJAAEAAAAHAAUAAAAJAAIAAAADAAcAAAAJAAMAAAAAAAcAAAAJAAQAAAAAAAcAAAAJAAUAAAAAAAcAAAAJAAYAAAAAAAcAAAAJAAcAAAABAAAAAAAJAAgAAAAHAAQAAAAJAAkAAAAHAAUAAAAJAAoAAAADAAcAAAAJAAsAAAAAAAcAAAAJAAwAAAAAAAcAAAAJAA0AAAAAAAcAAAAJAA4AAAAAAAcAAAAKAAAAAAAHAAQAAAAKAAEAAAAHAAUAAAAKAAIAAAADAAcAAAAKAAMAAAAAAAcAAAAKAAQAAAABAAwAAAAKAAUAAAAAAAcAAAAKAAYAAAAAAAcAAAAKAAcAAAABAAAAAAAKAAgAAAAHAAQAAAAKAAkAAAAHAAUAAAAKAAoAAAADAAcAAAAKAAsAAAAGAAoAAAAKAAwAAAAGAAsAAAAKAA0AAAAAAAcAAAAKAA4AAAAAAAcAAAALAAAAAAAHAAQAAAALAAEAAAAHAAUAAAALAAIAAAADAAcAAAALAAMAAAAAAAcAAAALAAQAAAAAAAcAAAALAAUAAAAAAAwAAAALAAYAAAAAAAcAAAALAAcAAAABAAAAAAALAAgAAAAHAAQAAAALAAkAAAAHAAUAAAALAAoAAAADAAcAAAALAAsAAAAHAAoAAAALAAwAAAAHAAsAAAALAA0AAAAAAAcAAAALAA4AAAAAAAcAAAAMAAAAAAAHAAQAAAAMAAEAAAAHAAUAAAAMAAIAAAADAAcAAAAMAAMAAAACABUAAAAMAAQAAAAAAAcAAAAMAAUAAAAAAAcAAAAMAAYAAAAAAAcAAAAMAAcAAAABAAAAAAAMAAgAAAAHAAQAAAAMAAkAAAAHAAUAAAAMAAoAAAADAAcAAAAMAAsAAAAAAAcAAAAMAAwAAAAAAAcAAAAMAA0AAAAAAAcAAAAMAA4AAAACABUAAAANAAAAAAAHAAYAAAANAAEAAAAHAAcAAAANAAIAAAAHAAcAAAANAAMAAAAHAAcAAAANAAQAAAAHAAcAAAANAAUAAAAHAAcAAAANAAYAAAAHAAcAAAANAAcAAAABAAAAAAANAAgAAAAHAAYAAAANAAkAAAAHAAcAAAANAAoAAAAHAAcAAAANAAsAAAAHAAcAAAANAAwAAAAHAAcAAAANAA0AAAAHAAcAAAANAA4AAAAHAAcAAAAOAAAAAAAGAAYAAAAOAAEAAAAGAAcAAAAOAAIAAAAGAAcAAAAOAAMAAAAGAAcAAAAOAAQAAAAGAAcAAAAOAAUAAAAGAAcAAAAOAAYAAAAGAAcAAAAOAAcAAAABAAAAAAAOAAgAAAAGAAYAAAAOAAkAAAAGAAcAAAAOAAoAAAAGAAcAAAAOAAsAAAAGAAcAAAAOAAwAAAAGAAcAAAAOAA0AAAAGAAcAAAAOAA4AAAAGAAcAAAAPAAAAAAAHAAQAAAAPAAEAAAAHAAUAAAAPAAIAAAACAAcAAAAPAAMAAAADABUAAAAPAAQAAAAFAAcAAAAPAAUAAAAFAAcAAAAPAAYAAAAFAAcAAAAPAAcAAAABAAAAAAAPAAgAAAAHAAQAAAAPAAkAAAAHAAUAAAAPAAoAAAACAAcAAAAPAAsAAAAFAAcAAAAPAAwAAAAFAAcAAAAPAA0AAAAFAAcAAAAPAA4AAAAFAAcAAAAQAAAAAAAHAAQAAAAQAAEAAAAHAAUAAAAQAAIAAAADAAcAAAAQAAMAAAAAAAcAAAAQAAQAAAAAAAcAAAAQAAUAAAAAAAwAAAAQAAYAAAAAAAcAAAAQAAcAAAABAAAAAAAQAAgAAAAHAAQAAAAQAAkAAAAHAAUAAAAQAAoAAAADAAcAAAAQAAsAAAAAAAcAAAAQAAwAAAAAAAcAAAAQAA0AAAAGAAoAAAAQAA4AAAAGAAsAAAARAAAAAAAHAAQAAAARAAEAAAAHAAUAAAARAAIAAAADAAcAAAARAAMAAAABAAwAAAARAAQAAAAAAAcAAAARAAUAAAAAAAcAAAARAAYAAAAAAAcAAAARAAcAAAABAAAAAAARAAgAAAAHAAQAAAARAAkAAAAHAAUAAAARAAoAAAADAAcAAAARAAsAAAAAAAcAAAARAAwAAAAAAAcAAAARAA0AAAAHAAoAAAARAA4AAAAHAAsAAAASAAAAAAAHAAQAAAASAAEAAAAHAAUAAAASAAIAAAAHAAEAAAASAAMAAAAGAAsAAAASAAQAAAAAAAwAAAASAAUAAAAAAAcAAAASAAYAAAAAAAcAAAASAAcAAAABAAAAAAASAAgAAAAHAAQAAAASAAkAAAAHAAUAAAASAAoAAAADAAcAAAASAAsAAAAAAAcAAAASAAwAAAABAAwAAAASAA0AAAAAAAcAAAASAA4AAAAAAAcAAAATAAAAAAAHAAQAAAATAAEAAAAHAAUAAAATAAIAAAAHAAIAAAATAAMAAAAHAAsAAAATAAQAAAAAAAcAAAATAAUAAAAAAAcAAAATAAYAAAAAAAcAAAATAAcAAAABAAAAAAATAAgAAAAHAAQAAAATAAkAAAAHAAUAAAATAAoAAAADAAcAAAATAAsAAAAAAAcAAAATAAwAAAAAAAwAAAATAA0AAAAAAAcAAAATAA4AAAAAAAcAAAAUAAAAAAAFABIAAAAUAAEAAAAFABMAAAAUAAIAAAAFAAYAAAAUAAMAAAAAAAcAAAAUAAQAAAAAAAcAAAAUAAUAAAAAAAcAAAAUAAYAAAAAAAcAAAAUAAcAAAABAAAAAAAUAAgAAAAHAAQAAAAUAAkAAAAHAAUAAAAUAAoAAAADAAcAAAAUAAsAAAAAAAcAAAAUAAwAAAAAAAcAAAAUAA0AAAAAAAcAAAAUAA4AAAAAAAcAAAAVAAAAAAAHABUAAAAVAAEAAAAHABYAAAAVAAIAAAADAAcAAAAVAAMAAAACAAwAAAAVAAQAAAAAAAcAAAAVAAUAAAAAAAcAAAAVAAYAAAAAAAcAAAAVAAcAAAABAAAAAAAVAAgAAAAHAAQAAAAVAAkAAAAHAAUAAAAVAAoAAAADAAcAAAAVAAsAAAAAAAwAAAAVAAwAAAAAAAcAAAAVAA0AAAAAAAcAAAAVAA4AAAAEAAwAAAAWAAAAAAAGABIAAAAWAAEAAAAGABMAAAAWAAIAAAABABMAAAAWAAMAAAAAABQAAAAWAAQAAAAAAAcAAAAWAAUAAAAAAAcAAAAWAAYAAAAAAAcAAAAWAAcAAAABAAAAAAAWAAgAAAAHAAQAAAAWAAkAAAAHAAUAAAAWAAoAAAADAAcAAAAWAAsAAAAAAAcAAAAWAAwAAAAAAAcAAAAWAA0AAAAAAAcAAAAWAA4AAAAFAAwAAAAXAAAAAAAHAAQAAAAXAAEAAAAHAAUAAAAXAAIAAAACABMAAAAXAAMAAAACABQAAAAXAAQAAAAAAAcAAAAXAAUAAAAAAAcAAAAXAAYAAAAAAAcAAAAXAAcAAAABAAAAAAAXAAgAAAAHAAQAAAAXAAkAAAAHAAUAAAAXAAoAAAADAAcAAAAXAAsAAAAAAAcAAAAXAAwAAAAAAAcAAAAXAA0AAAAAAAcAAAAXAA4AAAAAAAcAAAAYAAAAAAAHAAQAAAAYAAEAAAAHAAUAAAAYAAIAAAADAAcAAAAYAAMAAAAAAAcAAAAYAAQAAAAAAAcAAAAYAAUAAAAAAAcAAAAYAAYAAAAAAAcAAAAYAAcAAAABAAAAAAAYAAgAAAAHAAQAAAAYAAkAAAAHAAUAAAAYAAoAAAADAAcAAAAYAAsAAAAAAAcAAAAYAAwAAAAAAAcAAAAYAA0AAAAAAAcAAAAYAA4AAAAAAAcAAAAZAAAAAAAHAAQAAAAZAAEAAAAHAAUAAAAZAAIAAAADAAcAAAAZAAMAAAAAAAcAAAAZAAQAAAAAAAcAAAAZAAUAAAAAAAcAAAAZAAYAAAAAAAcAAAAZAAcAAAABAAAAAAAZAAgAAAAHAAQAAAAZAAkAAAAHAAUAAAAZAAoAAAADAAcAAAAZAAsAAAACAAwAAAAZAAwAAAAAAAcAAAAZAA0AAAAAAAcAAAAZAA4AAAAAAAcAAAAaAAAAAAAHAAQAAAAaAAEAAAAHAAUAAAAaAAIAAAADAAcAAAAaAAMAAAAAAAcAAAAaAAQAAAAAAAcAAAAaAAUAAAABAAwAAAAaAAYAAAAAAAcAAAAaAAcAAAABAAAAAAAaAAgAAAAHAAQAAAAaAAkAAAAHAAUAAAAaAAoAAAADAAcAAAAaAAsAAAAAAAcAAAAaAAwAAAAAAAcAAAAaAA0AAAAAAAcAAAAaAA4AAAABAAwAAAAbAAAAAAAHAAQAAAAbAAEAAAAHAAUAAAAbAAIAAAADAAcAAAAbAAMAAAAAAAcAAAAbAAQAAAAAAAcAAAAbAAUAAAAAAAcAAAAbAAYAAAAAAAcAAAAbAAcAAAABAAAAAAAbAAgAAAAHAAQAAAAbAAkAAAAHAAUAAAAbAAoAAAADAAcAAAAbAAsAAAACABUAAAAbAAwAAAAAAAcAAAAbAA0AAAAAAAcAAAAbAA4AAAAAAAcAAAAcAAAAAAAHAAYAAAAcAAEAAAAHAAgAAAAcAAIAAAAHAAkAAAAcAAMAAAADAAcAAAAcAAQAAAAHAAcAAAAcAAUAAAAHAAcAAAAcAAYAAAAHAAcAAAAcAAcAAAABAAAAAAAcAAgAAAAHAAYAAAAcAAkAAAAHAAcAAAAcAAoAAAAHAAcAAAAcAAsAAAAHAAcAAAAcAAwAAAAHAAcAAAAcAA0AAAAHAAcAAAAcAA4AAAAHAAcAAAAdAAAAAAAGAAYAAAAdAAEAAAAGAAgAAAAdAAIAAAAGAAkAAAAdAAMAAAADAAcAAAAdAAQAAAAGAAcAAAAdAAUAAAAGAAcAAAAdAAYAAAAGAAcAAAAdAAcAAAABAAAAAAAdAAgAAAAGAAYAAAAdAAkAAAAGAAcAAAAdAAoAAAAGAAcAAAAdAAsAAAAGAAcAAAAdAAwAAAAGAAcAAAAdAA0AAAAGAAcAAAAdAA4AAAAGAAcAAAAeAAAAAAAHAAQAAAAeAAEAAAAHAAUAAAAeAAIAAAACAAcAAAAeAAMAAAAEAAcAAAAeAAQAAAAFAAcAAAAeAAUAAAADABUAAAAeAAYAAAAFAAcAAAAeAAcAAAABAAAAAAAeAAgAAAAHAAQAAAAeAAkAAAAHAAUAAAAeAAoAAAACAAcAAAAeAAsAAAADABUAAAAeAAwAAAAFAAcAAAAeAA0AAAAFAAcAAAAeAA4AAAAFAAcAAAAfAAAAAAAHAAQAAAAfAAEAAAAHAAUAAAAfAAIAAAADAAcAAAAfAAMAAAAAAAcAAAAfAAQAAAAAAAcAAAAfAAUAAAAAAAcAAAAfAAYAAAAAAAcAAAAfAAcAAAABAAAAAAAfAAgAAAAHAAQAAAAfAAkAAAAHAAUAAAAfAAoAAAADAAcAAAAfAAsAAAAAAAcAAAAfAAwAAAAAAAcAAAAfAA0AAAAAAAcAAAAfAA4AAAAAAAwAAAAgAAAAAAAHAAQAAAAgAAEAAAAHAAUAAAAgAAIAAAADAAcAAAAgAAMAAAAAAAcAAAAgAAQAAAAAAAcAAAAgAAUAAAAGAAoAAAAgAAYAAAAGAAsAAAAgAAcAAAABAAAAAAAgAAgAAAAHAAQAAAAgAAkAAAAHAAUAAAAgAAoAAAADAAcAAAAgAAsAAAAAAAcAAAAgAAwAAAAAAAcAAAAgAA0AAAAAAAcAAAAgAA4AAAAAAAcAAAAhAAAAAAAHAAQAAAAhAAEAAAAHAAUAAAAhAAIAAAADAAcAAAAhAAMAAAACAAwAAAAhAAQAAAAAAAcAAAAhAAUAAAAHAAoAAAAhAAYAAAAHAAsAAAAhAAcAAAABAAAAAAAhAAgAAAAHAAQAAAAhAAkAAAAHAAUAAAAhAAoAAAAHAAwAAAAhAAsAAAAAAAcAAAAhAAwAAAAAAAcAAAAhAA0AAAAAAAcAAAAhAA4AAAACAAwAAAAiAAAAAAAHAAQAAAAiAAEAAAAHAAUAAAAiAAIAAAADAAcAAAAiAAMAAAAAAAcAAAAiAAQAAAAAAAcAAAAiAAUAAAAAAAcAAAAiAAYAAAAAAAcAAAAiAAcAAAABAAAAAAAiAAgAAAAHAAQAAAAiAAkAAAAHAAUAAAAiAAoAAAADAAcAAAAiAAsAAAAAAAcAAAAiAAwAAAAAAAcAAAAiAA0AAAAAAAcAAAAiAA4AAAAAAAcAAAAjAAAAAAAFABIAAAAjAAEAAAAFABMAAAAjAAIAAAADAAcAAAAjAAMAAAAAAAcAAAAjAAQAAAAAAAwAAAAjAAUAAAAAAAcAAAAjAAYAAAAAAAcAAAAjAAcAAAABAAAAAAAjAAgAAAAHAAQAAAAjAAkAAAAHAAUAAAAjAAoAAAADAAcAAAAjAAsAAAAGAAoAAAAjAAwAAAAGAAsAAAAjAA0AAAAAAAcAAAAjAA4AAAAAAAcAAAAkAAAAAAADAAwAAAAkAAEAAAAHABIAAAAkAAIAAAADAAcAAAAkAAMAAAAAAAcAAAAkAAQAAAAAAAcAAAAkAAUAAAAAAAcAAAAkAAYAAAAAAAcAAAAkAAcAAAABAAAAAAAkAAgAAAAHAAQAAAAkAAkAAAAHAAUAAAAkAAoAAAADAAcAAAAkAAsAAAAHAAoAAAAkAAwAAAAHAAsAAAAkAA0AAAAAAAcAAAAkAA4AAAAEAAwAAAAlAAAAAAAGABIAAAAlAAEAAAAGABMAAAAlAAIAAAAHAAwAAAAlAAMAAAAAAAcAAAAlAAQAAAAAAAcAAAAlAAUAAAAAAAcAAAAlAAYAAAABAAwAAAAlAAcAAAABAAAAAAAlAAgAAAAHAAQAAAAlAAkAAAAHAAUAAAAlAAoAAAADAAcAAAAlAAsAAAAAAAcAAAAlAAwAAAAAAAcAAAAlAA0AAAAAAAcAAAAlAA4AAAAFAAwAAAAmAAAAAAAHAAQAAAAmAAEAAAAHAAUAAAAmAAIAAAADAAcAAAAmAAMAAAAAAAcAAAAmAAQAAAAAAAcAAAAmAAUAAAACAAwAAAAmAAYAAAAAAAcAAAAmAAcAAAABAAAAAAAmAAgAAAAHAAQAAAAmAAkAAAAHAAUAAAAmAAoAAAADAAcAAAAmAAsAAAAAAAcAAAAmAAwAAAAAAAcAAAAmAA0AAAAAAAcAAAAmAA4AAAAAAAcAAAAnAAAAAAAHAAQAAAAnAAEAAAAHAAUAAAAnAAIAAAADAAcAAAAnAAMAAAAAAAcAAAAnAAQAAAAAAAcAAAAnAAUAAAAAAAcAAAAnAAYAAAAAAAcAAAAnAAcAAAABAAAAAAAnAAgAAAAHAAQAAAAnAAkAAAAHAAUAAAAnAAoAAAADAAcAAAAnAAsAAAAAAAcAAAAnAAwAAAABAAwAAAAnAA0AAAAAAAcAAAAnAA4AAAAAAAcAAAAoAAAAAAAHAAQAAAAoAAEAAAAHAAUAAAAoAAIAAAABABMAAAAoAAMAAAAAABQAAAAoAAQAAAAAAAcAAAAoAAUAAAAAAAcAAAAoAAYAAAAAAAcAAAAoAAcAAAABAAAAAAAoAAgAAAAHAAQAAAAoAAkAAAAHAAUAAAAoAAoAAAABABMAAAAoAAsAAAAAABQAAAAoAAwAAAAAAAcAAAAoAA0AAAAAAAcAAAAoAA4AAAAAAAcAAAApAAAAAAAHAAQAAAApAAEAAAAHAAUAAAApAAIAAAACABMAAAApAAMAAAACABQAAAApAAQAAAAAAAcAAAApAAUAAAAAAAcAAAApAAYAAAAAAAcAAAApAAcAAAABAAAAAAApAAgAAAAHAAQAAAApAAkAAAAHAAUAAAApAAoAAAACABMAAAApAAsAAAACABQAAAApAAwAAAAAAAcAAAApAA0AAAAAAAcAAAApAA4AAAAAAAcAAAAqAAAAAAAHAAQAAAAqAAEAAAAHAAUAAAAqAAIAAAADAAcAAAAqAAMAAAAAAAcAAAAqAAQAAAAAAAcAAAAqAAUAAAABAAwAAAAqAAYAAAACABUAAAAqAAcAAAABAAAAAAAqAAgAAAAHAAQAAAAqAAkAAAAHAAUAAAAqAAoAAAADAAcAAAAqAAsAAAAAAAcAAAAqAAwAAAAAAAcAAAAqAA0AAAACABUAAAAqAA4AAAABAAwAAAArAAAAAAAHAAYAAAArAAEAAAAHAAcAAAArAAIAAAAHAAcAAAArAAMAAAAHAAcAAAArAAQAAAAHAAcAAAArAAUAAAAHAAcAAAArAAYAAAAHAAcAAAArAAcAAAABAAAAAAArAAgAAAAHAAYAAAArAAkAAAAHAAcAAAArAAoAAAAHAAcAAAArAAsAAAAHAAcAAAArAAwAAAAHAAcAAAArAA0AAAAHAAcAAAArAA4AAAAHAAcAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Superior" type="TileMapLayer" parent="." unique_id=840552977]
+z_index = 2
+tile_map_data = PackedByteArray("AAAAAAAAAAAOAAYAAAAAAAEAAAAOAAcAAAAAAAIAAAAOAAcAAAAAAAMAAAAOAAcAAAAAAAQAAAAOAAcAAAAAAAUAAAAOAAcAAAAAAAYAAAAOAAcAAAAAAAcAAAAJAAAAAAAAAAgAAAAOAAYAAAAAAAkAAAAOAAcAAAAAAAoAAAAOAAcAAAAAAAsAAAAOAAcAAAAAAAwAAAAOAAcAAAAAAA0AAAAOAAcAAAAAAA4AAAAOAAcAAAABAAcAAAAJAAAAAAACAAcAAAAJAAAAAAADAAcAAAAJAAAAAAAEAAcAAAAJAAAAAAAFAAcAAAAJAAAAAAAGAAcAAAAJAAAAAAAHAAcAAAAJAAAAAAAIAAcAAAAJAAAAAAAJAAcAAAAJAAAAAAAKAAcAAAAJAAAAAAALAAcAAAAJAAAAAAAMAAcAAAAJAAAAAAANAAAAAAAPAAYAAAANAAEAAAAPAAcAAAANAAIAAAAPAAcAAAANAAMAAAAPAAcAAAANAAQAAAAPAAcAAAANAAUAAAAPAAcAAAANAAYAAAAPAAcAAAANAAcAAAAJAAAAAAANAAgAAAAPAAYAAAANAAkAAAAPAAcAAAANAAoAAAAPAAcAAAANAAsAAAAPAAcAAAANAAwAAAAPAAcAAAANAA0AAAAPAAcAAAANAA4AAAAPAAcAAAAOAAAAAAAOAAYAAAAOAAEAAAAOAAcAAAAOAAIAAAAOAAcAAAAOAAMAAAAOAAcAAAAOAAQAAAAOAAcAAAAOAAUAAAAOAAcAAAAOAAYAAAAOAAcAAAAOAAcAAAAJAAAAAAAOAAgAAAAOAAYAAAAOAAkAAAAOAAcAAAAOAAoAAAAOAAcAAAAOAAsAAAAOAAcAAAAOAAwAAAAOAAcAAAAOAA0AAAAOAAcAAAAOAA4AAAAOAAcAAAAPAAcAAAAJAAAAAAAQAAcAAAAJAAAAAAARAAcAAAAJAAAAAAASAAcAAAAJAAAAAAATAAcAAAAJAAAAAAAUAAcAAAAJAAAAAAAVAAcAAAAJAAAAAAAWAAcAAAAJAAAAAAAXAAcAAAAJAAAAAAAYAAcAAAAJAAAAAAAZAAcAAAAJAAAAAAAaAAcAAAAJAAAAAAAbAAcAAAAJAAAAAAAcAAAAAAAPAAYAAAAcAAEAAAAPAAgAAAAcAAQAAAAPAAcAAAAcAAUAAAAPAAcAAAAcAAYAAAAPAAcAAAAcAAcAAAAJAAAAAAAcAAgAAAAPAAYAAAAcAAkAAAAPAAcAAAAcAAoAAAAPAAcAAAAcAAsAAAAPAAcAAAAcAAwAAAAPAAcAAAAcAA0AAAAPAAcAAAAcAA4AAAAPAAcAAAAdAAAAAAAOAAYAAAAdAAEAAAAOAAgAAAAdAAQAAAAOAAcAAAAdAAUAAAAOAAcAAAAdAAYAAAAOAAcAAAAdAAcAAAAJAAAAAAAdAAgAAAAOAAYAAAAdAAkAAAAOAAcAAAAdAAoAAAAOAAcAAAAdAAsAAAAOAAcAAAAdAAwAAAAOAAcAAAAdAA0AAAAOAAcAAAAdAA4AAAAOAAcAAAAeAAcAAAAJAAAAAAAfAAcAAAAJAAAAAAAgAAcAAAAJAAAAAAAhAAcAAAAJAAAAAAAiAAcAAAAJAAAAAAAjAAcAAAAJAAAAAAAkAAcAAAAJAAAAAAAlAAcAAAAJAAAAAAAmAAcAAAAJAAAAAAAnAAcAAAAJAAAAAAAoAAcAAAAJAAAAAAApAAcAAAAJAAAAAAAqAAcAAAAJAAAAAAArAAAAAAAPAAYAAAArAAEAAAAPAAcAAAArAAIAAAAPAAcAAAArAAMAAAAPAAcAAAArAAQAAAAPAAcAAAArAAUAAAAPAAcAAAArAAYAAAAPAAcAAAArAAcAAAAJAAAAAAArAAgAAAAPAAYAAAArAAkAAAAPAAcAAAArAAoAAAAPAAcAAAArAAsAAAAPAAcAAAArAAwAAAAPAAcAAAArAA0AAAAPAAcAAAArAA4AAAAPAAcAAAAAAA8AAAAJAAAAAAABAA8AAAAJAAAAAAACAA8AAAAJAAAAAAADAA8AAAAJAAAAAAAEAA8AAAAJAAAAAAAFAA8AAAAJAAAAAAAGAA8AAAAJAAAAAAAHAA8AAAAJAAAAAAAIAA8AAAAJAAAAAAAJAA8AAAAJAAAAAAAKAA8AAAAJAAAAAAALAA8AAAAJAAAAAAAMAA8AAAAJAAAAAAANAA8AAAAJAAAAAAAOAA8AAAAJAAAAAAAPAA8AAAAJAAAAAAAQAA8AAAAJAAAAAAARAA8AAAAJAAAAAAASAA8AAAAJAAAAAAATAA8AAAAJAAAAAAAUAA8AAAAJAAAAAAAVAA8AAAAJAAAAAAAWAA8AAAAJAAAAAAAXAA8AAAAJAAAAAAAYAA8AAAAJAAAAAAAZAA8AAAAJAAAAAAAaAA8AAAAJAAAAAAAbAA8AAAAJAAAAAAAcAA8AAAAJAAAAAAAdAA8AAAAJAAAAAAAeAA8AAAAJAAAAAAAfAA8AAAAJAAAAAAAgAA8AAAAJAAAAAAAhAA8AAAAJAAAAAAAiAA8AAAAJAAAAAAAjAA8AAAAJAAAAAAAkAA8AAAAJAAAAAAAlAA8AAAAJAAAAAAAmAA8AAAAJAAAAAAAnAA8AAAAJAAAAAAAoAA8AAAAJAAAAAAApAA8AAAAJAAAAAAAqAA8AAAAJAAAAAAArAA8AAAAJAAAAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=752171372]
+script = ExtResource("3_tp")
+tile_data = {
+"0,10": {
+"flags": 1
+},
+"0,11": {
+"flags": 1
+},
+"0,12": {
+"flags": 1
+},
+"0,14": {
+"flags": 1
+},
+"0,3": {
+"flags": 1
+},
+"0,4": {
+"flags": 1
+},
+"0,6": {
+"flags": 1
+},
+"1,10": {
+"flags": 4294967296
+},
+"1,11": {
+"flags": 4294967296
+},
+"1,12": {
+"flags": 4294967296
+},
+"1,13": {
+"flags": 1
+},
+"1,14": {
+"flags": 4294967296
+},
+"1,15": {
+"flags": 1
+},
+"1,2": {
+"flags": 1
+},
+"1,3": {
+"flags": 4294967296
+},
+"1,4": {
+"flags": 4294967296
+},
+"1,5": {
+"flags": 1
+},
+"1,6": {
+"flags": 4294967296
+},
+"1,7": {
+"flags": 1
+},
+"1,9": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,10": {
+"flags": 4294967296
+},
+"10,11": {
+"flags": 1
+},
+"10,12": {
+"flags": 1
+},
+"10,13": {
+"flags": 4294967296
+},
+"10,14": {
+"flags": 4294967296
+},
+"10,15": {
+"flags": 1
+},
+"10,2": {
+"flags": 4294967296
+},
+"10,3": {
+"flags": 4294967296
+},
+"10,4": {
+"flags": 4294967296
+},
+"10,5": {
+"flags": 4294967296
+},
+"10,6": {
+"flags": 4294967296
+},
+"10,7": {
+"flags": 1
+},
+"10,9": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,10": {
+"flags": 4294967296
+},
+"11,11": {
+"flags": 1
+},
+"11,12": {
+"flags": 1
+},
+"11,13": {
+"flags": 4294967296
+},
+"11,14": {
+"flags": 4294967296
+},
+"11,15": {
+"flags": 1
+},
+"11,2": {
+"flags": 4294967296
+},
+"11,3": {
+"flags": 4294967296
+},
+"11,4": {
+"flags": 4294967296
+},
+"11,5": {
+"flags": 4294967296
+},
+"11,6": {
+"flags": 4294967296
+},
+"11,7": {
+"flags": 1
+},
+"11,9": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,10": {
+"flags": 4294967296
+},
+"12,11": {
+"flags": 4294967296
+},
+"12,12": {
+"flags": 4294967296
+},
+"12,13": {
+"flags": 4294967296
+},
+"12,14": {
+"flags": 1
+},
+"12,2": {
+"flags": 4294967296
+},
+"12,3": {
+"flags": 1
+},
+"12,4": {
+"flags": 4294967296
+},
+"12,5": {
+"flags": 4294967296
+},
+"12,6": {
+"flags": 4294967296
+},
+"12,7": {
+"flags": 1
+},
+"12,9": {
+"flags": 1
+},
+"13,10": {
+"flags": 1
+},
+"13,11": {
+"flags": 1
+},
+"13,12": {
+"flags": 1
+},
+"13,13": {
+"flags": 1
+},
+"13,2": {
+"flags": 1
+},
+"13,4": {
+"flags": 1
+},
+"13,5": {
+"flags": 1
+},
+"13,6": {
+"flags": 1
+},
+"14,10": {
+"flags": 1
+},
+"14,11": {
+"flags": 1
+},
+"14,12": {
+"flags": 1
+},
+"14,13": {
+"flags": 1
+},
+"14,14": {
+"flags": 1
+},
+"14,2": {
+"flags": 1
+},
+"14,4": {
+"flags": 1
+},
+"14,5": {
+"flags": 1
+},
+"14,6": {
+"flags": 1
+},
+"15,1": {
+"flags": 1
+},
+"15,10": {
+"flags": 4294967296
+},
+"15,11": {
+"flags": 4294967296
+},
+"15,12": {
+"flags": 4294967296
+},
+"15,13": {
+"flags": 4294967296
+},
+"15,14": {
+"flags": 4294967296
+},
+"15,15": {
+"flags": 1
+},
+"15,2": {
+"flags": 4294967296
+},
+"15,3": {
+"flags": 1
+},
+"15,4": {
+"flags": 4294967296
+},
+"15,5": {
+"flags": 4294967296
+},
+"15,6": {
+"flags": 4294967296
+},
+"15,7": {
+"flags": 1
+},
+"15,9": {
+"flags": 1
+},
+"16,1": {
+"flags": 1
+},
+"16,10": {
+"flags": 4294967296
+},
+"16,11": {
+"flags": 4294967296
+},
+"16,12": {
+"flags": 4294967296
+},
+"16,13": {
+"flags": 1
+},
+"16,14": {
+"flags": 1
+},
+"16,2": {
+"flags": 4294967296
+},
+"16,3": {
+"flags": 4294967296
+},
+"16,4": {
+"flags": 4294967296
+},
+"16,5": {
+"flags": 4294967296
+},
+"16,6": {
+"flags": 4294967296
+},
+"16,7": {
+"flags": 1
+},
+"16,9": {
+"flags": 1
+},
+"17,1": {
+"flags": 1
+},
+"17,10": {
+"flags": 4294967296
+},
+"17,11": {
+"flags": 4294967296
+},
+"17,12": {
+"flags": 4294967296
+},
+"17,13": {
+"flags": 1
+},
+"17,14": {
+"flags": 1
+},
+"17,2": {
+"flags": 4294967296
+},
+"17,3": {
+"flags": 4294967296
+},
+"17,4": {
+"flags": 4294967296
+},
+"17,5": {
+"flags": 4294967296
+},
+"17,6": {
+"flags": 4294967296
+},
+"17,7": {
+"flags": 1
+},
+"17,9": {
+"flags": 1
+},
+"18,10": {
+"flags": 4294967296
+},
+"18,11": {
+"flags": 4294967296
+},
+"18,12": {
+"flags": 4294967296
+},
+"18,13": {
+"flags": 4294967296
+},
+"18,14": {
+"flags": 4294967296
+},
+"18,15": {
+"flags": 1
+},
+"18,2": {
+"flags": 1
+},
+"18,3": {
+"flags": 1
+},
+"18,4": {
+"flags": 4294967296
+},
+"18,5": {
+"flags": 4294967296
+},
+"18,6": {
+"flags": 4294967296
+},
+"18,7": {
+"flags": 1
+},
+"18,9": {
+"flags": 1
+},
+"19,10": {
+"flags": 4294967296
+},
+"19,11": {
+"flags": 4294967296
+},
+"19,12": {
+"flags": 4294967296
+},
+"19,13": {
+"flags": 4294967296
+},
+"19,14": {
+"flags": 4294967296
+},
+"19,15": {
+"flags": 1
+},
+"19,3": {
+"flags": 1
+},
+"19,4": {
+"flags": 4294967296
+},
+"19,5": {
+"flags": 4294967296
+},
+"19,6": {
+"flags": 4294967296
+},
+"19,7": {
+"flags": 1
+},
+"19,9": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,10": {
+"flags": 4294967296
+},
+"2,11": {
+"flags": 4294967296
+},
+"2,12": {
+"flags": 4294967296
+},
+"2,13": {
+"flags": 4294967296
+},
+"2,14": {
+"flags": 4294967296
+},
+"2,15": {
+"flags": 1
+},
+"2,2": {
+"flags": 4294967296
+},
+"2,3": {
+"flags": 4294967296
+},
+"2,4": {
+"flags": 4294967296
+},
+"2,5": {
+"flags": 4294967296
+},
+"2,6": {
+"flags": 4294967296
+},
+"2,7": {
+"flags": 1
+},
+"2,9": {
+"flags": 1
+},
+"20,0": {
+"flags": 1
+},
+"20,1": {
+"flags": 1
+},
+"20,10": {
+"flags": 4294967296
+},
+"20,11": {
+"flags": 4294967296
+},
+"20,12": {
+"flags": 4294967296
+},
+"20,13": {
+"flags": 4294967296
+},
+"20,14": {
+"flags": 4294967296
+},
+"20,15": {
+"flags": 1
+},
+"20,2": {
+"flags": 1
+},
+"20,3": {
+"flags": 4294967296
+},
+"20,4": {
+"flags": 4294967296
+},
+"20,5": {
+"flags": 4294967296
+},
+"20,6": {
+"flags": 4294967296
+},
+"20,7": {
+"flags": 1
+},
+"20,9": {
+"flags": 1
+},
+"21,-1": {
+"flags": 1
+},
+"21,0": {
+"flags": 4294967296
+},
+"21,10": {
+"flags": 4294967296
+},
+"21,11": {
+"flags": 4294967296
+},
+"21,12": {
+"flags": 4294967296
+},
+"21,13": {
+"flags": 4294967296
+},
+"21,15": {
+"flags": 1
+},
+"21,2": {
+"flags": 4294967296
+},
+"21,3": {
+"flags": 1
+},
+"21,4": {
+"flags": 4294967296
+},
+"21,5": {
+"flags": 4294967296
+},
+"21,6": {
+"flags": 4294967296
+},
+"21,7": {
+"flags": 1
+},
+"21,9": {
+"flags": 1
+},
+"22,0": {
+"flags": 1
+},
+"22,1": {
+"flags": 1
+},
+"22,10": {
+"flags": 4294967296
+},
+"22,11": {
+"flags": 4294967296
+},
+"22,12": {
+"flags": 4294967296
+},
+"22,13": {
+"flags": 4294967296
+},
+"22,15": {
+"flags": 1
+},
+"22,2": {
+"flags": 1
+},
+"22,3": {
+"flags": 1
+},
+"22,4": {
+"flags": 4294967296
+},
+"22,5": {
+"flags": 4294967296
+},
+"22,6": {
+"flags": 4294967296
+},
+"22,7": {
+"flags": 1
+},
+"22,9": {
+"flags": 1
+},
+"23,10": {
+"flags": 4294967296
+},
+"23,11": {
+"flags": 4294967296
+},
+"23,12": {
+"flags": 4294967296
+},
+"23,13": {
+"flags": 4294967296
+},
+"23,14": {
+"flags": 4294967296
+},
+"23,15": {
+"flags": 1
+},
+"23,2": {
+"flags": 1
+},
+"23,3": {
+"flags": 1
+},
+"23,4": {
+"flags": 4294967296
+},
+"23,5": {
+"flags": 4294967296
+},
+"23,6": {
+"flags": 4294967296
+},
+"23,7": {
+"flags": 1
+},
+"23,9": {
+"flags": 1
+},
+"24,1": {
+"flags": 1
+},
+"24,10": {
+"flags": 4294967296
+},
+"24,11": {
+"flags": 4294967296
+},
+"24,12": {
+"flags": 4294967296
+},
+"24,13": {
+"flags": 4294967296
+},
+"24,14": {
+"flags": 4294967296
+},
+"24,15": {
+"flags": 1
+},
+"24,2": {
+"flags": 4294967296
+},
+"24,3": {
+"flags": 4294967296
+},
+"24,4": {
+"flags": 4294967296
+},
+"24,5": {
+"flags": 4294967296
+},
+"24,6": {
+"flags": 4294967296
+},
+"24,7": {
+"flags": 1
+},
+"24,9": {
+"flags": 1
+},
+"25,1": {
+"flags": 1
+},
+"25,10": {
+"flags": 4294967296
+},
+"25,11": {
+"flags": 1
+},
+"25,12": {
+"flags": 4294967296
+},
+"25,13": {
+"flags": 4294967296
+},
+"25,14": {
+"flags": 4294967296
+},
+"25,15": {
+"flags": 1
+},
+"25,2": {
+"flags": 4294967296
+},
+"25,3": {
+"flags": 4294967296
+},
+"25,4": {
+"flags": 4294967296
+},
+"25,5": {
+"flags": 4294967296
+},
+"25,6": {
+"flags": 4294967296
+},
+"25,7": {
+"flags": 1
+},
+"25,9": {
+"flags": 1
+},
+"26,1": {
+"flags": 1
+},
+"26,10": {
+"flags": 4294967296
+},
+"26,11": {
+"flags": 4294967296
+},
+"26,12": {
+"flags": 4294967296
+},
+"26,13": {
+"flags": 4294967296
+},
+"26,14": {
+"flags": 4294967296
+},
+"26,15": {
+"flags": 1
+},
+"26,2": {
+"flags": 4294967296
+},
+"26,3": {
+"flags": 4294967296
+},
+"26,4": {
+"flags": 4294967296
+},
+"26,5": {
+"flags": 4294967296
+},
+"26,6": {
+"flags": 4294967296
+},
+"26,7": {
+"flags": 1
+},
+"26,9": {
+"flags": 1
+},
+"27,1": {
+"flags": 1
+},
+"27,10": {
+"flags": 4294967296
+},
+"27,11": {
+"flags": 1
+},
+"27,12": {
+"flags": 4294967296
+},
+"27,13": {
+"flags": 4294967296
+},
+"27,14": {
+"flags": 4294967296
+},
+"27,15": {
+"flags": 1
+},
+"27,2": {
+"flags": 4294967296
+},
+"27,3": {
+"flags": 4294967296
+},
+"27,4": {
+"flags": 4294967296
+},
+"27,5": {
+"flags": 4294967296
+},
+"27,6": {
+"flags": 4294967296
+},
+"27,7": {
+"flags": 1
+},
+"27,9": {
+"flags": 1
+},
+"28,10": {
+"flags": 1
+},
+"28,12": {
+"flags": 1
+},
+"28,13": {
+"flags": 1
+},
+"28,14": {
+"flags": 1
+},
+"28,2": {
+"flags": 1
+},
+"28,3": {
+"flags": 4294967296
+},
+"28,4": {
+"flags": 1
+},
+"28,5": {
+"flags": 1
+},
+"28,6": {
+"flags": 1
+},
+"29,10": {
+"flags": 1
+},
+"29,12": {
+"flags": 1
+},
+"29,13": {
+"flags": 1
+},
+"29,14": {
+"flags": 1
+},
+"29,2": {
+"flags": 1
+},
+"29,3": {
+"flags": 4294967296
+},
+"29,4": {
+"flags": 1
+},
+"29,6": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,10": {
+"flags": 4294967296
+},
+"3,11": {
+"flags": 4294967296
+},
+"3,12": {
+"flags": 4294967296
+},
+"3,13": {
+"flags": 4294967296
+},
+"3,14": {
+"flags": 4294967296
+},
+"3,15": {
+"flags": 1
+},
+"3,2": {
+"flags": 4294967296
+},
+"3,3": {
+"flags": 4294967296
+},
+"3,4": {
+"flags": 1
+},
+"3,5": {
+"flags": 1
+},
+"3,6": {
+"flags": 4294967296
+},
+"3,7": {
+"flags": 1
+},
+"3,9": {
+"flags": 1
+},
+"30,1": {
+"flags": 1
+},
+"30,10": {
+"flags": 4294967296
+},
+"30,11": {
+"flags": 1
+},
+"30,12": {
+"flags": 4294967296
+},
+"30,13": {
+"flags": 4294967296
+},
+"30,14": {
+"flags": 4294967296
+},
+"30,15": {
+"flags": 1
+},
+"30,2": {
+"flags": 4294967296
+},
+"30,3": {
+"flags": 4294967296
+},
+"30,4": {
+"flags": 4294967296
+},
+"30,5": {
+"flags": 1
+},
+"30,6": {
+"flags": 4294967296
+},
+"30,7": {
+"flags": 1
+},
+"30,9": {
+"flags": 1
+},
+"31,1": {
+"flags": 1
+},
+"31,10": {
+"flags": 4294967296
+},
+"31,11": {
+"flags": 4294967296
+},
+"31,12": {
+"flags": 4294967296
+},
+"31,13": {
+"flags": 4294967296
+},
+"31,14": {
+"flags": 4294967296
+},
+"31,15": {
+"flags": 1
+},
+"31,2": {
+"flags": 4294967296
+},
+"31,3": {
+"flags": 4294967296
+},
+"31,4": {
+"flags": 4294967296
+},
+"31,5": {
+"flags": 4294967296
+},
+"31,6": {
+"flags": 4294967296
+},
+"31,7": {
+"flags": 1
+},
+"31,9": {
+"flags": 1
+},
+"32,1": {
+"flags": 1
+},
+"32,10": {
+"flags": 4294967296
+},
+"32,11": {
+"flags": 4294967296
+},
+"32,12": {
+"flags": 4294967296
+},
+"32,13": {
+"flags": 4294967296
+},
+"32,14": {
+"flags": 4294967296
+},
+"32,15": {
+"flags": 1
+},
+"32,2": {
+"flags": 4294967296
+},
+"32,3": {
+"flags": 4294967296
+},
+"32,4": {
+"flags": 4294967296
+},
+"32,5": {
+"flags": 1
+},
+"32,6": {
+"flags": 1
+},
+"32,9": {
+"flags": 1
+},
+"33,1": {
+"flags": 1
+},
+"33,10": {
+"flags": 4294967296
+},
+"33,11": {
+"flags": 4294967296
+},
+"33,12": {
+"flags": 4294967296
+},
+"33,13": {
+"flags": 4294967296
+},
+"33,14": {
+"flags": 1
+},
+"33,2": {
+"flags": 4294967296
+},
+"33,3": {
+"flags": 1
+},
+"33,4": {
+"flags": 4294967296
+},
+"33,5": {
+"flags": 1
+},
+"33,6": {
+"flags": 1
+},
+"33,9": {
+"flags": 1
+},
+"34,1": {
+"flags": 1
+},
+"34,10": {
+"flags": 4294967296
+},
+"34,11": {
+"flags": 4294967296
+},
+"34,12": {
+"flags": 4294967296
+},
+"34,13": {
+"flags": 4294967296
+},
+"34,14": {
+"flags": 4294967296
+},
+"34,15": {
+"flags": 1
+},
+"34,2": {
+"flags": 4294967296
+},
+"34,3": {
+"flags": 4294967296
+},
+"34,4": {
+"flags": 4294967296
+},
+"34,5": {
+"flags": 4294967296
+},
+"34,6": {
+"flags": 4294967296
+},
+"34,7": {
+"flags": 1
+},
+"34,9": {
+"flags": 1
+},
+"35,1": {
+"flags": 1
+},
+"35,10": {
+"flags": 4294967296
+},
+"35,11": {
+"flags": 1
+},
+"35,12": {
+"flags": 1
+},
+"35,13": {
+"flags": 4294967296
+},
+"35,14": {
+"flags": 4294967296
+},
+"35,15": {
+"flags": 1
+},
+"35,2": {
+"flags": 4294967296
+},
+"35,3": {
+"flags": 4294967296
+},
+"35,4": {
+"flags": 4294967296
+},
+"35,5": {
+"flags": 4294967296
+},
+"35,6": {
+"flags": 4294967296
+},
+"35,7": {
+"flags": 1
+},
+"35,9": {
+"flags": 1
+},
+"36,1": {
+"flags": 1
+},
+"36,10": {
+"flags": 4294967296
+},
+"36,11": {
+"flags": 1
+},
+"36,12": {
+"flags": 1
+},
+"36,13": {
+"flags": 4294967296
+},
+"36,15": {
+"flags": 1
+},
+"36,2": {
+"flags": 4294967296
+},
+"36,3": {
+"flags": 4294967296
+},
+"36,4": {
+"flags": 4294967296
+},
+"36,5": {
+"flags": 4294967296
+},
+"36,6": {
+"flags": 4294967296
+},
+"36,7": {
+"flags": 1
+},
+"36,9": {
+"flags": 1
+},
+"37,1": {
+"flags": 1
+},
+"37,10": {
+"flags": 4294967296
+},
+"37,11": {
+"flags": 4294967296
+},
+"37,12": {
+"flags": 4294967296
+},
+"37,13": {
+"flags": 4294967296
+},
+"37,15": {
+"flags": 1
+},
+"37,2": {
+"flags": 4294967296
+},
+"37,3": {
+"flags": 4294967296
+},
+"37,4": {
+"flags": 4294967296
+},
+"37,5": {
+"flags": 4294967296
+},
+"37,6": {
+"flags": 4294967296
+},
+"37,7": {
+"flags": 1
+},
+"37,9": {
+"flags": 1
+},
+"38,1": {
+"flags": 1
+},
+"38,10": {
+"flags": 4294967296
+},
+"38,11": {
+"flags": 4294967296
+},
+"38,12": {
+"flags": 4294967296
+},
+"38,13": {
+"flags": 4294967296
+},
+"38,14": {
+"flags": 4294967296
+},
+"38,15": {
+"flags": 1
+},
+"38,2": {
+"flags": 4294967296
+},
+"38,3": {
+"flags": 4294967296
+},
+"38,4": {
+"flags": 4294967296
+},
+"38,5": {
+"flags": 1
+},
+"38,6": {
+"flags": 4294967296
+},
+"38,7": {
+"flags": 1
+},
+"38,9": {
+"flags": 1
+},
+"39,1": {
+"flags": 1
+},
+"39,10": {
+"flags": 4294967296
+},
+"39,11": {
+"flags": 4294967296
+},
+"39,12": {
+"flags": 4294967296
+},
+"39,13": {
+"flags": 4294967296
+},
+"39,14": {
+"flags": 4294967296
+},
+"39,15": {
+"flags": 1
+},
+"39,2": {
+"flags": 4294967296
+},
+"39,3": {
+"flags": 4294967296
+},
+"39,4": {
+"flags": 4294967296
+},
+"39,5": {
+"flags": 4294967296
+},
+"39,6": {
+"flags": 4294967296
+},
+"39,7": {
+"flags": 1
+},
+"39,9": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,10": {
+"flags": 4294967296
+},
+"4,11": {
+"flags": 4294967296
+},
+"4,12": {
+"flags": 4294967296
+},
+"4,13": {
+"flags": 4294967296
+},
+"4,14": {
+"flags": 4294967296
+},
+"4,15": {
+"flags": 1
+},
+"4,2": {
+"flags": 4294967296
+},
+"4,3": {
+"flags": 4294967296
+},
+"4,4": {
+"flags": 1
+},
+"4,5": {
+"flags": 1
+},
+"4,6": {
+"flags": 4294967296
+},
+"4,7": {
+"flags": 1
+},
+"4,9": {
+"flags": 1
+},
+"40,10": {
+"flags": 1
+},
+"40,11": {
+"flags": 1
+},
+"40,12": {
+"flags": 4294967296
+},
+"40,13": {
+"flags": 4294967296
+},
+"40,14": {
+"flags": 4294967296
+},
+"40,15": {
+"flags": 1
+},
+"40,2": {
+"flags": 1
+},
+"40,3": {
+"flags": 1
+},
+"40,4": {
+"flags": 4294967296
+},
+"40,5": {
+"flags": 4294967296
+},
+"40,6": {
+"flags": 4294967296
+},
+"40,7": {
+"flags": 1
+},
+"41,10": {
+"flags": 1
+},
+"41,11": {
+"flags": 1
+},
+"41,12": {
+"flags": 4294967296
+},
+"41,13": {
+"flags": 4294967296
+},
+"41,14": {
+"flags": 4294967296
+},
+"41,15": {
+"flags": 1
+},
+"41,2": {
+"flags": 1
+},
+"41,3": {
+"flags": 1
+},
+"41,4": {
+"flags": 4294967296
+},
+"41,5": {
+"flags": 4294967296
+},
+"41,6": {
+"flags": 4294967296
+},
+"41,7": {
+"flags": 1
+},
+"42,1": {
+"flags": 1
+},
+"42,10": {
+"flags": 4294967296
+},
+"42,11": {
+"flags": 4294967296
+},
+"42,12": {
+"flags": 4294967296
+},
+"42,13": {
+"flags": 1
+},
+"42,14": {
+"flags": 4294967296
+},
+"42,15": {
+"flags": 1
+},
+"42,2": {
+"flags": 4294967296
+},
+"42,3": {
+"flags": 4294967296
+},
+"42,4": {
+"flags": 4294967296
+},
+"42,5": {
+"flags": 4294967296
+},
+"42,6": {
+"flags": 1
+},
+"42,9": {
+"flags": 1
+},
+"43,10": {
+"flags": 1
+},
+"43,11": {
+"flags": 1
+},
+"43,12": {
+"flags": 1
+},
+"43,14": {
+"flags": 1
+},
+"43,2": {
+"flags": 1
+},
+"43,3": {
+"flags": 1
+},
+"43,4": {
+"flags": 1
+},
+"43,5": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,10": {
+"flags": 4294967296
+},
+"5,11": {
+"flags": 4294967296
+},
+"5,12": {
+"flags": 4294967296
+},
+"5,13": {
+"flags": 4294967296
+},
+"5,14": {
+"flags": 4294967296
+},
+"5,15": {
+"flags": 1
+},
+"5,2": {
+"flags": 4294967296
+},
+"5,3": {
+"flags": 4294967296
+},
+"5,4": {
+"flags": 4294967296
+},
+"5,5": {
+"flags": 4294967296
+},
+"5,6": {
+"flags": 4294967296
+},
+"5,7": {
+"flags": 1
+},
+"5,9": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,10": {
+"flags": 4294967296
+},
+"6,11": {
+"flags": 4294967296
+},
+"6,12": {
+"flags": 4294967296
+},
+"6,13": {
+"flags": 4294967296
+},
+"6,15": {
+"flags": 1
+},
+"6,2": {
+"flags": 4294967296
+},
+"6,3": {
+"flags": 4294967296
+},
+"6,4": {
+"flags": 4294967296
+},
+"6,5": {
+"flags": 4294967296
+},
+"6,6": {
+"flags": 4294967296
+},
+"6,7": {
+"flags": 1
+},
+"6,9": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,10": {
+"flags": 1
+},
+"7,11": {
+"flags": 4294967296
+},
+"7,12": {
+"flags": 4294967296
+},
+"7,13": {
+"flags": 4294967296
+},
+"7,15": {
+"flags": 1
+},
+"7,2": {
+"flags": 4294967296
+},
+"7,3": {
+"flags": 4294967296
+},
+"7,4": {
+"flags": 4294967296
+},
+"7,5": {
+"flags": 4294967296
+},
+"7,6": {
+"flags": 4294967296
+},
+"7,7": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,10": {
+"flags": 4294967296
+},
+"8,11": {
+"flags": 4294967296
+},
+"8,12": {
+"flags": 4294967296
+},
+"8,13": {
+"flags": 4294967296
+},
+"8,14": {
+"flags": 4294967296
+},
+"8,15": {
+"flags": 1
+},
+"8,2": {
+"flags": 4294967296
+},
+"8,3": {
+"flags": 4294967296
+},
+"8,4": {
+"flags": 4294967296
+},
+"8,5": {
+"flags": 4294967296
+},
+"8,6": {
+"flags": 4294967296
+},
+"8,7": {
+"flags": 1
+},
+"8,9": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,10": {
+"flags": 4294967296
+},
+"9,11": {
+"flags": 4294967296
+},
+"9,12": {
+"flags": 4294967296
+},
+"9,13": {
+"flags": 4294967296
+},
+"9,14": {
+"flags": 4294967296
+},
+"9,15": {
+"flags": 1
+},
+"9,2": {
+"flags": 4294967296
+},
+"9,3": {
+"flags": 4294967296
+},
+"9,4": {
+"flags": 4294967296
+},
+"9,5": {
+"flags": 4294967296
+},
+"9,6": {
+"flags": 4294967296
+},
+"9,7": {
+"flags": 1
+},
+"9,9": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=378170411]
+z_index = 1
+y_sort_enabled = true
+
+[node name="ItemLujoBall" parent="NPCs" unique_id=270924296 instance=ExtResource("7_item")]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms (41,4) ITEM_BALL, FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_6_LUXURY_BALL (ITEM_LUXURY_BALL)"
+position = Vector2(664, 78)
+id_item = "nao_abandonada_cabinas_ocultas_lujo_ball_01"
+objeto_a_entregar = "LUJOBALL"
+coord = Vector2i(41, 4)
+
+[node name="ItemEscaner" parent="NPCs" unique_id=35855979 instance=ExtResource("7_item")]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms (16,10) ITEM_BALL, FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_2_SCANNER (ITEM_SCANNER)"
+position = Vector2(264, 174)
+id_item = "nao_abandonada_cabinas_ocultas_escaner_01"
+objeto_a_entregar = "ESCANER"
+coord = Vector2i(16, 10)
+
+[node name="ItemMT18" parent="NPCs" unique_id=1623921896 instance=ExtResource("7_item")]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms (5,11) ITEM_BALL, FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_1_TM_RAIN_DANCE (ITEM_TM18_RAIN_DANCE)"
+position = Vector2(88, 190)
+id_item = "nao_abandonada_cabinas_ocultas_mt18_01"
+objeto_a_entregar = "MT18"
+coord = Vector2i(5, 11)
+
+[node name="ItemPiedraAgua" parent="NPCs" unique_id=917207532 instance=ExtResource("7_item")]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms (31,11) ITEM_BALL, FLAG_ITEM_ABANDONED_SHIP_HIDDEN_FLOOR_ROOM_3_WATER_STONE (ITEM_WATER_STONE)"
+position = Vector2(504, 190)
+id_item = "nao_abandonada_cabinas_ocultas_piedra_agua_01"
+objeto_a_entregar = "PIEDRAAGUA"
+coord = Vector2i(31, 11)
+
+[node name="LlaveCabina1Oculta" parent="NPCs" unique_id=1824346353 instance=ExtResource("7_item")]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms bg_event hidden_item (42,10) elevación 3, FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_1_KEY (ITEM_ROOM_1_KEY)"
+position = Vector2(680, 174)
+id_item = "nao_abandonada_cabinas_ocultas_llave_cabina1_oculta_01"
+objeto_a_entregar = "LLAVECAB1"
+oculto = true
+coord = Vector2i(42, 10)
+
+[node name="LlaveCabina2Oculta" parent="NPCs" unique_id=861022722 instance=ExtResource("7_item")]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms bg_event hidden_item (20,5) elevación 3, FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_2_KEY (ITEM_ROOM_2_KEY)"
+position = Vector2(328, 94)
+id_item = "nao_abandonada_cabinas_ocultas_llave_cabina2_oculta_01"
+objeto_a_entregar = "LLAVECAB2"
+oculto = true
+coord = Vector2i(20, 5)
+
+[node name="LlaveCabina4Oculta" parent="NPCs" unique_id=268938113 instance=ExtResource("7_item")]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms bg_event hidden_item (1,12) elevación 3, FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_4_KEY (ITEM_ROOM_4_KEY)"
+position = Vector2(24, 206)
+id_item = "nao_abandonada_cabinas_ocultas_llave_cabina4_oculta_01"
+objeto_a_entregar = "LLAVECAB4"
+oculto = true
+coord = Vector2i(1, 12)
+
+[node name="LlaveCabina6Oculta" parent="NPCs" unique_id=480849097 instance=ExtResource("7_item")]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms bg_event hidden_item (1,2) elevación 0, FLAG_HIDDEN_ITEM_ABANDONED_SHIP_RM_6_KEY (ITEM_ROOM_6_KEY)"
+position = Vector2(24, 46)
+id_item = "nao_abandonada_cabinas_ocultas_llave_cabina6_oculta_01"
+objeto_a_entregar = "LLAVECAB6"
+oculto = true
+coord = Vector2i(1, 2)
+
+[node name="Carteles" type="Node2D" parent="." unique_id=617845145]
+
+[node name="Basura1" type="Sprite2D" parent="Carteles" unique_id=907234208 groups=["Cartel"]]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms bg_event (8,5) AbandonedShip_HiddenFloorRooms_EventScript_Trash"
+position = Vector2(136, 88)
+script = ExtResource("s_cartel")
+id_texto = "NAO_ABANDONADA_CABINAS_BASURA"
+coord_tile = Vector2i(8, 5)
+
+[node name="Basura2" type="Sprite2D" parent="Carteles" unique_id=2097276809 groups=["Cartel"]]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms bg_event (11,3) AbandonedShip_HiddenFloorRooms_EventScript_Trash"
+position = Vector2(184, 56)
+script = ExtResource("s_cartel")
+id_texto = "NAO_ABANDONADA_CABINAS_BASURA"
+coord_tile = Vector2i(11, 3)
+
+[node name="Basura3" type="Sprite2D" parent="Carteles" unique_id=677627852 groups=["Cartel"]]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms bg_event (10,10) AbandonedShip_HiddenFloorRooms_EventScript_Trash"
+position = Vector2(168, 168)
+script = ExtResource("s_cartel")
+id_texto = "NAO_ABANDONADA_CABINAS_BASURA"
+coord_tile = Vector2i(10, 10)
+
+[node name="Basura4" type="Sprite2D" parent="Carteles" unique_id=1079722073 groups=["Cartel"]]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms bg_event (16,3) AbandonedShip_HiddenFloorRooms_EventScript_Trash"
+position = Vector2(264, 56)
+script = ExtResource("s_cartel")
+id_texto = "NAO_ABANDONADA_CABINAS_BASURA"
+coord_tile = Vector2i(16, 3)
+
+[node name="Basura5" type="Sprite2D" parent="Carteles" unique_id=1433542226 groups=["Cartel"]]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms bg_event (25,2) AbandonedShip_HiddenFloorRooms_EventScript_Trash"
+position = Vector2(408, 40)
+script = ExtResource("s_cartel")
+id_texto = "NAO_ABANDONADA_CABINAS_BASURA"
+coord_tile = Vector2i(25, 2)
+
+[node name="Basura6" type="Sprite2D" parent="Carteles" unique_id=1691811709 groups=["Cartel"]]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms bg_event (24,6) AbandonedShip_HiddenFloorRooms_EventScript_Trash"
+position = Vector2(392, 104)
+script = ExtResource("s_cartel")
+id_texto = "NAO_ABANDONADA_CABINAS_BASURA"
+coord_tile = Vector2i(24, 6)
+
+[node name="Cartel" type="Sprite2D" parent="Carteles" unique_id=521766453 groups=["Cartel"]]
+position = Vector2(536, 232)
+script = ExtResource("s_cartel")
+id_texto = "PAPELERA_VACIA"
+coord_tile = Vector2i(33, 14)
+
+[node name="Cartel2" type="Sprite2D" parent="Carteles" unique_id=996895680 groups=["Cartel"]]
+position = Vector2(616, 88)
+script = ExtResource("s_cartel")
+id_texto = "PAPELERA_VACIA"
+coord_tile = Vector2i(38, 5)
+
+[node name="Cartel3" type="Sprite2D" parent="Carteles" unique_id=760356495 groups=["Cartel"]]
+position = Vector2(536, 56)
+script = ExtResource("s_cartel")
+id_texto = "PAPELERA_VACIA"
+coord_tile = Vector2i(33, 3)
+
+[node name="Cartel4" type="Sprite2D" parent="Carteles" unique_id=1449242315 groups=["Cartel"]]
+position = Vector2(408, 184)
+script = ExtResource("s_cartel")
+id_texto = "PAPELERA_VACIA"
+coord_tile = Vector2i(25, 11)
+
+[node name="Cartel5" type="Sprite2D" parent="Carteles" unique_id=1861533097 groups=["Cartel"]]
+position = Vector2(344, 56)
+script = ExtResource("s_cartel")
+id_texto = "PAPELERA_VACIA"
+coord_tile = Vector2i(21, 3)
+
+[node name="Cartel6" type="Sprite2D" parent="Carteles" unique_id=917884307 groups=["Cartel"]]
+position = Vector2(328, 40)
+script = ExtResource("s_cartel")
+id_texto = "PAPELERA_VACIA"
+coord_tile = Vector2i(20, 2)
+
+[node name="Cartel7" type="Sprite2D" parent="Carteles" unique_id=1688181521 groups=["Cartel"]]
+position = Vector2(120, 168)
+script = ExtResource("s_cartel")
+id_texto = "PAPELERA_VACIA"
+coord_tile = Vector2i(7, 10)
+
+[node name="Cartel8" type="Sprite2D" parent="Carteles" unique_id=2110912954 groups=["Cartel"]]
+editor_description = "Papelera de la LL. CAB. 6 oculta: solo se lee tras recogerla."
+position = Vector2(24, 40)
+script = ExtResource("s_cartel")
+id_texto = "PAPELERA_VACIA"
+coord_tile = Vector2i(1, 2)
+bandera_requerida = "item_nao_abandonada_cabinas_ocultas_llave_cabina6_oculta_01"
+
+[node name="Eventos" type="Node2D" parent="." unique_id=870234242]
+
+[node name="EventoNao" type="Node2D" parent="Eventos" unique_id=2147051024]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms/scripts.inc"
+script = ExtResource("s_nao")
+destellos_cabinas = true
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=26727982]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms warp 0 (6,14) MB 0x65 -> MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS (3,8)"
+position = Vector2(104, 230)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_pasillos_ocultos"
+posicion_destino = Vector2(3, 8)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1841338608]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms warp 1 (7,14) MB 0x65 -> MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS (3,8)"
+position = Vector2(120, 230)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_pasillos_ocultos"
+posicion_destino = Vector2(3, 8)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp3" type="Sprite2D" parent="." unique_id=2012237928]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms warp 2 (21,14) MB 0x65 -> MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS (6,8)"
+position = Vector2(344, 230)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_pasillos_ocultos"
+posicion_destino = Vector2(6, 8)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp4" type="Sprite2D" parent="." unique_id=1870681051]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms warp 3 (22,14) MB 0x65 -> MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS (6,8)"
+position = Vector2(360, 230)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_pasillos_ocultos"
+posicion_destino = Vector2(6, 8)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp5" type="Sprite2D" parent="." unique_id=2121178707]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms warp 4 (36,14) MB 0x65 -> MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS (9,8)"
+position = Vector2(584, 230)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_pasillos_ocultos"
+posicion_destino = Vector2(9, 8)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp6" type="Sprite2D" parent="." unique_id=790187056]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms warp 5 (37,14) MB 0x65 -> MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS (9,8)"
+position = Vector2(600, 230)
+script = ExtResource("4_warp")
+tipo_warp = 1
+ruta_mapa_destino = "nao_abandonada_pasillos_ocultos"
+posicion_destino = Vector2(9, 8)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp7" type="Sprite2D" parent="." unique_id=1765842360]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms warp 6 (6,1) MB 0x69 -> MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS (3,3)"
+position = Vector2(104, 22)
+script = ExtResource("4_warp")
+tipo_warp = 2
+estilo_warp = 28
+ruta_mapa_destino = "nao_abandonada_pasillos_ocultos"
+posicion_destino = Vector2(3, 3)
+direccion = Vector2(0, -1)
+
+[node name="Warp8" type="Sprite2D" parent="." unique_id=381827141]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms warp 7 (21,1) MB 0x60 -> MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS (6,3)"
+position = Vector2(344, 22)
+script = ExtResource("4_warp")
+tipo_warp = 2
+ruta_mapa_destino = "nao_abandonada_pasillos_ocultos"
+posicion_destino = Vector2(6, 3)
+direccion = Vector2(0, -1)
+
+[node name="Warp9" type="Sprite2D" parent="." unique_id=1850770148]
+editor_description = "pokeruby AbandonedShip_HiddenFloorRooms warp 8 (36,1) MB 0x69 -> MAP_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS (9,3)"
+position = Vector2(584, 22)
+script = ExtResource("4_warp")
+tipo_warp = 2
+estilo_warp = 28
+ruta_mapa_destino = "nao_abandonada_pasillos_ocultos"
+posicion_destino = Vector2(9, 3)
+direccion = Vector2(0, -1)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b5e87xybieojw"
+path="res://.godot/imported/1-58 Fallarbor Town.mp3-ac32f4d9b11a1c1f17020280b9cb0aeb.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-58 Fallarbor Town.mp3"
+dest_files=["res://.godot/imported/1-58 Fallarbor Town.mp3-ac32f4d9b11a1c1f17020280b9cb0aeb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

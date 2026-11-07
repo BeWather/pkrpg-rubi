@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://00na1ke2srqg"
+
+[deps]
+
+files=["res://BaseDatos/maquinas/textos_maquinas.es.translation", "res://BaseDatos/maquinas/textos_maquinas.en.translation"]
+
+source_file="res://BaseDatos/maquinas/textos_maquinas.csv"
+dest_files=["res://BaseDatos/maquinas/textos_maquinas.es.translation", "res://BaseDatos/maquinas/textos_maquinas.en.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

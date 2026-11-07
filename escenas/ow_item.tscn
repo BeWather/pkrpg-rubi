@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d0782whl40dem"]
+
+[ext_resource type="Script" uid="uid://b3lhrvbedvcgw" path="res://scripts/ItemOverworld.gd" id="1_7k1tm"]
+[ext_resource type="Texture2D" uid="uid://dblpdkpyufvb6" path="res://graficos/item.png" id="2_d1cdj"]
+
+[node name="OverworldItem" type="Node2D" unique_id=1591276133]
+position = Vector2(8, 14)
+script = ExtResource("1_7k1tm")
+
+[node name="Item" type="Sprite2D" parent="." unique_id=1701796568]
+texture = ExtResource("2_d1cdj")
+centered = false
+offset = Vector2(-8, -14)

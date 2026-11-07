@@ -1,0 +1,123 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/creditos/pantalla_creditos.gd" id="1_script"]
+[ext_resource type="PackedScene" path="res://escenas/pantalla_inicio/bicicleteando.tscn" id="2_bici"]
+[ext_resource type="PackedScene" path="res://UI/creditos/fondo_bici_creditos.tscn" id="6_fondo"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="3_fuente"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fin_copyright.png" id="4_copyright"]
+[ext_resource type="Texture2D" path="res://UI/creditos/fin_the_end.png" id="5_the_end"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_categoria"]
+font = ExtResource("3_fuente")
+font_size = 15
+font_color = Color(1, 0.72, 0.28, 1)
+shadow_size = 0
+shadow_color = Color(0.45, 0.16, 0.06, 1)
+shadow_offset = Vector2(1, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nombre"]
+font = ExtResource("3_fuente")
+font_size = 15
+font_color = Color(1, 1, 1, 1)
+shadow_size = 0
+shadow_color = Color(0.25, 0.25, 0.25, 1)
+shadow_offset = Vector2(1, 1)
+
+[node name="PantallaCreditos" type="Node2D"]
+script = ExtResource("1_script")
+ajustes_categoria = SubResource("LabelSettings_categoria")
+ajustes_nombre = SubResource("LabelSettings_nombre")
+
+[node name="Fondo" parent="." instance=ExtResource("6_fondo")]
+
+[node name="Bicicleteando" parent="." instance=ExtResource("2_bici")]
+visible = true
+
+[node name="Montanas" parent="Bicicleteando" index="1"]
+visible = false
+
+[node name="DesplazoY" parent="Bicicleteando" index="2"]
+visible = false
+
+[node name="Personaje" parent="Bicicleteando" index="3"]
+position = Vector2(0, -30)
+
+[node name="Latios" parent="Bicicleteando" index="4"]
+visible = false
+
+[node name="Path2D" parent="Bicicleteando" index="5"]
+visible = false
+
+[node name="Texto" type="Control" parent="."]
+modulate = Color(1, 1, 1, 0)
+z_index = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 160.0
+
+[node name="Linea0" type="Label" parent="Texto"]
+texture_filter = 1
+layout_mode = 0
+offset_top = 76.0
+offset_right = 240.0
+offset_bottom = 91.0
+label_settings = SubResource("LabelSettings_nombre")
+horizontal_alignment = 1
+language = "es_AR"
+
+[node name="Linea1" type="Label" parent="Texto"]
+texture_filter = 1
+layout_mode = 0
+offset_top = 92.0
+offset_right = 240.0
+offset_bottom = 107.0
+label_settings = SubResource("LabelSettings_categoria")
+text = "Director"
+horizontal_alignment = 1
+language = "es_AR"
+
+[node name="Linea2" type="Label" parent="Texto"]
+texture_filter = 1
+layout_mode = 0
+offset_top = 108.0
+offset_right = 240.0
+offset_bottom = 123.0
+label_settings = SubResource("LabelSettings_nombre")
+text = "Junichi Masuda"
+horizontal_alignment = 1
+language = "es_AR"
+
+[node name="Linea3" type="Label" parent="Texto"]
+texture_filter = 1
+layout_mode = 0
+offset_top = 124.0
+offset_right = 240.0
+offset_bottom = 139.0
+label_settings = SubResource("LabelSettings_nombre")
+horizontal_alignment = 1
+language = "es_AR"
+
+[node name="Linea4" type="Label" parent="Texto"]
+texture_filter = 1
+layout_mode = 0
+offset_top = 140.0
+offset_right = 240.0
+offset_bottom = 155.0
+label_settings = SubResource("LabelSettings_nombre")
+horizontal_alignment = 1
+language = "es_AR"
+
+[node name="Copyright" type="Sprite2D" parent="."]
+visible = false
+z_index = 4
+texture = ExtResource("4_copyright")
+centered = false
+
+[node name="TheEnd" type="Sprite2D" parent="."]
+visible = false
+z_index = 4
+texture = ExtResource("5_the_end")
+centered = false
+
+[editable path="Bicicleteando"]

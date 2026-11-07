@@ -1,0 +1,276 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/pokenav/menu_pokenav.gd" id="e1"]
+[ext_resource type="PackedScene" path="res://UI/pokenav/fondo_pokenav.tscn" id="e2"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/banda_superior.png" id="e3"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/caja_descripcion.png" id="e4"]
+[ext_resource type="LabelSettings" path="res://UI/texto_normal_negro.tres" id="e5"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/cabecera_menu.png" id="e6"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/icono.png" id="e7"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/luz_azul.png" id="e8"]
+[ext_resource type="Script" path="res://UI/pokenav/lista_botones_pokenav.gd" id="e9"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/botones_menu.png" id="e10"]
+[ext_resource type="PackedScene" path="res://UI/pokenav/boton_pokenav.tscn" id="e11"]
+[ext_resource type="PackedScene" path="res://UI/pokenav/brillo_pokenav.tscn" id="e12"]
+
+[sub_resource type="Animation" id="Anim_2"]
+resource_name = "icono"
+length = 1.60000
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.20000, 0.40000, 0.60000, 0.80000, 1.00000, 1.20000, 1.40000),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="Lib_3"]
+_data = {
+&"icono": SubResource("Anim_2")
+}
+
+[sub_resource type="Animation" id="Anim_5"]
+resource_name = "luz_revancha"
+length = 0.23333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.11667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="Lib_6"]
+_data = {
+&"luz_revancha": SubResource("Anim_5")
+}
+
+[sub_resource type="Animation" id="Anim_8"]
+resource_name = "arranque"
+length = 0.40000
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FundidoNegro:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.13333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Contenido/Logo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.00000, 0.13333, 0.40000),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-128, 33), Vector2(-128, 33), Vector2(0, 33)]
+}
+
+[sub_resource type="Animation" id="Anim_9"]
+resource_name = "salida_a_submenu"
+length = 0.26667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Contenido/Logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 33), Vector2(-128, 33)]
+}
+
+[sub_resource type="Animation" id="Anim_10"]
+resource_name = "entrada_desde_submenu"
+length = 0.26667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Contenido/Logo:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.26667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-128, 33), Vector2(0, 33)]
+}
+
+[sub_resource type="Animation" id="Anim_11"]
+resource_name = "a_negro"
+length = 0.10000
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FundidoNegro:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.10000),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Anim_12"]
+resource_name = "desde_negro"
+length = 0.10000
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FundidoNegro:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.10000),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+
+[sub_resource type="Animation" id="Anim_13"]
+resource_name = "apagar"
+length = 0.13333
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FundidoNegro:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.13333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="Lib_14"]
+_data = {
+&"arranque": SubResource("Anim_8"),
+&"salida_a_submenu": SubResource("Anim_9"),
+&"entrada_desde_submenu": SubResource("Anim_10"),
+&"a_negro": SubResource("Anim_11"),
+&"desde_negro": SubResource("Anim_12"),
+&"apagar": SubResource("Anim_13")
+}
+
+[node name="MenuPokenav" type="Node2D"]
+script = ExtResource("e1")
+
+[node name="Contenido" type="Node2D" parent="."]
+
+[node name="Fondo" parent="Contenido" instance=ExtResource("e2")]
+
+[node name="BandaSuperior" type="Sprite2D" parent="Contenido"]
+texture = ExtResource("e3")
+position = Vector2(0, 0)
+centered = false
+
+[node name="CajaDescripcion" type="Sprite2D" parent="Contenido"]
+texture = ExtResource("e4")
+position = Vector2(0, 0)
+centered = false
+
+[node name="Descripcion" type="Label" parent="Contenido"]
+layout_mode = 0
+offset_left = 24
+offset_top = 136
+offset_right = 216
+offset_bottom = 151
+text = ""
+label_settings = ExtResource("e5")
+horizontal_alignment = 1
+
+[node name="Logo" type="Sprite2D" parent="Contenido"]
+texture = ExtResource("e6")
+position = Vector2(-128, 33)
+centered = false
+
+[node name="Icono" type="Sprite2D" parent="Contenido"]
+texture = ExtResource("e7")
+position = Vector2(218, 14)
+centered = true
+vframes = 8
+
+[node name="Anim" type="AnimationPlayer" parent="Contenido/Icono"]
+libraries/ = SubResource("Lib_3")
+autoplay = &"icono"
+
+[node name="LuzRevancha" type="Sprite2D" parent="Contenido"]
+texture = ExtResource("e8")
+position = Vector2(12, 96)
+centered = true
+visible = false
+
+[node name="Anim" type="AnimationPlayer" parent="Contenido/LuzRevancha"]
+libraries/ = SubResource("Lib_6")
+autoplay = &"luz_revancha"
+
+[node name="Botones" type="Node2D" parent="Contenido"]
+script = ExtResource("e9")
+
+[node name="Boton0" parent="Contenido/Botones" instance=ExtResource("e11")]
+position = Vector2(136, 34)
+hoja = ExtResource("e10")
+filas_hoja = 5
+fila = 0
+
+[node name="Boton1" parent="Contenido/Botones" instance=ExtResource("e11")]
+position = Vector2(136, 54)
+hoja = ExtResource("e10")
+filas_hoja = 5
+fila = 1
+
+[node name="Boton2" parent="Contenido/Botones" instance=ExtResource("e11")]
+position = Vector2(136, 74)
+hoja = ExtResource("e10")
+filas_hoja = 5
+fila = 2
+
+[node name="Boton3" parent="Contenido/Botones" instance=ExtResource("e11")]
+position = Vector2(136, 94)
+hoja = ExtResource("e10")
+filas_hoja = 5
+fila = 3
+
+[node name="Boton4" parent="Contenido/Botones" instance=ExtResource("e11")]
+position = Vector2(136, 114)
+hoja = ExtResource("e10")
+filas_hoja = 5
+fila = 4
+
+[node name="Brillo" parent="Contenido/Botones" instance=ExtResource("e12")]
+
+[node name="Submenu" type="Node2D" parent="."]
+
+[node name="FundidoNegro" type="ColorRect" parent="."]
+z_index = 100
+layout_mode = 0
+offset_right = 240
+offset_bottom = 160
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("Lib_14")

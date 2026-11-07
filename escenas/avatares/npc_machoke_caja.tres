@@ -1,0 +1,127 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://s6t0vp18y66v"]
+
+[ext_resource type="Texture2D" uid="uid://brl3f8cojbrrp" path="res://graficos/object_events/pokemon/machoke_carrying_box.png" id="1_izq"]
+[ext_resource type="Texture2D" uid="uid://djvem2x8jy6n0" path="res://graficos/object_events/pokemon/machoke_carrying_box_derecha.png" id="2_der"]
+
+[sub_resource type="AtlasTexture" id="izq_0"]
+atlas = ExtResource("1_izq")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="izq_1"]
+atlas = ExtResource("1_izq")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="izq_2"]
+atlas = ExtResource("1_izq")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="der_0"]
+atlas = ExtResource("2_der")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="der_1"]
+atlas = ExtResource("2_der")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="der_2"]
+atlas = ExtResource("2_der")
+region = Rect2(64, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("izq_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("izq_1")
+}],
+"loop": 0,
+"name": &"camina_abajo_1",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("izq_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("izq_2")
+}],
+"loop": 0,
+"name": &"camina_abajo_2",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("izq_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("izq_1")
+}],
+"loop": 0,
+"name": &"camina_arriba_1",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("izq_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("izq_2")
+}],
+"loop": 0,
+"name": &"camina_arriba_2",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("der_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("der_1")
+}],
+"loop": 0,
+"name": &"camina_derecha_1",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("der_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("der_2")
+}],
+"loop": 0,
+"name": &"camina_derecha_2",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("izq_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("izq_1")
+}],
+"loop": 0,
+"name": &"camina_izquierda_1",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("izq_0")
+}, {
+"duration": 1.0,
+"texture": SubResource("izq_2")
+}],
+"loop": 0,
+"name": &"camina_izquierda_2",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 0.01,
+"texture": SubResource("izq_0")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 4.0
+}]

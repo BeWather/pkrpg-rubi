@@ -1,0 +1,7 @@
+[gd_scene format=3]
+
+[ext_resource type="PackedScene" uid="uid://cft7yiuiiqun4" path="res://UI/comprar/comprar.tscn" id="1_comprar"]
+[ext_resource type="Script" uid="uid://cos658novw66d" path="res://UI/comprar/comprar_decoracion.gd" id="2_decoracion"]
+
+[node name="ComprarDecoracion" instance=ExtResource("1_comprar")]
+script = ExtResource("2_decoracion")

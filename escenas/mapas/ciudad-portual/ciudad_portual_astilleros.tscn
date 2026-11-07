@@ -1,0 +1,858 @@
+[gd_scene format=4 uid="uid://bdnmfck6elnl4"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_fje2u"]
+[ext_resource type="TileSet" uid="uid://cihs7q0xi0yev" path="res://escenas/tileset_interior_edificios_2.tres" id="2_fje2u"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_pubxv"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="5_signpost"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="6_npc_base"]
+[ext_resource type="Script" uid="uid://cx17qgv61lqhn" path="res://scripts/npc/npc_dock_astillero.gd" id="7_dock"]
+[ext_resource type="SpriteFrames" uid="uid://rvhay5tgmegy" path="res://escenas/avatares/npc_065.tres" id="8_fje2u"]
+[ext_resource type="SpriteFrames" uid="uid://q6liftwxrkde" path="res://escenas/avatares/npc_048.tres" id="8_npc_048"]
+[ext_resource type="Script" uid="uid://b3r00pidr48xb" path="res://scripts/npc/npc_regalo_objeto.gd" id="10_regalo"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="11_fvxfv"]
+[ext_resource type="SpriteFrames" uid="uid://buukulhhkfyjc" path="res://escenas/avatares/npc_050.tres" id="11_npc_050"]
+
+[node name="Astilleros" type="Node2D" unique_id=759417394]
+script = ExtResource("1_fje2u")
+nombre_interno = "ciudad_portual_astilleros"
+seccion = "CIUDAD_PORTUAL"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_PORTUAL"
+solo_caminar = true
+musica_mapa = "CIUDAD_PORTUAL"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=532478234]
+tile_map_data = PackedByteArray("AAAAAAAAAAABAAMAAAABAAAAAAABAAMAAAAAAAEAAAAGAAEAAAAAAAIAAAAGAAIAAAABAAEAAAAHAAEAAAABAAIAAAAHAAIAAAAAAAQAAAABAAgAAAAAAAUAAAABAAkAAAABAAQAAAACAAgAAAABAAUAAAACAAkAAAAAAAcAAAABAAgAAAAAAAgAAAABAAkAAAABAAcAAAACAAgAAAABAAgAAAACAAkAAAAAAAoAAAABAAgAAAAAAAsAAAABAAkAAAABAAoAAAACAAgAAAABAAsAAAACAAkAAAABAAwAAAAFAAMAAAAAAAkAAAAFAAMAAAABAAYAAAAFAAMAAAAEAAgAAAAFAAMAAAAEAAYAAAAEAAEAAAAEAAcAAAAEAAIAAAAFAAYAAAAFAAEAAAAFAAcAAAAFAAIAAAAFAAUAAAAFAAMAAAACAAAAAAADABYAAAACAAEAAAADABcAAAADAAAAAAAEABYAAAADAAEAAAAEABcAAAAEAAAAAAAFABYAAAAEAAEAAAAFABcAAAAFAAAAAAABAAMAAAAFAAEAAAABAAQAAAAHAAAAAAABAAMAAAAHAAEAAAABAAQAAAALAAAAAAABAAMAAAALAAEAAAABAAQAAAAOAAAAAAABAAMAAAAOAAEAAAABAAQAAAAQAAAAAAABAAMAAAAQAAEAAAABAAQAAAASAAAAAAABAAMAAAASAAEAAAABAAQAAAATAAAAAAABAAMAAAATAAEAAAABAAQAAAAUAAAAAAACAAMAAAAUAAEAAAACAAQAAAARAAAAAAACAAMAAAARAAEAAAACAAQAAAAPAAAAAAAEAAMAAAAPAAEAAAAEAAQAAAANAAAAAAADAAMAAAANAAEAAAADAAQAAAAMAAAAAAAAAAMAAAAMAAEAAAAAAAQAAAAEAAIAAAAHABYAAAACAAIAAAAGABYAAAAGAAAAAAABAAIAAAAIAAEAAAAAAAYAAAAIAAIAAAAAAAcAAAAJAAEAAAABAAYAAAAJAAIAAAABAAcAAAAKAAEAAAACAAYAAAAKAAIAAAACAAcAAAAKAAAAAAABAAMAAAAJAAAAAAABAAMAAAAIAAAAAAABAAMAAAACAA4AAAAGAAAAAAADAA4AAAAHAAAAAAAGAA4AAAACAAEAAAAGAA0AAAACAAEAAAAGAAwAAAACAAEAAAAGAAsAAAABAAIAAAAGAAoAAAAAAAEAAAAGAAkAAAACAAIAAAAGAAcAAAAAAAIAAAAGAAgAAAAAAAQAAAAGAAYAAAABAAEAAAAGAAMAAAABAAEAAAAGAAQAAAABAAIAAAAGAAUAAAACAAEAAAAGAAIAAAACAAEAAAAGAAEAAAACAAEAAAAAAAwAAAACAAAAAAAAAA0AAAACAAAAAAAAAA4AAAACAAAAAAABAA4AAAACAAAAAAABAA0AAAACAAAAAAACAA0AAAACAAAAAAADAA0AAAACAAAAAAAEAA0AAAACAAAAAAAEAA4AAAACAAAAAAAFAA4AAAACAAAAAAAFAA0AAAACAAAAAAAFAAwAAAACAAAAAAAEAAwAAAACAAAAAAADAAwAAAACAAAAAAACAAwAAAACAAAAAAACAAsAAAACAAAAAAACAAoAAAACAAAAAAACAAkAAAACAAAAAAABAAkAAAACAAAAAAADAAkAAAACAAAAAAAEAAkAAAACAAAAAAAFAAkAAAACAAAAAAAFAAgAAAACAAAAAAAFAAoAAAACAAAAAAAFAAsAAAACAAAAAAAEAAsAAAACAAAAAAADAAsAAAACAAAAAAADAAoAAAACAAAAAAAEAAoAAAACAAAAAAAAAAYAAAACAAAAAAADAAcAAAACAAAAAAADAAgAAAACAAAAAAACAAgAAAACAAAAAAACAAcAAAACAAAAAAACAAYAAAACAAAAAAACAAUAAAACAAAAAAADAAYAAAACAAAAAAADAAUAAAACAAAAAAADAAQAAAACAAAAAAACAAMAAAACAAAAAAADAAMAAAACAAAAAAAEAAMAAAACAAAAAAAEAAQAAAACAAAAAAAFAAQAAAACAAAAAAAEAAUAAAACAAAAAAAFAAMAAAACAAAAAAACAAQAAAACAAAAAAAFAAIAAAAEAAAAAAADAAIAAAAEAAAAAAAAAAMAAAAEAAAAAAABAAMAAAAEAAAAAAAHAAIAAAABAAUAAAALAAIAAAABAAUAAAANAAIAAAABAAUAAAAOAAIAAAABAAUAAAAPAAIAAAABAAUAAAAQAAIAAAABAAUAAAARAAIAAAABAAUAAAASAAIAAAABAAUAAAATAAIAAAABAAUAAAAUAAIAAAABAAUAAAAMAAIAAAADAAIAAAAPAAMAAAAGAAQAAAAOAAMAAAADAAEAAAANAAMAAAADAAEAAAAMAAMAAAADAAEAAAALAAMAAAADAAEAAAAKAAMAAAADAAEAAAAJAAMAAAADAAEAAAAIAAMAAAADAAEAAAAHAAMAAAADAAEAAAAPAAQAAAAAAAIAAAAPAAUAAAAAAAQAAAAPAAYAAAADAAIAAAALAAQAAAADAAUAAAALAAUAAAADAAYAAAALAAYAAAADAAcAAAALAAcAAAADAAgAAAALAAgAAAADAAkAAAAMAAQAAAAEAAUAAAAMAAUAAAAEAAYAAAAMAAYAAAAEAAcAAAAMAAcAAAAEAAgAAAAMAAgAAAAEAAkAAAANAAQAAAAFAAUAAAANAAUAAAAFAAYAAAANAAYAAAAFAAcAAAANAAcAAAAFAAgAAAANAAgAAAAFAAkAAAAOAAQAAAAGAAUAAAAOAAUAAAAGAAYAAAAOAAYAAAAGAAcAAAAOAAcAAAAGAAgAAAAOAAgAAAAGAAkAAAAMAAkAAAAFAAoAAAANAAkAAAAGAAoAAAAJAAQAAAAGABoAAAAJAAUAAAADAAsAAAAJAAYAAAADAAwAAAAJAAcAAAADAA0AAAAKAAQAAAAHABoAAAAKAAUAAAAEAAsAAAAKAAYAAAAEAAwAAAAKAAcAAAAEAA0AAAAIAAQAAAAFABoAAAAIAAUAAAAEAAQAAAAHAAQAAAAHAAcAAAAHAAUAAAAHAAgAAAAHAAYAAAAHAAkAAAAOAAoAAAAFACYAAAAKAAkAAAAFACYAAAAOAAsAAAAHAAsAAAAOAAwAAAAHAAsAAAAKAAoAAAAHAAsAAAAKAAsAAAAHAAsAAAAKAAwAAAAHAAsAAAAJAA0AAAAHAAMAAAAIAAwAAAAHAAMAAAAHAAsAAAAHAAMAAAAJAA4AAAAHAAUAAAAHAA0AAAAHAAUAAAAIAA4AAAAHAAYAAAAHAA4AAAAHAAYAAAAIAA0AAAAHAAQAAAAHAAwAAAAHAAQAAAAUAAMAAAAHAAMAAAATAAQAAAAHAAMAAAATAAUAAAAHAAQAAAAUAAUAAAAHAAQAAAAUAAQAAAAHAAQAAAAUAAYAAAAHAAYAAAATAAYAAAAHAAUAAAATAAMAAAABAAUAAAASAAMAAAABAAUAAAASAAQAAAABAAUAAAASAAUAAAABAAUAAAASAAYAAAABAAUAAAARAAYAAAABAAUAAAAQAAYAAAABAAUAAAAQAAUAAAABAAUAAAAQAAQAAAABAAUAAAAQAAMAAAABAAUAAAARAAMAAAABAAUAAAARAAQAAAABAAUAAAARAAUAAAABAAUAAAAUAAoAAAAHAAMAAAATAAsAAAAHAAMAAAASAAsAAAAHAAMAAAAUAAsAAAAHAAQAAAAUAAwAAAAHAAQAAAATAAwAAAAHAAQAAAASAAwAAAAHAAQAAAAUAA0AAAAHAAYAAAATAA0AAAAHAAUAAAASAA0AAAAHAAUAAAAUAA4AAAABAAUAAAATAA4AAAABAAUAAAASAA4AAAABAAUAAAARAA4AAAABAAUAAAAQAA4AAAABAAUAAAAPAA4AAAABAAUAAAAOAA4AAAABAAUAAAANAA4AAAABAAUAAAAMAA4AAAABAAUAAAALAA4AAAABAAUAAAAKAA4AAAABAAUAAAAPAA0AAAABAAUAAAAQAA0AAAABAAUAAAARAA0AAAABAAUAAAAPAAwAAAABAAUAAAAPAAsAAAABAAUAAAAPAAoAAAABAAUAAAAPAAkAAAABAAUAAAAOAAkAAAABAAUAAAAPAAgAAAABAAUAAAAPAAcAAAABAAUAAAAQAAcAAAABAAUAAAARAAcAAAABAAUAAAASAAcAAAABAAUAAAATAAcAAAABAAUAAAAUAAcAAAABAAUAAAAUAAgAAAABAAUAAAAUAAkAAAABAAUAAAATAAkAAAABAAUAAAATAAoAAAABAAUAAAASAAoAAAABAAUAAAARAAoAAAABAAUAAAARAAsAAAABAAUAAAARAAwAAAABAAUAAAAQAAwAAAABAAUAAAAQAAsAAAABAAUAAAAQAAoAAAABAAUAAAAQAAkAAAABAAUAAAAQAAgAAAABAAUAAAARAAgAAAABAAUAAAASAAgAAAABAAUAAAATAAgAAAABAAUAAAASAAkAAAABAAUAAAARAAkAAAABAAUAAAALAAkAAAABAAUAAAAKAAgAAAABAAUAAAAJAAgAAAABAAUAAAAIAAgAAAABAAUAAAAHAAgAAAABAAUAAAAHAAkAAAABAAUAAAAIAAkAAAABAAUAAAAJAAkAAAABAAUAAAAJAAoAAAABAAUAAAAIAAoAAAABAAUAAAAHAAoAAAABAAUAAAAJAAsAAAABAAUAAAAIAAsAAAABAAUAAAAJAAwAAAABAAUAAAAIAAYAAAABAAUAAAAIAAcAAAABAAUAAAAHAAcAAAABAAUAAAAMAAoAAAACAAUAAAANAAoAAAACAAUAAAALAAoAAAAAAAUAAAALAAsAAAAAAAUAAAAMAAsAAAAAAAUAAAANAAsAAAAAAAUAAAANAAwAAAAAAAUAAAAMAAwAAAAAAAUAAAALAAwAAAAAAAUAAAAKAA0AAAAAAAUAAAALAA0AAAAAAAUAAAAMAA0AAAAAAAUAAAANAA0AAAAAAAUAAAAOAA0AAAAAAAUAAAAAAPr/AAACAAAAAAABAPr/AAACAAAAAAACAPr/AAACAAAAAAADAPr/AAACAAAAAAAEAPr/AAACAAAAAAAFAPr/AAACAAAAAAAGAPr/AAACAAAAAAAHAPr/AAACAAAAAAAIAPr/AAACAAAAAAAJAPr/AAACAAAAAAAKAPr/AAACAAAAAAALAPr/AAACAAAAAAAMAPr/AAACAAAAAAANAPr/AAACAAAAAAAOAPr/AAACAAAAAAAPAPr/AAACAAAAAAAQAPr/AAACAAAAAAAAAPn/AAACAAAAAAAAAPj/AAACAAAAAAAAAPf/AAABAAkAAAAAAPb/AAABAAgAAAAAAPX/AAAFAAMAAAAAAPT/AAABAAkAAAAAAPP/AAABAAgAAAAAAPL/AAACAAAAAAAAAPH/AAAAAAkAAAAAAPD/AAAAAAgAAAAAAO//AAACAAAAAAABAO//AAACAAAAAAABAPD/AAACAAgAAAABAPH/AAACAAkAAAABAPL/AAAFAAMAAAABAPP/AAACAAgAAAABAPT/AAACAAkAAAABAPX/AAACAAAAAAABAPb/AAACAAgAAAABAPf/AAACAAkAAAABAPj/AAAFAAMAAAABAPn/AAACAAAAAAACAO//AAACAAAAAAACAPD/AAABAAgAAAACAPH/AAABAAkAAAACAPL/AAACAAAAAAACAPP/AAAAAAgAAAACAPT/AAAAAAkAAAACAPX/AAACAAAAAAACAPb/AAAAAAgAAAACAPf/AAAAAAkAAAACAPj/AAACAAAAAAACAPn/AAACAAAAAAADAO//AAACAAAAAAADAPD/AAACAAgAAAADAPH/AAACAAkAAAADAPL/AAAFAAMAAAADAPP/AAACAAgAAAADAPT/AAACAAkAAAADAPX/AAAFAAMAAAADAPb/AAACAAgAAAADAPf/AAACAAkAAAADAPj/AAAFAAMAAAADAPn/AAACAAAAAAAEAO//AAACAAAAAAAEAPD/AAACAAAAAAAEAPH/AAACAAAAAAAEAPL/AAACAAAAAAAEAPP/AAACAAAAAAAEAPT/AAACAAAAAAAEAPX/AAACAAAAAAAEAPb/AAACAAAAAAAEAPf/AAACAAAAAAAEAPj/AAACAAAAAAAEAPn/AAACAAAAAAAFAO//AAACAAAAAAAFAPD/AAACAAAAAAAFAPH/AAACAAAAAAAFAPL/AAACAAAAAAAFAPP/AAACAAAAAAAFAPT/AAACAAAAAAAFAPX/AAACAAAAAAAFAPb/AAACAAAAAAAFAPf/AAACAAAAAAAFAPj/AAACAAAAAAAFAPn/AAACAAAAAAAGAO//AAACAAAAAAAGAPD/AAACAAAAAAAGAPH/AAACAAAAAAAGAPL/AAACAAAAAAAGAPP/AAACAAAAAAAGAPT/AAACAAAAAAAGAPX/AAACAAAAAAAGAPb/AAACAAAAAAAGAPf/AAACAAAAAAAGAPj/AAACAAAAAAAGAPn/AAACAAAAAAAHAO//AAACAAAAAAAHAPD/AAACAAAAAAAHAPH/AAACAAAAAAAHAPL/AAAFAAMAAAAHAPP/AAAFAAMAAAAHAPT/AAACAAAAAAAHAPX/AAAFAAMAAAAHAPb/AAACAAAAAAAHAPf/AAAFAAAAAAAHAPj/AAACAAAAAAAHAPn/AAACAAAAAAAIAO//AAACAAAAAAAIAPD/AAAFAAMAAAAIAPH/AAAAAAoAAAAIAPL/AAAAAAwAAAAIAPP/AAAAAAwAAAAIAPT/AAAAAAwAAAAIAPX/AAAAAAwAAAAIAPb/AAAAAAwAAAAIAPf/AAAAAAwAAAAIAPj/AAAAAA0AAAAIAPn/AAACAAAAAAAJAO//AAAEAAEAAAAJAPD/AAAEAAIAAAAJAPH/AAABAAoAAAAJAPL/AAADAAwAAAAJAPP/AAADAA0AAAAJAPT/AAABAAUAAAAJAPX/AAABAAUAAAAJAPb/AAAAAAUAAAAJAPf/AAAAAAUAAAAJAPj/AAABAA0AAAAJAPn/AAACAAAAAAAKAO//AAAFAAEAAAAKAPD/AAAFAAIAAAAKAPH/AAABAAoAAAAKAPL/AAAEAAwAAAAKAPP/AAAEAA0AAAAKAPT/AAABAAUAAAAKAPX/AAABAAUAAAAKAPb/AAAAAAUAAAAKAPf/AAAAAAUAAAAKAPj/AAABAA0AAAAKAPn/AAACAAAAAAALAO//AAAFAAMAAAALAPD/AAACAAAAAAALAPH/AAABAAoAAAALAPL/AAADAAcAAAALAPP/AAADAAgAAAALAPT/AAADAAkAAAALAPX/AAABAAUAAAALAPb/AAAAAAUAAAALAPf/AAAAAAUAAAALAPj/AAABAA0AAAALAPn/AAAFAAQAAAAMAO//AAACAAAAAAAMAPD/AAAFAAMAAAAMAPH/AAABAAoAAAAMAPL/AAAEAAcAAAAMAPP/AAAEAAgAAAAMAPT/AAAEAAkAAAAMAPX/AAAFAAoAAAAMAPb/AAACAAUAAAAMAPf/AAAAAAUAAAAMAPj/AAABAA0AAAAMAPn/AAAFAAQAAAANAO//AAAEAAEAAAANAPD/AAAEAAIAAAANAPH/AAABAAoAAAANAPL/AAAFAAcAAAANAPP/AAAFAAgAAAANAPT/AAAFAAkAAAANAPX/AAAGAAoAAAANAPb/AAACAAUAAAANAPf/AAAAAAUAAAANAPj/AAABAA0AAAANAPn/AAACAAAAAAAOAO//AAAFAAEAAAAOAPD/AAAFAAIAAAAOAPH/AAABAAoAAAAOAPL/AAAGAAcAAAAOAPP/AAAGAAgAAAAOAPT/AAAGAAkAAAAOAPX/AAABAAUAAAAOAPb/AAABAAUAAAAOAPf/AAABAAUAAAAOAPj/AAABAA0AAAAOAPn/AAACAAAAAAAPAO//AAAFAAMAAAAPAPD/AAACAAAAAAAPAPH/AAACAAoAAAAPAPL/AAAFABEAAAAPAPP/AAAFABEAAAAPAPT/AAAFABEAAAAPAPX/AAAFABEAAAAPAPb/AAAFABEAAAAPAPf/AAAFABEAAAAPAPj/AAACAA0AAAAPAPn/AAACAAAAAAAQAO//AAACAAAAAAAQAPD/AAACAAAAAAAQAPH/AAACAAAAAAAQAPL/AAACAAAAAAAQAPP/AAACAAAAAAAQAPT/AAACAAAAAAAQAPX/AAACAAAAAAAQAPb/AAACAAAAAAAQAPf/AAACAAAAAAAQAPj/AAACAAAAAAAQAPn/AAACAAAAAAAAAO7/AAAEAAAAAAABAO7/AAAEAAAAAAACAO7/AAAGABYAAAADAO7/AAAEAAAAAAAEAO7/AAAHABYAAAAFAO7/AAAEAAAAAAAGAO7/AAAEAAAAAAAHAO7/AAAEAAAAAAAIAO7/AAAEAAAAAAAJAO7/AAACAAIAAAAKAO7/AAAEAAAAAAALAO7/AAAEAAAAAAAMAO7/AAAEAAAAAAANAO7/AAAEAAAAAAAOAO7/AAACAAIAAAAPAO7/AAAEAAAAAAAQAO7/AAAEAAAAAAAAAOz/AAABAAMAAAAAAO3/AAABAAQAAAABAOz/AAABAAMAAAABAO3/AAABAAQAAAACAOz/AAADABgAAAACAO3/AAADABkAAAADAOz/AAAEABgAAAADAO3/AAAEABkAAAAEAOz/AAAFABgAAAAEAO3/AAAFABkAAAAFAOz/AAABAAMAAAAFAO3/AAABAAQAAAAGAOz/AAAEAAMAAAAGAO3/AAAEAAQAAAAHAOz/AAADAAMAAAAHAO3/AAADAAQAAAAIAOz/AAABAAMAAAAIAO3/AAABAAQAAAAJAOz/AAAAAAMAAAAJAO3/AAAAAAQAAAAKAOz/AAABAAMAAAAKAO3/AAABAAQAAAALAOz/AAABAAMAAAALAO3/AAABAAQAAAAMAOz/AAAEAAMAAAAMAO3/AAAEAAQAAAANAOz/AAABAAMAAAANAO3/AAABAAQAAAAOAOz/AAAAAAMAAAAOAO3/AAAAAAQAAAAPAOz/AAABAAMAAAAPAO3/AAABAAQAAAAQAOz/AAABAAMAAAAQAO3/AAABAAQAAAA=")
+tile_set = ExtResource("2_fje2u")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Suelo2" type="TileMapLayer" parent="." unique_id=2057789450]
+tile_map_data = PackedByteArray("AAAGAAoAAAALAAAAAAAPAAMAAAALAAAAAAAOAAMAAAAMAAAAAAANAAMAAAAMAAAAAAAMAAMAAAAMAAAAAAALAAMAAAAMAAAAAAAKAAMAAAAMAAAAAAAJAAMAAAAMAAAAAAAIAAMAAAAMAAAAAAAHAAMAAAAMAAAAAAAAAAoAAAAJAAAAAAABAAoAAAAKAAAAAAAAAAcAAAAJAAAAAAABAAcAAAAKAAAAAAAAAAQAAAAJAAAAAAABAAQAAAAKAAAAAAAOAAoAAAAOAAAAAAAKAAkAAAAOAAAAAAAOAAsAAAAPAAAAAAAKAAsAAAAPAAAAAAAKAAoAAAAPAAAAAAAUAAoAAAANAAAAAAAUAAMAAAANAAAAAAAHAAsAAAANAAAAAAAIAAwAAAANAAAAAAAKAPX/AAAOAAAAAAAOAPb/AAAOAAAAAAAOAPf/AAAPAAAAAAAKAPb/AAAPAAAAAAAKAPf/AAAPAAAAAAACAPD/AAAJAAAAAAAAAPP/AAAJAAAAAAAAAPb/AAAJAAAAAAADAPb/AAAKAAAAAAABAPb/AAAKAAAAAAABAPP/AAAKAAAAAAADAPP/AAAKAAAAAAADAPD/AAAKAAAAAAABAPD/AAAKAAAAAAACAPb/AAAIAAAAAAACAPP/AAAIAAAAAAAAAPD/AAAIAAAAAAA=")
+tile_set = ExtResource("2_fje2u")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=844634725]
+position = Vector2(40, 230)
+script = ExtResource("3_pubxv")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_portual"
+posicion_destino = Vector2(26, 38)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=1019377274]
+position = Vector2(56, 230)
+script = ExtResource("3_pubxv")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_portual"
+posicion_destino = Vector2(26, 38)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1077642025]
+
+[node name="Plano1" type="Sprite2D" parent="Carteles" unique_id=1310001001 groups=["Cartel"]]
+editor_description = "MB_BLUEPRINT 1F (4..5,6..7): EventScript_Blueprint"
+position = Vector2(72, 104)
+script = ExtResource("5_signpost")
+id_texto = "PLANO_RARO"
+coord_tile = Vector2i(4, 6)
+
+[node name="Plano2" type="Sprite2D" parent="Carteles" unique_id=1310001002 groups=["Cartel"]]
+position = Vector2(88, 104)
+script = ExtResource("5_signpost")
+id_texto = "PLANO_RARO"
+coord_tile = Vector2i(5, 6)
+
+[node name="Plano3" type="Sprite2D" parent="Carteles" unique_id=1310001003 groups=["Cartel"]]
+position = Vector2(72, 120)
+script = ExtResource("5_signpost")
+id_texto = "PLANO_RARO"
+coord_tile = Vector2i(4, 7)
+
+[node name="Plano4" type="Sprite2D" parent="Carteles" unique_id=1310001004 groups=["Cartel"]]
+position = Vector2(88, 120)
+script = ExtResource("5_signpost")
+id_texto = "PLANO_RARO"
+coord_tile = Vector2i(5, 7)
+
+[node name="Plano2F1" type="Sprite2D" parent="Carteles" unique_id=1310001005 groups=["Cartel"]]
+editor_description = "MB_BLUEPRINT 2F, primer plano (9..10,3..4) = Godot (9..10,-17..-16)"
+position = Vector2(152, -264)
+script = ExtResource("5_signpost")
+id_texto = "PLANO_RARO"
+coord_tile = Vector2i(9, -17)
+
+[node name="Plano2F2" type="Sprite2D" parent="Carteles" unique_id=1310001006 groups=["Cartel"]]
+position = Vector2(168, -264)
+script = ExtResource("5_signpost")
+id_texto = "PLANO_RARO"
+coord_tile = Vector2i(10, -17)
+
+[node name="Plano2F3" type="Sprite2D" parent="Carteles" unique_id=1310001007 groups=["Cartel"]]
+position = Vector2(152, -248)
+script = ExtResource("5_signpost")
+id_texto = "PLANO_RARO"
+coord_tile = Vector2i(9, -16)
+
+[node name="Plano2F4" type="Sprite2D" parent="Carteles" unique_id=1310001008 groups=["Cartel"]]
+position = Vector2(168, -248)
+script = ExtResource("5_signpost")
+id_texto = "PLANO_RARO"
+coord_tile = Vector2i(10, -16)
+
+[node name="Plano2F5" type="Sprite2D" parent="Carteles" unique_id=1310001009 groups=["Cartel"]]
+editor_description = "MB_BLUEPRINT 2F, segundo plano (13..14,3..4) = Godot (13..14,-17..-16)"
+position = Vector2(216, -264)
+script = ExtResource("5_signpost")
+id_texto = "PLANO_RARO"
+coord_tile = Vector2i(13, -17)
+
+[node name="Plano2F6" type="Sprite2D" parent="Carteles" unique_id=1310001010 groups=["Cartel"]]
+position = Vector2(232, -264)
+script = ExtResource("5_signpost")
+id_texto = "PLANO_RARO"
+coord_tile = Vector2i(14, -17)
+
+[node name="Plano2F7" type="Sprite2D" parent="Carteles" unique_id=1310001011 groups=["Cartel"]]
+position = Vector2(216, -248)
+script = ExtResource("5_signpost")
+id_texto = "PLANO_RARO"
+coord_tile = Vector2i(13, -16)
+
+[node name="Plano2F8" type="Sprite2D" parent="Carteles" unique_id=1310001012 groups=["Cartel"]]
+position = Vector2(232, -248)
+script = ExtResource("5_signpost")
+id_texto = "PLANO_RARO"
+coord_tile = Vector2i(14, -16)
+
+[node name="Papelera" type="Sprite2D" parent="Carteles" unique_id=1310001013 groups=["Cartel"]]
+editor_description = "MB_TRASH_CAN 2F (7,11) = Godot (7,-9): EventScript_EmptyTrashCan"
+position = Vector2(120, -136)
+script = ExtResource("5_signpost")
+id_texto = "PAPELERA_VACIA"
+coord_tile = Vector2i(7, -9)
+
+[node name="NPCs" type="Node2D" parent="." unique_id=491424303]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Dock" parent="NPCs" unique_id=1310002001 instance=ExtResource("6_npc_base")]
+editor_description = "pokeruby SternsShipyard_1F objeto 1 (5,5) MAN_1 FACE_DOWN: DOCK (MUÉLLEZ), lockall"
+position = Vector2(88, 94)
+script = ExtResource("7_dock")
+bandera_rechazada = "astillero_mercancia_rechazada"
+bandera_soldados = "portual_soldados_ocultos"
+textos_condicionales = Dictionary[String, String]({
+"1:SYS_GAME_CLEAR": "PORTUAL_ASTILLEROS_DOCK_FERRY",
+"2:MEDALLA_7": "PORTUAL_ASTILLEROS_DOCK_ARENQUE",
+"3:piezas_devon_entregadas": "PORTUAL_ASTILLEROS_DOCK_VETERANO",
+"4:astillero_mercancia_rechazada": "PORTUAL_ASTILLEROS_DOCK_BUSCAR"
+})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = true
+girar_al_hablar = true
+id_texto = "PORTUAL_ASTILLEROS_DOCK_NOENTIENDO"
+selec_frames = ExtResource("8_npc_048")
+coord = Vector2i(5, 5)
+
+[node name="Cientifico1" parent="NPCs" unique_id=1310002002 instance=ExtResource("6_npc_base")]
+editor_description = "pokeruby SternsShipyard_1F objeto 2 (10,7) SCIENTIST_1 FACE_UP"
+position = Vector2(168, 126)
+id_texto = "PORTUAL_ASTILLEROS_CIENTIFICO1"
+tipo_movimiento = 7
+selec_frames = ExtResource("8_fje2u")
+coord = Vector2i(10, 7)
+
+[node name="Cientifico2" parent="NPCs" unique_id=1310002003 instance=ExtResource("6_npc_base")]
+editor_description = "pokeruby SternsShipyard_1F objeto 3 (18,8) SCIENTIST_1 WANDER_LEFT_AND_RIGHT (1,0)"
+position = Vector2(296, 142)
+id_texto = "PORTUAL_ASTILLEROS_CIENTIFICO2"
+tipo_movimiento = 5
+rango = Vector2i(1, 0)
+selec_frames = ExtResource("8_fje2u")
+coord = Vector2i(18, 8)
+
+[node name="Arenque" parent="NPCs" unique_id=1310002004 instance=ExtResource("6_npc_base")]
+editor_description = "pokeruby SternsShipyard_1F objeto 4 (12,11) OLD_MAN_1 WANDER_AROUND (1,2), FLAG_HIDE_BRINEY_SLATEPORT_SHIPYARD: con la MEDALLA 7 (MossdeepCity_Gym) y hasta SYS_GAME_CLEAR (hall_of_fame.inc)"
+position = Vector2(200, 190)
+script = ExtResource("10_regalo")
+objeto = ""
+cantidad = 1
+bandera = ""
+id_texto_entregado = ""
+texto_tras_entregar = ""
+condicion_regalo = ""
+id_texto_sin_condicion = ""
+pregunta_si_no = false
+id_texto_si = ""
+id_texto_no = ""
+textos_entregado = Dictionary[String, String]({})
+medalla_requerida = 7
+volver_direccion_original = false
+id_texto = "PORTUAL_ASTILLEROS_ARENQUE"
+bandera_ocultar = "SYS_GAME_CLEAR"
+tipo_movimiento = 2
+rango = Vector2i(1, 2)
+selec_frames = ExtResource("11_npc_050")
+coord = Vector2i(12, 11)
+
+[node name="Cientifico2F0" parent="NPCs" unique_id=1310002005 instance=ExtResource("6_npc_base")]
+editor_description = "pokeruby SternsShipyard_2F objeto 1 (10,7) SCIENTIST_1 FACE_UP, sin script (npc_null_script) = Godot (10,-13)"
+position = Vector2(168, -194)
+tipo_movimiento = 7
+selec_frames = ExtResource("8_fje2u")
+coord = Vector2i(10, -13)
+
+[node name="Cientifico2F1" parent="NPCs" unique_id=1310002006 instance=ExtResource("6_npc_base")]
+editor_description = "pokeruby SternsShipyard_2F objeto 2 (8,4) SCIENTIST_1 FACE_RIGHT = Godot (8,-16)"
+position = Vector2(136, -242)
+id_texto = "PORTUAL_ASTILLEROS_2F_CIENTIFICO1"
+tipo_movimiento = 10
+selec_frames = ExtResource("8_fje2u")
+coord = Vector2i(8, -16)
+
+[node name="Cientifico2F2" parent="NPCs" unique_id=1310002007 instance=ExtResource("6_npc_base")]
+editor_description = "pokeruby SternsShipyard_2F objeto 3 (0,9) SCIENTIST_1 FACE_UP = Godot (0,-11)"
+position = Vector2(8, -162)
+id_texto = "PORTUAL_ASTILLEROS_2F_CIENTIFICO2"
+tipo_movimiento = 7
+selec_frames = ExtResource("8_fje2u")
+coord = Vector2i(0, -11)
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1773046390]
+script = ExtResource("11_fvxfv")
+tile_data = {
+"0,-12": {
+"flags": 1
+},
+"0,-15": {
+"flags": 1
+},
+"0,-19": {
+"flags": 1
+},
+"0,-5": {
+"flags": 1
+},
+"0,-9": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"0,11": {
+"flags": 1
+},
+"0,2": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"0,8": {
+"flags": 1
+},
+"1,-12": {
+"flags": 1
+},
+"1,-15": {
+"flags": 1
+},
+"1,-19": {
+"flags": 1
+},
+"1,-5": {
+"flags": 1
+},
+"1,-9": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,11": {
+"flags": 1
+},
+"1,2": {
+"flags": 1
+},
+"1,5": {
+"flags": 1
+},
+"1,8": {
+"flags": 1
+},
+"10,-15": {
+"flags": 1
+},
+"10,-16": {
+"flags": 1
+},
+"10,-17": {
+"flags": 1
+},
+"10,-19": {
+"flags": 1
+},
+"10,-5": {
+"flags": 1
+},
+"10,-8": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,12": {
+"flags": 1
+},
+"10,4": {
+"flags": 1
+},
+"10,5": {
+"flags": 1
+},
+"10,6": {
+"flags": 1
+},
+"11,-15": {
+"flags": 1
+},
+"11,-19": {
+"flags": 1
+},
+"11,-5": {
+"flags": 1
+},
+"11,-8": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,4": {
+"flags": 1
+},
+"11,5": {
+"flags": 1
+},
+"11,6": {
+"flags": 1
+},
+"11,7": {
+"flags": 1
+},
+"12,-15": {
+"flags": 1
+},
+"12,-19": {
+"flags": 1
+},
+"12,-5": {
+"flags": 1
+},
+"12,-8": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,4": {
+"flags": 1
+},
+"12,5": {
+"flags": 1
+},
+"12,6": {
+"flags": 1
+},
+"12,7": {
+"flags": 1
+},
+"12,8": {
+"flags": 1
+},
+"12,9": {
+"flags": 1
+},
+"13,-15": {
+"flags": 1
+},
+"13,-16": {
+"flags": 1
+},
+"13,-17": {
+"flags": 1
+},
+"13,-19": {
+"flags": 1
+},
+"13,-5": {
+"flags": 1
+},
+"13,-8": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,4": {
+"flags": 1
+},
+"13,5": {
+"flags": 1
+},
+"13,6": {
+"flags": 1
+},
+"13,7": {
+"flags": 1
+},
+"13,8": {
+"flags": 1
+},
+"13,9": {
+"flags": 1
+},
+"14,-15": {
+"flags": 1
+},
+"14,-16": {
+"flags": 1
+},
+"14,-17": {
+"flags": 1
+},
+"14,-19": {
+"flags": 1
+},
+"14,-5": {
+"flags": 1
+},
+"14,-8": {
+"flags": 1
+},
+"14,1": {
+"flags": 1
+},
+"14,12": {
+"flags": 1
+},
+"14,4": {
+"flags": 1
+},
+"14,5": {
+"flags": 1
+},
+"14,6": {
+"flags": 1
+},
+"14,7": {
+"flags": 1
+},
+"15,-10": {
+"flags": 1
+},
+"15,-11": {
+"flags": 1
+},
+"15,-12": {
+"flags": 1
+},
+"15,-13": {
+"flags": 1
+},
+"15,-14": {
+"flags": 1
+},
+"15,-15": {
+"flags": 1
+},
+"15,-19": {
+"flags": 1
+},
+"15,-5": {
+"flags": 1
+},
+"15,-8": {
+"flags": 1
+},
+"15,-9": {
+"flags": 1
+},
+"15,1": {
+"flags": 1
+},
+"15,4": {
+"flags": 1
+},
+"15,5": {
+"flags": 1
+},
+"16,-19": {
+"flags": 1
+},
+"16,-5": {
+"flags": 1
+},
+"16,1": {
+"flags": 1
+},
+"17,-10": {
+"flags": 1
+},
+"17,-11": {
+"flags": 1
+},
+"17,-12": {
+"flags": 1
+},
+"17,-13": {
+"flags": 1
+},
+"17,-14": {
+"flags": 1
+},
+"17,-15": {
+"flags": 1
+},
+"17,-16": {
+"flags": 1
+},
+"17,-17": {
+"flags": 1
+},
+"17,-18": {
+"flags": 1
+},
+"17,-19": {
+"flags": 1
+},
+"17,-5": {
+"flags": 1
+},
+"17,-6": {
+"flags": 1
+},
+"17,-7": {
+"flags": 1
+},
+"17,-8": {
+"flags": 1
+},
+"17,-9": {
+"flags": 1
+},
+"17,1": {
+"flags": 1
+},
+"18,1": {
+"flags": 1
+},
+"18,11": {
+"flags": 1
+},
+"18,12": {
+"flags": 1
+},
+"18,13": {
+"flags": 1
+},
+"19,1": {
+"flags": 1
+},
+"19,11": {
+"flags": 1
+},
+"19,12": {
+"flags": 1
+},
+"19,13": {
+"flags": 1
+},
+"19,4": {
+"flags": 1
+},
+"19,5": {
+"flags": 1
+},
+"19,6": {
+"flags": 1
+},
+"2,-12": {
+"flags": 1
+},
+"2,-15": {
+"flags": 1
+},
+"2,-19": {
+"flags": 1
+},
+"2,-20": {
+"flags": 1
+},
+"2,-5": {
+"flags": 1
+},
+"2,-9": {
+"flags": 1
+},
+"2,0": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"20,1": {
+"flags": 1
+},
+"20,11": {
+"flags": 1
+},
+"20,12": {
+"flags": 1
+},
+"20,13": {
+"flags": 1
+},
+"20,4": {
+"flags": 1
+},
+"20,5": {
+"flags": 1
+},
+"20,6": {
+"flags": 1
+},
+"3,-12": {
+"flags": 1
+},
+"3,-15": {
+"flags": 1
+},
+"3,-20": {
+"flags": 1
+},
+"3,-5": {
+"flags": 1
+},
+"3,-9": {
+"flags": 1
+},
+"3,0": {
+"flags": 1
+},
+"4,-19": {
+"flags": 1
+},
+"4,-20": {
+"flags": 1
+},
+"4,-5": {
+"flags": 1
+},
+"4,0": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,6": {
+"flags": 1
+},
+"4,7": {
+"flags": 1
+},
+"5,-19": {
+"flags": 1
+},
+"5,-5": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,6": {
+"flags": 1
+},
+"5,7": {
+"flags": 1
+},
+"6,-19": {
+"flags": 1
+},
+"6,-5": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,11": {
+"flags": 1
+},
+"6,12": {
+"flags": 1
+},
+"6,13": {
+"flags": 1
+},
+"6,14": {
+"flags": 1
+},
+"6,2": {
+"flags": 1
+},
+"6,3": {
+"flags": 1
+},
+"6,4": {
+"flags": 1
+},
+"6,5": {
+"flags": 1
+},
+"6,6": {
+"flags": 1
+},
+"6,7": {
+"flags": 1
+},
+"6,8": {
+"flags": 1
+},
+"7,-19": {
+"flags": 1
+},
+"7,-5": {
+"flags": 1
+},
+"7,-9": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,12": {
+"flags": 1
+},
+"7,13": {
+"flags": 1
+},
+"7,14": {
+"flags": 1
+},
+"7,4": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"7,6": {
+"flags": 1
+},
+"8,-10": {
+"flags": 1
+},
+"8,-11": {
+"flags": 1
+},
+"8,-12": {
+"flags": 1
+},
+"8,-13": {
+"flags": 1
+},
+"8,-14": {
+"flags": 1
+},
+"8,-15": {
+"flags": 1
+},
+"8,-19": {
+"flags": 1
+},
+"8,-5": {
+"flags": 1
+},
+"8,-8": {
+"flags": 1
+},
+"8,-9": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,13": {
+"flags": 1
+},
+"8,14": {
+"flags": 1
+},
+"8,4": {
+"flags": 1
+},
+"8,5": {
+"flags": 1
+},
+"9,-15": {
+"flags": 1
+},
+"9,-16": {
+"flags": 1
+},
+"9,-17": {
+"flags": 1
+},
+"9,-19": {
+"flags": 1
+},
+"9,-5": {
+"flags": 1
+},
+"9,-8": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,13": {
+"flags": 1
+},
+"9,14": {
+"flags": 1
+},
+"9,4": {
+"flags": 1
+},
+"9,5": {
+"flags": 1
+},
+"9,6": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=713266184]
+position = Vector2(56, -298)
+script = ExtResource("3_pubxv")
+ruta_mapa_destino = "ciudad_portual_astilleros"
+posicion_destino = Vector2(3, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=897589849]
+position = Vector2(56, 22)
+script = ExtResource("3_pubxv")
+ruta_mapa_destino = "ciudad_portual_astilleros"
+posicion_destino = Vector2(3, -19)
+direccion = Vector2(0, 1)
+dar_paso = true

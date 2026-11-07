@@ -1,0 +1,1350 @@
+[gd_scene format=4 uid="uid://k4mbooiajnff"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_vq4yt"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_mfqb4"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_lppa6"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="8_uvdn7"]
+[ext_resource type="Script" uid="uid://8uymdhpcd3qe" path="res://scripts/eventos/cartel_evento.gd" id="ct_cartel_evento"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="ct_npc_base"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="ct_npc_evento"]
+[ext_resource type="SpriteFrames" uid="uid://q6liftwxrkde" path="res://escenas/avatares/npc_048.tres" id="ct_npc_048"]
+[ext_resource type="PackedScene" uid="uid://d0782whl40dem" path="res://escenas/ow_item.tscn" id="ct_item"]
+[ext_resource type="PackedScene" path="res://escenas/eventos/disparador_evento_por_tiles.tscn" id="ct_disparador"]
+[ext_resource type="Script" path="res://scripts/eventos/ruta_110/evento_casa_treta.gd" id="ct_evento"]
+
+[node name="CasaTreta" type="Node2D" unique_id=759417394]
+script = ExtResource("1_vq4yt")
+nombre_interno = "ruta_110_casa_treta"
+seccion = "RUTA_110"
+esInterior = true
+mapa_exterior_asociado = "RUTA_110"
+solo_caminar = true
+musica_mapa = "CASA_TRUCO"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=532478234]
+tile_map_data = PackedByteArray("AAAAAAAAAAAFAAIAAAAAAAEAAAAFAAMAAAABAAAAAAAFAAIAAAABAAEAAAAFAAMAAAACAAAAAAAFAAIAAAACAAEAAAAFAAMAAAADAAAAAAAHAAIAAAADAAEAAAAHAAMAAAAEAAAAAAACAAIAAAAEAAEAAAACAAMAAAAFAAAAAAADAAIAAAAFAAEAAAADAAMAAAAGAAAAAAAEAAIAAAAGAAEAAAAEAAMAAAAHAAAAAAAFAAIAAAAHAAEAAAAFAAMAAAAIAAAAAAAHAAIAAAAIAAEAAAAHAAMAAAAJAAAAAAAFAAIAAAAJAAEAAAAAABQAAAAKAAAAAAAGABcAAAAKAAEAAAAGABgAAAALAAAAAAAHABcAAAALAAEAAAAHABgAAAALAAIAAAAHABkAAAAKAAIAAAAGABkAAAAJAAIAAAAAABUAAAAIAAIAAAABAAQAAAAHAAIAAAABAAQAAAAGAAIAAAABAAQAAAAFAAIAAAABAAQAAAAEAAIAAAABAAQAAAADAAIAAAABAAQAAAACAAIAAAABAAQAAAABAAIAAAABAAQAAAAAAAIAAAABAAQAAAAAAAMAAAABAAQAAAAAAAQAAAABAAQAAAAAAAUAAAAHACQAAAAAAAYAAAAAACQAAAABAAYAAAAAACMAAAACAAYAAAAAACMAAAADAAYAAAAAACMAAAAEAAYAAAAAACMAAAAFAAYAAAAAACMAAAAGAAYAAAAAACMAAAAHAAYAAAAAACMAAAAIAAYAAAAAACMAAAAJAAYAAAAAACMAAAAKAAYAAAAAACMAAAALAAYAAAAAACMAAAAAAAcAAAADACQAAAABAAcAAAADACMAAAACAAcAAAADACMAAAADAAcAAAADACMAAAAEAAcAAAADACMAAAAFAAcAAAAAAAIAAAAGAAcAAAABAAIAAAAHAAcAAAADACMAAAAIAAcAAAADACMAAAAJAAcAAAADACMAAAAKAAcAAAADACMAAAALAAcAAAADACMAAAALAAUAAAACACQAAAALAAMAAAABAAUAAAAKAAMAAAABAAUAAAAJAAMAAAABAAUAAAAIAAMAAAABAAUAAAAHAAMAAAAEAAgAAAAGAAMAAAAHAAkAAAAFAAMAAAAGAAkAAAAEAAMAAAAEAAgAAAADAAMAAAABAAUAAAACAAMAAAABAAUAAAABAAMAAAABAAUAAAABAAQAAAABAAUAAAACAAQAAAABAAUAAAADAAQAAAABAAUAAAAEAAQAAAAEAAgAAAAFAAQAAAAGAAoAAAAGAAQAAAAHAAoAAAAHAAQAAAAEAAgAAAAIAAQAAAABAAUAAAAJAAQAAAABAAUAAAAKAAQAAAABAAUAAAALAAQAAAABAAUAAAAKAAUAAAABAAUAAAAJAAUAAAABAAUAAAAIAAUAAAABAAUAAAAHAAUAAAABAAUAAAAGAAUAAAABAAUAAAAFAAUAAAABAAUAAAAEAAUAAAABAAUAAAADAAUAAAABAAUAAAACAAUAAAABAAUAAAABAAUAAAABAAUAAAAUAAAAAAAFAB0AAAAUAAEAAAAFAB4AAAATAAAAAAAFAAIAAAATAAEAAAAFAAMAAAAUAAIAAAAFAB8AAAAVAAAAAAAGAB0AAAAVAAEAAAAGAB4AAAAVAAIAAAAGAB8AAAAWAAAAAAAHAB0AAAAWAAEAAAAHAB4AAAAWAAIAAAAHAB8AAAAXAAAAAAADABwAAAAXAAEAAAADAB0AAAAXAAIAAAADAB4AAAAbAAAAAAAEABwAAAAbAAEAAAAEAB0AAAAbAAIAAAAEAB4AAAAYAAAAAAAHAAIAAAAYAAEAAAAHAAMAAAAaAAAAAAAHAAIAAAAaAAEAAAAHAAMAAAAZAAAAAAAFAAIAAAAZAAEAAAAFAAMAAAAaAAIAAAABAAQAAAAZAAIAAAABAAQAAAAYAAIAAAABAAQAAAAcAAIAAAABAAQAAAAdAAIAAAABAAQAAAAeAAIAAAABAAQAAAAcAAAAAAACAAIAAAAcAAEAAAACAAMAAAAdAAAAAAADAAIAAAAdAAEAAAADAAEAAAAeAAAAAAAEAAIAAAAeAAEAAAAEAAMAAAATAAIAAAABAAQAAAATAAMAAAABAAQAAAATAAQAAAABAAQAAAATAAUAAAABAAQAAAATAAYAAAABAAQAAAATAAcAAAABAAQAAAAUAAMAAAABAAUAAAAUAAQAAAABAAUAAAAUAAUAAAABAAUAAAAUAAYAAAABAAUAAAAUAAcAAAABAAUAAAAVAAMAAAABAAUAAAAVAAQAAAABAAUAAAAVAAUAAAABAAUAAAAVAAYAAAABAAUAAAAVAAcAAAABAAUAAAAWAAMAAAABAAUAAAAWAAQAAAABAAUAAAAWAAUAAAABAAUAAAAWAAYAAAABAAUAAAAWAAcAAAABAAUAAAAXAAMAAAABAAUAAAAXAAQAAAABAAUAAAAXAAUAAAAEAAgAAAAXAAYAAAABAAUAAAAXAAcAAAABAAUAAAAYAAMAAAABAAUAAAAYAAQAAAAGAAkAAAAYAAUAAAAGAAoAAAAYAAYAAAABAAUAAAAYAAcAAAABAAUAAAAZAAMAAAAEAAgAAAAZAAQAAAAHAAkAAAAZAAUAAAAHAAoAAAAZAAYAAAABAAUAAAAZAAcAAAABAAUAAAAaAAMAAAABAAUAAAAaAAQAAAABAAUAAAAaAAUAAAAEAAgAAAAaAAYAAAABAAUAAAAaAAcAAAABAAUAAAAbAAMAAAABAAUAAAAbAAQAAAABAAUAAAAbAAUAAAABAAUAAAAbAAYAAAABAAUAAAAbAAcAAAABAAUAAAAcAAMAAAABAAUAAAAcAAQAAAABAAUAAAAcAAUAAAABAAUAAAAcAAYAAAABAAUAAAAcAAcAAAABAAUAAAAdAAMAAAABAAUAAAAdAAQAAAABAAUAAAAdAAUAAAABAAUAAAAdAAYAAAABAAUAAAAdAAcAAAABAAUAAAAeAAMAAAABAAUAAAAeAAQAAAABAAUAAAAeAAUAAAABAAUAAAAeAAYAAAABAAUAAAAeAAcAAAABAAUAAAApAAAAAAADABwAAAApAAEAAAADAB0AAAAqAAAAAAAFAAIAAAAqAAEAAAAFAAMAAAArAAAAAAAFAAIAAAArAAEAAAAFAAMAAAAsAAAAAAAFAAIAAAAsAAEAAAAFAAMAAAAtAAAAAAAFAAIAAAAtAAEAAAAFAAMAAAAuAAAAAAAFAAIAAAAuAAEAAAAFAAMAAAAvAAAAAAAFAAIAAAAvAAEAAAAFAAMAAAAwAAAAAAAFAAIAAAAwAAEAAAAFAAMAAAAxAAAAAAAFAAIAAAAxAAEAAAAFAAMAAAAyAAAAAAAFAAIAAAAyAAEAAAAFAAMAAAAzAAAAAAAFAAIAAAAzAAEAAAAFAAMAAAAzAAIAAAABAAQAAAAyAAIAAAABAAQAAAAxAAIAAAABAAQAAAAwAAIAAAABAAQAAAAvAAIAAAABAAQAAAAuAAIAAAABAAQAAAAtAAIAAAABAAQAAAAsAAIAAAABAAQAAAArAAIAAAABAAQAAAAqAAIAAAABAAQAAAApAAIAAAADAB4AAAAnAAYAAAAFAAIAAAAnAAcAAAAFAAMAAAAnAAgAAAABAAQAAAAoAAYAAAAEABwAAAAoAAcAAAAEAB0AAAAoAAgAAAAEAB4AAAAmAAYAAAADABwAAAAmAAcAAAADAB0AAAAmAAgAAAADAB4AAAA0AAAAAAAEABwAAAA0AAEAAAAEAB0AAAA0AAIAAAAEAB4AAAApAAMAAAABAAQAAAApAAQAAAABAAQAAAApAAUAAAABAAQAAAApAAYAAAABAAQAAAApAAcAAAABAAQAAAApAAgAAAABAAQAAAA0AAMAAAABAAUAAAAzAAMAAAABAAUAAAAyAAMAAAABAAUAAAAxAAMAAAABAAUAAAAwAAMAAAABAAUAAAAvAAMAAAABAAUAAAAuAAMAAAABAAUAAAAtAAMAAAABAAUAAAAsAAMAAAABAAUAAAArAAMAAAABAAUAAAAqAAMAAAABAAUAAAArAAQAAAABAAUAAAAqAAQAAAABAAUAAAArAAUAAAABAAUAAAAqAAUAAAABAAUAAAAqAAYAAAABAAUAAAArAAYAAAABAAUAAAAqAAcAAAABAAUAAAArAAcAAAABAAUAAAAqAAgAAAABAAUAAAArAAgAAAABAAUAAAArAAkAAAABAAUAAAArAAoAAAABAAUAAAAqAAoAAAABAAUAAAApAAoAAAABAAUAAAAoAAoAAAABAAUAAAAnAAoAAAABAAUAAAAnAAkAAAABAAUAAAAoAAkAAAABAAUAAAApAAkAAAABAAUAAAAqAAkAAAABAAUAAAAmAAkAAAABAAQAAAAmAAoAAAABAAQAAAAmAAsAAAABAAQAAAAmAAwAAAABAAQAAAAmAA0AAAABAAQAAAAmAA4AAAABAAQAAAAmAA8AAAABAAQAAAAmABAAAAABAAQAAAAmABEAAAABAAQAAAAmABIAAAABAAQAAAAmABMAAAABAAQAAAAmABQAAAABAAQAAAAmABUAAAABAAQAAAAmABYAAAABAAQAAAAmABcAAAABAAQAAAAnAAsAAAABAAUAAAAnAAwAAAABAAUAAAAnAA0AAAABAAUAAAAnAA4AAAABAAUAAAAnAA8AAAABAAUAAAAnABAAAAABAAUAAAAnABEAAAABAAUAAAAnABIAAAABAAUAAAAnABMAAAABAAUAAAAnABQAAAABAAUAAAAnABUAAAABAAUAAAAnABYAAAABAAUAAAAnABcAAAABAAUAAAAoAAsAAAABAAUAAAAoAAwAAAABAAUAAAAoAA0AAAABAAUAAAAoAA4AAAABAAUAAAAoAA8AAAABAAUAAAAoABAAAAABAAUAAAAoABEAAAABAAUAAAAoABIAAAABAAUAAAAoABMAAAABAAUAAAAoABQAAAABAAUAAAAoABUAAAABAAUAAAAoABYAAAABAAUAAAAoABcAAAABAAUAAAApABcAAAABAAUAAAAqABcAAAAAAAIAAAArABcAAAABAAIAAAApABQAAAADABwAAAApABUAAAADAB0AAAApABYAAAADAB4AAAAqABQAAAAFAAIAAAAqABUAAAAFAAMAAAAqABYAAAABAAQAAAArABQAAAAEABwAAAArABUAAAAEAB0AAAArABYAAAAEAB4AAAA=")
+tile_set = ExtResource("2_mfqb4")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=334918610]
+tile_map_data = PackedByteArray("AAAAAAQAAAACAAcAAAALAAQAAAACAAcAAAA=")
+tile_set = ExtResource("2_mfqb4")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Salida1" type="Sprite2D" parent="." unique_id=844634725]
+position = Vector2(88, 118)
+script = ExtResource("3_lppa6")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_110"
+posicion_destino = Vector2(11, 66)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Salida2" type="Sprite2D" parent="." unique_id=1019377274]
+position = Vector2(104, 118)
+script = ExtResource("3_lppa6")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_110"
+posicion_destino = Vector2(11, 66)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1077642025]
+
+[node name="Cortina" type="Sprite2D" parent="Carteles" unique_id=1320012001 groups=["Cartel"]]
+editor_description = "pokeruby Route110_TrickHouseEntrance bg_event (5,1) sign BG_EVENT_PLAYER_FACING_NORTH, Route110_TrickHouseEntrance_EventScript_Door: la cortina (solo mirando al norte). La resuelve Eventos/EventoCasaTreta."
+position = Vector2(88, 24)
+script = ExtResource("ct_cartel_evento")
+capa_datos = 0
+id_texto = "CASA_TRETA_ENTRADA_CORTINA"
+coord_tile = Vector2i(5, 1)
+direccion = 1
+
+[node name="NPCs" type="Node2D" parent="." unique_id=491424303]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Maestro" parent="NPCs" unique_id=1320012010 instance=ExtResource("ct_npc_base")]
+editor_description = "pokeruby Route110_TrickHouseEntrance objeto 1 (6,2) MAN_1 FACE_LEFT, FLAG_HIDE_TRICKMASTER_ENTRANCE: el MAESTRO TRETA de la ENTRADA. Su celda y visibilidad las decide Eventos/EventoCasaTreta segun ENTRANCE_STATE_3 (escondido, junto a la cortina o ausente)."
+position = Vector2(104, 46)
+script = ExtResource("ct_npc_evento")
+id_texto = "CASA_TRETA_ENTRADA_CORTINA"
+selec_frames = ExtResource("ct_npc_048")
+coord = Vector2i(6, 2)
+
+[node name="MaestroFinal" parent="NPCs" unique_id=1320012011 instance=ExtResource("ct_npc_base")]
+editor_description = "pokeruby Route110_TrickHouseEnd objeto 1 (4,5)+(19,0) MAN_1 FACE_RIGHT, FLAG_HIDE_TRICK_HOUSE_END_MAN: el MAESTRO TRETA del FINAL. Solo esta al llegar por la puerta de una prueba."
+position = Vector2(376, 94)
+script = ExtResource("ct_npc_evento")
+id_texto = "CASA_TRETA_FIN_LLEGASTE"
+tipo_movimiento = 10
+selec_frames = ExtResource("ct_npc_048")
+coord = Vector2i(23, 5)
+
+[node name="PepitaOculta" parent="NPCs" unique_id=1320012012 instance=ExtResource("ct_item")]
+editor_description = "pokeruby Route110_TrickHouseEnd bg_hidden_item_event (4,5)+(19,0) ITEM_NUGGET, FLAG_HIDDEN_ITEM_1 (0x259): activa = ya recogida; se pone al cargar el FINAL y se borra al terminar el 8.o acertijo. Eventos/EventoCasaTreta la habilita."
+position = Vector2(376, 94)
+id_item = "casa_treta_pepita_01"
+objeto_a_entregar = "PEPITA"
+oculto = true
+coord = Vector2i(23, 5)
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1320006000]
+
+[node name="EventoCasaTreta" type="Node2D" parent="Eventos" unique_id=1320012020]
+editor_description = "pokeruby Route110_TrickHouseEntrance/End/Corridor: OnTransition, OnWarp, OnFrame, MAESTRO, cortina, destello y premios. Las tres salas comparten escena: Entrada (0,0), Final (+19,0), Pasillo (+38,0); la sala se decide por la celda de llegada del warp."
+script = ExtResource("ct_evento")
+maestro = NodePath("../../NPCs/Maestro")
+maestro_final = NodePath("../../NPCs/MaestroFinal")
+cortina = NodePath("../../Carteles/Cortina")
+pepita = NodePath("../../NPCs/PepitaOculta")
+capa_suelo = NodePath("../../Suelo")
+datos_tiles = NodePath("../../TPTileDataMap")
+
+[node name="Observa" parent="Eventos/EventoCasaTreta" unique_id=1320012021 instance=ExtResource("ct_disparador")]
+editor_description = "coord_events trigger (4,7), (5,6), (6,6) y (7,7) de Route110_TrickHouseEntrance con VAR_TRICK_HOUSE_ENTRANCE_STATE == 0 (TrickMasterHiding): Te estoy observando y destello."
+id_evento = &"observa"
+zonas_tiles = Array[Rect2i]([Rect2i(4, 7, 1, 1), Rect2i(5, 6, 2, 1), Rect2i(7, 7, 1, 1)])
+
+[node name="SalidaFinal" parent="Eventos/EventoCasaTreta" unique_id=1320012022 instance=ExtResource("ct_disparador")]
+editor_description = "coord_event trigger (2,2)+(19,0) de Route110_TrickHouseEnd con VAR_TEMP_2 == 0 (TrickMasterExitTrigger): no se sale sin hablar con el MAESTRO."
+id_evento = &"salida_final"
+zonas_tiles = Array[Rect2i]([Rect2i(21, 2, 1, 1)])
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1773046390]
+script = ExtResource("8_uvdn7")
+tile_data = {
+"0,0": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"0,8": {
+"flags": 1
+},
+"1,0": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,8": {
+"flags": 1
+},
+"10,0": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"10,8": {
+"flags": 1
+},
+"11,0": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,5": {
+"flags": 1
+},
+"11,8": {
+"flags": 1
+},
+"12,0": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,2": {
+"flags": 1
+},
+"12,3": {
+"flags": 1
+},
+"12,4": {
+"flags": 1
+},
+"12,5": {
+"flags": 1
+},
+"12,6": {
+"flags": 1
+},
+"12,7": {
+"flags": 1
+},
+"12,8": {
+"flags": 1
+},
+"18,0": {
+"flags": 1
+},
+"18,1": {
+"flags": 1
+},
+"18,2": {
+"flags": 1
+},
+"18,3": {
+"flags": 1
+},
+"18,4": {
+"flags": 1
+},
+"18,5": {
+"flags": 1
+},
+"18,6": {
+"flags": 1
+},
+"18,7": {
+"flags": 1
+},
+"18,8": {
+"flags": 1
+},
+"19,0": {
+"flags": 1
+},
+"19,1": {
+"flags": 1
+},
+"19,8": {
+"flags": 1
+},
+"2,0": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,8": {
+"flags": 1
+},
+"20,0": {
+"flags": 1
+},
+"20,1": {
+"flags": 1
+},
+"20,8": {
+"flags": 1
+},
+"21,0": {
+"flags": 1
+},
+"21,8": {
+"flags": 1
+},
+"22,0": {
+"flags": 1
+},
+"22,1": {
+"flags": 1
+},
+"22,8": {
+"flags": 1
+},
+"23,0": {
+"flags": 1
+},
+"23,1": {
+"flags": 1
+},
+"23,8": {
+"flags": 1
+},
+"24,0": {
+"flags": 1
+},
+"24,1": {
+"flags": 1
+},
+"24,4": {
+"flags": 1
+},
+"24,5": {
+"flags": 1
+},
+"24,8": {
+"flags": 1
+},
+"25,0": {
+"flags": 1
+},
+"25,1": {
+"flags": 1
+},
+"25,4": {
+"flags": 1
+},
+"25,5": {
+"flags": 1
+},
+"25,8": {
+"flags": 1
+},
+"26,0": {
+"flags": 1
+},
+"26,1": {
+"flags": 1
+},
+"26,8": {
+"flags": 1
+},
+"27,0": {
+"flags": 1
+},
+"27,1": {
+"flags": 1
+},
+"27,8": {
+"flags": 1
+},
+"28,0": {
+"flags": 1
+},
+"28,1": {
+"flags": 1
+},
+"28,8": {
+"flags": 1
+},
+"29,0": {
+"flags": 1
+},
+"29,8": {
+"flags": 1
+},
+"3,0": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,8": {
+"flags": 1
+},
+"30,0": {
+"flags": 1
+},
+"30,1": {
+"flags": 1
+},
+"30,8": {
+"flags": 1
+},
+"31,0": {
+"flags": 1
+},
+"31,1": {
+"flags": 1
+},
+"31,2": {
+"flags": 1
+},
+"31,3": {
+"flags": 1
+},
+"31,4": {
+"flags": 1
+},
+"31,5": {
+"flags": 1
+},
+"31,6": {
+"flags": 1
+},
+"31,7": {
+"flags": 1
+},
+"31,8": {
+"flags": 1
+},
+"37,0": {
+"flags": 1
+},
+"37,1": {
+"flags": 1
+},
+"37,10": {
+"flags": 1
+},
+"37,11": {
+"flags": 1
+},
+"37,12": {
+"flags": 1
+},
+"37,13": {
+"flags": 1
+},
+"37,14": {
+"flags": 1
+},
+"37,15": {
+"flags": 1
+},
+"37,16": {
+"flags": 1
+},
+"37,17": {
+"flags": 1
+},
+"37,18": {
+"flags": 1
+},
+"37,19": {
+"flags": 1
+},
+"37,2": {
+"flags": 1
+},
+"37,20": {
+"flags": 1
+},
+"37,21": {
+"flags": 1
+},
+"37,22": {
+"flags": 1
+},
+"37,23": {
+"flags": 1
+},
+"37,3": {
+"flags": 1
+},
+"37,4": {
+"flags": 1
+},
+"37,5": {
+"flags": 1
+},
+"37,6": {
+"flags": 1
+},
+"37,7": {
+"flags": 1
+},
+"37,8": {
+"flags": 1
+},
+"37,9": {
+"flags": 1
+},
+"38,0": {
+"flags": 1
+},
+"38,1": {
+"flags": 1
+},
+"38,2": {
+"flags": 1
+},
+"38,3": {
+"flags": 1
+},
+"38,4": {
+"flags": 1
+},
+"38,5": {
+"flags": 1
+},
+"38,6": {
+"flags": 1
+},
+"38,7": {
+"flags": 1
+},
+"39,0": {
+"flags": 1
+},
+"39,1": {
+"flags": 1
+},
+"39,2": {
+"flags": 1
+},
+"39,3": {
+"flags": 1
+},
+"39,4": {
+"flags": 1
+},
+"39,5": {
+"flags": 1
+},
+"39,6": {
+"flags": 1
+},
+"39,7": {
+"flags": 1
+},
+"4,0": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,8": {
+"flags": 1
+},
+"40,0": {
+"flags": 1
+},
+"40,1": {
+"flags": 1
+},
+"40,2": {
+"flags": 1
+},
+"40,3": {
+"flags": 1
+},
+"40,4": {
+"flags": 1
+},
+"40,5": {
+"flags": 1
+},
+"40,6": {
+"flags": 1
+},
+"40,7": {
+"flags": 1
+},
+"41,0": {
+"flags": 1
+},
+"41,1": {
+"flags": 1
+},
+"41,11": {
+"flags": 1
+},
+"41,12": {
+"flags": 1
+},
+"41,13": {
+"flags": 1
+},
+"41,14": {
+"flags": 1
+},
+"41,15": {
+"flags": 1
+},
+"41,16": {
+"flags": 1
+},
+"41,17": {
+"flags": 1
+},
+"41,18": {
+"flags": 1
+},
+"41,19": {
+"flags": 1
+},
+"41,20": {
+"flags": 1
+},
+"41,21": {
+"flags": 1
+},
+"42,0": {
+"flags": 1
+},
+"42,1": {
+"flags": 1
+},
+"42,11": {
+"flags": 1
+},
+"42,12": {
+"flags": 1
+},
+"42,13": {
+"flags": 1
+},
+"42,14": {
+"flags": 1
+},
+"42,15": {
+"flags": 1
+},
+"42,16": {
+"flags": 1
+},
+"42,17": {
+"flags": 1
+},
+"42,18": {
+"flags": 1
+},
+"42,19": {
+"flags": 1
+},
+"42,20": {
+"flags": 1
+},
+"42,21": {
+"flags": 1
+},
+"43,0": {
+"flags": 1
+},
+"43,1": {
+"flags": 1
+},
+"43,11": {
+"flags": 1
+},
+"43,12": {
+"flags": 1
+},
+"43,13": {
+"flags": 1
+},
+"43,14": {
+"flags": 1
+},
+"43,15": {
+"flags": 1
+},
+"43,16": {
+"flags": 1
+},
+"43,17": {
+"flags": 1
+},
+"43,18": {
+"flags": 1
+},
+"43,19": {
+"flags": 1
+},
+"43,20": {
+"flags": 1
+},
+"43,21": {
+"flags": 1
+},
+"44,0": {
+"flags": 1
+},
+"44,1": {
+"flags": 1
+},
+"44,10": {
+"flags": 1
+},
+"44,11": {
+"flags": 1
+},
+"44,12": {
+"flags": 1
+},
+"44,13": {
+"flags": 1
+},
+"44,14": {
+"flags": 1
+},
+"44,15": {
+"flags": 1
+},
+"44,16": {
+"flags": 1
+},
+"44,17": {
+"flags": 1
+},
+"44,18": {
+"flags": 1
+},
+"44,19": {
+"flags": 1
+},
+"44,20": {
+"flags": 1
+},
+"44,21": {
+"flags": 1
+},
+"44,22": {
+"flags": 1
+},
+"44,23": {
+"flags": 1
+},
+"44,4": {
+"flags": 1
+},
+"44,5": {
+"flags": 1
+},
+"44,6": {
+"flags": 1
+},
+"44,7": {
+"flags": 1
+},
+"44,8": {
+"flags": 1
+},
+"44,9": {
+"flags": 1
+},
+"45,0": {
+"flags": 1
+},
+"45,1": {
+"flags": 1
+},
+"45,10": {
+"flags": 1
+},
+"45,11": {
+"flags": 1
+},
+"45,12": {
+"flags": 1
+},
+"45,13": {
+"flags": 1
+},
+"45,14": {
+"flags": 1
+},
+"45,15": {
+"flags": 1
+},
+"45,16": {
+"flags": 1
+},
+"45,17": {
+"flags": 1
+},
+"45,18": {
+"flags": 1
+},
+"45,19": {
+"flags": 1
+},
+"45,20": {
+"flags": 1
+},
+"45,21": {
+"flags": 1
+},
+"45,22": {
+"flags": 1
+},
+"45,23": {
+"flags": 1
+},
+"45,4": {
+"flags": 1
+},
+"45,5": {
+"flags": 1
+},
+"45,6": {
+"flags": 1
+},
+"45,7": {
+"flags": 1
+},
+"45,8": {
+"flags": 1
+},
+"45,9": {
+"flags": 1
+},
+"46,0": {
+"flags": 1
+},
+"46,1": {
+"flags": 1
+},
+"46,10": {
+"flags": 1
+},
+"46,11": {
+"flags": 1
+},
+"46,12": {
+"flags": 1
+},
+"46,13": {
+"flags": 1
+},
+"46,14": {
+"flags": 1
+},
+"46,15": {
+"flags": 1
+},
+"46,16": {
+"flags": 1
+},
+"46,17": {
+"flags": 1
+},
+"46,18": {
+"flags": 1
+},
+"46,19": {
+"flags": 1
+},
+"46,20": {
+"flags": 1
+},
+"46,21": {
+"flags": 1
+},
+"46,22": {
+"flags": 1
+},
+"46,23": {
+"flags": 1
+},
+"46,4": {
+"flags": 1
+},
+"46,5": {
+"flags": 1
+},
+"46,6": {
+"flags": 1
+},
+"46,7": {
+"flags": 1
+},
+"46,8": {
+"flags": 1
+},
+"46,9": {
+"flags": 1
+},
+"47,0": {
+"flags": 1
+},
+"47,1": {
+"flags": 1
+},
+"47,10": {
+"flags": 1
+},
+"47,11": {
+"flags": 1
+},
+"47,12": {
+"flags": 1
+},
+"47,13": {
+"flags": 1
+},
+"47,14": {
+"flags": 1
+},
+"47,15": {
+"flags": 1
+},
+"47,16": {
+"flags": 1
+},
+"47,17": {
+"flags": 1
+},
+"47,18": {
+"flags": 1
+},
+"47,19": {
+"flags": 1
+},
+"47,20": {
+"flags": 1
+},
+"47,21": {
+"flags": 1
+},
+"47,22": {
+"flags": 1
+},
+"47,23": {
+"flags": 1
+},
+"47,4": {
+"flags": 1
+},
+"47,5": {
+"flags": 1
+},
+"47,6": {
+"flags": 1
+},
+"47,7": {
+"flags": 1
+},
+"47,8": {
+"flags": 1
+},
+"47,9": {
+"flags": 1
+},
+"48,0": {
+"flags": 1
+},
+"48,1": {
+"flags": 1
+},
+"48,10": {
+"flags": 1
+},
+"48,11": {
+"flags": 1
+},
+"48,12": {
+"flags": 1
+},
+"48,13": {
+"flags": 1
+},
+"48,14": {
+"flags": 1
+},
+"48,15": {
+"flags": 1
+},
+"48,16": {
+"flags": 1
+},
+"48,17": {
+"flags": 1
+},
+"48,18": {
+"flags": 1
+},
+"48,19": {
+"flags": 1
+},
+"48,20": {
+"flags": 1
+},
+"48,21": {
+"flags": 1
+},
+"48,22": {
+"flags": 1
+},
+"48,23": {
+"flags": 1
+},
+"48,4": {
+"flags": 1
+},
+"48,5": {
+"flags": 1
+},
+"48,6": {
+"flags": 1
+},
+"48,7": {
+"flags": 1
+},
+"48,8": {
+"flags": 1
+},
+"48,9": {
+"flags": 1
+},
+"49,0": {
+"flags": 1
+},
+"49,1": {
+"flags": 1
+},
+"49,10": {
+"flags": 1
+},
+"49,11": {
+"flags": 1
+},
+"49,12": {
+"flags": 1
+},
+"49,13": {
+"flags": 1
+},
+"49,14": {
+"flags": 1
+},
+"49,15": {
+"flags": 1
+},
+"49,16": {
+"flags": 1
+},
+"49,17": {
+"flags": 1
+},
+"49,18": {
+"flags": 1
+},
+"49,19": {
+"flags": 1
+},
+"49,20": {
+"flags": 1
+},
+"49,21": {
+"flags": 1
+},
+"49,22": {
+"flags": 1
+},
+"49,23": {
+"flags": 1
+},
+"49,4": {
+"flags": 1
+},
+"49,5": {
+"flags": 1
+},
+"49,6": {
+"flags": 1
+},
+"49,7": {
+"flags": 1
+},
+"49,8": {
+"flags": 1
+},
+"49,9": {
+"flags": 1
+},
+"5,0": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,3": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,8": {
+"flags": 1
+},
+"50,0": {
+"flags": 1
+},
+"50,1": {
+"flags": 1
+},
+"50,10": {
+"flags": 1
+},
+"50,11": {
+"flags": 1
+},
+"50,12": {
+"flags": 1
+},
+"50,13": {
+"flags": 1
+},
+"50,14": {
+"flags": 1
+},
+"50,15": {
+"flags": 1
+},
+"50,16": {
+"flags": 1
+},
+"50,17": {
+"flags": 1
+},
+"50,18": {
+"flags": 1
+},
+"50,19": {
+"flags": 1
+},
+"50,20": {
+"flags": 1
+},
+"50,21": {
+"flags": 1
+},
+"50,22": {
+"flags": 1
+},
+"50,23": {
+"flags": 1
+},
+"50,4": {
+"flags": 1
+},
+"50,5": {
+"flags": 1
+},
+"50,6": {
+"flags": 1
+},
+"50,7": {
+"flags": 1
+},
+"50,8": {
+"flags": 1
+},
+"50,9": {
+"flags": 1
+},
+"51,0": {
+"flags": 1
+},
+"51,1": {
+"flags": 1
+},
+"51,10": {
+"flags": 1
+},
+"51,11": {
+"flags": 1
+},
+"51,12": {
+"flags": 1
+},
+"51,13": {
+"flags": 1
+},
+"51,14": {
+"flags": 1
+},
+"51,15": {
+"flags": 1
+},
+"51,16": {
+"flags": 1
+},
+"51,17": {
+"flags": 1
+},
+"51,18": {
+"flags": 1
+},
+"51,19": {
+"flags": 1
+},
+"51,20": {
+"flags": 1
+},
+"51,21": {
+"flags": 1
+},
+"51,22": {
+"flags": 1
+},
+"51,23": {
+"flags": 1
+},
+"51,4": {
+"flags": 1
+},
+"51,5": {
+"flags": 1
+},
+"51,6": {
+"flags": 1
+},
+"51,7": {
+"flags": 1
+},
+"51,8": {
+"flags": 1
+},
+"51,9": {
+"flags": 1
+},
+"52,0": {
+"flags": 1
+},
+"52,1": {
+"flags": 1
+},
+"52,10": {
+"flags": 1
+},
+"52,11": {
+"flags": 1
+},
+"52,12": {
+"flags": 1
+},
+"52,13": {
+"flags": 1
+},
+"52,14": {
+"flags": 1
+},
+"52,15": {
+"flags": 1
+},
+"52,16": {
+"flags": 1
+},
+"52,17": {
+"flags": 1
+},
+"52,18": {
+"flags": 1
+},
+"52,19": {
+"flags": 1
+},
+"52,20": {
+"flags": 1
+},
+"52,21": {
+"flags": 1
+},
+"52,22": {
+"flags": 1
+},
+"52,23": {
+"flags": 1
+},
+"52,4": {
+"flags": 1
+},
+"52,5": {
+"flags": 1
+},
+"52,6": {
+"flags": 1
+},
+"52,7": {
+"flags": 1
+},
+"52,8": {
+"flags": 1
+},
+"52,9": {
+"flags": 1
+},
+"6,0": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"6,3": {
+"flags": 1
+},
+"6,4": {
+"flags": 1
+},
+"6,8": {
+"flags": 1
+},
+"7,0": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,8": {
+"flags": 1
+},
+"8,0": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,8": {
+"flags": 1
+},
+"9,0": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,8": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="WarpAPrueba1" type="Sprite2D" parent="." unique_id=696666211]
+editor_description = "END w0 (10,1) -> PUZZLE1 w2 (13,1). Es la puerta por la que se llega del acertijo: se cierra al cargar el FINAL y nunca se cruza."
+position = Vector2(472, 22)
+script = ExtResource("3_lppa6")
+ruta_mapa_destino = "ruta_110_casa_treta_prueba1"
+posicion_destino = Vector2(13, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="WarpAPasillo" type="Sprite2D" parent="." unique_id=160177348]
+editor_description = "END w1 (2,1) -> CORRIDOR w0 (13,3)."
+position = Vector2(344, 22)
+script = ExtResource("3_lppa6")
+ruta_mapa_destino = "ruta_110_casa_treta"
+posicion_destino = Vector2(51, 3)
+direccion = Vector2(0, -1)
+
+[node name="WarpAEntrada1" type="Sprite2D" parent="." unique_id=632796436]
+editor_description = "CORRIDOR w2 (4,23) -> ENTRANCE w2 (5,2)."
+position = Vector2(680, 374)
+script = ExtResource("3_lppa6")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_110_casa_treta"
+posicion_destino = Vector2(5, 2)
+direccion = Vector2(0, 1)
+
+[node name="WarpAEntrada2" type="Sprite2D" parent="." unique_id=553988721]
+editor_description = "CORRIDOR w3 (5,23) -> ENTRANCE w2 (5,2)."
+position = Vector2(696, 374)
+script = ExtResource("3_lppa6")
+tipo_warp = 1
+ruta_mapa_destino = "ruta_110_casa_treta"
+posicion_destino = Vector2(5, 2)
+direccion = Vector2(0, 1)
+
+[node name="WarpAFinal1" type="Sprite2D" parent="." unique_id=1320012030]
+editor_description = "CORRIDOR w0 (13,3) -> END w1 (2,1). Rubi lo permite; el MAESTRO no reaparece al volver."
+position = Vector2(824, 54)
+script = ExtResource("3_lppa6")
+ruta_mapa_destino = "ruta_110_casa_treta"
+posicion_destino = Vector2(21, 1)
+direccion = Vector2(0, 1)
+
+[node name="WarpAFinal2" type="Sprite2D" parent="." unique_id=1320012031]
+editor_description = "CORRIDOR w1 (14,3) -> END w1 (2,1)."
+position = Vector2(840, 54)
+script = ExtResource("3_lppa6")
+ruta_mapa_destino = "ruta_110_casa_treta"
+posicion_destino = Vector2(21, 1)
+direccion = Vector2(0, 1)

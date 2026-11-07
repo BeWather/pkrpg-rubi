@@ -1,0 +1,353 @@
+[gd_scene format=3 uid="uid://3c39dhj2l4ef"]
+
+[ext_resource type="TileSet" uid="uid://bjn3gshwzuo11" path="res://graficos/tilesets/tileset_ss_marea.tres" id="2_tiles"]
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mapa"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_tp"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_warp"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="5_npc_base"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="7_cartel"]
+[ext_resource type="PackedScene" uid="uid://gbm5pvhiq1ej" path="res://escenas/avatares/npc_entrenador.tscn" id="8_entrenador"]
+[ext_resource type="PackedScene" uid="uid://d0782whl40dem" path="res://escenas/ow_item.tscn" id="9_item"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="10_npc_evento"]
+[ext_resource type="Script" uid="uid://cgpmomq3542yj" path="res://scripts/npc/npc_pokemon.gd" id="11_npc_pokemon"]
+[ext_resource type="Script" path="res://scripts/eventos/cartel_evento.gd" id="12_cartel_evento"]
+[ext_resource type="Script" path="res://scripts/eventos/ss_marea/evento_ss_marea.gd" id="13_evento"]
+[ext_resource type="SpriteFrames" uid="uid://w5fb8o7aplvp" path="res://escenas/avatares/npc_068.tres" id="f_npc_068"]
+
+[node name="SSMareaBodega" type="Node2D"]
+editor_description = "pokeruby SSTidalLowerDeck (LAYOUT_SS_TIDAL_LOWER_DECK, 17x13). Generada por herramientas/importar_ss_marea.py."
+script = ExtResource("1_mapa")
+nombre_interno = "ss_marea_bodega"
+seccion = "SS_MAREA"
+esInterior = true
+musica_mapa = "NAVEGACION"
+
+[node name="Suelo" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAABABUAAAAAAAEAAAABABYAAAAAAAIAAAAHAA8AAAAAAAMAAAAFAAMAAAAAAAQAAAAFAAMAAAAAAAUAAAAFAAMAAAAAAAYAAAAFAAMAAAAAAAcAAAAFAAMAAAAAAAgAAAAFAAMAAAAAAAkAAAAFAAMAAAAAAAoAAAAFAAMAAAAAAAsAAAAFAAMAAAAAAAwAAAAHAA8AAAABAAAAAAABABUAAAABAAEAAAABABYAAAABAAIAAAAFAAMAAAABAAMAAAAFAAEAAAABAAQAAAAFAAEAAAABAAUAAAAAABwAAAABAAYAAAADAB0AAAABAAcAAAADAB4AAAABAAgAAAAHABwAAAABAAkAAAAFAAEAAAABAAoAAAAAABwAAAABAAsAAAAAAB0AAAABAAwAAAAAAB4AAAACAAAAAAAAAAEAAAACAAEAAAAAAB0AAAACAAIAAAAAAB0AAAACAAMAAAAAAB4AAAACAAQAAAAHABwAAAACAAUAAAABABwAAAACAAYAAAAEAB0AAAACAAcAAAAEAB4AAAACAAgAAAAHABwAAAACAAkAAAAFAAEAAAACAAoAAAABABwAAAACAAsAAAABAB0AAAACAAwAAAABAB4AAAADAAAAAAABABUAAAADAAEAAAACAB0AAAADAAIAAAACAB0AAAADAAMAAAACAB4AAAADAAQAAAAHABwAAAADAAUAAAACABwAAAADAAYAAAAFAB0AAAADAAcAAAAFAB4AAAADAAgAAAAHABwAAAADAAkAAAAFAAEAAAADAAoAAAACABwAAAADAAsAAAACAB0AAAADAAwAAAACAB4AAAAEAAAAAAABABUAAAAEAAEAAAABABYAAAAEAAIAAAAFAAMAAAAEAAMAAAAGAB0AAAAEAAQAAAAGAB4AAAAEAAUAAAAAABwAAAAEAAYAAAAAAB0AAAAEAAcAAAAAAB4AAAAEAAgAAAAHABwAAAAEAAkAAAAFAAEAAAAEAAoAAAAAABwAAAAEAAsAAAAAAB0AAAAEAAwAAAAAAB4AAAAFAAAAAAABABUAAAAFAAEAAAABABYAAAAFAAIAAAAFAAMAAAAFAAMAAAAFAAEAAAAFAAQAAAAFAAEAAAAFAAUAAAABABwAAAAFAAYAAAABAB0AAAAFAAcAAAABAB4AAAAFAAgAAAAHABwAAAAFAAkAAAAFAAEAAAAFAAoAAAABABwAAAAFAAsAAAABAB0AAAAFAAwAAAABAB4AAAAGAAAAAAABABUAAAAGAAEAAAAAABwAAAAGAAIAAAAAAB0AAAAGAAMAAAAAAB4AAAAGAAQAAAAHABwAAAAGAAUAAAACABwAAAAGAAYAAAACAB0AAAAGAAcAAAACAB4AAAAGAAgAAAAHABwAAAAGAAkAAAAFAAEAAAAGAAoAAAACABwAAAAGAAsAAAACAB0AAAAGAAwAAAACAB4AAAAHAAAAAAABABUAAAAHAAEAAAACAB0AAAAHAAIAAAACAB0AAAAHAAMAAAACAB4AAAAHAAQAAAAHABwAAAAHAAUAAAAFAAEAAAAHAAYAAAAGAB0AAAAHAAcAAAAGAB0AAAAHAAgAAAAGAB4AAAAHAAkAAAAFAAEAAAAHAAoAAAAFAAEAAAAHAAsAAAAGAB0AAAAHAAwAAAAGAB0AAAAIAAAAAAABABUAAAAIAAEAAAABABYAAAAIAAIAAAAFAAMAAAAIAAMAAAAGAB0AAAAIAAQAAAAGAB4AAAAIAAUAAAADABwAAAAIAAYAAAAAAB0AAAAIAAcAAAAAAB4AAAAIAAgAAAAHABwAAAAIAAkAAAAFAAEAAAAIAAoAAAAAABwAAAAIAAsAAAAAAB4AAAAIAAwAAAAHABwAAAAJAAAAAAABABUAAAAJAAEAAAABABYAAAAJAAIAAAAHAA8AAAAJAAMAAAAFAAEAAAAJAAQAAAAFAAEAAAAJAAUAAAAFABwAAAAJAAYAAAACAB0AAAAJAAcAAAACAB4AAAAJAAgAAAAHABwAAAAJAAkAAAAFAAEAAAAJAAoAAAACABwAAAAJAAsAAAACAB4AAAAJAAwAAAAHABwAAAAKAAAAAAABABUAAAAKAAEAAAADAB0AAAAKAAIAAAADAB0AAAAKAAMAAAADAB4AAAAKAAQAAAAHABwAAAAKAAUAAAAFAAEAAAAKAAYAAAAGAB0AAAAKAAcAAAAGAB0AAAAKAAgAAAAGAB4AAAAKAAkAAAAFAAEAAAAKAAoAAAAFAAEAAAAKAAsAAAAGAB0AAAAKAAwAAAAGAB4AAAALAAAAAAABABUAAAALAAEAAAAEAB0AAAALAAIAAAAEAB0AAAALAAMAAAAEAB4AAAALAAQAAAAHABwAAAALAAUAAAADABwAAAALAAYAAAADAB0AAAALAAcAAAADAB4AAAALAAgAAAAHABwAAAALAAkAAAAFAAEAAAALAAoAAAADABwAAAALAAsAAAADAB4AAAALAAwAAAAHABwAAAAMAAAAAAABABUAAAAMAAEAAAAFAB0AAAAMAAIAAAAFAB0AAAAMAAMAAAAFAB4AAAAMAAQAAAAHABwAAAAMAAUAAAAEABwAAAAMAAYAAAAEAB0AAAAMAAcAAAAEAB4AAAAMAAgAAAAHABwAAAAMAAkAAAAFAAEAAAAMAAoAAAAFABwAAAAMAAsAAAAFAB4AAAAMAAwAAAAHABwAAAANAAAAAAABABUAAAANAAEAAAABABYAAAANAAIAAAAFAAMAAAANAAMAAAAGAB0AAAANAAQAAAAGAB4AAAANAAUAAAAFABwAAAANAAYAAAAFAB0AAAANAAcAAAAFAB4AAAANAAgAAAAHABwAAAANAAkAAAAFAAEAAAANAAoAAAAFAAEAAAANAAsAAAAGAB0AAAANAAwAAAAGAB4AAAAOAAAAAAABABUAAAAOAAEAAAABABYAAAAOAAIAAAAFAAMAAAAOAAMAAAAFAAEAAAAOAAQAAAAFAAEAAAAOAAUAAAAFAAEAAAAOAAYAAAAGAB0AAAAOAAcAAAAGAB0AAAAOAAgAAAAGAB4AAAAOAAkAAAAFAAEAAAAOAAoAAAAFAAEAAAAOAAsAAAAFAAEAAAAOAAwAAAAFAAEAAAAPAAAAAAABABUAAAAPAAEAAAABABYAAAAPAAIAAAAFAAIAAAAPAAMAAAAFAAEAAAAPAAQAAAAFAAEAAAAPAAUAAAAFAAEAAAAPAAYAAAAFAAEAAAAPAAcAAAAFAAEAAAAPAAgAAAAFAAEAAAAPAAkAAAAAABwAAAAPAAoAAAAAAB0AAAAPAAsAAAADABwAAAAPAAwAAAADAB4AAAAQAAAAAAAAAAEAAAAQAAEAAAAGAAEAAAAQAAIAAAAGAAIAAAAQAAMAAAAFAAEAAAAQAAQAAAAFAAEAAAAQAAUAAAAFAAEAAAAQAAYAAAAFAAEAAAAQAAcAAAAFAAEAAAAQAAgAAAAFAAEAAAAQAAkAAAACABwAAAAQAAoAAAACAB0AAAAQAAsAAAAFABwAAAAQAAwAAAAFAB4AAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Superior" type="TileMapLayer" parent="."]
+z_index = 2
+tile_map_data = PackedByteArray("AAABAAUAAAAIABwAAAABAAYAAAALAB0AAAABAAoAAAAIABwAAAABAAsAAAAIAB0AAAACAAEAAAAIAB0AAAACAAIAAAAIAB0AAAACAAUAAAAJABwAAAACAAYAAAAMAB0AAAACAAoAAAAJABwAAAACAAsAAAAJAB0AAAADAAEAAAAKAB0AAAADAAIAAAAKAB0AAAADAAUAAAAKABwAAAADAAYAAAANAB0AAAADAAoAAAAKABwAAAADAAsAAAAKAB0AAAAEAAUAAAAIABwAAAAEAAYAAAAIAB0AAAAEAAoAAAAIABwAAAAEAAsAAAAIAB0AAAAFAAUAAAAJABwAAAAFAAYAAAAJAB0AAAAFAAoAAAAJABwAAAAFAAsAAAAJAB0AAAAGAAEAAAAIABwAAAAGAAIAAAAIAB0AAAAGAAUAAAAKABwAAAAGAAYAAAAKAB0AAAAGAAoAAAAKABwAAAAGAAsAAAAKAB0AAAAHAAEAAAAKAB0AAAAHAAIAAAAKAB0AAAAIAAUAAAALABwAAAAIAAYAAAAIAB0AAAAIAAoAAAAIABwAAAAJAAUAAAANABwAAAAJAAYAAAAKAB0AAAAJAAoAAAAKABwAAAAKAAEAAAALAB0AAAAKAAIAAAALAB0AAAALAAEAAAAMAB0AAAALAAIAAAAMAB0AAAALAAUAAAALABwAAAALAAYAAAALAB0AAAALAAoAAAALABwAAAAMAAEAAAANAB0AAAAMAAIAAAANAB0AAAAMAAUAAAAMABwAAAAMAAYAAAAMAB0AAAAMAAoAAAANABwAAAANAAUAAAANABwAAAANAAYAAAANAB0AAAAPAAkAAAAIABwAAAAPAAoAAAAIAB0AAAAPAAsAAAALABwAAAAQAAkAAAAKABwAAAAQAAoAAAAKAB0AAAAQAAsAAAANABwAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="."]
+script = ExtResource("3_tp")
+tile_data = {
+"-1,10": {
+"flags": 1
+},
+"-1,11": {
+"flags": 1
+},
+"-1,3": {
+"flags": 1
+},
+"-1,4": {
+"flags": 1
+},
+"-1,5": {
+"flags": 1
+},
+"-1,6": {
+"flags": 1
+},
+"-1,7": {
+"flags": 1
+},
+"-1,8": {
+"flags": 1
+},
+"-1,9": {
+"flags": 1
+},
+"0,12": {
+"flags": 1
+},
+"0,2": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"1,11": {
+"flags": 1
+},
+"1,6": {
+"flags": 1
+},
+"1,7": {
+"flags": 1
+},
+"10,13": {
+"flags": 1
+},
+"10,3": {
+"flags": 1
+},
+"11,11": {
+"flags": 1
+},
+"11,13": {
+"flags": 1
+},
+"11,3": {
+"flags": 1
+},
+"11,6": {
+"flags": 1
+},
+"11,7": {
+"flags": 1
+},
+"12,11": {
+"flags": 1
+},
+"12,13": {
+"flags": 1
+},
+"12,2": {
+"flags": 1
+},
+"12,3": {
+"flags": 1
+},
+"12,6": {
+"flags": 1
+},
+"12,7": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,13": {
+"flags": 1
+},
+"13,6": {
+"flags": 1
+},
+"13,7": {
+"flags": 1
+},
+"14,1": {
+"flags": 1
+},
+"14,13": {
+"flags": 1
+},
+"15,1": {
+"flags": 1
+},
+"15,10": {
+"flags": 1
+},
+"15,11": {
+"flags": 1
+},
+"15,12": {
+"flags": 1
+},
+"16,10": {
+"flags": 1
+},
+"16,2": {
+"flags": 1
+},
+"17,3": {
+"flags": 1
+},
+"17,4": {
+"flags": 1
+},
+"17,5": {
+"flags": 1
+},
+"17,6": {
+"flags": 1
+},
+"17,7": {
+"flags": 1
+},
+"17,8": {
+"flags": 1
+},
+"17,9": {
+"flags": 1
+},
+"2,11": {
+"flags": 1
+},
+"2,2": {
+"flags": 1
+},
+"2,3": {
+"flags": 1
+},
+"2,6": {
+"flags": 1
+},
+"2,7": {
+"flags": 1
+},
+"3,11": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"3,3": {
+"flags": 1
+},
+"3,6": {
+"flags": 1
+},
+"3,7": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"4,11": {
+"flags": 1
+},
+"4,6": {
+"flags": 1
+},
+"4,7": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,11": {
+"flags": 1
+},
+"5,6": {
+"flags": 1
+},
+"5,7": {
+"flags": 1
+},
+"6,11": {
+"flags": 1
+},
+"6,12": {
+"flags": 1
+},
+"6,2": {
+"flags": 1
+},
+"6,3": {
+"flags": 1
+},
+"6,6": {
+"flags": 1
+},
+"6,7": {
+"flags": 1
+},
+"7,13": {
+"flags": 1
+},
+"7,2": {
+"flags": 1
+},
+"7,3": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,11": {
+"flags": 1
+},
+"8,13": {
+"flags": 1
+},
+"8,6": {
+"flags": 1
+},
+"8,7": {
+"flags": 1
+},
+"9,11": {
+"flags": 1
+},
+"9,13": {
+"flags": 1
+},
+"9,2": {
+"flags": 1
+},
+"9,6": {
+"flags": 1
+},
+"9,7": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Felipe" parent="NPCs" instance=ExtResource("8_entrenador")]
+editor_description = "pokeruby SSTidalLowerDeck objeto 1 (10,4) SAILOR WALK_SEQUENCE_DOWN_RIGHT_UP_LEFT (4,4), SSTidalLowerDeck_EventScript_15FED7, 0, TRAINER_PHILLIP"
+position = Vector2(168, 78)
+npc_id = "ss_marea_felipe"
+entrenador_id = 494
+rango_vision = 3
+texto_post_combate = "SS_MAREA_FELIPE_POST"
+id_texto = "SS_MAREA_FELIPE_INI"
+tipo_movimiento = 50
+rango = Vector2i(4, 4)
+selec_frames = ExtResource("f_npc_068")
+coord = Vector2i(10, 4)
+
+[node name="Leonardo" parent="NPCs" instance=ExtResource("8_entrenador")]
+editor_description = "pokeruby SSTidalLowerDeck objeto 2 (7,4) SAILOR WALK_SEQUENCE_DOWN_LEFT_UP_RIGHT (7,4), SSTidalLowerDeck_EventScript_15FEEE, 0, TRAINER_LEONARD"
+position = Vector2(120, 78)
+npc_id = "ss_marea_leonardo"
+entrenador_id = 495
+rango_vision = 3
+texto_post_combate = "SS_MAREA_LEONARDO_POST"
+id_texto = "SS_MAREA_LEONARDO_INI"
+tipo_movimiento = 38
+rango = Vector2i(7, 4)
+selec_frames = ExtResource("f_npc_068")
+coord = Vector2i(7, 4)
+
+[node name="RestosOculto" parent="NPCs" instance=ExtResource("9_item")]
+editor_description = "pokeruby SSTidalLowerDeck bg_event hidden_item (0,2), FLAG_HIDDEN_ITEM_23 (ITEM_LEFTOVERS)"
+position = Vector2(8, 46)
+id_item = "ss_marea_bodega_restos_oculto_01"
+objeto_a_entregar = "RESTOS"
+oculto = true
+coord = Vector2i(0, 2)
+
+[node name="Carteles" type="Node2D" parent="."]
+
+[node name="Warp" type="Sprite2D" parent="."]
+editor_description = "pokeruby SSTidalLowerDeck warp 0 (15,2) MB 0x62 -> MAP_SS_TIDAL_CORRIDOR (16,2)"
+position = Vector2(248, 38)
+script = ExtResource("4_warp")
+tipo_warp = 1
+modo_direccion = 2
+ruta_mapa_destino = "ss_marea_pasillo"
+posicion_destino = Vector2(16, 2)
+direccion = Vector2(1, 0)
+
+[node name="Eventos" type="Node2D" parent="."]
+
+[node name="EventoSSMarea" type="Node2D" parent="Eventos"]
+editor_description = "pokeruby SSTidalLowerDeck/scripts.inc"
+script = ExtResource("13_evento")
+carteles = NodePath("../../Carteles")

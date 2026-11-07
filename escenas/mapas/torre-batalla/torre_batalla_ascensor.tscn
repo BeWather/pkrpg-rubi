@@ -1,0 +1,108 @@
+[gd_scene format=3 uid="uid://bpyeq93roozm7"]
+
+[ext_resource type="TileSet" uid="uid://b516zq9ttgye8" path="res://graficos/tilesets/tileset_torre_batalla_interior.tres" id="2_tiles"]
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mapa"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_tp"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_warp"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="5_npc_base"]
+[ext_resource type="Script" path="res://scripts/npc/npc_evento.gd" id="6_npc_evento"]
+[ext_resource type="Script" path="res://scripts/eventos/torre_batalla/evento_ascensor_torre.gd" id="7_evento"]
+[ext_resource type="SpriteFrames" path="res://graficos/transiciones_centro/teala.tres" id="f_teala"]
+
+[node name="TorreBatallaAscensor" type="Node2D"]
+editor_description = "pokeruby BattleTower_Elevator (LAYOUT_BATTLE_TOWER_ELEVATOR, 4x7). Generada por herramientas/importar_interiores_torre_batalla.py."
+script = ExtResource("1_mapa")
+nombre_interno = "torre_batalla_ascensor"
+seccion = "TORRE_BATALLA"
+poi_mapa_region = "frente_batalla"
+esInterior = true
+mapa_exterior_asociado = "torre_batalla_exterior"
+musica_mapa = "TORRE_BATALLA"
+
+[node name="Suelo" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAAA0AAAAAAAEAAAAAAA4AAAAAAAIAAAAAAA8AAAAAAAMAAAAEAAsAAAAAAAQAAAAEAAwAAAAAAAUAAAAEAAwAAAAAAAYAAAAEAAwAAAABAAAAAAABAA0AAAABAAEAAAABAA4AAAABAAIAAAABAA8AAAABAAMAAAAFAAsAAAABAAQAAAAFAAwAAAABAAUAAAAFAAwAAAABAAYAAAAHAAkAAAACAAAAAAABAA0AAAACAAEAAAABAA4AAAACAAIAAAABAA8AAAACAAMAAAAFAAsAAAACAAQAAAAFAAwAAAACAAUAAAAFAAwAAAACAAYAAAAHAAoAAAADAAAAAAACAA0AAAADAAEAAAACAA4AAAADAAIAAAACAA8AAAADAAMAAAAFAAsAAAADAAQAAAAGAAwAAAADAAUAAAAGAAwAAAADAAYAAAAGAAwAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Superior" type="TileMapLayer" parent="."]
+z_index = 2
+tile_map_data = PackedByteArray("AAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="."]
+script = ExtResource("3_tp")
+tile_data = {
+"-1,3": {
+"flags": 1
+},
+"-1,4": {
+"flags": 1
+},
+"-1,5": {
+"flags": 1
+},
+"-1,6": {
+"flags": 1
+},
+"0,2": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"1,2": {
+"flags": 1
+},
+"1,7": {
+"flags": 1
+},
+"2,2": {
+"flags": 1
+},
+"2,7": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"3,7": {
+"flags": 1
+},
+"4,3": {
+"flags": 1
+},
+"4,4": {
+"flags": 1
+},
+"4,5": {
+"flags": 1
+},
+"4,6": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="."]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Recepcionista" parent="NPCs" instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby BattleTower_Elevator objeto 1 (1,5) TEALA FACE_UP, 0x0"
+position = Vector2(24, 94)
+script = ExtResource("6_npc_evento")
+tipo_movimiento = 7
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("f_teala")
+coord = Vector2i(1, 5)
+
+[node name="Eventos" type="Node2D" parent="."]
+
+[node name="Evento" type="Node2D" parent="Eventos"]
+script = ExtResource("7_evento")
+azafata = NodePath("../../NPCs/Recepcionista")

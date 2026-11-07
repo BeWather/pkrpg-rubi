@@ -1,0 +1,3954 @@
+{
+	"ABRA": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"ABSOL": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"AERODACTYL": {
+		"enemy_offset": {
+			"y": -20,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"AGGRON": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"AIPOM": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"ALAKAZAM": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"ALTARIA": {
+		"enemy_offset": {
+			"y": -20,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"AMPHAROS": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"ANORITH": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"ARBOK": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"ARCANINE": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"ARIADOS": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"ARMALDO": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"ARON": {
+		"enemy_offset": {
+			"y": 6,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"ARTICUNO": {
+		"enemy_offset": {
+			"y": -18,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		},
+		"sombra": true
+	},
+	"AZUMARILL": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"AZURILL": {
+		"enemy_offset": {
+			"y": -1,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"BAGON": {
+		"enemy_offset": {
+			"y": -2,
+			"x": -1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"BALTOY": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"BANETTE": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 3
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		},
+		"sombra": true
+	},
+	"BARBOACH": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"BAYLEEF": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"BEAUTIFLY": {
+		"enemy_offset": {
+			"y": -14,
+			"x": -1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"BEEDRILL": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"BELDUM": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		},
+		"sombra": true
+	},
+	"BELLOSSOM": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"BELLSPROUT": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"BLASTOISE": {
+		"enemy_offset": {
+			"y": -10,
+			"x": -1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"BLAZIKEN": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"BLISSEY": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"BRELOOM": {
+		"enemy_offset": {
+			"y": -9,
+			"x": -1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"BULBASAUR": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"BUTTERFREE": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"CACNEA": {
+		"enemy_offset": {
+			"y": 2,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"CACTURNE": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"CAMERUPT": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"CARVANHA": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"CASCOON": {
+		"enemy_offset": {
+			"y": 2,
+			"x": -2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"CASTFORM": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -16
+		},
+		"sombra": true
+	},
+	"CATERPIE": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"CELEBI": {
+		"enemy_offset": {
+			"y": -15,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		},
+		"sombra": true
+	},
+	"CHANSEY": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"CHARIZARD": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"CHARMANDER": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"CHARMELEON": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"CHIKORITA": {
+		"enemy_offset": {
+			"y": -1,
+			"x": 5
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"CHIMECHO": {
+		"enemy_offset": {
+			"y": -20,
+			"x": -4
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -16
+		}
+	},
+	"CHINCHOU": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"CLAMPERL": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"CLAYDOL": {
+		"enemy_offset": {
+			"y": -14,
+			"x": -2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"CLEFABLE": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"CLEFAIRY": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"CLEFFA": {
+		"enemy_offset": {
+			"y": 5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"CLOYSTER": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"COMBUSKEN": {
+		"enemy_offset": {
+			"y": -11,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"CORPHISH": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"CORSOLA": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"CRADILY": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"CRAWDAUNT": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"CROBAT": {
+		"enemy_offset": {
+			"y": -20,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"CROCONAW": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"CUBONE": {
+		"enemy_offset": {
+			"y": -1,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"CYNDAQUIL": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"DELCATTY": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"DELIBIRD": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"DEOXYS": {
+		"enemy_offset": {
+			"y": -17,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"DEWGONG": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"DIGLETT": {
+		"enemy_offset": {
+			"y": 4,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"DITTO": {
+		"enemy_offset": {
+			"y": 3,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"DODRIO": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"DODUO": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"DONPHAN": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"DRAGONAIR": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"DRAGONITE": {
+		"enemy_offset": {
+			"y": -17,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"DRATINI": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"DROWZEE": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"DUGTRIO": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"DUNSPARCE": {
+		"enemy_offset": {
+			"y": 3,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"DUSCLOPS": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"DUSKULL": {
+		"enemy_offset": {
+			"y": -9,
+			"x": -2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		},
+		"sombra": true
+	},
+	"DUSTOX": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"EEVEE": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"EKANS": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"ELECTABUZZ": {
+		"enemy_offset": {
+			"y": -11,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"ELECTRIKE": {
+		"enemy_offset": {
+			"y": 4,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"ELECTRODE": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		},
+		"sombra": true
+	},
+	"ELEKID": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"ENTEI": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"ESPEON": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"EXEGGCUTE": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"EXEGGUTOR": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"EXPLOUD": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"FARFETCHD": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"FEAROW": {
+		"enemy_offset": {
+			"y": -18,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"FEEBAS": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"FERALIGATR": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"FLAAFFY": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"FLAREON": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"FLYGON": {
+		"enemy_offset": {
+			"y": -16,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"FORRETRESS": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"FURRET": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"GARDEVOIR": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"GASTLY": {
+		"enemy_offset": {
+			"y": -12,
+			"x": -1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"GENGAR": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"GEODUDE": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		},
+		"sombra": true
+	},
+	"GIRAFARIG": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"GLALIE": {
+		"enemy_offset": {
+			"y": -17,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"GLIGAR": {
+		"enemy_offset": {
+			"y": -16,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"GLOOM": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"GOLBAT": {
+		"enemy_offset": {
+			"y": -19,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"GOLDEEN": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"GOLDUCK": {
+		"enemy_offset": {
+			"y": -11,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"GOLEM": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"GOREBYSS": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"GRANBULL": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"GRAVELER": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"GRIMER": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"GROUDON": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"GROVYLE": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"GROWLITHE": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"GRUMPIG": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"GULPIN": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"GYARADOS": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"HARIYAMA": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"HAUNTER": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		},
+		"sombra": true
+	},
+	"HERACROSS": {
+		"enemy_offset": {
+			"y": -11,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"HITMONCHAN": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"HITMONLEE": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"HITMONTOP": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"HOOTHOOT": {
+		"enemy_offset": {
+			"y": -1,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"HOPPIP": {
+		"enemy_offset": {
+			"y": -15,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		},
+		"sombra": true
+	},
+	"HORSEA": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"HOUNDOOM": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"HOUNDOUR": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"HO_OH": {
+		"enemy_offset": {
+			"y": -20,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"HUNTAIL": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"HYPNO": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"IGGLYBUFF": {
+		"enemy_offset": {
+			"y": 3,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"ILLUMISE": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"IVYSAUR": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"JIGGLYPUFF": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"JIRACHI": {
+		"enemy_offset": {
+			"y": -15,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"JOLTEON": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"JUMPLUFF": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"JYNX": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"KABUTO": {
+		"enemy_offset": {
+			"y": 3,
+			"x": -1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"KABUTOPS": {
+		"enemy_offset": {
+			"y": -11,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"KADABRA": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"KAKUNA": {
+		"enemy_offset": {
+			"y": -1,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -16
+		}
+	},
+	"KANGASKHAN": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"KECLEON": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"KINGDRA": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"KINGLER": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"KIRLIA": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"KOFFING": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		},
+		"sombra": true
+	},
+	"KRABBY": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"KYOGRE": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"LAIRON": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"LANTURN": {
+		"enemy_offset": {
+			"y": -6,
+			"x": -3
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"LAPRAS": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"LARVITAR": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"LATIAS": {
+		"enemy_offset": {
+			"y": -19,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"LATIOS": {
+		"enemy_offset": {
+			"y": -19,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"LEDIAN": {
+		"enemy_offset": {
+			"y": -18,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		},
+		"sombra": true
+	},
+	"LEDYBA": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"LICKITUNG": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"LILEEP": {
+		"enemy_offset": {
+			"y": -7,
+			"x": -1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"LINOONE": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"LOMBRE": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"LOTAD": {
+		"enemy_offset": {
+			"y": 3,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"LOUDRED": {
+		"enemy_offset": {
+			"y": -11,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"LUDICOLO": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"LUGIA": {
+		"enemy_offset": {
+			"y": -17,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"LUNATONE": {
+		"enemy_offset": {
+			"y": -18,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"LUVDISC": {
+		"enemy_offset": {
+			"y": 2,
+			"x": -4
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -16
+		}
+	},
+	"MACHAMP": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"MACHOKE": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"MACHOP": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"MAGBY": {
+		"enemy_offset": {
+			"y": -1,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"MAGCARGO": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"MAGIKARP": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"MAGMAR": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"MAGNEMITE": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -16
+		},
+		"sombra": true
+	},
+	"MAGNETON": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		},
+		"sombra": true
+	},
+	"MAKUHITA": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"MANECTRIC": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"MANKEY": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"MANTINE": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"MAREEP": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"MARILL": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 3
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"MAROWAK": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"MARSHTOMP": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"MASQUERAIN": {
+		"enemy_offset": {
+			"y": -22,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"MAWILE": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"MEDICHAM": {
+		"enemy_offset": {
+			"y": -13,
+			"x": -3
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"MEDITITE": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"MEGANIUM": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"MEOWTH": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"METAGROSS": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"METANG": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"METAPOD": {
+		"enemy_offset": {
+			"y": 5,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"MEW": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		},
+		"sombra": true
+	},
+	"MEWTWO": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"MIGHTYENA": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"MILOTIC": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"MILTANK": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"MINUN": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 5
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"MISDREAVUS": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		},
+		"sombra": true
+	},
+	"MOLTRES": {
+		"enemy_offset": {
+			"y": -19,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"MRMIME": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"MUDKIP": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"MUK": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"MURKROW": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"NATU": {
+		"enemy_offset": {
+			"y": 5,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"NIDOKING": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"NIDOQUEEN": {
+		"enemy_offset": {
+			"y": -11,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"NIDORAN_F": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"NIDORAN_M": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"NIDORINA": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"NIDORINO": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"NINCADA": {
+		"enemy_offset": {
+			"y": 4,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"NINETALES": {
+		"enemy_offset": {
+			"y": -11,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"NINJASK": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"NOCTOWL": {
+		"enemy_offset": {
+			"y": -11,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"NOSEPASS": {
+		"enemy_offset": {
+			"y": -3,
+			"x": -1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"NUMEL": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"NUZLEAF": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"OCTILLERY": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"ODDISH": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"OMANYTE": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"OMASTAR": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"ONIX": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"PARAS": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"PARASECT": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"PELIPPER": {
+		"enemy_offset": {
+			"y": -18,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"PERSIAN": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"PHANPY": {
+		"enemy_offset": {
+			"y": 2,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"PICHU": {
+		"enemy_offset": {
+			"y": -1,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"PIDGEOT": {
+		"enemy_offset": {
+			"y": -17,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		},
+		"sombra": true
+	},
+	"PIDGEOTTO": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"PIDGEY": {
+		"enemy_offset": {
+			"y": -17,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		},
+		"sombra": true
+	},
+	"PIKACHU": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"PILOSWINE": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"PINECO": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"PINSIR": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"PLUSLE": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"POLITOED": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"POLIWAG": {
+		"enemy_offset": {
+			"y": 5,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"POLIWHIRL": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"POLIWRATH": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"PONYTA": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"POOCHYENA": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"PORYGON": {
+		"enemy_offset": {
+			"y": -1,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"PORYGON2": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"PRIMEAPE": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"PSYDUCK": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"PUPITAR": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"QUAGSIRE": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"QUILAVA": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"QWILFISH": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"RAICHU": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"RAIKOU": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"RALTS": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -16
+		}
+	},
+	"RAPIDASH": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"RATICATE": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"RATTATA": {
+		"enemy_offset": {
+			"y": 2,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"RAYQUAZA": {
+		"enemy_offset": {
+			"y": -20,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		},
+		"sombra": true
+	},
+	"REGICE": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"REGIROCK": {
+		"enemy_offset": {
+			"y": -11,
+			"x": -2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"REGISTEEL": {
+		"enemy_offset": {
+			"y": -11,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"RELICANTH": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"REMORAID": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"RHYDON": {
+		"enemy_offset": {
+			"y": -11,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"RHYHORN": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"ROSELIA": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SABLEYE": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"SALAMENCE": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"SANDSHREW": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"SANDSLASH": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SCEPTILE": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SCIZOR": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"SCYTHER": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"SEADRA": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"SEAKING": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"SEALEO": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SEEDOT": {
+		"enemy_offset": {
+			"y": -1,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SEEL": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"SENTRET": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"SEVIPER": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SHARPEDO": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SHEDINJA": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 3
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		},
+		"sombra": true
+	},
+	"SHELGON": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SHELLDER": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"SHIFTRY": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SHROOMISH": {
+		"enemy_offset": {
+			"y": 2,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SHUCKLE": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"SHUPPET": {
+		"enemy_offset": {
+			"y": -14,
+			"x": -1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		},
+		"sombra": true
+	},
+	"SILCOON": {
+		"enemy_offset": {
+			"y": 1,
+			"x": -2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SKARMORY": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SKIPLOOM": {
+		"enemy_offset": {
+			"y": -11,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		},
+		"sombra": true
+	},
+	"SKITTY": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SLAKING": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SLAKOTH": {
+		"enemy_offset": {
+			"y": 3,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SLOWBRO": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SLOWKING": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"SLOWPOKE": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SLUGMA": {
+		"enemy_offset": {
+			"y": -1,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"SMEARGLE": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"SMOOCHUM": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"SNEASEL": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"SNORLAX": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SNORUNT": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"SNUBBULL": {
+		"enemy_offset": {
+			"y": -1,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"SOLROCK": {
+		"enemy_offset": {
+			"y": -17,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"SPEAROW": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"SPHEAL": {
+		"enemy_offset": {
+			"y": 1,
+			"x": 4
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"SPINARAK": {
+		"enemy_offset": {
+			"y": 5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"SPINDA": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 3
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"SPOINK": {
+		"enemy_offset": {
+			"y": -6,
+			"x": -1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"SQUIRTLE": {
+		"enemy_offset": {
+			"y": -1,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"STANTLER": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"STARMIE": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"STARYU": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"STEELIX": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SUDOWOODO": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"SUICUNE": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SUNFLORA": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"SUNKERN": {
+		"enemy_offset": {
+			"y": 2,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"SURSKIT": {
+		"enemy_offset": {
+			"y": -1,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SWABLU": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"SWALOT": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"SWAMPERT": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SWELLOW": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"SWINUB": {
+		"enemy_offset": {
+			"y": 7,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"TAILLOW": {
+		"enemy_offset": {
+			"y": 3,
+			"x": 3
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"TANGELA": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"TAUROS": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"TEDDIURSA": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"TENTACOOL": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"TENTACRUEL": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"TOGEPI": {
+		"enemy_offset": {
+			"y": 5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"TOGETIC": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"TORCHIC": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"TORKOAL": {
+		"enemy_offset": {
+			"y": -11,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"TOTODILE": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"TRAPINCH": {
+		"enemy_offset": {
+			"y": 2,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"TREECKO": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"TROPIUS": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"TYPHLOSION": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"TYRANITAR": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"TYROGUE": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"UMBREON": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"UNOWN": {
+		"enemy_offset": {
+			"y": -4,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -20
+		},
+		"sombra": true
+	},
+	"URSARING": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"VAPOREON": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"VENOMOTH": {
+		"enemy_offset": {
+			"y": -20,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		},
+		"sombra": true
+	},
+	"VENONAT": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"VENUSAUR": {
+		"enemy_offset": {
+			"y": -10,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"VIBRAVA": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"VICTREEBEL": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"VIGOROTH": {
+		"enemy_offset": {
+			"y": -14,
+			"x": 3
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"VILEPLUME": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"VOLBEAT": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"VOLTORB": {
+		"enemy_offset": {
+			"y": -5,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		},
+		"sombra": true
+	},
+	"VULPIX": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"WAILMER": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"WAILORD": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"WALREIN": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"WARTORTLE": {
+		"enemy_offset": {
+			"y": -6,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"WEEDLE": {
+		"enemy_offset": {
+			"y": 4,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -12
+		}
+	},
+	"WEEPINBELL": {
+		"enemy_offset": {
+			"y": -3,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"WEEZING": {
+		"enemy_offset": {
+			"y": -18,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		},
+		"sombra": true
+	},
+	"WHISCASH": {
+		"enemy_offset": {
+			"y": -5,
+			"x": -1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"WHISMUR": {
+		"enemy_offset": {
+			"y": -1,
+			"x": -1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"WIGGLYTUFF": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -8
+		}
+	},
+	"WINGULL": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"WOBBUFFET": {
+		"enemy_offset": {
+			"y": -8,
+			"x": 3
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"WOOPER": {
+		"enemy_offset": {
+			"y": 3,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"WURMPLE": {
+		"enemy_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"WYNAUT": {
+		"enemy_offset": {
+			"y": -2,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"XATU": {
+		"enemy_offset": {
+			"y": -7,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"YANMA": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		},
+		"sombra": true
+	},
+	"ZANGOOSE": {
+		"enemy_offset": {
+			"y": -9,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		}
+	},
+	"ZAPDOS": {
+		"enemy_offset": {
+			"y": -17,
+			"x": 0
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		},
+		"sombra": true
+	},
+	"ZIGZAGOON": {
+		"enemy_offset": {
+			"y": 0,
+			"x": -1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		}
+	},
+	"ZUBAT": {
+		"enemy_offset": {
+			"y": -16,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": -4
+		},
+		"sombra": true
+	},
+	"CASTFORM_1": {
+		"enemy_offset": {
+			"y": -13,
+			"x": 3
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"CASTFORM_2": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 2
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	},
+	"CASTFORM_3": {
+		"enemy_offset": {
+			"y": -12,
+			"x": 1
+		},
+		"player_offset": {
+			"y": 0,
+			"x": 0
+		},
+		"sombra": true
+	}
+}

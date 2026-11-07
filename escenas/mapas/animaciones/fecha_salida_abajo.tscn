@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://clsmdrpnuk6pt"]
+
+[ext_resource type="Texture2D" uid="uid://c05xd6jpqed5g" path="res://graficos/fecha_salida_abajo.png" id="1_r3pvo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4r2o6"]
+atlas = ExtResource("1_r3pvo")
+region = Rect2(0, 0, 14, 14)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a307s"]
+atlas = ExtResource("1_r3pvo")
+region = Rect2(14, 0, 14, 14)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_d6j18"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4r2o6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a307s")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="FechaSalidaAbajo" type="AnimatedSprite2D" unique_id=1664307315]
+sprite_frames = SubResource("SpriteFrames_d6j18")
+autoplay = "default"
+frame_progress = 0.667053

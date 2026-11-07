@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dqhj7rkqtpyxl"
+path="res://.godot/imported/1-01 Departure From the Hoenn Region.mp3-d6eb21304c54b1bed02d82c9b1ede4eb.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-01 Departure From the Hoenn Region.mp3"
+dest_files=["res://.godot/imported/1-01 Departure From the Hoenn Region.mp3-d6eb21304c54b1bed02d82c9b1ede4eb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

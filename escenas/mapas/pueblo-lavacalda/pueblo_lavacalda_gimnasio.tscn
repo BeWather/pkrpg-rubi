@@ -1,0 +1,964 @@
+[gd_scene format=4 uid="uid://3w7kpy8eji5x"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_8sen8"]
+[ext_resource type="TileSet" uid="uid://cihs7q0xi0yev" path="res://escenas/tileset_interior_edificios_2.tres" id="2_ae5cd"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_ledy3"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_730is"]
+[ext_resource type="Resource" path="res://recursos/clima/niebla.tres" id="5_niebla"]
+[ext_resource type="SpriteFrames" uid="uid://dr1hww5bqlubq" path="res://escenas/avatares/npc_012.tres" id="f_npc_012"]
+[ext_resource type="SpriteFrames" uid="uid://ctfpoynxvo8xb" path="res://escenas/avatares/npc_019.tres" id="f_npc_019"]
+[ext_resource type="SpriteFrames" uid="uid://ds1lihygyt1d0" path="res://escenas/avatares/npc_027.tres" id="f_npc_027"]
+[ext_resource type="SpriteFrames" uid="uid://bmiijupbogopu" path="res://escenas/avatares/npc_052.tres" id="f_npc_052"]
+[ext_resource type="SpriteFrames" uid="uid://bbs0o5pm1e5dm" path="res://escenas/avatares/npc_101.tres" id="f_npc_101"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="npc_base"]
+[ext_resource type="PackedScene" uid="uid://gbm5pvhiq1ej" path="res://escenas/avatares/npc_entrenador.tscn" id="npc_entrenador"]
+[ext_resource type="Script" uid="uid://cdyv0uwwmtud2" path="res://escenas/mapas/cartel_condicional.gd" id="s_cartel_cond"]
+[ext_resource type="Script" uid="uid://dmy4ir5m1ul04" path="res://scripts/npc/npc_dialogo_condicional.gd" id="s_cond"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="s_evento"]
+[ext_resource type="Script" uid="uid://cok7vl24o7xhu" path="res://scripts/eventos/pueblo_lavacalda/evento_gimnasio_lavacalda.gd" id="s_evento_gim"]
+[ext_resource type="Script" uid="uid://h5aujcik500x" path="res://scripts/npc/npc_entrenador_gimnasio.gd" id="s_gym"]
+
+[node name="GimnasioLavacalda" type="Node2D" unique_id=1806057967]
+script = ExtResource("1_8sen8")
+nombre_interno = "pueblo_lavacalda_gimnasio"
+seccion = "PUEBLO_LAVACALDA"
+esInterior = true
+mapa_exterior_asociado = "PUEBLO_LAVACALDA"
+solo_caminar = true
+clima_inicial = ExtResource("5_niebla")
+musica_mapa = "GIMNASIO"
+escena_batalla = 1
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=662034546]
+tile_map_data = PackedByteArray("AAAAAAAAAAAIACAAAAAAAAEAAAAIACEAAAABAAAAAAAIACAAAAABAAEAAAAIACEAAAACAAAAAAAIACAAAAACAAEAAAAIACEAAAADAAAAAAAIACAAAAADAAEAAAAIACEAAAAEAAAAAAAIACAAAAAEAAEAAAAIACEAAAAFAAAAAAAJACAAAAAFAAEAAAAJACEAAAAGAAAAAAAIACAAAAAGAAEAAAAIACEAAAAHAAAAAAAIACAAAAAHAAEAAAAIACEAAAAIAAAAAAAIACAAAAAIAAEAAAAIACEAAAAJAAAAAAAIACAAAAAJAAEAAAAIACEAAAAKAAAAAAAIACAAAAAKAAEAAAAIACEAAAAKAAIAAAANACIAAAAJAAIAAAANAB8AAAAIAAIAAAANACIAAAAHAAIAAAANACIAAAAGAAIAAAAOACIAAAAFAAIAAAAJACIAAAAEAAIAAAANAB8AAAADAAIAAAANACIAAAACAAIAAAANACIAAAABAAIAAAANACIAAAAAAAIAAAAOACIAAAAAAAMAAAALAB8AAAAAAAQAAAALAB8AAAAAAAUAAAALAB8AAAAAAAYAAAALAB8AAAABAAMAAAAKAB8AAAABAAQAAAAKAB8AAAABAAUAAAAKAB8AAAABAAYAAAAMAB8AAAACAAMAAAAKAB8AAAACAAQAAAAKAB8AAAACAAUAAAAKAB8AAAACAAYAAAAKAB8AAAADAAMAAAAKAB8AAAADAAQAAAAKAB8AAAADAAUAAAAKAB8AAAADAAYAAAAKAB8AAAAEAAMAAAAKAB8AAAAEAAQAAAAKAB8AAAAEAAUAAAAKAB8AAAAEAAYAAAAMAB8AAAAFAAMAAAAJACIAAAAFAAQAAAAJACIAAAAFAAUAAAAJACIAAAAFAAYAAAAJACIAAAAGAAMAAAALAB8AAAAGAAQAAAALAB8AAAAGAAUAAAALAB8AAAAGAAYAAAAOACIAAAAHAAMAAAAKAB8AAAAHAAQAAAAKAB8AAAAHAAUAAAAKAB8AAAAHAAYAAAAKAB8AAAAIAAMAAAAKAB8AAAAIAAQAAAAKAB8AAAAIAAUAAAAKAB8AAAAIAAYAAAAKAB8AAAAJAAMAAAAKAB8AAAAJAAQAAAAKAB8AAAAJAAUAAAAKAB8AAAAJAAYAAAAKAB8AAAAKAAMAAAAKAB8AAAAKAAQAAAAKAB8AAAAKAAUAAAAKAB8AAAAKAAYAAAAMAB8AAAAAAAcAAAAIACAAAAAAAAgAAAAIACEAAAAAAAkAAAALAB8AAAAAAAoAAAALAB8AAAAAAAsAAAAOACIAAAAAAAwAAAALAB8AAAAAAA0AAAALAB8AAAABAAcAAAAIACAAAAABAAgAAAAIACEAAAABAAkAAAANACIAAAABAAoAAAAKAB8AAAABAAsAAAAKAB8AAAABAAwAAAAKAB8AAAABAA0AAAAKAB8AAAACAAcAAAAIACAAAAACAAgAAAAIACEAAAACAAkAAAANACIAAAACAAoAAAAKAB8AAAACAAsAAAAKAB8AAAACAAwAAAAKAB8AAAACAA0AAAAKAB8AAAADAAcAAAAIACAAAAADAAgAAAAIACEAAAADAAkAAAANACIAAAADAAoAAAAKAB8AAAADAAsAAAAKAB8AAAADAAwAAAAKAB8AAAADAA0AAAAKAB8AAAAEAAcAAAAIACAAAAAEAAgAAAAIACEAAAAEAAkAAAANAB8AAAAEAAoAAAAKAB8AAAAEAAsAAAAKAB8AAAAEAAwAAAAMAB8AAAAEAA0AAAAKAB8AAAAFAAcAAAAJACAAAAAFAAgAAAAJACEAAAAFAAkAAAAJACIAAAAFAAoAAAAJACIAAAAFAAsAAAAJACIAAAAFAAwAAAAJACIAAAAFAA0AAAAJACIAAAAGAAcAAAAIACAAAAAGAAgAAAAIACEAAAAGAAkAAAALAB8AAAAGAAoAAAAKACAAAAAGAAsAAAAKACEAAAAGAAwAAAALAB8AAAAGAA0AAAALAB8AAAAHAAcAAAAIACAAAAAHAAgAAAAIACEAAAAHAAkAAAANACIAAAAHAAoAAAALACAAAAAHAAsAAAALACEAAAAHAAwAAAAKAB8AAAAHAA0AAAAKAB8AAAAIAAcAAAAIACAAAAAIAAgAAAAIACEAAAAIAAkAAAANACIAAAAIAAoAAAALACAAAAAIAAsAAAALACEAAAAIAAwAAAAKAB8AAAAIAA0AAAAKAB8AAAAJAAcAAAAIACAAAAAJAAgAAAAIACEAAAAJAAkAAAANACIAAAAJAAoAAAALACAAAAAJAAsAAAALACEAAAAJAAwAAAAKAB8AAAAJAA0AAAAKAB8AAAAKAAcAAAAIACAAAAAKAAgAAAAIACEAAAAKAAkAAAANACIAAAAKAAoAAAAMACAAAAAKAAsAAAAMACEAAAAKAAwAAAAKAB8AAAAKAA0AAAAKAB8AAAAAAA4AAAALAB8AAAABAA4AAAAMAB8AAAACAA4AAAAKAB8AAAADAA4AAAAKAB8AAAAEAA4AAAAKAB8AAAAFAA4AAAAJACIAAAAGAA4AAAAOACIAAAAHAA4AAAAKAB8AAAAIAA4AAAAKAB8AAAAJAA4AAAAKAB8AAAAKAA4AAAAMAB8AAAAAAA8AAAAIACAAAAAAABAAAAAIACEAAAAAABEAAAAOACIAAAAAABIAAAALAB8AAAAAABMAAAALAB8AAAAAABQAAAALAB8AAAAAABUAAAALAB8AAAAAABYAAAALAB8AAAABAA8AAAAIACAAAAABABAAAAAIACEAAAABABEAAAANACIAAAABABIAAAAKAB8AAAABABMAAAAKAB8AAAABABQAAAAKAB8AAAABABUAAAAKAB8AAAABABYAAAAKAB8AAAACAA8AAAAIACAAAAACABAAAAAIACEAAAACABEAAAANACIAAAACABIAAAAKAB8AAAACABMAAAAKAB8AAAACABQAAAAKAB8AAAACABUAAAAKAB8AAAACABYAAAAKAB8AAAADAA8AAAAIACAAAAADABAAAAAIACEAAAADABEAAAANACIAAAADABIAAAAKAB8AAAADABMAAAAKAB8AAAADABQAAAAKAB8AAAADABUAAAAMAB8AAAADABYAAAAKAB8AAAAEAA8AAAAIACAAAAAEABAAAAAIACEAAAAEABEAAAANAB8AAAAEABIAAAAKAB8AAAAEABMAAAAKAB8AAAAEABQAAAAKAB8AAAAEABUAAAAKAB8AAAAEABYAAAAKAB8AAAAFAA8AAAAJACAAAAAFABAAAAAJACEAAAAFABEAAAAJACIAAAAFABIAAAAJACIAAAAFABMAAAAJACIAAAAFABQAAAAJACIAAAAFABUAAAAJACIAAAAFABYAAAAJACIAAAAGAA8AAAAIACAAAAAGABAAAAANACAAAAAGABEAAAANACEAAAAGABIAAAALAB8AAAAGABMAAAALAB8AAAAGABQAAAAOACIAAAAGABUAAAALAB8AAAAGABYAAAALAB8AAAAHAA8AAAAIACAAAAAHABAAAAAIACEAAAAHABEAAAANACIAAAAHABIAAAAKAB8AAAAHABMAAAAKAB8AAAAHABQAAAAKAB8AAAAHABUAAAAKAB8AAAAHABYAAAAKAB8AAAAIAA8AAAAIACAAAAAIABAAAAAIACEAAAAIABEAAAANACIAAAAIABIAAAAKAB8AAAAIABMAAAAKAB8AAAAIABQAAAAKAB8AAAAIABUAAAAKAB8AAAAIABYAAAAKAB8AAAAJAA8AAAAIACAAAAAJABAAAAAIACEAAAAJABEAAAANACIAAAAJABIAAAAKAB8AAAAJABMAAAAKAB8AAAAJABQAAAAKAB8AAAAJABUAAAAKAB8AAAAJABYAAAAKAB8AAAAKAA8AAAAIACAAAAAKABAAAAANACAAAAAKABEAAAANACEAAAAKABIAAAAKAB8AAAAKABMAAAAMAB8AAAAKABQAAAAKAB8AAAAKABUAAAAKAB8AAAAKABYAAAAKAB8AAAAAABcAAAAOACIAAAABABcAAAAKAB8AAAACABcAAAAKAB8AAAADABcAAAAKAB8AAAAEABcAAAAKAB8AAAAFABcAAAAJACIAAAAGABcAAAALAB8AAAAHABcAAAAKAB8AAAAIABcAAAAOACEAAAAJABcAAAAPACEAAAAKABcAAAAKAB8AAAASAAAAAAAIACAAAAASAAEAAAAIACEAAAATAAAAAAAIACAAAAATAAEAAAAIACEAAAAUAAAAAAAIACAAAAAUAAEAAAAIACEAAAAVAAAAAAAIACAAAAAVAAEAAAAIACEAAAAWAAAAAAAIACAAAAAWAAEAAAAIACEAAAAXAAAAAAAIACAAAAAXAAEAAAAIACEAAAAYAAAAAAAIACAAAAAYAAEAAAAIACEAAAAZAAAAAAAIACAAAAAZAAEAAAAIACEAAAAaAAAAAAAIACAAAAAaAAEAAAAIACEAAAAbAAAAAAAIACAAAAAbAAEAAAAIACEAAAAcAAAAAAAIACAAAAAcAAEAAAAIACEAAAAcAAQAAAAIACAAAAAcAAUAAAAIACEAAAAbAAQAAAAIACAAAAAbAAUAAAAIACEAAAAaAAQAAAAJACAAAAAaAAUAAAAJACEAAAAZAAQAAAAIACAAAAAZAAUAAAAIACEAAAAYAAQAAAAIACAAAAAYAAUAAAAIACEAAAAXAAQAAAAJACAAAAAXAAUAAAAJACEAAAAWAAQAAAAIACAAAAAWAAUAAAAIACEAAAAVAAQAAAAIACAAAAAVAAUAAAAIACEAAAAUAAQAAAAJACAAAAAUAAUAAAAJACEAAAATAAQAAAAIACAAAAATAAUAAAAIACEAAAASAAQAAAAIACAAAAASAAUAAAAIACEAAAATAAMAAAAKAB8AAAAUAAMAAAAKAB8AAAAVAAMAAAAKAB8AAAAWAAMAAAAKAB8AAAAXAAMAAAAKAB8AAAAYAAMAAAAKAB8AAAAZAAMAAAAKAB8AAAAaAAMAAAAKAB8AAAAbAAMAAAAKAB8AAAAcAAMAAAAKAB8AAAASAAMAAAALAB8AAAATAAIAAAANACIAAAAUAAIAAAANACIAAAAVAAIAAAANACIAAAAWAAIAAAANACIAAAAXAAIAAAANACIAAAAYAAIAAAANACIAAAAZAAIAAAANACIAAAAaAAIAAAANACIAAAAbAAIAAAANAB8AAAAcAAIAAAANACIAAAASAAIAAAALAB8AAAATAAYAAAANAB8AAAASAAYAAAALAB8AAAASAAcAAAALAB8AAAASAAgAAAALAB8AAAASAAkAAAALAB8AAAASAAoAAAALAB8AAAASAAsAAAALAB8AAAASAAwAAAAOACAAAAASAA0AAAALAB8AAAASAA4AAAALAB8AAAASAA8AAAALAB8AAAASABAAAAALAB8AAAASABEAAAALAB8AAAASABIAAAALAB8AAAASABMAAAAOACAAAAASABQAAAALAB8AAAASABUAAAALAB8AAAASABYAAAALAB8AAAASABcAAAALAB8AAAATAAcAAAAKAB8AAAATAAgAAAAKAB8AAAATAAkAAAAKAB8AAAATAAoAAAAKAB8AAAATAAsAAAAKAB8AAAATAAwAAAAPACAAAAATAA0AAAAKAB8AAAATAA4AAAAMAB8AAAATAA8AAAAKAB8AAAATABAAAAAKAB8AAAATABEAAAAKAB8AAAATABIAAAAKAB8AAAATABMAAAAPACAAAAATABQAAAAKAB8AAAATABUAAAAKAB8AAAATABYAAAAKAB8AAAATABcAAAAKAB8AAAAUAAYAAAAJACIAAAAUAAcAAAAJACIAAAAUAAgAAAAJACIAAAAUAAkAAAAJACIAAAAUAAoAAAAJACIAAAAUAAsAAAAJACIAAAAUAAwAAAAJACIAAAAUAA0AAAAJACIAAAAUAA4AAAAJACIAAAAUAA8AAAAJACIAAAAUABAAAAAJACIAAAAUABEAAAAJACIAAAAUABIAAAAJACMAAAAUABMAAAAJACQAAAAUABQAAAAKAB8AAAAUABUAAAAKAB8AAAAUABYAAAAKAB8AAAAUABcAAAAKAB8AAAAVAAYAAAALAB8AAAAVAAcAAAALAB8AAAAVAAgAAAALAB8AAAAVAAkAAAALAB8AAAAVAAoAAAALAB8AAAAVAAsAAAALAB8AAAAVAAwAAAALAB8AAAAVAA0AAAALAB8AAAAVAA4AAAALAB8AAAAVAA8AAAALAB8AAAAVABAAAAALAB8AAAAVABEAAAALAB8AAAAVABIAAAALAB8AAAAVABMAAAAOACAAAAAVABQAAAAKAB8AAAAVABUAAAAMAB8AAAAVABYAAAAKAB8AAAAVABcAAAAKAB8AAAAWAAYAAAANACIAAAAWAAcAAAAKAB8AAAAWAAgAAAAKAB8AAAAWAAkAAAAKAB8AAAAWAAoAAAAKAB8AAAAWAAsAAAAKAB8AAAAWAAwAAAAKAB8AAAAWAA0AAAAKAB8AAAAWAA4AAAAKAB8AAAAWAA8AAAAKAB8AAAAWABAAAAAKAB8AAAAWABEAAAAKAB8AAAAWABIAAAAKAB8AAAAWABMAAAAPACAAAAAWABQAAAAKAB8AAAAWABUAAAAKAB8AAAAWABYAAAAKAB8AAAAWABcAAAAKAB8AAAAXAAYAAAAJACIAAAAXAAcAAAAJACIAAAAXAAgAAAAJACIAAAAXAAkAAAAJACIAAAAXAAoAAAAJACIAAAAXAAsAAAAJACIAAAAXAAwAAAAJACIAAAAXAA0AAAAJACIAAAAXAA4AAAAJACIAAAAXAA8AAAAJACIAAAAXABAAAAAJACIAAAAXABEAAAAJACIAAAAXABIAAAAJACMAAAAXABMAAAAJACQAAAAXABQAAAAKAB8AAAAXABUAAAAKAB8AAAAXABYAAAAKAB8AAAAXABcAAAAKAB8AAAAYAAYAAAALAB8AAAAYAAcAAAALAB8AAAAYAAgAAAALAB8AAAAYAAkAAAALAB8AAAAYAAoAAAALAB8AAAAYAAsAAAALAB8AAAAYAAwAAAALAB8AAAAYAA0AAAALAB8AAAAYAA4AAAAOACIAAAAYAA8AAAALAB8AAAAYABAAAAALAB8AAAAYABEAAAALAB8AAAAYABIAAAALAB8AAAAYABMAAAAOACAAAAAYABQAAAAMAB8AAAAYABUAAAAKAB8AAAAYABYAAAAKAB8AAAAYABcAAAAKAB8AAAAZAAYAAAANACIAAAAZAAcAAAAKAB8AAAAZAAgAAAAKAB8AAAAZAAkAAAAKAB8AAAAZAAoAAAAKAB8AAAAZAAsAAAAKAB8AAAAZAAwAAAAKAB8AAAAZAA0AAAAKAB8AAAAZAA4AAAAKAB8AAAAZAA8AAAAKAB8AAAAZABAAAAAKAB8AAAAZABEAAAAKAB8AAAAZABIAAAAKAB8AAAAZABMAAAAPACAAAAAZABQAAAAKAB8AAAAZABUAAAAKAB8AAAAZABYAAAAKAB8AAAAZABcAAAAKAB8AAAAaAAYAAAAJACIAAAAaAAcAAAAJACIAAAAaAAgAAAAJACIAAAAaAAkAAAAJACIAAAAaAAoAAAAJACIAAAAaAAsAAAAJACIAAAAaAAwAAAAJACIAAAAaAA0AAAAJACIAAAAaAA4AAAAJACIAAAAaAA8AAAAJACIAAAAaABAAAAAJACIAAAAaABEAAAAJACIAAAAaABIAAAAJACMAAAAaABMAAAAJACQAAAAaABQAAAAKAB8AAAAaABUAAAAKAB8AAAAaABYAAAAKAB8AAAAaABcAAAAKAB8AAAAbAAYAAAALAB8AAAAbAAcAAAALAB8AAAAbAAgAAAALAB8AAAAbAAkAAAALAB8AAAAbAAoAAAALAB8AAAAbAAsAAAALAB8AAAAbAAwAAAALAB8AAAAbAA0AAAALAB8AAAAbAA4AAAALAB8AAAAbAA8AAAALAB8AAAAbABAAAAALAB8AAAAbABEAAAALAB8AAAAbABIAAAALAB8AAAAbABMAAAAOACAAAAAbABQAAAAKAB8AAAAbABUAAAAKAB8AAAAbABYAAAAKAB8AAAAbABcAAAAKAB8AAAAcAAYAAAANACIAAAAcAAcAAAAKAB8AAAAcAAgAAAAKAB8AAAAcAAkAAAAKAB8AAAAcAAoAAAAKAB8AAAAcAAsAAAAKAB8AAAAcAAwAAAAKAB8AAAAcAA0AAAAKAB8AAAAcAA4AAAAKAB8AAAAcAA8AAAAKAB8AAAAcABAAAAAKAB8AAAAcABEAAAAKAB8AAAAcABIAAAAKAB8AAAAcABMAAAAPACAAAAAcABQAAAAKAB8AAAAcABUAAAAKAB8AAAAcABYAAAAKAB8AAAAcABcAAAAKAB8AAAA=")
+tile_set = ExtResource("2_ae5cd")
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=872955931]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 0 (8,23) -> LavaridgeTown warp 1 (5,15)"
+position = Vector2(136, 374)
+script = ExtResource("4_730is")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_lavacalda"
+posicion_destino = Vector2(5, 15)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=1836330470]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 1 (9,23) -> LavaridgeTown warp 1 (5,15)"
+position = Vector2(152, 374)
+script = ExtResource("4_730is")
+tipo_warp = 1
+ruta_mapa_destino = "pueblo_lavacalda"
+posicion_destino = Vector2(5, 15)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Hueco1" type="Sprite2D" parent="." unique_id=1812400601]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 2 (3,21) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 0 (3,21): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(56, 342)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(21, 21)
+
+[node name="Hueco2" type="Sprite2D" parent="." unique_id=1812400602]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 3 (1,14) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 2 (1,14): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(24, 230)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(19, 14)
+
+[node name="Hueco3" type="Sprite2D" parent="." unique_id=1812400603]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 4 (6,14) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 4 (6,14): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(104, 230)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(24, 14)
+
+[node name="Hueco4" type="Sprite2D" parent="." unique_id=1812400604]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 5 (1,6) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 3 (1,6): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(24, 102)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(19, 6)
+
+[node name="Hueco5" type="Sprite2D" parent="." unique_id=1812400605]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 6 (9,2) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 1 (9,2): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(152, 38)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(27, 2)
+
+[node name="Hueco6" type="Sprite2D" parent="." unique_id=1812400606]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 7 (6,20) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 5 (6,20): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(104, 326)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(24, 20)
+
+[node name="Hueco7" type="Sprite2D" parent="." unique_id=1812400607]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 8 (0,23) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 6 (0,23): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(8, 374)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(18, 23)
+
+[node name="Hueco8" type="Sprite2D" parent="." unique_id=1812400608]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 9 (0,17) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 7 (0,17): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(8, 278)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(18, 17)
+
+[node name="Hueco9" type="Sprite2D" parent="." unique_id=1812400609]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 10 (4,17) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 8 (4,17): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(72, 278)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(22, 17)
+
+[node name="Hueco10" type="Sprite2D" parent="." unique_id=1812400610]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 11 (0,11) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 9 (0,11): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(8, 182)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(18, 11)
+
+[node name="Hueco11" type="Sprite2D" parent="." unique_id=1812400611]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 12 (4,12) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 10 (4,12): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(72, 198)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(22, 12)
+
+[node name="Hueco12" type="Sprite2D" parent="." unique_id=1812400612]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 13 (4,9) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 11 (4,9): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(72, 150)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(22, 9)
+
+[node name="Hueco13" type="Sprite2D" parent="." unique_id=1812400613]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 14 (0,2) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 12 (0,2): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(8, 38)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(18, 2)
+
+[node name="Hueco14" type="Sprite2D" parent="." unique_id=1812400614]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 15 (4,6) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 13 (4,6): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(72, 102)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(22, 6)
+
+[node name="Hueco15" type="Sprite2D" parent="." unique_id=1812400615]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 16 (4,2) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 14 (4,2): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(72, 38)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(22, 2)
+
+[node name="Hueco16" type="Sprite2D" parent="." unique_id=1812400616]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 17 (10,19) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 15 (10,18): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(168, 310)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(28, 18)
+
+[node name="Hueco17" type="Sprite2D" parent="." unique_id=1812400617]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 18 (10,14) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 16 (10,14): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(168, 230)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(28, 14)
+
+[node name="Hueco18" type="Sprite2D" parent="." unique_id=1812400618]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 19 (6,6) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 17 (6,6): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(104, 102)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(24, 6)
+
+[node name="Hueco19" type="Sprite2D" parent="." unique_id=1812400619]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 20 (6,2) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 18 (6,2): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(104, 38)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(24, 2)
+
+[node name="Hueco20" type="Sprite2D" parent="." unique_id=1812400620]
+editor_description = "pokeruby LavaridgeTown_Gym_1F warp 21 (10,6) MB_LAVARIDGE_GYM_1F_WARP -> B1F warp 19 (10,6): cae al sotano (misma escena, +18 columnas)"
+position = Vector2(168, 102)
+script = ExtResource("4_730is")
+tipo_warp = 3
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(28, 6)
+
+[node name="Geiser1" type="Sprite2D" parent="." unique_id=1812400621]
+editor_description = "pokeruby LavaridgeTown_Gym_B1F warp 0 (3,21) MB_LAVARIDGE_GYM_B1F_WARP -> 1F warp 2 (3,21): geiser que lanza al jugador a la planta de arriba"
+position = Vector2(344, 342)
+script = ExtResource("4_730is")
+tipo_warp = 4
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(3, 21)
+direccion = Vector2(1, 0)
+
+[node name="Geiser2" type="Sprite2D" parent="." unique_id=1812400622]
+editor_description = "pokeruby LavaridgeTown_Gym_B1F warp 1 (9,2) MB_LAVARIDGE_GYM_B1F_WARP -> 1F warp 6 (9,2): geiser que lanza al jugador a la planta de arriba"
+position = Vector2(440, 38)
+script = ExtResource("4_730is")
+tipo_warp = 4
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(9, 2)
+direccion = Vector2(1, 0)
+
+[node name="Geiser3" type="Sprite2D" parent="." unique_id=1812400623]
+editor_description = "pokeruby LavaridgeTown_Gym_B1F warp 2 (1,14) MB_LAVARIDGE_GYM_B1F_WARP -> 1F warp 3 (1,14): geiser que lanza al jugador a la planta de arriba"
+position = Vector2(312, 230)
+script = ExtResource("4_730is")
+tipo_warp = 4
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(1, 14)
+direccion = Vector2(1, 0)
+
+[node name="Geiser4" type="Sprite2D" parent="." unique_id=1812400624]
+editor_description = "pokeruby LavaridgeTown_Gym_B1F warp 3 (1,6) MB_LAVARIDGE_GYM_B1F_WARP -> 1F warp 5 (1,6): geiser que lanza al jugador a la planta de arriba"
+position = Vector2(312, 102)
+script = ExtResource("4_730is")
+tipo_warp = 4
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(1, 6)
+direccion = Vector2(1, 0)
+
+[node name="Geiser5" type="Sprite2D" parent="." unique_id=1812400625]
+editor_description = "pokeruby LavaridgeTown_Gym_B1F warp 4 (6,14) MB_LAVARIDGE_GYM_B1F_WARP -> 1F warp 4 (6,14): geiser que lanza al jugador a la planta de arriba"
+position = Vector2(392, 230)
+script = ExtResource("4_730is")
+tipo_warp = 4
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(6, 14)
+direccion = Vector2(1, 0)
+
+[node name="Geiser6" type="Sprite2D" parent="." unique_id=1812400626]
+editor_description = "pokeruby LavaridgeTown_Gym_B1F warp 5 (6,20) MB_LAVARIDGE_GYM_B1F_WARP -> 1F warp 7 (6,20): geiser que lanza al jugador a la planta de arriba"
+position = Vector2(392, 326)
+script = ExtResource("4_730is")
+tipo_warp = 4
+ruta_mapa_destino = "pueblo_lavacalda_gimnasio"
+posicion_destino = Vector2(6, 20)
+direccion = Vector2(1, 0)
+
+[node name="Carteles" type="Node2D" parent="." unique_id=830737046]
+
+[node name="EstatuaIzquierda" type="Sprite2D" parent="Carteles" unique_id=1812400627 groups=["Cartel"]]
+editor_description = "pokeruby LavaridgeTown_Gym_1F bg_event LeftGymStatue (6,17), solo mirando al norte; FLAG_BADGE04_GET -> certificado"
+position = Vector2(104, 280)
+script = ExtResource("s_cartel_cond")
+textos_condicionales = Dictionary[String, String]({
+"MEDALLA_4": "LAVACALDA_GIMNASIO_ESTATUA_CERTIFICADA"
+})
+id_texto = "LAVACALDA_GIMNASIO_ESTATUA"
+coord_tile = Vector2i(6, 17)
+direccion = 1
+
+[node name="EstatuaDerecha" type="Sprite2D" parent="Carteles" unique_id=1812400628 groups=["Cartel"]]
+editor_description = "pokeruby LavaridgeTown_Gym_1F bg_event RightGymStatue (10,17), solo mirando al norte; FLAG_BADGE04_GET -> certificado"
+position = Vector2(168, 280)
+script = ExtResource("s_cartel_cond")
+textos_condicionales = Dictionary[String, String]({
+"MEDALLA_4": "LAVACALDA_GIMNASIO_ESTATUA_CERTIFICADA"
+})
+id_texto = "LAVACALDA_GIMNASIO_ESTATUA"
+coord_tile = Vector2i(10, 17)
+direccion = 1
+
+[node name="NPCs" type="Node2D" parent="." unique_id=952122530]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Candela" parent="NPCs" unique_id=1812400629 instance=ExtResource("npc_base")]
+editor_description = "pokeruby LavaridgeTown_Gym_1F objeto 1 (8,10) FLANNERY FACE_DOWN: combate de LIDER (TRAINER_FLANNERY 268), MEDALLA CALOR y MT50. Lo dirige Eventos/EventoGimnasioLavacalda"
+position = Vector2(136, 174)
+script = ExtResource("s_evento")
+id_texto = "LAVACALDA_GIMNASIO_CANDELA_INI"
+selec_frames = ExtResource("f_npc_101")
+coord = Vector2i(8, 10)
+
+[node name="Camilo" parent="NPCs" unique_id=1812400630 instance=ExtResource("npc_entrenador")]
+editor_description = "pokeruby LavaridgeTown_Gym_1F objeto 2 TRAINER_COLE MAN_6 FACE_DOWN (10,19), TRAINER_TYPE_BURIED (visión 1, ve en las cuatro direcciones): enterrado en la arena (MOVEMENT_TYPE_HIDDEN) salvo vencido. Lo gestiona Eventos/EventoGimnasioLavacalda"
+position = Vector2(168, 318)
+script = ExtResource("s_gym")
+condicion_post_medalla = ""
+texto_post_medalla = ""
+npc_id = "pueblo_lavacalda_gimnasio_camilo"
+entrenador_id = 201
+rango_vision = 1
+ver_en_todas_direcciones = true
+texto_post_combate = "LAVACALDA_GIMNASIO_CAMILO_POST"
+id_texto = "LAVACALDA_GIMNASIO_CAMILO_INI"
+tipo_movimiento = 66
+selec_frames = ExtResource("f_npc_019")
+coord = Vector2i(10, 19)
+
+[node name="Zacarias" parent="NPCs" unique_id=1812400631 instance=ExtResource("npc_entrenador")]
+editor_description = "pokeruby LavaridgeTown_Gym_1F objeto 3 TRAINER_ZANE MAN_4 FACE_DOWN (4,17), TRAINER_TYPE_BURIED (visión 1, ve en las cuatro direcciones): enterrado en la arena (MOVEMENT_TYPE_HIDDEN) salvo vencido. Lo gestiona Eventos/EventoGimnasioLavacalda"
+position = Vector2(72, 286)
+script = ExtResource("s_gym")
+condicion_post_medalla = ""
+texto_post_medalla = ""
+npc_id = "pueblo_lavacalda_gimnasio_zacarias"
+entrenador_id = 648
+rango_vision = 1
+ver_en_todas_direcciones = true
+texto_post_combate = "LAVACALDA_GIMNASIO_ZACARIAS_POST"
+id_texto = "LAVACALDA_GIMNASIO_ZACARIAS_INI"
+tipo_movimiento = 66
+selec_frames = ExtResource("f_npc_027")
+coord = Vector2i(4, 17)
+
+[node name="Alejo" parent="NPCs" unique_id=1812400632 instance=ExtResource("npc_entrenador")]
+editor_description = "pokeruby LavaridgeTown_Gym_1F objeto 4 TRAINER_AXLE MAN_6 FACE_DOWN (4,12), TRAINER_TYPE_BURIED (visión 1, ve en las cuatro direcciones): enterrado en la arena (MOVEMENT_TYPE_HIDDEN) salvo vencido. Lo gestiona Eventos/EventoGimnasioLavacalda"
+position = Vector2(72, 206)
+script = ExtResource("s_gym")
+condicion_post_medalla = ""
+texto_post_medalla = ""
+npc_id = "pueblo_lavacalda_gimnasio_alejo"
+entrenador_id = 203
+rango_vision = 1
+ver_en_todas_direcciones = true
+texto_post_combate = "LAVACALDA_GIMNASIO_ALEJO_POST"
+id_texto = "LAVACALDA_GIMNASIO_ALEJO_INI"
+tipo_movimiento = 66
+selec_frames = ExtResource("f_npc_019")
+coord = Vector2i(4, 12)
+
+[node name="Sole" parent="NPCs" unique_id=1812400633 instance=ExtResource("npc_entrenador")]
+editor_description = "pokeruby LavaridgeTown_Gym_1F objeto 5 TRAINER_SADIE GIRL_3 FACE_DOWN (0,2), TRAINER_TYPE_BURIED (visión 1, ve en las cuatro direcciones): enterrado en la arena (MOVEMENT_TYPE_HIDDEN) salvo vencido. Lo gestiona Eventos/EventoGimnasioLavacalda"
+position = Vector2(8, 46)
+script = ExtResource("s_gym")
+condicion_post_medalla = ""
+texto_post_medalla = ""
+npc_id = "pueblo_lavacalda_gimnasio_sole"
+entrenador_id = 650
+rango_vision = 1
+ver_en_todas_direcciones = true
+texto_post_combate = "LAVACALDA_GIMNASIO_SOLE_POST"
+id_texto = "LAVACALDA_GIMNASIO_SOLE_INI"
+tipo_movimiento = 66
+selec_frames = ExtResource("f_npc_012")
+coord = Vector2i(0, 2)
+
+[node name="Andi" parent="NPCs" unique_id=1812400634 instance=ExtResource("npc_entrenador")]
+editor_description = "pokeruby LavaridgeTown_Gym_1F objeto 7 TRAINER_ANDY MAN_6 FACE_DOWN (6,2), TRAINER_TYPE_BURIED (visión 1, ve en las cuatro direcciones): enterrado en la arena (MOVEMENT_TYPE_HIDDEN) salvo vencido. Lo gestiona Eventos/EventoGimnasioLavacalda"
+position = Vector2(104, 46)
+script = ExtResource("s_gym")
+condicion_post_medalla = ""
+texto_post_medalla = ""
+npc_id = "pueblo_lavacalda_gimnasio_andi"
+entrenador_id = 205
+rango_vision = 1
+ver_en_todas_direcciones = true
+texto_post_combate = "LAVACALDA_GIMNASIO_ANDI_POST"
+id_texto = "LAVACALDA_GIMNASIO_ANDI_INI"
+tipo_movimiento = 66
+selec_frames = ExtResource("f_npc_019")
+coord = Vector2i(6, 2)
+
+[node name="Guia" parent="NPCs" unique_id=1812400635 instance=ExtResource("npc_base")]
+editor_description = "pokeruby LavaridgeTown_Gym_1F objeto 6 (6,23) MAN_2 FACE_RIGHT, GymGuide: cambia con FLAG_DEFEATED_LAVARIDGE_GYM"
+position = Vector2(104, 382)
+script = ExtResource("s_cond")
+textos_condicionales = Dictionary[String, String]({
+"MEDALLA_4": "LAVACALDA_GIMNASIO_GUIA_VICTORIA"
+})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "LAVACALDA_GIMNASIO_GUIA_CONSEJO"
+tipo_movimiento = 10
+selec_frames = ExtResource("f_npc_052")
+coord = Vector2i(6, 23)
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=538691389]
+script = ExtResource("3_ledy3")
+tile_data = {
+"0,0": {
+"flags": 1
+},
+"0,15": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"1,0": {
+"flags": 1
+},
+"1,15": {
+"flags": 1
+},
+"1,7": {
+"flags": 1
+},
+"10,0": {
+"flags": 1
+},
+"10,15": {
+"flags": 1
+},
+"10,16": {
+"flags": 1
+},
+"10,17": {
+"flags": 1
+},
+"10,7": {
+"flags": 1
+},
+"11,0": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,10": {
+"flags": 1
+},
+"11,11": {
+"flags": 1
+},
+"11,12": {
+"flags": 1
+},
+"11,13": {
+"flags": 1
+},
+"11,14": {
+"flags": 1
+},
+"11,15": {
+"flags": 1
+},
+"11,16": {
+"flags": 1
+},
+"11,17": {
+"flags": 1
+},
+"11,18": {
+"flags": 1
+},
+"11,19": {
+"flags": 1
+},
+"11,2": {
+"flags": 1
+},
+"11,20": {
+"flags": 1
+},
+"11,21": {
+"flags": 1
+},
+"11,22": {
+"flags": 1
+},
+"11,23": {
+"flags": 1
+},
+"11,3": {
+"flags": 1
+},
+"11,4": {
+"flags": 1
+},
+"11,5": {
+"flags": 1
+},
+"11,6": {
+"flags": 1
+},
+"11,7": {
+"flags": 1
+},
+"11,8": {
+"flags": 1
+},
+"11,9": {
+"flags": 1
+},
+"17,0": {
+"flags": 1
+},
+"17,1": {
+"flags": 1
+},
+"17,10": {
+"flags": 1
+},
+"17,11": {
+"flags": 1
+},
+"17,12": {
+"flags": 1
+},
+"17,13": {
+"flags": 1
+},
+"17,14": {
+"flags": 1
+},
+"17,15": {
+"flags": 1
+},
+"17,16": {
+"flags": 1
+},
+"17,17": {
+"flags": 1
+},
+"17,18": {
+"flags": 1
+},
+"17,19": {
+"flags": 1
+},
+"17,2": {
+"flags": 1
+},
+"17,20": {
+"flags": 1
+},
+"17,21": {
+"flags": 1
+},
+"17,22": {
+"flags": 1
+},
+"17,23": {
+"flags": 1
+},
+"17,3": {
+"flags": 1
+},
+"17,4": {
+"flags": 1
+},
+"17,5": {
+"flags": 1
+},
+"17,6": {
+"flags": 1
+},
+"17,7": {
+"flags": 1
+},
+"17,8": {
+"flags": 1
+},
+"17,9": {
+"flags": 1
+},
+"18,0": {
+"flags": 1
+},
+"18,12": {
+"flags": 16
+},
+"18,19": {
+"flags": 16
+},
+"18,4": {
+"flags": 1
+},
+"19,0": {
+"flags": 1
+},
+"19,12": {
+"flags": 16
+},
+"19,19": {
+"flags": 16
+},
+"19,4": {
+"flags": 1
+},
+"2,0": {
+"flags": 1
+},
+"2,15": {
+"flags": 1
+},
+"2,7": {
+"flags": 1
+},
+"20,0": {
+"flags": 1
+},
+"20,10": {
+"flags": 1
+},
+"20,11": {
+"flags": 1
+},
+"20,12": {
+"flags": 1
+},
+"20,13": {
+"flags": 1
+},
+"20,14": {
+"flags": 1
+},
+"20,15": {
+"flags": 1
+},
+"20,16": {
+"flags": 1
+},
+"20,17": {
+"flags": 1
+},
+"20,18": {
+"flags": 1
+},
+"20,19": {
+"flags": 1
+},
+"20,4": {
+"flags": 1
+},
+"20,5": {
+"flags": 1
+},
+"20,6": {
+"flags": 1
+},
+"20,7": {
+"flags": 1
+},
+"20,8": {
+"flags": 1
+},
+"20,9": {
+"flags": 1
+},
+"21,0": {
+"flags": 1
+},
+"21,19": {
+"flags": 16
+},
+"21,4": {
+"flags": 1
+},
+"22,0": {
+"flags": 1
+},
+"22,19": {
+"flags": 16
+},
+"22,4": {
+"flags": 1
+},
+"23,0": {
+"flags": 1
+},
+"23,10": {
+"flags": 1
+},
+"23,11": {
+"flags": 1
+},
+"23,12": {
+"flags": 1
+},
+"23,13": {
+"flags": 1
+},
+"23,14": {
+"flags": 1
+},
+"23,15": {
+"flags": 1
+},
+"23,16": {
+"flags": 1
+},
+"23,17": {
+"flags": 1
+},
+"23,18": {
+"flags": 1
+},
+"23,19": {
+"flags": 1
+},
+"23,4": {
+"flags": 1
+},
+"23,5": {
+"flags": 1
+},
+"23,6": {
+"flags": 1
+},
+"23,7": {
+"flags": 1
+},
+"23,8": {
+"flags": 1
+},
+"23,9": {
+"flags": 1
+},
+"24,0": {
+"flags": 1
+},
+"24,19": {
+"flags": 16
+},
+"24,4": {
+"flags": 1
+},
+"25,0": {
+"flags": 1
+},
+"25,19": {
+"flags": 16
+},
+"25,4": {
+"flags": 1
+},
+"26,0": {
+"flags": 1
+},
+"26,10": {
+"flags": 1
+},
+"26,11": {
+"flags": 1
+},
+"26,12": {
+"flags": 1
+},
+"26,13": {
+"flags": 1
+},
+"26,14": {
+"flags": 1
+},
+"26,15": {
+"flags": 1
+},
+"26,16": {
+"flags": 1
+},
+"26,17": {
+"flags": 1
+},
+"26,18": {
+"flags": 1
+},
+"26,19": {
+"flags": 1
+},
+"26,4": {
+"flags": 1
+},
+"26,5": {
+"flags": 1
+},
+"26,6": {
+"flags": 1
+},
+"26,7": {
+"flags": 1
+},
+"26,8": {
+"flags": 1
+},
+"26,9": {
+"flags": 1
+},
+"27,0": {
+"flags": 1
+},
+"27,19": {
+"flags": 16
+},
+"27,4": {
+"flags": 1
+},
+"28,0": {
+"flags": 1
+},
+"28,19": {
+"flags": 16
+},
+"28,4": {
+"flags": 1
+},
+"3,0": {
+"flags": 1
+},
+"3,15": {
+"flags": 1
+},
+"3,7": {
+"flags": 1
+},
+"4,0": {
+"flags": 1
+},
+"4,15": {
+"flags": 1
+},
+"4,7": {
+"flags": 1
+},
+"5,0": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,10": {
+"flags": 1
+},
+"5,11": {
+"flags": 1
+},
+"5,12": {
+"flags": 1
+},
+"5,13": {
+"flags": 1
+},
+"5,14": {
+"flags": 1
+},
+"5,15": {
+"flags": 1
+},
+"5,16": {
+"flags": 1
+},
+"5,17": {
+"flags": 1
+},
+"5,18": {
+"flags": 1
+},
+"5,19": {
+"flags": 1
+},
+"5,2": {
+"flags": 1
+},
+"5,20": {
+"flags": 1
+},
+"5,21": {
+"flags": 1
+},
+"5,22": {
+"flags": 1
+},
+"5,23": {
+"flags": 1
+},
+"5,3": {
+"flags": 1
+},
+"5,4": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"5,6": {
+"flags": 1
+},
+"5,7": {
+"flags": 1
+},
+"5,8": {
+"flags": 1
+},
+"5,9": {
+"flags": 1
+},
+"6,0": {
+"flags": 1
+},
+"6,15": {
+"flags": 1
+},
+"6,16": {
+"flags": 1
+},
+"6,17": {
+"flags": 1
+},
+"6,7": {
+"flags": 1
+},
+"7,0": {
+"flags": 1
+},
+"7,15": {
+"flags": 1
+},
+"7,7": {
+"flags": 1
+},
+"8,0": {
+"flags": 1
+},
+"8,15": {
+"flags": 1
+},
+"8,7": {
+"flags": 1
+},
+"9,0": {
+"flags": 1
+},
+"9,15": {
+"flags": 1
+},
+"9,7": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1812400636]
+
+[node name="EventoGimnasioLavacalda" type="Node2D" parent="Eventos" unique_id=1812400637]
+editor_description = "pokeruby LavaridgeTown_Gym_1F/scripts.inc: CANDELA (medalla y MT50) y los entrenadores enterrados (OnTransition)"
+script = ExtResource("s_evento_gim")
+candela = NodePath("../../NPCs/Candela")
+entrenadores = Array[NodePath]([NodePath("../../NPCs/Camilo"), NodePath("../../NPCs/Zacarias"), NodePath("../../NPCs/Alejo"), NodePath("../../NPCs/Sole"), NodePath("../../NPCs/Andi")])

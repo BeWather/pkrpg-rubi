@@ -1,0 +1,196 @@
+[gd_scene format=3 uid="uid://bqpobo32wmwtv"]
+
+[ext_resource type="Script" uid="uid://cgafcrlo3tcx8" path="res://escenas/inicial/inicial.gd" id="1_eysgi"]
+[ext_resource type="Texture2D" uid="uid://bskn486quxqfn" path="res://escenas/inicial/suelo.png" id="1_w4ntb"]
+[ext_resource type="Texture2D" uid="uid://cmdsr1s75wf2k" path="res://escenas/inicial/bandolera.png" id="2_gvqay"]
+[ext_resource type="Texture2D" uid="uid://bah04rfofjbgc" path="res://escenas/inicial/pokeball.png" id="3_c5lyn"]
+[ext_resource type="Texture2D" uid="uid://br2j7m210fd1" path="res://escenas/inicial/apuntando.png" id="4_eysgi"]
+[ext_resource type="LabelSettings" uid="uid://qk2pmmasfvv" path="res://UI/texto_normal_blanco.tres" id="5_piy21"]
+[ext_resource type="Script" uid="uid://vwgjqwa7rj3k" path="res://escenas/inicial/circle_drawer.gd" id="6_circle"]
+[ext_resource type="Texture2D" uid="uid://dpeeco4otoudv" path="res://graficos/pokemon/front/MUDKIP.png" id="7_c5lyn"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="9_piy21"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivtm8"]
+atlas = ExtResource("3_c5lyn")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksv6m"]
+atlas = ExtResource("3_c5lyn")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54ld5"]
+atlas = ExtResource("3_c5lyn")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjlol"]
+atlas = ExtResource("3_c5lyn")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_piy21"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivtm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksv6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54ld5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjlol")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ivtm8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivtm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksv6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54ld5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjlol")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 9.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ksv6m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivtm8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksv6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54ld5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjlol")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_piy21"]
+load_path = "res://.godot/imported/menu_box_1.png-accd6598c64060fe188d49d98fd70e34.ctex"
+
+[sub_resource type="LabelSettings" id="LabelSettings_ksv6m"]
+font = ExtResource("9_piy21")
+font_size = 15
+font_color = Color(0.282353, 0.282353, 0.282353, 1)
+shadow_color = Color(0, 0, 0, 0.25098)
+shadow_offset = Vector2(1, 0)
+
+[node name="SeleccionInicial" type="Control" unique_id=14996886]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eysgi")
+metadata/_edit_lock_ = true
+
+[node name="Suelo" type="Sprite2D" parent="." unique_id=2086707956]
+texture = ExtResource("1_w4ntb")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Bandolera" type="Sprite2D" parent="." unique_id=1385978270]
+position = Vector2(64, 8)
+texture = ExtResource("2_gvqay")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="poke1" type="AnimatedSprite2D" parent="." unique_id=1680400160]
+position = Vector2(49, 52)
+sprite_frames = SubResource("SpriteFrames_piy21")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="poke2" type="AnimatedSprite2D" parent="." unique_id=1876479348]
+position = Vector2(109, 76)
+sprite_frames = SubResource("SpriteFrames_ivtm8")
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="poke3" type="AnimatedSprite2D" parent="." unique_id=1089206723]
+position = Vector2(169, 52)
+sprite_frames = SubResource("SpriteFrames_ksv6m")
+frame = 3
+frame_progress = 1.0
+centered = false
+metadata/_edit_lock_ = true
+
+[node name="Apuntando" type="Sprite2D" parent="." unique_id=249775516]
+position = Vector2(181, 41)
+texture = ExtResource("4_eysgi")
+metadata/_edit_lock_ = true
+
+[node name="Box" type="Polygon2D" parent="." unique_id=326453492]
+position = Vector2(4, 72)
+color = Color(0, 0, 0, 0.5)
+polygon = PackedVector2Array(0, 0, 104, 0, 104, 32, 0, 32)
+metadata/_edit_lock_ = true
+
+[node name="Nombre" type="Label" parent="Box" unique_id=402295865]
+offset_top = -1.0
+offset_right = 104.0
+offset_bottom = 32.0
+text = "MUDKIP
+PKMN PEZ LODO"
+label_settings = ExtResource("5_piy21")
+horizontal_alignment = 1
+metadata/_edit_lock_ = true
+
+[node name="Circle" type="Node2D" parent="." unique_id=1626440114]
+visible = false
+position = Vector2(120, 64)
+script = ExtResource("6_circle")
+border_width = 1.0
+metadata/_edit_lock_ = true
+
+[node name="poke-frente" type="Sprite2D" parent="Circle" unique_id=958138035]
+texture = ExtResource("7_c5lyn")
+centered = false
+offset = Vector2(-32, -32)
+metadata/_edit_lock_ = true
+
+[node name="BordeDinamico" type="NinePatchRect" parent="." unique_id=440643388]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 112.0
+offset_right = 224.0
+offset_bottom = 160.0
+texture = SubResource("CompressedTexture2D_piy21")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+metadata/_edit_lock_ = true
+
+[node name="Mensaje" type="Label" parent="BordeDinamico" unique_id=397513481]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 7.0
+offset_right = 200.0
+offset_bottom = 40.0
+label_settings = SubResource("LabelSettings_ksv6m")
+metadata/_edit_lock_ = true

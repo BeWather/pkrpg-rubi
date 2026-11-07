@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/bases_secretas/entrada_base_secreta.gd" id="1"]
+[ext_resource type="PackedScene" path="res://escenas/bases_secretas/entradas/general_1b0_cerrada.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://escenas/bases_secretas/entradas/general_1b0_abierta.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://escenas/bases_secretas/apertura_cueva.tscn" id="4"]
+
+[node name="EntradaBaseSecreta" type="Marker2D" node_paths=PackedStringArray("imagen_cerrada", "imagen_abierta", "efecto_apertura")]
+script = ExtResource("1")
+imagen_cerrada = NodePath("Cerrada")
+imagen_abierta = NodePath("Abierta")
+efecto_apertura = NodePath("Efecto")
+tipo_entrada = 0
+ticks_apertura = 20
+
+[node name="Cerrada" parent="." instance=ExtResource("2")]
+
+[node name="Abierta" parent="." instance=ExtResource("3")]
+visible = false
+
+[node name="Efecto" parent="." instance=ExtResource("4")]
+z_index = 2

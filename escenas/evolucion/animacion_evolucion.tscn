@@ -1,0 +1,324 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/evolucion/animacion_evolucion.gd" id="1_script"]
+
+[sub_resource type="Shader" id="Shader_blanco"]
+code = "shader_type canvas_item;
+uniform float blanco : hint_range(0.0, 1.0) = 0.0;
+void fragment() {
+	vec4 c = texture(TEXTURE, UV);
+	COLOR = vec4(mix(c.rgb, vec3(1.0), blanco), c.a);
+}
+"
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_previo"]
+shader = SubResource("Shader_blanco")
+shader_parameter/blanco = 0.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nuevo"]
+shader = SubResource("Shader_blanco")
+shader_parameter/blanco = 1.0
+
+[sub_resource type="Animation" id="Animation_entrada"]
+resource_name = "entrada"
+length = 0.2667
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Negro:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_transformacion"]
+resource_name = "transformacion"
+length = 8.2667
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpritePrevio:material:shader_parameter/blanco")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5, 2.0),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteNuevo:material:shader_parameter/blanco")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpritePrevio:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteNuevo:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Destello:modulate:a")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 7.9333, 8.1, 8.2667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [0.0, 0.0, 1.0, 0.0]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SpritePrevio:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 2.0, 2.6667, 3.2667, 3.8, 4.2667, 4.6667, 5.0333, 5.3667, 5.6667, 5.9333, 6.1667, 6.3667, 6.5667, 6.7333, 6.9, 7.0333, 7.1667, 7.2667, 7.3667, 7.4667, 7.5333, 7.6, 7.6667, 7.7333, 7.8, 7.8333, 7.8667, 7.9, 7.9333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SpriteNuevo:scale")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 2.0, 2.6667, 3.2667, 3.8, 4.2667, 4.6667, 5.0333, 5.3667, 5.6667, 5.9333, 6.1667, 6.3667, 6.5667, 6.7333, 6.9, 7.0333, 7.1667, 7.2667, 7.3667, 7.4667, 7.5333, 7.6, 7.6667, 7.7333, 7.8, 7.8333, 7.8667, 7.9, 7.9333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1), Vector2(0.1, 0.1), Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_vuelta"]
+resource_name = "vuelta_color"
+length = 0.2667
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpriteNuevo:material:shader_parameter/blanco")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpriteNuevo:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpritePrevio:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SpriteNuevo:scale")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpritePrevio:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0.1, 0.1)]
+}
+
+[sub_resource type="Animation" id="Animation_cancelar"]
+resource_name = "cancelar"
+length = 0.2667
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpritePrevio:material:shader_parameter/blanco")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SpritePrevio:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SpriteNuevo:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Destello:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SpritePrevio:scale")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SpriteNuevo:scale")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [Vector2(0.1, 0.1)]
+}
+
+[sub_resource type="Animation" id="Animation_salida"]
+resource_name = "salida"
+length = 0.2667
+step = 0.0167
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Negro:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_evo"]
+_data = {&"entrada": SubResource("Animation_entrada"), &"transformacion": SubResource("Animation_transformacion"), &"vuelta_color": SubResource("Animation_vuelta"), &"cancelar": SubResource("Animation_cancelar"), &"salida": SubResource("Animation_salida")}
+
+[node name="AnimacionEvolucion" type="CanvasLayer" unique_id=1]
+layer = 20
+script = ExtResource("1_script")
+
+[node name="Fondo" type="ColorRect" parent="." unique_id=2]
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="SpritePrevio" type="Sprite2D" parent="." unique_id=3]
+material = SubResource("ShaderMaterial_previo")
+position = Vector2(120, 64)
+
+[node name="SpriteNuevo" type="Sprite2D" parent="." unique_id=4]
+scale = Vector2(0.1, 0.1)
+material = SubResource("ShaderMaterial_nuevo")
+position = Vector2(120, 64)
+
+[node name="Destello" type="ColorRect" parent="." unique_id=5]
+modulate = Color(1, 1, 1, 0)
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+
+[node name="Negro" type="ColorRect" parent="." unique_id=6]
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=7]
+libraries = {
+&"": SubResource("AnimationLibrary_evo")
+}

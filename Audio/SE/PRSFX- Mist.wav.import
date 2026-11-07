@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dyr10ud2bo72n"
+path="res://.godot/imported/PRSFX- Mist.wav-4b7f10e1aee61c3a1df410eccf5bc888.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Mist.wav"
+dest_files=["res://.godot/imported/PRSFX- Mist.wav-4b7f10e1aee61c3a1df410eccf5bc888.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

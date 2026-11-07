@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbseq5pofd60d"
+path="res://.godot/imported/1-88 Sootopolis City.mp3-2692467e08cbae3fe37672b1a40041d6.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-88 Sootopolis City.mp3"
+dest_files=["res://.godot/imported/1-88 Sootopolis City.mp3-2692467e08cbae3fe37672b1a40041d6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

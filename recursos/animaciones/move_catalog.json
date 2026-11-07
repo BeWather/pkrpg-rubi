@@ -1,0 +1,2838 @@
+{
+  "schema_version": 1,
+  "source_sha256": "11e2c5bc90475223bf1e33b4ee520dee790e01f53b6c023d1c00b2cde8ab07aa",
+  "moves": [
+    {
+      "id": 1,
+      "internal": "DESTRUCTOR",
+      "name": "DESTRUCTOR",
+      "ruby_name": "POUND",
+      "source_script": "Move_POUND",
+      "status": false
+    },
+    {
+      "id": 2,
+      "internal": "GOLPEKARATE",
+      "name": "GOLPE KARATE",
+      "ruby_name": "KARATE_CHOP",
+      "source_script": "Move_KARATE_CHOP",
+      "status": false
+    },
+    {
+      "id": 3,
+      "internal": "DOBLEBOFETON",
+      "name": "DOBLEBOFETÓN",
+      "ruby_name": "DOUBLE_SLAP",
+      "source_script": "Move_DOUBLE_SLAP",
+      "status": false
+    },
+    {
+      "id": 4,
+      "internal": "PUNOCOMETA",
+      "name": "PUÑO COMETA",
+      "ruby_name": "COMET_PUNCH",
+      "source_script": "Move_COMET_PUNCH",
+      "status": false
+    },
+    {
+      "id": 5,
+      "internal": "MEGAPUNO",
+      "name": "MEGAPUÑO",
+      "ruby_name": "MEGA_PUNCH",
+      "source_script": "Move_MEGA_PUNCH",
+      "status": false
+    },
+    {
+      "id": 6,
+      "internal": "DIADEPAGO",
+      "name": "DÍA DE PAGO",
+      "ruby_name": "PAY_DAY",
+      "source_script": "Move_PAY_DAY",
+      "status": false
+    },
+    {
+      "id": 7,
+      "internal": "PUNOFUEGO",
+      "name": "PUÑO FUEGO",
+      "ruby_name": "FIRE_PUNCH",
+      "source_script": "Move_FIRE_PUNCH",
+      "status": false
+    },
+    {
+      "id": 8,
+      "internal": "PUNOHIELO",
+      "name": "PUÑO HIELO",
+      "ruby_name": "ICE_PUNCH",
+      "source_script": "Move_ICE_PUNCH",
+      "status": false
+    },
+    {
+      "id": 9,
+      "internal": "PUNOTRUENO",
+      "name": "PUÑO TRUENO",
+      "ruby_name": "THUNDER_PUNCH",
+      "source_script": "Move_THUNDER_PUNCH",
+      "status": false
+    },
+    {
+      "id": 10,
+      "internal": "ARANAZO",
+      "name": "ARAÑAZO",
+      "ruby_name": "SCRATCH",
+      "source_script": "Move_SCRATCH",
+      "status": false
+    },
+    {
+      "id": 11,
+      "internal": "AGARRE",
+      "name": "AGARRE",
+      "ruby_name": "VICE_GRIP",
+      "source_script": "Move_VICE_GRIP",
+      "status": false
+    },
+    {
+      "id": 12,
+      "internal": "GUILLOTINA",
+      "name": "GUILLOTINA",
+      "ruby_name": "GUILLOTINE",
+      "source_script": "Move_GUILLOTINE",
+      "status": false
+    },
+    {
+      "id": 13,
+      "internal": "VCORTANTE",
+      "name": "V. CORTANTE",
+      "ruby_name": "RAZOR_WIND",
+      "source_script": "Move_RAZOR_WIND",
+      "status": false
+    },
+    {
+      "id": 14,
+      "internal": "DANZAESPADA",
+      "name": "DANZA ESPADA",
+      "ruby_name": "SWORDS_DANCE",
+      "source_script": "Move_SWORDS_DANCE",
+      "status": true
+    },
+    {
+      "id": 15,
+      "internal": "CORTE",
+      "name": "CORTE",
+      "ruby_name": "CUT",
+      "source_script": "Move_CUT",
+      "status": false
+    },
+    {
+      "id": 16,
+      "internal": "TORNADO",
+      "name": "TORNADO",
+      "ruby_name": "GUST",
+      "source_script": "Move_GUST",
+      "status": false
+    },
+    {
+      "id": 17,
+      "internal": "ATAQUEALA",
+      "name": "ATAQUE ALA",
+      "ruby_name": "WING_ATTACK",
+      "source_script": "Move_WING_ATTACK",
+      "status": false
+    },
+    {
+      "id": 18,
+      "internal": "REMOLINO",
+      "name": "REMOLINO",
+      "ruby_name": "WHIRLWIND",
+      "source_script": "Move_WHIRLWIND",
+      "status": true
+    },
+    {
+      "id": 19,
+      "internal": "VUELO",
+      "name": "VUELO",
+      "ruby_name": "FLY",
+      "source_script": "Move_FLY",
+      "status": false
+    },
+    {
+      "id": 20,
+      "internal": "ATADURA",
+      "name": "ATADURA",
+      "ruby_name": "BIND",
+      "source_script": "Move_BIND",
+      "status": false
+    },
+    {
+      "id": 21,
+      "internal": "PORTAZO",
+      "name": "PORTAZO",
+      "ruby_name": "SLAM",
+      "source_script": "Move_SLAM",
+      "status": false
+    },
+    {
+      "id": 22,
+      "internal": "LATIGOCEPA",
+      "name": "LÁTIGO CEPA",
+      "ruby_name": "VINE_WHIP",
+      "source_script": "Move_VINE_WHIP",
+      "status": false
+    },
+    {
+      "id": 23,
+      "internal": "PISOTON",
+      "name": "PISOTÓN",
+      "ruby_name": "STOMP",
+      "source_script": "Move_STOMP",
+      "status": false
+    },
+    {
+      "id": 24,
+      "internal": "DOBLEPATADA",
+      "name": "DOBLE PATADA",
+      "ruby_name": "DOUBLE_KICK",
+      "source_script": "Move_DOUBLE_KICK",
+      "status": false
+    },
+    {
+      "id": 25,
+      "internal": "MEGAPATADA",
+      "name": "MEGAPATADA",
+      "ruby_name": "MEGA_KICK",
+      "source_script": "Move_MEGA_KICK",
+      "status": false
+    },
+    {
+      "id": 26,
+      "internal": "PATADASALTO",
+      "name": "PATADA SALTO",
+      "ruby_name": "JUMP_KICK",
+      "source_script": "Move_JUMP_KICK",
+      "status": false
+    },
+    {
+      "id": 27,
+      "internal": "PATADAGIRO",
+      "name": "PATADA GIRO",
+      "ruby_name": "ROLLING_KICK",
+      "source_script": "Move_ROLLING_KICK",
+      "status": false
+    },
+    {
+      "id": 28,
+      "internal": "ATAQUEARENA",
+      "name": "ATAQUE ARENA",
+      "ruby_name": "SAND_ATTACK",
+      "source_script": "Move_SAND_ATTACK",
+      "status": true
+    },
+    {
+      "id": 29,
+      "internal": "GOLPECABEZA",
+      "name": "GOLPE CABEZA",
+      "ruby_name": "HEADBUTT",
+      "source_script": "Move_HEADBUTT",
+      "status": false
+    },
+    {
+      "id": 30,
+      "internal": "CORNADA",
+      "name": "CORNADA",
+      "ruby_name": "HORN_ATTACK",
+      "source_script": "Move_HORN_ATTACK",
+      "status": false
+    },
+    {
+      "id": 31,
+      "internal": "ATAQUEFURIA",
+      "name": "ATAQUE FURIA",
+      "ruby_name": "FURY_ATTACK",
+      "source_script": "Move_FURY_ATTACK",
+      "status": false
+    },
+    {
+      "id": 32,
+      "internal": "PERFORADOR",
+      "name": "PERFORADOR",
+      "ruby_name": "HORN_DRILL",
+      "source_script": "Move_HORN_DRILL",
+      "status": false
+    },
+    {
+      "id": 33,
+      "internal": "PLACAJE",
+      "name": "PLACAJE",
+      "ruby_name": "TACKLE",
+      "source_script": "Move_TACKLE",
+      "status": false
+    },
+    {
+      "id": 34,
+      "internal": "GOLPECUERPO",
+      "name": "GOLPE CUERPO",
+      "ruby_name": "BODY_SLAM",
+      "source_script": "Move_BODY_SLAM",
+      "status": false
+    },
+    {
+      "id": 35,
+      "internal": "REPETICION",
+      "name": "REPETICIÓN",
+      "ruby_name": "WRAP",
+      "source_script": "Move_WRAP",
+      "status": false
+    },
+    {
+      "id": 36,
+      "internal": "DERRIBO",
+      "name": "DERRIBO",
+      "ruby_name": "TAKE_DOWN",
+      "source_script": "Move_TAKE_DOWN",
+      "status": false
+    },
+    {
+      "id": 37,
+      "internal": "GOLPE",
+      "name": "GOLPE",
+      "ruby_name": "THRASH",
+      "source_script": "Move_THRASH",
+      "status": false
+    },
+    {
+      "id": 38,
+      "internal": "DOBLEFILO",
+      "name": "DOBLE FILO",
+      "ruby_name": "DOUBLE_EDGE",
+      "source_script": "Move_DOUBLE_EDGE",
+      "status": false
+    },
+    {
+      "id": 39,
+      "internal": "LATIGO",
+      "name": "LÁTIGO",
+      "ruby_name": "TAIL_WHIP",
+      "source_script": "Move_TAIL_WHIP",
+      "status": true
+    },
+    {
+      "id": 40,
+      "internal": "PICOTAZOVEN",
+      "name": "PICOTAZO VEN",
+      "ruby_name": "POISON_STING",
+      "source_script": "Move_POISON_STING",
+      "status": false
+    },
+    {
+      "id": 41,
+      "internal": "DOBLEATAQUE",
+      "name": "DOBLEATAQUE",
+      "ruby_name": "TWINEEDLE",
+      "source_script": "Move_TWINEEDLE",
+      "status": false
+    },
+    {
+      "id": 42,
+      "internal": "PINMISIL",
+      "name": "PIN MISIL",
+      "ruby_name": "PIN_MISSILE",
+      "source_script": "Move_PIN_MISSILE",
+      "status": false
+    },
+    {
+      "id": 43,
+      "internal": "MALICIOSO",
+      "name": "MALICIOSO",
+      "ruby_name": "LEER",
+      "source_script": "Move_LEER",
+      "status": true
+    },
+    {
+      "id": 44,
+      "internal": "MORDISCO",
+      "name": "MORDISCO",
+      "ruby_name": "BITE",
+      "source_script": "Move_BITE",
+      "status": false
+    },
+    {
+      "id": 45,
+      "internal": "GRUNIDO",
+      "name": "GRUÑIDO",
+      "ruby_name": "GROWL",
+      "source_script": "Move_GROWL",
+      "status": true
+    },
+    {
+      "id": 46,
+      "internal": "RUGIDO",
+      "name": "RUGIDO",
+      "ruby_name": "ROAR",
+      "source_script": "Move_ROAR",
+      "status": true
+    },
+    {
+      "id": 47,
+      "internal": "CANTO",
+      "name": "CANTO",
+      "ruby_name": "SING",
+      "source_script": "Move_SING",
+      "status": true
+    },
+    {
+      "id": 48,
+      "internal": "SUPERSONICO",
+      "name": "SUPERSÓNICO",
+      "ruby_name": "SUPERSONIC",
+      "source_script": "Move_SUPERSONIC",
+      "status": true
+    },
+    {
+      "id": 49,
+      "internal": "BOMBASONICA",
+      "name": "BOMBA SÓNICA",
+      "ruby_name": "SONIC_BOOM",
+      "source_script": "Move_SONIC_BOOM",
+      "status": false
+    },
+    {
+      "id": 50,
+      "internal": "ANULACION",
+      "name": "ANULACIÓN",
+      "ruby_name": "DISABLE",
+      "source_script": "Move_DISABLE",
+      "status": true
+    },
+    {
+      "id": 51,
+      "internal": "ACIDO",
+      "name": "ÁCIDO",
+      "ruby_name": "ACID",
+      "source_script": "Move_ACID",
+      "status": false
+    },
+    {
+      "id": 52,
+      "internal": "ASCUAS",
+      "name": "ASCUAS",
+      "ruby_name": "EMBER",
+      "source_script": "Move_EMBER",
+      "status": false
+    },
+    {
+      "id": 53,
+      "internal": "LANZALLAMAS",
+      "name": "LANZALLAMAS",
+      "ruby_name": "FLAMETHROWER",
+      "source_script": "Move_FLAMETHROWER",
+      "status": false
+    },
+    {
+      "id": 54,
+      "internal": "NEBLINA",
+      "name": "NEBLINA",
+      "ruby_name": "MIST",
+      "source_script": "Move_MIST",
+      "status": true
+    },
+    {
+      "id": 55,
+      "internal": "PISTOLAAGUA",
+      "name": "PISTOLA AGUA",
+      "ruby_name": "WATER_GUN",
+      "source_script": "Move_WATER_GUN",
+      "status": false
+    },
+    {
+      "id": 56,
+      "internal": "HIDROBOMBA",
+      "name": "HIDROBOMBA",
+      "ruby_name": "HYDRO_PUMP",
+      "source_script": "Move_HYDRO_PUMP",
+      "status": false
+    },
+    {
+      "id": 57,
+      "internal": "SURF",
+      "name": "SURF",
+      "ruby_name": "SURF",
+      "source_script": "Move_SURF",
+      "status": false
+    },
+    {
+      "id": 58,
+      "internal": "RAYOHIELO",
+      "name": "RAYO HIELO",
+      "ruby_name": "ICE_BEAM",
+      "source_script": "Move_ICE_BEAM",
+      "status": false
+    },
+    {
+      "id": 59,
+      "internal": "VENTISCA",
+      "name": "VENTISCA",
+      "ruby_name": "BLIZZARD",
+      "source_script": "Move_BLIZZARD",
+      "status": false
+    },
+    {
+      "id": 60,
+      "internal": "PSICORRAYO",
+      "name": "PSICORRAYO",
+      "ruby_name": "PSYBEAM",
+      "source_script": "Move_PSYBEAM",
+      "status": false
+    },
+    {
+      "id": 61,
+      "internal": "RAYOBURBUJA",
+      "name": "RAYO BURBUJA",
+      "ruby_name": "BUBBLE_BEAM",
+      "source_script": "Move_BUBBLE_BEAM",
+      "status": false
+    },
+    {
+      "id": 62,
+      "internal": "RAYOAURORA",
+      "name": "RAYO AURORA",
+      "ruby_name": "AURORA_BEAM",
+      "source_script": "Move_AURORA_BEAM",
+      "status": false
+    },
+    {
+      "id": 63,
+      "internal": "HIPERRAYO",
+      "name": "HIPERRAYO",
+      "ruby_name": "HYPER_BEAM",
+      "source_script": "Move_HYPER_BEAM",
+      "status": false
+    },
+    {
+      "id": 64,
+      "internal": "PICOTAZO",
+      "name": "PICOTAZO",
+      "ruby_name": "PECK",
+      "source_script": "Move_PECK",
+      "status": false
+    },
+    {
+      "id": 65,
+      "internal": "PICOTALADRO",
+      "name": "PICO TALADRO",
+      "ruby_name": "DRILL_PECK",
+      "source_script": "Move_DRILL_PECK",
+      "status": false
+    },
+    {
+      "id": 66,
+      "internal": "SUMISION",
+      "name": "SUMISIÓN",
+      "ruby_name": "SUBMISSION",
+      "source_script": "Move_SUBMISSION",
+      "status": false
+    },
+    {
+      "id": 67,
+      "internal": "PATADABAJA",
+      "name": "PATADA BAJA",
+      "ruby_name": "LOW_KICK",
+      "source_script": "Move_LOW_KICK",
+      "status": false
+    },
+    {
+      "id": 68,
+      "internal": "CONTADOR",
+      "name": "CONTADOR",
+      "ruby_name": "COUNTER",
+      "source_script": "Move_COUNTER",
+      "status": false
+    },
+    {
+      "id": 69,
+      "internal": "MOVSISMICO",
+      "name": "MOV. SÍSMICO",
+      "ruby_name": "SEISMIC_TOSS",
+      "source_script": "Move_SEISMIC_TOSS",
+      "status": false
+    },
+    {
+      "id": 70,
+      "internal": "FUERZA",
+      "name": "FUERZA",
+      "ruby_name": "STRENGTH",
+      "source_script": "Move_STRENGTH",
+      "status": false
+    },
+    {
+      "id": 71,
+      "internal": "ABSORBER",
+      "name": "ABSORBER",
+      "ruby_name": "ABSORB",
+      "source_script": "Move_ABSORB",
+      "status": false
+    },
+    {
+      "id": 72,
+      "internal": "MEGAAGOTAR",
+      "name": "MEGAAGOTAR",
+      "ruby_name": "MEGA_DRAIN",
+      "source_script": "Move_MEGA_DRAIN",
+      "status": false
+    },
+    {
+      "id": 73,
+      "internal": "DRENADORAS",
+      "name": "DRENADORAS",
+      "ruby_name": "LEECH_SEED",
+      "source_script": "Move_LEECH_SEED",
+      "status": true
+    },
+    {
+      "id": 74,
+      "internal": "DESARROLLO",
+      "name": "DESARROLLO",
+      "ruby_name": "GROWTH",
+      "source_script": "Move_GROWTH",
+      "status": true
+    },
+    {
+      "id": 75,
+      "internal": "HOJAAFILADA",
+      "name": "HOJA AFILADA",
+      "ruby_name": "RAZOR_LEAF",
+      "source_script": "Move_RAZOR_LEAF",
+      "status": false
+    },
+    {
+      "id": 76,
+      "internal": "RAYOSOLAR",
+      "name": "RAYO SOLAR",
+      "ruby_name": "SOLAR_BEAM",
+      "source_script": "Move_SOLAR_BEAM",
+      "status": false
+    },
+    {
+      "id": 77,
+      "internal": "POLVOVENENO",
+      "name": "POLVO VENENO",
+      "ruby_name": "POISON_POWDER",
+      "source_script": "Move_POISON_POWDER",
+      "status": true
+    },
+    {
+      "id": 78,
+      "internal": "PARALIZADOR",
+      "name": "PARALIZADOR",
+      "ruby_name": "STUN_SPORE",
+      "source_script": "Move_STUN_SPORE",
+      "status": true
+    },
+    {
+      "id": 79,
+      "internal": "SOMNIFERO",
+      "name": "SOMNÍFERO",
+      "ruby_name": "SLEEP_POWDER",
+      "source_script": "Move_SLEEP_POWDER",
+      "status": true
+    },
+    {
+      "id": 80,
+      "internal": "DANZAPETALO",
+      "name": "DANZA PÉTALO",
+      "ruby_name": "PETAL_DANCE",
+      "source_script": "Move_PETAL_DANCE",
+      "status": false
+    },
+    {
+      "id": 81,
+      "internal": "DISPDEMORA",
+      "name": "DISP. DEMORA",
+      "ruby_name": "STRING_SHOT",
+      "source_script": "Move_STRING_SHOT",
+      "status": true
+    },
+    {
+      "id": 82,
+      "internal": "FURIADRAGON",
+      "name": "FURIA DRAGÓN",
+      "ruby_name": "DRAGON_RAGE",
+      "source_script": "Move_DRAGON_RAGE",
+      "status": false
+    },
+    {
+      "id": 83,
+      "internal": "GIROFUEGO",
+      "name": "GIRO FUEGO",
+      "ruby_name": "FIRE_SPIN",
+      "source_script": "Move_FIRE_SPIN",
+      "status": false
+    },
+    {
+      "id": 84,
+      "internal": "IMPACTRUENO",
+      "name": "IMPACTRUENO",
+      "ruby_name": "THUNDER_SHOCK",
+      "source_script": "Move_THUNDER_SHOCK",
+      "status": false
+    },
+    {
+      "id": 85,
+      "internal": "RAYO",
+      "name": "RAYO",
+      "ruby_name": "THUNDERBOLT",
+      "source_script": "Move_THUNDERBOLT",
+      "status": false
+    },
+    {
+      "id": 86,
+      "internal": "ONDATRUENO",
+      "name": "ONDA TRUENO",
+      "ruby_name": "THUNDER_WAVE",
+      "source_script": "Move_THUNDER_WAVE",
+      "status": true
+    },
+    {
+      "id": 87,
+      "internal": "TRUENO",
+      "name": "TRUENO",
+      "ruby_name": "THUNDER",
+      "source_script": "Move_THUNDER",
+      "status": false
+    },
+    {
+      "id": 88,
+      "internal": "LANZARROCAS",
+      "name": "LANZARROCAS",
+      "ruby_name": "ROCK_THROW",
+      "source_script": "Move_ROCK_THROW",
+      "status": false
+    },
+    {
+      "id": 89,
+      "internal": "TERREMOTO",
+      "name": "TERREMOTO",
+      "ruby_name": "EARTHQUAKE",
+      "source_script": "Move_EARTHQUAKE",
+      "status": false
+    },
+    {
+      "id": 90,
+      "internal": "FISURA",
+      "name": "FISURA",
+      "ruby_name": "FISSURE",
+      "source_script": "Move_FISSURE",
+      "status": false
+    },
+    {
+      "id": 91,
+      "internal": "EXCAVAR",
+      "name": "EXCAVAR",
+      "ruby_name": "DIG",
+      "source_script": "Move_DIG",
+      "status": false
+    },
+    {
+      "id": 92,
+      "internal": "TOXICO",
+      "name": "TÓXICO",
+      "ruby_name": "TOXIC",
+      "source_script": "Move_TOXIC",
+      "status": true
+    },
+    {
+      "id": 93,
+      "internal": "CONFUSION",
+      "name": "CONFUSIÓN",
+      "ruby_name": "CONFUSION",
+      "source_script": "Move_CONFUSION",
+      "status": false
+    },
+    {
+      "id": 94,
+      "internal": "PSIQUICO",
+      "name": "PSÍQUICO",
+      "ruby_name": "PSYCHIC",
+      "source_script": "Move_PSYCHIC",
+      "status": false
+    },
+    {
+      "id": 95,
+      "internal": "HIPNOSIS",
+      "name": "HIPNOSIS",
+      "ruby_name": "HYPNOSIS",
+      "source_script": "Move_HYPNOSIS",
+      "status": true
+    },
+    {
+      "id": 96,
+      "internal": "MEDITACION",
+      "name": "MEDITACIÓN",
+      "ruby_name": "MEDITATE",
+      "source_script": "Move_MEDITATE",
+      "status": true
+    },
+    {
+      "id": 97,
+      "internal": "AGILIDAD",
+      "name": "AGILIDAD",
+      "ruby_name": "AGILITY",
+      "source_script": "Move_AGILITY",
+      "status": true
+    },
+    {
+      "id": 98,
+      "internal": "ATRAPIDO",
+      "name": "AT. RÁPIDO",
+      "ruby_name": "QUICK_ATTACK",
+      "source_script": "Move_QUICK_ATTACK",
+      "status": false
+    },
+    {
+      "id": 99,
+      "internal": "FURIA",
+      "name": "FURIA",
+      "ruby_name": "RAGE",
+      "source_script": "Move_RAGE",
+      "status": false
+    },
+    {
+      "id": 100,
+      "internal": "TELETRANSP",
+      "name": "TELETRANSP",
+      "ruby_name": "TELEPORT",
+      "source_script": "Move_TELEPORT",
+      "status": true
+    },
+    {
+      "id": 101,
+      "internal": "TINIEBLAS",
+      "name": "TINIEBLAS",
+      "ruby_name": "NIGHT_SHADE",
+      "source_script": "Move_NIGHT_SHADE",
+      "status": false
+    },
+    {
+      "id": 102,
+      "internal": "MIMETICO",
+      "name": "MIMÉTICO",
+      "ruby_name": "MIMIC",
+      "source_script": "Move_MIMIC",
+      "status": true
+    },
+    {
+      "id": 103,
+      "internal": "CHIRRIDO",
+      "name": "CHIRRIDO",
+      "ruby_name": "SCREECH",
+      "source_script": "Move_SCREECH",
+      "status": true
+    },
+    {
+      "id": 104,
+      "internal": "DOBLEEQUIPO",
+      "name": "DOBLE EQUIPO",
+      "ruby_name": "DOUBLE_TEAM",
+      "source_script": "Move_DOUBLE_TEAM",
+      "status": true
+    },
+    {
+      "id": 105,
+      "internal": "RECUPERACION",
+      "name": "RECUPERACIÓN",
+      "ruby_name": "RECOVER",
+      "source_script": "Move_RECOVER",
+      "status": true
+    },
+    {
+      "id": 106,
+      "internal": "FORTALEZA",
+      "name": "FORTALEZA",
+      "ruby_name": "HARDEN",
+      "source_script": "Move_HARDEN",
+      "status": true
+    },
+    {
+      "id": 107,
+      "internal": "REDUCCION",
+      "name": "REDUCCIÓN",
+      "ruby_name": "MINIMIZE",
+      "source_script": "Move_MINIMIZE",
+      "status": true
+    },
+    {
+      "id": 108,
+      "internal": "PANTALLAHUMO",
+      "name": "PANTALLAHUMO",
+      "ruby_name": "SMOKESCREEN",
+      "source_script": "Move_SMOKESCREEN",
+      "status": true
+    },
+    {
+      "id": 109,
+      "internal": "RAYOCONFUSO",
+      "name": "RAYO CONFUSO",
+      "ruby_name": "CONFUSE_RAY",
+      "source_script": "Move_CONFUSE_RAY",
+      "status": true
+    },
+    {
+      "id": 110,
+      "internal": "REFUGIO",
+      "name": "REFUGIO",
+      "ruby_name": "WITHDRAW",
+      "source_script": "Move_WITHDRAW",
+      "status": true
+    },
+    {
+      "id": 111,
+      "internal": "RIZODEFENSA",
+      "name": "RIZO DEFENSA",
+      "ruby_name": "DEFENSE_CURL",
+      "source_script": "Move_DEFENSE_CURL",
+      "status": true
+    },
+    {
+      "id": 112,
+      "internal": "BARRERA",
+      "name": "BARRERA",
+      "ruby_name": "BARRIER",
+      "source_script": "Move_BARRIER",
+      "status": true
+    },
+    {
+      "id": 113,
+      "internal": "PANTALLALUZ",
+      "name": "PANTALLA LUZ",
+      "ruby_name": "LIGHT_SCREEN",
+      "source_script": "Move_LIGHT_SCREEN",
+      "status": true
+    },
+    {
+      "id": 114,
+      "internal": "NIEBLA",
+      "name": "NIEBLA",
+      "ruby_name": "HAZE",
+      "source_script": "Move_HAZE",
+      "status": true
+    },
+    {
+      "id": 115,
+      "internal": "REFLEJO",
+      "name": "REFLEJO",
+      "ruby_name": "REFLECT",
+      "source_script": "Move_REFLECT",
+      "status": true
+    },
+    {
+      "id": 116,
+      "internal": "FOCOENERGIA",
+      "name": "FOCO ENERGÍA",
+      "ruby_name": "FOCUS_ENERGY",
+      "source_script": "Move_FOCUS_ENERGY",
+      "status": true
+    },
+    {
+      "id": 117,
+      "internal": "VENGANZA",
+      "name": "VENGANZA",
+      "ruby_name": "BIDE",
+      "source_script": "Move_BIDE",
+      "status": false
+    },
+    {
+      "id": 118,
+      "internal": "METRONOMO",
+      "name": "METRÓNOMO",
+      "ruby_name": "METRONOME",
+      "source_script": "Move_METRONOME",
+      "status": true
+    },
+    {
+      "id": 119,
+      "internal": "MOVESPEJO",
+      "name": "MOV. ESPEJO",
+      "ruby_name": "MIRROR_MOVE",
+      "source_script": "Move_POUND",
+      "status": true
+    },
+    {
+      "id": 120,
+      "internal": "AUTODESTRUC",
+      "name": "AUTODESTRUC",
+      "ruby_name": "SELF_DESTRUCT",
+      "source_script": "Move_SELF_DESTRUCT",
+      "status": false
+    },
+    {
+      "id": 121,
+      "internal": "BOMBAHUEVO",
+      "name": "BOMBA HUEVO",
+      "ruby_name": "EGG_BOMB",
+      "source_script": "Move_EGG_BOMB",
+      "status": false
+    },
+    {
+      "id": 122,
+      "internal": "LENGUETAZO",
+      "name": "LENGÜETAZO",
+      "ruby_name": "LICK",
+      "source_script": "Move_LICK",
+      "status": false
+    },
+    {
+      "id": 123,
+      "internal": "POLUCION",
+      "name": "POLUCIÓN",
+      "ruby_name": "SMOG",
+      "source_script": "Move_SMOG",
+      "status": false
+    },
+    {
+      "id": 124,
+      "internal": "RESIDUOS",
+      "name": "RESIDUOS",
+      "ruby_name": "SLUDGE",
+      "source_script": "Move_SLUDGE",
+      "status": false
+    },
+    {
+      "id": 125,
+      "internal": "HUESOPALO",
+      "name": "HUESO PALO",
+      "ruby_name": "BONE_CLUB",
+      "source_script": "Move_BONE_CLUB",
+      "status": false
+    },
+    {
+      "id": 126,
+      "internal": "LLAMARADA",
+      "name": "LLAMARADA",
+      "ruby_name": "FIRE_BLAST",
+      "source_script": "Move_FIRE_BLAST",
+      "status": false
+    },
+    {
+      "id": 127,
+      "internal": "CASCADA",
+      "name": "CASCADA",
+      "ruby_name": "WATERFALL",
+      "source_script": "Move_WATERFALL",
+      "status": false
+    },
+    {
+      "id": 128,
+      "internal": "TENAZA",
+      "name": "TENAZA",
+      "ruby_name": "CLAMP",
+      "source_script": "Move_CLAMP",
+      "status": false
+    },
+    {
+      "id": 129,
+      "internal": "RAPIDEZ",
+      "name": "RAPIDEZ",
+      "ruby_name": "SWIFT",
+      "source_script": "Move_SWIFT",
+      "status": false
+    },
+    {
+      "id": 130,
+      "internal": "CABEZAZO",
+      "name": "CABEZAZO",
+      "ruby_name": "SKULL_BASH",
+      "source_script": "Move_SKULL_BASH",
+      "status": false
+    },
+    {
+      "id": 131,
+      "internal": "CLAVOCANON",
+      "name": "CLAVO CAÑÓN",
+      "ruby_name": "SPIKE_CANNON",
+      "source_script": "Move_SPIKE_CANNON",
+      "status": false
+    },
+    {
+      "id": 132,
+      "internal": "RESTRICCION",
+      "name": "RESTRICCIÓN",
+      "ruby_name": "CONSTRICT",
+      "source_script": "Move_CONSTRICT",
+      "status": false
+    },
+    {
+      "id": 133,
+      "internal": "AMNESIA",
+      "name": "AMNESIA",
+      "ruby_name": "AMNESIA",
+      "source_script": "Move_AMNESIA",
+      "status": true
+    },
+    {
+      "id": 134,
+      "internal": "KINETICO",
+      "name": "KINÉTICO",
+      "ruby_name": "KINESIS",
+      "source_script": "Move_KINESIS",
+      "status": true
+    },
+    {
+      "id": 135,
+      "internal": "AMORTIGUADOR",
+      "name": "AMORTIGUADOR",
+      "ruby_name": "SOFT_BOILED",
+      "source_script": "Move_SOFT_BOILED",
+      "status": true
+    },
+    {
+      "id": 136,
+      "internal": "PATSALTA",
+      "name": "PAT. S. ALTA",
+      "ruby_name": "HI_JUMP_KICK",
+      "source_script": "Move_HI_JUMP_KICK",
+      "status": false
+    },
+    {
+      "id": 137,
+      "internal": "DESLUMBRAR",
+      "name": "DESLUMBRAR",
+      "ruby_name": "GLARE",
+      "source_script": "Move_GLARE",
+      "status": true
+    },
+    {
+      "id": 138,
+      "internal": "COMESUENOS",
+      "name": "COME SUEÑOS",
+      "ruby_name": "DREAM_EATER",
+      "source_script": "Move_DREAM_EATER",
+      "status": false
+    },
+    {
+      "id": 139,
+      "internal": "GASVENENOSO",
+      "name": "GAS VENENOSO",
+      "ruby_name": "POISON_GAS",
+      "source_script": "Move_POISON_GAS",
+      "status": true
+    },
+    {
+      "id": 140,
+      "internal": "PRESA",
+      "name": "PRESA",
+      "ruby_name": "BARRAGE",
+      "source_script": "Move_BARRAGE",
+      "status": false
+    },
+    {
+      "id": 141,
+      "internal": "CHUPAVIDAS",
+      "name": "CHUPAVIDAS",
+      "ruby_name": "LEECH_LIFE",
+      "source_script": "Move_LEECH_LIFE",
+      "status": false
+    },
+    {
+      "id": 142,
+      "internal": "BESOAMOROSO",
+      "name": "BESO AMOROSO",
+      "ruby_name": "LOVELY_KISS",
+      "source_script": "Move_LOVELY_KISS",
+      "status": true
+    },
+    {
+      "id": 143,
+      "internal": "ATAQUEAEREO",
+      "name": "ATAQUE AÉREO",
+      "ruby_name": "SKY_ATTACK",
+      "source_script": "Move_SKY_ATTACK",
+      "status": false
+    },
+    {
+      "id": 144,
+      "internal": "TRANSFORM",
+      "name": "TRANSFORM",
+      "ruby_name": "TRANSFORM",
+      "source_script": "Move_TRANSFORM",
+      "status": true
+    },
+    {
+      "id": 145,
+      "internal": "BURBUJA",
+      "name": "BURBUJA",
+      "ruby_name": "BUBBLE",
+      "source_script": "Move_BUBBLE",
+      "status": false
+    },
+    {
+      "id": 146,
+      "internal": "PUNOMAREO",
+      "name": "PUÑO MAREO",
+      "ruby_name": "DIZZY_PUNCH",
+      "source_script": "Move_DIZZY_PUNCH",
+      "status": false
+    },
+    {
+      "id": 147,
+      "internal": "ESPORA",
+      "name": "ESPORA",
+      "ruby_name": "SPORE",
+      "source_script": "Move_SPORE",
+      "status": true
+    },
+    {
+      "id": 148,
+      "internal": "DESTELLO",
+      "name": "DESTELLO",
+      "ruby_name": "FLASH",
+      "source_script": "Move_FLASH",
+      "status": true
+    },
+    {
+      "id": 149,
+      "internal": "PSICOONDA",
+      "name": "PSICOONDA",
+      "ruby_name": "PSYWAVE",
+      "source_script": "Move_PSYWAVE",
+      "status": false
+    },
+    {
+      "id": 150,
+      "internal": "SALPICADURA",
+      "name": "SALPICADURA",
+      "ruby_name": "SPLASH",
+      "source_script": "Move_SPLASH",
+      "status": true
+    },
+    {
+      "id": 151,
+      "internal": "ARMADACIDA",
+      "name": "ARMAD. ÁCIDA",
+      "ruby_name": "ACID_ARMOR",
+      "source_script": "Move_ACID_ARMOR",
+      "status": true
+    },
+    {
+      "id": 152,
+      "internal": "MARTILLAZO",
+      "name": "MARTILLAZO",
+      "ruby_name": "CRABHAMMER",
+      "source_script": "Move_CRABHAMMER",
+      "status": false
+    },
+    {
+      "id": 153,
+      "internal": "EXPLOSION",
+      "name": "EXPLOSIÓN",
+      "ruby_name": "EXPLOSION",
+      "source_script": "Move_EXPLOSION",
+      "status": false
+    },
+    {
+      "id": 154,
+      "internal": "GOLPESFURIA",
+      "name": "GOLPES FURIA",
+      "ruby_name": "FURY_SWIPES",
+      "source_script": "Move_FURY_SWIPES",
+      "status": false
+    },
+    {
+      "id": 155,
+      "internal": "HUESOMERANG",
+      "name": "HUESOMERANG",
+      "ruby_name": "BONEMERANG",
+      "source_script": "Move_BONEMERANG",
+      "status": false
+    },
+    {
+      "id": 156,
+      "internal": "DESCANSO",
+      "name": "DESCANSO",
+      "ruby_name": "REST",
+      "source_script": "Move_REST",
+      "status": true
+    },
+    {
+      "id": 157,
+      "internal": "AVALANCHA",
+      "name": "AVALANCHA",
+      "ruby_name": "ROCK_SLIDE",
+      "source_script": "Move_ROCK_SLIDE",
+      "status": false
+    },
+    {
+      "id": 158,
+      "internal": "HIPCOLMILLO",
+      "name": "HIP.COLMILLO",
+      "ruby_name": "HYPER_FANG",
+      "source_script": "Move_HYPER_FANG",
+      "status": false
+    },
+    {
+      "id": 159,
+      "internal": "AFILAR",
+      "name": "AFILAR",
+      "ruby_name": "SHARPEN",
+      "source_script": "Move_SHARPEN",
+      "status": true
+    },
+    {
+      "id": 160,
+      "internal": "CONVERSION",
+      "name": "CONVERSIÓN",
+      "ruby_name": "CONVERSION",
+      "source_script": "Move_CONVERSION",
+      "status": true
+    },
+    {
+      "id": 161,
+      "internal": "TRIATAQUE",
+      "name": "TRIATAQUE",
+      "ruby_name": "TRI_ATTACK",
+      "source_script": "Move_TRI_ATTACK",
+      "status": false
+    },
+    {
+      "id": 162,
+      "internal": "SUPERDIENTE",
+      "name": "SUPERDIENTE",
+      "ruby_name": "SUPER_FANG",
+      "source_script": "Move_SUPER_FANG",
+      "status": false
+    },
+    {
+      "id": 163,
+      "internal": "CUCHILLADA",
+      "name": "CUCHILLADA",
+      "ruby_name": "SLASH",
+      "source_script": "Move_SLASH",
+      "status": false
+    },
+    {
+      "id": 164,
+      "internal": "SUSTITUTO",
+      "name": "SUSTITUTO",
+      "ruby_name": "SUBSTITUTE",
+      "source_script": "Move_SUBSTITUTE",
+      "status": true
+    },
+    {
+      "id": 165,
+      "internal": "COMBATE",
+      "name": "COMBATE",
+      "ruby_name": "STRUGGLE",
+      "source_script": "Move_STRUGGLE",
+      "status": false
+    },
+    {
+      "id": 166,
+      "internal": "ESQUEMA",
+      "name": "ESQUEMA",
+      "ruby_name": "SKETCH",
+      "source_script": "Move_SKETCH",
+      "status": true
+    },
+    {
+      "id": 167,
+      "internal": "TRIPLEPATADA",
+      "name": "TRIPLEPATADA",
+      "ruby_name": "TRIPLE_KICK",
+      "source_script": "Move_TRIPLE_KICK",
+      "status": false
+    },
+    {
+      "id": 168,
+      "internal": "LADRON",
+      "name": "LADRÓN",
+      "ruby_name": "THIEF",
+      "source_script": "Move_THIEF",
+      "status": false
+    },
+    {
+      "id": 169,
+      "internal": "TELARANA",
+      "name": "TELARAÑA",
+      "ruby_name": "SPIDER_WEB",
+      "source_script": "Move_SPIDER_WEB",
+      "status": true
+    },
+    {
+      "id": 170,
+      "internal": "TELEPATA",
+      "name": "TELÉPATA",
+      "ruby_name": "MIND_READER",
+      "source_script": "Move_MIND_READER",
+      "status": true
+    },
+    {
+      "id": 171,
+      "internal": "PESADILLA",
+      "name": "PESADILLA",
+      "ruby_name": "NIGHTMARE",
+      "source_script": "Move_NIGHTMARE",
+      "status": true
+    },
+    {
+      "id": 172,
+      "internal": "RUEDAFUEGO",
+      "name": "RUEDA FUEGO",
+      "ruby_name": "FLAME_WHEEL",
+      "source_script": "Move_FLAME_WHEEL",
+      "status": false
+    },
+    {
+      "id": 173,
+      "internal": "RONQUIDO",
+      "name": "RONQUIDO",
+      "ruby_name": "SNORE",
+      "source_script": "Move_SNORE",
+      "status": false
+    },
+    {
+      "id": 174,
+      "internal": "MALDICION",
+      "name": "MALDICIÓN",
+      "ruby_name": "CURSE",
+      "source_script": "Move_CURSE",
+      "status": true
+    },
+    {
+      "id": 175,
+      "internal": "AZOTE",
+      "name": "AZOTE",
+      "ruby_name": "FLAIL",
+      "source_script": "Move_FLAIL",
+      "status": false
+    },
+    {
+      "id": 176,
+      "internal": "CONVERSION2",
+      "name": "CONVERSIÓN2",
+      "ruby_name": "CONVERSION_2",
+      "source_script": "Move_CONVERSION_2",
+      "status": true
+    },
+    {
+      "id": 177,
+      "internal": "AEROCHORRO",
+      "name": "AEROCHORRO",
+      "ruby_name": "AEROBLAST",
+      "source_script": "Move_AEROBLAST",
+      "status": false
+    },
+    {
+      "id": 178,
+      "internal": "ESPORAGODON",
+      "name": "ESPORAGODÓN",
+      "ruby_name": "COTTON_SPORE",
+      "source_script": "Move_COTTON_SPORE",
+      "status": true
+    },
+    {
+      "id": 179,
+      "internal": "INVERSION",
+      "name": "INVERSIÓN",
+      "ruby_name": "REVERSAL",
+      "source_script": "Move_REVERSAL",
+      "status": false
+    },
+    {
+      "id": 180,
+      "internal": "RENCOR",
+      "name": "RENCOR",
+      "ruby_name": "SPITE",
+      "source_script": "Move_SPITE",
+      "status": true
+    },
+    {
+      "id": 181,
+      "internal": "NIEVEPOLVO",
+      "name": "NIEVE POLVO",
+      "ruby_name": "POWDER_SNOW",
+      "source_script": "Move_POWDER_SNOW",
+      "status": false
+    },
+    {
+      "id": 182,
+      "internal": "PROTECCION",
+      "name": "PROTECCIÓN",
+      "ruby_name": "PROTECT",
+      "source_script": "Move_PROTECT",
+      "status": true
+    },
+    {
+      "id": 183,
+      "internal": "ULTRAPUNO",
+      "name": "ULTRAPUÑO",
+      "ruby_name": "MACH_PUNCH",
+      "source_script": "Move_MACH_PUNCH",
+      "status": false
+    },
+    {
+      "id": 184,
+      "internal": "CARASUSTO",
+      "name": "CARA SUSTO",
+      "ruby_name": "SCARY_FACE",
+      "source_script": "Move_SCARY_FACE",
+      "status": true
+    },
+    {
+      "id": 185,
+      "internal": "FINTA",
+      "name": "FINTA",
+      "ruby_name": "FAINT_ATTACK",
+      "source_script": "Move_FAINT_ATTACK",
+      "status": false
+    },
+    {
+      "id": 186,
+      "internal": "BESODULCE",
+      "name": "BESO DULCE",
+      "ruby_name": "SWEET_KISS",
+      "source_script": "Move_SWEET_KISS",
+      "status": true
+    },
+    {
+      "id": 187,
+      "internal": "TAMBOR",
+      "name": "TAMBOR",
+      "ruby_name": "BELLY_DRUM",
+      "source_script": "Move_BELLY_DRUM",
+      "status": true
+    },
+    {
+      "id": 188,
+      "internal": "BOMBALODO",
+      "name": "BOMBA LODO",
+      "ruby_name": "SLUDGE_BOMB",
+      "source_script": "Move_SLUDGE_BOMB",
+      "status": false
+    },
+    {
+      "id": 189,
+      "internal": "BOFETONLODO",
+      "name": "BOFETÓN LODO",
+      "ruby_name": "MUD_SLAP",
+      "source_script": "Move_MUD_SLAP",
+      "status": false
+    },
+    {
+      "id": 190,
+      "internal": "PULPOCANON",
+      "name": "PULPOCAÑÓN",
+      "ruby_name": "OCTAZOOKA",
+      "source_script": "Move_OCTAZOOKA",
+      "status": false
+    },
+    {
+      "id": 191,
+      "internal": "PUAS",
+      "name": "PÚAS",
+      "ruby_name": "SPIKES",
+      "source_script": "Move_SPIKES",
+      "status": true
+    },
+    {
+      "id": 192,
+      "internal": "ELECTROCANON",
+      "name": "ELECTROCAÑÓN",
+      "ruby_name": "ZAP_CANNON",
+      "source_script": "Move_ZAP_CANNON",
+      "status": false
+    },
+    {
+      "id": 193,
+      "internal": "PROFECIA",
+      "name": "PROFECÍA",
+      "ruby_name": "FORESIGHT",
+      "source_script": "Move_FORESIGHT",
+      "status": true
+    },
+    {
+      "id": 194,
+      "internal": "MISMODESTINO",
+      "name": "MISMODESTINO",
+      "ruby_name": "DESTINY_BOND",
+      "source_script": "Move_DESTINY_BOND",
+      "status": true
+    },
+    {
+      "id": 195,
+      "internal": "CANTOMORTAL",
+      "name": "CANTO MORTAL",
+      "ruby_name": "PERISH_SONG",
+      "source_script": "Move_PERISH_SONG",
+      "status": true
+    },
+    {
+      "id": 196,
+      "internal": "VIENTOHIELO",
+      "name": "VIENTO HIELO",
+      "ruby_name": "ICY_WIND",
+      "source_script": "Move_ICY_WIND",
+      "status": false
+    },
+    {
+      "id": 197,
+      "internal": "DETECCION",
+      "name": "DETECCIÓN",
+      "ruby_name": "DETECT",
+      "source_script": "Move_DETECT",
+      "status": true
+    },
+    {
+      "id": 198,
+      "internal": "ATAQUEOSEO",
+      "name": "ATAQUE ÓSEO",
+      "ruby_name": "BONE_RUSH",
+      "source_script": "Move_BONE_RUSH",
+      "status": false
+    },
+    {
+      "id": 199,
+      "internal": "FIJARBLANCO",
+      "name": "FIJAR BLANCO",
+      "ruby_name": "LOCK_ON",
+      "source_script": "Move_LOCK_ON",
+      "status": true
+    },
+    {
+      "id": 200,
+      "internal": "ENFADO",
+      "name": "ENFADO",
+      "ruby_name": "OUTRAGE",
+      "source_script": "Move_OUTRAGE",
+      "status": false
+    },
+    {
+      "id": 201,
+      "internal": "TORMARENA",
+      "name": "TORM. ARENA",
+      "ruby_name": "SANDSTORM",
+      "source_script": "Move_SANDSTORM",
+      "status": true
+    },
+    {
+      "id": 202,
+      "internal": "GIGADRENADO",
+      "name": "GIGADRENADO",
+      "ruby_name": "GIGA_DRAIN",
+      "source_script": "Move_GIGA_DRAIN",
+      "status": false
+    },
+    {
+      "id": 203,
+      "internal": "AGUANTE",
+      "name": "AGUANTE",
+      "ruby_name": "ENDURE",
+      "source_script": "Move_ENDURE",
+      "status": true
+    },
+    {
+      "id": 204,
+      "internal": "ENCANTO",
+      "name": "ENCANTO",
+      "ruby_name": "CHARM",
+      "source_script": "Move_CHARM",
+      "status": true
+    },
+    {
+      "id": 205,
+      "internal": "DESENROLLAR",
+      "name": "DESENROLLAR",
+      "ruby_name": "ROLLOUT",
+      "source_script": "Move_ROLLOUT",
+      "status": false
+    },
+    {
+      "id": 206,
+      "internal": "FALSOTORTAZO",
+      "name": "FALSOTORTAZO",
+      "ruby_name": "FALSE_SWIPE",
+      "source_script": "Move_FALSE_SWIPE",
+      "status": false
+    },
+    {
+      "id": 207,
+      "internal": "CONTONEO",
+      "name": "CONTONEO",
+      "ruby_name": "SWAGGER",
+      "source_script": "Move_SWAGGER",
+      "status": true
+    },
+    {
+      "id": 208,
+      "internal": "BATIDO",
+      "name": "BATIDO",
+      "ruby_name": "MILK_DRINK",
+      "source_script": "Move_MILK_DRINK",
+      "status": true
+    },
+    {
+      "id": 209,
+      "internal": "CHISPA",
+      "name": "CHISPA",
+      "ruby_name": "SPARK",
+      "source_script": "Move_SPARK",
+      "status": false
+    },
+    {
+      "id": 210,
+      "internal": "CORTEFURIA",
+      "name": "CORTEFURIA",
+      "ruby_name": "FURY_CUTTER",
+      "source_script": "Move_FURY_CUTTER",
+      "status": false
+    },
+    {
+      "id": 211,
+      "internal": "ALADEACERO",
+      "name": "ALA DE ACERO",
+      "ruby_name": "STEEL_WING",
+      "source_script": "Move_STEEL_WING",
+      "status": false
+    },
+    {
+      "id": 212,
+      "internal": "MALDEOJO",
+      "name": "MAL DE OJO",
+      "ruby_name": "MEAN_LOOK",
+      "source_script": "Move_MEAN_LOOK",
+      "status": true
+    },
+    {
+      "id": 213,
+      "internal": "ATRACCION",
+      "name": "ATRACCIÓN",
+      "ruby_name": "ATTRACT",
+      "source_script": "Move_ATTRACT",
+      "status": true
+    },
+    {
+      "id": 214,
+      "internal": "SONAMBULO",
+      "name": "SONÁMBULO",
+      "ruby_name": "SLEEP_TALK",
+      "source_script": "Move_SLEEP_TALK",
+      "status": true
+    },
+    {
+      "id": 215,
+      "internal": "CAMPANACURA",
+      "name": "CAMPANA CURA",
+      "ruby_name": "HEAL_BELL",
+      "source_script": "Move_HEAL_BELL",
+      "status": true
+    },
+    {
+      "id": 216,
+      "internal": "RETROCESO",
+      "name": "RETROCESO",
+      "ruby_name": "RETURN",
+      "source_script": "Move_RETURN",
+      "status": false
+    },
+    {
+      "id": 217,
+      "internal": "PRESENTE",
+      "name": "PRESENTE",
+      "ruby_name": "PRESENT",
+      "source_script": "Move_PRESENT",
+      "status": false
+    },
+    {
+      "id": 218,
+      "internal": "FRUSTRACION",
+      "name": "FRUSTRACIÓN",
+      "ruby_name": "FRUSTRATION",
+      "source_script": "Move_FRUSTRATION",
+      "status": false
+    },
+    {
+      "id": 219,
+      "internal": "VELOSAGRADO",
+      "name": "VELO SAGRADO",
+      "ruby_name": "SAFEGUARD",
+      "source_script": "Move_SAFEGUARD",
+      "status": true
+    },
+    {
+      "id": 220,
+      "internal": "DIVIDEDOLOR",
+      "name": "DIVIDE DOLOR",
+      "ruby_name": "PAIN_SPLIT",
+      "source_script": "Move_PAIN_SPLIT",
+      "status": true
+    },
+    {
+      "id": 221,
+      "internal": "FUEGOSAGRADO",
+      "name": "FUEGOSAGRADO",
+      "ruby_name": "SACRED_FIRE",
+      "source_script": "Move_SACRED_FIRE",
+      "status": false
+    },
+    {
+      "id": 222,
+      "internal": "MAGNITUD",
+      "name": "MAGNITUD",
+      "ruby_name": "MAGNITUDE",
+      "source_script": "Move_MAGNITUDE",
+      "status": false
+    },
+    {
+      "id": 223,
+      "internal": "PUNODINAMICO",
+      "name": "PUÑODINÁMICO",
+      "ruby_name": "DYNAMIC_PUNCH",
+      "source_script": "Move_DYNAMIC_PUNCH",
+      "status": false
+    },
+    {
+      "id": 224,
+      "internal": "MEGACUERNO",
+      "name": "MEGACUERNO",
+      "ruby_name": "MEGAHORN",
+      "source_script": "Move_MEGAHORN",
+      "status": false
+    },
+    {
+      "id": 225,
+      "internal": "DRAGOALIENTO",
+      "name": "DRAGOALIENTO",
+      "ruby_name": "DRAGON_BREATH",
+      "source_script": "Move_DRAGON_BREATH",
+      "status": false
+    },
+    {
+      "id": 226,
+      "internal": "RELEVO",
+      "name": "RELEVO",
+      "ruby_name": "BATON_PASS",
+      "source_script": "Move_BATON_PASS",
+      "status": true
+    },
+    {
+      "id": 227,
+      "internal": "OTRAVEZ",
+      "name": "OTRA VEZ",
+      "ruby_name": "ENCORE",
+      "source_script": "Move_ENCORE",
+      "status": true
+    },
+    {
+      "id": 228,
+      "internal": "PERSECUCION",
+      "name": "PERSECUCIÓN",
+      "ruby_name": "PURSUIT",
+      "source_script": "Move_PURSUIT",
+      "status": false
+    },
+    {
+      "id": 229,
+      "internal": "GIRORAPIDO",
+      "name": "GIRO RÁPIDO",
+      "ruby_name": "RAPID_SPIN",
+      "source_script": "Move_RAPID_SPIN",
+      "status": false
+    },
+    {
+      "id": 230,
+      "internal": "DULCEAROMA",
+      "name": "DULCE AROMA",
+      "ruby_name": "SWEET_SCENT",
+      "source_script": "Move_SWEET_SCENT",
+      "status": true
+    },
+    {
+      "id": 231,
+      "internal": "COLAFERREA",
+      "name": "COLA FÉRREA",
+      "ruby_name": "IRON_TAIL",
+      "source_script": "Move_IRON_TAIL",
+      "status": false
+    },
+    {
+      "id": 232,
+      "internal": "GARRAMETAL",
+      "name": "GARRA METAL",
+      "ruby_name": "METAL_CLAW",
+      "source_script": "Move_METAL_CLAW",
+      "status": false
+    },
+    {
+      "id": 233,
+      "internal": "TIROVITAL",
+      "name": "TIRO VITAL",
+      "ruby_name": "VITAL_THROW",
+      "source_script": "Move_VITAL_THROW",
+      "status": false
+    },
+    {
+      "id": 234,
+      "internal": "SOLMATINAL",
+      "name": "SOL MATINAL",
+      "ruby_name": "MORNING_SUN",
+      "source_script": "Move_MORNING_SUN",
+      "status": true
+    },
+    {
+      "id": 235,
+      "internal": "SINTESIS",
+      "name": "SÍNTESIS",
+      "ruby_name": "SYNTHESIS",
+      "source_script": "Move_SYNTHESIS",
+      "status": true
+    },
+    {
+      "id": 236,
+      "internal": "LUZLUNAR",
+      "name": "LUZ LUNAR",
+      "ruby_name": "MOONLIGHT",
+      "source_script": "Move_MOONLIGHT",
+      "status": true
+    },
+    {
+      "id": 237,
+      "internal": "PODEROCULTO",
+      "name": "PODER OCULTO",
+      "ruby_name": "HIDDEN_POWER",
+      "source_script": "Move_HIDDEN_POWER",
+      "status": false
+    },
+    {
+      "id": 238,
+      "internal": "TAJOCRUZADO",
+      "name": "TAJO CRUZADO",
+      "ruby_name": "CROSS_CHOP",
+      "source_script": "Move_CROSS_CHOP",
+      "status": false
+    },
+    {
+      "id": 239,
+      "internal": "CICLON",
+      "name": "CICLÓN",
+      "ruby_name": "TWISTER",
+      "source_script": "Move_TWISTER",
+      "status": false
+    },
+    {
+      "id": 240,
+      "internal": "DANZALLUVIA",
+      "name": "DANZA LLUVIA",
+      "ruby_name": "RAIN_DANCE",
+      "source_script": "Move_RAIN_DANCE",
+      "status": true
+    },
+    {
+      "id": 241,
+      "internal": "DIASOLEADO",
+      "name": "DÍA SOLEADO",
+      "ruby_name": "SUNNY_DAY",
+      "source_script": "Move_SUNNY_DAY",
+      "status": true
+    },
+    {
+      "id": 242,
+      "internal": "TRITURAR",
+      "name": "TRITURAR",
+      "ruby_name": "CRUNCH",
+      "source_script": "Move_CRUNCH",
+      "status": false
+    },
+    {
+      "id": 243,
+      "internal": "MANTOESPEJO",
+      "name": "MANTO ESPEJO",
+      "ruby_name": "MIRROR_COAT",
+      "source_script": "Move_MIRROR_COAT",
+      "status": false
+    },
+    {
+      "id": 244,
+      "internal": "MASPSIQUE",
+      "name": "MÁS PSIQUE",
+      "ruby_name": "PSYCH_UP",
+      "source_script": "Move_PSYCH_UP",
+      "status": true
+    },
+    {
+      "id": 245,
+      "internal": "VELEXTREMA",
+      "name": "VEL. EXTREMA",
+      "ruby_name": "EXTREME_SPEED",
+      "source_script": "Move_EXTREME_SPEED",
+      "status": false
+    },
+    {
+      "id": 246,
+      "internal": "PODERPASADO",
+      "name": "PODER PASADO",
+      "ruby_name": "ANCIENT_POWER",
+      "source_script": "Move_ANCIENT_POWER",
+      "status": false
+    },
+    {
+      "id": 247,
+      "internal": "BOLASOMBRA",
+      "name": "BOLA SOMBRA",
+      "ruby_name": "SHADOW_BALL",
+      "source_script": "Move_SHADOW_BALL",
+      "status": false
+    },
+    {
+      "id": 248,
+      "internal": "PREMONICION",
+      "name": "PREMONICIÓN",
+      "ruby_name": "FUTURE_SIGHT",
+      "source_script": "Move_FUTURE_SIGHT",
+      "status": false
+    },
+    {
+      "id": 249,
+      "internal": "GOLPEROCA",
+      "name": "GOLPE ROCA",
+      "ruby_name": "ROCK_SMASH",
+      "source_script": "Move_ROCK_SMASH",
+      "status": false
+    },
+    {
+      "id": 250,
+      "internal": "TORBELLINO",
+      "name": "TORBELLINO",
+      "ruby_name": "WHIRLPOOL",
+      "source_script": "Move_WHIRLPOOL",
+      "status": false
+    },
+    {
+      "id": 251,
+      "internal": "PALIZA",
+      "name": "PALIZA",
+      "ruby_name": "BEAT_UP",
+      "source_script": "Move_BEAT_UP",
+      "status": false
+    },
+    {
+      "id": 252,
+      "internal": "SORPRESA",
+      "name": "SORPRESA",
+      "ruby_name": "FAKE_OUT",
+      "source_script": "Move_FAKE_OUT",
+      "status": false
+    },
+    {
+      "id": 253,
+      "internal": "ALBOROTO",
+      "name": "ALBOROTO",
+      "ruby_name": "UPROAR",
+      "source_script": "Move_UPROAR",
+      "status": false
+    },
+    {
+      "id": 254,
+      "internal": "RESERVA",
+      "name": "RESERVA",
+      "ruby_name": "STOCKPILE",
+      "source_script": "Move_STOCKPILE",
+      "status": true
+    },
+    {
+      "id": 255,
+      "internal": "ESCUPIR",
+      "name": "ESCUPIR",
+      "ruby_name": "SPIT_UP",
+      "source_script": "Move_SPIT_UP",
+      "status": false
+    },
+    {
+      "id": 256,
+      "internal": "TRAGAR",
+      "name": "TRAGAR",
+      "ruby_name": "SWALLOW",
+      "source_script": "Move_SWALLOW",
+      "status": true
+    },
+    {
+      "id": 257,
+      "internal": "ONDAIGNEA",
+      "name": "ONDA ÍGNEA",
+      "ruby_name": "HEAT_WAVE",
+      "source_script": "Move_HEAT_WAVE",
+      "status": false
+    },
+    {
+      "id": 258,
+      "internal": "GRANIZO",
+      "name": "GRANIZO",
+      "ruby_name": "HAIL",
+      "source_script": "Move_HAIL",
+      "status": true
+    },
+    {
+      "id": 259,
+      "internal": "TORMENTO",
+      "name": "TORMENTO",
+      "ruby_name": "TORMENT",
+      "source_script": "Move_TORMENT",
+      "status": true
+    },
+    {
+      "id": 260,
+      "internal": "CAMELO",
+      "name": "CAMELO",
+      "ruby_name": "FLATTER",
+      "source_script": "Move_FLATTER",
+      "status": true
+    },
+    {
+      "id": 261,
+      "internal": "FUEGOFATUO",
+      "name": "FUEGO FATUO",
+      "ruby_name": "WILL_O_WISP",
+      "source_script": "Move_WILL_O_WISP",
+      "status": true
+    },
+    {
+      "id": 262,
+      "internal": "LEGADO",
+      "name": "LEGADO",
+      "ruby_name": "MEMENTO",
+      "source_script": "Move_MEMENTO",
+      "status": true
+    },
+    {
+      "id": 263,
+      "internal": "IMAGEN",
+      "name": "IMAGEN",
+      "ruby_name": "FACADE",
+      "source_script": "Move_FACADE",
+      "status": false
+    },
+    {
+      "id": 264,
+      "internal": "PUNOCERTERO",
+      "name": "PUÑO CERTERO",
+      "ruby_name": "FOCUS_PUNCH",
+      "source_script": "Move_FOCUS_PUNCH",
+      "status": false
+    },
+    {
+      "id": 265,
+      "internal": "ESTIMULO",
+      "name": "ESTÍMULO",
+      "ruby_name": "SMELLING_SALT",
+      "source_script": "Move_SMELLING_SALT",
+      "status": false
+    },
+    {
+      "id": 266,
+      "internal": "SENUELO",
+      "name": "SEÑUELO",
+      "ruby_name": "FOLLOW_ME",
+      "source_script": "Move_FOLLOW_ME",
+      "status": true
+    },
+    {
+      "id": 267,
+      "internal": "ADAPTACION",
+      "name": "ADAPTACIÓN",
+      "ruby_name": "NATURE_POWER",
+      "source_script": "Move_ANCIENT_POWER",
+      "status": true
+    },
+    {
+      "id": 268,
+      "internal": "CARGA",
+      "name": "CARGA",
+      "ruby_name": "CHARGE",
+      "source_script": "Move_CHARGE",
+      "status": true
+    },
+    {
+      "id": 269,
+      "internal": "MOFA",
+      "name": "MOFA",
+      "ruby_name": "TAUNT",
+      "source_script": "Move_TAUNT",
+      "status": true
+    },
+    {
+      "id": 270,
+      "internal": "REFUERZO",
+      "name": "REFUERZO",
+      "ruby_name": "HELPING_HAND",
+      "source_script": "Move_HELPING_HAND",
+      "status": true
+    },
+    {
+      "id": 271,
+      "internal": "TRUCO",
+      "name": "TRUCO",
+      "ruby_name": "TRICK",
+      "source_script": "Move_TRICK",
+      "status": true
+    },
+    {
+      "id": 272,
+      "internal": "IMITACION",
+      "name": "IMITACIÓN",
+      "ruby_name": "ROLE_PLAY",
+      "source_script": "Move_ROLE_PLAY",
+      "status": true
+    },
+    {
+      "id": 273,
+      "internal": "DESEO",
+      "name": "DESEO",
+      "ruby_name": "WISH",
+      "source_script": "Move_WISH",
+      "status": true
+    },
+    {
+      "id": 274,
+      "internal": "AYUDA",
+      "name": "AYUDA",
+      "ruby_name": "ASSIST",
+      "source_script": "Move_ASSIST",
+      "status": true
+    },
+    {
+      "id": 275,
+      "internal": "ARRAIGO",
+      "name": "ARRAIGO",
+      "ruby_name": "INGRAIN",
+      "source_script": "Move_INGRAIN",
+      "status": true
+    },
+    {
+      "id": 276,
+      "internal": "FUERZABRUTA",
+      "name": "FUERZA BRUTA",
+      "ruby_name": "SUPERPOWER",
+      "source_script": "Move_SUPERPOWER",
+      "status": false
+    },
+    {
+      "id": 277,
+      "internal": "CAPAMAGICA",
+      "name": "CAPA MÁGICA",
+      "ruby_name": "MAGIC_COAT",
+      "source_script": "Move_MAGIC_COAT",
+      "status": true
+    },
+    {
+      "id": 278,
+      "internal": "RECICLAJE",
+      "name": "RECICLAJE",
+      "ruby_name": "RECYCLE",
+      "source_script": "Move_RECYCLE",
+      "status": true
+    },
+    {
+      "id": 279,
+      "internal": "DESQUITE",
+      "name": "DESQUITE",
+      "ruby_name": "REVENGE",
+      "source_script": "Move_REVENGE",
+      "status": false
+    },
+    {
+      "id": 280,
+      "internal": "DEMOLICION",
+      "name": "DEMOLICIÓN",
+      "ruby_name": "BRICK_BREAK",
+      "source_script": "Move_BRICK_BREAK",
+      "status": false
+    },
+    {
+      "id": 281,
+      "internal": "BOSTEZO",
+      "name": "BOSTEZO",
+      "ruby_name": "YAWN",
+      "source_script": "Move_YAWN",
+      "status": true
+    },
+    {
+      "id": 282,
+      "internal": "DESARME",
+      "name": "DESARME",
+      "ruby_name": "KNOCK_OFF",
+      "source_script": "Move_KNOCK_OFF",
+      "status": false
+    },
+    {
+      "id": 283,
+      "internal": "ESFUERZO",
+      "name": "ESFUERZO",
+      "ruby_name": "ENDEAVOR",
+      "source_script": "Move_ENDEAVOR",
+      "status": false
+    },
+    {
+      "id": 284,
+      "internal": "ESTALLIDO",
+      "name": "ESTALLIDO",
+      "ruby_name": "ERUPTION",
+      "source_script": "Move_ERUPTION",
+      "status": false
+    },
+    {
+      "id": 285,
+      "internal": "INTERCAMBIO",
+      "name": "INTERCAMBIO",
+      "ruby_name": "SKILL_SWAP",
+      "source_script": "Move_SKILL_SWAP",
+      "status": true
+    },
+    {
+      "id": 286,
+      "internal": "CERCA",
+      "name": "CERCA",
+      "ruby_name": "IMPRISON",
+      "source_script": "Move_IMPRISON",
+      "status": true
+    },
+    {
+      "id": 287,
+      "internal": "ALIVIO",
+      "name": "ALIVIO",
+      "ruby_name": "REFRESH",
+      "source_script": "Move_REFRESH",
+      "status": true
+    },
+    {
+      "id": 288,
+      "internal": "RABIA",
+      "name": "RABIA",
+      "ruby_name": "GRUDGE",
+      "source_script": "Move_GRUDGE",
+      "status": true
+    },
+    {
+      "id": 289,
+      "internal": "ROBO",
+      "name": "ROBO",
+      "ruby_name": "SNATCH",
+      "source_script": "Move_SNATCH",
+      "status": true
+    },
+    {
+      "id": 290,
+      "internal": "DANOSECRETO",
+      "name": "DAÑO SECRETO",
+      "ruby_name": "SECRET_POWER",
+      "source_script": "Move_SECRET_POWER",
+      "status": false
+    },
+    {
+      "id": 291,
+      "internal": "BUCEO",
+      "name": "BUCEO",
+      "ruby_name": "DIVE",
+      "source_script": "Move_DIVE",
+      "status": false
+    },
+    {
+      "id": 292,
+      "internal": "EMPUJON",
+      "name": "EMPUJÓN",
+      "ruby_name": "ARM_THRUST",
+      "source_script": "Move_ARM_THRUST",
+      "status": false
+    },
+    {
+      "id": 293,
+      "internal": "CAMUFLAJE",
+      "name": "CAMUFLAJE",
+      "ruby_name": "CAMOUFLAGE",
+      "source_script": "Move_CAMOUFLAGE",
+      "status": true
+    },
+    {
+      "id": 294,
+      "internal": "RAFAGA",
+      "name": "RÁFAGA",
+      "ruby_name": "TAIL_GLOW",
+      "source_script": "Move_TAIL_GLOW",
+      "status": true
+    },
+    {
+      "id": 295,
+      "internal": "RESPLANDOR",
+      "name": "RESPLANDOR",
+      "ruby_name": "LUSTER_PURGE",
+      "source_script": "Move_LUSTER_PURGE",
+      "status": false
+    },
+    {
+      "id": 296,
+      "internal": "BOLANEBLINA",
+      "name": "BOLA NEBLINA",
+      "ruby_name": "MIST_BALL",
+      "source_script": "Move_MIST_BALL",
+      "status": false
+    },
+    {
+      "id": 297,
+      "internal": "DANZAPLUMA",
+      "name": "DANZA PLUMA",
+      "ruby_name": "FEATHER_DANCE",
+      "source_script": "Move_FEATHER_DANCE",
+      "status": true
+    },
+    {
+      "id": 298,
+      "internal": "DANZACAOS",
+      "name": "DANZA CAOS",
+      "ruby_name": "TEETER_DANCE",
+      "source_script": "Move_TEETER_DANCE",
+      "status": true
+    },
+    {
+      "id": 299,
+      "internal": "PATADAIGNEA",
+      "name": "PATADA ÍGNEA",
+      "ruby_name": "BLAZE_KICK",
+      "source_script": "Move_BLAZE_KICK",
+      "status": false
+    },
+    {
+      "id": 300,
+      "internal": "CHAPOTEOLODO",
+      "name": "CHAPOTEOLODO",
+      "ruby_name": "MUD_SPORT",
+      "source_script": "Move_MUD_SPORT",
+      "status": true
+    },
+    {
+      "id": 301,
+      "internal": "BOLAHIELO",
+      "name": "BOLA HIELO",
+      "ruby_name": "ICE_BALL",
+      "source_script": "Move_ICE_BALL",
+      "status": false
+    },
+    {
+      "id": 302,
+      "internal": "BRAZOPINCHO",
+      "name": "BRAZO PINCHO",
+      "ruby_name": "NEEDLE_ARM",
+      "source_script": "Move_NEEDLE_ARM",
+      "status": false
+    },
+    {
+      "id": 303,
+      "internal": "RELAJO",
+      "name": "RELAJO",
+      "ruby_name": "SLACK_OFF",
+      "source_script": "Move_SLACK_OFF",
+      "status": true
+    },
+    {
+      "id": 304,
+      "internal": "VOZARRON",
+      "name": "VOZARRÓN",
+      "ruby_name": "HYPER_VOICE",
+      "source_script": "Move_HYPER_VOICE",
+      "status": false
+    },
+    {
+      "id": 305,
+      "internal": "COLMILLOVEN",
+      "name": "COLMILLO VEN",
+      "ruby_name": "POISON_FANG",
+      "source_script": "Move_POISON_FANG",
+      "status": false
+    },
+    {
+      "id": 306,
+      "internal": "GARRABRUTAL",
+      "name": "GARRA BRUTAL",
+      "ruby_name": "CRUSH_CLAW",
+      "source_script": "Move_CRUSH_CLAW",
+      "status": false
+    },
+    {
+      "id": 307,
+      "internal": "ANILLOIGNEO",
+      "name": "ANILLO ÍGNEO",
+      "ruby_name": "BLAST_BURN",
+      "source_script": "Move_BLAST_BURN",
+      "status": false
+    },
+    {
+      "id": 308,
+      "internal": "HIDROCANON",
+      "name": "HIDROCAÑÓN",
+      "ruby_name": "HYDRO_CANNON",
+      "source_script": "Move_HYDRO_CANNON",
+      "status": false
+    },
+    {
+      "id": 309,
+      "internal": "PUNOMETEORO",
+      "name": "PUÑO METEORO",
+      "ruby_name": "METEOR_MASH",
+      "source_script": "Move_METEOR_MASH",
+      "status": false
+    },
+    {
+      "id": 310,
+      "internal": "IMPRESIONAR",
+      "name": "IMPRESIONAR",
+      "ruby_name": "ASTONISH",
+      "source_script": "Move_ASTONISH",
+      "status": false
+    },
+    {
+      "id": 311,
+      "internal": "METEOROBOLA",
+      "name": "METEOROBOLA",
+      "ruby_name": "WEATHER_BALL",
+      "source_script": "Move_WEATHER_BALL",
+      "status": false
+    },
+    {
+      "id": 312,
+      "internal": "AROMATERAPIA",
+      "name": "AROMATERAPIA",
+      "ruby_name": "AROMATHERAPY",
+      "source_script": "Move_AROMATHERAPY",
+      "status": true
+    },
+    {
+      "id": 313,
+      "internal": "LLANTOFALSO",
+      "name": "LLANTO FALSO",
+      "ruby_name": "FAKE_TEARS",
+      "source_script": "Move_FAKE_TEARS",
+      "status": true
+    },
+    {
+      "id": 314,
+      "internal": "AIREAFILADO",
+      "name": "AIRE AFILADO",
+      "ruby_name": "AIR_CUTTER",
+      "source_script": "Move_AIR_CUTTER",
+      "status": false
+    },
+    {
+      "id": 315,
+      "internal": "SOFOCO",
+      "name": "SOFOCO",
+      "ruby_name": "OVERHEAT",
+      "source_script": "Move_OVERHEAT",
+      "status": false
+    },
+    {
+      "id": 316,
+      "internal": "RASTREO",
+      "name": "RASTREO",
+      "ruby_name": "ODOR_SLEUTH",
+      "source_script": "Move_ODOR_SLEUTH",
+      "status": true
+    },
+    {
+      "id": 317,
+      "internal": "TUMBAROCAS",
+      "name": "TUMBA ROCAS",
+      "ruby_name": "ROCK_TOMB",
+      "source_script": "Move_ROCK_TOMB",
+      "status": false
+    },
+    {
+      "id": 318,
+      "internal": "VIENTOPLATA",
+      "name": "VIENTO PLATA",
+      "ruby_name": "SILVER_WIND",
+      "source_script": "Move_SILVER_WIND",
+      "status": false
+    },
+    {
+      "id": 319,
+      "internal": "ECOMETALICO",
+      "name": "ECO METÁLICO",
+      "ruby_name": "METAL_SOUND",
+      "source_script": "Move_METAL_SOUND",
+      "status": true
+    },
+    {
+      "id": 320,
+      "internal": "SILBATO",
+      "name": "SILBATO",
+      "ruby_name": "GRASS_WHISTLE",
+      "source_script": "Move_GRASS_WHISTLE",
+      "status": true
+    },
+    {
+      "id": 321,
+      "internal": "COSQUILLAS",
+      "name": "COSQUILLAS",
+      "ruby_name": "TICKLE",
+      "source_script": "Move_TICKLE",
+      "status": true
+    },
+    {
+      "id": 322,
+      "internal": "MASACOSMICA",
+      "name": "MASA CÓSMICA",
+      "ruby_name": "COSMIC_POWER",
+      "source_script": "Move_COSMIC_POWER",
+      "status": true
+    },
+    {
+      "id": 323,
+      "internal": "SALPICAR",
+      "name": "SALPICAR",
+      "ruby_name": "WATER_SPOUT",
+      "source_script": "Move_WATER_SPOUT",
+      "status": false
+    },
+    {
+      "id": 324,
+      "internal": "DOBLERAYO",
+      "name": "DOBLE RAYO",
+      "ruby_name": "SIGNAL_BEAM",
+      "source_script": "Move_SIGNAL_BEAM",
+      "status": false
+    },
+    {
+      "id": 325,
+      "internal": "PUNOSOMBRA",
+      "name": "PUÑO SOMBRA",
+      "ruby_name": "SHADOW_PUNCH",
+      "source_script": "Move_SHADOW_PUNCH",
+      "status": false
+    },
+    {
+      "id": 326,
+      "internal": "PARANORMAL",
+      "name": "PARANORMAL",
+      "ruby_name": "EXTRASENSORY",
+      "source_script": "Move_EXTRASENSORY",
+      "status": false
+    },
+    {
+      "id": 327,
+      "internal": "GANCHOALTO",
+      "name": "GANCHO ALTO",
+      "ruby_name": "SKY_UPPERCUT",
+      "source_script": "Move_SKY_UPPERCUT",
+      "status": false
+    },
+    {
+      "id": 328,
+      "internal": "BUCLEARENA",
+      "name": "BUCLE ARENA",
+      "ruby_name": "SAND_TOMB",
+      "source_script": "Move_SAND_TOMB",
+      "status": false
+    },
+    {
+      "id": 329,
+      "internal": "FRIOPOLAR",
+      "name": "FRÍO POLAR",
+      "ruby_name": "SHEER_COLD",
+      "source_script": "Move_SHEER_COLD",
+      "status": false
+    },
+    {
+      "id": 330,
+      "internal": "AGUALODOSA",
+      "name": "AGUA LODOSA",
+      "ruby_name": "MUDDY_WATER",
+      "source_script": "Move_MUDDY_WATER",
+      "status": false
+    },
+    {
+      "id": 331,
+      "internal": "RECURRENTE",
+      "name": "RECURRENTE",
+      "ruby_name": "BULLET_SEED",
+      "source_script": "Move_BULLET_SEED",
+      "status": false
+    },
+    {
+      "id": 332,
+      "internal": "GOLPEAEREO",
+      "name": "GOLPE AÉREO",
+      "ruby_name": "AERIAL_ACE",
+      "source_script": "Move_AERIAL_ACE",
+      "status": false
+    },
+    {
+      "id": 333,
+      "internal": "CARAMBANO",
+      "name": "CARÁMBANO",
+      "ruby_name": "ICICLE_SPEAR",
+      "source_script": "Move_ICICLE_SPEAR",
+      "status": false
+    },
+    {
+      "id": 334,
+      "internal": "DEFFERREA",
+      "name": "DEF. FÉRREA",
+      "ruby_name": "IRON_DEFENSE",
+      "source_script": "Move_IRON_DEFENSE",
+      "status": true
+    },
+    {
+      "id": 335,
+      "internal": "BLOQUEO",
+      "name": "BLOQUEO",
+      "ruby_name": "BLOCK",
+      "source_script": "Move_BLOCK",
+      "status": true
+    },
+    {
+      "id": 336,
+      "internal": "AULLIDO",
+      "name": "AULLIDO",
+      "ruby_name": "HOWL",
+      "source_script": "Move_HOWL",
+      "status": true
+    },
+    {
+      "id": 337,
+      "internal": "GARRADRAGON",
+      "name": "GARRA DRAGÓN",
+      "ruby_name": "DRAGON_CLAW",
+      "source_script": "Move_DRAGON_CLAW",
+      "status": false
+    },
+    {
+      "id": 338,
+      "internal": "PLANTAFEROZ",
+      "name": "PLANTA FEROZ",
+      "ruby_name": "FRENZY_PLANT",
+      "source_script": "Move_FRENZY_PLANT",
+      "status": false
+    },
+    {
+      "id": 339,
+      "internal": "CORPULENCIA",
+      "name": "CORPULENCIA",
+      "ruby_name": "BULK_UP",
+      "source_script": "Move_BULK_UP",
+      "status": true
+    },
+    {
+      "id": 340,
+      "internal": "BOTE",
+      "name": "BOTE",
+      "ruby_name": "BOUNCE",
+      "source_script": "Move_BOUNCE",
+      "status": false
+    },
+    {
+      "id": 341,
+      "internal": "DISPLODO",
+      "name": "DISP. LODO",
+      "ruby_name": "MUD_SHOT",
+      "source_script": "Move_MUD_SHOT",
+      "status": false
+    },
+    {
+      "id": 342,
+      "internal": "COLAVENENO",
+      "name": "COLA VENENO",
+      "ruby_name": "POISON_TAIL",
+      "source_script": "Move_POISON_TAIL",
+      "status": false
+    },
+    {
+      "id": 343,
+      "internal": "ANTOJO",
+      "name": "ANTOJO",
+      "ruby_name": "COVET",
+      "source_script": "Move_COVET",
+      "status": false
+    },
+    {
+      "id": 344,
+      "internal": "PLACAJEELEC",
+      "name": "PLACAJE ELÉC",
+      "ruby_name": "VOLT_TACKLE",
+      "source_script": "Move_VOLT_TACKLE",
+      "status": false
+    },
+    {
+      "id": 345,
+      "internal": "HOJAMAGICA",
+      "name": "HOJA MÁGICA",
+      "ruby_name": "MAGICAL_LEAF",
+      "source_script": "Move_MAGICAL_LEAF",
+      "status": false
+    },
+    {
+      "id": 346,
+      "internal": "HIDROCHORRO",
+      "name": "HIDROCHORRO",
+      "ruby_name": "WATER_SPORT",
+      "source_script": "Move_WATER_SPORT",
+      "status": true
+    },
+    {
+      "id": 347,
+      "internal": "PAZMENTAL",
+      "name": "PAZ MENTAL",
+      "ruby_name": "CALM_MIND",
+      "source_script": "Move_CALM_MIND",
+      "status": true
+    },
+    {
+      "id": 348,
+      "internal": "HOJAAGUDA",
+      "name": "HOJA AGUDA",
+      "ruby_name": "LEAF_BLADE",
+      "source_script": "Move_LEAF_BLADE",
+      "status": false
+    },
+    {
+      "id": 349,
+      "internal": "DANZADRAGON",
+      "name": "DANZA DRAGÓN",
+      "ruby_name": "DRAGON_DANCE",
+      "source_script": "Move_DRAGON_DANCE",
+      "status": true
+    },
+    {
+      "id": 350,
+      "internal": "PEDRADA",
+      "name": "PEDRADA",
+      "ruby_name": "ROCK_BLAST",
+      "source_script": "Move_ROCK_BLAST",
+      "status": false
+    },
+    {
+      "id": 351,
+      "internal": "ONDAVOLTIO",
+      "name": "ONDA VOLTIO",
+      "ruby_name": "SHOCK_WAVE",
+      "source_script": "Move_SHOCK_WAVE",
+      "status": false
+    },
+    {
+      "id": 352,
+      "internal": "HIDROPULSO",
+      "name": "HIDROPULSO",
+      "ruby_name": "WATER_PULSE",
+      "source_script": "Move_WATER_PULSE",
+      "status": false
+    },
+    {
+      "id": 353,
+      "internal": "DESEOOCULTO",
+      "name": "DESEO OCULTO",
+      "ruby_name": "DOOM_DESIRE",
+      "source_script": "Move_DOOM_DESIRE",
+      "status": false
+    },
+    {
+      "id": 354,
+      "internal": "PSICOATAQUE",
+      "name": "PSICOATAQUE",
+      "ruby_name": "PSYCHO_BOOST",
+      "source_script": "Move_PSYCHO_BOOST",
+      "status": false
+    }
+  ]
+}

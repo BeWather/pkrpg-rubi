@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b37v5lfy0n5j0"
+path="res://.godot/imported/PRSFX- Thunderbolt1.wav-baf1297bf78fe996ba058c9bd3e39dd6.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Thunderbolt1.wav"
+dest_files=["res://.godot/imported/PRSFX- Thunderbolt1.wav-baf1297bf78fe996ba058c9bd3e39dd6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

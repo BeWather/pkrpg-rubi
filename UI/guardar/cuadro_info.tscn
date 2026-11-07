@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://cwneab15eoq13"]
+
+[ext_resource type="Script" uid="uid://b0vn507clx1di" path="res://UI/guardar/cuadro_info.gd" id="2_ep5r5"]
+[ext_resource type="Texture2D" uid="uid://v6kexaw8rq10" path="res://UI/menu_box_1.png" id="2_ie7ss"]
+[ext_resource type="FontFile" uid="uid://sjg1yy1250d5" path="res://fuentes/pokemon-rs.ttf" id="3_ep5r5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_hlp3a"]
+font = ExtResource("3_ep5r5")
+font_size = 15
+font_color = Color(0.165656, 0.165656, 0.165656, 1)
+shadow_size = 0
+shadow_color = Color(0.454902, 0.454902, 0.454902, 0.588235)
+shadow_offset = Vector2(1, 0)
+
+[node name="CuadroInfo" type="NinePatchRect" unique_id=1240045839]
+offset_right = 112.0
+offset_bottom = 96.0
+texture = ExtResource("2_ie7ss")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+script = ExtResource("2_ep5r5")
+
+[node name="localizacion" type="Label" parent="." unique_id=253771450]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 50.0
+offset_bottom = 23.0
+text = "PUEBLO ESCASO"
+label_settings = SubResource("LabelSettings_hlp3a")
+language = "es_AR"
+
+[node name="lb_jugador" type="Label" parent="." unique_id=222307739]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 24.0
+offset_right = 64.0
+offset_bottom = 39.0
+text = "JUGADOR"
+label_settings = SubResource("LabelSettings_hlp3a")
+language = "es_AR"
+
+[node name="lb_medallas" type="Label" parent="." unique_id=1934355797]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 40.0
+offset_right = 64.0
+offset_bottom = 55.0
+text = "MEDALLAS"
+label_settings = SubResource("LabelSettings_hlp3a")
+language = "es_AR"
+
+[node name="lb_pokedex" type="Label" parent="." unique_id=1828694419]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 56.0
+offset_right = 64.0
+offset_bottom = 71.0
+text = "POKéDEX"
+label_settings = SubResource("LabelSettings_hlp3a")
+language = "es_AR"
+
+[node name="lb_tiempo" type="Label" parent="." unique_id=951165307]
+texture_filter = 1
+layout_mode = 0
+offset_left = 8.0
+offset_top = 72.0
+offset_right = 64.0
+offset_bottom = 87.0
+text = "TIEMPO J."
+label_settings = SubResource("LabelSettings_hlp3a")
+language = "es_AR"
+
+[node name="jugador" type="Label" parent="." unique_id=1585302889]
+texture_filter = 1
+layout_mode = 0
+offset_left = 56.0
+offset_top = 24.0
+offset_right = 104.0
+offset_bottom = 39.0
+text = "ROJOooo"
+label_settings = SubResource("LabelSettings_hlp3a")
+horizontal_alignment = 2
+language = "es_AR"
+
+[node name="medallas" type="Label" parent="." unique_id=913940399]
+texture_filter = 1
+layout_mode = 0
+offset_left = 56.0
+offset_top = 40.0
+offset_right = 104.0
+offset_bottom = 55.0
+text = "8"
+label_settings = SubResource("LabelSettings_hlp3a")
+horizontal_alignment = 2
+language = "es_AR"
+
+[node name="pokedex" type="Label" parent="." unique_id=97720021]
+texture_filter = 1
+layout_mode = 0
+offset_left = 56.0
+offset_top = 56.0
+offset_right = 104.0
+offset_bottom = 71.0
+text = "1013"
+label_settings = SubResource("LabelSettings_hlp3a")
+horizontal_alignment = 2
+language = "es_AR"
+
+[node name="tiempo_juego" type="Label" parent="." unique_id=1305363125]
+texture_filter = 1
+layout_mode = 0
+offset_left = 56.0
+offset_top = 72.0
+offset_right = 104.0
+offset_bottom = 87.0
+text = "124:10"
+label_settings = SubResource("LabelSettings_hlp3a")
+horizontal_alignment = 2
+language = "es_AR"

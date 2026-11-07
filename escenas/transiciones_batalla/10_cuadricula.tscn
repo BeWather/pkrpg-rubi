@@ -1,0 +1,103 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/transiciones_batalla/transicion_batalla.gd" id="1_transicion_batalla"]
+[ext_resource type="Texture2D" path="res://escenas/transiciones_batalla/graficos/cuadricula.png" id="2_cuadricula"]
+[ext_resource type="Shader" path="res://escenas/transiciones_batalla/shaders/cuadricula.gdshader" id="3_cuadricula"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_Efecto"]
+resource_local_to_scene = true
+shader = ExtResource("3_cuadricula")
+shader_parameter/tiles = ExtResource("2_cuadricula")
+shader_parameter/paso = 0.0
+
+[sub_resource type="Animation" id="Animation_reset"]
+resource_name = &"RESET"
+length = 0.001
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Efecto:material:shader_parameter/paso")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Negro:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_transicion"]
+resource_name = &"transicion"
+length = 0.916667
+step = 0.0166667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Efecto:material:shader_parameter/paso")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.016667, 0.066667, 0.116667, 0.166667, 0.216667, 0.266667, 0.316667, 0.366667, 0.416667, 0.466667, 0.516667, 0.566667, 0.616667, 0.666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0.0, 1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0, 11.0, 12.0, 13.0, 14.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Negro:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.916667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_transiciones"]
+_data = {
+&"RESET": SubResource("Animation_reset"),
+&"transicion": SubResource("Animation_transicion")
+}
+
+[node name="Cuadricula" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+script = ExtResource("1_transicion_batalla")
+
+[node name="Efecto" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+material = SubResource("ShaderMaterial_Efecto")
+
+[node name="Negro" type="ColorRect" parent="."]
+layout_mode = 0
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+visible = false
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_transiciones")
+}

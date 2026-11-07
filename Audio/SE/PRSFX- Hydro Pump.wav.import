@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c7vt5uxl2knlx"
+path="res://.godot/imported/PRSFX- Hydro Pump.wav-89bc12ee6f05abeef278b6324b239340.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Hydro Pump.wav"
+dest_files=["res://.godot/imported/PRSFX- Hydro Pump.wav-89bc12ee6f05abeef278b6324b239340.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

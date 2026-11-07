@@ -1,0 +1,385 @@
+[gd_scene format=4 uid="uid://cpkapuba8fq06"]
+
+[ext_resource type="Script" uid="uid://um7gh78hojav" path="res://escenas/mapas/camion.gd" id="1_camion_script"]
+[ext_resource type="Texture2D" uid="uid://q0cj485caial" path="res://graficos/camion/interior-camion.png" id="2_eukw0"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_o0jar"]
+[ext_resource type="Texture2D" uid="uid://bjahs5eqiy6ec" path="res://graficos/camion/interior-camion-caja.png" id="5_iatqg"]
+[ext_resource type="AudioStream" uid="uid://c1kx1pjnp4lsw" path="res://Audio/camion.mp3" id="6_motor_audio"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="7_w38b1"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="8_o0jar"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_e5pc6"]
+texture = ExtResource("2_eukw0")
+5:5/0 = 0
+6:5/0 = 0
+7:5/0 = 0
+8:5/0 = 0
+9:5/0 = 0
+5:6/0 = 0
+6:6/0 = 0
+7:6/0 = 0
+8:6/0 = 0
+9:6/0 = 0
+5:7/0 = 0
+6:7/0 = 0
+7:7/0 = 0
+8:7/0 = 0
+9:7/0 = 0
+5:8/0 = 0
+6:8/0 = 0
+7:8/0 = 0
+8:8/0 = 0
+9:8/0 = 0
+5:9/0 = 0
+6:9/0 = 0
+7:9/0 = 0
+8:9/0 = 0
+9:9/0 = 0
+5:10/0 = 0
+6:10/0 = 0
+7:10/0 = 0
+9:10/0 = 0
+8:10/0 = 0
+10:6/0 = 0
+10:7/0 = 0
+10:8/0 = 0
+10:5/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_t8mdl"]
+sources/0 = SubResource("TileSetAtlasSource_e5pc6")
+
+[sub_resource type="Animation" id="Animation_e5pc6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cortina:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cortina:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LuzPuerta:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [-1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("InteriorCamionCaja:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(83, 83)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("InteriorCamionCaja2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(80, 125)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("InteriorCamionCaja3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(109, 128)]
+}
+
+[sub_resource type="Animation" id="Animation_eukw0"]
+resource_name = "marcha"
+length = 15.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cortina:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cortina:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3.5, 4),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1), Color(0, 0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LuzPuerta:z_index")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 14),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [-1, 0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("InteriorCamionCaja:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4.47, 4.48, 4.5, 7.48, 7.49, 7.51, 8.98, 8.99, 9.01, 9.28, 9.29, 9.57, 9.98, 10, 10.3, 10.31),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(83, 83), Vector2(83, 83), Vector2(83, 79), Vector2(83, 83), Vector2(83, 83), Vector2(83, 79), Vector2(83, 83), Vector2(83, 83), Vector2(83, 79), Vector2(83, 83), Vector2(83, 83), Vector2(82, 83), Vector2(82, 83), Vector2(82, 83), Vector2(85, 83), Vector2(85, 83), Vector2(84, 83)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("InteriorCamionCaja2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 4.98, 4.99, 5.01, 7.98, 7.99, 8.01, 9.28, 9.29, 9.57, 9.58, 9.98, 10, 10.3, 10.31),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(80, 125), Vector2(80, 125), Vector2(80, 123), Vector2(80, 125), Vector2(80, 125), Vector2(80, 123), Vector2(80, 125), Vector2(80, 125), Vector2(79, 125), Vector2(79, 125), Vector2(78, 125), Vector2(78, 125), Vector2(81, 125), Vector2(81, 125), Vector2(80, 125)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("InteriorCamionCaja3:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4.98, 4.99, 5.01, 7.98, 7.99, 8.01, 9.28, 9.29, 9.57, 9.58, 9.98, 10, 10.3, 10.31),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(109, 128), Vector2(109, 128), Vector2(109, 124), Vector2(109, 128), Vector2(109, 128), Vector2(109, 124), Vector2(109, 128), Vector2(109, 128), Vector2(108, 128), Vector2(108, 128), Vector2(107, 128), Vector2(107, 128), Vector2(110, 128), Vector2(110, 128), Vector2(109, 128)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_w38b1"]
+_data = {
+&"RESET": SubResource("Animation_e5pc6"),
+&"marcha": SubResource("Animation_eukw0")
+}
+
+[node name="Camion" type="Node2D" unique_id=551907990]
+script = ExtResource("1_camion_script")
+nombre_interno = "Camion"
+seccion = "CAMION"
+esInterior = true
+mapa_exterior_asociado = "villa_raiz"
+solo_caminar = true
+musica_mapa = "NINGUNA"
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=843852432]
+tile_map_data = PackedByteArray("AAAFAAUAAAAFAAUAAAAFAAYAAAAFAAYAAAAFAAcAAAAFAAcAAAAFAAgAAAAFAAgAAAAFAAkAAAAFAAkAAAAGAAUAAAAGAAUAAAAGAAYAAAAGAAYAAAAGAAcAAAAGAAcAAAAGAAgAAAAGAAgAAAAGAAkAAAAGAAkAAAAHAAUAAAAHAAUAAAAHAAYAAAAHAAYAAAAHAAcAAAAHAAcAAAAHAAgAAAAHAAgAAAAHAAkAAAAHAAkAAAAIAAUAAAAIAAUAAAAIAAYAAAAIAAYAAAAIAAcAAAAIAAcAAAAIAAgAAAAIAAgAAAAIAAkAAAAIAAkAAAAJAAUAAAAJAAUAAAAJAAYAAAAJAAYAAAAJAAcAAAAJAAcAAAAJAAgAAAAJAAgAAAAJAAkAAAAJAAkAAAAEAAUAAAAKAAUAAAADAAUAAAAKAAUAAAACAAUAAAAKAAUAAAABAAUAAAAKAAUAAAAAAAUAAAAKAAUAAAAEAAYAAAAKAAUAAAADAAYAAAAKAAUAAAACAAYAAAAKAAUAAAABAAYAAAAKAAUAAAAAAAYAAAAKAAUAAAAAAAcAAAAKAAUAAAABAAcAAAAKAAUAAAACAAcAAAAKAAUAAAADAAcAAAAKAAUAAAAEAAcAAAAKAAUAAAAEAAgAAAAKAAUAAAAEAAkAAAAKAAUAAAADAAkAAAAKAAUAAAACAAkAAAAKAAUAAAABAAkAAAAKAAUAAAAAAAkAAAAKAAUAAAAAAAgAAAAKAAUAAAABAAgAAAAKAAUAAAACAAgAAAAKAAUAAAADAAgAAAAKAAUAAAAKAAUAAAAKAAUAAAALAAUAAAAKAAUAAAAMAAUAAAAKAAUAAAANAAUAAAAKAAUAAAAOAAUAAAAKAAUAAAAOAAYAAAAKAAUAAAANAAYAAAAKAAUAAAAMAAYAAAAKAAUAAAALAAYAAAAKAAUAAAAKAAYAAAAKAAUAAAAKAAcAAAAKAAUAAAALAAcAAAAKAAUAAAAMAAcAAAAKAAUAAAANAAcAAAAKAAUAAAAOAAcAAAAKAAUAAAAOAAgAAAAKAAUAAAANAAgAAAAKAAUAAAAMAAgAAAAKAAUAAAALAAgAAAAKAAUAAAAKAAgAAAAKAAUAAAAKAAkAAAAKAAUAAAALAAkAAAAKAAUAAAAMAAkAAAAKAAUAAAANAAkAAAAKAAUAAAAOAAkAAAAKAAUAAAD//wUAAAAKAAUAAAD+/wYAAAAKAAUAAAD//wYAAAAKAAUAAAD+/wUAAAAKAAUAAAD//wcAAAAKAAUAAAD+/wcAAAAKAAUAAAD+/wgAAAAKAAUAAAD//wgAAAAKAAUAAAD+/wkAAAAKAAUAAAD//wkAAAAKAAUAAAAPAAUAAAAKAAUAAAAQAAUAAAAKAAUAAAAQAAYAAAAKAAUAAAAQAAcAAAAKAAUAAAAPAAcAAAAKAAUAAAAPAAYAAAAKAAUAAAAPAAgAAAAKAAUAAAAQAAgAAAAKAAUAAAAPAAkAAAAKAAUAAAAQAAkAAAAKAAUAAAAQAAAAAAAKAAUAAAAPAAAAAAAKAAUAAAAOAAAAAAAKAAUAAAANAAAAAAAKAAUAAAAMAAAAAAAKAAUAAAALAAAAAAAKAAUAAAAKAAAAAAAKAAUAAAAJAAAAAAAKAAUAAAAIAAAAAAAKAAUAAAAHAAAAAAAKAAUAAAAGAAAAAAAKAAUAAAAFAAAAAAAKAAUAAAAEAAAAAAAKAAUAAAADAAAAAAAKAAUAAAACAAAAAAAKAAUAAAABAAAAAAAKAAUAAAAAAAAAAAAKAAUAAAD//wAAAAAKAAUAAAD+/wAAAAAKAAUAAAD+/wEAAAAKAAUAAAD//wEAAAAKAAUAAAAAAAEAAAAKAAUAAAABAAEAAAAKAAUAAAACAAEAAAAKAAUAAAADAAEAAAAKAAUAAAAEAAEAAAAKAAUAAAAFAAEAAAAKAAUAAAAGAAEAAAAKAAUAAAAHAAEAAAAKAAUAAAAIAAEAAAAKAAUAAAAJAAEAAAAKAAUAAAAKAAEAAAAKAAUAAAALAAEAAAAKAAUAAAAMAAEAAAAKAAUAAAANAAEAAAAKAAUAAAAOAAEAAAAKAAUAAAAPAAEAAAAKAAUAAAAQAAEAAAAKAAUAAAAQAAIAAAAKAAUAAAAPAAIAAAAKAAUAAAAOAAIAAAAKAAUAAAANAAIAAAAKAAUAAAAMAAIAAAAKAAUAAAALAAIAAAAKAAUAAAAKAAIAAAAKAAUAAAAJAAIAAAAKAAUAAAAIAAIAAAAKAAUAAAAHAAIAAAAKAAUAAAAGAAIAAAAKAAUAAAAFAAIAAAAKAAUAAAAEAAIAAAAKAAUAAAADAAIAAAAKAAUAAAACAAIAAAAKAAUAAAABAAIAAAAKAAUAAAAAAAIAAAAKAAUAAAD//wIAAAAKAAUAAAD+/wIAAAAKAAUAAAD+/wMAAAAKAAUAAAD//wMAAAAKAAUAAAAAAAMAAAAKAAUAAAABAAMAAAAKAAUAAAACAAMAAAAKAAUAAAADAAMAAAAKAAUAAAAEAAMAAAAKAAUAAAAFAAMAAAAKAAUAAAAGAAMAAAAKAAUAAAAHAAMAAAAKAAUAAAAIAAMAAAAKAAUAAAAJAAMAAAAKAAUAAAAKAAMAAAAKAAUAAAALAAMAAAAKAAUAAAAMAAMAAAAKAAUAAAANAAMAAAAKAAUAAAAOAAMAAAAKAAUAAAAPAAMAAAAKAAUAAAAQAAMAAAAKAAUAAAAQAAQAAAAKAAUAAAAPAAQAAAAKAAUAAAAOAAQAAAAKAAUAAAANAAQAAAAKAAUAAAAMAAQAAAAKAAUAAAALAAQAAAAKAAUAAAAKAAQAAAAKAAUAAAAJAAQAAAAKAAUAAAAIAAQAAAAKAAUAAAAHAAQAAAAKAAUAAAAGAAQAAAAKAAUAAAAFAAQAAAAKAAUAAAAEAAQAAAAKAAUAAAADAAQAAAAKAAUAAAACAAQAAAAKAAUAAAABAAQAAAAKAAUAAAAAAAQAAAAKAAUAAAD//wQAAAAKAAUAAAD+/wQAAAAKAAUAAAD+/woAAAAKAAUAAAD+/wsAAAAKAAUAAAD+/wwAAAAKAAUAAAD+/w0AAAAKAAUAAAD//woAAAAKAAUAAAD//wsAAAAKAAUAAAD//wwAAAAKAAUAAAD//w0AAAAKAAUAAAAAAAoAAAAKAAUAAAAAAAsAAAAKAAUAAAAAAAwAAAAKAAUAAAAAAA0AAAAKAAUAAAABAAoAAAAKAAUAAAABAAsAAAAKAAUAAAABAAwAAAAKAAUAAAABAA0AAAAKAAUAAAACAAoAAAAKAAUAAAACAAsAAAAKAAUAAAACAAwAAAAKAAUAAAACAA0AAAAKAAUAAAADAAoAAAAKAAUAAAADAAsAAAAKAAUAAAADAAwAAAAKAAUAAAADAA0AAAAKAAUAAAAEAAoAAAAKAAUAAAAEAAsAAAAKAAUAAAAEAAwAAAAKAAUAAAAEAA0AAAAKAAUAAAAFAAoAAAAKAAUAAAAFAAsAAAAKAAUAAAAFAAwAAAAKAAUAAAAFAA0AAAAKAAUAAAAGAAoAAAAKAAUAAAAGAAsAAAAKAAUAAAAGAAwAAAAKAAUAAAAGAA0AAAAKAAUAAAAHAAoAAAAKAAUAAAAHAAsAAAAKAAUAAAAHAAwAAAAKAAUAAAAHAA0AAAAKAAUAAAAIAAoAAAAKAAUAAAAIAAsAAAAKAAUAAAAIAAwAAAAKAAUAAAAIAA0AAAAKAAUAAAAJAAoAAAAKAAUAAAAJAAsAAAAKAAUAAAAJAAwAAAAKAAUAAAAJAA0AAAAKAAUAAAAKAAoAAAAKAAUAAAAKAAsAAAAKAAUAAAAKAAwAAAAKAAUAAAAKAA0AAAAKAAUAAAALAAoAAAAKAAUAAAALAAsAAAAKAAUAAAALAAwAAAAKAAUAAAALAA0AAAAKAAUAAAAMAAoAAAAKAAUAAAAMAAsAAAAKAAUAAAAMAAwAAAAKAAUAAAAMAA0AAAAKAAUAAAANAAoAAAAKAAUAAAANAAsAAAAKAAUAAAANAAwAAAAKAAUAAAANAA0AAAAKAAUAAAAOAAoAAAAKAAUAAAAOAAsAAAAKAAUAAAAOAAwAAAAKAAUAAAAOAA0AAAAKAAUAAAAPAAoAAAAKAAUAAAAPAAsAAAAKAAUAAAAPAAwAAAAKAAUAAAAPAA0AAAAKAAUAAAAQAAoAAAAKAAUAAAAQAAsAAAAKAAUAAAAQAAwAAAAKAAUAAAAQAA0AAAAKAAUAAAA=")
+tile_set = SubResource("TileSet_t8mdl")
+
+[node name="CajasArriba" type="TileMapLayer" parent="." unique_id=2113646325]
+z_index = 10
+tile_map_data = PackedByteArray("AAAGAAcAAAAFAAoAAAAHAAcAAAAGAAoAAAAIAAgAAAAHAAoAAAA=")
+tile_set = SubResource("TileSet_t8mdl")
+
+[node name="LuzPuerta" type="TileMapLayer" parent="." unique_id=2080251222]
+z_index = -1
+tile_map_data = PackedByteArray("AAAJAAYAAAAKAAYAAAAJAAcAAAAKAAcAAAAJAAgAAAAKAAgAAAA=")
+tile_set = SubResource("TileSet_t8mdl")
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=2143771786]
+script = ExtResource("4_o0jar")
+tile_data = {
+"10,5": {
+"flags": 1
+},
+"10,6": {
+"flags": 1
+},
+"10,7": {
+"flags": 1
+},
+"10,8": {
+"flags": 1
+},
+"10,9": {
+"flags": 1
+},
+"5,5": {
+"flags": 1
+},
+"5,6": {
+"flags": 1
+},
+"5,7": {
+"flags": 1
+},
+"5,8": {
+"flags": 1
+},
+"6,5": {
+"flags": 1
+},
+"6,8": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+},
+"7,8": {
+"flags": 1
+},
+"7,9": {
+"flags": 1
+},
+"8,5": {
+"flags": 1
+},
+"8,9": {
+"flags": 1
+},
+"9,5": {
+"flags": 1
+},
+"9,9": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=124489588]
+z_index = 1
+y_sort_enabled = true
+
+[node name="InteriorCamionCaja" type="Sprite2D" parent="." unique_id=961423938]
+position = Vector2(83, 83)
+texture = ExtResource("5_iatqg")
+centered = false
+
+[node name="InteriorCamionCaja2" type="Sprite2D" parent="." unique_id=1246538511]
+position = Vector2(80, 125)
+texture = ExtResource("5_iatqg")
+centered = false
+
+[node name="InteriorCamionCaja3" type="Sprite2D" parent="." unique_id=1126265072]
+z_index = 12
+position = Vector2(109, 128)
+texture = ExtResource("5_iatqg")
+centered = false
+
+[node name="Cortina" type="ColorRect" parent="." unique_id=930886805]
+z_index = 20
+offset_right = 240.0
+offset_bottom = 160.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=256772754]
+libraries/ = SubResource("AnimationLibrary_w38b1")
+
+[node name="MotorPlayer" type="AudioStreamPlayer" parent="." unique_id=256772755]
+stream = ExtResource("6_motor_audio")
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1196998089]
+
+[node name="CartelCaja1" type="Sprite2D" parent="Carteles" unique_id=140379027 groups=["Cartel"]]
+position = Vector2(104, 88)
+script = ExtResource("7_w38b1")
+capa_datos = 0
+id_texto = "CAJA_CAMION"
+coord_tile = Vector2i(6, 5)
+
+[node name="CartelCaja2" type="Sprite2D" parent="Carteles" unique_id=1839542309 groups=["Cartel"]]
+position = Vector2(88, 104)
+script = ExtResource("7_w38b1")
+capa_datos = 0
+id_texto = "CAJA_CAMION"
+coord_tile = Vector2i(5, 6)
+
+[node name="CartelCaja3" type="Sprite2D" parent="Carteles" unique_id=783614206 groups=["Cartel"]]
+position = Vector2(88, 120)
+script = ExtResource("7_w38b1")
+capa_datos = 0
+id_texto = "CAJA_CAMION"
+coord_tile = Vector2i(5, 7)
+
+[node name="CartelCaja4" type="Sprite2D" parent="Carteles" unique_id=1337429272 groups=["Cartel"]]
+position = Vector2(120, 136)
+script = ExtResource("7_w38b1")
+capa_datos = 0
+id_texto = "CAJA_CAMION"
+coord_tile = Vector2i(7, 8)
+
+[node name="CartelCaja5" type="Sprite2D" parent="Carteles" unique_id=1507435039 groups=["Cartel"]]
+position = Vector2(136, 152)
+script = ExtResource("7_w38b1")
+capa_datos = 0
+id_texto = "CAJA_CAMION"
+coord_tile = Vector2i(8, 9)
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=1770125085]
+position = Vector2(152, 102)
+script = ExtResource("8_o0jar")
+tipo_warp = 1
+estilo_warp = 4
+ruta_mapa_destino = "villa_raiz"
+posicion_destino = Vector2(11, 10)
+direccion = Vector2(1, 0)
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=2072642705]
+position = Vector2(152, 118)
+script = ExtResource("8_o0jar")
+tipo_warp = 1
+estilo_warp = 4
+ruta_mapa_destino = "villa_raiz"
+posicion_destino = Vector2(11, 10)
+direccion = Vector2(1, 0)
+
+[node name="TileSalida3" type="Sprite2D" parent="." unique_id=1888832786]
+position = Vector2(152, 134)
+script = ExtResource("8_o0jar")
+tipo_warp = 1
+estilo_warp = 4
+ruta_mapa_destino = "villa_raiz"
+posicion_destino = Vector2(11, 10)
+direccion = Vector2(1, 0)

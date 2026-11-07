@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://drc0c4hxyxbr4"
+path="res://.godot/imported/PRSFX- Lock On.wav-c1b5469e5e46b520d72a98b5258d15b3.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Lock On.wav"
+dest_files=["res://.godot/imported/PRSFX- Lock On.wav-c1b5469e5e46b520d72a98b5258d15b3.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

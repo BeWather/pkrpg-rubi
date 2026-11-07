@@ -1,0 +1,2207 @@
+[gd_scene format=4 uid="uid://cmks8lcc73wrq"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_3gym0"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_87e8n"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_gy05g"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_rgtqk"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="gp_npc_base"]
+[ext_resource type="SpriteFrames" uid="uid://b4mj7km5ppxw6" path="res://escenas/avatares/npc_039.tres" id="gp_npc_039"]
+[ext_resource type="PackedScene" uid="uid://gbm5pvhiq1ej" path="res://escenas/avatares/npc_entrenador.tscn" id="gp_entrenador"]
+[ext_resource type="Script" path="res://scripts/npc/npc_entrenador_gimnasio.gd" id="gp_entrenador_gimnasio"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="gp_npc_evento"]
+[ext_resource type="Script" uid="uid://dmy4ir5m1ul04" path="res://scripts/npc/npc_dialogo_condicional.gd" id="gp_condicional"]
+[ext_resource type="Script" uid="uid://8uymdhpcd3qe" path="res://scripts/eventos/cartel_evento.gd" id="gp_cartel_evento"]
+[ext_resource type="Script" uid="uid://cdyv0uwwmtud2" path="res://escenas/mapas/cartel_condicional.gd" id="gp_cartel_condicional"]
+[ext_resource type="Script" path="res://scripts/eventos/ciudad_petalia/evento_gimnasio_petalia.gd" id="gp_evento"]
+[ext_resource type="SpriteFrames" uid="uid://ciqxabi7dld0v" path="res://escenas/avatares/npc_036.tres" id="gp_npc_036"]
+[ext_resource type="SpriteFrames" uid="uid://ds1lihygyt1d0" path="res://escenas/avatares/npc_027.tres" id="gp_npc_027"]
+[ext_resource type="SpriteFrames" uid="uid://damgta0thpof0" path="res://escenas/avatares/npc_028.tres" id="gp_npc_028"]
+[ext_resource type="SpriteFrames" uid="uid://bmiijupbogopu" path="res://escenas/avatares/npc_052.tres" id="gp_npc_052"]
+
+[node name="Gimnasio" type="Node2D" unique_id=337747448]
+script = ExtResource("1_3gym0")
+nombre_interno = "ciudad_petalia_gimnasio"
+seccion = "CIUDAD_PETALIA"
+esInterior = true
+solo_caminar = true
+escena_batalla = 1
+mapa_exterior_asociado = "CIUDAD_PETALIA"
+musica_mapa = "GIMNASIO_POKEMON"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1660786405]
+tile_map_data = PackedByteArray("AAAQAAAAAAAKAAkAAAAQAAEAAAAKAAoAAAAQAAIAAAAKAAsAAAAQAAMAAAAJAAoAAAAQAAQAAAAJAAoAAAAQAAUAAAAJAAoAAAAQAAYAAAAJAAoAAAAQAAcAAAAJAAoAAAARAAAAAAAIAAwAAAARAAEAAAAIAA0AAAARAAIAAAALAAsAAAARAAMAAAAJABEAAAARAAQAAAAJABIAAAARAAUAAAAJABMAAAARAAYAAAAJABQAAAARAAcAAAAIAAsAAAASAAAAAAALAAkAAAASAAEAAAALAAoAAAASAAIAAAALAAsAAAASAAMAAAAKABEAAAASAAQAAAAKABIAAAASAAUAAAAKABMAAAASAAYAAAAKABQAAAASAAcAAAAJAAsAAAATAAAAAAANAAwAAAATAAEAAAALAAoAAAATAAIAAAALAAsAAAATAAMAAAALABEAAAATAAQAAAALABIAAAATAAUAAAALABMAAAATAAYAAAALABQAAAATAAcAAAAJAAkAAAAUAAAAAAAOAAwAAAAUAAEAAAALAAoAAAAUAAIAAAALAAsAAAAUAAMAAAAMABEAAAAUAAQAAAAMABIAAAAUAAUAAAAMABMAAAAUAAYAAAAMABQAAAAUAAcAAAAJAAkAAAAVAAAAAAAPAAwAAAAVAAEAAAALAAoAAAAVAAIAAAALAAsAAAAVAAMAAAANABEAAAAVAAQAAAANABIAAAAVAAUAAAANABMAAAAVAAYAAAANABQAAAAVAAcAAAAJAAkAAAAWAAAAAAALAAkAAAAWAAEAAAALAAoAAAAWAAIAAAALAAsAAAAWAAMAAAAOABEAAAAWAAQAAAAOABIAAAAWAAUAAAAOABMAAAAWAAYAAAAOABQAAAAWAAcAAAAJAAkAAAAXAAAAAAAIAAwAAAAXAAEAAAAIAA0AAAAXAAIAAAALAAsAAAAXAAMAAAAPABEAAAAXAAQAAAAPABIAAAAXAAUAAAAPABMAAAAXAAYAAAAPABQAAAAXAAcAAAAJAAkAAAAYAAAAAAAMAAkAAAAYAAEAAAAMAAoAAAAYAAIAAAAMAAsAAAAYAAMAAAAJAAkAAAAYAAQAAAAJAAkAAAAYAAUAAAAJAAkAAAAYAAYAAAAJAAkAAAAYAAcAAAAJAAkAAAAAAPP/AAAKAAkAAAAAAPT/AAAKAAoAAAAAAPX/AAAKAAsAAAAAAPb/AAAJAAoAAAAAAPf/AAAJAAoAAAAAAPj/AAAJAAoAAAAAAPn/AAAJAAoAAAAAAPr/AAAJAAoAAAABAPP/AAAIAAwAAAABAPT/AAAIAA0AAAABAPX/AAALAAsAAAABAPb/AAAJABEAAAABAPf/AAAJABIAAAABAPj/AAAJABMAAAABAPn/AAAJABQAAAABAPr/AAAIAAsAAAACAPP/AAALAAkAAAACAPT/AAALAAoAAAACAPX/AAALAAsAAAACAPb/AAAKABEAAAACAPf/AAAKABIAAAACAPj/AAAKABMAAAACAPn/AAAKABQAAAACAPr/AAAJAAsAAAADAPP/AAANAAwAAAADAPT/AAALAAoAAAADAPX/AAALAAsAAAADAPb/AAALABEAAAADAPf/AAALABIAAAADAPj/AAALABMAAAADAPn/AAALABQAAAADAPr/AAAJAAkAAAAEAPP/AAAOAAwAAAAEAPT/AAALAAoAAAAEAPX/AAALAAsAAAAEAPb/AAAMABEAAAAEAPf/AAAMABIAAAAEAPj/AAAMABMAAAAEAPn/AAAMABQAAAAEAPr/AAAJAAkAAAAFAPP/AAAPAAwAAAAFAPT/AAALAAoAAAAFAPX/AAALAAsAAAAFAPb/AAANABEAAAAFAPf/AAANABIAAAAFAPj/AAANABMAAAAFAPn/AAANABQAAAAFAPr/AAAJAAkAAAAGAPP/AAALAAkAAAAGAPT/AAALAAoAAAAGAPX/AAALAAsAAAAGAPb/AAAOABEAAAAGAPf/AAAOABIAAAAGAPj/AAAOABMAAAAGAPn/AAAOABQAAAAGAPr/AAAIAAsAAAAHAPP/AAAIAAwAAAAHAPT/AAAIAA0AAAAHAPX/AAALAAsAAAAHAPb/AAAPABEAAAAHAPf/AAAPABIAAAAHAPj/AAAPABMAAAAHAPn/AAAPABQAAAAHAPr/AAAJAAsAAAAIAPP/AAAMAAkAAAAIAPT/AAAMAAoAAAAIAPX/AAAMAAsAAAAIAPb/AAAJAAkAAAAIAPf/AAAJAAkAAAAIAPj/AAAJAAkAAAAIAPn/AAAJAAkAAAAIAPr/AAAJAAkAAAAQAPP/AAAKAAkAAAAQAPT/AAAKAAoAAAAQAPX/AAAKAAsAAAAQAPb/AAAJAAoAAAAQAPf/AAAJAAoAAAAQAPj/AAAJAAoAAAAQAPn/AAAJAAoAAAAQAPr/AAAJAAoAAAARAPP/AAAIAAwAAAARAPT/AAAIAA0AAAARAPX/AAALAAsAAAARAPb/AAAJABEAAAARAPf/AAAJABIAAAARAPj/AAAJABMAAAARAPn/AAAJABQAAAARAPr/AAAIAAsAAAASAPP/AAALAAkAAAASAPT/AAALAAoAAAASAPX/AAALAAsAAAASAPb/AAAKABEAAAASAPf/AAAKABIAAAASAPj/AAAKABMAAAASAPn/AAAKABQAAAASAPr/AAAJAAsAAAATAPP/AAANAAwAAAATAPT/AAALAAoAAAATAPX/AAALAAsAAAATAPb/AAALABEAAAATAPf/AAALABIAAAATAPj/AAALABMAAAATAPn/AAALABQAAAATAPr/AAAJAAkAAAAUAPP/AAAOAAwAAAAUAPT/AAALAAoAAAAUAPX/AAALAAsAAAAUAPb/AAAMABEAAAAUAPf/AAAMABIAAAAUAPj/AAAMABMAAAAUAPn/AAAMABQAAAAUAPr/AAAJAAkAAAAVAPP/AAAPAAwAAAAVAPT/AAALAAoAAAAVAPX/AAALAAsAAAAVAPb/AAANABEAAAAVAPf/AAANABIAAAAVAPj/AAANABMAAAAVAPn/AAANABQAAAAVAPr/AAAJAAkAAAAWAPP/AAALAAkAAAAWAPT/AAALAAoAAAAWAPX/AAALAAsAAAAWAPb/AAAOABEAAAAWAPf/AAAOABIAAAAWAPj/AAAOABMAAAAWAPn/AAAOABQAAAAWAPr/AAAJAAkAAAAXAPP/AAALAAkAAAAXAPT/AAALAAoAAAAXAPX/AAALAAsAAAAXAPb/AAAPABEAAAAXAPf/AAAPABIAAAAXAPj/AAAPABMAAAAXAPn/AAAPABQAAAAXAPr/AAAJAAkAAAAYAPP/AAAMAAkAAAAYAPT/AAAMAAoAAAAYAPX/AAAMAAsAAAAYAPb/AAAJAAkAAAAYAPf/AAAJAAkAAAAYAPj/AAAJAAkAAAAYAPn/AAAJAAkAAAAYAPr/AAAJAAkAAADw//P/AAAKAAkAAADw//T/AAAKAAoAAADw//X/AAAKAAsAAADw//b/AAAJAAoAAADw//f/AAAJAAoAAADw//j/AAAJAAoAAADw//n/AAAJAAoAAADw//r/AAAJAAoAAADx//P/AAALAAkAAADx//T/AAALAAoAAADx//X/AAALAAsAAADx//b/AAAJABEAAADx//f/AAAJABIAAADx//j/AAAJABMAAADx//n/AAAJABQAAADx//r/AAAJAAkAAADy//P/AAALAAkAAADy//T/AAALAAoAAADy//X/AAALAAsAAADy//b/AAAKABEAAADy//f/AAAKABIAAADy//j/AAAKABMAAADy//n/AAAKABQAAADy//r/AAAJAAkAAADz//P/AAANAAwAAADz//T/AAALAAoAAADz//X/AAALAAsAAADz//b/AAALABEAAADz//f/AAALABIAAADz//j/AAALABMAAADz//n/AAALABQAAADz//r/AAAJAAkAAAD0//P/AAAOAAwAAAD0//T/AAALAAoAAAD0//X/AAALAAsAAAD0//b/AAAMABEAAAD0//f/AAAMABIAAAD0//j/AAAMABMAAAD0//n/AAAMABQAAAD0//r/AAAJAAkAAAD1//P/AAAPAAwAAAD1//T/AAALAAoAAAD1//X/AAALAAsAAAD1//b/AAANABEAAAD1//f/AAANABIAAAD1//j/AAANABMAAAD1//n/AAANABQAAAD1//r/AAAJAAkAAAD2//P/AAALAAkAAAD2//T/AAALAAoAAAD2//X/AAALAAsAAAD2//b/AAAOABEAAAD2//f/AAAOABIAAAD2//j/AAAOABMAAAD2//n/AAAOABQAAAD2//r/AAAIAAsAAAD3//P/AAAIAAwAAAD3//T/AAAIAA0AAAD3//X/AAALAAsAAAD3//b/AAAPABEAAAD3//f/AAAPABIAAAD3//j/AAAPABMAAAD3//n/AAAPABQAAAD3//r/AAAJAAsAAAD4//P/AAAMAAkAAAD4//T/AAAMAAoAAAD4//X/AAAMAAsAAAD4//b/AAAJAAkAAAD4//f/AAAJAAkAAAD4//j/AAAJAAkAAAD4//n/AAAJAAkAAAD4//r/AAAJAAkAAAAAAOb/AAAKAAkAAAAAAOf/AAAKAAoAAAAAAOj/AAAKAAsAAAAAAOn/AAAJAAoAAAAAAOr/AAAJAAoAAAAAAOv/AAAJAAoAAAAAAOz/AAAJAAoAAAAAAO3/AAAJAAoAAAABAOb/AAAIABgAAAABAOf/AAAIABkAAAABAOj/AAAIABoAAAABAOn/AAAJAAkAAAABAOr/AAAJAAkAAAABAOv/AAAJAAkAAAABAOz/AAAJAAkAAAABAO3/AAAIAAsAAAACAOb/AAAJABgAAAACAOf/AAAJABkAAAACAOj/AAAJABoAAAACAOn/AAAJAAkAAAACAOr/AAAJAAkAAAACAOv/AAAJAAkAAAACAOz/AAAJAAkAAAACAO3/AAAJAAsAAAADAOb/AAANAAwAAAADAOf/AAALAAoAAAADAOj/AAALAAsAAAADAOn/AAAJAAkAAAADAOr/AAAIAA4AAAADAOv/AAAIAA8AAAADAOz/AAAIABAAAAADAO3/AAAJAAkAAAAEAOb/AAAOAAwAAAAEAOf/AAALAAoAAAAEAOj/AAALAAsAAAAEAOn/AAAJAAkAAAAEAOr/AAAJAA4AAAAEAOv/AAAJAA8AAAAEAOz/AAAJABAAAAAEAO3/AAAJAAkAAAAFAOb/AAAPAAwAAAAFAOf/AAALAAoAAAAFAOj/AAALAAsAAAAFAOn/AAAJAAkAAAAFAOr/AAAKAA4AAAAFAOv/AAAKAA8AAAAFAOz/AAAKABAAAAAFAO3/AAAJAAkAAAAGAOb/AAAKABgAAAAGAOf/AAAKABkAAAAGAOj/AAAKABoAAAAGAOn/AAAJAAkAAAAGAOr/AAAJAAkAAAAGAOv/AAAJAAkAAAAGAOz/AAAJAAkAAAAGAO3/AAAIAAsAAAAHAOb/AAALABgAAAAHAOf/AAALABkAAAAHAOj/AAALABoAAAAHAOn/AAAJAAkAAAAHAOr/AAAJAAkAAAAHAOv/AAAJAAkAAAAHAOz/AAAJAAkAAAAHAO3/AAAJAAsAAAAIAOb/AAAMAAkAAAAIAOf/AAAMAAoAAAAIAOj/AAAMAAsAAAAIAOn/AAAJAAkAAAAIAOr/AAAJAAkAAAAIAOv/AAAJAAkAAAAIAOz/AAAJAAkAAAAIAO3/AAAJAAkAAAAQAOb/AAAKAAkAAAAQAOf/AAAKAAoAAAAQAOj/AAAKAAsAAAAQAOn/AAAJAAoAAAAQAOr/AAAJAAoAAAAQAOv/AAAJAAoAAAAQAOz/AAAJAAoAAAAQAO3/AAAJAAoAAAARAOb/AAAIAAwAAAARAOf/AAAIAA0AAAARAOj/AAALAAsAAAARAOn/AAAJABEAAAARAOr/AAAJABIAAAARAOv/AAAJABMAAAARAOz/AAAJABQAAAARAO3/AAAIAAsAAAASAOb/AAALAAkAAAASAOf/AAALAAoAAAASAOj/AAALAAsAAAASAOn/AAAKABEAAAASAOr/AAAKABIAAAASAOv/AAAKABMAAAASAOz/AAAKABQAAAASAO3/AAAJAAsAAAATAOb/AAANAAwAAAATAOf/AAALAAoAAAATAOj/AAALAAsAAAATAOn/AAALABEAAAATAOr/AAALABIAAAATAOv/AAALABMAAAATAOz/AAALABQAAAATAO3/AAAJAAkAAAAUAOb/AAAOAAwAAAAUAOf/AAALAAoAAAAUAOj/AAALAAsAAAAUAOn/AAAMABEAAAAUAOr/AAAMABIAAAAUAOv/AAAMABMAAAAUAOz/AAAMABQAAAAUAO3/AAAJAAkAAAAVAOb/AAAPAAwAAAAVAOf/AAALAAoAAAAVAOj/AAALAAsAAAAVAOn/AAANABEAAAAVAOr/AAANABIAAAAVAOv/AAANABMAAAAVAOz/AAANABQAAAAVAO3/AAAJAAkAAAAWAOb/AAALAAkAAAAWAOf/AAALAAoAAAAWAOj/AAALAAsAAAAWAOn/AAAOABEAAAAWAOr/AAAOABIAAAAWAOv/AAAOABMAAAAWAOz/AAAOABQAAAAWAO3/AAAIAAsAAAAXAOb/AAALAAkAAAAXAOf/AAALAAoAAAAXAOj/AAALAAsAAAAXAOn/AAAPABEAAAAXAOr/AAAPABIAAAAXAOv/AAAPABMAAAAXAOz/AAAPABQAAAAXAO3/AAAJAAsAAAAYAOb/AAAMAAkAAAAYAOf/AAAMAAoAAAAYAOj/AAAMAAsAAAAYAOn/AAAJAAkAAAAYAOr/AAAJAAkAAAAYAOv/AAAJAAkAAAAYAOz/AAAJAAkAAAAYAO3/AAAJAAkAAADw/+b/AAAKAAkAAADw/+f/AAAKAAoAAADw/+j/AAAKAAsAAADw/+n/AAAJAAoAAADw/+r/AAAJAAoAAADw/+v/AAAJAAoAAADw/+z/AAAJAAoAAADw/+3/AAAJAAoAAADx/+b/AAALAAkAAADx/+f/AAALAAoAAADx/+j/AAALAAsAAADx/+n/AAAJABEAAADx/+r/AAAJABIAAADx/+v/AAAJABMAAADx/+z/AAAJABQAAADx/+3/AAAIAAsAAADy/+b/AAALAAkAAADy/+f/AAALAAoAAADy/+j/AAALAAsAAADy/+n/AAAKABEAAADy/+r/AAAKABIAAADy/+v/AAAKABMAAADy/+z/AAAKABQAAADy/+3/AAAJAAsAAADz/+b/AAANAAwAAADz/+f/AAALAAoAAADz/+j/AAALAAsAAADz/+n/AAALABEAAADz/+r/AAALABIAAADz/+v/AAALABMAAADz/+z/AAALABQAAADz/+3/AAAJAAkAAAD0/+b/AAAOAAwAAAD0/+f/AAALAAoAAAD0/+j/AAALAAsAAAD0/+n/AAAMABEAAAD0/+r/AAAMABIAAAD0/+v/AAAMABMAAAD0/+z/AAAMABQAAAD0/+3/AAAJAAkAAAD1/+b/AAAPAAwAAAD1/+f/AAALAAoAAAD1/+j/AAALAAsAAAD1/+n/AAANABEAAAD1/+r/AAANABIAAAD1/+v/AAANABMAAAD1/+z/AAANABQAAAD1/+3/AAAJAAkAAAD2/+b/AAALAAkAAAD2/+f/AAALAAoAAAD2/+j/AAALAAsAAAD2/+n/AAAOABEAAAD2/+r/AAAOABIAAAD2/+v/AAAOABMAAAD2/+z/AAAOABQAAAD2/+3/AAAIAAsAAAD3/+b/AAAIAAwAAAD3/+f/AAAIAA0AAAD3/+j/AAALAAsAAAD3/+n/AAAPABEAAAD3/+r/AAAPABIAAAD3/+v/AAAPABMAAAD3/+z/AAAPABQAAAD3/+3/AAAJAAsAAAD4/+b/AAAMAAkAAAD4/+f/AAAMAAoAAAD4/+j/AAAMAAsAAAD4/+n/AAAJAAkAAAD4/+r/AAAJAAkAAAD4/+v/AAAJAAkAAAD4/+z/AAAJAAkAAAD4/+3/AAAJAAkAAADw/wAAAAAKAAkAAADw/wEAAAAKAAoAAADw/wIAAAAKAAsAAADw/wMAAAAJAAoAAADw/wQAAAAJAAoAAADw/wUAAAAJAAoAAADw/wYAAAAJAAoAAADw/wcAAAAJAAoAAADx/wAAAAAIAAwAAADx/wEAAAAIAA0AAADx/wIAAAALAAsAAADx/wMAAAAJABEAAADx/wQAAAAJABIAAADx/wUAAAAJABMAAADx/wYAAAAJABQAAADx/wcAAAAJAAkAAADy/wAAAAALAAkAAADy/wEAAAALAAoAAADy/wIAAAALAAsAAADy/wMAAAAKABEAAADy/wQAAAAKABIAAADy/wUAAAAKABMAAADy/wYAAAAKABQAAADy/wcAAAAJAAkAAADz/wAAAAANAAwAAADz/wEAAAALAAoAAADz/wIAAAALAAsAAADz/wMAAAALABEAAADz/wQAAAALABIAAADz/wUAAAALABMAAADz/wYAAAALABQAAADz/wcAAAAJAAkAAAD0/wAAAAAOAAwAAAD0/wEAAAALAAoAAAD0/wIAAAALAAsAAAD0/wMAAAAMABEAAAD0/wQAAAAMABIAAAD0/wUAAAAMABMAAAD0/wYAAAAMABQAAAD0/wcAAAAJAAkAAAD1/wAAAAAPAAwAAAD1/wEAAAALAAoAAAD1/wIAAAALAAsAAAD1/wMAAAANABEAAAD1/wQAAAANABIAAAD1/wUAAAANABMAAAD1/wYAAAANABQAAAD1/wcAAAAJAAkAAAD2/wAAAAALAAkAAAD2/wEAAAALAAoAAAD2/wIAAAALAAsAAAD2/wMAAAAOABEAAAD2/wQAAAAOABIAAAD2/wUAAAAOABMAAAD2/wYAAAAOABQAAAD2/wcAAAAIAAsAAAD3/wAAAAAIAAwAAAD3/wEAAAAIAA0AAAD3/wIAAAALAAsAAAD3/wMAAAAPABEAAAD3/wQAAAAPABIAAAD3/wUAAAAPABMAAAD3/wYAAAAPABQAAAD3/wcAAAAJAAsAAAD4/wAAAAAMAAkAAAD4/wEAAAAMAAoAAAD4/wIAAAAMAAsAAAD4/wMAAAAJAAkAAAD4/wQAAAAJAAkAAAD4/wUAAAAJAAkAAAD4/wYAAAAJAAkAAAD4/wcAAAAJAAkAAAAAAAAAAAAKAAkAAAAAAAEAAAAKAAoAAAAAAAIAAAAKAAsAAAAAAAMAAAAJAAoAAAAAAAQAAAAJAAoAAAAAAAUAAAAJAAoAAAAAAAYAAAAJAAoAAAAAAAcAAAAJAAoAAAABAAAAAAAIAAwAAAABAAEAAAAIAA0AAAABAAIAAAALAAsAAAABAAMAAAAJAAkAAAABAAQAAAAJAAkAAAABAAUAAAAJAAkAAAABAAYAAAAIABIAAAABAAcAAAALAAsAAAACAAAAAAALAAkAAAACAAEAAAALAAoAAAACAAIAAAALAAsAAAACAAMAAAAJAAkAAAACAAQAAAAJAAkAAAACAAUAAAAJAAkAAAACAAYAAAALAA4AAAACAAcAAAALAA8AAAADAAAAAAANAAwAAAADAAEAAAALAAoAAAADAAIAAAALAAsAAAADAAMAAAAJAAkAAAADAAQAAAAJAAkAAAADAAUAAAAJAAkAAAADAAYAAAAJAAkAAAADAAcAAAAJAAkAAAAEAAAAAAAOAAwAAAAEAAEAAAALAAoAAAAEAAIAAAALAAsAAAAEAAMAAAAJAAkAAAAEAAQAAAAJAAkAAAAEAAUAAAAJAAkAAAAEAAYAAAAJAAkAAAAFAAAAAAAPAAwAAAAFAAEAAAALAAoAAAAFAAIAAAALAAsAAAAFAAMAAAAJAAkAAAAFAAQAAAAJAAkAAAAFAAUAAAAJAAkAAAAFAAYAAAAJAAkAAAAGAAAAAAALAAkAAAAGAAEAAAALAAoAAAAGAAIAAAALAAsAAAAGAAMAAAAJAAkAAAAGAAQAAAAJAAkAAAAGAAUAAAAJAAkAAAAGAAYAAAAJAAkAAAAGAAcAAAAJAAkAAAAHAAAAAAAIAAwAAAAHAAEAAAAIAA0AAAAHAAIAAAALAAsAAAAHAAMAAAAJAAkAAAAHAAQAAAAJAAkAAAAHAAUAAAAJAAkAAAAHAAYAAAAIABIAAAAHAAcAAAALAAsAAAAIAAAAAAAMAAkAAAAIAAEAAAAMAAoAAAAIAAIAAAAMAAsAAAAIAAMAAAAJAAkAAAAIAAQAAAAJAAkAAAAIAAUAAAAJAAkAAAAIAAYAAAALAA4AAAAIAAcAAAALAA8AAAAEAAcAAAAIAAsAAAAFAAcAAAAJAAsAAAA=")
+tile_set = ExtResource("2_87e8n")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Suelo2" type="TileMapLayer" parent="." unique_id=456262778]
+tile_map_data = PackedByteArray("AAABAAUAAAAIABMAAAAHAAUAAAAIABMAAAA=")
+tile_set = ExtResource("2_87e8n")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=615828127]
+position = Vector2(72, 118)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia"
+posicion_destino = Vector2(15, 10)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=1450428448]
+position = Vector2(88, 118)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia"
+posicion_destino = Vector2(15, 10)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=534991545]
+script = ExtResource("4_rgtqk")
+tile_data = {
+"-17,-27": {
+"flags": 1
+},
+"-16,-27": {
+"flags": 1
+},
+"-15,-27": {
+"flags": 1
+},
+"-14,-27": {
+"flags": 1
+},
+"-13,-27": {
+"flags": 1
+},
+"-12,-27": {
+"flags": 1
+},
+"-11,-27": {
+"flags": 1
+},
+"-10,-27": {
+"flags": 1
+},
+"-9,-27": {
+"flags": 1
+},
+"-8,-27": {
+"flags": 1
+},
+"-7,-27": {
+"flags": 1
+},
+"-1,-27": {
+"flags": 1
+},
+"0,-27": {
+"flags": 1
+},
+"1,-27": {
+"flags": 1
+},
+"2,-27": {
+"flags": 1
+},
+"3,-27": {
+"flags": 1
+},
+"4,-27": {
+"flags": 1
+},
+"5,-27": {
+"flags": 1
+},
+"6,-27": {
+"flags": 1
+},
+"7,-27": {
+"flags": 1
+},
+"8,-27": {
+"flags": 1
+},
+"9,-27": {
+"flags": 1
+},
+"15,-27": {
+"flags": 1
+},
+"16,-27": {
+"flags": 1
+},
+"17,-27": {
+"flags": 1
+},
+"18,-27": {
+"flags": 1
+},
+"19,-27": {
+"flags": 1
+},
+"20,-27": {
+"flags": 1
+},
+"21,-27": {
+"flags": 1
+},
+"22,-27": {
+"flags": 1
+},
+"23,-27": {
+"flags": 1
+},
+"24,-27": {
+"flags": 1
+},
+"25,-27": {
+"flags": 1
+},
+"-17,-26": {
+"flags": 1
+},
+"-16,-26": {
+"flags": 1
+},
+"-15,-26": {
+"flags": 1
+},
+"-14,-26": {
+"flags": 1
+},
+"-13,-26": {
+"flags": 1
+},
+"-12,-26": {
+"flags": 1
+},
+"-11,-26": {
+"flags": 1
+},
+"-10,-26": {
+"flags": 1
+},
+"-9,-26": {
+"flags": 1
+},
+"-8,-26": {
+"flags": 1
+},
+"-7,-26": {
+"flags": 1
+},
+"-1,-26": {
+"flags": 1
+},
+"0,-26": {
+"flags": 1
+},
+"1,-26": {
+"flags": 1
+},
+"2,-26": {
+"flags": 1
+},
+"3,-26": {
+"flags": 1
+},
+"4,-26": {
+"flags": 1
+},
+"5,-26": {
+"flags": 1
+},
+"6,-26": {
+"flags": 1
+},
+"7,-26": {
+"flags": 1
+},
+"8,-26": {
+"flags": 1
+},
+"9,-26": {
+"flags": 1
+},
+"15,-26": {
+"flags": 1
+},
+"16,-26": {
+"flags": 1
+},
+"17,-26": {
+"flags": 1
+},
+"18,-26": {
+"flags": 1
+},
+"19,-26": {
+"flags": 1
+},
+"20,-26": {
+"flags": 1
+},
+"21,-26": {
+"flags": 1
+},
+"22,-26": {
+"flags": 1
+},
+"23,-26": {
+"flags": 1
+},
+"24,-26": {
+"flags": 1
+},
+"25,-26": {
+"flags": 1
+},
+"-17,-25": {
+"flags": 1
+},
+"-16,-25": {
+"flags": 1
+},
+"-15,-25": {
+"flags": 1
+},
+"-14,-25": {
+"flags": 1
+},
+"-13,-25": {
+"flags": 1
+},
+"-12,-25": {
+"flags": 1
+},
+"-11,-25": {
+"flags": 1
+},
+"-10,-25": {
+"flags": 1
+},
+"-9,-25": {
+"flags": 1
+},
+"-8,-25": {
+"flags": 1
+},
+"-7,-25": {
+"flags": 1
+},
+"-1,-25": {
+"flags": 1
+},
+"0,-25": {
+"flags": 1
+},
+"1,-25": {
+"flags": 1
+},
+"2,-25": {
+"flags": 1
+},
+"3,-25": {
+"flags": 1
+},
+"4,-25": {
+"flags": 1
+},
+"5,-25": {
+"flags": 1
+},
+"6,-25": {
+"flags": 1
+},
+"7,-25": {
+"flags": 1
+},
+"8,-25": {
+"flags": 1
+},
+"9,-25": {
+"flags": 1
+},
+"15,-25": {
+"flags": 1
+},
+"16,-25": {
+"flags": 1
+},
+"17,-25": {
+"flags": 1
+},
+"18,-25": {
+"flags": 1
+},
+"19,-25": {
+"flags": 1
+},
+"20,-25": {
+"flags": 1
+},
+"21,-25": {
+"flags": 1
+},
+"22,-25": {
+"flags": 1
+},
+"23,-25": {
+"flags": 1
+},
+"24,-25": {
+"flags": 1
+},
+"25,-25": {
+"flags": 1
+},
+"-17,-24": {
+"flags": 1
+},
+"-7,-24": {
+"flags": 1
+},
+"-1,-24": {
+"flags": 1
+},
+"9,-24": {
+"flags": 1
+},
+"15,-24": {
+"flags": 1
+},
+"25,-24": {
+"flags": 1
+},
+"-17,-23": {
+"flags": 1
+},
+"-7,-23": {
+"flags": 1
+},
+"-1,-23": {
+"flags": 1
+},
+"9,-23": {
+"flags": 1
+},
+"15,-23": {
+"flags": 1
+},
+"25,-23": {
+"flags": 1
+},
+"-17,-22": {
+"flags": 1
+},
+"-7,-22": {
+"flags": 1
+},
+"-1,-22": {
+"flags": 1
+},
+"9,-22": {
+"flags": 1
+},
+"15,-22": {
+"flags": 1
+},
+"25,-22": {
+"flags": 1
+},
+"-17,-21": {
+"flags": 1
+},
+"-7,-21": {
+"flags": 1
+},
+"-1,-21": {
+"flags": 1
+},
+"9,-21": {
+"flags": 1
+},
+"15,-21": {
+"flags": 1
+},
+"25,-21": {
+"flags": 1
+},
+"-17,-20": {
+"flags": 1
+},
+"-7,-20": {
+"flags": 1
+},
+"-1,-20": {
+"flags": 1
+},
+"9,-20": {
+"flags": 1
+},
+"15,-20": {
+"flags": 1
+},
+"25,-20": {
+"flags": 1
+},
+"-17,-19": {
+"flags": 1
+},
+"-7,-19": {
+"flags": 1
+},
+"-1,-19": {
+"flags": 1
+},
+"9,-19": {
+"flags": 1
+},
+"15,-19": {
+"flags": 1
+},
+"25,-19": {
+"flags": 1
+},
+"-17,-18": {
+"flags": 1
+},
+"-16,-18": {
+"flags": 1
+},
+"-15,-18": {
+"flags": 1
+},
+"-14,-18": {
+"flags": 1
+},
+"-13,-18": {
+"flags": 1
+},
+"-12,-18": {
+"flags": 1
+},
+"-11,-18": {
+"flags": 1
+},
+"-10,-18": {
+"flags": 1
+},
+"-9,-18": {
+"flags": 1
+},
+"-8,-18": {
+"flags": 1
+},
+"-7,-18": {
+"flags": 1
+},
+"-1,-18": {
+"flags": 1
+},
+"0,-18": {
+"flags": 1
+},
+"1,-18": {
+"flags": 1
+},
+"2,-18": {
+"flags": 1
+},
+"3,-18": {
+"flags": 1
+},
+"4,-18": {
+"flags": 1
+},
+"5,-18": {
+"flags": 1
+},
+"6,-18": {
+"flags": 1
+},
+"7,-18": {
+"flags": 1
+},
+"8,-18": {
+"flags": 1
+},
+"9,-18": {
+"flags": 1
+},
+"15,-18": {
+"flags": 1
+},
+"16,-18": {
+"flags": 1
+},
+"17,-18": {
+"flags": 1
+},
+"18,-18": {
+"flags": 1
+},
+"19,-18": {
+"flags": 1
+},
+"20,-18": {
+"flags": 1
+},
+"21,-18": {
+"flags": 1
+},
+"22,-18": {
+"flags": 1
+},
+"23,-18": {
+"flags": 1
+},
+"24,-18": {
+"flags": 1
+},
+"25,-18": {
+"flags": 1
+},
+"-17,-14": {
+"flags": 1
+},
+"-16,-14": {
+"flags": 1
+},
+"-15,-14": {
+"flags": 1
+},
+"-14,-14": {
+"flags": 1
+},
+"-13,-14": {
+"flags": 1
+},
+"-12,-14": {
+"flags": 1
+},
+"-11,-14": {
+"flags": 1
+},
+"-10,-14": {
+"flags": 1
+},
+"-9,-14": {
+"flags": 1
+},
+"-8,-14": {
+"flags": 1
+},
+"-7,-14": {
+"flags": 1
+},
+"-1,-14": {
+"flags": 1
+},
+"0,-14": {
+"flags": 1
+},
+"1,-14": {
+"flags": 1
+},
+"2,-14": {
+"flags": 1
+},
+"3,-14": {
+"flags": 1
+},
+"4,-14": {
+"flags": 1
+},
+"5,-14": {
+"flags": 1
+},
+"6,-14": {
+"flags": 1
+},
+"7,-14": {
+"flags": 1
+},
+"8,-14": {
+"flags": 1
+},
+"9,-14": {
+"flags": 1
+},
+"15,-14": {
+"flags": 1
+},
+"16,-14": {
+"flags": 1
+},
+"17,-14": {
+"flags": 1
+},
+"18,-14": {
+"flags": 1
+},
+"19,-14": {
+"flags": 1
+},
+"20,-14": {
+"flags": 1
+},
+"21,-14": {
+"flags": 1
+},
+"22,-14": {
+"flags": 1
+},
+"23,-14": {
+"flags": 1
+},
+"24,-14": {
+"flags": 1
+},
+"25,-14": {
+"flags": 1
+},
+"-17,-13": {
+"flags": 1
+},
+"-16,-13": {
+"flags": 1
+},
+"-15,-13": {
+"flags": 1
+},
+"-14,-13": {
+"flags": 1
+},
+"-13,-13": {
+"flags": 1
+},
+"-12,-13": {
+"flags": 1
+},
+"-11,-13": {
+"flags": 1
+},
+"-10,-13": {
+"flags": 1
+},
+"-9,-13": {
+"flags": 1
+},
+"-8,-13": {
+"flags": 1
+},
+"-7,-13": {
+"flags": 1
+},
+"-1,-13": {
+"flags": 1
+},
+"0,-13": {
+"flags": 1
+},
+"1,-13": {
+"flags": 1
+},
+"2,-13": {
+"flags": 1
+},
+"3,-13": {
+"flags": 1
+},
+"4,-13": {
+"flags": 1
+},
+"5,-13": {
+"flags": 1
+},
+"6,-13": {
+"flags": 1
+},
+"7,-13": {
+"flags": 1
+},
+"8,-13": {
+"flags": 1
+},
+"9,-13": {
+"flags": 1
+},
+"15,-13": {
+"flags": 1
+},
+"16,-13": {
+"flags": 1
+},
+"17,-13": {
+"flags": 1
+},
+"18,-13": {
+"flags": 1
+},
+"19,-13": {
+"flags": 1
+},
+"20,-13": {
+"flags": 1
+},
+"21,-13": {
+"flags": 1
+},
+"22,-13": {
+"flags": 1
+},
+"23,-13": {
+"flags": 1
+},
+"24,-13": {
+"flags": 1
+},
+"25,-13": {
+"flags": 1
+},
+"-17,-12": {
+"flags": 1
+},
+"-16,-12": {
+"flags": 1
+},
+"-15,-12": {
+"flags": 1
+},
+"-14,-12": {
+"flags": 1
+},
+"-13,-12": {
+"flags": 1
+},
+"-12,-12": {
+"flags": 1
+},
+"-11,-12": {
+"flags": 1
+},
+"-10,-12": {
+"flags": 1
+},
+"-9,-12": {
+"flags": 1
+},
+"-8,-12": {
+"flags": 1
+},
+"-7,-12": {
+"flags": 1
+},
+"-1,-12": {
+"flags": 1
+},
+"0,-12": {
+"flags": 1
+},
+"1,-12": {
+"flags": 1
+},
+"2,-12": {
+"flags": 1
+},
+"3,-12": {
+"flags": 1
+},
+"4,-12": {
+"flags": 1
+},
+"5,-12": {
+"flags": 1
+},
+"6,-12": {
+"flags": 1
+},
+"7,-12": {
+"flags": 1
+},
+"8,-12": {
+"flags": 1
+},
+"9,-12": {
+"flags": 1
+},
+"15,-12": {
+"flags": 1
+},
+"16,-12": {
+"flags": 1
+},
+"17,-12": {
+"flags": 1
+},
+"18,-12": {
+"flags": 1
+},
+"19,-12": {
+"flags": 1
+},
+"20,-12": {
+"flags": 1
+},
+"21,-12": {
+"flags": 1
+},
+"22,-12": {
+"flags": 1
+},
+"23,-12": {
+"flags": 1
+},
+"24,-12": {
+"flags": 1
+},
+"25,-12": {
+"flags": 1
+},
+"-17,-11": {
+"flags": 1
+},
+"-7,-11": {
+"flags": 1
+},
+"-1,-11": {
+"flags": 1
+},
+"9,-11": {
+"flags": 1
+},
+"15,-11": {
+"flags": 1
+},
+"25,-11": {
+"flags": 1
+},
+"-17,-10": {
+"flags": 1
+},
+"-7,-10": {
+"flags": 1
+},
+"-1,-10": {
+"flags": 1
+},
+"9,-10": {
+"flags": 1
+},
+"15,-10": {
+"flags": 1
+},
+"25,-10": {
+"flags": 1
+},
+"-17,-9": {
+"flags": 1
+},
+"-7,-9": {
+"flags": 1
+},
+"-1,-9": {
+"flags": 1
+},
+"9,-9": {
+"flags": 1
+},
+"15,-9": {
+"flags": 1
+},
+"25,-9": {
+"flags": 1
+},
+"-17,-8": {
+"flags": 1
+},
+"-7,-8": {
+"flags": 1
+},
+"-1,-8": {
+"flags": 1
+},
+"9,-8": {
+"flags": 1
+},
+"15,-8": {
+"flags": 1
+},
+"25,-8": {
+"flags": 1
+},
+"-17,-7": {
+"flags": 1
+},
+"-7,-7": {
+"flags": 1
+},
+"-1,-7": {
+"flags": 1
+},
+"9,-7": {
+"flags": 1
+},
+"15,-7": {
+"flags": 1
+},
+"25,-7": {
+"flags": 1
+},
+"-17,-6": {
+"flags": 1
+},
+"-7,-6": {
+"flags": 1
+},
+"-1,-6": {
+"flags": 1
+},
+"9,-6": {
+"flags": 1
+},
+"15,-6": {
+"flags": 1
+},
+"25,-6": {
+"flags": 1
+},
+"-17,-5": {
+"flags": 1
+},
+"-16,-5": {
+"flags": 1
+},
+"-15,-5": {
+"flags": 1
+},
+"-14,-5": {
+"flags": 1
+},
+"-13,-5": {
+"flags": 1
+},
+"-12,-5": {
+"flags": 1
+},
+"-11,-5": {
+"flags": 1
+},
+"-10,-5": {
+"flags": 1
+},
+"-9,-5": {
+"flags": 1
+},
+"-8,-5": {
+"flags": 1
+},
+"-7,-5": {
+"flags": 1
+},
+"-1,-5": {
+"flags": 1
+},
+"0,-5": {
+"flags": 1
+},
+"1,-5": {
+"flags": 1
+},
+"2,-5": {
+"flags": 1
+},
+"3,-5": {
+"flags": 1
+},
+"4,-5": {
+"flags": 1
+},
+"5,-5": {
+"flags": 1
+},
+"6,-5": {
+"flags": 1
+},
+"7,-5": {
+"flags": 1
+},
+"8,-5": {
+"flags": 1
+},
+"9,-5": {
+"flags": 1
+},
+"15,-5": {
+"flags": 1
+},
+"16,-5": {
+"flags": 1
+},
+"17,-5": {
+"flags": 1
+},
+"18,-5": {
+"flags": 1
+},
+"19,-5": {
+"flags": 1
+},
+"20,-5": {
+"flags": 1
+},
+"21,-5": {
+"flags": 1
+},
+"22,-5": {
+"flags": 1
+},
+"23,-5": {
+"flags": 1
+},
+"24,-5": {
+"flags": 1
+},
+"25,-5": {
+"flags": 1
+},
+"-17,-1": {
+"flags": 1
+},
+"-16,-1": {
+"flags": 1
+},
+"-15,-1": {
+"flags": 1
+},
+"-14,-1": {
+"flags": 1
+},
+"-13,-1": {
+"flags": 1
+},
+"-12,-1": {
+"flags": 1
+},
+"-11,-1": {
+"flags": 1
+},
+"-10,-1": {
+"flags": 1
+},
+"-9,-1": {
+"flags": 1
+},
+"-8,-1": {
+"flags": 1
+},
+"-7,-1": {
+"flags": 1
+},
+"-1,-1": {
+"flags": 1
+},
+"0,-1": {
+"flags": 1
+},
+"1,-1": {
+"flags": 1
+},
+"2,-1": {
+"flags": 1
+},
+"3,-1": {
+"flags": 1
+},
+"4,-1": {
+"flags": 1
+},
+"5,-1": {
+"flags": 1
+},
+"6,-1": {
+"flags": 1
+},
+"7,-1": {
+"flags": 1
+},
+"8,-1": {
+"flags": 1
+},
+"9,-1": {
+"flags": 1
+},
+"15,-1": {
+"flags": 1
+},
+"16,-1": {
+"flags": 1
+},
+"17,-1": {
+"flags": 1
+},
+"18,-1": {
+"flags": 1
+},
+"19,-1": {
+"flags": 1
+},
+"20,-1": {
+"flags": 1
+},
+"21,-1": {
+"flags": 1
+},
+"22,-1": {
+"flags": 1
+},
+"23,-1": {
+"flags": 1
+},
+"24,-1": {
+"flags": 1
+},
+"25,-1": {
+"flags": 1
+},
+"-17,0": {
+"flags": 1
+},
+"-16,0": {
+"flags": 1
+},
+"-15,0": {
+"flags": 1
+},
+"-14,0": {
+"flags": 1
+},
+"-13,0": {
+"flags": 1
+},
+"-12,0": {
+"flags": 1
+},
+"-11,0": {
+"flags": 1
+},
+"-10,0": {
+"flags": 1
+},
+"-9,0": {
+"flags": 1
+},
+"-8,0": {
+"flags": 1
+},
+"-7,0": {
+"flags": 1
+},
+"-1,0": {
+"flags": 1
+},
+"0,0": {
+"flags": 1
+},
+"1,0": {
+"flags": 1
+},
+"2,0": {
+"flags": 1
+},
+"3,0": {
+"flags": 1
+},
+"4,0": {
+"flags": 1
+},
+"5,0": {
+"flags": 1
+},
+"6,0": {
+"flags": 1
+},
+"7,0": {
+"flags": 1
+},
+"8,0": {
+"flags": 1
+},
+"9,0": {
+"flags": 1
+},
+"15,0": {
+"flags": 1
+},
+"16,0": {
+"flags": 1
+},
+"17,0": {
+"flags": 1
+},
+"18,0": {
+"flags": 1
+},
+"19,0": {
+"flags": 1
+},
+"20,0": {
+"flags": 1
+},
+"21,0": {
+"flags": 1
+},
+"22,0": {
+"flags": 1
+},
+"23,0": {
+"flags": 1
+},
+"24,0": {
+"flags": 1
+},
+"25,0": {
+"flags": 1
+},
+"-17,1": {
+"flags": 1
+},
+"-16,1": {
+"flags": 1
+},
+"-15,1": {
+"flags": 1
+},
+"-14,1": {
+"flags": 1
+},
+"-13,1": {
+"flags": 1
+},
+"-12,1": {
+"flags": 1
+},
+"-11,1": {
+"flags": 1
+},
+"-10,1": {
+"flags": 1
+},
+"-9,1": {
+"flags": 1
+},
+"-8,1": {
+"flags": 1
+},
+"-7,1": {
+"flags": 1
+},
+"-1,1": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"15,1": {
+"flags": 1
+},
+"16,1": {
+"flags": 1
+},
+"17,1": {
+"flags": 1
+},
+"18,1": {
+"flags": 1
+},
+"19,1": {
+"flags": 1
+},
+"20,1": {
+"flags": 1
+},
+"21,1": {
+"flags": 1
+},
+"22,1": {
+"flags": 1
+},
+"23,1": {
+"flags": 1
+},
+"24,1": {
+"flags": 1
+},
+"25,1": {
+"flags": 1
+},
+"-17,2": {
+"flags": 1
+},
+"-7,2": {
+"flags": 1
+},
+"-1,2": {
+"flags": 1
+},
+"9,2": {
+"flags": 1
+},
+"15,2": {
+"flags": 1
+},
+"25,2": {
+"flags": 1
+},
+"-17,3": {
+"flags": 1
+},
+"-7,3": {
+"flags": 1
+},
+"-1,3": {
+"flags": 1
+},
+"9,3": {
+"flags": 1
+},
+"15,3": {
+"flags": 1
+},
+"25,3": {
+"flags": 1
+},
+"-17,4": {
+"flags": 1
+},
+"-7,4": {
+"flags": 1
+},
+"-1,4": {
+"flags": 1
+},
+"9,4": {
+"flags": 1
+},
+"15,4": {
+"flags": 1
+},
+"25,4": {
+"flags": 1
+},
+"-17,5": {
+"flags": 1
+},
+"-7,5": {
+"flags": 1
+},
+"-1,5": {
+"flags": 1
+},
+"9,5": {
+"flags": 1
+},
+"15,5": {
+"flags": 1
+},
+"25,5": {
+"flags": 1
+},
+"-17,6": {
+"flags": 1
+},
+"-7,6": {
+"flags": 1
+},
+"-1,6": {
+"flags": 1
+},
+"1,6": {
+"flags": 1
+},
+"7,6": {
+"flags": 1
+},
+"9,6": {
+"flags": 1
+},
+"15,6": {
+"flags": 1
+},
+"25,6": {
+"flags": 1
+},
+"-17,7": {
+"flags": 1
+},
+"-7,7": {
+"flags": 1
+},
+"-1,7": {
+"flags": 1
+},
+"9,7": {
+"flags": 1
+},
+"15,7": {
+"flags": 1
+},
+"25,7": {
+"flags": 1
+},
+"-17,8": {
+"flags": 1
+},
+"-16,8": {
+"flags": 1
+},
+"-15,8": {
+"flags": 1
+},
+"-14,8": {
+"flags": 1
+},
+"-13,8": {
+"flags": 1
+},
+"-12,8": {
+"flags": 1
+},
+"-11,8": {
+"flags": 1
+},
+"-10,8": {
+"flags": 1
+},
+"-9,8": {
+"flags": 1
+},
+"-8,8": {
+"flags": 1
+},
+"-7,8": {
+"flags": 1
+},
+"-1,8": {
+"flags": 1
+},
+"0,8": {
+"flags": 1
+},
+"1,8": {
+"flags": 1
+},
+"2,8": {
+"flags": 1
+},
+"3,8": {
+"flags": 1
+},
+"4,8": {
+"flags": 1
+},
+"5,8": {
+"flags": 1
+},
+"6,8": {
+"flags": 1
+},
+"7,8": {
+"flags": 1
+},
+"8,8": {
+"flags": 1
+},
+"9,8": {
+"flags": 1
+},
+"15,8": {
+"flags": 1
+},
+"16,8": {
+"flags": 1
+},
+"17,8": {
+"flags": 1
+},
+"18,8": {
+"flags": 1
+},
+"19,8": {
+"flags": 1
+},
+"20,8": {
+"flags": 1
+},
+"21,8": {
+"flags": 1
+},
+"22,8": {
+"flags": 1
+},
+"23,8": {
+"flags": 1
+},
+"24,8": {
+"flags": 1
+},
+"25,8": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=902757812]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Norman" parent="NPCs" unique_id=1302010401 instance=ExtResource("gp_npc_base")]
+editor_description = "pokeruby PetalburgCity_Gym objeto 1 (4,3) NORMAN FACE_DOWN, PetalburgCity_Gym_EventScript_Norman. En la entrada (4,107) con VAR_PETALBURG_GYM_STATE < 6 o FLAG_SYS_GAME_CLEAR. Lo dirige Eventos/EventoGimnasioPetalia."
+position = Vector2(72, -354)
+script = ExtResource("gp_npc_evento")
+id_texto = "PETALIA_GIMNASIO_PAPA_LLEGAS"
+tipo_movimiento = 8
+selec_frames = ExtResource("gp_npc_036")
+coord = Vector2i(4, -23)
+
+[node name="Mari" parent="NPCs" unique_id=1302010402 instance=ExtResource("gp_entrenador")]
+editor_description = "pokeruby PetalburgCity_Gym objeto 2 (4,94) WOMAN_7 FACE_DOWN, TRAINER_MARY (visión 0), SALA de PRECISIÓN"
+position = Vector2(328, 62)
+script = ExtResource("gp_entrenador_gimnasio")
+condicion_post_medalla = "MEDALLA_5"
+texto_post_medalla = "PETALIA_GIMNASIO_MARI_POST_MEDALLA"
+npc_id = "petalia_gimnasio_mari"
+entrenador_id = 89
+rango_vision = 0
+texto_post_combate = "PETALIA_GIMNASIO_MARI_POST"
+id_texto = "PETALIA_GIMNASIO_MARI_INI"
+tipo_movimiento = 8
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("gp_npc_028")
+coord = Vector2i(20, 3)
+
+[node name="Rodrigo" parent="NPCs" unique_id=1302010403 instance=ExtResource("gp_entrenador")]
+editor_description = "pokeruby PetalburgCity_Gym objeto 3 (4,81) MAN_4 FACE_DOWN, TRAINER_RANDALL (visión 0), SALA de VELOCIDAD"
+position = Vector2(-184, 62)
+script = ExtResource("gp_entrenador_gimnasio")
+condicion_post_medalla = "MEDALLA_5"
+texto_post_medalla = "PETALIA_GIMNASIO_RODRIGO_POST_MEDALLA"
+npc_id = "petalia_gimnasio_rodrigo"
+entrenador_id = 71
+rango_vision = 0
+texto_post_combate = "PETALIA_GIMNASIO_RODRIGO_POST"
+id_texto = "PETALIA_GIMNASIO_RODRIGO_INI"
+tipo_movimiento = 8
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("gp_npc_027")
+coord = Vector2i(-12, 3)
+
+[node name="Pascual" parent="NPCs" unique_id=1302010404 instance=ExtResource("gp_entrenador")]
+editor_description = "pokeruby PetalburgCity_Gym objeto 4 (4,42) MAN_4 FACE_DOWN, TRAINER_PARKER (visión 0), SALA de REDUCCIÓN CERO"
+position = Vector2(-184, -146)
+script = ExtResource("gp_entrenador_gimnasio")
+condicion_post_medalla = "MEDALLA_5"
+texto_post_medalla = "PETALIA_GIMNASIO_PASCUAL_POST_MEDALLA"
+npc_id = "petalia_gimnasio_pascual"
+entrenador_id = 72
+rango_vision = 0
+texto_post_combate = "PETALIA_GIMNASIO_PASCUAL_POST"
+id_texto = "PETALIA_GIMNASIO_PASCUAL_INI"
+tipo_movimiento = 8
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("gp_npc_027")
+coord = Vector2i(-12, -10)
+
+[node name="Lara" parent="NPCs" unique_id=1302010405 instance=ExtResource("gp_entrenador")]
+editor_description = "pokeruby PetalburgCity_Gym objeto 5 (4,55) WOMAN_7 FACE_DOWN, TRAINER_LORI (visión 0), SALA de DEFENSA"
+position = Vector2(72, -146)
+script = ExtResource("gp_entrenador_gimnasio")
+condicion_post_medalla = "MEDALLA_5"
+texto_post_medalla = "PETALIA_GIMNASIO_LARA_POST_MEDALLA"
+npc_id = "petalia_gimnasio_lara"
+entrenador_id = 90
+rango_vision = 0
+texto_post_combate = "PETALIA_GIMNASIO_LARA_POST"
+id_texto = "PETALIA_GIMNASIO_LARA_INI"
+tipo_movimiento = 8
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("gp_npc_028")
+coord = Vector2i(4, -10)
+
+[node name="Jorge" parent="NPCs" unique_id=1302010406 instance=ExtResource("gp_entrenador")]
+editor_description = "pokeruby PetalburgCity_Gym objeto 6 (4,68) MAN_4 FACE_DOWN, TRAINER_GEORGE (visión 0), SALA de RECUPERACIÓN"
+position = Vector2(328, -146)
+script = ExtResource("gp_entrenador_gimnasio")
+condicion_post_medalla = "MEDALLA_5"
+texto_post_medalla = "PETALIA_GIMNASIO_JORGE_POST_MEDALLA"
+npc_id = "petalia_gimnasio_jorge"
+entrenador_id = 73
+rango_vision = 0
+texto_post_combate = "PETALIA_GIMNASIO_JORGE_POST"
+id_texto = "PETALIA_GIMNASIO_JORGE_INI"
+tipo_movimiento = 8
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("gp_npc_027")
+coord = Vector2i(20, -10)
+
+[node name="Jimena" parent="NPCs" unique_id=1302010407 instance=ExtResource("gp_entrenador")]
+editor_description = "pokeruby PetalburgCity_Gym objeto 7 (4,16) WOMAN_7 FACE_DOWN, TRAINER_JODY (visión 0), SALA de FUERZA"
+position = Vector2(-184, -354)
+script = ExtResource("gp_entrenador_gimnasio")
+condicion_post_medalla = "MEDALLA_5"
+texto_post_medalla = "PETALIA_GIMNASIO_JIMENA_POST_MEDALLA"
+npc_id = "petalia_gimnasio_jimena"
+entrenador_id = 91
+rango_vision = 0
+texto_post_combate = "PETALIA_GIMNASIO_JIMENA_POST"
+id_texto = "PETALIA_GIMNASIO_JIMENA_INI"
+tipo_movimiento = 8
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("gp_npc_028")
+coord = Vector2i(-12, -23)
+
+[node name="Blas" parent="NPCs" unique_id=1302010408 instance=ExtResource("gp_entrenador")]
+editor_description = "pokeruby PetalburgCity_Gym objeto 8 (4,29) MAN_4 FACE_DOWN, TRAINER_BERKE (visión 0), SALA de KO INSTANTÁNEO"
+position = Vector2(328, -354)
+script = ExtResource("gp_entrenador_gimnasio")
+condicion_post_medalla = "MEDALLA_5"
+texto_post_medalla = "PETALIA_GIMNASIO_BLAS_POST_MEDALLA"
+npc_id = "petalia_gimnasio_blas"
+entrenador_id = 74
+rango_vision = 0
+texto_post_combate = "PETALIA_GIMNASIO_BLAS_POST"
+id_texto = "PETALIA_GIMNASIO_BLAS_INI"
+tipo_movimiento = 8
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("gp_npc_027")
+coord = Vector2i(20, -23)
+
+[node name="Blasco" parent="NPCs" unique_id=1302010501 instance=ExtResource("gp_npc_base")]
+editor_description = "pokeruby PetalburgCity_Gym objeto 10 (4,111) WALLY FACE_UP, FLAG_HIDE_WALLY_PETALBURG_GYM: entra al hablar con NORMAN (BeginWallyTutorial) y vuelve a (5,108) tras el tutorial. Lo dirige Eventos/EventoGimnasioPetalia."
+visible = false
+position = Vector2(72, 126)
+tipo_movimiento = 7
+selec_frames = ExtResource("gp_npc_039")
+coord = Vector2i(4, 7)
+
+[node name="Guia" parent="NPCs" unique_id=1302010409 instance=ExtResource("gp_npc_base")]
+editor_description = "pokeruby PetalburgCity_Gym objeto 9 (3,109) MAN_2 FACE_DOWN, GymGuide; oculto (FLAG_HIDE_PETALBURG_GYM_GUIDE) hasta VAR_PETALBURG_GYM_STATE 6"
+position = Vector2(56, 94)
+script = ExtResource("gp_condicional")
+textos_condicionales = Dictionary[String, String]({
+"MEDALLA_5": "PETALIA_GIMNASIO_GUIA_VICTORIA"
+})
+id_texto = "PETALIA_GIMNASIO_GUIA"
+tipo_movimiento = 8
+selec_frames = ExtResource("gp_npc_052")
+coord = Vector2i(3, 5)
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=521058523]
+position = Vector2(120, 22)
+script = ExtResource("3_gy05g")
+tipo_warp = 2
+estilo_warp = 31
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(18, 7)
+direccion = Vector2(0, -1)
+con_llave = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1777933862]
+position = Vector2(24, 22)
+script = ExtResource("3_gy05g")
+tipo_warp = 2
+estilo_warp = 31
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(-10, 7)
+direccion = Vector2(0, -1)
+con_llave = true
+
+[node name="Warp3" type="Sprite2D" parent="." unique_id=184987396]
+position = Vector2(280, 22)
+script = ExtResource("3_gy05g")
+tipo_warp = 2
+estilo_warp = 31
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(6, -6)
+direccion = Vector2(0, -1)
+con_llave = true
+
+[node name="Warp4" type="Sprite2D" parent="." unique_id=1607231820]
+position = Vector2(376, 22)
+script = ExtResource("3_gy05g")
+tipo_warp = 2
+estilo_warp = 31
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(18, -6)
+direccion = Vector2(0, -1)
+con_llave = true
+
+[node name="Warp5" type="Sprite2D" parent="." unique_id=775196230]
+position = Vector2(-136, 22)
+script = ExtResource("3_gy05g")
+tipo_warp = 2
+estilo_warp = 31
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(2, -6)
+direccion = Vector2(0, -1)
+con_llave = true
+
+[node name="Warp6" type="Sprite2D" parent="." unique_id=1958904534]
+position = Vector2(-232, 22)
+script = ExtResource("3_gy05g")
+tipo_warp = 2
+estilo_warp = 31
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(-10, -6)
+direccion = Vector2(0, -1)
+con_llave = true
+
+[node name="Warp7" type="Sprite2D" parent="." unique_id=1708163938]
+position = Vector2(-136, -186)
+script = ExtResource("3_gy05g")
+tipo_warp = 2
+estilo_warp = 31
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(-14, -19)
+direccion = Vector2(0, -1)
+con_llave = true
+
+[node name="Warp8" type="Sprite2D" parent="." unique_id=1984055568]
+position = Vector2(24, -186)
+script = ExtResource("3_gy05g")
+tipo_warp = 2
+estilo_warp = 31
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(-10, -19)
+direccion = Vector2(0, -1)
+con_llave = true
+
+[node name="Warp9" type="Sprite2D" parent="." unique_id=922511938]
+position = Vector2(120, -186)
+script = ExtResource("3_gy05g")
+tipo_warp = 2
+estilo_warp = 31
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(18, -19)
+direccion = Vector2(0, -1)
+con_llave = true
+
+[node name="Warp10" type="Sprite2D" parent="." unique_id=1633047987]
+position = Vector2(280, -186)
+script = ExtResource("3_gy05g")
+tipo_warp = 2
+estilo_warp = 31
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(22, -19)
+direccion = Vector2(0, -1)
+con_llave = true
+
+[node name="Warp11" type="Sprite2D" parent="." unique_id=17905304]
+position = Vector2(-136, -394)
+script = ExtResource("3_gy05g")
+tipo_warp = 2
+estilo_warp = 31
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(2, -19)
+direccion = Vector2(0, -1)
+con_llave = true
+
+[node name="Warp12" type="Sprite2D" parent="." unique_id=653152731]
+position = Vector2(280, -394)
+script = ExtResource("3_gy05g")
+tipo_warp = 2
+estilo_warp = 31
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(6, -19)
+direccion = Vector2(0, -1)
+con_llave = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1302010410]
+
+[node name="PuertaVelocidad" type="Sprite2D" parent="Carteles" unique_id=1302010411 groups=["Cartel"]]
+editor_description = "pokeruby PetalburgCity_Gym bg_event 1 (1,105), PetalburgCity_Gym_EventScript_SpeedRoomDoor: la resuelve Eventos/EventoGimnasioPetalia (cerrada o SÍ/NO + warp del Warp de esta celda)"
+position = Vector2(24, 24)
+script = ExtResource("gp_cartel_evento")
+id_texto = "PETALIA_GIMNASIO_PUERTA_VELOCIDAD"
+coord_tile = Vector2i(1, 1)
+
+[node name="PuertaPrecision" type="Sprite2D" parent="Carteles" unique_id=1302010412 groups=["Cartel"]]
+editor_description = "pokeruby PetalburgCity_Gym bg_event 2 (7,105), PetalburgCity_Gym_EventScript_AccuracyRoomDoor: la resuelve Eventos/EventoGimnasioPetalia (cerrada o SÍ/NO + warp del Warp de esta celda)"
+position = Vector2(120, 24)
+script = ExtResource("gp_cartel_evento")
+id_texto = "PETALIA_GIMNASIO_PUERTA_PRECISION"
+coord_tile = Vector2i(7, 1)
+
+[node name="PuertaReduccionCero" type="Sprite2D" parent="Carteles" unique_id=1302010413 groups=["Cartel"]]
+editor_description = "pokeruby PetalburgCity_Gym bg_event 3 (1,79), PetalburgCity_Gym_EventScript_ZeroReductionRoomDoor: la resuelve Eventos/EventoGimnasioPetalia (cerrada o SÍ/NO + warp del Warp de esta celda)"
+position = Vector2(-232, 24)
+script = ExtResource("gp_cartel_evento")
+id_texto = "PETALIA_GIMNASIO_PUERTA_REDUCCION_CERO"
+coord_tile = Vector2i(-15, 1)
+
+[node name="PuertaDefensaIzquierda" type="Sprite2D" parent="Carteles" unique_id=1302010414 groups=["Cartel"]]
+editor_description = "pokeruby PetalburgCity_Gym bg_event 4 (7,79), PetalburgCity_Gym_EventScript_LeftDefenseRoomDoor: la resuelve Eventos/EventoGimnasioPetalia (cerrada o SÍ/NO + warp del Warp de esta celda)"
+position = Vector2(-136, 24)
+script = ExtResource("gp_cartel_evento")
+id_texto = "PETALIA_GIMNASIO_PUERTA_DEFENSA"
+coord_tile = Vector2i(-9, 1)
+
+[node name="PuertaDefensaDerecha" type="Sprite2D" parent="Carteles" unique_id=1302010415 groups=["Cartel"]]
+editor_description = "pokeruby PetalburgCity_Gym bg_event 5 (1,92), PetalburgCity_Gym_EventScript_RightDefenseRoomDoor: la resuelve Eventos/EventoGimnasioPetalia (cerrada o SÍ/NO + warp del Warp de esta celda)"
+position = Vector2(280, 24)
+script = ExtResource("gp_cartel_evento")
+id_texto = "PETALIA_GIMNASIO_PUERTA_DEFENSA"
+coord_tile = Vector2i(17, 1)
+
+[node name="PuertaRecuperacion" type="Sprite2D" parent="Carteles" unique_id=1302010416 groups=["Cartel"]]
+editor_description = "pokeruby PetalburgCity_Gym bg_event 6 (7,92), PetalburgCity_Gym_EventScript_RecoveryRoomDoor: la resuelve Eventos/EventoGimnasioPetalia (cerrada o SÍ/NO + warp del Warp de esta celda)"
+position = Vector2(376, 24)
+script = ExtResource("gp_cartel_evento")
+id_texto = "PETALIA_GIMNASIO_PUERTA_RECUPERACION"
+coord_tile = Vector2i(23, 1)
+
+[node name="PuertaFuerzaIzquierda" type="Sprite2D" parent="Carteles" unique_id=1302010417 groups=["Cartel"]]
+editor_description = "pokeruby PetalburgCity_Gym bg_event 7 (7,40), PetalburgCity_Gym_EventScript_LeftStrengthRoomDoor: la resuelve Eventos/EventoGimnasioPetalia (cerrada o SÍ/NO + warp del Warp de esta celda)"
+position = Vector2(-136, -184)
+script = ExtResource("gp_cartel_evento")
+id_texto = "PETALIA_GIMNASIO_PUERTA_FUERZA"
+coord_tile = Vector2i(-9, -12)
+
+[node name="PuertaFuerzaDerecha" type="Sprite2D" parent="Carteles" unique_id=1302010418 groups=["Cartel"]]
+editor_description = "pokeruby PetalburgCity_Gym bg_event 8 (1,53), PetalburgCity_Gym_EventScript_RightStrengthRoomDoor: la resuelve Eventos/EventoGimnasioPetalia (cerrada o SÍ/NO + warp del Warp de esta celda)"
+position = Vector2(24, -184)
+script = ExtResource("gp_cartel_evento")
+id_texto = "PETALIA_GIMNASIO_PUERTA_FUERZA"
+coord_tile = Vector2i(1, -12)
+
+[node name="PuertaKOIzquierda" type="Sprite2D" parent="Carteles" unique_id=1302010419 groups=["Cartel"]]
+editor_description = "pokeruby PetalburgCity_Gym bg_event 9 (7,53), PetalburgCity_Gym_EventScript_LeftOHKORoomDoor: la resuelve Eventos/EventoGimnasioPetalia (cerrada o SÍ/NO + warp del Warp de esta celda)"
+position = Vector2(120, -184)
+script = ExtResource("gp_cartel_evento")
+id_texto = "PETALIA_GIMNASIO_PUERTA_KO"
+coord_tile = Vector2i(7, -12)
+
+[node name="PuertaKODerecha" type="Sprite2D" parent="Carteles" unique_id=1302010420 groups=["Cartel"]]
+editor_description = "pokeruby PetalburgCity_Gym bg_event 10 (1,66), PetalburgCity_Gym_EventScript_RightOHKORoomDoor: la resuelve Eventos/EventoGimnasioPetalia (cerrada o SÍ/NO + warp del Warp de esta celda)"
+position = Vector2(280, -184)
+script = ExtResource("gp_cartel_evento")
+id_texto = "PETALIA_GIMNASIO_PUERTA_KO"
+coord_tile = Vector2i(17, -12)
+
+[node name="PuertaLiderIzquierda" type="Sprite2D" parent="Carteles" unique_id=1302010421 groups=["Cartel"]]
+editor_description = "pokeruby PetalburgCity_Gym bg_event 11 (7,14), PetalburgCity_Gym_EventScript_LeftGymLeadersRoomDoor: la resuelve Eventos/EventoGimnasioPetalia (cerrada o SÍ/NO + warp del Warp de esta celda)"
+position = Vector2(-136, -392)
+script = ExtResource("gp_cartel_evento")
+id_texto = "PETALIA_GIMNASIO_PUERTA_LIDER"
+coord_tile = Vector2i(-9, -25)
+
+[node name="PuertaLiderDerecha" type="Sprite2D" parent="Carteles" unique_id=1302010422 groups=["Cartel"]]
+editor_description = "pokeruby PetalburgCity_Gym bg_event 12 (1,27), PetalburgCity_Gym_EventScript_RightGymLeadersRoomDoor: la resuelve Eventos/EventoGimnasioPetalia (cerrada o SÍ/NO + warp del Warp de esta celda)"
+position = Vector2(280, -392)
+script = ExtResource("gp_cartel_evento")
+id_texto = "PETALIA_GIMNASIO_PUERTA_LIDER"
+coord_tile = Vector2i(17, -25)
+
+[node name="EstatuaIzquierda" type="Sprite2D" parent="Carteles" unique_id=1302010423 groups=["Cartel"]]
+editor_description = "pokeruby PetalburgCity_Gym bg_event 13 (1,110), solo mirando al norte; FLAG_BADGE05_GET → certificado"
+position = Vector2(24, 104)
+script = ExtResource("gp_cartel_condicional")
+textos_condicionales = Dictionary[String, String]({
+"MEDALLA_5": "PETALIA_GIMNASIO_ESTATUA_CERTIFICADO"
+})
+id_texto = "PETALIA_GIMNASIO_ESTATUA"
+direccion = 1
+coord_tile = Vector2i(1, 6)
+
+[node name="EstatuaDerecha" type="Sprite2D" parent="Carteles" unique_id=1302010424 groups=["Cartel"]]
+editor_description = "pokeruby PetalburgCity_Gym bg_event 14 (7,110), solo mirando al norte; FLAG_BADGE05_GET → certificado"
+position = Vector2(120, 104)
+script = ExtResource("gp_cartel_condicional")
+textos_condicionales = Dictionary[String, String]({
+"MEDALLA_5": "PETALIA_GIMNASIO_ESTATUA_CERTIFICADO"
+})
+id_texto = "PETALIA_GIMNASIO_ESTATUA"
+direccion = 1
+coord_tile = Vector2i(7, 6)
+
+[node name="Felpudos" type="Node2D" parent="." unique_id=1302010425]
+
+[node name="Felpudo_-10_7" type="Sprite2D" parent="Felpudos" unique_id=1302010426]
+editor_description = "pokeruby PetalburgCity_Gym warp (6,85): SALA de VELOCIDAD → puerta izquierda de la entrada. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(-152, 118)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(1, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_-9_7" type="Sprite2D" parent="Felpudos" unique_id=1302010427]
+editor_description = "pokeruby PetalburgCity_Gym warp (7,85): SALA de VELOCIDAD → puerta izquierda de la entrada. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(-136, 118)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(1, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_17_7" type="Sprite2D" parent="Felpudos" unique_id=1302010428]
+editor_description = "pokeruby PetalburgCity_Gym warp (1,98): SALA de PRECISIÓN → puerta derecha de la entrada. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(280, 118)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(7, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_18_7" type="Sprite2D" parent="Felpudos" unique_id=1302010429]
+editor_description = "pokeruby PetalburgCity_Gym warp (2,98): SALA de PRECISIÓN → puerta derecha de la entrada. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(296, 118)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(7, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_-10_-6" type="Sprite2D" parent="Felpudos" unique_id=1302010430]
+editor_description = "pokeruby PetalburgCity_Gym warp (6,46): SALA de REDUCCIÓN CERO → SALA de VELOCIDAD. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(-152, -90)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(-15, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_-9_-6" type="Sprite2D" parent="Felpudos" unique_id=1302010431]
+editor_description = "pokeruby PetalburgCity_Gym warp (7,46): SALA de REDUCCIÓN CERO → SALA de VELOCIDAD. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(-136, -90)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(-15, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_1_-6" type="Sprite2D" parent="Felpudos" unique_id=1302010432]
+editor_description = "pokeruby PetalburgCity_Gym warp (1,59): SALA de DEFENSA (izq.) → SALA de VELOCIDAD. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(24, -90)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(-9, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_2_-6" type="Sprite2D" parent="Felpudos" unique_id=1302010433]
+editor_description = "pokeruby PetalburgCity_Gym warp (2,59): SALA de DEFENSA (izq.) → SALA de VELOCIDAD. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(40, -90)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(-9, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_6_-6" type="Sprite2D" parent="Felpudos" unique_id=1302010434]
+editor_description = "pokeruby PetalburgCity_Gym warp (6,59): SALA de DEFENSA (der.) → SALA de PRECISIÓN. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(104, -90)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(17, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_7_-6" type="Sprite2D" parent="Felpudos" unique_id=1302010435]
+editor_description = "pokeruby PetalburgCity_Gym warp (7,59): SALA de DEFENSA (der.) → SALA de PRECISIÓN. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(120, -90)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(17, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_17_-6" type="Sprite2D" parent="Felpudos" unique_id=1302010436]
+editor_description = "pokeruby PetalburgCity_Gym warp (1,72): SALA de RECUPERACIÓN → SALA de PRECISIÓN. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(280, -90)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(23, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_18_-6" type="Sprite2D" parent="Felpudos" unique_id=1302010437]
+editor_description = "pokeruby PetalburgCity_Gym warp (2,72): SALA de RECUPERACIÓN → SALA de PRECISIÓN. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(296, -90)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(23, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_-15_-19" type="Sprite2D" parent="Felpudos" unique_id=1302010438]
+editor_description = "pokeruby PetalburgCity_Gym warp (1,20): SALA de FUERZA (izq.) → SALA de REDUCCIÓN CERO. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(-232, -298)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(-9, -12)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_-14_-19" type="Sprite2D" parent="Felpudos" unique_id=1302010439]
+editor_description = "pokeruby PetalburgCity_Gym warp (2,20): SALA de FUERZA (izq.) → SALA de REDUCCIÓN CERO. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(-216, -298)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(-9, -12)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_-10_-19" type="Sprite2D" parent="Felpudos" unique_id=1302010440]
+editor_description = "pokeruby PetalburgCity_Gym warp (6,20): SALA de FUERZA (der.) → SALA de DEFENSA. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(-152, -298)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(1, -12)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_-9_-19" type="Sprite2D" parent="Felpudos" unique_id=1302010441]
+editor_description = "pokeruby PetalburgCity_Gym warp (7,20): SALA de FUERZA (der.) → SALA de DEFENSA. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(-136, -298)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(1, -12)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_17_-19" type="Sprite2D" parent="Felpudos" unique_id=1302010442]
+editor_description = "pokeruby PetalburgCity_Gym warp (1,33): SALA de KO INSTANTÁNEO (izq.) → SALA de DEFENSA. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(280, -298)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(7, -12)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_18_-19" type="Sprite2D" parent="Felpudos" unique_id=1302010443]
+editor_description = "pokeruby PetalburgCity_Gym warp (2,33): SALA de KO INSTANTÁNEO (izq.) → SALA de DEFENSA. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(296, -298)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(7, -12)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_22_-19" type="Sprite2D" parent="Felpudos" unique_id=1302010444]
+editor_description = "pokeruby PetalburgCity_Gym warp (6,33): SALA de KO INSTANTÁNEO (der.) → SALA de RECUPERACIÓN. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(360, -298)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(17, -12)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_23_-19" type="Sprite2D" parent="Felpudos" unique_id=1302010445]
+editor_description = "pokeruby PetalburgCity_Gym warp (7,33): SALA de KO INSTANTÁNEO (der.) → SALA de RECUPERACIÓN. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(376, -298)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(17, -12)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_1_-19" type="Sprite2D" parent="Felpudos" unique_id=1302010446]
+editor_description = "pokeruby PetalburgCity_Gym warp (1,7): SALA del LÍDER (izq.) → SALA de FUERZA. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(24, -298)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(-9, -25)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_2_-19" type="Sprite2D" parent="Felpudos" unique_id=1302010447]
+editor_description = "pokeruby PetalburgCity_Gym warp (2,7): SALA del LÍDER (izq.) → SALA de FUERZA. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(40, -298)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(-9, -25)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_6_-19" type="Sprite2D" parent="Felpudos" unique_id=1302010448]
+editor_description = "pokeruby PetalburgCity_Gym warp (6,7): SALA del LÍDER (der.) → SALA de KO INSTANTÁNEO. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(104, -298)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(17, -25)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Felpudo_7_-19" type="Sprite2D" parent="Felpudos" unique_id=1302010449]
+editor_description = "pokeruby PetalburgCity_Gym warp (7,7): SALA del LÍDER (der.) → SALA de KO INSTANTÁNEO. Solo activo con el felpudo abierto (EventoGimnasioPetalia)."
+position = Vector2(120, -298)
+script = ExtResource("3_gy05g")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_petalia_gimnasio"
+posicion_destino = Vector2(17, -25)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1302010450]
+
+[node name="EventoGimnasioPetalia" type="Node2D" parent="Eventos" unique_id=1302010451]
+editor_description = "pokeruby PetalburgCity_Gym/scripts.inc: puertas correderas y felpudos (OnLoad, SlideOpen*RoomDoors), carteles de las puertas, NORMAN y el guía."
+script = ExtResource("gp_evento")

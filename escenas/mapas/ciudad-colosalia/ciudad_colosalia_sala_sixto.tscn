@@ -1,0 +1,238 @@
+[gd_scene format=4 uid="uid://bogf31nd4wqh2"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_mapa"]
+[ext_resource type="TileSet" uid="uid://digrlsb6y2vg" path="res://graficos/tilesets/tileset_colosalia_alto_mando.tres" id="2_tiles"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_tp"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_warp"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="5_npc_base"]
+[ext_resource type="SpriteFrames" uid="uid://boa0dbny0j7jj" path="res://escenas/avatares/ruby_sixto.tres" id="f_ruby_sixto"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="s_evento"]
+[ext_resource type="Script" uid="uid://c78stkyhbjhl8" path="res://scripts/eventos/ciudad_colosalia/evento_sala_alto_mando.gd" id="s_sala"]
+
+[node name="SalaSixto" type="Node2D" unique_id=551542124]
+editor_description = "pokeruby EverGrandeCity_SidneysRoom (LAYOUT_EVER_GRANDE_CITY_SIDNEYS_ROOM, 13x14). Generada por herramientas/importar_interiores_colosalia.py."
+script = ExtResource("1_mapa")
+nombre_interno = "ciudad_colosalia_sala_sixto"
+seccion = "CIUDAD_COLOSALIA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_COLOSALIA"
+solo_caminar = true
+musica_mapa = "VICTORIA_CAMINO_VICTORIA"
+escena_batalla = 4
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=348011924]
+tile_map_data = PackedByteArray("AAAAAAAAAAAHAAEAAAAAAAEAAAAJABoAAAAAAAIAAAAJABwAAAAAAAMAAAACAAIAAAAAAAQAAAAGAAcAAAAAAAUAAAAFAAMAAAAAAAYAAAAFAAQAAAAAAAcAAAAHAAcAAAAAAAgAAAAFAAUAAAAAAAkAAAAFAAcAAAAAAAoAAAABAAcAAAAAAAsAAAAHAAAAAAAAAAwAAAAIABoAAAAAAA0AAAAIABsAAAABAAAAAAAHAAAAAAABAAEAAAAIABoAAAABAAIAAAAIABwAAAABAAMAAAACAAIAAAABAAQAAAAGAAIAAAABAAUAAAAGAAMAAAABAAYAAAAGAAQAAAABAAcAAAACAAcAAAABAAgAAAAGAAUAAAABAAkAAAAGAAYAAAABAAoAAAABAAIAAAABAAsAAAAHAAEAAAABAAwAAAAJABoAAAABAA0AAAAJABsAAAACAAAAAAAHAAEAAAACAAEAAAAJABoAAAACAAIAAAAJABwAAAACAAMAAAACAAIAAAACAAQAAAAEAAUAAAACAAUAAAAEAAUAAAACAAYAAAAEAAUAAAACAAcAAAAEAAUAAAACAAgAAAAEAAUAAAACAAkAAAAEAAUAAAACAAoAAAABAAIAAAACAAsAAAAHAAAAAAACAAwAAAAIABoAAAACAA0AAAAIABsAAAADAAAAAAAHAAAAAAADAAEAAAAIABoAAAADAAIAAAAIABwAAAADAAMAAAACAAIAAAADAAQAAAAEAAUAAAADAAUAAAAEAAUAAAADAAYAAAAEAAUAAAADAAcAAAAEAAUAAAADAAgAAAAEAAUAAAADAAkAAAAEAAUAAAADAAoAAAABAAIAAAADAAsAAAAHAAEAAAADAAwAAAAJABoAAAADAA0AAAAJABsAAAAEAAAAAAAHAAEAAAAEAAEAAAAJABoAAAAEAAIAAAAJABwAAAAEAAMAAAACAAIAAAAEAAQAAAAAAAIAAAAEAAUAAAAAAAMAAAAEAAYAAAAAAAQAAAAEAAcAAAAAAAMAAAAEAAgAAAAAAAMAAAAEAAkAAAAAAAcAAAAEAAoAAAABAAIAAAAEAAsAAAAAAAEAAAAEAAwAAAAFABwAAAAEAA0AAAAGABwAAAAFAAAAAAAAAAEAAAAFAAEAAAABAAAAAAAFAAIAAAABAAEAAAAFAAMAAAAAAAUAAAAFAAQAAAADAAIAAAAFAAUAAAABAAMAAAAFAAYAAAABAAQAAAAFAAcAAAABAAUAAAAFAAgAAAABAAYAAAAFAAkAAAADAAcAAAAFAAoAAAABAAIAAAAFAAsAAAAAAAEAAAAFAAwAAAAEAAUAAAAFAA0AAAAEAAYAAAAGAAAAAAAAAAEAAAAGAAEAAAAEACgAAAAGAAIAAAAFACgAAAAGAAMAAAAAAAUAAAAGAAQAAAADAAIAAAAGAAUAAAACAAMAAAAGAAYAAAACAAQAAAAGAAcAAAACAAUAAAAGAAgAAAACAAYAAAAGAAkAAAADAAcAAAAGAAoAAAABAAIAAAAGAAsAAAAAAAEAAAAGAAwAAAAEAAUAAAAGAA0AAAAEAAYAAAAHAAAAAAAAAAEAAAAHAAEAAAADAAAAAAAHAAIAAAADAAEAAAAHAAMAAAAAAAUAAAAHAAQAAAADAAIAAAAHAAUAAAADAAMAAAAHAAYAAAADAAQAAAAHAAcAAAADAAUAAAAHAAgAAAADAAYAAAAHAAkAAAADAAcAAAAHAAoAAAABAAIAAAAHAAsAAAAAAAEAAAAHAAwAAAAEAAUAAAAHAA0AAAAEAAYAAAAIAAAAAAAHAAAAAAAIAAEAAAAIABoAAAAIAAIAAAAIABwAAAAIAAMAAAACAAIAAAAIAAQAAAAEAAIAAAAIAAUAAAAEAAMAAAAIAAYAAAAEAAQAAAAIAAcAAAAEAAMAAAAIAAgAAAAEAAMAAAAIAAkAAAAEAAcAAAAIAAoAAAABAAIAAAAIAAsAAAAAAAEAAAAIAAwAAAAHABoAAAAIAA0AAAAHABsAAAAJAAAAAAAHAAEAAAAJAAEAAAAJABoAAAAJAAIAAAAJABwAAAAJAAMAAAACAAIAAAAJAAQAAAAEAAUAAAAJAAUAAAAEAAUAAAAJAAYAAAAEAAUAAAAJAAcAAAAEAAUAAAAJAAgAAAAEAAUAAAAJAAkAAAAEAAUAAAAJAAoAAAABAAIAAAAJAAsAAAAHAAAAAAAJAAwAAAAIABoAAAAJAA0AAAAIABsAAAAKAAAAAAAHAAAAAAAKAAEAAAAIABoAAAAKAAIAAAAIABwAAAAKAAMAAAACAAIAAAAKAAQAAAAEAAUAAAAKAAUAAAAEAAUAAAAKAAYAAAAEAAUAAAAKAAcAAAAEAAUAAAAKAAgAAAAEAAUAAAAKAAkAAAAEAAUAAAAKAAoAAAABAAIAAAAKAAsAAAAHAAEAAAAKAAwAAAAJABoAAAAKAA0AAAAJABsAAAALAAAAAAAHAAEAAAALAAEAAAAJABoAAAALAAIAAAAJABwAAAALAAMAAAACAAIAAAALAAQAAAAHAAIAAAALAAUAAAAHAAMAAAALAAYAAAAHAAQAAAALAAcAAAAHAAQAAAALAAgAAAAHAAUAAAALAAkAAAAHAAYAAAALAAoAAAABAAIAAAALAAsAAAAHAAAAAAALAAwAAAAIABoAAAALAA0AAAAIABsAAAAMAAAAAAAHAAAAAAAMAAEAAAAIABoAAAAMAAIAAAAIABwAAAAMAAMAAAACAAIAAAAMAAQAAAAFAAIAAAAMAAUAAAAFAAMAAAAMAAYAAAAFAAQAAAAMAAcAAAAHAAcAAAAMAAgAAAAFAAUAAAAMAAkAAAAFAAYAAAAMAAoAAAABAAIAAAAMAAsAAAAHAAEAAAAMAAwAAAAJABoAAAAMAA0AAAAJABsAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="SigCerrado" type="TileMapLayer" parent="." unique_id=241776850]
+tile_map_data = PackedByteArray("AAAGAAEAAAACAAAAAAAGAAIAAAACAAEAAAAIAAIAAAABACoAAAAJAAIAAAABACoAAAAKAAIAAAABACoAAAALAAIAAAABACoAAAAMAAIAAAABACoAAAAEAAIAAAABACoAAAADAAIAAAABACoAAAACAAIAAAABACoAAAABAAIAAAABACoAAAAAAAIAAAABACoAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+
+[node name="Superior" type="TileMapLayer" parent="." unique_id=719523002]
+z_index = 2
+tile_map_data = PackedByteArray("AAAAAAAAAAAPAAEAAAAAAAoAAAAJAAcAAAAAAAsAAAAPAAAAAAABAAAAAAAPAAAAAAABAAoAAAAJAAIAAAABAAsAAAAPAAEAAAACAAAAAAAPAAEAAAACAAoAAAAJAAIAAAACAAsAAAAPAAAAAAADAAAAAAAPAAAAAAADAAoAAAAJAAIAAAADAAsAAAAPAAEAAAAEAAAAAAAPAAEAAAAEAAoAAAAJAAIAAAAEAAsAAAAIAAEAAAAFAAAAAAAIAAEAAAAFAAoAAAAJAAIAAAAFAAsAAAAIAAEAAAAGAAAAAAAIAAEAAAAGAAoAAAAJAAIAAAAGAAsAAAAIAAEAAAAHAAAAAAAIAAEAAAAHAAoAAAAJAAIAAAAHAAsAAAAIAAEAAAAIAAAAAAAPAAAAAAAIAAoAAAAJAAIAAAAIAAsAAAAIAAEAAAAJAAAAAAAPAAEAAAAJAAoAAAAJAAIAAAAJAAsAAAAPAAAAAAAKAAAAAAAPAAAAAAAKAAoAAAAJAAIAAAAKAAsAAAAPAAEAAAALAAAAAAAPAAEAAAALAAoAAAAJAAIAAAALAAsAAAAPAAAAAAAMAAAAAAAPAAAAAAAMAAoAAAAJAAIAAAAMAAsAAAAPAAEAAAA=")
+tile_set = ExtResource("2_tiles")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=706730863]
+script = ExtResource("3_tp")
+tile_data = {
+"-1,10": {
+"flags": 1
+},
+"-1,11": {
+"flags": 1
+},
+"-1,3": {
+"flags": 1
+},
+"-1,9": {
+"flags": 1
+},
+"0,12": {
+"flags": 1
+},
+"0,2": {
+"flags": 1
+},
+"0,4": {
+"flags": 1
+},
+"0,8": {
+"flags": 1
+},
+"1,12": {
+"flags": 1
+},
+"1,2": {
+"flags": 1
+},
+"1,4": {
+"flags": 1
+},
+"1,5": {
+"flags": 1
+},
+"1,6": {
+"flags": 1
+},
+"1,7": {
+"flags": 1
+},
+"1,8": {
+"flags": 1
+},
+"10,12": {
+"flags": 1
+},
+"10,2": {
+"flags": 1
+},
+"11,12": {
+"flags": 1
+},
+"11,2": {
+"flags": 1
+},
+"11,4": {
+"flags": 1
+},
+"11,5": {
+"flags": 1
+},
+"11,6": {
+"flags": 1
+},
+"11,7": {
+"flags": 1
+},
+"11,8": {
+"flags": 1
+},
+"12,12": {
+"flags": 1
+},
+"12,2": {
+"flags": 1
+},
+"12,4": {
+"flags": 1
+},
+"12,8": {
+"flags": 1
+},
+"13,10": {
+"flags": 1
+},
+"13,11": {
+"flags": 1
+},
+"13,3": {
+"flags": 1
+},
+"13,9": {
+"flags": 1
+},
+"2,12": {
+"flags": 1
+},
+"2,2": {
+"flags": 1
+},
+"3,12": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"4,12": {
+"flags": 1
+},
+"4,13": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"5,14": {
+"flags": 1
+},
+"5,2": {
+"flags": 1
+},
+"6,14": {
+"flags": 1
+},
+"6,2": {
+"flags": 1
+},
+"7,14": {
+"flags": 1
+},
+"7,2": {
+"flags": 1
+},
+"8,12": {
+"flags": 1
+},
+"8,13": {
+"flags": 1
+},
+"8,2": {
+"flags": 1
+},
+"9,12": {
+"flags": 1
+},
+"9,2": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=607589670]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Sixto" parent="NPCs" unique_id=2044234351 instance=ExtResource("5_npc_base")]
+editor_description = "pokeruby EverGrandeCity_SidneysRoom objeto 1 (6,5) SIDNEY FACE_DOWN: EverGrandeCity_SidneysRoom_EventScript_Sidney. Lo dirige Eventos/EventoSala"
+position = Vector2(104, 94)
+script = ExtResource("s_evento")
+id_texto = "COLOSALIA_SIXTO_INI"
+selec_frames = ExtResource("f_ruby_sixto")
+tamano_sprite = 1
+coord = Vector2i(6, 5)
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1539555185]
+
+[node name="EventoSala" type="Node2D" parent="Eventos" unique_id=723664508]
+editor_description = "pokeruby EverGrandeCity_SidneysRoom/scripts.inc + data/scripts/elite_four.inc"
+script = ExtResource("s_sala")
+miembro = NodePath("../../NPCs/Sixto")
+entrenador_id = 261
+bandera_vencido = "colosalia_sixto_vencido"
+texto_intro = "COLOSALIA_SIXTO_INI"
+texto_post = "COLOSALIA_SIXTO_POST"
+suelo = NodePath("../../Suelo")
+superior = NodePath("../../Superior")
+siguiente_cerrado = NodePath("../../SigCerrado")
+datos_tiles = NodePath("../../TPTileDataMap")
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=849762639]
+editor_description = "pokeruby EverGrandeCity_SidneysRoom warp (6,2) -> MAP_EVER_GRANDE_CITY_CORRIDOR1 (5,12)"
+position = Vector2(104, 38)
+script = ExtResource("4_warp")
+tipo_warp = 2
+ruta_mapa_destino = "ciudad_colosalia_pasillo1"
+posicion_destino = Vector2(5, 12)
+direccion = Vector2(0, -1)

@@ -1,0 +1,372 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://UI/pokenav/lista_pokenav.gd" id="e1"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/barra_inferior.png" id="e2"]
+[ext_resource type="Texture2D" path="res://UI/menu_box_1.png" id="e3"]
+[ext_resource type="Script" path="res://scripts/clases/MenuBoxComponent.gd" id="e4"]
+[ext_resource type="LabelSettings" path="res://UI/texto_normal_negro.tres" id="e5"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/icono_revancha.png" id="e6"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/flecha.png" id="e7"]
+[ext_resource type="Texture2D" path="res://graficos/pokenav/flechas.png" id="e8"]
+
+[sub_resource type="Animation" id="Anim_2"]
+resource_name = "rebote_flechas"
+length = 0.33333
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Contenido/FlechaArriba:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.08333, 0.16667, 0.25000),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(168, 8), Vector2(168, 7), Vector2(168, 6), Vector2(168, 7)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Contenido/FlechaAbajo:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.00000, 0.08333, 0.16667, 0.25000),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [Vector2(168, 136), Vector2(168, 137), Vector2(168, 138), Vector2(168, 137)]
+}
+
+[sub_resource type="AnimationLibrary" id="Lib_3"]
+_data = {
+&"rebote_flechas": SubResource("Anim_2")
+}
+
+[sub_resource type="Animation" id="Anim_5"]
+resource_name = "entrada"
+length = 0.16667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Contenido:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(152, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Anim_6"]
+resource_name = "salida"
+length = 0.16667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Contenido:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.00000, 0.16667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(152, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="Lib_7"]
+_data = {
+&"entrada": SubResource("Anim_5"),
+&"salida": SubResource("Anim_6")
+}
+
+[node name="ListaPokenav" type="Node2D"]
+script = ExtResource("e1")
+
+[node name="BarraInferior" type="Sprite2D" parent="."]
+texture = ExtResource("e2")
+position = Vector2(0, 144)
+centered = false
+
+[node name="Contenido" type="Node2D" parent="."]
+position = Vector2(152, 0)
+
+[node name="Marco" type="NinePatchRect" parent="Contenido"]
+layout_mode = 0
+offset_left = 88
+offset_top = 0
+offset_right = 240
+offset_bottom = 144
+texture = ExtResource("e3")
+patch_margin_left = 8
+patch_margin_top = 8
+patch_margin_right = 8
+patch_margin_bottom = 8
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[node name="MenuBoxComponent" type="Node" parent="Contenido/Marco"]
+script = ExtResource("e4")
+
+[node name="Filas" type="Node2D" parent="Contenido"]
+
+[node name="Fila0" type="Node2D" parent="Contenido/Filas"]
+position = Vector2(0, 8)
+
+[node name="Texto" type="Label" parent="Contenido/Filas/Fila0"]
+layout_mode = 0
+offset_left = 100
+offset_top = 0
+offset_right = 212
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+
+[node name="Derecha" type="Label" parent="Contenido/Filas/Fila0"]
+layout_mode = 0
+offset_left = 180
+offset_top = 0
+offset_right = 232
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+horizontal_alignment = 2
+
+[node name="Marca" type="Sprite2D" parent="Contenido/Filas/Fila0"]
+texture = ExtResource("e6")
+position = Vector2(216, 0)
+centered = false
+hframes = 1
+visible = false
+
+[node name="Fila1" type="Node2D" parent="Contenido/Filas"]
+position = Vector2(0, 24)
+
+[node name="Texto" type="Label" parent="Contenido/Filas/Fila1"]
+layout_mode = 0
+offset_left = 100
+offset_top = 0
+offset_right = 212
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+
+[node name="Derecha" type="Label" parent="Contenido/Filas/Fila1"]
+layout_mode = 0
+offset_left = 180
+offset_top = 0
+offset_right = 232
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+horizontal_alignment = 2
+
+[node name="Marca" type="Sprite2D" parent="Contenido/Filas/Fila1"]
+texture = ExtResource("e6")
+position = Vector2(216, 0)
+centered = false
+hframes = 1
+visible = false
+
+[node name="Fila2" type="Node2D" parent="Contenido/Filas"]
+position = Vector2(0, 40)
+
+[node name="Texto" type="Label" parent="Contenido/Filas/Fila2"]
+layout_mode = 0
+offset_left = 100
+offset_top = 0
+offset_right = 212
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+
+[node name="Derecha" type="Label" parent="Contenido/Filas/Fila2"]
+layout_mode = 0
+offset_left = 180
+offset_top = 0
+offset_right = 232
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+horizontal_alignment = 2
+
+[node name="Marca" type="Sprite2D" parent="Contenido/Filas/Fila2"]
+texture = ExtResource("e6")
+position = Vector2(216, 0)
+centered = false
+hframes = 1
+visible = false
+
+[node name="Fila3" type="Node2D" parent="Contenido/Filas"]
+position = Vector2(0, 56)
+
+[node name="Texto" type="Label" parent="Contenido/Filas/Fila3"]
+layout_mode = 0
+offset_left = 100
+offset_top = 0
+offset_right = 212
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+
+[node name="Derecha" type="Label" parent="Contenido/Filas/Fila3"]
+layout_mode = 0
+offset_left = 180
+offset_top = 0
+offset_right = 232
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+horizontal_alignment = 2
+
+[node name="Marca" type="Sprite2D" parent="Contenido/Filas/Fila3"]
+texture = ExtResource("e6")
+position = Vector2(216, 0)
+centered = false
+hframes = 1
+visible = false
+
+[node name="Fila4" type="Node2D" parent="Contenido/Filas"]
+position = Vector2(0, 72)
+
+[node name="Texto" type="Label" parent="Contenido/Filas/Fila4"]
+layout_mode = 0
+offset_left = 100
+offset_top = 0
+offset_right = 212
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+
+[node name="Derecha" type="Label" parent="Contenido/Filas/Fila4"]
+layout_mode = 0
+offset_left = 180
+offset_top = 0
+offset_right = 232
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+horizontal_alignment = 2
+
+[node name="Marca" type="Sprite2D" parent="Contenido/Filas/Fila4"]
+texture = ExtResource("e6")
+position = Vector2(216, 0)
+centered = false
+hframes = 1
+visible = false
+
+[node name="Fila5" type="Node2D" parent="Contenido/Filas"]
+position = Vector2(0, 88)
+
+[node name="Texto" type="Label" parent="Contenido/Filas/Fila5"]
+layout_mode = 0
+offset_left = 100
+offset_top = 0
+offset_right = 212
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+
+[node name="Derecha" type="Label" parent="Contenido/Filas/Fila5"]
+layout_mode = 0
+offset_left = 180
+offset_top = 0
+offset_right = 232
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+horizontal_alignment = 2
+
+[node name="Marca" type="Sprite2D" parent="Contenido/Filas/Fila5"]
+texture = ExtResource("e6")
+position = Vector2(216, 0)
+centered = false
+hframes = 1
+visible = false
+
+[node name="Fila6" type="Node2D" parent="Contenido/Filas"]
+position = Vector2(0, 104)
+
+[node name="Texto" type="Label" parent="Contenido/Filas/Fila6"]
+layout_mode = 0
+offset_left = 100
+offset_top = 0
+offset_right = 212
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+
+[node name="Derecha" type="Label" parent="Contenido/Filas/Fila6"]
+layout_mode = 0
+offset_left = 180
+offset_top = 0
+offset_right = 232
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+horizontal_alignment = 2
+
+[node name="Marca" type="Sprite2D" parent="Contenido/Filas/Fila6"]
+texture = ExtResource("e6")
+position = Vector2(216, 0)
+centered = false
+hframes = 1
+visible = false
+
+[node name="Fila7" type="Node2D" parent="Contenido/Filas"]
+position = Vector2(0, 120)
+
+[node name="Texto" type="Label" parent="Contenido/Filas/Fila7"]
+layout_mode = 0
+offset_left = 100
+offset_top = 0
+offset_right = 212
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+
+[node name="Derecha" type="Label" parent="Contenido/Filas/Fila7"]
+layout_mode = 0
+offset_left = 180
+offset_top = 0
+offset_right = 232
+offset_bottom = 15
+text = ""
+label_settings = ExtResource("e5")
+horizontal_alignment = 2
+
+[node name="Marca" type="Sprite2D" parent="Contenido/Filas/Fila7"]
+texture = ExtResource("e6")
+position = Vector2(216, 0)
+centered = false
+hframes = 1
+visible = false
+
+[node name="Flecha" type="Sprite2D" parent="Contenido"]
+texture = ExtResource("e7")
+position = Vector2(95, 16)
+centered = true
+vframes = 2
+
+[node name="FlechaArriba" type="Sprite2D" parent="Contenido"]
+texture = ExtResource("e8")
+position = Vector2(168, 8)
+centered = true
+vframes = 2
+visible = false
+
+[node name="FlechaAbajo" type="Sprite2D" parent="Contenido"]
+texture = ExtResource("e8")
+position = Vector2(168, 136)
+centered = true
+vframes = 2
+frame = 1
+visible = false
+
+[node name="Rebote" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("Lib_3")
+autoplay = &"rebote_flechas"
+
+[node name="Anim" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("Lib_7")

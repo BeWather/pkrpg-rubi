@@ -1,0 +1,367 @@
+[gd_scene format=4 uid="uid://c7n34croqworv"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_qdhqn"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_p8dvm"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_bao4y"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="8_5htk2"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="cc_npc_base"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="cc_evento"]
+[ext_resource type="SpriteFrames" uid="uid://q6liftwxrkde" path="res://escenas/avatares/npc_048.tres" id="cc_npc_048"]
+[ext_resource type="SpriteFrames" uid="uid://ds1lihygyt1d0" path="res://escenas/avatares/npc_027.tres" id="cc_npc_027"]
+[ext_resource type="SpriteFrames" uid="uid://rvhay5tgmegy" path="res://escenas/avatares/npc_065.tres" id="cc_npc_065"]
+[ext_resource type="SpriteFrames" uid="uid://cy2tf0sbgdeui" path="res://escenas/avatares/npc_015.tres" id="cc_npc_015"]
+[ext_resource type="SpriteFrames" uid="uid://blksta48icop1" path="res://escenas/avatares/npc_018.tres" id="cc_npc_018"]
+[ext_resource type="SpriteFrames" uid="uid://bjywxxfru5l41" path="res://escenas/avatares/npc_108.tres" id="cc_npc_108"]
+[ext_resource type="SpriteFrames" uid="uid://br8ndfy138tgu" path="res://escenas/avatares/npc_049.tres" id="cc_npc_049"]
+[ext_resource type="Script" path="res://scripts/eventos/ciudad_calagua/evento_motel_calagua.gd" id="cc_ev_EventoMotelCalagua"]
+[ext_resource type="PackedScene" path="res://escenas/eventos/disparador_evento_por_tiles.tscn" id="cc_disparador"]
+[ext_resource type="Script" path="res://scripts/mapas/television.gd" id="tv_television"]
+[ext_resource type="Script" uid="uid://cix41nrfux4xa" path="res://scripts/mapas/tile_alterno.gd" id="tv_tile_alterno"]
+
+[node name="Motel" type="Node2D" unique_id=749470543]
+script = ExtResource("1_qdhqn")
+nombre_interno = "ciudad_calagua_motel"
+seccion = "CIUDAD_CALAGUA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_CALAGUA"
+solo_caminar = true
+musica_mapa = "CIUDAD_OROMAR"
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=991336295]
+tile_map_data = PackedByteArray("AAAAAAAAAAADABwAAAAAAAEAAAADAB0AAAAAAAIAAAADAB4AAAALAAAAAAAEABwAAAALAAEAAAAEAB0AAAALAAIAAAAEAB4AAAABAAAAAAACAAIAAAABAAEAAAACAAMAAAACAAAAAAABAAwAAAACAAEAAAADAAEAAAADAAAAAAAEAAIAAAADAAEAAAAEAAMAAAAEAAAAAAAHAAIAAAAEAAEAAAAHAAMAAAAIAAAAAAAHAAIAAAAIAAEAAAAHAAMAAAAKAAAAAAAGAAIAAAAKAAEAAAAGAAMAAAAJAAAAAAAFAAIAAAAJAAEAAAAFAAMAAAAHAAAAAAAFAAIAAAAHAAEAAAAAABQAAAAKAAIAAAAAAAgAAAAHAAIAAAAAABUAAAAFAAAAAAAGABcAAAAFAAEAAAAGABgAAAAFAAIAAAAGABkAAAAGAAAAAAAHABcAAAAGAAEAAAAHABgAAAAGAAIAAAAHABkAAAAJAAIAAAABAAQAAAAIAAIAAAABAAQAAAAEAAIAAAABAAQAAAADAAIAAAABAAQAAAACAAIAAAABAAQAAAABAAIAAAABAAQAAAAAAAMAAAABAAQAAAAAAAQAAAABAAQAAAAAAAUAAAABAAQAAAAAAAYAAAABAAQAAAAAAAcAAAAAACQAAAAAAAgAAAADACQAAAABAAcAAAAAACMAAAACAAcAAAAAACMAAAADAAcAAAAAACMAAAAEAAcAAAAAACMAAAAFAAcAAAAAACMAAAAGAAcAAAAAACMAAAAHAAcAAAAAACMAAAAIAAcAAAAAACMAAAAJAAcAAAAAACMAAAAKAAcAAAAAACMAAAALAAcAAAAAACMAAAABAAgAAAADACMAAAACAAgAAAADACMAAAADAAgAAAADACMAAAAEAAgAAAADACMAAAAFAAgAAAAAAAIAAAAGAAgAAAABAAIAAAAHAAgAAAADACMAAAAIAAgAAAADACMAAAAJAAgAAAADACMAAAAKAAgAAAADACMAAAALAAgAAAADACMAAAABAAMAAAABAAUAAAABAAQAAAAEAAgAAAABAAUAAAAEAAgAAAABAAYAAAABAAUAAAACAAMAAAABAAUAAAACAAQAAAAGAAkAAAACAAUAAAAGAAoAAAACAAYAAAABAAUAAAADAAMAAAABAAUAAAADAAQAAAAHAAkAAAADAAUAAAAHAAoAAAADAAYAAAABAAUAAAAEAAMAAAABAAUAAAAEAAQAAAAEAAgAAAAEAAUAAAAEAAgAAAAEAAYAAAABAAUAAAAFAAMAAAABAAUAAAAFAAQAAAABAAUAAAAFAAUAAAABAAUAAAAFAAYAAAABAAUAAAAGAAMAAAABAAUAAAAGAAQAAAABAAUAAAAGAAUAAAABAAUAAAAGAAYAAAABAAUAAAAHAAMAAAABAAUAAAAHAAQAAAAEAAgAAAAHAAUAAAAEAAgAAAAHAAYAAAABAAUAAAAIAAMAAAABAAUAAAAIAAQAAAAGAAkAAAAIAAUAAAAGAAoAAAAIAAYAAAABAAUAAAAJAAMAAAABAAUAAAAJAAQAAAAHAAsAAAAJAAUAAAAHAAoAAAAJAAYAAAABAAUAAAAKAAMAAAABAAUAAAAKAAQAAAAEAAgAAAAKAAUAAAAEAAgAAAAKAAYAAAABAAUAAAALAAMAAAABAAUAAAALAAQAAAABAAUAAAALAAUAAAABAAUAAAALAAYAAAABAAUAAAAAAPr/AAABAAQAAAALAPr/AAABAAUAAAAKAPr/AAABAAUAAAAJAPr/AAABAAUAAAAIAPr/AAABAAUAAAAHAPr/AAABAAUAAAAGAPr/AAABAAUAAAAFAPr/AAABAAUAAAAEAPr/AAABAAUAAAADAPr/AAABAAUAAAACAPr/AAABAAUAAAABAPr/AAABAAUAAAABAPX/AAABAAUAAAABAPb/AAAEAAgAAAABAPf/AAABAAUAAAABAPj/AAAEAAgAAAABAPn/AAAEAAgAAAACAPX/AAAGAAkAAAACAPb/AAAGAAoAAAACAPf/AAABAAUAAAACAPj/AAAGAAkAAAACAPn/AAAGAAoAAAADAPX/AAAHAAsAAAADAPb/AAAHAAoAAAADAPf/AAABAAUAAAADAPj/AAAHAAkAAAADAPn/AAAHAAoAAAAEAPX/AAAEAAgAAAAEAPb/AAAEAAgAAAAEAPf/AAABAAUAAAAEAPj/AAAEAAgAAAAEAPn/AAAEAAgAAAAFAPX/AAABAAUAAAAFAPb/AAABAAUAAAAFAPf/AAABAAUAAAAFAPj/AAABAAUAAAAFAPn/AAABAAUAAAAGAPX/AAABAAUAAAAGAPb/AAABAAUAAAAGAPf/AAABAAUAAAAGAPj/AAABAAUAAAAGAPn/AAABAAUAAAAHAPX/AAAEAAgAAAAHAPb/AAAEAAgAAAAHAPf/AAABAAUAAAAHAPj/AAABAAUAAAAHAPn/AAAEAAgAAAAIAPX/AAAGAAkAAAAIAPb/AAAGAAoAAAAIAPf/AAABAAUAAAAIAPj/AAAGAAkAAAAIAPn/AAAGAAoAAAAJAPX/AAAHAAkAAAAJAPb/AAAHAAoAAAAJAPf/AAABAAUAAAAJAPj/AAAHAAsAAAAJAPn/AAAHAAoAAAAKAPX/AAAEAAgAAAAKAPb/AAAEAAgAAAAKAPf/AAABAAUAAAAKAPj/AAABAAUAAAAKAPn/AAABAAUAAAALAPX/AAABAAUAAAALAPb/AAABAAUAAAALAPf/AAABAAUAAAALAPj/AAABAAUAAAALAPn/AAABAAUAAAALAPT/AAAEAB4AAAAKAPT/AAAHABkAAAAJAPT/AAAGABkAAAAIAPT/AAAAABgAAAAHAPT/AAABAAQAAAAGAPT/AAABAAQAAAAFAPT/AAABAAQAAAAEAPT/AAABAAQAAAADAPT/AAABAAQAAAACAPT/AAABAAQAAAABAPT/AAABAAQAAAAAAPT/AAADAB4AAAAAAPX/AAABAAQAAAAAAPb/AAABAAQAAAAAAPf/AAABAAQAAAAAAPj/AAABAAQAAAAAAPn/AAABAAQAAAAAAPL/AAADABwAAAAAAPP/AAADAB0AAAALAPL/AAAEABwAAAALAPP/AAAEAB0AAAAJAPL/AAAGABcAAAAJAPP/AAAGABgAAAAKAPL/AAAHABcAAAAKAPP/AAAHABgAAAAIAPL/AAAAABYAAAAIAPP/AAAAABcAAAAHAPL/AAAHAAIAAAAHAPP/AAAHAAMAAAAEAPL/AAAHAAIAAAAEAPP/AAAHAAMAAAAGAPL/AAAFAAIAAAAGAPP/AAAFAAMAAAAFAPL/AAAFAAIAAAAFAPP/AAAFAAMAAAABAPL/AAACAAIAAAABAPP/AAACAAMAAAACAPL/AAABAAwAAAACAPP/AAABAAMAAAADAPL/AAAEAAIAAAADAPP/AAAEAAMAAAA=")
+tile_set = ExtResource("2_p8dvm")
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=2068592005]
+script = ExtResource("3_bao4y")
+tile_data = {
+"0,-13": {
+"flags": 1
+},
+"0,-5": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"1,-13": {
+"flags": 1
+},
+"1,-14": {
+"flags": 1
+},
+"1,-5": {
+"flags": 1
+},
+"1,0": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"10,-13": {
+"flags": 1
+},
+"10,-5": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"11,-13": {
+"flags": 1
+},
+"11,-5": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"2,-10": {
+"flags": 1
+},
+"2,-11": {
+"flags": 1
+},
+"2,-14": {
+"flags": 1
+},
+"2,-5": {
+"flags": 1
+},
+"2,-7": {
+"flags": 1
+},
+"2,-8": {
+"flags": 1
+},
+"2,0": {
+"flags": 1
+},
+"2,4": {
+"flags": 1
+},
+"2,5": {
+"flags": 1
+},
+"3,-10": {
+"flags": 1
+},
+"3,-11": {
+"flags": 1
+},
+"3,-13": {
+"flags": 1
+},
+"3,-14": {
+"flags": 1
+},
+"3,-5": {
+"flags": 1
+},
+"3,-7": {
+"flags": 1
+},
+"3,-8": {
+"flags": 1
+},
+"3,0": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"3,4": {
+"flags": 1
+},
+"3,5": {
+"flags": 1
+},
+"4,-13": {
+"flags": 1
+},
+"4,-5": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,-13": {
+"flags": 1
+},
+"5,-5": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"6,-13": {
+"flags": 1
+},
+"6,-5": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,-13": {
+"flags": 1
+},
+"7,-5": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"8,-10": {
+"flags": 1
+},
+"8,-11": {
+"flags": 1
+},
+"8,-13": {
+"flags": 1
+},
+"8,-5": {
+"flags": 1
+},
+"8,-7": {
+"flags": 1
+},
+"8,-8": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,4": {
+"flags": 1
+},
+"8,5": {
+"flags": 1
+},
+"9,-10": {
+"flags": 1
+},
+"9,-11": {
+"flags": 1
+},
+"9,-13": {
+"flags": 1
+},
+"9,-5": {
+"flags": 1
+},
+"9,-7": {
+"flags": 1
+},
+"9,-8": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,4": {
+"flags": 1
+},
+"9,5": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="NPCs" type="Node2D" parent="." unique_id=211795028]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Dueno" parent="NPCs" unique_id=1330700000 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_CoveLilyMotel_1F objeto 1 (10,3) MAN_1 FACE_UP (MotelOwner: EventoMotelCalagua)"
+position = Vector2(168, 62)
+script = ExtResource("cc_evento")
+id_texto = "CALAGUA_MOTEL_DUENO_MASCOTA"
+tipo_movimiento = 7
+selec_frames = ExtResource("cc_npc_048")
+coord = Vector2i(10, 3)
+
+[node name="Disenador" parent="NPCs" unique_id=1330700001 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_CoveLilyMotel_2F objeto 1 (4,6) MAN_4 (GameDesigner: EventoMotelCalagua); 2F = Rubí + (0,-14); oculto hasta superar la LIGA (FLAG_HIDE_LILYCOVE_MOTEL_PEOPLE ≡ SYS_GAME_CLEAR)."
+position = Vector2(72, -114)
+script = ExtResource("cc_evento")
+bandera_mostrar = "SYS_GAME_CLEAR"
+id_texto = "CALAGUA_MOTEL_DISENADOR_PIDE"
+tipo_movimiento = 9
+selec_frames = ExtResource("cc_npc_027")
+coord = Vector2i(4, -8)
+
+[node name="Grafico" parent="NPCs" unique_id=1330700002 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_CoveLilyMotel_2F objeto 2 (1,4) SCIENTIST_1 (GraphicArtist, MSGBOX_NPC); 2F = Rubí + (0,-14); oculto hasta superar la LIGA (FLAG_HIDE_LILYCOVE_MOTEL_PEOPLE ≡ SYS_GAME_CLEAR)."
+position = Vector2(24, -146)
+bandera_mostrar = "SYS_GAME_CLEAR"
+id_texto = "CALAGUA_MOTEL_GRAFICO"
+tipo_movimiento = 10
+selec_frames = ExtResource("cc_npc_065")
+coord = Vector2i(1, -10)
+
+[node name="Gordo" parent="NPCs" unique_id=1330700003 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_CoveLilyMotel_2F objeto 3 (7,7) FAT_MAN (FatMan, MSGBOX_NPC); 2F = Rubí + (0,-14); oculto hasta superar la LIGA (FLAG_HIDE_LILYCOVE_MOTEL_PEOPLE ≡ SYS_GAME_CLEAR)."
+position = Vector2(120, -98)
+bandera_mostrar = "SYS_GAME_CLEAR"
+id_texto = "CALAGUA_MOTEL_GORDO"
+tipo_movimiento = 10
+selec_frames = ExtResource("cc_npc_015")
+coord = Vector2i(7, -7)
+
+[node name="Programador" parent="NPCs" unique_id=1330700004 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_CoveLilyMotel_2F objeto 4 (10,3) MAN_5 (Programmer, MSGBOX_NPC); 2F = Rubí + (0,-14); oculto hasta superar la LIGA (FLAG_HIDE_LILYCOVE_MOTEL_PEOPLE ≡ SYS_GAME_CLEAR)."
+position = Vector2(168, -162)
+bandera_mostrar = "SYS_GAME_CLEAR"
+id_texto = "CALAGUA_MOTEL_PROGRAMADOR"
+tipo_movimiento = 9
+selec_frames = ExtResource("cc_npc_018")
+coord = Vector2i(10, -11)
+
+[node name="Chico" parent="NPCs" unique_id=1330700005 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_CoveLilyMotel_2F objeto 5 (7,3) BOY_5 (GameBoyKid, MSGBOX_NPC); 2F = Rubí + (0,-14); oculto hasta superar la LIGA (FLAG_HIDE_LILYCOVE_MOTEL_PEOPLE ≡ SYS_GAME_CLEAR)."
+position = Vector2(120, -162)
+bandera_mostrar = "SYS_GAME_CLEAR"
+id_texto = "CALAGUA_MOTEL_CHICO"
+tipo_movimiento = 8
+selec_frames = ExtResource("cc_npc_108")
+coord = Vector2i(7, -11)
+
+[node name="Mujer" parent="NPCs" unique_id=1330700006 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_CoveLilyMotel_2F objeto 6 (4,4) WOMAN_3 (Woman, MSGBOX_NPC); 2F = Rubí + (0,-14); oculto hasta superar la LIGA (FLAG_HIDE_LILYCOVE_MOTEL_PEOPLE ≡ SYS_GAME_CLEAR)."
+position = Vector2(72, -146)
+bandera_mostrar = "SYS_GAME_CLEAR"
+id_texto = "CALAGUA_MOTEL_MUJER"
+tipo_movimiento = 9
+selec_frames = ExtResource("cc_npc_049")
+coord = Vector2i(4, -10)
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1016168764]
+
+[node name="Warps" type="Node2D" parent="." unique_id=710138135]
+
+[node name="Warp3" type="Sprite2D" parent="." unique_id=682817166]
+position = Vector2(40, -202)
+script = ExtResource("8_5htk2")
+ruta_mapa_destino = "ciudad_calagua_motel"
+posicion_destino = Vector2(2, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp4" type="Sprite2D" parent="." unique_id=1559238427]
+position = Vector2(40, 22)
+script = ExtResource("8_5htk2")
+ruta_mapa_destino = "ciudad_calagua_motel"
+posicion_destino = Vector2(2, -13)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp5" type="Sprite2D" parent="." unique_id=1013936266]
+position = Vector2(88, 134)
+script = ExtResource("8_5htk2")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_calagua"
+posicion_destino = Vector2(37, 24)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp6" type="Sprite2D" parent="." unique_id=1053053648]
+position = Vector2(104, 134)
+script = ExtResource("8_5htk2")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_calagua"
+posicion_destino = Vector2(37, 24)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1330700009]
+
+[node name="EventoMotelCalagua" type="Node2D" parent="Eventos" unique_id=1330700007]
+editor_description = "pokeruby LilycoveCity_CoveLilyMotel_1F (dueño, tele) y _2F (diseñador del juego)."
+script = ExtResource("cc_ev_EventoMotelCalagua")
+dueno = NodePath("../../NPCs/Dueno")
+disenador = NodePath("../../NPCs/Disenador")
+disparador_tele = NodePath("TeleTapada")
+
+[node name="TeleTapada" parent="Eventos/EventoMotelCalagua" unique_id=1330700008 instance=ExtResource("cc_disparador")]
+editor_description = "coord_event (10,2) de Rubí, VAR_TEMP_1 == 0: BlockingTV."
+id_evento = &"tele"
+zonas_tiles = Array[Rect2i]([Rect2i(10, 2, 1, 1)])
+
+[node name="TilesAlternos" type="Node2D" parent="." unique_id=453691463]
+
+[node name="PantallaTele" type="Node2D" parent="TilesAlternos" unique_id=1406755512]
+position = Vector2(168, 24)
+script = ExtResource("tv_tile_alterno")
+capa = NodePath("../../Suelo")
+coord_tile = Vector2i(10, 1)
+atlas_alterno = Vector2i(0, 5)
+
+[node name="Television" type="Sprite2D" parent="Carteles" unique_id=1611932739]
+editor_description = "MB_TELEVISION de pokeruby: Event_TV (ProgramacionTV)."
+position = Vector2(168, 24)
+script = ExtResource("tv_television")
+coord_tile = Vector2i(10, 1)
+direccion = 1
+pantalla = NodePath("../../TilesAlternos/PantallaTele")

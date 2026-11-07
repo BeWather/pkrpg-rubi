@@ -1,0 +1,19 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+uid="uid://bqs6horeuosq8"
+
+[deps]
+
+files=["res://BaseDatos/bases_secretas/pc.es.translation", "res://BaseDatos/bases_secretas/pc.en.translation"]
+
+source_file="res://BaseDatos/bases_secretas/pc.csv"
+dest_files=["res://BaseDatos/bases_secretas/pc.es.translation", "res://BaseDatos/bases_secretas/pc.en.translation"]
+
+[params]
+
+compress=1
+delimiter=0
+unescape_keys=false
+unescape_translations=true

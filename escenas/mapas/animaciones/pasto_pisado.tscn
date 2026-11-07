@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://c5id2hkw5iqms"]
+
+[ext_resource type="Script" uid="uid://5jjryeasdhft" path="res://escenas/mapas/animaciones/pasto_pisado.gd" id="1_16j87"]
+[ext_resource type="Texture2D" uid="uid://x4j257nrd7c7" path="res://graficos/grass_step_animacion.png" id="1_p7gtf"]
+[ext_resource type="Texture2D" uid="uid://du1bcebswfjlr" path="res://escenas/mapas/animaciones/hierba-alta2.png" id="2_50ifc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6btmk"]
+atlas = ExtResource("2_50ifc")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_haaly"]
+atlas = ExtResource("1_p7gtf")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_daeir"]
+atlas = ExtResource("1_p7gtf")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wq3k5"]
+atlas = ExtResource("1_p7gtf")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01us1"]
+atlas = ExtResource("1_p7gtf")
+region = Rect2(48, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_l7h3q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6btmk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_haaly")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_daeir")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wq3k5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01us1")
+}],
+"loop": 0,
+"name": &"default",
+"speed": 6.0
+}]
+
+[node name="PastoAlto1" type="Node2D" unique_id=840834276]
+script = ExtResource("1_16j87")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=641844169]
+sprite_frames = SubResource("SpriteFrames_l7h3q")
+autoplay = "default"
+centered = false
+offset = Vector2(-8, -15)

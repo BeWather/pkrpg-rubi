@@ -1,0 +1,192 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/efecto_capas_nativo.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/i5_candidate_hit_tile0.png" id="2_golpe"]
+[ext_resource type="Shader" path="res://escenas/batalla/animaciones_nativas/mezcla_gba.gdshader" id="3_mezcla"]
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/fondo_movimiento.gd" id="4_fondo"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/bg_muddy_water.png" id="20_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/bg_surf.png" id="21_tex"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Surf.wav" id="10_se"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Whirlpool.wav" id="11_se"]
+
+[sub_resource type="ShaderMaterial" id="Mezcla"]
+shader = ExtResource("3_mezcla")
+
+[sub_resource type="Animation" id="Animation_surf"]
+resource_name = "surf"
+length = 3.416667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.2499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("CapaSurf"), 134, {"desplazamiento": Vector2(0, -48), "velocidad": Vector2(-2, 1), "ciclo": [0, 7, 4], "banda": {"desde": 49, "paso": -1, "limite": 0, "hasta": 112}, "desplazamiento_rival": Vector2(-224, 0), "velocidad_rival": Vector2(2, -1), "ciclo_rival": [7, 7, 4], "banda_rival": {"desde": 0, "paso": 1, "limite": 112, "hasta": 0}, "alfa": [[0, 0, 1], [1, 0.0625, 0.9375], [3, 0.125, 0.875], [5, 0.1875, 0.8125], [7, 0.25, 0.75], [9, 0.3125, 0.6875], [11, 0.375, 0.625], [13, 0.4375, 0.5625], [15, 0.5, 0.5], [17, 0.5625, 0.4375], [19, 0.625, 0.375], [21, 0.6875, 0.3125], [23, 0.75, 0.25], [25, 0.8125, 0.1875], [109, 0.75, 0.25], [111, 0.6875, 0.3125], [113, 0.625, 0.375], [115, 0.5625, 0.4375], [117, 0.5, 0.5], [119, 0.4375, 0.5625], [121, 0.375, 0.625], [123, 0.3125, 0.6875], [125, 0.25, 0.75], [127, 0.1875, 0.8125], [129, 0.125, 0.875], [131, 0.0625, 0.9375], [133, 0, 1]]}],
+"method": &"ola"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.2499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.4333)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_agua_lodosa"]
+resource_name = "agua_lodosa"
+length = 3.416667
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.2499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("CapaAguaLodosa"), 134, {"desplazamiento": Vector2(0, -48), "velocidad": Vector2(-2, 1), "ciclo": [0, 7, 4], "banda": {"desde": 49, "paso": -1, "limite": 0, "hasta": 112}, "desplazamiento_rival": Vector2(-224, 0), "velocidad_rival": Vector2(2, -1), "ciclo_rival": [7, 7, 4], "banda_rival": {"desde": 0, "paso": 1, "limite": 112, "hasta": 0}, "alfa": [[0, 0, 1], [1, 0.0625, 0.9375], [3, 0.125, 0.875], [5, 0.1875, 0.8125], [7, 0.25, 0.75], [9, 0.3125, 0.6875], [11, 0.375, 0.625], [13, 0.4375, 0.5625], [15, 0.5, 0.5], [17, 0.5625, 0.4375], [19, 0.625, 0.375], [21, 0.6875, 0.3125], [23, 0.75, 0.25], [25, 0.8125, 0.1875], [109, 0.75, 0.25], [111, 0.6875, 0.3125], [113, 0.625, 0.375], [115, 0.5625, 0.4375], [117, 0.5, 0.5], [119, 0.4375, 0.5625], [121, 0.375, 0.625], [123, 0.3125, 0.6875], [125, 0.25, 0.75], [127, 0.1875, 0.8125], [129, 0.125, 0.875], [131, 0.0625, 0.9375], [133, 0, 1]]}],
+"method": &"ola"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(2.2499),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoAtacante")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("11_se")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_golpes"]
+_data = {
+&"surf": SubResource("Animation_surf"),
+&"agua_lodosa": SubResource("Animation_agua_lodosa")
+}
+
+[node name="Olas" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+material_mezcla = SubResource("Mezcla")
+voltear_imagen_con_lado = false
+
+[node name="Fondo" type="Node2D" parent="."]
+script = ExtResource("4_fondo")
+
+[node name="Imagen" type="Sprite2D" parent="Fondo"]
+visible = false
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="Velo" type="ColorRect" parent="Fondo"]
+visible = false
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="Golpe" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+texture = ExtResource("2_golpe")
+
+[node name="GolpeOpaco" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_golpe")
+
+[node name="Estela" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+
+[node name="CapaSurf" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("21_tex")
+vframes = 14
+
+[node name="CapaAguaLodosa" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("20_tex")
+vframes = 14
+
+[node name="SonidoAtacante" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoDefensor" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoCentro" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_golpes")

@@ -1,0 +1,887 @@
+[gd_scene format=4 uid="uid://tjkqghr7xjkr"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_ek8wc"]
+[ext_resource type="TileSet" uid="uid://cihs7q0xi0yev" path="res://escenas/tileset_interior_edificios_2.tres" id="3_2tjgy"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_l66et"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="5_bkh1r"]
+[ext_resource type="Script" uid="uid://dmy4ir5m1ul04" path="res://scripts/npc/npc_dialogo_condicional.gd" id="mu_dialogo"]
+[ext_resource type="PackedScene" path="res://escenas/eventos/disparador_evento_por_tiles.tscn" id="mu_disparador"]
+[ext_resource type="Script" uid="uid://d00jnejn3txvn" path="res://scripts/eventos/ciudad_portual/evento_museo_portual.gd" id="mu_evento"]
+[ext_resource type="SpriteFrames" uid="uid://bkw3hndn42rqc" path="res://escenas/avatares/npc_001.tres" id="mu_npc_001"]
+[ext_resource type="SpriteFrames" uid="uid://c4v7i5xgf87q7" path="res://escenas/avatares/npc_008.tres" id="mu_npc_008"]
+[ext_resource type="SpriteFrames" uid="uid://bvhd4qu3is3pt" path="res://escenas/avatares/npc_010.tres" id="mu_npc_010"]
+[ext_resource type="SpriteFrames" uid="uid://b6sswtsk5qcq" path="res://escenas/avatares/npc_020.tres" id="mu_npc_020"]
+[ext_resource type="SpriteFrames" uid="uid://damgta0thpof0" path="res://escenas/avatares/npc_028.tres" id="mu_npc_028"]
+[ext_resource type="SpriteFrames" uid="uid://cvnj47upyd2ca" path="res://escenas/avatares/npc_042.tres" id="mu_npc_042"]
+[ext_resource type="SpriteFrames" uid="uid://c6lw4imugjphu" path="res://escenas/avatares/npc_047.tres" id="mu_npc_047"]
+[ext_resource type="SpriteFrames" uid="uid://ct3gr3wlu1nb" path="res://escenas/avatares/npc_054.tres" id="mu_npc_054"]
+[ext_resource type="SpriteFrames" uid="uid://botaed3oif5tm" path="res://escenas/avatares/npc_061.tres" id="mu_npc_061"]
+[ext_resource type="SpriteFrames" uid="uid://8ic0mgm0x0bk" path="res://escenas/avatares/npc_062.tres" id="mu_npc_062"]
+[ext_resource type="SpriteFrames" uid="uid://dlmqb6ogg84xh" path="res://escenas/avatares/npc_064.tres" id="mu_npc_064"]
+[ext_resource type="SpriteFrames" uid="uid://rvhay5tgmegy" path="res://escenas/avatares/npc_065.tres" id="mu_npc_065"]
+[ext_resource type="SpriteFrames" uid="uid://lolua5p1pqu5" path="res://escenas/avatares/npc_093.tres" id="mu_npc_093"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="mu_npc_base"]
+[ext_resource type="Script" uid="uid://bhdjfcmksvpev" path="res://scripts/npc/npc_evento.gd" id="mu_npc_evento"]
+[ext_resource type="Script" uid="uid://s5l8kva4su6p" path="res://scripts/npc/npc_reportero_museo.gd" id="mu_reportero"]
+[ext_resource type="Script" uid="uid://coe2ye7bip5or" path="res://escenas/mapas/signpost.gd" id="mu_signpost"]
+
+[node name="Museo" type="Node2D" unique_id=759417394]
+script = ExtResource("1_ek8wc")
+nombre_interno = "ciudad_portual_museo"
+seccion = "CIUDAD_PORTUAL"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_PORTUAL"
+solo_caminar = true
+musica_mapa = "MUSEO_OCEANICO"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=532478234]
+tile_map_data = PackedByteArray("AAAAAAAAAAAMAAUAAAAAAAEAAAAMAAYAAAABAAAAAAAMAAUAAAABAAEAAAAMAAYAAAACAAAAAAAKAAcAAAACAAEAAAAKAAgAAAADAAAAAAALAAcAAAADAAEAAAALAAgAAAAEAAAAAAANAAUAAAAEAAEAAAANAAYAAAAGAAAAAAAOAAUAAAAGAAEAAAAOAAYAAAAFAAAAAAANABAAAAAFAAEAAAAOABAAAAAHAAAAAAALABEAAAAHAAEAAAAMABEAAAAHAAIAAAAKAAUAAAAGAAIAAAAKAAUAAAAFAAIAAAAKAAUAAAAEAAIAAAAKAAUAAAADAAIAAAAKAAUAAAACAAIAAAAKAAUAAAABAAIAAAAKAAUAAAAAAAIAAAAKAAUAAAAAAAMAAAAKAAUAAAAAAAQAAAAKAAUAAAAAAAUAAAAKAAUAAAAAAAYAAAAKAAUAAAAAAAcAAAAKAAUAAAAAAAgAAAAKAAUAAAABAAMAAAAJAAUAAAABAAQAAAAJAAUAAAABAAUAAAAJAAUAAAABAAYAAAAJAAUAAAABAAcAAAAJAAUAAAABAAgAAAAJAAUAAAACAAMAAAAJAAUAAAACAAQAAAAIAAoAAAACAAUAAAALAAUAAAACAAYAAAAJAAUAAAACAAcAAAAIAAoAAAACAAgAAAALAAUAAAADAAMAAAAJAAUAAAADAAQAAAALAA0AAAADAAUAAAALAA4AAAADAAYAAAAJAAUAAAADAAcAAAALAA0AAAADAAgAAAALAA4AAAAAAPL/AAAMAAUAAAAAAPP/AAAMAAYAAAAAAPT/AAAKAAUAAAAAAPX/AAAKAAUAAAAAAPb/AAAKAAUAAAAAAPf/AAAKAAUAAAAAAPj/AAAKAAUAAAAAAPn/AAAKAAUAAAAAAPr/AAAKAAUAAAABAPL/AAAMAAUAAAABAPP/AAAMAAYAAAABAPT/AAAKAAUAAAABAPX/AAAJAAUAAAABAPb/AAAJAAUAAAABAPf/AAAJAAUAAAABAPj/AAAJAAUAAAABAPn/AAAJAAUAAAABAPr/AAAJAAUAAAACAPL/AAAMAAUAAAACAPP/AAAMAAYAAAACAPT/AAAKAAUAAAACAPX/AAAIAAwAAAACAPb/AAAKAAsAAAACAPf/AAALAAUAAAACAPj/AAAKAAoAAAACAPn/AAAKAAsAAAACAPr/AAALAAUAAAADAPL/AAAMAAUAAAADAPP/AAAMAAYAAAADAPT/AAAKAAUAAAADAPX/AAAJAAwAAAADAPb/AAALAAsAAAADAPf/AAALAAUAAAADAPj/AAAIAAsAAAADAPn/AAALAAsAAAADAPr/AAALAAUAAAAEAPL/AAAMAAUAAAAEAPP/AAAMAAYAAAAEAPT/AAAKAAUAAAAEAPX/AAAIAA0AAAAEAPb/AAALAAsAAAAEAPf/AAALAAUAAAAEAPj/AAAJAAsAAAAEAPn/AAALAAsAAAAEAPr/AAALAAUAAAAFAPL/AAAJABEAAAAFAPP/AAAKABEAAAAFAPT/AAAKAAUAAAAFAPX/AAAMAAoAAAAFAPb/AAAMAAsAAAAFAPf/AAALAAUAAAAFAPj/AAAMAAoAAAAFAPn/AAAMAAsAAAAFAPr/AAALAAUAAAAGAPL/AAAPAAUAAAAGAPP/AAAPAAYAAAAGAPT/AAAKAAUAAAAGAPX/AAALAA0AAAAGAPb/AAALAA0AAAAGAPf/AAALAA4AAAAGAPj/AAALAA0AAAAGAPn/AAALAA0AAAAGAPr/AAALAA4AAAAHAPL/AAALABEAAAAHAPP/AAAMABEAAAAHAPT/AAAKAAUAAAAHAPX/AAAJAAUAAAAHAPb/AAAJAAUAAAAHAPf/AAAJAAUAAAAHAPj/AAAJAAUAAAAHAPn/AAAJAAUAAAAHAPr/AAAJAAUAAAAIAPL/AAAIAAYAAAAIAPP/AAAIAAcAAAAIAPT/AAAIAAgAAAAIAPX/AAAJAAUAAAAIAPb/AAAJAAUAAAAIAPf/AAAJAAUAAAAIAPj/AAAJAAUAAAAIAPn/AAAJAAUAAAAIAPr/AAAJAAUAAAAJAPL/AAAJAAYAAAAJAPP/AAAJAAcAAAAJAPT/AAAJAAgAAAAJAPX/AAAJAAUAAAAJAPb/AAAJAAUAAAAJAPf/AAAJAAUAAAAJAPj/AAAJAAUAAAAJAPn/AAAJAAUAAAAJAPr/AAAJAAUAAAAKAPL/AAANAAkAAAAKAPP/AAANAAkAAAAKAPT/AAANAAoAAAAKAPX/AAANAAsAAAAKAPb/AAALAAUAAAAKAPf/AAAJAAUAAAAKAPj/AAAJAAUAAAAKAPn/AAAJAAUAAAAKAPr/AAAJAAUAAAALAPT/AAAKAAUAAAALAPX/AAALAA0AAAALAPb/AAALAA4AAAALAPf/AAAJAAUAAAALAPj/AAAJAAUAAAALAPn/AAAJAAUAAAALAPr/AAAJAAUAAAAMAPT/AAAKAAUAAAAMAPX/AAAJAAUAAAAMAPb/AAALABAAAAAMAPf/AAALAAUAAAAMAPj/AAAJAAUAAAAMAPn/AAAJAAUAAAAMAPr/AAAJAAUAAAAOAPL/AAAMAAUAAAAOAPP/AAAMAAYAAAAOAPT/AAAKAAUAAAAOAPX/AAAJAAUAAAAOAPb/AAAJAAUAAAAOAPf/AAAJAAUAAAAOAPj/AAAJAAUAAAAOAPn/AAAKABAAAAAOAPr/AAALAAUAAAAPAPL/AAAIAAYAAAAPAPP/AAAIAAcAAAAPAPT/AAAIAAgAAAAPAPX/AAAJAAUAAAAPAPb/AAALABAAAAAPAPf/AAALAAUAAAAPAPj/AAAJAAUAAAAPAPn/AAALAA0AAAAPAPr/AAALAA4AAAAQAPL/AAAJAAYAAAAQAPP/AAAJAAcAAAAQAPT/AAAJAAgAAAAQAPX/AAAJAAUAAAAQAPb/AAAMABAAAAAQAPf/AAALAAUAAAAQAPj/AAAJAAUAAAAQAPn/AAAJAAUAAAAQAPr/AAAJAAUAAAARAPL/AAAMAAUAAAARAPP/AAAMAAYAAAARAPT/AAAKAAUAAAARAPX/AAAJAAUAAAARAPb/AAAJAAUAAAARAPf/AAAJAAUAAAARAPj/AAAJAAUAAAARAPn/AAAJAAUAAAARAPr/AAAJAAUAAAASAPL/AAAIAAYAAAASAPP/AAAIAAcAAAASAPT/AAAIAAgAAAASAPX/AAAJAAUAAAASAPb/AAAIAAoAAAASAPf/AAALAAUAAAASAPj/AAAJAAUAAAASAPn/AAAIAAoAAAASAPr/AAALAAUAAAATAPL/AAAJAAYAAAATAPP/AAAJAAcAAAATAPT/AAAJAAgAAAATAPX/AAAJAAUAAAATAPb/AAALAA0AAAATAPf/AAALAA4AAAATAPj/AAAJAAUAAAATAPn/AAALAA0AAAATAPr/AAALAA4AAAANAPL/AAAPAAcAAAANAPP/AAAPAAgAAAANAPT/AAAKAAUAAAANAPX/AAAJAAUAAAANAPb/AAAMABAAAAANAPf/AAALAAUAAAANAPj/AAAJAAUAAAANAPn/AAAJABAAAAANAPr/AAALAAUAAAAMAPL/AAAOAAcAAAAMAPP/AAAOAAgAAAALAPL/AAAMAAUAAAALAPP/AAAMAAYAAAAFAAMAAAAJAAUAAAAFAAQAAAAJAAUAAAAFAAUAAAAJAAUAAAAFAAYAAAANAA8AAAAFAAcAAAAOAAwAAAAFAAgAAAAIABEAAAAGAAMAAAAJAAUAAAAGAAQAAAAJAAUAAAAGAAUAAAAJAAUAAAAGAAYAAAAIAA4AAAAGAAcAAAALAA0AAAAGAAgAAAALAA0AAAAHAAMAAAAJAAUAAAAHAAQAAAAJAAUAAAAHAAUAAAAJAAUAAAAHAAYAAAAJAA4AAAAHAAcAAAAJAAUAAAAHAAgAAAAJAAUAAAAIAAMAAAAJAAUAAAAIAAQAAAAJAAUAAAAIAAUAAAAJAAUAAAAIAAYAAAAOAA8AAAAIAAcAAAAOAAwAAAAIAAgAAAAIABEAAAAJAAMAAAAJAAUAAAAJAAQAAAAJAAUAAAAJAAUAAAAJAAUAAAAJAAYAAAALAA0AAAAJAAcAAAALAA0AAAAJAAgAAAAKAAYAAAAKAAMAAAAJAAUAAAAKAAQAAAAJAAUAAAAKAAUAAAAJAAUAAAAKAAYAAAAJAAUAAAAKAAcAAAAJAAUAAAAKAAgAAAALAAYAAAALAAMAAAAJAAUAAAALAAQAAAAJAAUAAAALAAUAAAAJAAUAAAALAAYAAAANAA8AAAALAAcAAAAOAAwAAAALAAgAAAAIABEAAAAMAAMAAAAJAAUAAAAMAAQAAAAJAAUAAAAMAAUAAAAJAAUAAAAMAAYAAAAJAA4AAAAMAAcAAAALAA0AAAAMAAgAAAALAA0AAAANAAMAAAAJAAUAAAANAAQAAAAJAAUAAAANAAUAAAAJAAUAAAANAAYAAAALAAsAAAANAAcAAAAJAAUAAAANAAgAAAAJAAUAAAAOAAMAAAAJAAUAAAAOAAQAAAAJAAUAAAAOAAUAAAAJAAUAAAAOAAYAAAAOAA8AAAAOAAcAAAAOAAwAAAAOAAgAAAAIABEAAAAPAAMAAAAJAAUAAAAPAAQAAAAJAAoAAAAPAAUAAAALAAUAAAAPAAYAAAALAA0AAAAPAAcAAAALAA0AAAAPAAgAAAALAA0AAAAQAAMAAAAJAAUAAAAQAAQAAAALAA0AAAAQAAUAAAALAA4AAAAQAAYAAAAJAAUAAAAQAAcAAAAJAAUAAAAQAAgAAAAJAAUAAAARAAMAAAAJAAUAAAARAAQAAAAJAAUAAAARAAUAAAAJAAUAAAARAAYAAAAJAAUAAAARAAcAAAAJAAUAAAARAAgAAAAJAAUAAAASAAMAAAAJAAUAAAASAAQAAAAJAAoAAAASAAUAAAALAAUAAAASAAYAAAAJAAUAAAASAAcAAAAJAAoAAAASAAgAAAALAAUAAAATAAMAAAAJAAUAAAATAAQAAAALAA0AAAATAAUAAAALAA4AAAATAAYAAAAJAAUAAAATAAcAAAALAA0AAAATAAgAAAALAA4AAAAJAAAAAAAOAAkAAAAJAAEAAAAOAAoAAAAJAAIAAAAOAAsAAAAKAAAAAAAPAAkAAAAKAAEAAAAPAAoAAAAKAAIAAAAPAAsAAAALAAAAAAAMAAUAAAALAAEAAAAMAAYAAAALAAIAAAAKAAUAAAAMAAAAAAAOAAkAAAAMAAEAAAAOAAoAAAAMAAIAAAAOAAsAAAANAAAAAAAPAAkAAAANAAEAAAAPAAoAAAANAAIAAAAPAAsAAAAOAAAAAAAMAAUAAAAOAAEAAAAMAAYAAAAOAAIAAAAKAAUAAAAPAAAAAAAMAAUAAAAPAAEAAAAMAAYAAAAPAAIAAAAKAAUAAAAQAAAAAAAMAAcAAAAQAAEAAAAMAAgAAAAQAAIAAAAKAAUAAAARAAAAAAANAAcAAAARAAEAAAANAAgAAAARAAIAAAAKAAUAAAASAAAAAAAMAAUAAAASAAEAAAAMAAYAAAASAAIAAAAKAAUAAAATAAAAAAAMAAUAAAATAAEAAAAMAAYAAAATAAIAAAAKAAUAAAAEAAMAAAAJAAUAAAAEAAQAAAAJAAUAAAAEAAUAAAAJAAUAAAAEAAYAAAAJAAUAAAAEAAcAAAAJAAUAAAAEAAgAAAAJAAUAAAAIAAAAAAAMAAUAAAAIAAEAAAAMAAYAAAAIAAIAAAAKAAUAAAA=")
+tile_set = ExtResource("3_2tjgy")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="Suelo2" type="TileMapLayer" parent="." unique_id=467381350]
+tile_map_data = PackedByteArray("AAACAAYAAAAIAAkAAAACAAMAAAAIAAkAAAAPAAMAAAAJAAkAAAASAAMAAAAJAAkAAAASAAYAAAAJAAkAAAAFAAUAAAANAA4AAAALAAUAAAANAA4AAAAOAAUAAAAPAA4AAAAIAAUAAAAPAA4AAAANAAUAAAAOAA4AAAAMAAUAAAAOAA4AAAAHAAUAAAAOAA4AAAAGAAUAAAAOAA4AAAAPAPX/AAALAA8AAAAQAPX/AAAMAA8AAAAMAPX/AAALAA8AAAANAPX/AAAMAA8AAAANAPj/AAAJAA8AAAAOAPj/AAAKAA8AAAACAPf/AAANAA4AAAACAPT/AAANAA4AAAAFAPf/AAAPAA4AAAAFAPT/AAAPAA4AAAAEAPf/AAAOAA4AAAADAPf/AAAOAA4AAAAEAPT/AAAOAA4AAAADAPT/AAAOAA4AAAASAPX/AAAIAAkAAAASAPj/AAAIAAkAAAA=")
+tile_set = ExtResource("3_2tjgy")
+occlusion_enabled = false
+collision_enabled = false
+navigation_enabled = false
+
+[node name="TileSalida1" type="Sprite2D" parent="." unique_id=844634725]
+position = Vector2(152, 134)
+script = ExtResource("4_l66et")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_portual"
+posicion_destino = Vector2(30, 26)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TileSalida2" type="Sprite2D" parent="." unique_id=1019377274]
+position = Vector2(168, 134)
+script = ExtResource("4_l66et")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_portual"
+posicion_destino = Vector2(31, 26)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1077642025]
+
+[node name="Torbellino" type="Sprite2D" parent="Carteles" unique_id=1310005001 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_1F bg_event 1 (2,7) = Godot (2,7)"
+position = Vector2(40, 120)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_TORBELLINO"
+coord_tile = Vector2i(2, 7)
+
+[node name="Cascada" type="Sprite2D" parent="Carteles" unique_id=1310005002 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_1F bg_event 2 (2,4) = Godot (2,4)"
+position = Vector2(40, 72)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_CASCADA"
+coord_tile = Vector2i(2, 4)
+
+[node name="SueloOceano1" type="Sprite2D" parent="Carteles" unique_id=1310005003 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_1F bg_event 3 (9,1) = Godot (9,1)"
+position = Vector2(152, 24)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_SUELO_OCEANO"
+coord_tile = Vector2i(9, 1)
+
+[node name="ArenaPlaya1" type="Sprite2D" parent="Carteles" unique_id=1310005004 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_1F bg_event 4 (12,1) = Godot (12,1)"
+position = Vector2(200, 24)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_ARENA_PLAYA"
+coord_tile = Vector2i(12, 1)
+
+[node name="SueloOceano2" type="Sprite2D" parent="Carteles" unique_id=1310005005 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_1F bg_event 5 (10,1) = Godot (10,1)"
+position = Vector2(168, 24)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_SUELO_OCEANO"
+coord_tile = Vector2i(10, 1)
+
+[node name="ArenaPlaya2" type="Sprite2D" parent="Carteles" unique_id=1310005006 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_1F bg_event 6 (13,1) = Godot (13,1)"
+position = Vector2(216, 24)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_ARENA_PLAYA"
+coord_tile = Vector2i(13, 1)
+
+[node name="Dato1" type="Sprite2D" parent="Carteles" unique_id=1310005007 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_1F bg_event 7 (15,4) = Godot (15,4)"
+position = Vector2(248, 72)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_DATO1"
+coord_tile = Vector2i(15, 4)
+
+[node name="Dato2" type="Sprite2D" parent="Carteles" unique_id=1310005008 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_1F bg_event 8 (18,4) = Godot (18,4)"
+position = Vector2(296, 72)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_DATO2"
+coord_tile = Vector2i(18, 4)
+
+[node name="Dato3" type="Sprite2D" parent="Carteles" unique_id=1310005009 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_1F bg_event 9 (18,7) = Godot (18,7)"
+position = Vector2(296, 120)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_DATO3"
+coord_tile = Vector2i(18, 7)
+
+[node name="Fosil1" type="Sprite2D" parent="Carteles" unique_id=1310005010 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_1F bg_event 10 (2,1) = Godot (2,1)"
+position = Vector2(40, 24)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_FOSIL"
+coord_tile = Vector2i(2, 1)
+
+[node name="Fosil2" type="Sprite2D" parent="Carteles" unique_id=1310005011 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_1F bg_event 11 (3,1) = Godot (3,1)"
+position = Vector2(56, 24)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_FOSIL"
+coord_tile = Vector2i(3, 1)
+
+[node name="Profundimetro1" type="Sprite2D" parent="Carteles" unique_id=1310005012 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_1F bg_event 12 (16,1) = Godot (16,1)"
+position = Vector2(264, 24)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_PROFUNDIMETRO"
+coord_tile = Vector2i(16, 1)
+
+[node name="Profundimetro2" type="Sprite2D" parent="Carteles" unique_id=1310005013 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_1F bg_event 13 (17,1) = Godot (17,1)"
+position = Vector2(280, 24)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_PROFUNDIMETRO"
+coord_tile = Vector2i(17, 1)
+
+[node name="AguaKanto_2F" type="Sprite2D" parent="Carteles" unique_id=1310005014 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 1 (18,4) = Godot (18,-10)"
+position = Vector2(296, -152)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_AGUA_KANTO"
+coord_tile = Vector2i(18, -10)
+
+[node name="AguaJohto_2F" type="Sprite2D" parent="Carteles" unique_id=1310005015 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 2 (18,7) = Godot (18,-7)"
+position = Vector2(296, -104)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_AGUA_JOHTO"
+coord_tile = Vector2i(18, -7)
+
+[node name="Sumergible1_2F" type="Sprite2D" parent="Carteles" unique_id=1310005016 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 3 (4,3) = Godot (4,-11)"
+position = Vector2(72, -168)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_SUMERGIBLE"
+coord_tile = Vector2i(4, -11)
+
+[node name="Sumergible2_2F" type="Sprite2D" parent="Carteles" unique_id=1310005017 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 4 (4,4) = Godot (4,-10)"
+position = Vector2(72, -152)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_SUMERGIBLE"
+coord_tile = Vector2i(4, -10)
+
+[node name="Submarino1_2F" type="Sprite2D" parent="Carteles" unique_id=1310005018 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 5 (3,3) = Godot (3,-11)"
+position = Vector2(56, -168)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_SUBMARINO"
+coord_tile = Vector2i(3, -11)
+
+[node name="Submarino2_2F" type="Sprite2D" parent="Carteles" unique_id=1310005019 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 6 (2,3) = Godot (2,-11)"
+position = Vector2(40, -168)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_SUBMARINO"
+coord_tile = Vector2i(2, -11)
+
+[node name="Submarino3_2F" type="Sprite2D" parent="Carteles" unique_id=1310005020 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 7 (3,4) = Godot (3,-10)"
+position = Vector2(56, -152)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_SUBMARINO"
+coord_tile = Vector2i(3, -10)
+
+[node name="Ferry1_2F" type="Sprite2D" parent="Carteles" unique_id=1310005021 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 8 (3,6) = Godot (3,-8)"
+position = Vector2(56, -120)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_FERRY"
+coord_tile = Vector2i(3, -8)
+
+[node name="Ferry2_2F" type="Sprite2D" parent="Carteles" unique_id=1310005022 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 9 (4,6) = Godot (4,-8)"
+position = Vector2(72, -120)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_FERRY"
+coord_tile = Vector2i(4, -8)
+
+[node name="SSAnne1_2F" type="Sprite2D" parent="Carteles" unique_id=1310005023 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 10 (13,7) = Godot (13,-7)"
+position = Vector2(216, -104)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_SS_ANNE"
+coord_tile = Vector2i(13, -7)
+
+[node name="SSAnne2_2F" type="Sprite2D" parent="Carteles" unique_id=1310005024 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 11 (14,7) = Godot (14,-7)"
+position = Vector2(232, -104)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_SS_ANNE"
+coord_tile = Vector2i(14, -7)
+
+[node name="AguaSuperficie1_2F" type="Sprite2D" parent="Carteles" unique_id=1310005025 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 12 (18,1) = Godot (18,-13)"
+position = Vector2(296, -200)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_AGUA_SUPERFICIE"
+coord_tile = Vector2i(18, -13)
+
+[node name="AguaSuperficie2_2F" type="Sprite2D" parent="Carteles" unique_id=1310005026 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 13 (19,1) = Godot (19,-13)"
+position = Vector2(312, -200)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_AGUA_SUPERFICIE"
+coord_tile = Vector2i(19, -13)
+
+[node name="AguaProfunda1_2F" type="Sprite2D" parent="Carteles" unique_id=1310005027 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 14 (15,1) = Godot (15,-13)"
+position = Vector2(248, -200)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_AGUA_PROFUNDA"
+coord_tile = Vector2i(15, -13)
+
+[node name="AguaProfunda2_2F" type="Sprite2D" parent="Carteles" unique_id=1310005028 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 15 (16,1) = Godot (16,-13)"
+position = Vector2(264, -200)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_AGUA_PROFUNDA"
+coord_tile = Vector2i(16, -13)
+
+[node name="Hoenn1_2F" type="Sprite2D" parent="Carteles" unique_id=1310005029 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 16 (8,1) = Godot (8,-13)"
+position = Vector2(136, -200)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_HOENN"
+coord_tile = Vector2i(8, -13)
+
+[node name="Hoenn2_2F" type="Sprite2D" parent="Carteles" unique_id=1310005030 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 17 (9,1) = Godot (9,-13)"
+position = Vector2(152, -200)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_HOENN"
+coord_tile = Vector2i(9, -13)
+
+[node name="Presion1_2F" type="Sprite2D" parent="Carteles" unique_id=1310005031 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 18 (12,1) = Godot (12,-13)"
+position = Vector2(200, -200)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_PRESION"
+coord_tile = Vector2i(12, -13)
+
+[node name="Presion2_2F" type="Sprite2D" parent="Carteles" unique_id=1310005032 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 19 (13,1) = Godot (13,-13)"
+position = Vector2(216, -200)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_PRESION"
+coord_tile = Vector2i(13, -13)
+
+[node name="Ferry3_2F" type="Sprite2D" parent="Carteles" unique_id=1310005033 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 20 (3,7) = Godot (3,-7)"
+position = Vector2(56, -104)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_FERRY"
+coord_tile = Vector2i(3, -7)
+
+[node name="Ferry4_2F" type="Sprite2D" parent="Carteles" unique_id=1310005034 groups=["Cartel"]]
+editor_description = "pokeruby OceanicMuseum_2F bg_event 21 (4,7) = Godot (4,-7)"
+position = Vector2(72, -104)
+script = ExtResource("mu_signpost")
+id_texto = "PORTUAL_MUSEO_2F_FERRY"
+coord_tile = Vector2i(4, -7)
+
+[node name="NPCs" type="Node2D" parent="." unique_id=491424303]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Recepcionista1" parent="NPCs" unique_id=1310004001 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_1F objeto 1 (7,7) BEAUTY FACE_RIGHT (EntranceAttendant, MSGBOX_NPC)"
+position = Vector2(120, 126)
+id_texto = "PORTUAL_MUSEO_DISFRUTA"
+tipo_movimiento = 10
+selec_frames = ExtResource("mu_npc_064")
+coord = Vector2i(7, 7)
+
+[node name="Recepcionista2" parent="NPCs" unique_id=1310004002 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_1F objeto 7 (12,7) BEAUTY FACE_LEFT (EntranceAttendant, sin bandera)"
+position = Vector2(200, 126)
+id_texto = "PORTUAL_MUSEO_DISFRUTA"
+tipo_movimiento = 9
+selec_frames = ExtResource("mu_npc_064")
+coord = Vector2i(12, 7)
+
+[node name="Soldado1" parent="NPCs" unique_id=1310004003 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_1F objeto 5 (3,4) VAR_0 = MAGMA_MEMBER_F FACE_LEFT, FLAG_HIDE_EVIL_TEAM_OCEANIC_MUSEUM"
+position = Vector2(56, 78)
+id_texto = "PORTUAL_MUSEO_SOLDADO1"
+bandera_ocultar = "museo_portual_equipo_oculto"
+tipo_movimiento = 9
+selec_frames = ExtResource("mu_npc_062")
+coord = Vector2i(3, 4)
+
+[node name="Soldado2" parent="NPCs" unique_id=1310004004 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_1F objeto 4 (2,8) VAR_1 = MAGMA_MEMBER_M FACE_UP, FLAG_HIDE_EVIL_TEAM_OCEANIC_MUSEUM"
+position = Vector2(40, 142)
+id_texto = "PORTUAL_MUSEO_SOLDADO2"
+bandera_ocultar = "museo_portual_equipo_oculto"
+tipo_movimiento = 7
+selec_frames = ExtResource("mu_npc_061")
+coord = Vector2i(2, 8)
+
+[node name="Soldado3" parent="NPCs" unique_id=1310004005 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_1F objeto 2 (18,5) VAR_1 = MAGMA_MEMBER_M FACE_UP, FLAG_HIDE_EVIL_TEAM_OCEANIC_MUSEUM"
+position = Vector2(296, 94)
+id_texto = "PORTUAL_MUSEO_SOLDADO3"
+bandera_ocultar = "museo_portual_equipo_oculto"
+tipo_movimiento = 7
+selec_frames = ExtResource("mu_npc_061")
+coord = Vector2i(18, 5)
+
+[node name="Soldado4" parent="NPCs" unique_id=1310004006 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_1F objeto 3 (12,2) VAR_1 = MAGMA_MEMBER_M FACE_UP, MSGBOX_SIGN (no se gira), FLAG_HIDE_EVIL_TEAM_OCEANIC_MUSEUM"
+position = Vector2(200, 46)
+script = ExtResource("mu_dialogo")
+textos_condicionales = Dictionary[String, String]({})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = false
+id_texto = "PORTUAL_MUSEO_SOLDADO4"
+bandera_ocultar = "museo_portual_equipo_oculto"
+tipo_movimiento = 7
+selec_frames = ExtResource("mu_npc_061")
+coord = Vector2i(12, 2)
+
+[node name="Soldado5" parent="NPCs" unique_id=1310004007 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_1F objeto 6 (14,4) VAR_1 = MAGMA_MEMBER_M FACE_RIGHT, FLAG_HIDE_EVIL_TEAM_OCEANIC_MUSEUM"
+position = Vector2(232, 78)
+id_texto = "PORTUAL_MUSEO_SOLDADO5"
+bandera_ocultar = "museo_portual_equipo_oculto"
+tipo_movimiento = 10
+selec_frames = ExtResource("mu_npc_061")
+coord = Vector2i(14, 4)
+
+[node name="Soldado6" parent="NPCs" unique_id=1310004008 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_1F objeto 8 (8,3) VAR_1 = MAGMA_MEMBER_M FACE_DOWN, FLAG_HIDE_EVIL_TEAM_OCEANIC_MUSEUM"
+position = Vector2(136, 62)
+id_texto = "PORTUAL_MUSEO_SOLDADO6"
+bandera_ocultar = "museo_portual_equipo_oculto"
+selec_frames = ExtResource("mu_npc_061")
+coord = Vector2i(8, 3)
+
+[node name="Visitante1" parent="NPCs" unique_id=1310004009 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_1F objeto 9 (4,2) WOMAN_7 LOOK_AROUND, FLAG_HIDE_OCEANIC_MUSEUM_VISITORS (se limpia al visitar CIUDAD MALVALONA)"
+position = Vector2(72, 46)
+id_texto = "PORTUAL_MUSEO_VISITANTE1"
+bandera_mostrar = "visitado_ciudad_malvalona"
+tipo_movimiento = 1
+selec_frames = ExtResource("mu_npc_028")
+coord = Vector2i(4, 2)
+
+[node name="Visitante2" parent="NPCs" unique_id=1310004010 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_1F objeto 10 (10,2) MANIAC FACE_UP, FLAG_HIDE_OCEANIC_MUSEUM_VISITORS"
+position = Vector2(168, 46)
+id_texto = "PORTUAL_MUSEO_VISITANTE2"
+bandera_mostrar = "visitado_ciudad_malvalona"
+tipo_movimiento = 7
+selec_frames = ExtResource("mu_npc_008")
+coord = Vector2i(10, 2)
+
+[node name="Visitante3" parent="NPCs" unique_id=1310004011 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_1F objeto 11 (17,7) MAN_3 FACE_RIGHT, FLAG_HIDE_OCEANIC_MUSEUM_VISITORS"
+position = Vector2(280, 126)
+id_texto = "PORTUAL_MUSEO_VISITANTE3"
+bandera_mostrar = "visitado_ciudad_malvalona"
+tipo_movimiento = 10
+selec_frames = ExtResource("mu_npc_054")
+coord = Vector2i(17, 7)
+
+[node name="Visitante4" parent="NPCs" unique_id=1310004012 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_1F objeto 12 (18,8) LITTLE_GIRL_2 FACE_UP, FLAG_HIDE_OCEANIC_MUSEUM_VISITORS"
+position = Vector2(296, 142)
+id_texto = "PORTUAL_MUSEO_VISITANTE4"
+bandera_mostrar = "visitado_ciudad_malvalona"
+tipo_movimiento = 7
+selec_frames = ExtResource("mu_npc_010")
+coord = Vector2i(18, 8)
+
+[node name="SoldadoAsustado" parent="NPCs" unique_id=1310004013 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_1F objeto 13 (9,4) VAR_1 = MAGMA_MEMBER_M FACE_UP_LEFT_AND_RIGHT, FLAG_HIDE_SCARED_GRUNT_OCEANIC_MUSEUM (MT46). Lo dirige Eventos/EventoMuseoPortual"
+position = Vector2(152, 78)
+script = ExtResource("mu_npc_evento")
+id_texto = "PORTUAL_MUSEO_ASUSTADO"
+bandera_ocultar = "museo_portual_asustado_oculto"
+tipo_movimiento = 36
+selec_frames = ExtResource("mu_npc_061")
+coord = Vector2i(9, 4)
+
+[node name="Reportero" parent="NPCs" unique_id=1310004014 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_1F objeto 14 (7,4) REPORTER_M LOOK_AROUND, FLAG_HIDE_OCEANIC_MUSEUM_VISITORS; entrevista de la TV sin migrar (npc_reportero_museo.gd)"
+position = Vector2(120, 78)
+script = ExtResource("mu_reportero")
+textos_condicionales = Dictionary[String, String]({})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = false
+girar_al_hablar = true
+id_texto = "PORTUAL_MUSEO_REPORTERO_REPITE"
+bandera_mostrar = "visitado_ciudad_malvalona"
+tipo_movimiento = 1
+selec_frames = ExtResource("mu_npc_020")
+coord = Vector2i(7, 4)
+
+[node name="Babor" parent="NPCs" unique_id=1310004015 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_2F objeto 1 (13,6) SCIENTIST_1 FACE_DOWN, FLAG_HIDE_STERN_OCEANIC_MUSEUM_2F. Lo dirige Eventos/EventoMuseoPortual = Godot (13,-8)"
+position = Vector2(216, -114)
+script = ExtResource("mu_npc_evento")
+id_texto = "PORTUAL_MUSEO_2F_BABOR_PIEZAS"
+bandera_ocultar = "museo_portual_babor_oculto"
+selec_frames = ExtResource("mu_npc_065")
+coord = Vector2i(13, -8)
+
+[node name="Magno" parent="NPCs" unique_id=1310004016 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_2F objeto 2 (6,1) VAR_6 = MAXIE FACE_DOWN, FLAG_HIDE_EVIL_TEAM_LEADER_OCEANIC_MUSEUM_2F (oculto: lo hace aparecer la escena) = Godot (6,-13)"
+visible = false
+position = Vector2(104, -194)
+selec_frames = ExtResource("mu_npc_042")
+coord = Vector2i(6, -13)
+
+[node name="SoldadoEscena1" parent="NPCs" unique_id=1310004017 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_2F objeto 3 (6,1) VAR_1 = MAGMA_MEMBER_M FACE_DOWN, FLAG_HIDE_GRUNT_1_OCEANIC_MUSEUM_2F (oculto: lo hace aparecer la escena) = Godot (6,-13)"
+visible = false
+position = Vector2(104, -194)
+selec_frames = ExtResource("mu_npc_061")
+coord = Vector2i(6, -13)
+
+[node name="SoldadoEscena2" parent="NPCs" unique_id=1310004018 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_2F objeto 4 (6,1) VAR_1 = MAGMA_MEMBER_M FACE_DOWN, FLAG_HIDE_GRUNT_2_OCEANIC_MUSEUM_2F (oculto: lo hace aparecer la escena) = Godot (6,-13)"
+visible = false
+position = Vector2(104, -194)
+selec_frames = ExtResource("mu_npc_061")
+coord = Vector2i(6, -13)
+
+[node name="Visitante2F1" parent="NPCs" unique_id=1310004019 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_2F objeto 5 (12,7) OLD_MAN_2 FACE_RIGHT, FLAG_HIDE_OCEANIC_MUSEUM_VISITORS = Godot (12,-7)"
+position = Vector2(200, -98)
+id_texto = "PORTUAL_MUSEO_2F_VISITANTE1"
+bandera_mostrar = "visitado_ciudad_malvalona"
+tipo_movimiento = 10
+selec_frames = ExtResource("mu_npc_093")
+coord = Vector2i(12, -7)
+
+[node name="Visitante2F2" parent="NPCs" unique_id=1310004020 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_2F objeto 6 (9,6) WOMAN_2 LOOK_AROUND, FLAG_HIDE_OCEANIC_MUSEUM_VISITORS = Godot (9,-8)"
+position = Vector2(152, -114)
+id_texto = "PORTUAL_MUSEO_2F_VISITANTE2"
+bandera_mostrar = "visitado_ciudad_malvalona"
+tipo_movimiento = 1
+selec_frames = ExtResource("mu_npc_047")
+coord = Vector2i(9, -8)
+
+[node name="Visitante2F3" parent="NPCs" unique_id=1310004021 instance=ExtResource("mu_npc_base")]
+editor_description = "pokeruby OceanicMuseum_2F objeto 7 (1,3) LITTLE_BOY_1 FACE_RIGHT + FaceOriginalDirection, FLAG_HIDE_OCEANIC_MUSEUM_VISITORS = Godot (1,-11)"
+position = Vector2(24, -162)
+script = ExtResource("mu_dialogo")
+textos_condicionales = Dictionary[String, String]({})
+id_texto_si = ""
+id_texto_no = ""
+volver_direccion_original = true
+girar_al_hablar = true
+id_texto = "PORTUAL_MUSEO_2F_VISITANTE3"
+bandera_mostrar = "visitado_ciudad_malvalona"
+tipo_movimiento = 10
+selec_frames = ExtResource("mu_npc_001")
+coord = Vector2i(1, -11)
+
+[node name="Eventos" type="Node2D" parent="." unique_id=1310006000]
+
+[node name="EventoMuseoPortual" type="Node2D" parent="Eventos" unique_id=1310006001]
+editor_description = "pokeruby SlateportCity_OceanicMuseum_1F (PayEntranceFee, FamiliarGrunt) y _2F (CaptStern: robo de las PIEZAS DEVON)."
+script = ExtResource("mu_evento")
+babor = NodePath("../../NPCs/Babor")
+magno = NodePath("../../NPCs/Magno")
+soldado_a = NodePath("../../NPCs/SoldadoEscena1")
+soldado_b = NodePath("../../NPCs/SoldadoEscena2")
+soldado_asustado = NodePath("../../NPCs/SoldadoAsustado")
+
+[node name="EntradaIzquierda" parent="Eventos/EventoMuseoPortual" unique_id=1310006002 instance=ExtResource("mu_disparador")]
+editor_description = "coord_event (9,7) de Rubí, VAR_SLATEPORT_MUSEUM_1F_STATE = 0: PayEntranceFeeLeft."
+id_evento = &"entrada_izquierda"
+zonas_tiles = Array[Rect2i]([Rect2i(9, 7, 1, 1)])
+
+[node name="EntradaDerecha" parent="Eventos/EventoMuseoPortual" unique_id=1310006003 instance=ExtResource("mu_disparador")]
+editor_description = "coord_event (10,7) de Rubí, VAR_SLATEPORT_MUSEUM_1F_STATE = 0: PayEntranceFeeRight."
+id_evento = &"entrada_derecha"
+zonas_tiles = Array[Rect2i]([Rect2i(10, 7, 1, 1)])
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1773046390]
+script = ExtResource("5_bkh1r")
+tile_data = {
+"0,-13": {
+"flags": 1
+},
+"0,-5": {
+"flags": 1
+},
+"0,1": {
+"flags": 1
+},
+"1,-13": {
+"flags": 1
+},
+"1,-5": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"10,-11": {
+"flags": 1
+},
+"10,-12": {
+"flags": 1
+},
+"10,-13": {
+"flags": 1
+},
+"10,-5": {
+"flags": 1
+},
+"10,1": {
+"flags": 1
+},
+"11,-13": {
+"flags": 1
+},
+"11,-5": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,6": {
+"flags": 1
+},
+"11,7": {
+"flags": 1073741825
+},
+"11,8": {
+"flags": 1
+},
+"12,-10": {
+"flags": 1
+},
+"12,-13": {
+"flags": 1
+},
+"12,-5": {
+"flags": 1
+},
+"12,1": {
+"flags": 1
+},
+"12,6": {
+"flags": 1073741825
+},
+"13,-10": {
+"flags": 1
+},
+"13,-13": {
+"flags": 1
+},
+"13,-5": {
+"flags": 1
+},
+"13,-7": {
+"flags": 1
+},
+"13,1": {
+"flags": 1
+},
+"13,6": {
+"flags": 1
+},
+"14,-13": {
+"flags": 1
+},
+"14,-5": {
+"flags": 1
+},
+"14,-7": {
+"flags": 1
+},
+"14,1": {
+"flags": 1
+},
+"14,6": {
+"flags": 1
+},
+"14,7": {
+"flags": 1
+},
+"14,8": {
+"flags": 1
+},
+"15,-10": {
+"flags": 1
+},
+"15,-13": {
+"flags": 1
+},
+"15,-5": {
+"flags": 1
+},
+"15,1": {
+"flags": 1
+},
+"15,4": {
+"flags": 1
+},
+"16,-10": {
+"flags": 1
+},
+"16,-13": {
+"flags": 1
+},
+"16,-5": {
+"flags": 1
+},
+"16,1": {
+"flags": 1
+},
+"17,-13": {
+"flags": 1
+},
+"17,-5": {
+"flags": 1
+},
+"17,1": {
+"flags": 1
+},
+"18,-10": {
+"flags": 1
+},
+"18,-13": {
+"flags": 1
+},
+"18,-5": {
+"flags": 1
+},
+"18,-7": {
+"flags": 1
+},
+"18,1": {
+"flags": 1
+},
+"18,4": {
+"flags": 1
+},
+"18,7": {
+"flags": 1
+},
+"19,-13": {
+"flags": 1
+},
+"19,-5": {
+"flags": 1
+},
+"19,1": {
+"flags": 1
+},
+"2,-10": {
+"flags": 1
+},
+"2,-11": {
+"flags": 1
+},
+"2,-13": {
+"flags": 1
+},
+"2,-5": {
+"flags": 1
+},
+"2,-7": {
+"flags": 1
+},
+"2,-8": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"2,4": {
+"flags": 1
+},
+"2,7": {
+"flags": 1
+},
+"3,-10": {
+"flags": 1
+},
+"3,-11": {
+"flags": 1
+},
+"3,-13": {
+"flags": 1
+},
+"3,-5": {
+"flags": 1
+},
+"3,-7": {
+"flags": 1
+},
+"3,-8": {
+"flags": 1
+},
+"3,1": {
+"flags": 1
+},
+"4,-10": {
+"flags": 1
+},
+"4,-11": {
+"flags": 1
+},
+"4,-13": {
+"flags": 1
+},
+"4,-5": {
+"flags": 1
+},
+"4,-7": {
+"flags": 1
+},
+"4,-8": {
+"flags": 1
+},
+"4,1": {
+"flags": 1
+},
+"5,-10": {
+"flags": 1
+},
+"5,-11": {
+"flags": 1
+},
+"5,-13": {
+"flags": 1
+},
+"5,-14": {
+"flags": 1
+},
+"5,-5": {
+"flags": 1
+},
+"5,-7": {
+"flags": 1
+},
+"5,-8": {
+"flags": 1
+},
+"5,0": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"5,6": {
+"flags": 1
+},
+"5,7": {
+"flags": 1
+},
+"5,8": {
+"flags": 1
+},
+"6,-14": {
+"flags": 1
+},
+"6,-5": {
+"flags": 1
+},
+"6,0": {
+"flags": 1
+},
+"6,6": {
+"flags": 1
+},
+"7,-13": {
+"flags": 1
+},
+"7,-14": {
+"flags": 1
+},
+"7,-5": {
+"flags": 1
+},
+"7,0": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,6": {
+"flags": 1073741825
+},
+"8,-13": {
+"flags": 1
+},
+"8,-5": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,6": {
+"flags": 1
+},
+"8,7": {
+"flags": 1073741825
+},
+"8,8": {
+"flags": 1
+},
+"9,-13": {
+"flags": 1
+},
+"9,-5": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=949440719]
+position = Vector2(104, 22)
+script = ExtResource("4_l66et")
+ruta_mapa_destino = "ciudad_portual_museo"
+posicion_destino = Vector2(6, -13)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=144081731]
+position = Vector2(104, -202)
+script = ExtResource("4_l66et")
+ruta_mapa_destino = "ciudad_portual_museo"
+posicion_destino = Vector2(6, 1)
+direccion = Vector2(0, 1)
+dar_paso = true

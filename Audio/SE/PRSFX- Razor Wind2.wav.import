@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d0jjhx7vm65nd"
+path="res://.godot/imported/PRSFX- Razor Wind2.wav-086833ceff0186d6d9e09e988a50d917.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Razor Wind2.wav"
+dest_files=["res://.godot/imported/PRSFX- Razor Wind2.wav-086833ceff0186d6d9e09e988a50d917.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

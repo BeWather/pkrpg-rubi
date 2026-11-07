@@ -1,0 +1,108 @@
+[gd_scene format=4 uid="uid://c04a75dvl35fw"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_56d62"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_2wwd1"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_pxy2d"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_ko6yh"]
+[ext_resource type="SpriteFrames" uid="uid://c4v7i5xgf87q7" path="res://escenas/avatares/npc_008.tres" id="ar_f_008"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="ar_npc_base"]
+[ext_resource type="SpriteFrames" uid="uid://c5umb4imbb1p" path="res://escenas/avatares/npc_032.tres" id="ar_f_032"]
+
+[node name="Casa" type="Node2D" unique_id=1201946613]
+script = ExtResource("1_56d62")
+nombre_interno = "ciudad_arborada_casa4"
+seccion = "CIUDAD_ARBORADA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_ARBORADA"
+solo_caminar = true
+musica_mapa = "CIUDAD_ARBORADA"
+metadata/esInterior = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=997252449]
+tile_map_data = PackedByteArray("AAAAAAAAAAAAADkAAAABAAAAAAABADkAAAACAAAAAAABADkAAAADAAAAAAAGADcAAAAEAAAAAAAHADcAAAAGAAAAAAABADkAAAAHAAAAAAACADkAAAAFAAAAAAABADkAAAADAAEAAAAGADcAAAAEAAEAAAAHADcAAAADAAIAAAAGADcAAAAEAAIAAAAHADcAAAADAAMAAAAGADgAAAAEAAMAAAAHADgAAAAHAAEAAAACADoAAAAHAAIAAAACADsAAAAAAAEAAAAAADoAAAAAAAIAAAAAADsAAAAGAAEAAAABADoAAAAGAAIAAAABADsAAAAFAAEAAAABADoAAAAFAAIAAAADADsAAAACAAIAAAAEADsAAAACAAMAAAAEADsAAAACAAEAAAABADoAAAABAAEAAAAAADUAAAABAAIAAAAAAD0AAAACAAUAAAABADsAAAACAAQAAAABADsAAAADAAQAAAABADsAAAAEAAQAAAABADsAAAAFAAQAAAABADsAAAAFAAUAAAABADsAAAAFAAMAAAADADsAAAAHAAMAAAABADsAAAAGAAMAAAABADsAAAAGAAQAAAABADsAAAAHAAQAAAABADsAAAAGAAUAAAABADsAAAABAAUAAAABADsAAAABAAQAAAABADsAAAAAAAQAAAABADsAAAAAAAMAAAABADsAAAABAAMAAAABADsAAAAAAAUAAAABADsAAAAHAAUAAAABADsAAAADAAUAAAAEADoAAAAEAAUAAAAFADoAAAA=")
+tile_set = ExtResource("2_2wwd1")
+
+[node name="Encima" type="TileMapLayer" parent="." unique_id=863292143]
+tile_map_data = PackedByteArray("AAAAAAUAAAAIADcAAAAHAAUAAAAJADcAAAA=")
+tile_set = ExtResource("2_2wwd1")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=575270243]
+z_index = 1
+y_sort_enabled = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=248948740]
+script = ExtResource("3_pxy2d")
+tile_data = {
+"0,1": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"1,1": {
+"flags": 1
+},
+"2,1": {
+"flags": 1
+},
+"3,2": {
+"flags": 1
+},
+"3,3": {
+"flags": 1
+},
+"4,2": {
+"flags": 1
+},
+"4,3": {
+"flags": 1
+},
+"5,1": {
+"flags": 1
+},
+"6,1": {
+"flags": 1
+},
+"7,1": {
+"flags": 1
+},
+"7,5": {
+"flags": 1
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1543604165]
+position = Vector2(56, 86)
+script = ExtResource("4_ko6yh")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_arborada"
+posicion_destino = Vector2(25, 3)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=1119012595]
+position = Vector2(72, 86)
+script = ExtResource("4_ko6yh")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_arborada"
+posicion_destino = Vector2(25, 3)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Maniatico" parent="NPCs" unique_id=1874671573 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_House3 objeto 1 (0,3) MANIAC FACE_RIGHT"
+position = Vector2(8, 62)
+id_texto = "ARBORADA_CASA4_MANIATICO"
+tipo_movimiento = 10
+selec_frames = ExtResource("ar_f_008")
+coord = Vector2i(0, 3)
+
+[node name="Escolar" parent="NPCs" unique_id=1668099045 instance=ExtResource("ar_npc_base")]
+editor_description = "pokeruby FortreeCity_House3 objeto 2 (5,4) SCHOOL_KID_M WANDER_AROUND (1,1)"
+position = Vector2(88, 78)
+id_texto = "ARBORADA_CASA4_ESCOLAR"
+tipo_movimiento = 2
+rango = Vector2i(1, 1)
+selec_frames = ExtResource("ar_f_032")
+coord = Vector2i(5, 4)

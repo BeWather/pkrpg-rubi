@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dew5fwdvk0wqd"
+path="res://.godot/imported/2-19 Deoxys Battle!.mp3-c7cd1c8b5b3e7411dc8d3aa22f5c39bd.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/2-19 Deoxys Battle!.mp3"
+dest_files=["res://.godot/imported/2-19 Deoxys Battle!.mp3-c7cd1c8b5b3e7411dc8d3aa22f5c39bd.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,71 @@
+[gd_scene format=4 uid="uid://duglvo4pwyla7"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_o03is"]
+[ext_resource type="TileSet" uid="uid://dnoduyttk1sjp" path="res://escenas/tileset_edificios.tres" id="2_se1qk"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="3_13gmk"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="4_dbni8"]
+[ext_resource type="SpriteFrames" uid="uid://cy2tf0sbgdeui" path="res://escenas/avatares/npc_015.tres" id="cc_npc_015"]
+[ext_resource type="PackedScene" uid="uid://b0gplmolai4dg" path="res://escenas/avatares/npc_base.tscn" id="cc_npc_base"]
+[ext_resource type="Script" uid="uid://b3r00pidr48xb" path="res://scripts/npc/npc_regalo_objeto.gd" id="cc_regalo"]
+
+[node name="Casa" type="Node2D" unique_id=749470543]
+script = ExtResource("1_o03is")
+nombre_interno = "ciudad_calagua_casa5"
+seccion = "CIUDAD_CALAGUA"
+esInterior = true
+mapa_exterior_asociado = "CIUDAD_CALAGUA"
+solo_caminar = true
+musica_mapa = "CIUDAD_OROMAR"
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=991336295]
+tile_map_data = PackedByteArray("AAAAAAAAAAADABwAAAAAAAEAAAADAB0AAAAAAAIAAAADAB4AAAAHAAAAAAAEABwAAAAHAAEAAAAEAB0AAAAHAAIAAAAEAB4AAAAFAAAAAAAGABcAAAAFAAEAAAAGABgAAAAFAAIAAAAGABkAAAAGAAAAAAAHABcAAAAGAAEAAAAHABgAAAAGAAIAAAAHABkAAAABAAAAAAABABYAAAABAAEAAAABABcAAAABAAIAAAABABgAAAACAAAAAAACABYAAAACAAEAAAACABcAAAACAAIAAAACABgAAAAEAAAAAAAHAAIAAAAEAAEAAAAHAAMAAAADAAAAAAAHAAIAAAADAAEAAAAHAAMAAAAEAAIAAAABAAQAAAADAAIAAAABAAQAAAABAAMAAAAGAAkAAAABAAQAAAAGAAoAAAACAAMAAAAHAAkAAAACAAQAAAAHAAoAAAAAAAMAAAABAAsAAAAAAAQAAAABAAsAAAAAAAUAAAABAAQAAAAAAAYAAAAAACQAAAABAAYAAAAAACMAAAACAAYAAAAAACMAAAADAAYAAAAAACMAAAAEAAYAAAAAACMAAAAFAAYAAAAAACMAAAAGAAYAAAAAACMAAAAHAAYAAAAAACMAAAAAAAcAAAADACQAAAABAAcAAAADACMAAAACAAcAAAAAAAIAAAADAAcAAAABAAIAAAAEAAcAAAADACMAAAAFAAcAAAADACMAAAAGAAcAAAADACMAAAAHAAcAAAADACMAAAABAAUAAAABAAUAAAACAAUAAAABAAUAAAADAAUAAAABAAUAAAAEAAUAAAABAAUAAAAFAAUAAAABAAUAAAAGAAUAAAABAAUAAAAHAAUAAAABAAUAAAAHAAQAAAABAAUAAAAHAAMAAAABAAUAAAAGAAMAAAABAAUAAAAFAAMAAAABAAUAAAAEAAMAAAABAAUAAAADAAMAAAABAAUAAAADAAQAAAAEAAgAAAAEAAQAAAABAAUAAAAFAAQAAAABAAUAAAAGAAQAAAABAAUAAAA=")
+tile_set = ExtResource("2_se1qk")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=211795028]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Gordo" parent="NPCs" unique_id=1330500000 instance=ExtResource("cc_npc_base")]
+editor_description = "pokeruby LilycoveCity_House2 objeto 1 (0,4) FAT_MAN FACE_DOWN (regala la MT44 REPOSO una vez, FLAG_RECEIVED_TM44)"
+position = Vector2(8, 78)
+script = ExtResource("cc_regalo")
+objeto = "MT44"
+cantidad = 1
+bandera = "calagua_mt44_recibida"
+id_texto_entregado = "CALAGUA_CASA5_GORDO_TRAS"
+texto_tras_entregar = "CALAGUA_CASA5_GORDO_TRAS"
+condicion_regalo = ""
+id_texto_sin_condicion = ""
+pregunta_si_no = false
+id_texto_si = ""
+id_texto_no = ""
+textos_entregado = Dictionary[String, String]({})
+medalla_requerida = 0
+volver_direccion_original = false
+id_texto = "CALAGUA_CASA5_GORDO"
+selec_frames = ExtResource("cc_npc_015")
+coord = Vector2i(0, 4)
+
+[node name="Carteles" type="Node2D" parent="." unique_id=1016168764]
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1951418542]
+script = ExtResource("3_13gmk")
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=2039454932]
+position = Vector2(40, 118)
+script = ExtResource("4_dbni8")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_calagua"
+posicion_destino = Vector2(55, 15)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=30303994]
+position = Vector2(56, 118)
+script = ExtResource("4_dbni8")
+tipo_warp = 1
+ruta_mapa_destino = "ciudad_calagua"
+posicion_destino = Vector2(55, 15)
+direccion = Vector2(0, 1)
+dar_paso = true

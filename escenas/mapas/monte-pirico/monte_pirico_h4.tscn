@@ -1,0 +1,439 @@
+[gd_scene format=4 uid="uid://b5r3t456r4u55"]
+
+[ext_resource type="Script" uid="uid://dlgfh7gre30ff" path="res://escenas/mapas/MapaConfiguracion.gd" id="1_rnufs"]
+[ext_resource type="TileSet" uid="uid://cihs7q0xi0yev" path="res://escenas/tileset_interior_edificios_2.tres" id="2_6sghn"]
+[ext_resource type="Script" uid="uid://h3q1xdnax0v2" path="res://scripts/warp.gd" id="3_6sghn"]
+[ext_resource type="Script" uid="uid://b8unnsx8wawtt" path="res://addons/tile_data_map_plugin/TPTileDataMap.gd" id="4_lso3q"]
+[ext_resource type="SpriteFrames" uid="uid://bekclhrhmq4q7" path="res://escenas/avatares/npc_063.tres" id="mp_npc_063"]
+[ext_resource type="PackedScene" uid="uid://gbm5pvhiq1ej" path="res://escenas/avatares/npc_entrenador.tscn" id="mp_entrenador"]
+[ext_resource type="PackedScene" uid="uid://d0782whl40dem" path="res://escenas/ow_item.tscn" id="mp_item"]
+[ext_resource type="Script" uid="uid://dc1iq4jjdwvjy" path="res://scripts/overworld/suelo_agrietado_mapa.gd" id="mp_suelo"]
+
+[node name="MontePirico" type="Node2D" unique_id=804595119]
+script = ExtResource("1_rnufs")
+nombre_interno = "MONTE_PIRICO_H4"
+seccion = "MONTE_PIRICO"
+esInterior = true
+solo_caminar = true
+mapa_exterior_asociado = "RUTA_122"
+musica_mapa = "MONTE_PIRICO"
+mostrar_nombre_al_entrar = true
+
+[node name="Suelo" type="TileMapLayer" parent="." unique_id=1891202316]
+tile_map_data = PackedByteArray("AAAHAAAAAAAEABwAAAAIAAAAAAAHAB0AAAAMAAAAAAACAB0AAAAMAAEAAAADAB0AAAAMAAIAAAAGACQAAAALAAIAAAAHABwAAAAKAAIAAAAHABwAAAAJAAIAAAAHABwAAAAIAAIAAAAGACQAAAAHAAIAAAAGACQAAAAGAAIAAAAHACMAAAAFAAIAAAAHAB0AAAAEAAIAAAAHAB0AAAADAAIAAAAHAB0AAAABAAIAAAAHAB0AAAAAAAIAAAAHAB0AAAACAAIAAAAHAB0AAAAAAAwAAAAGACQAAAAAAAsAAAAGACQAAAAAAAoAAAAGACQAAAAAAAkAAAAGACQAAAAAAAgAAAAHABwAAAAAAAcAAAAGACQAAAAAAAYAAAAGACQAAAAAAAUAAAAHAB4AAAAAAAQAAAAHAB0AAAAAAAMAAAAHAB4AAAABAAwAAAAGABwAAAABAAsAAAAGABwAAAABAAgAAAAGABwAAAABAAkAAAAGAB0AAAABAAQAAAADABgAAAABAAUAAAADABkAAAACAAYAAAAHABwAAAADAAYAAAAHABwAAAADAAcAAAAGABwAAAACAAcAAAAGABwAAAAFAAgAAAAGABwAAAAEAAgAAAAGABwAAAAEAAkAAAAGAB0AAAAFAAkAAAAGAB0AAAAFAAsAAAAGABwAAAAEAAsAAAAGABwAAAAFAAwAAAAGABwAAAAEAAwAAAAGABwAAAAIAAsAAAAGAB0AAAAJAAsAAAAGAB0AAAAJAAwAAAAGABwAAAAIAAwAAAAGABwAAAALAAwAAAAGABwAAAALAAsAAAAGAB0AAAAMAAsAAAAGAB0AAAAMAAwAAAAGABwAAAAMAAkAAAAGAB0AAAAMAAgAAAAGAB0AAAAJAAkAAAAGABwAAAAIAAkAAAAGAB0AAAAIAAgAAAAGABwAAAAJAAgAAAAGABwAAAAKAAcAAAAGABwAAAAKAAYAAAAHABwAAAALAAYAAAAHABwAAAALAAcAAAAGABwAAAAIAAUAAAADAB0AAAAIAAQAAAACAB0AAAAJAAQAAAAGABkAAAAFAAUAAAAHAB4AAAAFAAQAAAAHAB0AAAAEAAQAAAAHAB0AAAAGAAMAAAAHACQAAAAHAAMAAAAGAB0AAAAMAAMAAAAGAB0AAAAHAAkAAAAGAB0AAAAHAAgAAAAGABwAAAAHAAcAAAAGAB0AAAAHAAYAAAAGACQAAAAHAAUAAAAHAB4AAAAHAAQAAAAHAB0AAAAGAAQAAAAHAB0AAAAGAAUAAAAHAB4AAAAGAAYAAAAGACQAAAAFAAYAAAAGACQAAAAEAAYAAAAGACQAAAAEAAUAAAAHAB4AAAADAAUAAAAFABkAAAADAAQAAAAFABgAAAADAAMAAAAHAB4AAAACAAMAAAAHAB4AAAABAAMAAAAHAB4AAAACAAQAAAAEABgAAAACAAUAAAAEABkAAAAEAAMAAAAHAB4AAAAFAAMAAAAHAB4AAAAEAAcAAAAGAB0AAAAFAAcAAAAGAB0AAAAGAAcAAAAGAB0AAAAGAAgAAAAGABwAAAAGAAkAAAAGAB0AAAAGAAoAAAAGAB0AAAAFAAoAAAAGABwAAAAEAAoAAAAGABwAAAADAAoAAAAFAB0AAAADAAkAAAAGAB0AAAADAAgAAAAGABwAAAACAAgAAAAGABwAAAACAAkAAAAGAB0AAAACAAoAAAAGABwAAAABAAoAAAAGABwAAAACAAsAAAAGABwAAAACAAwAAAAIABYAAAADAAwAAAAGABwAAAADAAsAAAAGABwAAAAGAAsAAAAGAB0AAAAGAAwAAAAGABwAAAAHAAwAAAAGABwAAAAHAAsAAAAGAB0AAAAHAAoAAAAGAB0AAAAIAAoAAAAGAB0AAAAJAAoAAAAIABYAAAAKAAoAAAAGABwAAAAKAAkAAAAGABwAAAAKAAgAAAAGABwAAAALAAgAAAAGABwAAAALAAkAAAAGABwAAAALAAoAAAAGABwAAAAMAAoAAAAGABwAAAAKAAsAAAAGAB0AAAAKAAwAAAAGABwAAAAIAAYAAAAGACQAAAAIAAcAAAAGAB0AAAAJAAcAAAAGABwAAAAJAAYAAAAHABwAAAAJAAUAAAAGABkAAAAKAAUAAAAHABkAAAAKAAQAAAAHABkAAAAKAAMAAAAGABwAAAAJAAMAAAAGABwAAAAIAAMAAAAGAB0AAAALAAMAAAAGABwAAAALAAQAAAAHABkAAAALAAUAAAAHABkAAAAMAAUAAAAEAB0AAAAMAAQAAAAEABwAAAAMAAYAAAAGACQAAAAMAAcAAAAGABwAAAABAAYAAAAHABwAAAABAAcAAAAGABwAAAAJAAAAAAADABYAAAAJAAEAAAADABcAAAAKAAAAAAAEABYAAAAKAAEAAAAEABcAAAALAAAAAAAFABYAAAALAAEAAAAFABcAAAAIAAEAAAAHAB4AAAAHAAEAAAAEAB0AAAA=")
+tile_set = ExtResource("2_6sghn")
+
+[node name="NPCs" type="Node2D" parent="." unique_id=1998160653]
+z_index = 1
+y_sort_enabled = true
+
+[node name="Atsushi" parent="NPCs" unique_id=1220004001 instance=ExtResource("mp_entrenador")]
+editor_description = "pokeruby MtPyre_4F objeto 1 (11,7) BLACK_BELT ROTATE_CLOCKWISE, TRAINER_ATSUSHI (KARATEKA ATSUSHI, vision 2)"
+position = Vector2(184, 126)
+npc_id = "monte_pirico_h4_atsushi"
+entrenador_id = 190
+rango_vision = 2
+texto_post_combate = "MONTE_PIRICO_H4_ATSUSHI_POST"
+id_texto = "MONTE_PIRICO_H4_ATSUSHI_INI"
+tipo_movimiento = 17
+rango = Vector2i(0, 0)
+selec_frames = ExtResource("mp_npc_063")
+coord = Vector2i(11, 7)
+loggear = false
+
+[node name="ItemIncienso" parent="NPCs" unique_id=1220004002 instance=ExtResource("mp_item")]
+editor_description = "pokeruby MtPyre_4F objeto 2 (3,11), FLAG_ITEM_MT_PYRE_4F_1 (ITEM_SEA_INCENSE)"
+position = Vector2(56, 190)
+id_item = "monte_pirico_h4_inciensomarino_01"
+objeto_a_entregar = "INCIENSOMARINO"
+coord = Vector2i(3, 11)
+
+[node name="SueloAgrietado" type="Node" parent="." unique_id=1220004003]
+editor_description = "MB_MT_PYRE_HOLE de Rubi: los agujeros (bandera AGUJERO del TPTileDataMap) llevan al piso de abajo; llegadas_especiales = warp_event del agujero cuando la celda de llegada no es la misma"
+script = ExtResource("mp_suelo")
+mapa_inferior = "monte_pirico_h3"
+llegadas_especiales = Dictionary[Vector2i, Vector2i]({
+Vector2i(2, 12): Vector2i(1, 12)
+})
+
+[node name="Warp" type="Sprite2D" parent="." unique_id=1059118208]
+position = Vector2(40, 86)
+script = ExtResource("3_6sghn")
+ruta_mapa_destino = "monte_pirico_h3"
+posicion_destino = Vector2(2, 1)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="Warp2" type="Sprite2D" parent="." unique_id=320857233]
+position = Vector2(168, 22)
+script = ExtResource("3_6sghn")
+ruta_mapa_destino = "monte_pirico_h5"
+posicion_destino = Vector2(10, 5)
+direccion = Vector2(0, 1)
+dar_paso = true
+
+[node name="TPTileDataMap" type="Node2D" parent="." unique_id=1262971289]
+script = ExtResource("4_lso3q")
+tile_data = {
+"0,10": {
+"flags": 1
+},
+"0,11": {
+"flags": 1
+},
+"0,12": {
+"flags": 1
+},
+"0,5": {
+"flags": 1
+},
+"0,6": {
+"flags": 1
+},
+"0,7": {
+"flags": 1
+},
+"0,8": {
+"flags": 4294967296
+},
+"0,9": {
+"flags": 1
+},
+"1,10": {
+"flags": 4294967296
+},
+"1,11": {
+"flags": 4294967296
+},
+"1,12": {
+"flags": 4294967296
+},
+"1,4": {
+"flags": 1
+},
+"1,5": {
+"flags": 1
+},
+"1,6": {
+"flags": 4294967296
+},
+"1,7": {
+"flags": 4294967296
+},
+"1,8": {
+"flags": 4294967296
+},
+"1,9": {
+"flags": 1
+},
+"10,0": {
+"flags": 1
+},
+"10,10": {
+"flags": 4294967296
+},
+"10,11": {
+"flags": 1
+},
+"10,12": {
+"flags": 4294967296
+},
+"10,2": {
+"flags": 4294967296
+},
+"10,3": {
+"flags": 4294967296
+},
+"10,6": {
+"flags": 4294967296
+},
+"10,7": {
+"flags": 4294967296
+},
+"10,8": {
+"flags": 4294967296
+},
+"10,9": {
+"flags": 4294967296
+},
+"11,0": {
+"flags": 1
+},
+"11,1": {
+"flags": 1
+},
+"11,10": {
+"flags": 4294967296
+},
+"11,11": {
+"flags": 1
+},
+"11,12": {
+"flags": 4294967296
+},
+"11,2": {
+"flags": 4294967296
+},
+"11,3": {
+"flags": 4294967296
+},
+"11,6": {
+"flags": 4294967296
+},
+"11,7": {
+"flags": 4294967296
+},
+"11,8": {
+"flags": 4294967296
+},
+"11,9": {
+"flags": 4294967296
+},
+"12,1": {
+"flags": 1
+},
+"12,11": {
+"flags": 1
+},
+"12,2": {
+"flags": 1
+},
+"12,3": {
+"flags": 1
+},
+"12,4": {
+"flags": 1
+},
+"12,5": {
+"flags": 1
+},
+"12,6": {
+"flags": 1
+},
+"12,7": {
+"flags": 4294967296
+},
+"12,8": {
+"flags": 1
+},
+"12,9": {
+"flags": 1
+},
+"2,10": {
+"flags": 4294967296
+},
+"2,11": {
+"flags": 4294967296
+},
+"2,12": {
+"flags": 536870912
+},
+"2,4": {
+"flags": 1
+},
+"2,6": {
+"flags": 4294967296
+},
+"2,7": {
+"flags": 4294967296
+},
+"2,8": {
+"flags": 4294967296
+},
+"2,9": {
+"flags": 1
+},
+"3,10": {
+"flags": 1
+},
+"3,11": {
+"flags": 4294967296
+},
+"3,12": {
+"flags": 4294967296
+},
+"3,4": {
+"flags": 1
+},
+"3,5": {
+"flags": 1
+},
+"3,6": {
+"flags": 4294967296
+},
+"3,7": {
+"flags": 4294967296
+},
+"3,8": {
+"flags": 4294967296
+},
+"3,9": {
+"flags": 1
+},
+"4,10": {
+"flags": 4294967296
+},
+"4,11": {
+"flags": 4294967296
+},
+"4,12": {
+"flags": 4294967296
+},
+"4,5": {
+"flags": 1
+},
+"4,6": {
+"flags": 1
+},
+"4,7": {
+"flags": 1
+},
+"4,8": {
+"flags": 4294967296
+},
+"4,9": {
+"flags": 1
+},
+"5,10": {
+"flags": 4294967296
+},
+"5,11": {
+"flags": 4294967296
+},
+"5,12": {
+"flags": 4294967296
+},
+"5,5": {
+"flags": 1
+},
+"5,6": {
+"flags": 1
+},
+"5,7": {
+"flags": 1
+},
+"5,8": {
+"flags": 4294967296
+},
+"5,9": {
+"flags": 1
+},
+"6,10": {
+"flags": 1
+},
+"6,11": {
+"flags": 1
+},
+"6,12": {
+"flags": 4294967296
+},
+"6,5": {
+"flags": 1
+},
+"6,6": {
+"flags": 1
+},
+"6,7": {
+"flags": 1
+},
+"6,8": {
+"flags": 4294967296
+},
+"6,9": {
+"flags": 1
+},
+"7,10": {
+"flags": 1
+},
+"7,11": {
+"flags": 1
+},
+"7,12": {
+"flags": 4294967296
+},
+"7,5": {
+"flags": 1
+},
+"7,6": {
+"flags": 1
+},
+"7,7": {
+"flags": 1
+},
+"7,8": {
+"flags": 4294967296
+},
+"7,9": {
+"flags": 1
+},
+"8,1": {
+"flags": 1
+},
+"8,10": {
+"flags": 1
+},
+"8,11": {
+"flags": 1
+},
+"8,12": {
+"flags": 4294967296
+},
+"8,2": {
+"flags": 1
+},
+"8,3": {
+"flags": 1
+},
+"8,4": {
+"flags": 1
+},
+"8,5": {
+"flags": 1
+},
+"8,6": {
+"flags": 1
+},
+"8,7": {
+"flags": 1
+},
+"8,8": {
+"flags": 4294967296
+},
+"8,9": {
+"flags": 1
+},
+"9,0": {
+"flags": 1
+},
+"9,1": {
+"flags": 1
+},
+"9,10": {
+"flags": 536870912
+},
+"9,11": {
+"flags": 1
+},
+"9,12": {
+"flags": 4294967296
+},
+"9,2": {
+"flags": 4294967296
+},
+"9,3": {
+"flags": 4294967296
+},
+"9,6": {
+"flags": 4294967296
+},
+"9,7": {
+"flags": 4294967296
+},
+"9,8": {
+"flags": 4294967296
+},
+"9,9": {
+"flags": 4294967296
+}
+}
+metadata/_custom_type_script = "uid://b8unnsx8wawtt"

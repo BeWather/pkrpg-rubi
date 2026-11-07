@@ -1,0 +1,239 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/buceo.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/i4_candidate_156_156_64x64_0.png" id="2_sombra"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Headbutt1.wav" id="3_cabeza"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Dive1.wav" id="4_buceo"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Explosion.wav" id="5_explosion"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Waterfall1.wav" id="6_cascada"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/i4_candidate_272_272_64x64_0.png" id="10_columna"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/i4_candidate_273_272_8x8_0.png" id="11_gota"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/i4_candidate_155_155_8x8_8.png" id="12_burbuja"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/water_impact_32x32_0.png" id="13_impacto"]
+[ext_resource type="Shader" path="res://escenas/batalla/animaciones_nativas/mezcla_gba.gdshader" id="9_mezcla"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mezcla"]
+shader = ExtResource("9_mezcla")
+
+[sub_resource type="Animation" id="Animation_carga"]
+resource_name = "carga"
+length = 1.45
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.9499, 1.4833),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [false],
+"method": &"fijar_visible_atacante"
+}, {
+"args": [false],
+"method": &"lanzar_columna"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.9499),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"lanzar_sombra_carga"
+}, {
+"args": [false],
+"method": &"lanzar_gotas"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sonido")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("3_cabeza")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("4_buceo")
+}],
+"times": PackedFloat32Array(0, 0.9499)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_ataque"]
+resource_name = "ataque"
+length = 2.4
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2166, 0.2333, 0.2999, 0.3666, 0.4333, 0.4999, 0.5666, 0.6333, 0.6999, 0.7666, 1.1166, 1.1333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [true],
+"method": &"lanzar_columna"
+}, {
+"args": [&"defensor", Vector2(4, 0), 17, 1, true],
+"method": &"sacudir_alterna"
+}, {
+"args": [20],
+"method": &"lanzar_impacto"
+}, {
+"args": [15],
+"method": &"lanzar_impacto"
+}, {
+"args": [10],
+"method": &"lanzar_impacto"
+}, {
+"args": [5],
+"method": &"lanzar_impacto"
+}, {
+"args": [0],
+"method": &"lanzar_impacto"
+}, {
+"args": [-5],
+"method": &"lanzar_impacto"
+}, {
+"args": [-10],
+"method": &"lanzar_impacto"
+}, {
+"args": [-15],
+"method": &"lanzar_impacto"
+}, {
+"args": [-20],
+"method": &"lanzar_impacto"
+}, {
+"args": [true],
+"method": &"fijar_visible_atacante"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [true],
+"method": &"lanzar_gotas"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoDefensor")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("5_explosion")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoAguaDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("6_cascada")
+}],
+"times": PackedFloat32Array(0.2333)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_buceo"]
+_data = {
+&"carga": SubResource("Animation_carga"),
+&"ataque": SubResource("Animation_ataque")
+}
+
+[node name="Buceo" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+animaciones_por_turno = Array[StringName]([&"carga", &"ataque"])
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="PlantillaSombra" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_sombra")
+
+[node name="PlantillaColumna" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("10_columna")
+region_enabled = true
+region_rect = Rect2(0, 0, 64, 64)
+
+[node name="PlantillaGota" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("11_gota")
+
+[node name="PlantillaBurbuja" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("12_burbuja")
+
+[node name="PlantillaImpacto" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("13_impacto")
+material = SubResource("ShaderMaterial_mezcla")
+
+[node name="Sonido" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoDefensor" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoAguaDefensor" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_buceo")

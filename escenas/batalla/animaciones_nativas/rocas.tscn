@@ -1,0 +1,1834 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/efecto_proyectil_nativo.gd" id="1_script"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/i5_candidate_hit_tile0.png" id="2_golpe"]
+[ext_resource type="Shader" path="res://escenas/batalla/animaciones_nativas/mezcla_gba.gdshader" id="3_mezcla"]
+[ext_resource type="Script" path="res://escenas/batalla/animaciones_nativas/fondo_movimiento.gd" id="4_fondo"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/rocks_pal_58_32x32_32.png" id="20_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/rocks_pal_58_32x32_48.png" id="21_tex"]
+[ext_resource type="Texture2D" path="res://graficos/batalla/animaciones/rocks_pal_58_32x32_64.png" id="22_tex"]
+[ext_resource type="AudioStream" path="res://Audio/SE/PRSFX- Rock Throw1.wav" id="10_se"]
+
+[sub_resource type="ShaderMaterial" id="Mezcla"]
+shader = ExtResource("3_mezcla")
+
+[sub_resource type="Animation" id="Animation_lanzarrocas"]
+resource_name = "lanzarrocas"
+length = 2.6
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.1833, 0.3166, 0.4499, 0.5833, 1.4333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [Vector2(0, 6), 1, 15],
+"method": &"temblor_fondo"
+}, {
+"args": [NodePath("Roca1"), [&"defensor", Vector2(19, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor", Vector2(-23, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor", Vector2(-15, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor", Vector2(23, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499, 0.3166),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Roca1"), [&"defensor", Vector2(0, 14)], [[0, 0, 4, 16, 0, -70], [0, 192, 4, 32, 0, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"defensor", Vector2(0, 5), 20, 1, false],
+"method": &"sacudir"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.1833, 0.3166, 0.4499, 0.5833)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_lanzarrocas_rival"]
+resource_name = "lanzarrocas_rival"
+length = 2.6
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.1833, 0.3166, 0.4499, 0.5833, 1.4333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [Vector2(0, 6), 1, 15],
+"method": &"temblor_fondo"
+}, {
+"args": [NodePath("Roca1"), [&"defensor", Vector2(-19, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor", Vector2(23, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor", Vector2(15, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor", Vector2(-23, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499, 0.3166),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Roca1"), [&"defensor", Vector2(0, 14)], [[0, 0, 4, 16, 0, -70], [0, 192, 4, 32, 0, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"defensor", Vector2(0, 5), 20, 1, false],
+"method": &"sacudir"
+}]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.3166),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/3/type = "audio"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SonidoDefensor")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.1833, 0.3166, 0.4499, 0.5833)
+}
+tracks/3/use_blend = true
+
+[sub_resource type="Animation" id="Animation_avalancha"]
+resource_name = "avalancha"
+length = 3.333333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2333, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166, 2.1666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [Vector2(0, 7), 1, 11],
+"method": &"temblor_fondo"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(5, 14)], [[0, 0, 4, 16, 0, -70], [6, 192, 4, 32, 6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(19, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"defensor", Vector2(0, 5), 50, 1, true],
+"method": &"sacudir"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-23, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(28, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-5, 192, 4, 32, -5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [6, 192, 4, 32, 6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(24, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-32, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(30, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(28, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-5, 192, 4, 32, -5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [6, 192, 4, 32, 6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(24, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-32, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(30, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499, 0.3166),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-5, 14)], [[0, 0, 4, 16, 0, -70], [-5, 192, 4, 32, -5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoDefensor")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_avalancha_rival"]
+resource_name = "avalancha_rival"
+length = 3.333333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2333, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166, 2.1666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [Vector2(0, 7), 1, 11],
+"method": &"temblor_fondo"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-5, 14)], [[0, 0, 4, 16, 0, -70], [-6, 192, 4, 32, -6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-19, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"defensor", Vector2(0, 5), 50, 1, true],
+"method": &"sacudir"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(23, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-28, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [5, 192, 4, 32, 5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-6, 192, 4, 32, -6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-24, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(32, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-30, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-28, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [5, 192, 4, 32, 5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-6, 192, 4, 32, -6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-24, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(32, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-30, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499, 0.3166),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(5, 14)], [[0, 0, 4, 16, 0, -70], [5, 192, 4, 32, 5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoDefensor")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_avalancha_doble"]
+resource_name = "avalancha_doble"
+length = 3.333333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2333, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166, 2.1666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [Vector2(0, 7), 1, 11],
+"method": &"temblor_fondo"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(5, 14)], [[0, 0, 4, 16, 0, -70], [6, 192, 4, 32, 6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(19, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"defensor", Vector2(0, 5), 50, 1, true],
+"method": &"sacudir"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-23, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(28, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-5, 192, 4, 32, -5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [6, 192, 4, 32, 6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(24, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-32, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(30, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(28, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-5, 192, 4, 32, -5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [6, 192, 4, 32, 6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(24, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-32, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(30, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499, 0.2499, 0.3166),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-5, 14)], [[0, 0, 4, 16, 0, -70], [-5, 192, 4, 32, -5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"companero_defensor", Vector2(0, 5), 50, 1, false],
+"method": &"sacudir"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoDefensor")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_avalancha_doble_rival"]
+resource_name = "avalancha_doble_rival"
+length = 3.333333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2333, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166, 2.1666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [Vector2(0, 7), 1, 11],
+"method": &"temblor_fondo"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-5, 14)], [[0, 0, 4, 16, 0, -70], [-6, 192, 4, 32, -6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-19, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"defensor", Vector2(0, 5), 50, 1, true],
+"method": &"sacudir"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(23, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-28, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [5, 192, 4, 32, 5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-6, 192, 4, 32, -6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-24, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(32, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-30, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-28, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [5, 192, 4, 32, 5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-6, 192, 4, 32, -6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-24, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(32, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-30, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499, 0.2499, 0.3166),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(5, 14)], [[0, 0, 4, 16, 0, -70], [5, 192, 4, 32, 5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"companero_defensor", Vector2(0, 5), 50, 1, false],
+"method": &"sacudir"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoDefensor")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_avalancha_d02"]
+resource_name = "avalancha_d02"
+length = 3.333333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2333, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166, 2.1666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [Vector2(0, 7), 1, 11],
+"method": &"temblor_fondo"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(5, 14)], [[0, 0, 4, 16, 0, -70], [6, 192, 4, 32, 6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(19, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"defensor", Vector2(0, 5), 50, 1, true],
+"method": &"sacudir"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-23, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(28, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-5, 192, 4, 32, -5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [6, 192, 4, 32, 6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(24, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-32, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(30, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(28, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-5, 192, 4, 32, -5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [6, 192, 4, 32, 6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(24, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-32, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(30, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499, 0.2499, 0.3166),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-5, 14)], [[0, 0, 4, 16, 0, -70], [-5, 192, 4, 32, -5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"atacante", Vector2(0, 5), 50, 1, false],
+"method": &"sacudir"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoDefensor")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_avalancha_d13"]
+resource_name = "avalancha_d13"
+length = 3.333333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2333, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166, 2.1666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [Vector2(0, 7), 1, 11],
+"method": &"temblor_fondo"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-5, 14)], [[0, 0, 4, 16, 0, -70], [-6, 192, 4, 32, -6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-19, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"defensor", Vector2(0, 5), 50, 1, true],
+"method": &"sacudir"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(23, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-28, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [5, 192, 4, 32, 5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-6, 192, 4, 32, -6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-24, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(32, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-30, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-28, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [5, 192, 4, 32, 5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-6, 192, 4, 32, -6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-24, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(32, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-30, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499, 0.2499, 0.3166),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(5, 14)], [[0, 0, 4, 16, 0, -70], [5, 192, 4, 32, 5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"atacante", Vector2(0, 5), 50, 1, false],
+"method": &"sacudir"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoDefensor")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_avalancha_d00"]
+resource_name = "avalancha_d00"
+length = 3.333333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2333, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166, 2.1666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [Vector2(0, 7), 1, 11],
+"method": &"temblor_fondo"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(5, 14)], [[0, 0, 4, 16, 0, -70], [6, 192, 4, 32, 6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(19, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"defensor", Vector2(0, 5), 50, 1, true],
+"method": &"sacudir"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-23, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(28, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-5, 192, 4, 32, -5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [6, 192, 4, 32, 6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(24, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-32, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(30, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(28, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-5, 192, 4, 32, -5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [6, 192, 4, 32, 6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(24, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-32, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-20, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(30, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499, 0.2499, 0.3166),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-5, 14)], [[0, 0, 4, 16, 0, -70], [-5, 192, 4, 32, -5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"companero_atacante", Vector2(0, 5), 50, 1, false],
+"method": &"sacudir"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoDefensor")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_avalancha_d11"]
+resource_name = "avalancha_d11"
+length = 3.333333
+step = 0.0166667
+tracks/0/type = "method"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2333, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166, 2.1666),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"values": [{
+"args": [Vector2(0, 7), 1, 11],
+"method": &"temblor_fondo"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-5, 14)], [[0, 0, 4, 16, 0, -70], [-6, 192, 4, 32, -6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-19, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"defensor", Vector2(0, 5), 50, 1, true],
+"method": &"sacudir"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(23, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-28, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [5, 192, 4, 32, 5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-6, 192, 4, 32, -6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-24, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(32, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-30, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-28, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(10, 14)], [[0, 0, 4, 16, 0, -70], [5, 192, 4, 32, 5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(-10, 14)], [[0, 0, 4, 16, 0, -70], [-6, 192, 4, 32, -6, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(-24, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(32, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca0"), [&"defensor_base", Vector2(20, 14)], [[0, 0, 4, 16, 0, -70], [10, 192, 4, 32, 10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [NodePath("Roca2"), [&"defensor_base", Vector2(-30, 14)], [[0, 0, 4, 16, 0, -70], [-10, 192, 4, 32, -10, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [],
+"method": &"terminar"
+}]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.0499, 0.2499, 0.3166),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [NodePath("Roca1"), [&"defensor_base", Vector2(5, 14)], [[0, 0, 4, 16, 0, -70], [5, 192, 4, 32, 5, -24]]],
+"method": &"trayectoria_trig"
+}, {
+"args": [&"companero_atacante", Vector2(0, 5), 50, 1, false],
+"method": &"sacudir"
+}, {
+"args": [],
+"method": &"emitir_impacto"
+}]
+}
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SonidoDefensor")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("10_se")
+}],
+"times": PackedFloat32Array(0.0499, 0.1166, 0.1833, 0.2499, 0.3166, 0.3833, 0.4499, 0.5166, 0.5833, 0.6499, 0.7166, 0.7833, 0.8499, 0.9166, 0.9833, 1.0499, 1.1166, 1.1833, 1.2499, 1.3166)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_golpes"]
+_data = {
+&"lanzarrocas": SubResource("Animation_lanzarrocas"),
+&"lanzarrocas_rival": SubResource("Animation_lanzarrocas_rival"),
+&"avalancha": SubResource("Animation_avalancha"),
+&"avalancha_rival": SubResource("Animation_avalancha_rival"),
+&"avalancha_doble": SubResource("Animation_avalancha_doble"),
+&"avalancha_doble_rival": SubResource("Animation_avalancha_doble_rival"),
+&"avalancha_d02": SubResource("Animation_avalancha_d02"),
+&"avalancha_d20": SubResource("Animation_avalancha_d02"),
+&"avalancha_d13": SubResource("Animation_avalancha_d13"),
+&"avalancha_d31": SubResource("Animation_avalancha_d13"),
+&"avalancha_d00": SubResource("Animation_avalancha_d00"),
+&"avalancha_d22": SubResource("Animation_avalancha_d00"),
+&"avalancha_d11": SubResource("Animation_avalancha_d11"),
+&"avalancha_d33": SubResource("Animation_avalancha_d11")
+}
+
+[node name="Rocas" type="Node2D"]
+z_index = 5
+script = ExtResource("1_script")
+material_mezcla = SubResource("Mezcla")
+voltear_imagen_con_lado = false
+
+[node name="Fondo" type="Node2D" parent="."]
+script = ExtResource("4_fondo")
+
+[node name="Imagen" type="Sprite2D" parent="Fondo"]
+visible = false
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 240, 160)
+
+[node name="Velo" type="ColorRect" parent="Fondo"]
+visible = false
+offset_right = 240.0
+offset_bottom = 160.0
+mouse_filter = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Atacante" type="Marker2D" parent="."]
+
+[node name="AtacanteBase" type="Marker2D" parent="."]
+
+[node name="Defensor" type="Marker2D" parent="."]
+
+[node name="DefensorBase" type="Marker2D" parent="."]
+
+[node name="Golpe" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+texture = ExtResource("2_golpe")
+
+[node name="GolpeOpaco" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("2_golpe")
+
+[node name="Estela" type="Sprite2D" parent="."]
+visible = false
+material = SubResource("Mezcla")
+
+[node name="Roca0" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("20_tex")
+
+[node name="Roca1" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("21_tex")
+
+[node name="Roca2" type="Sprite2D" parent="."]
+visible = false
+texture = ExtResource("22_tex")
+
+[node name="SonidoAtacante" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoDefensor" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="SonidoCentro" type="AudioStreamPlayer2D" parent="."]
+volume_db = -8.0
+max_distance = 2000.0
+panning_strength = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries/ = SubResource("AnimationLibrary_golpes")

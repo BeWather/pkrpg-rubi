@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dtd0w21k8kbh1"
+path="res://.godot/imported/1-57 In the Twins' Sightline!.mp3-9902d4acd60085fec5fdf9a92d741e0b.mp3str"
+
+[deps]
+
+source_file="res://Audio/emerald/1-57 In the Twins' Sightline!.mp3"
+dest_files=["res://.godot/imported/1-57 In the Twins' Sightline!.mp3-9902d4acd60085fec5fdf9a92d741e0b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/clima/efecto_burbujas.gd" id="1"]
+[ext_resource type="PackedScene" path="res://escenas/clima/efectos/niebla.tscn" id="2"]
+
+[node name="Burbujas" type="Control"]
+mouse_filter = 2
+script = ExtResource("1")
+
+[node name="Niebla" parent="." instance=ExtResource("2")]
+show_behind_parent = true
+eva = 0.25
+evb = 1.0

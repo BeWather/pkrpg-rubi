@@ -1,0 +1,137 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Pokemon Rubi"
+config/version="1.0.0"
+run/main_scene="uid://cyo25mfcqx578"
+config/features=PackedStringArray("4.7", "GL Compatibility")
+config/icon="uid://02lgpalls3rx"
+
+[autoload]
+
+Singleton="*res://scripts/singleton.gd"
+SistemaGuardado="*res://scripts/sistema_guardado.gd"
+DatabaseManager="*res://BaseDatos/database_manager.gd"
+DialogManager="*res://scripts/dialog_manager.gd"
+McpInteractionServer="*res://dev/mcp/mcp_interaction_server.gd"
+DebugArranque="*res://dev/debug_arranque.gd"
+
+[display]
+
+window/size/viewport_width=720
+window/size/viewport_height=480
+window/stretch/mode="viewport"
+window/stretch/scale=3.0
+
+[dotnet]
+
+project/assembly_name="Pokemon Rubi"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/gdUnit4/plugin.cfg", "res://addons/godot-sqlite/plugin.cfg", "res://addons/lapiz_flores/plugin.cfg", "res://addons/tile_data_map_plugin/plugin.cfg", "res://addons/tilemap_inspector/plugin.cfg")
+
+[filesystem]
+
+exclude_dirs="//.cpp_modules,//.sinusar,//documentacion,//Audio/BGM,//Audio/BGS,//Audio/emerald,//Audio/ME,//Audio/music,//Audio/SE"
+
+[gdunit4]
+
+hooks/session_hooks=Dictionary[String, bool]({
+"res://test/hooks/animaciones_vm_por_defecto_hook.gd": true
+})
+
+[importer_defaults]
+
+font_data_dynamic={
+&"antialiasing": 0,
+&"hinting": 0,
+&"subpixel_positioning": 0
+}
+
+[input]
+
+btn_arriba={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194320,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":11,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+btn_abajo={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":12,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+btn_derecha={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194321,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":14,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+btn_izquierda={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194319,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":13,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+btn_accion={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":88,"key_label":0,"unicode":120,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":0,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+btn_cancelar={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":90,"key_label":0,"unicode":122,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":1,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+btn_menu={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194309,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":2,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+btn_foco_cam={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":47,"key_label":0,"unicode":45,"location":0,"echo":false,"script":null)
+]
+}
+btn_select={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194308,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"button_index":3,"pressure":0.0,"pressed":true,"script":null)
+]
+}
+test_pescar={
+"deadzone": 0.2,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":80,"key_label":0,"unicode":112,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations=PackedStringArray("res://BaseDatos/dialogos.es.translation", "res://BaseDatos/dialogos.en.translation", "res://BaseDatos/bases_secretas/decoraciones.es.translation", "res://BaseDatos/bases_secretas/decoraciones.en.translation", "res://BaseDatos/bases_secretas/ciclo.es.translation", "res://BaseDatos/bases_secretas/ciclo.en.translation", "res://BaseDatos/bases_secretas/pc.es.translation", "res://BaseDatos/bases_secretas/pc.en.translation", "res://BaseDatos/maquinas/textos_maquinas.es.translation", "res://BaseDatos/maquinas/textos_maquinas.en.translation", "res://BaseDatos/bases_secretas/regalo_mt43.es.translation", "res://BaseDatos/bases_secretas/regalo_mt43.en.translation", "res://BaseDatos/bases_secretas/canje_vidrio.es.translation", "res://BaseDatos/bases_secretas/canje_vidrio.en.translation", "res://BaseDatos/concursos/textos_concurso.es.translation", "res://BaseDatos/concursos/textos_concurso.en.translation")
+locale/fallback="es"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+
+[rubi4]
+
+batalla/animaciones_nativas=true
+batalla/animaciones_nativas_estados=PackedStringArray("nativo_validado", "nativo_pendiente_validacion")

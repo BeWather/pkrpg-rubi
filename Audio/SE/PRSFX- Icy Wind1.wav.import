@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://boojmevwoaktf"
+path="res://.godot/imported/PRSFX- Icy Wind1.wav-811313e1087e85d9dad070ca6ad503bc.sample"
+
+[deps]
+
+source_file="res://Audio/SE/PRSFX- Icy Wind1.wav"
+dest_files=["res://.godot/imported/PRSFX- Icy Wind1.wav-811313e1087e85d9dad070ca6ad503bc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
