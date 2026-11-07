@@ -20,7 +20,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_script")
-saltar_directo_title_intro = true
+saltar_inicio_bici = false
 
 [node name="LegalSplash" type="Control" parent="." unique_id=1411975720]
 layout_mode = 1

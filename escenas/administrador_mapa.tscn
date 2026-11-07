@@ -15,7 +15,6 @@
 [node name="AdministradorMapa" type="Node2D" unique_id=1028665585]
 script = ExtResource("1_07m8w")
 iniciar_debug = true
-guardar_en_partida_debug = true
 tabla_encuentros_alternativa = true
 metadata/Musica = ExtResource("6_fdeji")
 metadata/BucleIni = 5.1
