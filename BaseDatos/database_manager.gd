@@ -56,6 +56,10 @@ var _cache_bayas: Dictionary = {}
 ## Caché de la tabla Habilidades por clave de búsqueda (obtener_datos_habilidad).
 var _cache_habilidades: Dictionary = {}
 
+const RUTA_ENTRENADORES: String = "res://BaseDatos/lista_entrenadores.json"
+var _entrenadores_por_id: Dictionary = {}
+var _entrenadores_cargados: bool = false
+
 func _ready():
 	# La BBDD es dato de DESARROLLO (se edita con las herramientas del editor y
 	# el maestro vive en el repo). En desarrollo se abre DIRECTAMENTE desde
@@ -676,72 +680,87 @@ func crear_entrenador(nombre: String, sexo: String = "M", es_jugador: bool = fal
 	print("❌ [DATABASE_MANAGER] Error al crear entrenador '%s'" % nombre)
 	return -1
 
-## Obtiene datos de un entrenador desde el archivo JSON lista_entrenadores.json
-func get_entrenador(entrenador_id: int) -> DatosEntrenador:
-	var archivo_path = "res://BaseDatos/lista_entrenadores.json"
+## Lee lista_entrenadores.json una sola vez y lo indexa por id. Antes se
+## parseaba el JSON entero (~388 KB) en cada llamada y cada entrenador del
+## Overworld llama dos veces en su _ready: ~6,7 s al continuar la partida.
+func _get_entrenadores_por_id() -> Dictionary:
+	if _entrenadores_cargados:
+		return _entrenadores_por_id
+	_entrenadores_cargados = true
+	_entrenadores_por_id.clear()
 
-	# Verificar que el archivo existe
-	if not FileAccess.file_exists(archivo_path):
-		print("❌ [DATABASE_MANAGER] Archivo de entrenadores no encontrado: %s" % archivo_path)
-		return null
+	if not FileAccess.file_exists(RUTA_ENTRENADORES):
+		print("❌ [DATABASE_MANAGER] Archivo de entrenadores no encontrado: %s" % RUTA_ENTRENADORES)
+		return _entrenadores_por_id
 
-	# Leer el archivo JSON
-	var archivo = FileAccess.open(archivo_path, FileAccess.READ)
+	var archivo := FileAccess.open(RUTA_ENTRENADORES, FileAccess.READ)
 	if archivo == null:
-		print("❌ [DATABASE_MANAGER] Error al abrir archivo de entrenadores: %s" % archivo_path)
-		return null
-
-	var json_string = archivo.get_as_text()
+		print("❌ [DATABASE_MANAGER] Error al abrir archivo de entrenadores: %s" % RUTA_ENTRENADORES)
+		return _entrenadores_por_id
+	var json_string := archivo.get_as_text()
 	archivo.close()
 
-	# Parsear JSON
-	var json = JSON.new()
-	var parseResult = json.parse(json_string)
-	if parseResult != OK:
+	var json := JSON.new()
+	if json.parse(json_string) != OK:
 		print("❌ [DATABASE_MANAGER] Error al parsear JSON de entrenadores: %s" % json.get_error_message())
-		return null
-
-	var entrenadores_array = json.data
-	if not entrenadores_array is Array:
+		return _entrenadores_por_id
+	if not json.data is Array:
 		print("❌ [DATABASE_MANAGER] El archivo JSON no contiene un array de entrenadores")
-		return null
+		return _entrenadores_por_id
 
-	# Buscar entrenador por ID
-	for entrenador_data in entrenadores_array:
-		if entrenador_data is Dictionary and entrenador_data.has("id"):
-			if entrenador_data["id"] == entrenador_id:
-				# Crear instancia de DatosEntrenador
-				var entrenador = DatosEntrenador.new()
+	for entrenador_data: Variant in json.data:
+		if entrenador_data is Dictionary and (entrenador_data as Dictionary).has("id"):
+			var id_entrenador := int((entrenador_data as Dictionary)["id"])
+			# Como el bucle original: ante ids duplicados gana el primero.
+			if not _entrenadores_por_id.has(id_entrenador):
+				_entrenadores_por_id[id_entrenador] = entrenador_data
+	print("✅ [DATABASE_MANAGER] Lista de entrenadores cargada: %d entrenadores" % _entrenadores_por_id.size())
+	return _entrenadores_por_id
 
-				# Asignar propiedades básicas
-				entrenador.clase_entrenador = entrenador_data.get("clase_entrenador", "ENTRENADOR")
-				entrenador.ratio_dinero = int(entrenador_data.get(
-					"ratio_dinero",
-					TiposEntrenadorData.obtener_ratio_dinero(str(entrenador_data.get("clase_entrenador", "ENTRENADOR")))
-				))
-				entrenador.num_sprite = int(entrenador_data.get("num_sprite", 1))
-				entrenador.nombre = entrenador_data.get("nombre", "DESCONOCIDO")
-				entrenador.frase_derrota = str(entrenador_data.get("frase_derrota", "..."))
-				entrenador.sexo = entrenador_data.get("sexo", "M")
-				entrenador.tipo_batalla = str(entrenador_data.get("tipo_batalla", "SIMPLE")).to_upper()
-				if entrenador.tipo_batalla != "DOBLE":
-					entrenador.tipo_batalla = "SIMPLE"
-				entrenador.musica_id = entrenador_data.get("musica_id", "batalla_entrenador")
-				entrenador.jingle_id = int(entrenador_data.get("jingle_id", 0))
+## Fuerza a releer lista_entrenadores.json en la próxima consulta.
+func invalidar_cache_entrenadores() -> void:
+	_entrenadores_cargados = false
+	_entrenadores_por_id.clear()
 
-				# Asignar objetos
-				if entrenador_data.has("objetos") and entrenador_data["objetos"] is Array:
-					entrenador.objetos.clear()
-					for objeto in entrenador_data["objetos"]:
-						if typeof(objeto) == TYPE_STRING:
-							entrenador.objetos.append(str(objeto))
+## Obtiene datos de un entrenador desde el archivo JSON lista_entrenadores.json
+## (cacheado en memoria). Cada llamada devuelve una instancia nueva.
+func get_entrenador(entrenador_id: int) -> DatosEntrenador:
+	var entrada: Variant = _get_entrenadores_por_id().get(entrenador_id, null)
+	if entrada is Dictionary:
+		# Copia profunda: el consumidor nunca puede alterar la caché.
+		var entrenador_data: Dictionary = (entrada as Dictionary).duplicate(true)
+		# Crear instancia de DatosEntrenador
+		var entrenador = DatosEntrenador.new()
 
-				# Cargar pokémon del entrenador
-				if entrenador_data.has("pokemon") and entrenador_data["pokemon"] is Array:
-					entrenador.set_pokemon_desde_diccionarios(entrenador_data["pokemon"])
+		# Asignar propiedades básicas
+		entrenador.clase_entrenador = entrenador_data.get("clase_entrenador", "ENTRENADOR")
+		entrenador.ratio_dinero = int(entrenador_data.get(
+			"ratio_dinero",
+			TiposEntrenadorData.obtener_ratio_dinero(str(entrenador_data.get("clase_entrenador", "ENTRENADOR")))
+		))
+		entrenador.num_sprite = int(entrenador_data.get("num_sprite", 1))
+		entrenador.nombre = entrenador_data.get("nombre", "DESCONOCIDO")
+		entrenador.frase_derrota = str(entrenador_data.get("frase_derrota", "..."))
+		entrenador.sexo = entrenador_data.get("sexo", "M")
+		entrenador.tipo_batalla = str(entrenador_data.get("tipo_batalla", "SIMPLE")).to_upper()
+		if entrenador.tipo_batalla != "DOBLE":
+			entrenador.tipo_batalla = "SIMPLE"
+		entrenador.musica_id = entrenador_data.get("musica_id", "batalla_entrenador")
+		entrenador.jingle_id = int(entrenador_data.get("jingle_id", 0))
 
-				print("✅ [DATABASE_MANAGER] Entrenador '%s' (ID: %d) cargado desde JSON" % [entrenador.nombre, entrenador_id])
-				return entrenador
+		# Asignar objetos
+		if entrenador_data.has("objetos") and entrenador_data["objetos"] is Array:
+			entrenador.objetos.clear()
+			for objeto in entrenador_data["objetos"]:
+				if typeof(objeto) == TYPE_STRING:
+					entrenador.objetos.append(str(objeto))
+
+		# Cargar pokémon del entrenador
+		if entrenador_data.has("pokemon") and entrenador_data["pokemon"] is Array:
+			entrenador.set_pokemon_desde_diccionarios(entrenador_data["pokemon"])
+
+		print("✅ [DATABASE_MANAGER] Entrenador '%s' (ID: %d) cargado desde JSON" % [entrenador.nombre, entrenador_id])
+		return entrenador
 
 	print("⚠️ [DATABASE_MANAGER] Entrenador con ID %d no encontrado en JSON" % entrenador_id)
 	return null
